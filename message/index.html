@@ -28,10 +28,10 @@
     <div class="billboard">
         <div class="logo">
             <svg id="typography" width="72" height="72" viewBox="0 0 72 72" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <circle opacity="1" cx="36" cy="36" r="36" fill="#111" class="logo_circle"></circle>
-                <rect x="17" y="22" width="38" height="8" rx="4" fill="currentColor" class="logo_rect1"></rect>
-                <rect opacity="0.8" x="17" y="32" width="22" height="8" rx="4" fill="currentColor" class="logo_rect2"></rect>
-                <rect opacity="0.6" x="17" y="42" width="30" height="8" rx="4" fill="currentColor" class="logo_rect3"></rect>
+                <circle opacity="1" cx="36" cy="36" r="36" fill="#111" class="logo-circle"></circle>
+                <rect x="17" y="22" width="38" height="8" rx="4" fill="currentColor" class="logo-rect1"></rect>
+                <rect opacity="0.8" x="17" y="32" width="22" height="8" rx="4" fill="currentColor" class="logo-rect2"></rect>
+                <rect opacity="0.6" x="17" y="42" width="30" height="8" rx="4" fill="currentColor" class="logo-rect3"></rect>
             </svg>
         </div>
         <h2>你这评论保熟吗</h2>
@@ -41,14 +41,14 @@
         <div>不便留言可以发邮件给我:njsgcn@gmail.com</div>
        <div style="font-size: 10px;color:#00a8ff;">文明发言,你也不想和博主一起去当狱友吧</div>
     </div>
-    <div class="messageInfo" style="color: #3abdff;margin: 100px;font-size: 20px;">留言板已被禁用</div>
+    <div class="message-info" style="color: #3abdff;margin: 100px;font-size: 20px;">留言板已被禁用</div>
     <div id="waline"></div>
     
 <script src="/blog/js/commonCanvas.js"></script>
 
     <script>
         if(webTheme=="dark"){
-            document.body.classList.add("dark");
+           document.documentElement.classList.add("dark-theme");
         }
         // Waline.init({
         //   el: '#waline',

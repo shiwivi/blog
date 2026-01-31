@@ -1,23 +1,23 @@
 :root{
-  --recordBody-bgColor:#fff;
+  --record-body-bg-color:#fff;
   --label-color:#000;
-  --contentH3-color:#1d1d1d;
-  --content-textColor:#3a3a38;
-  --recommendWeb-explain:#1d1d1d;
-  --recommendWeb-webs:#1d1d1d;
-  --recommendWeb-link:#000;
-  --recommendWeb-visited:#747d8c;
+  --content-h3-color:#1d1d1d;
+  --content-text-color:#3a3a38;
+  --recommend-web-explain:#1d1d1d;
+  --recommend-web-webs:#1d1d1d;
+  --recommend-web-link:#000;
+  --recommend-web-visited:#747d8c;
 
 }
-.dark{
-  --recordBody-bgColor:#000;
+:root.dark-theme{
+  --record-body-bg-color:#000;
   --label-color:#fff;
-  --contentH3-color:#fff;
-  --content-textColor:#9b9b9b;
-  --recommendWeb-explain:#50d5ff;
-  --recommendWeb-webs:#cacaca;
-  --recommendWeb-link:#5686d7;
-  --recommendWeb-visited:#646393;
+  --content-h3-color:#fff;
+  --content-text-color:#9b9b9b;
+  --recommend-web-explain:#50d5ff;
+  --recommend-web-webs:#cacaca;
+  --recommend-web-link:#5686d7;
+  --recommend-web-visited:#646393;
 }
 
 * {
@@ -33,7 +33,7 @@
   body {
     width: 100vw;
     color: #9f9f9f;
-    background-color: var(--recordBody-bgColor);
+    background-color: var(--record-body-bg-color);
     font-size: 1.16em;
     line-height: 1.16;
     font-family: 'Lato', Calibri, Arial, sans-serif;
@@ -64,7 +64,7 @@
   ul{
     list-style:none;
   }
-  .progressBar{
+  .progress-bar{
     position: fixed;
     top:0px;
     left:0px;
@@ -74,7 +74,7 @@
     background:linear-gradient(90deg,rgb(255, 6, 151) 0%,rgb(243, 219, 7) 10%,rgba(0,212,255,1) 55%);
     z-index: 5;
   }
-  .progressBar::before{
+  .progress-bar::before{
     content:'';
     position: absolute;
     top:5px;
@@ -154,17 +154,17 @@ label::after{
   width: 0px;
 }
 
-#excerpt,#record,#recommendWeb,#log{
+#excerpt,#record,#recommend-web,#log{
     display: none;
 }
 #tab1:checked ~ #excerpt,
 #tab2:checked ~ #record,
-#tab3:checked ~ #recommendWeb,
+#tab3:checked ~ #recommend-web,
 #tab4:checked ~ #log{
     display: grid;
 
 }
-  .backHome{
+  .back-home{
     position: relative;
     display: inline-block;
     width: 6rem;
@@ -175,7 +175,7 @@ label::after{
     color:var(--label-color);
     text-decoration: none;
   }
-  .backHome::before{
+  .back-home::before{
     content:'';
     position: absolute;
     top:0;
@@ -263,7 +263,7 @@ label::after{
     line-height: 20px;
     text-align: left;
     font-size: 1.1em;
-    color: var(--contentH3-color);
+    color: var(--content-h3-color);
     padding: 10px 0 20px;
   }
   .content article section {
@@ -295,7 +295,7 @@ label::after{
     text-align: right;
   }
   .content article section aside {
-    color: var(--content-textColor);
+    color: var(--content-text-color);
     margin-left: 25%;
     padding-top: 30px;
     padding-bottom: 15px;
@@ -359,59 +359,59 @@ label::after{
     font-size: 20px;
     color: #fac002;
   }
-  #recommendWeb .explain{
-    color:var(--recommendWeb-explain);
+  #recommend-web .explain{
+    color:var(--recommend-web-explain);
     text-align: center;
     font-size: 1rem;
   }
-  #recommendWeb .webs{
+  #recommend-web .webs{
     box-sizing: border-box;
     margin: 15px 0px;
-    color:var( --recommendWeb-webs);
+    color:var( --recommend-web-webs);
   }
-#recommendWeb .webs>h4{
+#recommend-web .webs>h4{
     color:#1e90ff;
     width: fit-content;
 }
-#recommendWeb .webs>h4:hover{
+#recommend-web .webs>h4:hover{
   transition: transform .5s ease;
   transform: translateX(5px);
 }
-#recommendWeb .webs>h4::before{
+#recommend-web .webs>h4::before{
   content:'#';
   color:#ffa502;
   font-size: 25px;
   margin: 0 8px;
 }
-#recommendWeb .webs li{
+#recommend-web .webs li{
   margin-top: 4vh;
   margin-left: 20px;
   font-size: 1.2rem;
 }
-#recommendWeb .webs li::before{
+#recommend-web .webs li::before{
   content:'';
   color:#fa37d9;
   font-size: 1.3rem;
   font-weight: 900;
 }
 
-#recommendWeb .webs li a:link{
-  color:var(--recommendWeb-link);
+#recommend-web .webs li a:link{
+  color:var(--recommend-web-link);
 }
-#recommendWeb .webs li a:visited{
-  color:var(--recommendWeb-visited);
+#recommend-web .webs li a:visited{
+  color:var(--recommend-web-visited);
 }
 a:hover{color:#1e90ff;}
 
-#recommendWeb .webs li h5{
+#recommend-web .webs li h5{
   display: block;
   margin-bottom: 5px;
 }
-#recommendWeb .webs li p{
+#recommend-web .webs li p{
   line-height: 1.4rem;
   font-size: .9rem;
 }
-#recommendWeb .webs li a{
+#recommend-web .webs li a{
   width: 100% !important;
   display: block;
   box-sizing: border-box;
@@ -450,21 +450,21 @@ a:hover{color:#1e90ff;}
       width: 4.3rem;
       font-size: 1.2rem;
     }
-    .backHome{
+    .back-home{
       width: 4.3rem;
       font-size: 1.2rem;
     }
     .content{
       width: 100%;
     }
-    #recommendWeb .webs li h5{
+    #recommend-web .webs li h5{
       font-size: 1.2rem;
     }
-    #recommendWeb .webs li p{
+    #recommend-web .webs li p{
       line-height: 1.8rem;
       font-size: 1.1rem;
     }
-    #recommendWeb .webs li a{
+    #recommend-web .webs li a{
       margin:5px auto;
     }
   }

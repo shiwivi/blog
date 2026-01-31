@@ -13,7 +13,7 @@
         <div class="head">
             <img src="/blog/images/head.jpg"  alt="头不见了.." title="狗">
         </div>
-        <div class="cardText">
+        <div class="card-text">
             <p>(ー`´ー)</p>
             <p>那不是bug，是彩蛋</p>
         </div> 
@@ -33,22 +33,22 @@
     </ul>
         <ul class="tag">
             <li><a href="/blog/tags/Command">#Command</a></li>
-            <li>#Java</li>
-            <li>#css</li>
-            <li>#Life</li>
-            <li>#Lua</li>
-            <li>#PCB</li>
-            <li>#Shell</li>
-            <li>#C</li>
-            <li>#html</li>
-            <li>#硬件</li>
-            <li>#JavaScript</li>
-            <li>#Firewall</li>
-            <li>#Security</li>
+            <li><a href="/blog/tags/Java">#Java</a></li>
+            <li><a href="/blog/tags/Css">#Css</a></li>
+            <li><a href="/blog/tags/Life">#Life</a></li>
+            <li><a href="/blog/tags/Lua">#Lua</a></li>
+            <li><a href="/blog/tags/PCB">#PCB</a></li>
+            <li><a href="/blog/tags/Shell">#Shell</a></li>
+            <li><a href="/blog/tags/C">#C</a></li>
+            <li><a href="/blog/tags/html">#html</a></li>
+            <li><a href="/blog/tags/%E7%A1%AC%E4%BB%B6">#硬件</a></li>
+            <li><a href="/blog/tags/JavaScrip">#JavaScript</a></li>
+            <li><a href="/blog/tags/Firewall">#Firewall</a></li>
+            <li><a href="/blog/tags/Security">#Security</a></li>
             <li><a href="/blog/tags/Linux">#Linux</a></li>
-            <li>#Python</li>
-            <li>#Serve</li>
-            <li>#Web</li>
+            <li><a href="/blog/tags/Python">#Python</a></li>
+            <li><a href="/blog/tags/Server">#Server</a></li>
+            <li><a href="/blog/tags/Web">#Web</a></li>
         </ul>
     <div class="rsstag"><a href="/blog/atom.xml"><span class="iconfont icon-rss"></span>RSS订阅</a></div>
 <div class="flower">
@@ -93,16 +93,15 @@
 </div>
 
 </div>
-<div class="menuBtn closed"> 
+<div class="menu-btn closed"> 
     <div class="menu-line"></div>
     <div class="menu-line"></div>
     <div class="menu-line"></div>
 </div>
-<div class="nightSky"><!--当关闭夜间背景模式时，子元素将在一段延时后才会被清除--></div>
 <div class="main">
     <div class="msg">
-        <div class="msgText"></div>
-        <div class="msgBar"></div>
+        <div class="msg-text"></div>
+        <div class="msg-bar"></div>
     </div>
     <div class="motto">
         <p> //sunny forever<br />
@@ -110,41 +109,128 @@
                love++;<br />
                beAwesome :)} </p>
      </div>
-     <div class="mainContent">
-    <div class="canvasWrapper"></div>
-<div class="setWrapper">
-    <ul class="setMenu">
-        <div id="setBtn" class="setButton"><</div>
-        <li class="searchContainer">
-            <input id="searchInput" class="localSearch" placeholder="搜索..." type="search" >
-            <span class="searchIco"></span>
+     <div class="main-content">
+    <div class="set-wrapper">
+    <ul class="set-menu">
+        <div id="set-btn" class="set-button"><</div>
+        <li class="search-container">
+            <input id="search-input" class="local-search" placeholder="搜索..." type="search" >
+            <span class="search-ico"></span>
         </li>
-        <li id="toggleItem">
-        主题：<span class="itemIco sun"></span>
+        <li id="toggle-theme">
+        主题：<span class="theme-ico sun"></span>
         </li>
-        <li class="setSize">
-            <span id="increaseFontSize">+</span>
-            <span class="fontSizeNum"></span>
-            <span id="reduceFontSize">-</span>
+        <li class="set-size">
+            <span id="increase-font-size">+</span>
+            <span class="font-size-num"></span>
+            <span id="reduce-font-size">-</span>
         </li>
-        <li id="clearBack">清除背景</li>
-        <li id="disableBack">禁用背景</li>
+        <li id="clear-back">清除背景</li>
+        <li id="disable-back">禁用背景</li>
     </ul> 
 </div>
-    <div class="resultContainer">
-        <div id="searchResult" class="displayResult"></div>
+    <div class="result-container">
+        <div id="search-result" class="display-result"></div>
     </div>
-    <div class="tocWrapper"><div class="tocBtn">目 录</div><div class="tocBox"><!--tocBox用于容纳生成在toc外的目录--><ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#shell%E4%BB%8B%E7%BB%8D"><span class="toc-number">1.</span> <span class="toc-text">shell介绍</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#shell%E7%AE%80%E4%BB%8B"><span class="toc-number">1.1.</span> <span class="toc-text">shell简介</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%88%87%E6%8D%A2shell"><span class="toc-number">1.2.</span> <span class="toc-text">切换shell</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%88%B6%E5%AD%90shell"><span class="toc-number">1.3.</span> <span class="toc-text">父子shell</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#%E6%9F%A5%E7%9C%8B%E7%88%B6%E5%AD%90shell%E7%9A%84%E5%88%9B%E5%BB%BA%E5%85%B3%E7%B3%BB"><span class="toc-number">1.3.1.</span> <span class="toc-text">查看父子shell的创建关系</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E7%88%B6%E5%AD%90shell%E7%9A%84%E4%BD%BF%E7%94%A8%E5%9C%BA%E6%99%AF"><span class="toc-number">1.3.2.</span> <span class="toc-text">父子shell的使用场景</span></a></li></ol></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%86%85%E5%BB%BA%E5%91%BD%E4%BB%A4%E4%B8%8E%E5%A4%96%E9%83%A8%E5%91%BD%E4%BB%A4"><span class="toc-number">2.</span> <span class="toc-text">内建命令与外部命令</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%A4%96%E9%83%A8%E5%91%BD%E4%BB%A4"><span class="toc-number">2.1.</span> <span class="toc-text">外部命令</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%86%85%E5%BB%BA%E5%91%BD%E4%BB%A4"><span class="toc-number">2.2.</span> <span class="toc-text">内建命令</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%91%BD%E4%BB%A4%E7%9A%84%E6%89%A7%E8%A1%8C%E4%BC%98%E5%85%88%E7%BA%A7"><span class="toc-number">2.3.</span> <span class="toc-text">命令的执行优先级</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%91%BD%E4%BB%A4%E5%88%86%E7%BB%84%E6%89%A7%E8%A1%8C"><span class="toc-number">2.4.</span> <span class="toc-text">命令分组执行</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%88%9B%E5%BB%BA%E5%8D%8F%E7%A8%8B"><span class="toc-number">2.5.</span> <span class="toc-text">创建协程</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Bash%E5%B8%B8%E7%94%A8%E5%BF%AB%E6%8D%B7%E9%94%AE"><span class="toc-number">3.</span> <span class="toc-text">Bash常用快捷键</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Bash%E7%9A%84%E5%86%85%E5%BB%BA%E5%91%BD%E4%BB%A4"><span class="toc-number">4.</span> <span class="toc-text">Bash的内建命令</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#history%E5%8E%86%E5%8F%B2%E5%91%BD%E4%BB%A4"><span class="toc-number">4.1.</span> <span class="toc-text">history历史命令</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#%E8%B0%83%E7%94%A8%E5%8E%86%E5%8F%B2%E5%91%BD%E4%BB%A4"><span class="toc-number">4.1.1.</span> <span class="toc-text">调用历史命令</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#alias%E8%87%AA%E5%AE%9A%E4%B9%89%E5%91%BD%E4%BB%A4%E5%90%8D"><span class="toc-number">4.2.</span> <span class="toc-text">alias自定义命令名</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#type%E6%9F%A5%E8%AF%A2%E5%91%BD%E4%BB%A4%E7%B1%BB%E5%9E%8B"><span class="toc-number">4.3.</span> <span class="toc-text">type查询命令类型</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#exec%E5%91%BD%E4%BB%A4"><span class="toc-number">4.4.</span> <span class="toc-text">exec命令</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#%E6%9B%BF%E6%8D%A2%E5%BD%93%E5%89%8Dshell%E8%BF%9B%E7%A8%8B"><span class="toc-number">4.4.1.</span> <span class="toc-text">替换当前shell进程</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E4%BF%AE%E6%94%B9%E6%96%87%E4%BB%B6%E6%8F%8F%E8%BF%B0%E7%AC%A6"><span class="toc-number">4.4.2.</span> <span class="toc-text">修改文件描述符</span></a></li></ol></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F"><span class="toc-number">5.</span> <span class="toc-text">环境变量</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%85%A8%E5%B1%80%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F"><span class="toc-number">5.1.</span> <span class="toc-text">全局环境变量</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%B1%80%E9%83%A8%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F"><span class="toc-number">5.2.</span> <span class="toc-text">局部环境变量</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Bash%E4%B8%AD%E7%9A%84%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F"><span class="toc-number">5.3.</span> <span class="toc-text">Bash中的环境变量</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6"><span class="toc-number">5.4.</span> <span class="toc-text">环境变量配置文件</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#%E5%85%A8%E5%B1%80%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6"><span class="toc-number">5.4.1.</span> <span class="toc-text">全局配置文件</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E7%94%A8%E6%88%B7%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6"><span class="toc-number">5.4.2.</span> <span class="toc-text">用户配置文件</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E4%B8%8D%E9%87%8D%E5%90%AF%E5%B0%B1%E4%BD%BF%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6%E7%94%9F%E6%95%88"><span class="toc-number">5.4.3.</span> <span class="toc-text">不重启就使配置文件生效</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%B8%8D%E5%90%8C%E5%90%AF%E5%8A%A8%E6%96%B9%E5%BC%8F%E8%AF%BB%E5%8F%96%E7%9A%84%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6"><span class="toc-number">5.5.</span> <span class="toc-text">不同启动方式读取的配置文件</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F%E7%9A%84%E6%8C%81%E4%B9%85%E5%8C%96"><span class="toc-number">5.6.</span> <span class="toc-text">环境变量的持久化</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%BB%88%E7%AB%AF%E6%8E%A7%E5%88%B6"><span class="toc-number">6.</span> <span class="toc-text">终端控制</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#ANSI%E8%BD%AC%E4%B9%89%E5%AD%97%E7%AC%A6%E5%BA%8F%E5%88%97"><span class="toc-number">6.1.</span> <span class="toc-text">ANSI转义字符序列</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#CSI%E5%BA%8F%E5%88%97"><span class="toc-number">6.2.</span> <span class="toc-text">CSI序列</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%87%BD%E6%95%B0"><span class="toc-number">6.3.</span> <span class="toc-text">函数</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#%E5%85%89%E6%A0%87%E6%8E%A7%E5%88%B6"><span class="toc-number">6.3.1.</span> <span class="toc-text">光标控制</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E5%B1%8F%E5%B9%95%E6%8E%A7%E5%88%B6"><span class="toc-number">6.3.2.</span> <span class="toc-text">屏幕控制</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BF%AE%E6%94%B9%E5%AD%97%E4%BD%93%E6%A0%B7%E5%BC%8F"><span class="toc-number">6.4.</span> <span class="toc-text">修改字体样式</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#%E6%81%A2%E5%A4%8D%E9%BB%98%E8%AE%A4"><span class="toc-number">6.4.1.</span> <span class="toc-text">恢复默认</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E6%96%87%E5%AD%97%E6%95%88%E6%9E%9C"><span class="toc-number">6.4.2.</span> <span class="toc-text">文字效果</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E5%AD%97%E4%BD%93%E9%A2%9C%E8%89%B2-%E5%89%8D%E6%99%AF%E8%89%B2"><span class="toc-number">6.4.3.</span> <span class="toc-text">字体颜色(前景色)</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E5%AD%97%E4%BD%93%E8%83%8C%E6%99%AF%E8%89%B2"><span class="toc-number">6.4.4.</span> <span class="toc-text">字体背景色</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E4%BF%AE%E6%94%B9%E6%96%87%E4%BB%B6%E7%9B%AE%E5%BD%95%E9%A2%9C%E8%89%B2"><span class="toc-number">6.4.5.</span> <span class="toc-text">修改文件目录颜色</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#OSC%E5%BA%8F%E5%88%97"><span class="toc-number">6.5.</span> <span class="toc-text">OSC序列</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#OSC%E5%87%BD%E6%95%B0%E5%80%BC"><span class="toc-number">6.6.</span> <span class="toc-text">OSC函数值</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BF%AE%E6%94%B9%E5%91%BD%E4%BB%A4%E6%8F%90%E7%A4%BA%E7%AC%A6"><span class="toc-number">6.7.</span> <span class="toc-text">修改命令提示符</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%BB%88%E7%AB%AF%E6%A0%87%E9%A2%98"><span class="toc-number">6.8.</span> <span class="toc-text">终端标题</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%9C%AC%E5%9C%B0%E7%BB%88%E7%AB%AF%E7%99%BB%E5%BD%95%E5%89%8D%E7%9A%84%E6%AC%A2%E8%BF%8E%E4%BF%A1%E6%81%AF"><span class="toc-number">6.9.</span> <span class="toc-text">本地终端登录前的欢迎信息</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%BF%9C%E7%A8%8B%E7%BB%88%E7%AB%AF%E7%99%BB%E5%BD%95%E5%89%8D%E7%9A%84%E6%AC%A2%E8%BF%8E%E4%BF%A1%E6%81%AF"><span class="toc-number">6.10.</span> <span class="toc-text">远程终端登录前的欢迎信息</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%BB%88%E7%AB%AF%E7%99%BB%E5%BD%95%E6%88%90%E5%8A%9F%E5%90%8E%E7%9A%84%E6%8F%90%E7%A4%BA%E4%BF%A1%E6%81%AF"><span class="toc-number">6.11.</span> <span class="toc-text">终端登录成功后的提示信息</span></a></li></ol></li></ol></div></div>
+    <div class="toc-wrapper"><div class="toc-btn">目 录</div><div class="toc-box"><!--tocBox用于容纳生成在toc外的目录--><ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#Bash%E5%B8%B8%E7%94%A8%E5%BF%AB%E6%8D%B7%E9%94%AE"><span class="toc-number">1.</span> <span class="toc-text">Bash常用快捷键</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#shell%E4%BB%8B%E7%BB%8D"><span class="toc-number">2.</span> <span class="toc-text">shell介绍</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#shell%E7%AE%80%E4%BB%8B"><span class="toc-number">2.1.</span> <span class="toc-text">shell简介</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%88%87%E6%8D%A2shell"><span class="toc-number">2.2.</span> <span class="toc-text">切换shell</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%88%B6%E5%AD%90shell"><span class="toc-number">2.3.</span> <span class="toc-text">父子shell</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#%E6%9F%A5%E7%9C%8B%E7%88%B6%E5%AD%90shell%E7%9A%84%E5%88%9B%E5%BB%BA%E5%85%B3%E7%B3%BB"><span class="toc-number">2.3.1.</span> <span class="toc-text">查看父子shell的创建关系</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E7%88%B6%E5%AD%90shell%E7%9A%84%E4%BD%BF%E7%94%A8%E5%9C%BA%E6%99%AF"><span class="toc-number">2.3.2.</span> <span class="toc-text">父子shell的使用场景</span></a></li></ol></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%86%85%E5%BB%BA%E5%91%BD%E4%BB%A4%E4%B8%8E%E5%A4%96%E9%83%A8%E5%91%BD%E4%BB%A4"><span class="toc-number">3.</span> <span class="toc-text">内建命令与外部命令</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%A4%96%E9%83%A8%E5%91%BD%E4%BB%A4"><span class="toc-number">3.1.</span> <span class="toc-text">外部命令</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%86%85%E5%BB%BA%E5%91%BD%E4%BB%A4"><span class="toc-number">3.2.</span> <span class="toc-text">内建命令</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%91%BD%E4%BB%A4%E7%9A%84%E6%89%A7%E8%A1%8C%E4%BC%98%E5%85%88%E7%BA%A7"><span class="toc-number">3.3.</span> <span class="toc-text">命令的执行优先级</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%91%BD%E4%BB%A4%E5%88%86%E7%BB%84%E6%89%A7%E8%A1%8C"><span class="toc-number">3.4.</span> <span class="toc-text">命令分组执行</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%88%9B%E5%BB%BA%E5%8D%8F%E7%A8%8B"><span class="toc-number">3.5.</span> <span class="toc-text">创建协程</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Bash%E7%9A%84%E5%86%85%E5%BB%BA%E5%91%BD%E4%BB%A4"><span class="toc-number">4.</span> <span class="toc-text">Bash的内建命令</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#Bash%E7%9A%84%E5%90%AF%E5%8A%A8%E6%96%B9%E5%BC%8F"><span class="toc-number">4.1.</span> <span class="toc-text">Bash的启动方式</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#history%E5%8E%86%E5%8F%B2%E5%91%BD%E4%BB%A4"><span class="toc-number">4.2.</span> <span class="toc-text">history历史命令</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#%E8%B0%83%E7%94%A8%E5%8E%86%E5%8F%B2%E5%91%BD%E4%BB%A4"><span class="toc-number">4.2.1.</span> <span class="toc-text">调用历史命令</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#alias%E8%87%AA%E5%AE%9A%E4%B9%89%E5%91%BD%E4%BB%A4%E5%90%8D"><span class="toc-number">4.3.</span> <span class="toc-text">alias自定义命令名</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#type%E6%9F%A5%E8%AF%A2%E5%91%BD%E4%BB%A4%E7%B1%BB%E5%9E%8B"><span class="toc-number">4.4.</span> <span class="toc-text">type查询命令类型</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#command%E6%89%A7%E8%A1%8C%E5%8E%9F%E5%A7%8B%E5%91%BD%E4%BB%A4"><span class="toc-number">4.5.</span> <span class="toc-text">command执行原始命令</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#set%E7%AE%A1%E7%90%86shell%E5%8A%9F%E8%83%BD"><span class="toc-number">4.6.</span> <span class="toc-text">set管理shell功能</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%A9%BA%E6%93%8D%E4%BD%9C"><span class="toc-number">4.7.</span> <span class="toc-text">:空操作</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#mapfile%E5%B0%86%E6%A0%87%E5%87%86%E8%BE%93%E5%85%A5%E5%AD%98%E5%82%A8%E5%88%B0%E6%95%B0%E7%BB%84"><span class="toc-number">4.8.</span> <span class="toc-text">mapfile将标准输入存储到数组</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#exec%E5%91%BD%E4%BB%A4"><span class="toc-number">4.9.</span> <span class="toc-text">exec命令</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#%E6%9B%BF%E6%8D%A2%E5%BD%93%E5%89%8Dshell%E8%BF%9B%E7%A8%8B"><span class="toc-number">4.9.1.</span> <span class="toc-text">替换当前shell进程</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E4%BF%AE%E6%94%B9%E6%96%87%E4%BB%B6%E6%8F%8F%E8%BF%B0%E7%AC%A6"><span class="toc-number">4.9.2.</span> <span class="toc-text">修改文件描述符</span></a></li></ol></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#lt-%E4%B8%8E-gt-%E9%87%8D%E5%AE%9A%E5%90%91"><span class="toc-number">5.</span> <span class="toc-text">&lt;()与&gt;()重定向</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%80%9A%E9%85%8D%E7%AC%A6"><span class="toc-number">6.</span> <span class="toc-text">通配符</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%B8%B8%E7%94%A8%E9%80%9A%E9%85%8D%E7%AC%A6"><span class="toc-number">6.1.</span> <span class="toc-text">常用通配符</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%8A%B1%E6%8B%AC%E5%8F%B7%E6%89%A9%E5%B1%95"><span class="toc-number">6.2.</span> <span class="toc-text">{..}花括号扩展</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%89%A9%E5%B1%95%E9%80%9A%E9%85%8D%E7%AC%A6"><span class="toc-number">6.3.</span> <span class="toc-text">扩展通配符</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#POSIX%E5%AD%97%E7%AC%A6%E7%B1%BB"><span class="toc-number">7.</span> <span class="toc-text">POSIX字符类</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F"><span class="toc-number">8.</span> <span class="toc-text">环境变量</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%85%A8%E5%B1%80%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F"><span class="toc-number">8.1.</span> <span class="toc-text">全局环境变量</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%B1%80%E9%83%A8%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F"><span class="toc-number">8.2.</span> <span class="toc-text">局部环境变量</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Bash%E4%B8%AD%E7%9A%84%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F"><span class="toc-number">8.3.</span> <span class="toc-text">Bash中的环境变量</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6"><span class="toc-number">8.4.</span> <span class="toc-text">环境变量配置文件</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#%E5%85%A8%E5%B1%80%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6"><span class="toc-number">8.4.1.</span> <span class="toc-text">全局配置文件</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E7%94%A8%E6%88%B7%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6"><span class="toc-number">8.4.2.</span> <span class="toc-text">用户配置文件</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E4%B8%8D%E9%87%8D%E5%90%AF%E5%B0%B1%E4%BD%BF%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6%E7%94%9F%E6%95%88"><span class="toc-number">8.4.3.</span> <span class="toc-text">不重启就使配置文件生效</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%B8%8D%E5%90%8C%E5%90%AF%E5%8A%A8%E6%96%B9%E5%BC%8F%E8%AF%BB%E5%8F%96%E7%9A%84%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6"><span class="toc-number">8.5.</span> <span class="toc-text">不同启动方式读取的配置文件</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F%E7%9A%84%E6%8C%81%E4%B9%85%E5%8C%96"><span class="toc-number">8.6.</span> <span class="toc-text">环境变量的持久化</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%BB%88%E7%AB%AF%E6%8E%A7%E5%88%B6"><span class="toc-number">9.</span> <span class="toc-text">终端控制</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#ANSI%E8%BD%AC%E4%B9%89%E5%AD%97%E7%AC%A6%E5%BA%8F%E5%88%97"><span class="toc-number">9.1.</span> <span class="toc-text">ANSI转义字符序列</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#CSI%E5%BA%8F%E5%88%97"><span class="toc-number">9.2.</span> <span class="toc-text">CSI序列</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%87%BD%E6%95%B0"><span class="toc-number">9.3.</span> <span class="toc-text">函数</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#%E5%85%89%E6%A0%87%E6%8E%A7%E5%88%B6"><span class="toc-number">9.3.1.</span> <span class="toc-text">光标控制</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E5%B1%8F%E5%B9%95%E6%8E%A7%E5%88%B6"><span class="toc-number">9.3.2.</span> <span class="toc-text">屏幕控制</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BF%AE%E6%94%B9%E5%AD%97%E4%BD%93%E6%A0%B7%E5%BC%8F"><span class="toc-number">9.4.</span> <span class="toc-text">修改字体样式</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#%E6%81%A2%E5%A4%8D%E9%BB%98%E8%AE%A4"><span class="toc-number">9.4.1.</span> <span class="toc-text">恢复默认</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E6%96%87%E5%AD%97%E6%95%88%E6%9E%9C"><span class="toc-number">9.4.2.</span> <span class="toc-text">文字效果</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E5%AD%97%E4%BD%93%E9%A2%9C%E8%89%B2-%E5%89%8D%E6%99%AF%E8%89%B2"><span class="toc-number">9.4.3.</span> <span class="toc-text">字体颜色(前景色)</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E5%AD%97%E4%BD%93%E8%83%8C%E6%99%AF%E8%89%B2"><span class="toc-number">9.4.4.</span> <span class="toc-text">字体背景色</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E4%BF%AE%E6%94%B9%E6%96%87%E4%BB%B6%E7%9B%AE%E5%BD%95%E9%A2%9C%E8%89%B2"><span class="toc-number">9.4.5.</span> <span class="toc-text">修改文件目录颜色</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#OSC%E5%BA%8F%E5%88%97"><span class="toc-number">9.5.</span> <span class="toc-text">OSC序列</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#OSC%E5%87%BD%E6%95%B0%E5%80%BC"><span class="toc-number">9.6.</span> <span class="toc-text">OSC函数值</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BF%AE%E6%94%B9%E5%91%BD%E4%BB%A4%E6%8F%90%E7%A4%BA%E7%AC%A6"><span class="toc-number">9.7.</span> <span class="toc-text">修改命令提示符</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%BB%88%E7%AB%AF%E6%A0%87%E9%A2%98"><span class="toc-number">9.8.</span> <span class="toc-text">终端标题</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%9C%AC%E5%9C%B0%E7%BB%88%E7%AB%AF%E7%99%BB%E5%BD%95%E5%89%8D%E7%9A%84%E6%AC%A2%E8%BF%8E%E4%BF%A1%E6%81%AF"><span class="toc-number">9.9.</span> <span class="toc-text">本地终端登录前的欢迎信息</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%BF%9C%E7%A8%8B%E7%BB%88%E7%AB%AF%E7%99%BB%E5%BD%95%E5%89%8D%E7%9A%84%E6%AC%A2%E8%BF%8E%E4%BF%A1%E6%81%AF"><span class="toc-number">9.10.</span> <span class="toc-text">远程终端登录前的欢迎信息</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%BB%88%E7%AB%AF%E7%99%BB%E5%BD%95%E6%88%90%E5%8A%9F%E5%90%8E%E7%9A%84%E6%8F%90%E7%A4%BA%E4%BF%A1%E6%81%AF"><span class="toc-number">9.11.</span> <span class="toc-text">终端登录成功后的提示信息</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#tput-%E7%BB%88%E7%AB%AF%E6%8E%A7%E5%88%B6%E6%A0%87%E5%87%86%E5%8C%96%E6%8E%A5%E5%8F%A3"><span class="toc-number">10.</span> <span class="toc-text">tput 终端控制标准化接口</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BB%8B%E7%BB%8D"><span class="toc-number">10.1.</span> <span class="toc-text">介绍</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#Terminfo%E6%95%B0%E6%8D%AE%E5%BA%93"><span class="toc-number">10.1.1.</span> <span class="toc-text">Terminfo数据库</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#tput%E5%91%BD%E4%BB%A4%E5%B7%A5%E5%85%B7"><span class="toc-number">10.1.2.</span> <span class="toc-text">tput命令工具</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E4%B8%8ECSI%E6%8E%A7%E5%88%B6%E5%BA%8F%E5%88%97%E7%9A%84%E5%8C%BA%E5%88%AB"><span class="toc-number">10.1.3.</span> <span class="toc-text">与CSI控制序列的区别</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#tput%E5%91%BD%E4%BB%A4"><span class="toc-number">10.2.</span> <span class="toc-text">tput命令</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%9F%BA%E6%9C%ACterminfo%E5%8A%9F%E8%83%BD"><span class="toc-number">10.3.</span> <span class="toc-text">基本terminfo功能</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E9%A2%9C%E8%89%B2%E6%8E%A7%E5%88%B6"><span class="toc-number">10.4.</span> <span class="toc-text">颜色控制</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%96%87%E5%AD%97%E6%A0%B7%E5%BC%8F%E6%8E%A7%E5%88%B6"><span class="toc-number">10.5.</span> <span class="toc-text">文字样式控制</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%85%89%E6%A0%87%E6%8E%A7%E5%88%B6-1"><span class="toc-number">10.6.</span> <span class="toc-text">光标控制</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%93%A6%E9%99%A4%E8%A1%8C"><span class="toc-number">10.7.</span> <span class="toc-text">擦除行</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%8F%92%E5%85%A5-%E5%88%A0%E9%99%A4%E8%A1%8C%E4%B8%8E%E5%88%97"><span class="toc-number">10.8.</span> <span class="toc-text">插入&#x2F;删除行与列</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%88%87%E6%8D%A2%E5%B1%8F%E5%B9%95%E7%BC%93%E5%86%B2%E5%8C%BA"><span class="toc-number">10.9.</span> <span class="toc-text">切换屏幕缓冲区</span></a></li></ol></li></ol></div></div>
         <div class="article">
-        <h1 class="title">Shell介绍与使用</h1>
+        <h1 class="title">Shell与Bash</h1>
         <div class="art-info">
-            <div><span><span class="iconfont icon-zishu-jzl"></span>字数：20863</span>
+            <div><span><span class="iconfont icon-zishu-jzl"></span>字数：11482</span>
             <span><span class="iconfont icon-riqi"></span>写于：2021-12-29</span></div>
             <div><span><span class="iconfont icon-zuixinnew3"></span>最新更新：2024-06-02</span>
-            <span><span class="iconfont icon-shijian"></span>阅读本文预计花费您60分钟</span></div>
+            <span><span class="iconfont icon-shijian"></span>阅读本文预计花费您33分钟</span></div>
         </div>
         <div class="art-content">
-        <h3 id="shell介绍"><a href="#shell介绍" class="headerlink" title="shell介绍"></a>shell介绍</h3><h4 id="shell简介"><a href="#shell简介" class="headerlink" title="shell简介"></a>shell简介</h4><p>shell意为层壳，区别于操作系统Kernel(内核)，shell是一个命令行解释器，主要用来与用户交互，将用户的命令解释给操作系统，是用户与操作系统内核交互的桥梁，它提供文件操作、进程控制、环境变量设置、管道和重定向等各种功能，因此，Shell 也是许多脚本和自动化任务的基础。此外，shell还有一套自己的编程语法，用于编写shell脚本，shell脚本支持直接调用Linux系统命令</p>
+        <h3 id="Bash常用快捷键"><a href="#Bash常用快捷键" class="headerlink" title="Bash常用快捷键"></a>Bash常用快捷键</h3><p>修改快捷键参考stty命令</p>
+<div class="table">
+
+<table>
+<thead>
+<tr>
+<th>快捷键</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>ctrl+a</td>
+<td>将光标跳转到命令行开头</td>
+</tr>
+<tr>
+<td>ctrl+e</td>
+<td>将光标跳转到命令行末尾</td>
+</tr>
+<tr>
+<td>ctrl+左箭头</td>
+<td>光标向左(前)跳转一个单词，esc+b也可以</td>
+</tr>
+<tr>
+<td>ctrl+右箭头</td>
+<td>光标向右(后)跳转一个单词，esc+f也可以</td>
+</tr>
+<tr>
+<td>ctrl+u</td>
+<td>剪切光标到行首之间的内容(也用来快速删除一整行命令)</td>
+</tr>
+<tr>
+<td>ctrl+k</td>
+<td>剪切光标到行尾之间的内容</td>
+</tr>
+<tr>
+<td>ctrl+y</td>
+<td>粘贴剪切的内容</td>
+</tr>
+<tr>
+<td>clear</td>
+<td>清屏</td>
+</tr>
+<tr>
+<td>ctrl+l</td>
+<td>清屏，同clear命令</td>
+</tr>
+<tr>
+<td>exit</td>
+<td>退出当前终端</td>
+</tr>
+<tr>
+<td>ctrl+d</td>
+<td>如果命令行中有输入,则终止输入并提交;如果命令行中无输入,则为退出当前终端，同exit命令</td>
+</tr>
+<tr>
+<td>ctrl+c</td>
+<td>强制终止当前任务</td>
+</tr>
+<tr>
+<td>ctrl+z</td>
+<td>暂停当前任务并放入后台</td>
+</tr>
+<tr>
+<td>ctrl+r</td>
+<td>反向搜索执行过的历史命令</td>
+</tr>
+<tr>
+<td>#</td>
+<td>root用户的命令提示符</td>
+</tr>
+<tr>
+<td>$</td>
+<td>非root用户的命令提示符</td>
+</tr>
+<tr>
+<td>&gt;</td>
+<td>次提示符</td>
+</tr>
+<tr>
+<td>\</td>
+<td>延续字符</td>
+</tr>
+</tbody></table>
+</div>
+<div class="broadcast color-blue">
+<div class="iconfont icon-yinhao"></div>
+GUN官方的Bash文档：<a target="_blank" rel="noopener" href="https://www.gnu.org/software/bash/manual/bash.html">Bash Reference Manual</a></div>
+
+<h3 id="shell介绍"><a href="#shell介绍" class="headerlink" title="shell介绍"></a>shell介绍</h3><h4 id="shell简介"><a href="#shell简介" class="headerlink" title="shell简介"></a>shell简介</h4><p>shell意为层壳，区别于操作系统Kernel(内核)，shell是一个命令行解释器，主要用来与用户交互，将用户的命令解释给操作系统，是用户与操作系统内核交互的桥梁，它提供文件操作、进程控制、环境变量设置、管道和重定向等各种功能，因此，Shell 也是许多脚本和自动化任务的基础。此外，shell还有一套自己的编程语法，用于编写shell脚本，shell脚本支持直接调用Linux系统命令</p>
 <p>常见的类Unix操作系统中的Shell程序包括：</p>
 <ul>
 <li>sh(Bourne Shell)：是Unix系统上最早的shell，由Stephen Bourne于1977年在AT&amp;T贝尔实验室开发。尽管现在有许多更现代的shell可以使用，但许多Unix系统命令和脚本仍然使用sh作为默认解释器</li>
@@ -241,6 +327,8 @@ wait
 time(bash test.sh) #大约需要3s，取决于执行时间最长的子shell
 </div>
 
+
+
 <h3 id="内建命令与外部命令"><a href="#内建命令与外部命令" class="headerlink" title="内建命令与外部命令"></a>内建命令与外部命令</h3><h4 id="外部命令"><a href="#外部命令" class="headerlink" title="外部命令"></a>外部命令</h4><p>外部命令，又被称为文件系统命令，是存在于bash shell之外的程序。它们并不是shell程序的一部分。外部命令程序通常位于/bin、/usr/bin、/sbin或/usr/sbin中，可以使用<span class="tips">which</span>或<span class="tips">type -a</span>命令找到命令位置。执行外部命令时，会创建一个该命令对应的子进程，相对于内建命令来说，外部命令需要花费时间和资源来设置新子进程的环境</p>
 <div class="shell"># which ps
 /bin/ps</div>
@@ -276,7 +364,7 @@ echo is /bin/echo</div>
 ( pwd ; (echo $BASH_SUBSHELL))
 </div></li>
 </ul>
-<h4 id="创建协程"><a href="#创建协程" class="headerlink" title="创建协程"></a>创建协程</h4><p>shell中的协程用于在后台创建一个子shell，并在该shell中执行命令，其实就相当于使用&amp;将命令置入后台模式，但其有点在于我们可以为该协程命名，并且该协程创建时会自动创建一个匿名管道，并将子shell的输入输出重定向到这个管道，实现在 Bash 脚本中并发地执行子进程，并与该子进程进行双向数据通信的功能</p>
+<h4 id="创建协程"><a href="#创建协程" class="headerlink" title="创建协程"></a>创建协程</h4><p>shell中的协程用于在后台创建一个子shell，并在该shell中执行命令，其实就相当于使用&amp;将命令置入后台模式，但其特点在于我们可以为该协程命名，并且该协程创建时会自动创建一个匿名管道，并将子shell的输入输出重定向到这个管道，实现在 Bash 脚本中并发地执行子进程，并与该子进程进行双向数据通信的功能</p>
 <p>协程的创建需要使用命令<span class="tips">coproc</span>，其语法为：</p>
 <p><span class="strong">coproc 协程名 { 命令1; 命令2; }</span></p>
 <p>如果不指定协程名，则默认为COPROC，之后命令会被置入后台模式，返回后台作业号和进程ID</p>
@@ -288,96 +376,32 @@ done
 wait # 等待后台进程结束
 echo "父进程执行完毕"</div>
 
-<h3 id="Bash常用快捷键"><a href="#Bash常用快捷键" class="headerlink" title="Bash常用快捷键"></a>Bash常用快捷键</h3><div class="broadcast color-blue">
-<div class="iconfont icon-yinhao"></div>
-GUN官方的Bash文档：<a target="_blank" rel="noopener" href="https://www.gnu.org/software/bash/manual/bash.html">Bash Reference Manual</a></div>
 
-<div class="table">
-
-<table>
-<thead>
-<tr>
-<th>快捷键</th>
-<th>说明</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>ctrl+a</td>
-<td>将光标跳转到命令行开头</td>
-</tr>
-<tr>
-<td>ctrl+e</td>
-<td>将光标跳转到命令行末尾</td>
-</tr>
-<tr>
-<td>ctrl+左箭头</td>
-<td>光标向左(前)跳转一个单词，esc+b也可以</td>
-</tr>
-<tr>
-<td>ctrl+右箭头</td>
-<td>光标向右(后)跳转一个单词，esc+f也可以</td>
-</tr>
-<tr>
-<td>ctrl+u</td>
-<td>剪切光标到行首之间的内容(也用来快速删除一整行命令)</td>
-</tr>
-<tr>
-<td>ctrl+k</td>
-<td>剪切光标到行尾之间的内容</td>
-</tr>
-<tr>
-<td>ctrl+y</td>
-<td>粘贴剪切的内容</td>
-</tr>
-<tr>
-<td>clear</td>
-<td>清屏</td>
-</tr>
-<tr>
-<td>ctrl+l</td>
-<td>清屏，同clear命令</td>
-</tr>
-<tr>
-<td>exit</td>
-<td>退出当前终端</td>
-</tr>
-<tr>
-<td>ctrl+d</td>
-<td>退出当前终端，同exit命令</td>
-</tr>
-<tr>
-<td>ctrl+c</td>
-<td>强制终止当前任务</td>
-</tr>
-<tr>
-<td>ctrl+z</td>
-<td>暂停当前任务并放入后台</td>
-</tr>
-<tr>
-<td>ctrl+r</td>
-<td>反向搜索执行过的历史命令</td>
-</tr>
-<tr>
-<td>#</td>
-<td>root用户的命令提示符</td>
-</tr>
-<tr>
-<td>$</td>
-<td>非root用户的命令提示符</td>
-</tr>
-<tr>
-<td>&gt;</td>
-<td>次提示符</td>
-</tr>
-<tr>
-<td>\</td>
-<td>延续字符</td>
-</tr>
-</tbody></table>
-</div>
-修改快捷键参考stty命令
-
-<h3 id="Bash的内建命令"><a href="#Bash的内建命令" class="headerlink" title="Bash的内建命令"></a>Bash的内建命令</h3><h4 id="history历史命令"><a href="#history历史命令" class="headerlink" title="history历史命令"></a>history历史命令</h4><p>在bash中执行过的命令会被缓存在内存中，方便重复调用，当shell退出或用户登出时会被写到用户对应的<span class="tips">.bash_history</span>历史命令记录文件中</p>
+<h3 id="Bash的内建命令"><a href="#Bash的内建命令" class="headerlink" title="Bash的内建命令"></a>Bash的内建命令</h3><h4 id="Bash的启动方式"><a href="#Bash的启动方式" class="headerlink" title="Bash的启动方式"></a>Bash的启动方式</h4><p><span class="strong">bash [选项] [脚本文件] [参数]</span></p>
+<ul>
+<li>-c “字符串”:执行字符串中的命令</li>
+<li>-i 启动交互式bash</li>
+<li>-l 或–login:模拟登录Shell，加载用户环境配置(如/etc/profile、~/.bash_profile等文件)</li>
+<li>-s 从标准输入读取命令，通常结合管道和重定向符传递脚本内容</li>
+<li>-r 以受限模式(Restricted Shell)启动bash，限制用户操作，用户将无法执行以下操作：<blockquote>
+<blockquote>
+<ul>
+<li>使用cd命令改变当前目录</li>
+<li>设置或更改 $PATH, $SHELL, $ENV, $BASH_ENV 等变量</li>
+<li>使用 exec 执行其他程序</li>
+<li>使用重定向 &gt;、&gt;&gt; 等创建/改写文件</li>
+<li>调用包含 / 的命令（如 /bin/ls）</li>
+</ul>
+</blockquote>
+</blockquote>
+</li>
+<li>-v 逐行显示每一行命令(不将变量替换为值)，然后执行，通常用来观察脚本的执行流程</li>
+<li>-x 逐行显示每一行命令，并将命令中的变量替换为实际值，输出的命令行首会添加+前缀，通常用来调试变量、参数值是否正确</li>
+<li>-n 检查语法错误但不执行，仅验证脚本语法正确性</li>
+<li>-e 严格模式，遇到错误立即退出，防止错误蔓延</li>
+<li>-u 遇到未定义变量时报错，检查是否有未定义变量</li>
+</ul>
+<h4 id="history历史命令"><a href="#history历史命令" class="headerlink" title="history历史命令"></a>history历史命令</h4><p>在bash中执行过的命令会被缓存在内存中，方便重复调用，当shell退出或用户登出时会被写到用户对应的<span class="tips">.bash_history</span>历史命令记录文件中</p>
 <p><span class="strong">history [选项] [历史命令保存文件]</span>查看使用过的命令，可以在后面加一个值指定显示n条命令</p>
 <ul>
 <li>-c 清空历史命令</li>
@@ -405,13 +429,131 @@ GUN官方的Bash文档：<a target="_blank" rel="noopener" href="https://www.gnu
 <p><span class="strong">type [选项] 命令</span></p>
 <ul>
 <li>-a 查看所有可能的命令类型，有的命令可能同时有shell内建、外部二进制文件、用户别名等多种类型，该选项会列出所有情况</li>
-<li>-t 只显示命令类型，而不显示命令路径，返回类型可能有：lias(别名)、builtin(内建命令)、file(外部命令)、function(定义的函数)、keyword(shell保留的关键字)</li>
+<li>-t 只显示命令类型，而不显示命令路径，返回类型可能有：alias(别名)、builtin(内建命令)、file(外部命令)、function(定义的函数)、keyword(shell保留的关键字)</li>
 <li>-p (小写)只显示命令路径，如果命令是shell内建命令或别名，使用此选项不会有输出</li>
 <li>-P (大写)在PATH中查找该命令，无论该命令是何种类型，都返回其路径，该选项常被用来在shell脚本中查询并精确执行某命令，如$(type -P curl)</li>
 <li>-f 不在shell函数中查找，即不将命令视为函数来查找</li>
 </ul>
+<h4 id="command执行原始命令"><a href="#command执行原始命令" class="headerlink" title="command执行原始命令"></a>command执行原始命令</h4><p>当系统中创建了alias别名和shell函数时，如果用户不想执行这些别名或shell函数，可以使用command来执行原始的Linux命令，常用来在脚本中安全地执行某个命令，而不受用户环境影响</p>
+<p><span class="strong">command [选项] 命令 [参数]</span></p>
+<ul>
+<li>默认情况下，通过command执行的命令会无视alias或shell函数，执行系统原装的命令，默认前往PATH路径下查找该命令，包括用户自行在PATH中添加的路径</li>
+<li>-p 在PATH中查找命令时，无视用户添加的PATH路径，而只在系统默认的PATH路径下查找(通常是/bin和/usr/bin等系统默认命令路径)，以免用户在PATH中添加了非系统原生的命令路径</li>
+<li>-v 显示关于命令的信息(是别名、函数、内置命令还是磁盘上的可执行文件)，常用来在脚本中测试是否安装了某个命令，相较于使用type -P检测，command -v是POSIX标准，更推荐在可移植脚本中使用</li>
+<li>-V 显示更详细的命令描述信息</li>
+</ul>
+<div class="show">1.command可以绕开alias和shell中定义的函数，
+如：ls命令通常是以下命令别名
+alias ls='ls --color=auto'
+为了避免不同用户定义了不同ls命令别名，可以选择用command来规避这些影响
+command ls  # 这将执行原始的ls命令，而不带--color=auto选项
+2.通过command -v检测某个命令是否存在
+<code> if command -v apt &>/dev/null; then
+    sudo apt install -y .......
+  elif command -v yum &>/dev/null; then
+    sudo yum install -y .......
+  elif command -v dnf &>/dev/null; then
+    sudo dnf install -y .......
+  else
+    echo "不支持当前包管理器安装"
+  fi</code>
+</div>
+
+
+<h4 id="set管理shell功能"><a href="#set管理shell功能" class="headerlink" title="set管理shell功能"></a>set管理shell功能</h4><p>set命令用来查看或修改当前shell的设置，如打开或关闭shell的调试、安全、错误处理等功能，修改shell的位置变量等，它的功能十分强大，这里只整理部分可能用到的常用功能</p>
+<p><span class="strong">set [-或+] [选项] [-&zwnj;-] [参数]</span></p>
+<ul>
+<li>不添加任何选项和参数时，set会打印所有shell变量和函数，包括环境变量、用户定义变量、位置参数、全局函数等</li>
+<li>当为set不提供任何选项，只提供参数时，set会将位置参数$1,$2..设置为对应参数</li>
+<li><span class="strong">-</span>会开启一个功能选项，<span class="strong">+</span>会关闭一个选项<blockquote>
+<blockquote>
+<ul>
+<li>e 一旦任何命令返回非0状态，立刻退出脚本</li>
+<li>v 逐行显示每一行命令(不将变量替换为值)，然后执行</li>
+<li>x 逐行显示每一行命令，并将命令中的变量替换为实际值，输出的命令行首会添加+前缀</li>
+<li>u 使用未定义变量时报错</li>
+<li>n 只做语法检查不执行脚本</li>
+</ul>
+</blockquote>
+</blockquote>
+</li>
+<li>[-/+o 特殊控制名] 开启或关闭特殊设置<blockquote>
+<blockquote>
+<ul>
+<li>history：启用命令历史记录，对于交互式shell，该配置默认开启</li>
+<li>ignoreeof：交互式shell在读取到EOF时不会退出</li>
+<li>pipefail：管道中任意命令失败时，整个管道视为失败</li>
+<li>vi：使用vi风格的编辑界面，这会影响用于read -e 的编辑界面</li>
+<li>emacs：使用emacs风格的编辑界面，这会影响用于read -e 的编辑界面</li>
+</ul>
+</blockquote>
+</blockquote>
+</li>
+</ul>
+<div class="show">1.set可以用来修改位置参数
+set -&zwnj;- 10 20 30
+set会将$1、$2、$3设置为10，20，30
+set -&zwnj;- 
+echo "参数个数：$#"
+set会将所有位置参数设置为unset，即清空它们
+$1,$2..会被清空，$#参数个数为0
+2.set命令可以在脚本中临时开启某些调试功能，方便调试某一段代码
+这可以视为bash -vxu命令的局部版本，只在某一段代码中开启这些功能
+#!/bin/bash
+echo "开始"
+set -x    #开启x选项的功能，逐行显示命令和变量值
+echo "调试这句"
+name="Alice"
+echo "你好，$name"
+set +x    #关闭x选项的功能
+echo "结束"
+3.在脚本开头添加<soan class="text-red">set -euo pipefail</soan>，用来开启严格模式
+之后，脚本中任意命令失败都会退出脚本
+使用未定义的变量时报错
+管道中任意命令失败时，整个管道视为失败
+</div>
+
+<h4 id="空操作"><a href="#空操作" class="headerlink" title=":空操作"></a>:空操作</h4><p>不执行任何操作，总是返回成功(退出状态码为0)，一般可用作占位符</p>
+<div class="show">1.可用作条件语句中的占位符
+if 条件; then
+    :       #占位符，不执行任何操作
+else
+    echo "Not true"
+fi
+2.在某些旧脚本中可用来隐藏输出
+: $(command)
+将command命令输出结果传参给:
+而:命令本身无输出，因此上述语句等价于command > /dev/null
+</div>
+
+<h4 id="mapfile将标准输入存储到数组"><a href="#mapfile将标准输入存储到数组" class="headerlink" title="mapfile将标准输入存储到数组"></a>mapfile将标准输入存储到数组</h4><p>该用于将输入(如文件或管道数据)逐行读取到数组中，该命令的效率高于while read循环</p>
+<p><span class="strong">mapfile [选项] [数组名]</span></p>
+<ul>
+<li>从标准输入或文件中读取行数组中，如果未指定数组，则使用默认的数组名MAPFILE</li>
+<li>-d “行终止符”：指定每个行的终止符，而不是默认的换行符，-d “”指定空字符串，将使用NUL作为行终止符</li>
+<li>-n 值N：只输入N行，如果值为0将输入所有行到数组</li>
+<li>-u 文件描述符：从该文件描述符指向的文件读取数据</li>
+<li>-O 索引值：指定索引值，从该值开始存储，默认从0存储</li>
+<li>-s 值N：跳过前N行，不存储到数组</li>
+<li>-t 输入时删除行尾的行终止符</li>
+<li>-C 回调函数名：在每次读入行时执行回调函数，回调函数中可以使用$1(下一个存入的数组索引)，$2(要存入的行内容)引用对应的数据，mapfile命令会自动传递这2个参数，如果不指定-c，默认每5000行执行一次回调，以避免性能问题</li>
+<li>-c 值N：和-C选项搭配使用，每读取N行执行一次回调</li>
+</ul>
+<div class="show">1.默认情况，mapfile会将每行的换行符也作为数组元素，因此往往需要-t删除换行符
+mapfile -t arr < file.txt
+2.指定回调函数时，可以用$1和$2引用数组索引和值，索引会随着-O选项的值产生偏移
+<code>arr=(aaaa bbbbb)
+process_line() &#123;
+    echo "下一个索引: $1" #依次输出3，4
+&#125;
+mapfile -t -O 3 -c 1 -C process_line arr &lt;&lt;EOF
+hello
+shell
+EOF
+</code></div>
+
 <h4 id="exec命令"><a href="#exec命令" class="headerlink" title="exec命令"></a>exec命令</h4><p>exec命令的主要功能有两个</p>
-<h5 id="替换当前shell进程"><a href="#替换当前shell进程" class="headerlink" title="替换当前shell进程"></a>替换当前shell进程</h5><div class="apiBox">exec [选项] 执行命令</div>
+<h5 id="替换当前shell进程"><a href="#替换当前shell进程" class="headerlink" title="替换当前shell进程"></a>替换当前shell进程</h5><div class="api-block">exec [选项] 执行命令</div>
 
 <ul>
 <li>-c 清除所有环境变量(除了HOME、SHELL、PATH、TERM、MAIL、USER和LOGNAM)</li>
@@ -442,7 +584,7 @@ exec /path/to/long_running_application
 注意！如果使用远程终端在登录shell中使用exec命令，如：执行 exec ls -l，ls命令会替换当前shell进程，这会导致远程shell会话终止，远程连接断开。因此如果要在远程连接时执行该命令，最好在子shell中使用，在登录shell中使用会导致ssh连接断开</div>
 
 
-<h5 id="修改文件描述符"><a href="#修改文件描述符" class="headerlink" title="修改文件描述符"></a>修改文件描述符</h5><div class="apiBox">exec 重定向命令</div>
+<h5 id="修改文件描述符"><a href="#修改文件描述符" class="headerlink" title="修改文件描述符"></a>修改文件描述符</h5><div class="api-block">exec 重定向命令</div>
 
 <p>exec 命令还可以用来重定向文件描述符。在这种用法中，exec 并不会替换当前的 shell 进程，而是会替换脚本的执行环境，该命令可用来重定向整个脚本的标准输入输出文件，或者关闭不需要的文件描述符</p>
 <div class="show">e.g.将脚本的所有标准输出信息重定向到out.txt文件
@@ -451,6 +593,229 @@ e.g.关闭文件描述符3
 exec 3&gt;&-
 </div>
 
+<h3 id="lt-与-gt-重定向"><a href="#lt-与-gt-重定向" class="headerlink" title="&lt;()与&gt;()重定向"></a>&lt;()与&gt;()重定向</h3><p><span class="tips">&lt;(命令)</span>和<span class="tips">&gt;(命令)</span>是Bash特有的进程替换（Process Substitution）语法，用于将命令的输入或输出“伪装”为一个文件路径，以供其他命令使用。</p>
+<p>使用时，Bash会创建一个临时文件描述符，然后将该文件名作为参数传入命令，该语法适合一些需要文件名或路径作为参数的命令中，如：cat、diff、read、tar等</p>
+<div class="show">1.diff需要文件路径作为输入
+diff <(sort file1.txt) <(sort file2.txt)
+2.结合mapfile将命令结果存入数组
+mapfile -t arr < <(find /dst -mindepth 1 -maxdepth 1 -type d)
+3.处理输出
+tail -f server.log > >(grep "ERROR" > errors.txt)
+</div>
+
+
+<h3 id="通配符"><a href="#通配符" class="headerlink" title="通配符"></a>通配符</h3><p>通配符(Wildcard)是shell中用来进行文件或路径匹配的操作符，常用ls、cp、rm等命令，它的功能和正则表达式(Regular Expression)很像，但本质上是不同的工具</p>
+<h4 id="常用通配符"><a href="#常用通配符" class="headerlink" title="常用通配符"></a>常用通配符</h4><div class="table">
+
+<table>
+<thead>
+<tr>
+<th>符号</th>
+<th>作用</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>*</td>
+<td>匹配任意长度的任意字符，可以为空</td>
+</tr>
+<tr>
+<td>?</td>
+<td>匹配单个任意字符</td>
+</tr>
+<tr>
+<td>[abc]</td>
+<td>匹配a或b或c中的任意一个字符，相当于”或”</td>
+</tr>
+<tr>
+<td>[!abc]或[^abc]</td>
+<td>匹配不包括a、b、c在内的任意一个字符，相当于”非”</td>
+</tr>
+</tbody></table>
+</div>
+
+<div class="show">1.*可以代表任意数量的字符，包括空
+ls file*.txt
+会列出file.txt以及file后还有其他字符的文件
+fileA.txt  file20201205.txt
+2.?代表单个任意字符，?可多写代表多个任意字符
+file?.txt匹配如：fileA.txt
+file????.txt匹配file2021.txt
+3.[xxx]代表关系或
+file[ABC].txt
+匹配
+fileA.txt fileB.txt fileC.txt
+4.[!xxx]代表关系非
+file[!BC].txt
+匹配
+fileA.txt，但不包括 fileB.txt fileC.txt
+</div>
+
+<h4 id="花括号扩展"><a href="#花括号扩展" class="headerlink" title="{..}花括号扩展"></a>{..}花括号扩展</h4><p>花括号符<span class="tips">{..}</span>可以扩展花括号中的值，通常需要和其他字符串搭配，用来快速和其他字符串生成组合值，该语法为Bash独有，大多数shell不支持</p>
+<div class="table">
+
+<table>
+<thead>
+<tr>
+<th>语法</th>
+<th>作用</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>{a,b,c}</td>
+<td>将a,b,c扩展到其他字符串中</td>
+</tr>
+<tr>
+<td>{1..4}或{a..z}</td>
+<td>将该区间的所有值或字母拓展到其他字符串中</td>
+</tr>
+</tbody></table>
+</div>
+
+<div class="show">1.创建3个文件dir_A，dir_B，dir_C
+mkdir dir_{A,B,C}
+2.移除file.txt和file.log
+rm -f file.{txt,log}
+3.创建5个文件file_1,file_2,file_3,file_4,file_5
+touch file_{1..5}
+4.执行一个循环
+for i in {1..6};do
+        echo $i
+done
+5.file[abc]和file{a,b,c}的行为不同
+file[abc]代表filea或fileb或filec
+file{a,b,c}代表filea、fileb、filec，是"与"的关系
+[]通常用来校验或查询是否有该文件
+{}通常用来创建或移除已有文件
+</div>
+
+<h4 id="扩展通配符"><a href="#扩展通配符" class="headerlink" title="扩展通配符"></a>扩展通配符</h4><p>扩展通配符需要先执行<span class="tips">shopt -s extglob</span>来启用extglob扩展模式</p>
+<div class="table">
+
+<table>
+<thead>
+<tr>
+<th>通配符</th>
+<th>作用</th>
+<th>示例</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>?(pattern)</td>
+<td>匹配0次或1次 pattern</td>
+<td>file?(.bak) 匹配 file 或 file.bak</td>
+</tr>
+<tr>
+<td>*(pattern)</td>
+<td>匹配0次或多次 pattern</td>
+<td>dir*(/tmp) 匹配 dir、dir/tmp、dir/tmp/tmp…</td>
+</tr>
+<tr>
+<td>+(pattern)</td>
+<td>匹配1次或多次 pattern</td>
+<td>log+(.old) 匹配 log.old、log.old.old…</td>
+</tr>
+<tr>
+<td>@(pattern1|pattern2)</td>
+<td>匹配 pattern1 或 pattern2</td>
+<td>file@(.txt|.csv) 匹配 file.txt 或 file.csv</td>
+</tr>
+<tr>
+<td>!(pattern)</td>
+<td>匹配 不符合 pattern 的内容</td>
+<td>!(*.bak) 匹配所有非 .bak 文件</td>
+</tr>
+</tbody></table>
+</div>
+
+<h3 id="POSIX字符类"><a href="#POSIX字符类" class="headerlink" title="POSIX字符类"></a>POSIX字符类</h3><p>POSIX标准预定义了一些常用的字符类，方便在处理字符串、文件名等情况时直接调用，在grep、sed、awk等Linux命令中，这些预定义的字符类需要在<span class="tips">[ ]</span>中使用，在tr等命令中则可以直接使用</p>
+<div class="table">
+
+<table>
+<thead>
+<tr>
+<th>通配符</th>
+<th>匹配的范围</th>
+<th>字符</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>[:alnum:]</td>
+<td>匹配字母或数字</td>
+<td>[a-zA-Z0-9]</td>
+</tr>
+<tr>
+<td>[:alpha:]</td>
+<td>匹配字母</td>
+<td>[a-zA-Z]</td>
+</tr>
+<tr>
+<td>[:digit:]</td>
+<td>匹配数字</td>
+<td>[0-9]</td>
+</tr>
+<tr>
+<td>[:lower:]</td>
+<td>匹配小写字母</td>
+<td>[a-z]</td>
+</tr>
+<tr>
+<td>[:upper:]</td>
+<td>匹配大写字母</td>
+<td>[A-Z]</td>
+</tr>
+<tr>
+<td>[:space:]</td>
+<td>空白字符</td>
+<td>空格、\t、\n等</td>
+</tr>
+<tr>
+<td>[:blank:]</td>
+<td>空格和制表符</td>
+<td>空格和\t</td>
+</tr>
+<tr>
+<td>[:punct:]</td>
+<td>标点符号</td>
+<td>!@#$%^&amp;*()等</td>
+</tr>
+<tr>
+<td>[:graph:]</td>
+<td>可见字符</td>
+<td>非空白、非控制字符</td>
+</tr>
+<tr>
+<td>[:print:]</td>
+<td>可打印字符</td>
+<td>包括空格在内的可打印字符</td>
+</tr>
+<tr>
+<td>[:cntrl:]</td>
+<td>控制字符</td>
+<td>ASCII 0-31 和 127</td>
+</tr>
+<tr>
+<td>[:xdigit:]</td>
+<td>十六进制数字字符</td>
+<td>[0-9A-Fa-f]</td>
+</tr>
+</tbody></table>
+</div>
+
+<div class="show">1.在ls等命令中匹配文件名
+匹配file1.txt或fileaaa.txt等字母或数字结尾的文件
+ls file[[:alnum:]].txt
+匹配以字母开头的文件
+ls [[:alpha:]]* 
+2.在grep命令中匹配字符
+grep '[[:digit:]]' file.txt    # 匹配数字
+3.通过sed和awk处理字符串
+sed 's/[[:space:]]//g' file    # 删除空白字符
+awk '/[[:alpha:]]/{print}'     # 打印包含字母的行
+4. 在Shell的[[ =~ ]]中进行正则匹配
+if [[ "A" =~ [[:upper:]] ]]; then echo "大写字母"; fi
+5. tr命令不需要嵌套[ ]
+echo "hello world" |tr '[:lower:]' '[:upper:]' #小写转大写
+</div>
 
 <h3 id="环境变量"><a href="#环境变量" class="headerlink" title="环境变量"></a>环境变量</h3><p>bash shell使用环境变量(environment variable)来存储有关shell的会话和工作环境，并将这些信息存储在内存中，以便程序或shell脚本能够轻松访问到这些数据，一般情况下，环境变量均使用大写的变量名</p>
 <h4 id="全局环境变量"><a href="#全局环境变量" class="headerlink" title="全局环境变量"></a>全局环境变量</h4><p>全局环境变量该shell和其创建的子shell中均有效，以下为查询全局环境变量的命令</p>
@@ -957,7 +1322,7 @@ echo $MY_PORT  #无法访问该变量</div>
 <li>执行脚本或任务启动的非交互式shell，如：执行脚本、使用at、cron等命令后台执行定时任务、通过脚本或()等方式启动的子shell</li>
 </ol>
 <p>作为默认登录shell启动时，bash会依次读取全局/etc/profile文件，以及用户的$HOME/.bash_profile文件，而绝大多数Linux发行版用户$HOME/.bash_profile文件会调用$HOME/.bashrc文件，而$HOME/.bashrc文件又会调用/etc/bashrc文件，因此一般情况下，登录shell会依次加载<span class="tips">/etc/profile、$HOME/.bash_profile、$HOME/.bashrc、/etc/bashrc</span>文件</p>
-<p>而作为非登录shell启动时，它不会访问/etc/profile、$HOME/.bash_profile等文件，而只会依次读取<span class="tips">/etc/bashrc、$HOME/.bashrc</span>文件，$HOME/.bashrc文件虽然包含了对/etc/bashrc的调用，但依旧会首先加载/etc/bashrc文件，$HOME/.bashrc文件对/etc/bashrc的再次调用并不会引起异常。由于非登录shell是从父shell启动的，因此/etc/profile、$HOME/.bash_profile文件中的全局环境变量也会从父shell中继承下来。</p>
+<p>而作为非登录(但交互式)shell启动时，bash不会访问/etc/profile、$HOME/.bash_profile等文件，只会读取<span class="tips">$HOME/.bashrc</span>文件，而绝大部分Linux发行版$HOME/.bashrc文件通常包含了对/etc/bashrc的调用，因此它会依次读取<span class="tips">$HOME/.bashrc、/etc/bashrc</span>文件。由于非登录shell是从父shell启动的，因此/etc/profile、$HOME/.bash_profile文件中的全局环境变量也会从父shell中继承下来。</p>
 <p>作为非交互式shell启动时，bash shell会检查<span class="tips">BASH_ENV</span> 环境变量，如果该变量指定了文件，shell会执行该文件里的命令，并读取里面设置的变量。但在绝大多数Linux发行版中，这个变量一般为空，因此非交互式shell一般不会读取配置文件。但该方式启动的shell，若脚本直接将当前shell作为脚本的执行shell，则所有当前shell中已加载的局部变量和全局变量，都可以在脚本中使用。如果脚本中通过诸如进程列表等方式创建了子shell，而其父shell在其加载的/etc/profile、$HOME/.bashrc等(具体加载哪些文件取决于该父shell的启动方式)文件中使用export声明了全局变量，用于执行脚本的子shell会继承这些变量。</p>
 <h4 id="环境变量的持久化"><a href="#环境变量的持久化" class="headerlink" title="环境变量的持久化"></a>环境变量的持久化</h4><p>通过赋值方式创建的变量保持于内存中，如果退出shell这些变量会失效，可以将这些环境变量写于配置文件中实现变量的持久化。</p>
 <p>对于所有用户都可能用到的环境变量，尽量避免将全局的环境变量放在<span class="tips">/etc/profile</span>文件中，该文件会在系统升级时被覆盖，可以在<span class="tips">/etc/profile.d</span>目录中创建一个.sh结尾的文件，将全局环境变量放在该文件中，然后再在profile文件中加载该目录下的内容。</p>
@@ -1556,11 +1921,252 @@ sudo chmod +x /etc/update-motd.d/99-custom
 <span class="tips">如果不想显示某个脚本的内容，可以通过修改文件名（例如在文件名中添加 .disabled）来禁用特定脚本，或者修改脚本中的输出语句</span>
 </div>
 
+<h3 id="tput-终端控制标准化接口"><a href="#tput-终端控制标准化接口" class="headerlink" title="tput 终端控制标准化接口"></a>tput 终端控制标准化接口</h3><h4 id="介绍"><a href="#介绍" class="headerlink" title="介绍"></a>介绍</h4><h5 id="Terminfo数据库"><a href="#Terminfo数据库" class="headerlink" title="Terminfo数据库"></a>Terminfo数据库</h5><p>Terminfo数据库是Unix/Linux 系统中用于描述终端能力的标准化数据库，为各种终端提供统一的描述方式，将终端功能映射为标准名称，使应用程序无需关心具体终端差异即可用统一接口(tput)控制终端，这种设计使得Unix/Linux系统能够支持数千种不同的终端类型</p>
+<p>标准 Terminfo 数据库通常位于以下位置:</p>
+<ul>
+<li>/usr/share/terminfo/ </li>
+<li>/lib/terminfo/</li>
+</ul>
+<p>这些目录中可能包含上百种不同的终端配置，它们根据终端名首字母被整理到了1-9a-Z不同目录下，如：/usr/share/terminfo/x/目录下包含了xterm等常用X window相关终端的配置，每个终端类型在 Terminfo 数据库中都有一个独立的编译文件，该编译文件保存了终端支持的行数、列数、颜色、控制序列等终端属性</p>
+<h5 id="tput命令工具"><a href="#tput命令工具" class="headerlink" title="tput命令工具"></a>tput命令工具</h5><p>tput是一个用于终端控制的工具，作为terminfo数据库的前端，它能根据terminfo数据库提供一种标准化的方式来查询和修改终端的行为，tput抽象了不同终端之间的差异，为开发者提供了统一的控制接口</p>
+<p>调用tput命令时，tput会首先检查<span class="tips">TERM</span>环境变量来确定当前终端类型，然后从terminfo数据库中查找对应的终端配置。当执行tput命令时，它会将用户请求的能力名称（如setaf表示设置前景色）转换为该终端类型实际支持的控制序列，tput将转换后的控制序列输出到标准输出，这些序列会被终端解释并执行相应的操作</p>
+<h5 id="与CSI控制序列的区别"><a href="#与CSI控制序列的区别" class="headerlink" title="与CSI控制序列的区别"></a>与CSI控制序列的区别</h5><p>CSI控制序列是直接将控制字符包含在输出的字符串中，字节流不经任何处理直接交由终端处理，由终端内置解析器负责实时解释执行。CSI控制序列有以下特点：</p>
+<ul>
+<li>控制序列包含在输出序列中，简单高效，适合快速输出</li>
+<li>同一段控制序列，不同终端的解析可能不同，行为不一致，甚至可能出现因为终端不支持而出现乱码等情况。</li>
+<li>CSI序列可能会被滥用于终端注入攻击</li>
+</ul>
+<p>tput工作时，是先读取<span class="tips">TERM</span>环境变量确定终端类型，然后根据<code>/usr/share/terminfo</code>目录对应终端的配置编译文件，将终端控制请求转换为目标终端的专用序列，以达到动态翻译的效果。它有以下特点：</p>
+<ul>
+<li>控制序列动态生成，需要tput程序介入处理</li>
+<li>自动处理不同终端的实现差异，以保证行为一致，当某一个控制效果终端不支持时，tput会在序列生成阶段，回退到默认样式或终止操作，它能在跨平台脚本中提供更健壮的功能</li>
+<li>没有CSI注入风险</li>
+</ul>
+<h4 id="tput命令"><a href="#tput命令" class="headerlink" title="tput命令"></a>tput命令</h4><p><span class="strong">tput [选项] [terminfo功能名称] [参数]</span></p>
+<ul>
+<li>-T终端类型:手动指定一个终端类型用于查阅或操作，默认情况下tput会从<span class="tips">TERM</span>环境变量获取当前终端类型</li>
+<li>-V 查看当前版本</li>
+<li>-S &gt;&gt;标准输入：指定多个终端功能，此时需要从标准输入指定这些功能，而不再从命令行中指定，每行只能指定一个终端功能</li>
+</ul>
+<h4 id="基本terminfo功能"><a href="#基本terminfo功能" class="headerlink" title="基本terminfo功能"></a>基本terminfo功能</h4><ul>
+<li><span class="strong">tput init </span> 初始化终端，重新加载终端的配置信息，常用于终端设置被修改时，恢复终端的默认配置</li>
+<li><span class="strong">tput clear</span> 清空屏幕，将光标移动到左上角，在多数系统中，clear命令会在底层调用tput clear</li>
+<li><span class="strong">tput reset</span> 重置终端，清空屏幕，并且重置终端的光标位置、回显位置(echo、print等命令输出位置)、键盘映射等配置，常用于终端出现严重异常，恢复终端。在部分终端中，该命令会清空滚动缓冲区，即清空终端的历史命令输出内容</li>
+<li><span class="strong">tput longname</span> 输出终端的完整名称</li>
+</ul>
+<div class="show">1.查看当前终端的完整名称
+tput longname
+xterm的输出：
+xterm terminal emulator (X Window System)
+2.查看指定终端的信息，以AT&T 5620终端为例
+tput -T5620 longname
+输出：
+AT&T 5620 terminal 88 columns
+</div>
+
+<h4 id="颜色控制"><a href="#颜色控制" class="headerlink" title="颜色控制"></a>颜色控制</h4><p>常用终端类型<span class="tips">xterm</span>通常只支持8种(0-7颜色值)ANSI标准颜色(可以通过tput colors查看)，如果需要使用更多颜色，可以修改终端类型为<span class="tips">TERM=xterm-256color</span>，以支持256种颜色</p>
+<ul>
+<li><span class="strong">tput colors</span> 查看当前终端支持的颜色数量</li>
+<li><span class="strong">tput setaf 颜色值N</span>设置终端前景色</li>
+<li><span class="strong">tput setab 颜色值N</span>设置终端背景色</li>
+<li><span class="strong">tput op</span>重置前景色和背景色为默认</li>
+<li><span class="strong">tput sgr0</span>重置所有文字样式和颜色为默认</li>
+</ul>
+<p>部分常用颜色值</p>
+<div class="table">
+
+<table>
+<thead>
+<tr>
+<th>编号</th>
+<th>颜色</th>
+<th>编号</th>
+<th>颜色</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>0</td>
+<td>黑色</td>
+<td>8</td>
+<td>灰色</td>
+</tr>
+<tr>
+<td>1</td>
+<td>红色</td>
+<td>9</td>
+<td>亮红色</td>
+</tr>
+<tr>
+<td>2</td>
+<td>绿色</td>
+<td>10</td>
+<td>亮绿色</td>
+</tr>
+<tr>
+<td>3</td>
+<td>黄色</td>
+<td>11</td>
+<td>亮黄色</td>
+</tr>
+<tr>
+<td>4</td>
+<td>蓝色</td>
+<td>12</td>
+<td>亮蓝色</td>
+</tr>
+<tr>
+<td>5</td>
+<td>品红</td>
+<td>13</td>
+<td>亮品红色</td>
+</tr>
+<tr>
+<td>6</td>
+<td>青色</td>
+<td>14</td>
+<td>亮青色</td>
+</tr>
+<tr>
+<td>7</td>
+<td>白色</td>
+<td>15</td>
+<td>亮白色</td>
+</tr>
+</tbody></table>
+</div>
+
+<h4 id="文字样式控制"><a href="#文字样式控制" class="headerlink" title="文字样式控制"></a>文字样式控制</h4><div class="table">
+
+<table>
+<thead>
+<tr>
+<th>功能名</th>
+<th>作用</th>
+<th>功能名</th>
+<th>作用</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>bold</td>
+<td>加粗</td>
+<td>dim</td>
+<td>淡化</td>
+</tr>
+<tr>
+<td>smul</td>
+<td>开启下划线</td>
+<td>rmul</td>
+<td>关闭下划线</td>
+</tr>
+<tr>
+<td>rev</td>
+<td>反显(前后景色交换)</td>
+<td>blink</td>
+<td>闪烁</td>
+</tr>
+<tr>
+<td>smso</td>
+<td>开启”突出模式”</td>
+<td>rmso</td>
+<td>关闭”突出模式”</td>
+</tr>
+<tr>
+<td>invis</td>
+<td>隐藏文字</td>
+<td>sgr0</td>
+<td>重置所有样式和颜色</td>
+</tr>
+</tbody></table>
+</div>
+
+<div class="show">shell编程中设置文字加粗与下划线
+BOLD=$(tput bold)
+UNDER=$(tput smul)
+RESET=$(tput sgr0)
+echo "${BOLD}${UNDER}加粗+下划线${RESET}"
+</div>
+
+<h4 id="光标控制-1"><a href="#光标控制-1" class="headerlink" title="光标控制"></a>光标控制</h4><p>注意，指定光标(行列)位置时，从0开始计算位置</p>
+<ul>
+<li>tput cols 获取终端列数(宽度)</li>
+<li>tput lines 获取终端行数(高度)</li>
+<li><span class="strong">tput home</span>将光标移动到左上角(0,0)</li>
+<li><span class="strong">tput cup 行 列</span>将光标移到指定行列，行列从0开始计数</li>
+<li><span class="strong">tput hpa 列</span>将光标移动到指定列</li>
+<li><span class="strong">tput vpa 行</span>将光标移动到到指定行</li>
+<li><span class="strong">tput ll</span>移动光标到最后一行第一列</li>
+<li><span class="strong">tput sc</span>保存当前光标位置(部分终端可能不支持)</li>
+<li><span class="strong">tput rc</span>恢复保存的终端位置(部分终端可能不支持)</li>
+<li><span class="strong">tput civis</span>隐藏光标</li>
+<li><span class="strong">tput cnorm</span>恢复光标显示</li>
+</ul>
+<p>模拟一个进度条</p>
+<pre><code>#!/bin/bash
+
+#初始化终端
+tput civis #隐藏光标
+tput sc    #保存光标位置
+
+#配置颜色
+red_color=$(tput setaf 1)
+blue_color=$(tput setaf 4)
+reset=$(tput sgr0)
+
+#模拟进度条
+for i in &#123;0..100&#125;;do
+
+#计算进度条的"#"和空白部分，并缩减进度条长度到50字符
+filled=$((i/2))     
+empty=$((50-filled))
+
+#下述命令printf "%0.s#" $(seq 1 $filled)中
+#由于%0.s#部分限制参数输出宽度为0
+#因此不会输出$(seq 1 $filled)的内容
+#只会输出一个格式字符串中指定的"#"
+#$(seq 1 $filled)会被展开
+#命令解析为printf "%0.s#" 1 2 3...
+#所有参数共用格式字符串"%0.s#"，每有一个参数，就会输出一个"#"
+#因此$(seq 1 $filled)输出内容并不重要，它们只负责让printf输出一个#
+#$(seq 1 $filled)只用来指定重复输出#的个数
+#如果输出数量一定，printf "%0.s#" &#123;1..5&#125;也是类似的作用
+bar=$(printf "%0.s#" $(seq 1 $filled)) #输出#
+space=$(printf "%0.s " $(seq 1 $empty))#输出空白符
+
+tput rc  #每次都从原光标位置开始打印进度条，以覆盖上次的进度条
+echo -ne "$&#123;blue_color&#125;[$&#123;bar&#125;$&#123;space&#125;]$&#123;reset&#125; $&#123;red_color&#125;$&#123;i&#125;%$&#123;reset&#125;"
+sleep 0.05
+done
+
+#结束打印
+echo       #输出换行
+tput cnorm #恢复光标显示
+</code></pre>
+
+<p>文字自动居中</p>
+<pre><code>cols=$(tput cols)
+msg="居中标题"
+padding=$(( (cols - $&#123;#msg&#125;) / 2 ))
+printf "%*s%s\n" "$padding" "" "$msg"
+</code></pre>
 
 
-
-
-
+<h4 id="擦除行"><a href="#擦除行" class="headerlink" title="擦除行"></a>擦除行</h4><ul>
+<li>tput ed 擦除光标之后的所有行，仅保留光标之前的行</li>
+<li>tput el 擦除当前行光标之后到行末的内容</li>
+<li>tput el1 擦除当前行光标之前到行开头间的内容</li>
+<li>tput el2 擦除整行</li>
+</ul>
+<h4 id="插入-删除行与列"><a href="#插入-删除行与列" class="headerlink" title="插入/删除行与列"></a>插入/删除行与列</h4><ul>
+<li>tput il 插入一行，重排 UI</li>
+<li>tput dl 删除一行，重排 UI</li>
+<li>tput ich 在当前位置插入字符</li>
+<li>tput dch 删除当前位置字符</li>
+</ul>
+<h4 id="切换屏幕缓冲区"><a href="#切换屏幕缓冲区" class="headerlink" title="切换屏幕缓冲区"></a>切换屏幕缓冲区</h4><p>实现类似less、top、vim等命令，独占整个屏幕，且命令结束返回原屏幕的效果</p>
+<ul>
+<li><span class="strong">tput smcup</span>切换到新屏幕</li>
+<li><span class="strong">tput rmcup</span>切换回原屏幕</li>
+</ul>
 
         </div>
     </div>
@@ -1578,7 +2184,7 @@ sudo chmod +x /etc/update-motd.d/99-custom
     </div>
     <div class="container">
         <!--设计来源于B站-季夏小贞-->
-        <div class="bigHead"></div>
+        <div class="big-head"></div>
         <div class="ears"></div>
         <div class="body"></div>
         <div class="paws-front"></div>
@@ -1595,7 +2201,7 @@ sudo chmod +x /etc/update-motd.d/99-custom
     </div>
 </div>
 <div class="right-menu">
-    <a class="iconfont backTop" href="javascript:">&#xe655;</a>
+    <a class="iconfont back-top" href="javascript:">&#xe655;</a>
     <div class="husky"></div>
   </div>
 </div>

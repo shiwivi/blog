@@ -13,7 +13,7 @@
         <div class="head">
             <img src="/blog/images/head.jpg"  alt="头不见了.." title="狗">
         </div>
-        <div class="cardText">
+        <div class="card-text">
             <p>(ー`´ー)</p>
             <p>那不是bug，是彩蛋</p>
         </div> 
@@ -33,22 +33,22 @@
     </ul>
         <ul class="tag">
             <li><a href="/blog/tags/Command">#Command</a></li>
-            <li>#Java</li>
-            <li>#css</li>
-            <li>#Life</li>
-            <li>#Lua</li>
-            <li>#PCB</li>
-            <li>#Shell</li>
-            <li>#C</li>
-            <li>#html</li>
-            <li>#硬件</li>
-            <li>#JavaScript</li>
-            <li>#Firewall</li>
-            <li>#Security</li>
+            <li><a href="/blog/tags/Java">#Java</a></li>
+            <li><a href="/blog/tags/Css">#Css</a></li>
+            <li><a href="/blog/tags/Life">#Life</a></li>
+            <li><a href="/blog/tags/Lua">#Lua</a></li>
+            <li><a href="/blog/tags/PCB">#PCB</a></li>
+            <li><a href="/blog/tags/Shell">#Shell</a></li>
+            <li><a href="/blog/tags/C">#C</a></li>
+            <li><a href="/blog/tags/html">#html</a></li>
+            <li><a href="/blog/tags/%E7%A1%AC%E4%BB%B6">#硬件</a></li>
+            <li><a href="/blog/tags/JavaScrip">#JavaScript</a></li>
+            <li><a href="/blog/tags/Firewall">#Firewall</a></li>
+            <li><a href="/blog/tags/Security">#Security</a></li>
             <li><a href="/blog/tags/Linux">#Linux</a></li>
-            <li>#Python</li>
-            <li>#Serve</li>
-            <li>#Web</li>
+            <li><a href="/blog/tags/Python">#Python</a></li>
+            <li><a href="/blog/tags/Server">#Server</a></li>
+            <li><a href="/blog/tags/Web">#Web</a></li>
         </ul>
     <div class="rsstag"><a href="/blog/atom.xml"><span class="iconfont icon-rss"></span>RSS订阅</a></div>
 <div class="flower">
@@ -93,16 +93,15 @@
 </div>
 
 </div>
-<div class="menuBtn closed"> 
+<div class="menu-btn closed"> 
     <div class="menu-line"></div>
     <div class="menu-line"></div>
     <div class="menu-line"></div>
 </div>
-<div class="nightSky"><!--当关闭夜间背景模式时，子元素将在一段延时后才会被清除--></div>
 <div class="main">
     <div class="msg">
-        <div class="msgText"></div>
-        <div class="msgBar"></div>
+        <div class="msg-text"></div>
+        <div class="msg-bar"></div>
     </div>
     <div class="motto">
         <p> //sunny forever<br />
@@ -110,48 +109,55 @@
                love++;<br />
                beAwesome :)} </p>
      </div>
-     <div class="mainContent">
-    <div class="canvasWrapper"></div>
-<div class="setWrapper">
-    <ul class="setMenu">
-        <div id="setBtn" class="setButton"><</div>
-        <li class="searchContainer">
-            <input id="searchInput" class="localSearch" placeholder="搜索..." type="search" >
-            <span class="searchIco"></span>
+     <div class="main-content">
+    <div class="set-wrapper">
+    <ul class="set-menu">
+        <div id="set-btn" class="set-button"><</div>
+        <li class="search-container">
+            <input id="search-input" class="local-search" placeholder="搜索..." type="search" >
+            <span class="search-ico"></span>
         </li>
-        <li id="toggleItem">
-        主题：<span class="itemIco sun"></span>
+        <li id="toggle-theme">
+        主题：<span class="theme-ico sun"></span>
         </li>
-        <li class="setSize">
-            <span id="increaseFontSize">+</span>
-            <span class="fontSizeNum"></span>
-            <span id="reduceFontSize">-</span>
+        <li class="set-size">
+            <span id="increase-font-size">+</span>
+            <span class="font-size-num"></span>
+            <span id="reduce-font-size">-</span>
         </li>
-        <li id="clearBack">清除背景</li>
-        <li id="disableBack">禁用背景</li>
+        <li id="clear-back">清除背景</li>
+        <li id="disable-back">禁用背景</li>
     </ul> 
 </div>
-    <div class="resultContainer">
-        <div id="searchResult" class="displayResult"></div>
+    <div class="result-container">
+        <div id="search-result" class="display-result"></div>
     </div>
-    <div class="tocWrapper"><div class="tocBtn">目 录</div><div class="tocBox"><!--tocBox用于容纳生成在toc外的目录--><ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#shell%E8%84%9A%E6%9C%AC%E5%9F%BA%E7%A1%80"><span class="toc-number">1.</span> <span class="toc-text">shell脚本基础</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%84%9A%E6%9C%AC%E5%A3%B0%E6%98%8E"><span class="toc-number">1.1.</span> <span class="toc-text">脚本声明</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#shell%E8%84%9A%E6%9C%AC%E7%9A%84%E6%89%A7%E8%A1%8C%E6%96%B9%E5%BC%8F"><span class="toc-number">1.2.</span> <span class="toc-text">shell脚本的执行方式</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%85%A8%E5%B1%80%E6%89%A7%E8%A1%8C%E8%84%9A%E6%9C%AC%E6%96%B9%E5%BC%8F"><span class="toc-number">1.3.</span> <span class="toc-text">全局执行脚本方式</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%B3%A8%E9%87%8A"><span class="toc-number">1.4.</span> <span class="toc-text">注释</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%84%9A%E6%9C%AC%E6%A0%BC%E5%BC%8F%E8%BD%AC%E6%8D%A2"><span class="toc-number">1.5.</span> <span class="toc-text">脚本格式转换</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%84%9A%E6%9C%AC%E9%80%80%E5%87%BA%E7%8A%B6%E6%80%81%E7%A0%81"><span class="toc-number">1.6.</span> <span class="toc-text">脚本退出状态码</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#shell%E4%B8%AD%E7%9A%84%E8%BF%90%E7%AE%97"><span class="toc-number">2.</span> <span class="toc-text">shell中的运算</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%90%84%E7%A7%8D%E6%8B%AC%E5%8F%B7%E4%BD%BF%E7%94%A8%E9%A2%84%E8%A7%88"><span class="toc-number">2.1.</span> <span class="toc-text">各种括号使用预览</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%B8%8E-%E5%91%BD%E4%BB%A4%E8%B0%83%E7%94%A8"><span class="toc-number">2.2.</span> <span class="toc-text">$()与&#96;&#96;命令调用</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%B8%8E-%E6%95%B4%E6%95%B0%E8%BF%90%E7%AE%97"><span class="toc-number">2.3.</span> <span class="toc-text">$(())与$[]整数运算</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#expr%E8%A1%A8%E8%BE%BE%E5%BC%8F"><span class="toc-number">2.4.</span> <span class="toc-text">expr表达式</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%8F%98%E9%87%8F"><span class="toc-number">3.</span> <span class="toc-text">变量</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#shell%E4%B8%AD%E7%9A%84%E5%8F%98%E9%87%8F%E7%B1%BB%E5%9E%8B"><span class="toc-number">3.1.</span> <span class="toc-text">shell中的变量类型</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%87%AA%E5%AE%9A%E4%B9%89%E5%8F%98%E9%87%8F"><span class="toc-number">3.2.</span> <span class="toc-text">自定义变量</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#%E5%8F%98%E9%87%8F%E5%AE%9A%E4%B9%89%E3%80%81%E8%B5%8B%E5%80%BC%E3%80%81%E8%B0%83%E7%94%A8"><span class="toc-number">3.2.1.</span> <span class="toc-text">变量定义、赋值、调用</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E5%8F%AA%E8%AF%BB%E5%8F%98%E9%87%8F"><span class="toc-number">3.2.2.</span> <span class="toc-text">只读变量</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E5%88%A0%E9%99%A4%E5%8F%98%E9%87%8F"><span class="toc-number">3.2.3.</span> <span class="toc-text">删除变量</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%8F%98%E9%87%8F%E5%80%BC%E6%A3%80%E6%B5%8B%E4%B8%8E%E6%9B%BF%E6%8D%A2"><span class="toc-number">3.3.</span> <span class="toc-text">变量值检测与替换</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AD%97%E7%AC%A6%E4%B8%B2"><span class="toc-number">4.</span> <span class="toc-text">字符串</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%AD%97%E7%AC%A6%E4%B8%B2%E6%8B%BC%E6%8E%A5"><span class="toc-number">4.1.</span> <span class="toc-text">字符串拼接</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%8E%B7%E5%8F%96%E5%AD%97%E7%AC%A6%E4%B8%B2%E9%95%BF%E5%BA%A6"><span class="toc-number">4.2.</span> <span class="toc-text">获取字符串长度</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%88%AA%E5%8F%96%E5%AD%97%E7%AC%A6%E4%B8%B2"><span class="toc-number">4.3.</span> <span class="toc-text">截取字符串</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%BF%AB%E9%80%9F%E5%88%A0%E9%99%A4%E5%AD%97%E7%AC%A6%E4%B8%B2"><span class="toc-number">4.4.</span> <span class="toc-text">快速删除字符串</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%9F%A5%E6%89%BE%E5%AD%90%E5%AD%97%E7%AC%A6%E4%B8%B2"><span class="toc-number">4.5.</span> <span class="toc-text">查找子字符串</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%8F%AF%E8%BD%AC%E4%B9%89%E7%9A%84%E5%AD%97%E7%AC%A6%E4%B8%B2"><span class="toc-number">4.6.</span> <span class="toc-text">可转义的字符串</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%95%B0%E7%BB%84"><span class="toc-number">5.</span> <span class="toc-text">数组</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%95%B0%E7%BB%84%E5%AE%9A%E4%B9%89"><span class="toc-number">5.1.</span> <span class="toc-text">数组定义</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%95%B0%E7%BB%84%E5%85%83%E7%B4%A0"><span class="toc-number">5.2.</span> <span class="toc-text">数组元素</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%95%B0%E7%BB%84%E9%95%BF%E5%BA%A6"><span class="toc-number">5.3.</span> <span class="toc-text">数组长度</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%85%B3%E8%81%94%E6%95%B0%E7%BB%84"><span class="toc-number">5.4.</span> <span class="toc-text">关联数组</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BD%8D%E7%BD%AE%E5%8F%98%E9%87%8F%E4%B8%8E%E5%8F%82%E6%95%B0%E4%BC%A0%E9%80%92"><span class="toc-number">6.</span> <span class="toc-text">位置变量与参数传递</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%BB%99%E8%84%9A%E6%9C%AC%E4%BC%A0%E9%80%92%E5%8F%82%E6%95%B0"><span class="toc-number">6.1.</span> <span class="toc-text">给脚本传递参数</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#0%E5%8F%82%E6%95%B0%E7%9A%84%E4%BD%BF%E7%94%A8"><span class="toc-number">6.1.1.</span> <span class="toc-text">$0参数的使用</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%A7%BB%E5%8A%A8%E5%8F%82%E6%95%B0shift"><span class="toc-number">6.2.</span> <span class="toc-text">移动参数shift</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%84%9A%E6%9C%AC%E9%80%89%E9%A1%B9"><span class="toc-number">7.</span> <span class="toc-text">脚本选项</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E9%80%89%E9%A1%B9%E4%B8%8E%E5%8F%82%E6%95%B0%E5%88%86%E5%89%B2%E7%AC%A6"><span class="toc-number">7.1.</span> <span class="toc-text">选项与参数分割符</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%AE%80%E5%8D%95%E9%80%89%E9%A1%B9%E5%A4%84%E7%90%86"><span class="toc-number">7.2.</span> <span class="toc-text">简单选项处理</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#getopt%E4%B8%8Egetopts%E5%91%BD%E4%BB%A4"><span class="toc-number">7.3.</span> <span class="toc-text">getopt与getopts命令</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#getopt%E5%91%BD%E4%BB%A4"><span class="toc-number">7.3.1.</span> <span class="toc-text">getopt命令</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#getopts%E5%91%BD%E4%BB%A4"><span class="toc-number">7.3.2.</span> <span class="toc-text">getopts命令</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E9%80%89%E9%A1%B9%E6%A0%87%E5%87%86%E5%8C%96"><span class="toc-number">7.4.</span> <span class="toc-text">选项标准化</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%95%B0%E5%80%BC%E5%A3%B0%E6%98%8E%E4%B8%8E%E6%95%B0%E5%80%BC%E8%BF%90%E7%AE%97"><span class="toc-number">8.</span> <span class="toc-text">数值声明与数值运算</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%95%B0%E5%80%BC%E5%A3%B0%E6%98%8E"><span class="toc-number">8.1.</span> <span class="toc-text">数值声明</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%95%B0%E5%80%BC%E8%BF%90%E7%AE%97"><span class="toc-number">8.2.</span> <span class="toc-text">数值运算</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#1-%E9%80%9A%E8%BF%87%E2%80%9D-%E2%80%9D%E6%88%96%E2%80%9D-%E2%80%9D%E8%BF%90%E7%AE%97%E5%BC%8F"><span class="toc-number">8.2.1.</span> <span class="toc-text">1.通过”$(())”或”$[]”运算式</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#2-%E9%80%9A%E8%BF%87declare-i%E5%A3%B0%E6%98%8E"><span class="toc-number">8.2.2.</span> <span class="toc-text">2.通过declare -i声明</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%B5%AE%E7%82%B9%E6%95%B0%E8%BF%90%E7%AE%97%E7%9A%84%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88"><span class="toc-number">8.3.</span> <span class="toc-text">浮点数运算的解决方案</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%BE%93%E5%85%A5%E8%BE%93%E5%87%BA"><span class="toc-number">9.</span> <span class="toc-text">输入输出</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%94%A8%E6%88%B7%E8%BE%93%E5%85%A5read"><span class="toc-number">9.1.</span> <span class="toc-text">用户输入read</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%BB%88%E7%AB%AF%E8%BE%93%E5%87%BA"><span class="toc-number">9.2.</span> <span class="toc-text">终端输出</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%BE%93%E5%85%A5%E8%BE%93%E5%87%BA%E9%87%8D%E5%AE%9A%E5%90%91"><span class="toc-number">10.</span> <span class="toc-text">输入输出重定向</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%96%87%E4%BB%B6%E6%8F%8F%E8%BF%B0%E7%AC%A6%E4%B8%8E%E6%A0%87%E5%87%86%E8%BE%93%E5%85%A5%E8%BE%93%E5%87%BA%E8%AE%BE%E5%A4%87"><span class="toc-number">10.1.</span> <span class="toc-text">文件描述符与标准输入输出设备</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%BE%93%E5%87%BA%E9%87%8D%E5%AE%9A%E5%90%91"><span class="toc-number">10.2.</span> <span class="toc-text">输出重定向</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#1-%E6%A0%87%E5%87%86%E8%BE%93%E5%87%BA%E4%B8%8E%E6%A0%87%E5%87%86%E9%94%99%E8%AF%AF%E8%BE%93%E5%87%BA%E7%9A%84%E9%87%8D%E5%AE%9A%E5%90%91"><span class="toc-number">10.2.1.</span> <span class="toc-text">1.标准输出与标准错误输出的重定向</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#2-%E8%BE%93%E5%87%BA%E9%94%99%E8%AF%AF%E4%BF%A1%E6%81%AF"><span class="toc-number">10.2.2.</span> <span class="toc-text">2.输出错误信息</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%BE%93%E5%85%A5%E9%87%8D%E5%AE%9A%E5%90%91-%E4%B8%8D%E5%B8%B8%E7%94%A8"><span class="toc-number">10.3.</span> <span class="toc-text">输入重定向(不常用)</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%89%B9%E9%87%8F%E9%87%8D%E5%AE%9A%E5%90%91"><span class="toc-number">10.4.</span> <span class="toc-text">批量重定向</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%B8%A2%E5%BC%83%E5%91%BD%E4%BB%A4%E8%BE%93%E5%87%BA"><span class="toc-number">10.5.</span> <span class="toc-text">丢弃命令输出</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%87%AA%E5%AE%9A%E4%B9%89%E9%87%8D%E5%AE%9A%E5%90%91"><span class="toc-number">10.6.</span> <span class="toc-text">自定义重定向</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#%E5%88%9B%E5%BB%BA%E6%96%87%E4%BB%B6%E6%8F%8F%E8%BF%B0%E7%AC%A6"><span class="toc-number">10.6.1.</span> <span class="toc-text">创建文件描述符</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E9%87%8D%E5%AE%9A%E5%90%91%E6%96%87%E4%BB%B6%E6%8F%8F%E8%BF%B0%E7%AC%A6"><span class="toc-number">10.6.2.</span> <span class="toc-text">重定向文件描述符</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E6%81%A2%E5%A4%8D%E6%96%87%E4%BB%B6%E6%8F%8F%E8%BF%B0%E7%AC%A6%E7%9A%84%E6%8C%87%E5%90%91"><span class="toc-number">10.6.3.</span> <span class="toc-text">恢复文件描述符的指向</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E5%90%8C%E6%97%B6%E8%AF%BB%E5%86%99%E7%9A%84%E6%96%87%E4%BB%B6%E6%8F%8F%E8%BF%B0%E7%AC%A6-%E4%BA%86%E8%A7%A3"><span class="toc-number">10.6.4.</span> <span class="toc-text">同时读写的文件描述符(了解)</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E5%85%B3%E9%97%AD%E6%96%87%E4%BB%B6%E6%8F%8F%E8%BF%B0%E7%AC%A6"><span class="toc-number">10.6.5.</span> <span class="toc-text">关闭文件描述符</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%88%97%E5%87%BA%E6%89%93%E5%BC%80%E7%9A%84%E6%96%87%E4%BB%B6%E6%8F%8F%E8%BF%B0%E7%AC%A6"><span class="toc-number">10.7.</span> <span class="toc-text">列出打开的文件描述符</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#tee%E5%90%8C%E6%97%B6%E8%BE%93%E5%87%BA%E5%88%B0%E6%98%BE%E7%A4%BA%E5%99%A8%E5%92%8C%E6%96%87%E4%BB%B6"><span class="toc-number">10.8.</span> <span class="toc-text">tee同时输出到显示器和文件</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%9D%A1%E4%BB%B6%E5%88%A4%E6%96%AD"><span class="toc-number">11.</span> <span class="toc-text">条件判断</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#test%E5%91%BD%E4%BB%A4%E4%B8%8E"><span class="toc-number">11.1.</span> <span class="toc-text">test命令与[ ]</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%96%87%E4%BB%B6%E7%9B%B8%E5%85%B3"><span class="toc-number">11.2.</span> <span class="toc-text">文件相关</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#%E6%96%87%E4%BB%B6%E7%B1%BB%E5%9E%8B"><span class="toc-number">11.2.1.</span> <span class="toc-text">文件类型</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E6%96%87%E4%BB%B6%E6%9D%83%E9%99%90"><span class="toc-number">11.2.2.</span> <span class="toc-text">文件权限</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E4%B8%A4%E4%B8%AA%E6%96%87%E4%BB%B6%E6%AF%94%E8%BE%83"><span class="toc-number">11.2.3.</span> <span class="toc-text">两个文件比较</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%95%B4%E6%95%B0%E6%AF%94%E8%BE%83"><span class="toc-number">11.3.</span> <span class="toc-text">整数比较</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%AD%97%E7%AC%A6%E4%B8%B2%E5%88%A4%E6%96%AD"><span class="toc-number">11.4.</span> <span class="toc-text">字符串判断</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%A4%9A%E9%87%8D%E5%88%A4%E6%96%AD"><span class="toc-number">11.5.</span> <span class="toc-text">多重判断</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%88%A4%E6%96%AD%E8%AF%AD%E5%8F%A5"><span class="toc-number">12.</span> <span class="toc-text">判断语句</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#if%E8%AF%AD%E5%8F%A5"><span class="toc-number">12.1.</span> <span class="toc-text">if语句</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#case%E5%91%BD%E4%BB%A4"><span class="toc-number">12.2.</span> <span class="toc-text">case命令</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%BE%AA%E7%8E%AF%E8%AF%AD%E5%8F%A5"><span class="toc-number">13.</span> <span class="toc-text">循环语句</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#for%E5%91%BD%E4%BB%A4"><span class="toc-number">13.1.</span> <span class="toc-text">for命令</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#while%E5%91%BD%E4%BB%A4"><span class="toc-number">13.2.</span> <span class="toc-text">while命令</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#until%E5%91%BD%E4%BB%A4"><span class="toc-number">13.3.</span> <span class="toc-text">until命令</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#break%E7%BB%88%E6%AD%A2%E5%BE%AA%E7%8E%AF"><span class="toc-number">13.4.</span> <span class="toc-text">break终止循环</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#continue%E8%B7%B3%E8%BF%87%E5%BE%AA%E7%8E%AF"><span class="toc-number">13.5.</span> <span class="toc-text">continue跳过循环</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%A4%84%E7%90%86%E5%BE%AA%E7%8E%AF%E7%9A%84%E8%BE%93%E5%87%BA"><span class="toc-number">13.6.</span> <span class="toc-text">处理循环的输出</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AD%97%E6%AE%B5%E5%88%86%E9%9A%94%E7%AC%A6"><span class="toc-number">14.</span> <span class="toc-text">字段分隔符</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%8F%8C%E6%8B%AC%E5%8F%B7%E5%91%BD%E4%BB%A4"><span class="toc-number">15.</span> <span class="toc-text">(())双括号命令</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%95%B0%E5%AD%A6%E8%BF%90%E7%AE%97"><span class="toc-number">15.1.</span> <span class="toc-text">数学运算</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E9%80%BB%E8%BE%91%E5%88%A4%E6%96%AD"><span class="toc-number">15.2.</span> <span class="toc-text">逻辑判断</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%8F%8C%E6%96%B9%E6%8B%AC%E5%8F%B7%E5%91%BD%E4%BB%A4"><span class="toc-number">16.</span> <span class="toc-text">[[]]双方括号命令</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%84%9A%E6%9C%AC%E6%8E%A7%E5%88%B6"><span class="toc-number">17.</span> <span class="toc-text">脚本控制</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%8D%95%E8%8E%B7%E4%BF%A1%E5%8F%B7"><span class="toc-number">17.1.</span> <span class="toc-text">捕获信号</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BF%AE%E6%94%B9%E4%BF%A1%E5%8F%B7%E6%8D%95%E8%8E%B7"><span class="toc-number">17.2.</span> <span class="toc-text">修改信号捕获</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%88%A0%E9%99%A4%E4%BF%A1%E5%8F%B7%E6%8D%95%E8%8E%B7"><span class="toc-number">17.3.</span> <span class="toc-text">删除信号捕获</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%87%BD%E6%95%B0"><span class="toc-number">18.</span> <span class="toc-text">函数</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%88%9B%E5%BB%BA%E4%B8%8E%E8%B0%83%E7%94%A8%E5%87%BD%E6%95%B0"><span class="toc-number">18.1.</span> <span class="toc-text">创建与调用函数</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%8F%98%E9%87%8F%E7%9A%84%E4%BD%9C%E7%94%A8%E5%9F%9F"><span class="toc-number">18.2.</span> <span class="toc-text">变量的作用域</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#%E5%85%A8%E5%B1%80%E5%8F%98%E9%87%8F"><span class="toc-number">18.2.1.</span> <span class="toc-text">全局变量</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E5%B1%80%E9%83%A8%E5%8F%98%E9%87%8F"><span class="toc-number">18.2.2.</span> <span class="toc-text">局部变量</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%87%BD%E6%95%B0%E8%BF%94%E5%9B%9E%E5%80%BC%E4%B8%8E%E8%BE%93%E5%87%BA"><span class="toc-number">18.3.</span> <span class="toc-text">函数返回值与输出</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#%E9%BB%98%E8%AE%A4%E9%80%80%E5%87%BA%E7%8A%B6%E6%80%81%E7%A0%81"><span class="toc-number">18.3.1.</span> <span class="toc-text">默认退出状态码</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#return%E5%91%BD%E4%BB%A4%E4%BF%AE%E6%94%B9%E7%8A%B6%E6%80%81%E7%A0%81"><span class="toc-number">18.3.2.</span> <span class="toc-text">return命令修改状态码</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E5%87%BD%E6%95%B0%E8%BE%93%E5%87%BA"><span class="toc-number">18.3.3.</span> <span class="toc-text">函数输出</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%87%BD%E6%95%B0%E4%BC%A0%E5%8F%82"><span class="toc-number">18.4.</span> <span class="toc-text">函数传参</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BC%A0%E9%80%92%E6%95%B0%E7%BB%84%E5%8F%82%E6%95%B0"><span class="toc-number">18.5.</span> <span class="toc-text">传递数组参数</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%BF%94%E5%9B%9E%E6%95%B0%E7%BB%84"><span class="toc-number">18.6.</span> <span class="toc-text">返回数组</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%88%9B%E5%BB%BA%E5%BA%93"><span class="toc-number">18.7.</span> <span class="toc-text">创建库</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%9C%A8%E5%91%BD%E4%BB%A4%E8%A1%8C%E4%B8%AD%E4%BD%BF%E7%94%A8%E5%87%BD%E6%95%B0"><span class="toc-number">18.8.</span> <span class="toc-text">在命令行中使用函数</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%9C%A8-bashrc%E6%96%87%E4%BB%B6%E4%B8%AD%E5%AE%9A%E4%B9%89%E5%87%BD%E6%95%B0"><span class="toc-number">18.9.</span> <span class="toc-text">在.bashrc文件中定义函数</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%84%9A%E6%9C%AC%E5%90%88%E9%9B%86"><span class="toc-number">19.</span> <span class="toc-text">脚本合集</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%88%A4%E6%96%AD%E5%8F%91%E8%A1%8C%E7%89%88"><span class="toc-number">19.1.</span> <span class="toc-text">判断发行版</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%88%A4%E6%96%AD%E7%B3%BB%E7%BB%9F%E6%9E%B6%E6%9E%84"><span class="toc-number">19.2.</span> <span class="toc-text">判断系统架构</span></a></li></ol></li></ol></div></div>
+    <div class="toc-wrapper"><div class="toc-btn">目 录</div><div class="toc-box"><!--tocBox用于容纳生成在toc外的目录--><ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#shell%E8%84%9A%E6%9C%AC%E5%9F%BA%E7%A1%80"><span class="toc-number">1.</span> <span class="toc-text">shell脚本基础</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%84%9A%E6%9C%AC%E5%A3%B0%E6%98%8E"><span class="toc-number">1.1.</span> <span class="toc-text">脚本声明</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#shell%E8%84%9A%E6%9C%AC%E7%9A%84%E6%89%A7%E8%A1%8C%E6%96%B9%E5%BC%8F"><span class="toc-number">1.2.</span> <span class="toc-text">shell脚本的执行方式</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#%E8%B5%8B%E4%BA%88%E5%8F%AF%E6%89%A7%E8%A1%8C%E6%9D%83%E9%99%90"><span class="toc-number">1.2.1.</span> <span class="toc-text">赋予可执行权限</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E6%89%A7%E8%A1%8C%E6%96%B9%E5%BC%8F"><span class="toc-number">1.2.2.</span> <span class="toc-text">执行方式</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%85%A8%E5%B1%80%E6%89%A7%E8%A1%8C%E8%84%9A%E6%9C%AC%E6%96%B9%E5%BC%8F"><span class="toc-number">1.3.</span> <span class="toc-text">全局执行脚本方式</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%B3%A8%E9%87%8A"><span class="toc-number">1.4.</span> <span class="toc-text">注释</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%84%9A%E6%9C%AC%E6%A0%BC%E5%BC%8F%E8%BD%AC%E6%8D%A2"><span class="toc-number">1.5.</span> <span class="toc-text">脚本格式转换</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%84%9A%E6%9C%AC%E9%80%80%E5%87%BA%E7%8A%B6%E6%80%81%E7%A0%81"><span class="toc-number">1.6.</span> <span class="toc-text">脚本退出状态码</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#shell%E4%B8%AD%E7%9A%84%E8%BF%90%E7%AE%97"><span class="toc-number">2.</span> <span class="toc-text">shell中的运算</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%90%84%E7%A7%8D%E6%8B%AC%E5%8F%B7%E4%BD%BF%E7%94%A8%E9%A2%84%E8%A7%88"><span class="toc-number">2.1.</span> <span class="toc-text">各种括号使用预览</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%B8%8E-%E5%91%BD%E4%BB%A4%E8%B0%83%E7%94%A8"><span class="toc-number">2.2.</span> <span class="toc-text">$()与&#96;&#96;命令调用</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%B8%8E-%E6%95%B4%E6%95%B0%E8%BF%90%E7%AE%97"><span class="toc-number">2.3.</span> <span class="toc-text">$(())与$[]整数运算</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#expr%E8%A1%A8%E8%BE%BE%E5%BC%8F"><span class="toc-number">2.4.</span> <span class="toc-text">expr表达式</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%8F%98%E9%87%8F"><span class="toc-number">3.</span> <span class="toc-text">变量</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#shell%E4%B8%AD%E7%9A%84%E5%8F%98%E9%87%8F%E7%B1%BB%E5%9E%8B"><span class="toc-number">3.1.</span> <span class="toc-text">shell中的变量类型</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%87%AA%E5%AE%9A%E4%B9%89%E5%8F%98%E9%87%8F"><span class="toc-number">3.2.</span> <span class="toc-text">自定义变量</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#%E5%8F%98%E9%87%8F%E5%AE%9A%E4%B9%89%E3%80%81%E8%B5%8B%E5%80%BC%E3%80%81%E8%B0%83%E7%94%A8"><span class="toc-number">3.2.1.</span> <span class="toc-text">变量定义、赋值、调用</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E5%8F%AA%E8%AF%BB%E5%8F%98%E9%87%8F"><span class="toc-number">3.2.2.</span> <span class="toc-text">只读变量</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E5%88%A0%E9%99%A4%E5%8F%98%E9%87%8F"><span class="toc-number">3.2.3.</span> <span class="toc-text">删除变量</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%8F%98%E9%87%8F%E7%9A%84%E4%BD%9C%E7%94%A8%E5%9F%9F"><span class="toc-number">3.3.</span> <span class="toc-text">变量的作用域</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#%E5%85%A8%E5%B1%80%E5%8F%98%E9%87%8F"><span class="toc-number">3.3.1.</span> <span class="toc-text">全局变量</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E5%B1%80%E9%83%A8%E5%8F%98%E9%87%8F"><span class="toc-number">3.3.2.</span> <span class="toc-text">局部变量</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%8F%98%E9%87%8F%E5%80%BC%E6%A3%80%E6%B5%8B%E4%B8%8E%E6%9B%BF%E6%8D%A2"><span class="toc-number">3.4.</span> <span class="toc-text">变量值检测与替换</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AD%97%E7%AC%A6%E4%B8%B2"><span class="toc-number">4.</span> <span class="toc-text">字符串</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%AD%97%E7%AC%A6%E4%B8%B2%E5%B8%B8%E9%87%8F"><span class="toc-number">4.1.</span> <span class="toc-text">字符串常量</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%AD%97%E7%AC%A6%E4%B8%B2%E6%8B%BC%E6%8E%A5"><span class="toc-number">4.2.</span> <span class="toc-text">字符串拼接</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%8E%B7%E5%8F%96%E5%AD%97%E7%AC%A6%E4%B8%B2%E9%95%BF%E5%BA%A6"><span class="toc-number">4.3.</span> <span class="toc-text">获取字符串长度</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%88%AA%E5%8F%96%E5%AD%97%E7%AC%A6%E4%B8%B2"><span class="toc-number">4.4.</span> <span class="toc-text">截取字符串</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%BF%AB%E9%80%9F%E5%88%A0%E9%99%A4%E5%AD%97%E7%AC%A6%E4%B8%B2"><span class="toc-number">4.5.</span> <span class="toc-text">快速删除字符串</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%9F%A5%E6%89%BE%E5%AD%90%E5%AD%97%E7%AC%A6%E4%B8%B2"><span class="toc-number">4.6.</span> <span class="toc-text">查找子字符串</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%AD%97%E7%AC%A6%E4%B8%B2%E7%9A%84%E8%BD%AC%E4%B9%89"><span class="toc-number">4.7.</span> <span class="toc-text">字符串的转义</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%95%B0%E7%BB%84"><span class="toc-number">5.</span> <span class="toc-text">数组</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%95%B0%E7%BB%84%E5%AE%9A%E4%B9%89"><span class="toc-number">5.1.</span> <span class="toc-text">数组定义</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%95%B0%E7%BB%84%E5%85%83%E7%B4%A0"><span class="toc-number">5.2.</span> <span class="toc-text">数组元素</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%95%B0%E7%BB%84%E9%95%BF%E5%BA%A6"><span class="toc-number">5.3.</span> <span class="toc-text">数组长度</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%85%B3%E8%81%94%E6%95%B0%E7%BB%84"><span class="toc-number">5.4.</span> <span class="toc-text">关联数组</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BD%8D%E7%BD%AE%E5%8F%98%E9%87%8F%E4%B8%8E%E5%8F%82%E6%95%B0%E4%BC%A0%E9%80%92"><span class="toc-number">6.</span> <span class="toc-text">位置变量与参数传递</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%BB%99%E8%84%9A%E6%9C%AC%E4%BC%A0%E9%80%92%E5%8F%82%E6%95%B0"><span class="toc-number">6.1.</span> <span class="toc-text">给脚本传递参数</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#0%E5%8F%82%E6%95%B0%E7%9A%84%E4%BD%BF%E7%94%A8"><span class="toc-number">6.1.1.</span> <span class="toc-text">$0参数的使用</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%A7%BB%E5%8A%A8%E5%8F%82%E6%95%B0shift"><span class="toc-number">6.2.</span> <span class="toc-text">移动参数shift</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%84%9A%E6%9C%AC%E9%80%89%E9%A1%B9"><span class="toc-number">7.</span> <span class="toc-text">脚本选项</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E9%80%89%E9%A1%B9%E4%B8%8E%E5%8F%82%E6%95%B0%E5%88%86%E5%89%B2%E7%AC%A6"><span class="toc-number">7.1.</span> <span class="toc-text">选项与参数分割符</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%AE%80%E5%8D%95%E9%80%89%E9%A1%B9%E5%A4%84%E7%90%86"><span class="toc-number">7.2.</span> <span class="toc-text">简单选项处理</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#getopt%E4%B8%8Egetopts%E5%91%BD%E4%BB%A4"><span class="toc-number">7.3.</span> <span class="toc-text">getopt与getopts命令</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#getopt%E5%91%BD%E4%BB%A4"><span class="toc-number">7.3.1.</span> <span class="toc-text">getopt命令</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#getopts%E5%91%BD%E4%BB%A4"><span class="toc-number">7.3.2.</span> <span class="toc-text">getopts命令</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E9%80%89%E9%A1%B9%E6%A0%87%E5%87%86%E5%8C%96"><span class="toc-number">7.4.</span> <span class="toc-text">选项标准化</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#select%E7%94%9F%E6%88%90%E8%8F%9C%E5%8D%95"><span class="toc-number">8.</span> <span class="toc-text">select生成菜单</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%95%B0%E5%80%BC%E5%A3%B0%E6%98%8E%E4%B8%8E%E6%95%B0%E5%80%BC%E8%BF%90%E7%AE%97"><span class="toc-number">9.</span> <span class="toc-text">数值声明与数值运算</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%95%B0%E5%80%BC%E5%A3%B0%E6%98%8E"><span class="toc-number">9.1.</span> <span class="toc-text">数值声明</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%95%B0%E5%80%BC%E8%BF%90%E7%AE%97"><span class="toc-number">9.2.</span> <span class="toc-text">数值运算</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#1-%E9%80%9A%E8%BF%87%E2%80%9D-%E2%80%9D%E6%88%96%E2%80%9D-%E2%80%9D%E8%BF%90%E7%AE%97%E5%BC%8F"><span class="toc-number">9.2.1.</span> <span class="toc-text">1.通过”$(())”或”$[]”运算式</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#2-%E9%80%9A%E8%BF%87declare-i%E5%A3%B0%E6%98%8E"><span class="toc-number">9.2.2.</span> <span class="toc-text">2.通过declare -i声明</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%B5%AE%E7%82%B9%E6%95%B0%E8%BF%90%E7%AE%97%E7%9A%84%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88"><span class="toc-number">9.3.</span> <span class="toc-text">浮点数运算的解决方案</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%BE%93%E5%85%A5%E8%BE%93%E5%87%BA"><span class="toc-number">10.</span> <span class="toc-text">输入输出</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%94%A8%E6%88%B7%E8%BE%93%E5%85%A5read"><span class="toc-number">10.1.</span> <span class="toc-text">用户输入read</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%BB%88%E7%AB%AF%E8%BE%93%E5%87%BA"><span class="toc-number">10.2.</span> <span class="toc-text">终端输出</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%BE%93%E5%85%A5%E8%BE%93%E5%87%BA%E9%87%8D%E5%AE%9A%E5%90%91"><span class="toc-number">11.</span> <span class="toc-text">输入输出重定向</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%96%87%E4%BB%B6%E6%8F%8F%E8%BF%B0%E7%AC%A6%E4%B8%8E%E6%A0%87%E5%87%86%E8%BE%93%E5%85%A5%E8%BE%93%E5%87%BA%E8%AE%BE%E5%A4%87"><span class="toc-number">11.1.</span> <span class="toc-text">文件描述符与标准输入输出设备</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%BE%93%E5%87%BA%E9%87%8D%E5%AE%9A%E5%90%91"><span class="toc-number">11.2.</span> <span class="toc-text">输出重定向</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#1-%E6%A0%87%E5%87%86%E8%BE%93%E5%87%BA%E4%B8%8E%E6%A0%87%E5%87%86%E9%94%99%E8%AF%AF%E8%BE%93%E5%87%BA%E7%9A%84%E9%87%8D%E5%AE%9A%E5%90%91"><span class="toc-number">11.2.1.</span> <span class="toc-text">1.标准输出与标准错误输出的重定向</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#2-%E8%BE%93%E5%87%BA%E9%94%99%E8%AF%AF%E4%BF%A1%E6%81%AF"><span class="toc-number">11.2.2.</span> <span class="toc-text">2.输出错误信息</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%BE%93%E5%85%A5%E9%87%8D%E5%AE%9A%E5%90%91"><span class="toc-number">11.3.</span> <span class="toc-text">输入重定向</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#Here-Document"><span class="toc-number">11.3.1.</span> <span class="toc-text">Here Document</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#Here-String"><span class="toc-number">11.3.2.</span> <span class="toc-text">Here String</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%89%B9%E9%87%8F%E9%87%8D%E5%AE%9A%E5%90%91"><span class="toc-number">11.4.</span> <span class="toc-text">批量重定向</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%B8%A2%E5%BC%83%E5%91%BD%E4%BB%A4%E8%BE%93%E5%87%BA"><span class="toc-number">11.5.</span> <span class="toc-text">丢弃命令输出</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%87%AA%E5%AE%9A%E4%B9%89%E9%87%8D%E5%AE%9A%E5%90%91"><span class="toc-number">11.6.</span> <span class="toc-text">自定义重定向</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#%E5%88%9B%E5%BB%BA%E6%96%87%E4%BB%B6%E6%8F%8F%E8%BF%B0%E7%AC%A6"><span class="toc-number">11.6.1.</span> <span class="toc-text">创建文件描述符</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E9%87%8D%E5%AE%9A%E5%90%91%E6%96%87%E4%BB%B6%E6%8F%8F%E8%BF%B0%E7%AC%A6"><span class="toc-number">11.6.2.</span> <span class="toc-text">重定向文件描述符</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E6%81%A2%E5%A4%8D%E6%96%87%E4%BB%B6%E6%8F%8F%E8%BF%B0%E7%AC%A6%E7%9A%84%E6%8C%87%E5%90%91"><span class="toc-number">11.6.3.</span> <span class="toc-text">恢复文件描述符的指向</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E5%90%8C%E6%97%B6%E8%AF%BB%E5%86%99%E7%9A%84%E6%96%87%E4%BB%B6%E6%8F%8F%E8%BF%B0%E7%AC%A6-%E4%BA%86%E8%A7%A3"><span class="toc-number">11.6.4.</span> <span class="toc-text">同时读写的文件描述符(了解)</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E5%85%B3%E9%97%AD%E6%96%87%E4%BB%B6%E6%8F%8F%E8%BF%B0%E7%AC%A6"><span class="toc-number">11.6.5.</span> <span class="toc-text">关闭文件描述符</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%88%97%E5%87%BA%E6%89%93%E5%BC%80%E7%9A%84%E6%96%87%E4%BB%B6%E6%8F%8F%E8%BF%B0%E7%AC%A6"><span class="toc-number">11.7.</span> <span class="toc-text">列出打开的文件描述符</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#tee%E5%90%8C%E6%97%B6%E8%BE%93%E5%87%BA%E5%88%B0%E6%98%BE%E7%A4%BA%E5%99%A8%E5%92%8C%E6%96%87%E4%BB%B6"><span class="toc-number">11.8.</span> <span class="toc-text">tee同时输出到显示器和文件</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%9D%A1%E4%BB%B6%E5%88%A4%E6%96%AD"><span class="toc-number">12.</span> <span class="toc-text">条件判断</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#test%E5%91%BD%E4%BB%A4%E4%B8%8E"><span class="toc-number">12.1.</span> <span class="toc-text">test命令与[ ]</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%96%87%E4%BB%B6%E7%9B%B8%E5%85%B3"><span class="toc-number">12.2.</span> <span class="toc-text">文件相关</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#%E6%96%87%E4%BB%B6%E7%B1%BB%E5%9E%8B"><span class="toc-number">12.2.1.</span> <span class="toc-text">文件类型</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E6%96%87%E4%BB%B6%E6%9D%83%E9%99%90"><span class="toc-number">12.2.2.</span> <span class="toc-text">文件权限</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E4%B8%A4%E4%B8%AA%E6%96%87%E4%BB%B6%E6%AF%94%E8%BE%83"><span class="toc-number">12.2.3.</span> <span class="toc-text">两个文件比较</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%95%B4%E6%95%B0%E6%AF%94%E8%BE%83"><span class="toc-number">12.3.</span> <span class="toc-text">整数比较</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%AD%97%E7%AC%A6%E4%B8%B2%E5%88%A4%E6%96%AD"><span class="toc-number">12.4.</span> <span class="toc-text">字符串判断</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%A4%9A%E9%87%8D%E5%88%A4%E6%96%AD"><span class="toc-number">12.5.</span> <span class="toc-text">多重判断</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%88%A4%E6%96%AD%E8%AF%AD%E5%8F%A5"><span class="toc-number">13.</span> <span class="toc-text">判断语句</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#if%E8%AF%AD%E5%8F%A5"><span class="toc-number">13.1.</span> <span class="toc-text">if语句</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#case%E5%91%BD%E4%BB%A4"><span class="toc-number">13.2.</span> <span class="toc-text">case命令</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%BE%AA%E7%8E%AF%E8%AF%AD%E5%8F%A5"><span class="toc-number">14.</span> <span class="toc-text">循环语句</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#for%E5%91%BD%E4%BB%A4"><span class="toc-number">14.1.</span> <span class="toc-text">for命令</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#while%E5%91%BD%E4%BB%A4"><span class="toc-number">14.2.</span> <span class="toc-text">while命令</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#until%E5%91%BD%E4%BB%A4"><span class="toc-number">14.3.</span> <span class="toc-text">until命令</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#break%E7%BB%88%E6%AD%A2%E5%BE%AA%E7%8E%AF"><span class="toc-number">14.4.</span> <span class="toc-text">break终止循环</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#continue%E8%B7%B3%E8%BF%87%E5%BE%AA%E7%8E%AF"><span class="toc-number">14.5.</span> <span class="toc-text">continue跳过循环</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%A4%84%E7%90%86%E5%BE%AA%E7%8E%AF%E7%9A%84%E8%BE%93%E5%87%BA"><span class="toc-number">14.6.</span> <span class="toc-text">处理循环的输出</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AD%97%E6%AE%B5%E5%88%86%E9%9A%94%E7%AC%A6"><span class="toc-number">15.</span> <span class="toc-text">字段分隔符</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%8F%8C%E6%8B%AC%E5%8F%B7%E5%91%BD%E4%BB%A4"><span class="toc-number">16.</span> <span class="toc-text">(())双括号命令</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%95%B0%E5%AD%A6%E8%BF%90%E7%AE%97"><span class="toc-number">16.1.</span> <span class="toc-text">数学运算</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E9%80%BB%E8%BE%91%E5%88%A4%E6%96%AD"><span class="toc-number">16.2.</span> <span class="toc-text">逻辑判断</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%8F%8C%E6%96%B9%E6%8B%AC%E5%8F%B7%E5%91%BD%E4%BB%A4"><span class="toc-number">17.</span> <span class="toc-text">[[]]双方括号命令</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%84%9A%E6%9C%AC%E6%8E%A7%E5%88%B6"><span class="toc-number">18.</span> <span class="toc-text">脚本控制</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%8D%95%E8%8E%B7%E4%BF%A1%E5%8F%B7"><span class="toc-number">18.1.</span> <span class="toc-text">捕获信号</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BF%AE%E6%94%B9%E4%BF%A1%E5%8F%B7%E6%8D%95%E8%8E%B7"><span class="toc-number">18.2.</span> <span class="toc-text">修改信号捕获</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%88%A0%E9%99%A4%E4%BF%A1%E5%8F%B7%E6%8D%95%E8%8E%B7"><span class="toc-number">18.3.</span> <span class="toc-text">删除信号捕获</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%87%BD%E6%95%B0"><span class="toc-number">19.</span> <span class="toc-text">函数</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%88%9B%E5%BB%BA%E4%B8%8E%E8%B0%83%E7%94%A8%E5%87%BD%E6%95%B0"><span class="toc-number">19.1.</span> <span class="toc-text">创建与调用函数</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%87%BD%E6%95%B0%E8%BF%94%E5%9B%9E%E5%80%BC%E4%B8%8E%E8%BE%93%E5%87%BA"><span class="toc-number">19.2.</span> <span class="toc-text">函数返回值与输出</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#%E9%BB%98%E8%AE%A4%E9%80%80%E5%87%BA%E7%8A%B6%E6%80%81%E7%A0%81"><span class="toc-number">19.2.1.</span> <span class="toc-text">默认退出状态码</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#return%E5%91%BD%E4%BB%A4%E4%BF%AE%E6%94%B9%E7%8A%B6%E6%80%81%E7%A0%81"><span class="toc-number">19.2.2.</span> <span class="toc-text">return命令修改状态码</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E5%87%BD%E6%95%B0%E8%BE%93%E5%87%BA"><span class="toc-number">19.2.3.</span> <span class="toc-text">函数输出</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%87%BD%E6%95%B0%E4%BC%A0%E5%8F%82"><span class="toc-number">19.3.</span> <span class="toc-text">函数传参</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BC%A0%E9%80%92%E6%95%B0%E7%BB%84%E5%8F%82%E6%95%B0"><span class="toc-number">19.4.</span> <span class="toc-text">传递数组参数</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%BF%94%E5%9B%9E%E6%95%B0%E7%BB%84"><span class="toc-number">19.5.</span> <span class="toc-text">返回数组</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%88%9B%E5%BB%BA%E5%BA%93"><span class="toc-number">19.6.</span> <span class="toc-text">创建库</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%9C%A8%E5%91%BD%E4%BB%A4%E8%A1%8C%E4%B8%AD%E4%BD%BF%E7%94%A8%E5%87%BD%E6%95%B0"><span class="toc-number">19.7.</span> <span class="toc-text">在命令行中使用函数</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%9C%A8-bashrc%E6%96%87%E4%BB%B6%E4%B8%AD%E5%AE%9A%E4%B9%89%E5%87%BD%E6%95%B0"><span class="toc-number">19.8.</span> <span class="toc-text">在.bashrc文件中定义函数</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#shell%E7%BC%96%E7%A8%8B%E9%A3%8E%E6%A0%BC"><span class="toc-number">20.</span> <span class="toc-text">shell编程风格</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%84%9A%E6%9C%AC%E5%90%88%E9%9B%86"><span class="toc-number">21.</span> <span class="toc-text">脚本合集</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%B8%B8%E7%94%A8%E7%9A%84%E6%96%87%E4%BB%B6%E6%93%8D%E4%BD%9C"><span class="toc-number">21.1.</span> <span class="toc-text">常用的文件操作</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#%E6%96%B0%E5%BB%BA%E6%96%87%E4%BB%B6"><span class="toc-number">21.1.1.</span> <span class="toc-text">新建文件</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E5%BF%AB%E9%80%9F%E6%B8%85%E7%A9%BA%E6%96%87%E4%BB%B6"><span class="toc-number">21.1.2.</span> <span class="toc-text">快速清空文件</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%88%A4%E6%96%AD%E5%8F%91%E8%A1%8C%E7%89%88"><span class="toc-number">21.2.</span> <span class="toc-text">判断发行版</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%88%A4%E6%96%AD%E7%B3%BB%E7%BB%9F%E6%9E%B6%E6%9E%84"><span class="toc-number">21.3.</span> <span class="toc-text">判断系统架构</span></a></li></ol></li></ol></div></div>
         <div class="article">
         <h1 class="title">Shell脚本语言</h1>
         <div class="art-info">
-            <div><span><span class="iconfont icon-zishu-jzl"></span>字数：18153</span>
+            <div><span><span class="iconfont icon-zishu-jzl"></span>字数：23809</span>
             <span><span class="iconfont icon-riqi"></span>写于：2021-12-29</span></div>
             <div><span><span class="iconfont icon-zuixinnew3"></span>最新更新：2024-05-08</span>
-            <span><span class="iconfont icon-shijian"></span>阅读本文预计花费您52分钟</span></div>
+            <span><span class="iconfont icon-shijian"></span>阅读本文预计花费您69分钟</span></div>
         </div>
         <div class="art-content">
-        <h3 id="shell脚本基础"><a href="#shell脚本基础" class="headerlink" title="shell脚本基础"></a>shell脚本基础</h3><h4 id="脚本声明"><a href="#脚本声明" class="headerlink" title="脚本声明"></a>脚本声明</h4><p>shell脚本文件通常以<span class="tips">.sh</span>作为文件扩展名，扩展名仅作为文件标识，并不影响脚本执行。shell程序的第一行，往往需要一个<span class="tips">#!</span>约定标记符，用于告诉系统这个脚本需要调用哪一种Shell解释器来执行</p>
-<div class="show">#!bin/bash  #申明shell脚本的解释器</div>
+        <h3 id="shell脚本基础"><a href="#shell脚本基础" class="headerlink" title="shell脚本基础"></a>shell脚本基础</h3><h4 id="脚本声明"><a href="#脚本声明" class="headerlink" title="脚本声明"></a>脚本声明</h4><p>shell脚本文件通常以<span class="tips">.sh</span>作为文件扩展名，扩展名仅作为文件标识，方便系统和用户识别，并不影响脚本执行。</p>
+<p>在Linux/Unix系统中，脚本文件第一行通常需要使用”Shebang”(也称为Hashbang)标记符<span class="tips">#!</span>来告诉系统这个脚本需要调用哪一种解释器来执行，这些解释器可能是Bash、Python、node、Perl等。因此，对于shell脚本，程序第一行往往也是使用<span class="tips">#!</span>标记符指定Shell解释器，通常是：<span class="tips">#!/bin/bash</span></p>
+<div class="show">Shebang语句可以根据需要使用不同的方式声明解释器路径
+1. 直接指定硬编码形式的脚本解释器的绝对路径
+<span class="text-red">#!/bin/bash </span> #直接指定bash路径
+2.利用 env 命令从 PATH 环境变量中动态查找解释器的路径，适合需要跨平台(如Linux、macOS、BSD)运行的脚本
+<span class="text-red">#!/usr/bin/env bash</span> #通过env命令动态查找bash路径
+</div>
 
-<h4 id="shell脚本的执行方式"><a href="#shell脚本的执行方式" class="headerlink" title="shell脚本的执行方式"></a>shell脚本的执行方式</h4><h6 id="1-通过文件名直接执行"><a href="#1-通过文件名直接执行" class="headerlink" title="1.通过文件名直接执行"></a>1.通过文件名直接执行</h6><p>首先需要为该脚本添加可执行权限，然后通过文件路径和文件名直接运行，操作系统会调用脚本文件第一行所指定的解释器来执行该脚本，如对于名为HelloWorld.sh脚本，执行方式为:</p>
-<div class="show"><span class="strong">chmod 755 HelloWorld.sh</span> #或chmod +x HelloWorld.sh赋予可执行权限
-<span class="strong">./HelloWorld.sh</span> #在当前路径中执行HelloWorld.sh，如果直接写为HelloWorld.sh，则系统会前往PATH路径中查找该命令</div> 
+<h4 id="shell脚本的执行方式"><a href="#shell脚本的执行方式" class="headerlink" title="shell脚本的执行方式"></a>shell脚本的执行方式</h4><h5 id="赋予可执行权限"><a href="#赋予可执行权限" class="headerlink" title="赋予可执行权限"></a>赋予可执行权限</h5><p>首先需要为该脚本添加可执行权限</p>
+<div class="show"><span class="strong">chmod 755 HelloWorld.sh</span> #或chmod +x HelloWorld.sh</div>
 
-<h6 id="2-通过shell解释器调用"><a href="#2-通过shell解释器调用" class="headerlink" title="2.通过shell解释器调用"></a>2.通过shell解释器调用</h6><p>第二种执行方式为在调用shell解释器时，将脚本作为shell程序参数传入，该方法会忽略脚本第一行所指定解释器信息，直接使用用户唤起的shell程序作为脚本解释器</p>
+<h5 id="执行方式"><a href="#执行方式" class="headerlink" title="执行方式"></a>执行方式</h5><h6 id="1-通过文件名直接执行"><a href="#1-通过文件名直接执行" class="headerlink" title="1.通过文件名直接执行"></a>1.通过文件名直接执行</h6><p>通过文件路径和文件名直接运行，操作系统会调用脚本文件第一行所指定的解释器来执行该脚本，如对于名为HelloWorld.sh脚本，执行方式为:</p>
+<div class="show"><span class="strong">./HelloWorld.sh</span> #在当前路径中执行HelloWorld.sh，如果直接写为HelloWorld.sh，则系统会前往PATH路径中查找该命令</div> 
+
+<h6 id="2-通过shell解释器调用"><a href="#2-通过shell解释器调用" class="headerlink" title="2.通过shell解释器调用"></a>2.通过shell解释器调用</h6><p>第二种执行方式为在调用shell解释器时，将脚本作为shell程序参数传入，该方法会忽略脚本第一行所指定解释器信息，直接使用用户唤起的shell程序作为脚本解释器，因此，通过该方法执行的脚本，第一行可以省略shebang语句</p>
 <div class="show"><span class="strong">bash HelloWorld.sh  #通过bash执行</span>
 或
 <span class="strong">/bin/sh HelloWorld.sh #通过sh执行</span></div>
@@ -244,13 +250,76 @@ echo "Hello world"
 状态码1表明命令发生了未知错误，如：为命令提供了无效参数
 </div>
 
-<h3 id="shell中的运算"><a href="#shell中的运算" class="headerlink" title="shell中的运算"></a>shell中的运算</h3><h4 id="各种括号使用预览"><a href="#各种括号使用预览" class="headerlink" title="各种括号使用预览"></a>各种括号使用预览</h4><ul>
-<li>()用来创建子shell执行命令组，而$()则可以用来获取命令的输出，并将其赋值给变量，其作用和 ``命令调用一致，如：today=$(date “+%D”)。如果( )中指定了多个命令，则变量获取的是最后一个命令的输出</li>
-<li>[ ]用来进行条件判断，它是test命令的替代，可以结合if-then等条件判断语句进行数值比较、字符串比较、文件比较</li>
-<li>$(())和$[]用来进行整形数值运算，如：num=$[11+22]</li>
-<li>(())可以用来运算高级数学表达式，如：++、&gt;&gt;(右移位)、&amp;&amp;(逻辑与)等运算，也可以搭配if-then语句进行条件判断</li>
-<li>双方括号[[]]命令用来进行高级字符串比较，允许使用*和?通配符，支持模式匹配，但部分shell可能不支持</li>
-<li>大括号{ }用来进行变量引用，支持字符串拼接</li>
+<h3 id="shell中的运算"><a href="#shell中的运算" class="headerlink" title="shell中的运算"></a>shell中的运算</h3><h4 id="各种括号使用预览"><a href="#各种括号使用预览" class="headerlink" title="各种括号使用预览"></a>各种括号使用预览</h4><p>以下运算符中，非POSIX标准语法只能在Bash/ksh/zsh中使用</p>
+<ul>
+<li><span class="text-red">( )</span>用来创建命令分组，()中的命令会在子shell中执行，以获得一个干净的执行环境(但父shell的部分环境变量依旧会被继承生效)，且它不会修改当前父shell环境</li>
+</ul>
+<div class="show">e.g.切换到另外一个目录下创建文件或执行其他功能，但不改变当前目录位置
+ (cd data;touch newfile;pwd;ls)
+</div>
+
+<ul>
+<li><span class="text-red">$( )</span>(推荐使用，可以嵌套使用)和<span class="text-red">``</span>可以用来获取命令的输出，并将其赋值给变量，如果( )中指定了多个命令，则变量获取的是最后一个命令的输出</li>
+</ul>
+<div class="show">1.获取日期作为文件名的一部分
+today=$(date "+%Y%m%d")
+touch "file_${today}.txt" #file_20200524.txt
+2.将命令结果作为for循环依据，找出所有/data目录下以.txt结尾的文件
+for file in $( find /data -type f -name "*.txt");do
+...
+done
+</div>
+
+<ul>
+<li><span class="text-red">[ ]</span>用来进行条件判断，它是test命令的替代，可以结合if-then等条件判断语句进行数值比较、字符串比较、文件比较，注意！<span class="tips">判断语句两边与[ ]之间均要添加一个空格</span></li>
+</ul>
+<div class="show">1.判断文件是否存在
+if [ -f $file_path ];then
+...
+fi
+2.判断变量是否小于0
+if [ $num -lt 0 ];then
+...
+fi
+</div>
+
+<ul>
+<li><span class="text-red">(())</span>(非POSIX标准)可以用来运算高级数学表达式，如：++、&gt;&gt;(右移位)、&amp;&amp;(逻辑与)等运算，包括在for语句中进行高级运算，也可以搭配if-then语句进行条件判断。<span class="tips">POSIX只支持使用$(())，所有(())的使用方法都是Bash拓展语法</span></li>
+</ul>
+<div class="show">1.在(())中进行赋值运算
+((num++))      
+((result=x+10)) #但更推荐使用result=$((x+10))
+2.在for语句中执行条件运算和循环
+for((i=0;i&lt;10;i++));do
+   echo "$i"
+done
+3.逻辑判断
+if ((num > 10));then
+...
+fi
+</div>
+
+<ul>
+<li><span class="text-red">$(())</span>(POSIX标准，推荐使用)和<span class="text-red">$[ ]</span>(Bash专有旧语法，非posix标准，不推荐使用)可以用来进行整型数值运算，在其中引用变量不需要<span class="tips">$</span>。此外，$(())还支持++等高级运算(Bash拓展功能，非POSIX标准)</li>
+</ul>
+<div class="show">x=10
+y=20
+echo $[x+y]
+echo $((x+y))
+num=$((x+22))
+echo "$((10+20))
+</div>
+
+<ul>
+<li><span class="text-red">[[ ]]</span>命令(非POSIX标准)用来进行高级字符串比较和逻辑比较，允许使用*和?通配符，支持模式匹配=~，<span class="tips">条件语句与[[]]之间要有空格</span></li>
+</ul>
+<div class="show">if [[ "$file"== *.txt ]];then
+  ...
+fi
+</div>
+
+<ul>
+<li>大括号{ }用来进行变量引用，以及字符串拼接、求字符串长度、字符串删除等操作</li>
 </ul>
 <h4 id="与-命令调用"><a href="#与-命令调用" class="headerlink" title="$()与``命令调用"></a>$()与``命令调用</h4><p>shell中最有用的特性之一是可以将命令的输出赋值给变量，然后通过变量来任意调用，有两种方法可以将命令输出赋值给变量：</p>
 <ul>
@@ -423,7 +492,7 @@ expr 0 \& 1 # 输出：0
 <li>变量名规则同C语言，允许由字母、数字、下划线组成，但不能以数字开头</li>
 <li>bash中变量默认类型都为字符串类型</li>
 <li>变量赋值时，若值包含空格，则需要使用单引号或双引号包裹</li>
-<li>变量值中可以使用\进行转义</li>
+<li>变量值中可以使用\进行转义(参考可转义的字符串)</li>
 <li>变量名通常使用下划线分隔单词，如：user_name,server_ip</li>
 <li>自定义的环境变量名、常量的变量名一般使用大写，如：readonly MAX_VLAUE=10</li>
 </ul>
@@ -448,6 +517,29 @@ myName="New" #执行脚本会报错myName：This variable is read only
 <div class="show">myName="Ken"
 unset myName
 echo $myName  #无任何输出</div>
+
+<h4 id="变量的作用域"><a href="#变量的作用域" class="headerlink" title="变量的作用域"></a>变量的作用域</h4><p>在shell中，变量也分为全局变量和局部变量</p>
+<h5 id="全局变量"><a href="#全局变量" class="headerlink" title="全局变量"></a>全局变量</h5><p>与其他语言有所不同，shell中的全局变量作用域为定义之后的整个脚本代码，即使是函数内部定义的变量，在函数外依旧有效。若无特殊声明，脚本中定义的变量默认为全局变量。</p>
+<div class="show">e.g.函数内定义的变量，函数外也可以访问
+#! /bin/bash
+function test {
+   string="手写的从前"
+}
+test
+echo "函数外也可以获取全局变量：$string"
+</div>
+
+<h5 id="局部变量"><a href="#局部变量" class="headerlink" title="局部变量"></a>局部变量</h5><p>shell中的局部变量需要使用<span class="tips">local</span>关键字声明。局部变量如果在函数内部声明，则其作用域只在函数中，如果函数外部存在一个同名变量，二者互不干扰</p>
+<div class="show">e.g.想要变量作用域为局部，需要使用local关键字声明
+#! /bin/bash
+function test {
+   local string="手写的从前"
+   echo "函数内可以获取到变量值：$string"
+}
+test
+echo "函数外无法获取该变量：$string" #为空值
+</div>
+
 
 <h4 id="变量值检测与替换"><a href="#变量值检测与替换" class="headerlink" title="变量值检测与替换"></a>变量值检测与替换</h4><p>类似于C语言三元表达式的一种功能，即检测变量y是否存在，或者其值是否为空/非空，然后根据y的状态赋予变量x不同值</p>
 <div class="table">
@@ -527,11 +619,12 @@ newPort=${port:=2000}
 </div>
 
 
-<h3 id="字符串"><a href="#字符串" class="headerlink" title="字符串"></a>字符串</h3><p>shell中的字符串可以使用单引号声明，也可以使用双引号声明，二者的特性：</p>
+<h3 id="字符串"><a href="#字符串" class="headerlink" title="字符串"></a>字符串</h3><h4 id="字符串常量"><a href="#字符串常量" class="headerlink" title="字符串常量"></a>字符串常量</h4><p>shell中的字符串可以使用单引号声明，也可以使用双引号声明，二者的特性：</p>
 <ul>
 <li>单引号里的字符会原样输出，无法使用转义字符和变量，双引号里字符串的可以使用转义字符、引用变量</li>
 <li>二者都可以用于字符串拼接</li>
 </ul>
+<p>此外，Bash还支持使用<span class="tips">$’字符串’</span>声明字符串，该语法可用来解析字符串中ANSI C 样式的转义序列，具体参考下文”字符串的转义”</p>
 <h4 id="字符串拼接"><a href="#字符串拼接" class="headerlink" title="字符串拼接"></a>字符串拼接</h4><p>可以直接在字符串前后使用<span class="tips">${变量名}</span>拼接字符串，不需要像其他语言一样添加+号等字符串拼接符</p>
 <div class="show">text="1234"
 str1="aaa"${text}"bbb"  #可以直接将多个字符串拼接在一起，并拼接变量，输出aaa1234bbb
@@ -549,12 +642,12 @@ echo ${#str}  #当变量为字符串时，${#str} 等价于 ${#str[0]}</div>
 echo ${str:1:5} #输出e sai
 </div>
 
-<h4 id="快速删除字符串"><a href="#快速删除字符串" class="headerlink" title="快速删除字符串"></a>快速删除字符串</h4><p>shell中可以使用<span class="tips">#</span>、<span class="tips">##</span>、<span class="tips">%</span>、<span class="tips">%%</span>符快速删除匹配的部分字符串</p>
+<h4 id="快速删除字符串"><a href="#快速删除字符串" class="headerlink" title="快速删除字符串"></a>快速删除字符串</h4><p>shell支持使用参数扩展操作符<span class="tips">#</span>、<span class="tips">##</span>、<span class="tips">%</span>、<span class="tips">%%</span>快速删除匹配字符串，这些操作符在处理文件名、路径或其他字符串时非常有用</p>
 <ul>
-<li><span class="strong">${字符串变量#pattern}</span>删除pattern所匹配字符串之前的最短匹配部分</li>
-<li><span class="strong">${字符串变量##pattern}</span>删除pattern所匹配字符串之前的最长匹配部分</li>
-<li><span class="strong">${字符串变量%pattern}</span>删除pattern所匹配字符串之后的最短匹配部分</li>
-<li><span class="strong">${字符串变量%%pattern}</span>删除pattern所匹配字符串之后的最长匹配部分</li>
+<li><span class="strong">${字符串变量#pattern}</span>删除字符串从头开始的最短匹配部分</li>
+<li><span class="strong">${字符串变量##pattern}</span>删除字符串从头开始的最长匹配部分</li>
+<li><span class="strong">${字符串变量%pattern}</span>删除字符串从尾开始的最短匹配部分</li>
+<li><span class="strong">${字符串变量%%pattern}</span>删除字符串从尾开始的最长匹配部分</li>
 </ul>
 <div class="show">str="path/to/file.txt"
 # 删除开头的部分
@@ -569,19 +662,33 @@ echo ${str%%/*}       # 输出：path（最长匹配 "/to/file.txt"）
 str="He said, one day you will leave this world behind."
 echo `expr index "${str}" io`</div>
 
-<h4 id="可转义的字符串"><a href="#可转义的字符串" class="headerlink" title="可转义的字符串"></a>可转义的字符串</h4><p>Bash支持使用<span class="tips">$’字符串’</span>语法来解析字符串中ANSI C 样式的转义序列，允许在字符串中插入特殊字符，如：换行符(\n)、制表符(\t)等，这可用于将转义字符赋值给IFS(字段分隔符变量)等</p>
-<div class="show">1.写于''或""号的转义字符不会被解析，会原样输出(以echo举例，虽然echo有支持转义的选项)
-echo 'AAAA\nAAAA'  #输出AAAA\nAAAA
-echo "AAAA\nAAAA"  #输出AAAA\nAAAA
-echo $'AAAA\nAAAA'
+<h4 id="字符串的转义"><a href="#字符串的转义" class="headerlink" title="字符串的转义"></a>字符串的转义</h4><p>在定义字符串时，在<span class="tips">‘’</span>中使用任何转义字符都不会被解析，在<span class="tips">“”</span>中可以使用部分转义。此外，Bash还支持使用<span class="tips">$’字符串’</span>语法来解析字符串中ANSI C 样式的转义序列，允许在字符串中插入特殊字符，如：换行符(\n)、制表符(\t)等，这可用于将转义字符赋值给IFS(字段分隔符变量)等</p>
+<div class="show">1.写于''转义字符不会被解析，会原样输出
+2.""支持\\、\"、\$、\`转义，但不支持\n、\t等转义
+3.如果要在字符串中使用\n或\t，需要使用$''语法
+(echo命令的-e选项可以转义字符串中所有转义字符，为对比字符串本身带来的影响，以下命令不使用-e选项)
+echo 'AA\\AA\nAA'  #原样输出AA\\AA\nAA
+echo "AA\\AA\nAA"  #\\可被转义，但\n不转义,输出AA\AA\nAA
+echo $'AA\\AA\nAA'
 输出
-AAAA
-AAAA
-2.可以通过IFS变量将字段分隔符修改为换行
+AA\AA
+AA
+使用$''语法将字符串赋值给变量时，引用该变量注意添加""
+str=$'AA\nAA'
+echo $str    #输出AA AA
+echo "$str"  
+#输出 
+AA
+AA
+这是由于bash在解析时，会将$str替换为
+AA
+AA
+在echo $str语句中，由于换行符(以及空格、制表符)是参数分隔符，因此echo命令将收到两个参数，输出时会将两个参数AA分别输出，并使用默认的空格分隔它们
+在echo "$str"语句中，echo命令只接收一个参数，换行符作为参数的一部分，并直接输出
+4.可以通过$''语法，通过IFS变量将字段分隔符修改为换行
 IFS.OLD=$IFS #保存原变量
 IFS=$'\n'
 </div>
-
 
 <h3 id="数组"><a href="#数组" class="headerlink" title="数组"></a>数组</h3><h4 id="数组定义"><a href="#数组定义" class="headerlink" title="数组定义"></a>数组定义</h4><p>bash只支持一维数组，不支持多维数组，bash中的一维数组不限制数组大小，使用括号囊括数组元素，数组元素之间使用空格分隔：<span class="strong">数组名=(值1 值2 值3)</span></p>
 <div class="show">1. 数组支持整体赋值
@@ -597,10 +704,73 @@ array1[2]=30
 4. 数组元素默认都被声明为字符串类型，因此以下语句也正确
 array1=(100 "Hello" abc)</div>
 
-<h4 id="数组元素"><a href="#数组元素" class="headerlink" title="数组元素"></a>数组元素</h4><p>bash中数组使用<span class="tips">${数组名[下标]}</span>表示数组元素，与绝大多数语言一样，数组下标从0开始，可以用<span class="tips">${数组名[@]}</span>或<span class="tips">${数组名[*]}</span>表示数组中的所有元素</p>
-<div class="show">echo ${array1[1]} #输出20
-echo ${array1[@]} #输出10 20 30
-echo ${array1[*]} #输出10 20 30</div>
+<div class="show">1.从标准输入读取数组值
+默认情况下，read会抛弃输入值前后的空格
+需要通过IFS=来临时置空IFS值，来有效保留如__aa__中aa前后的空格
+-r让read命令禁用转义，原样存储用户输入的值
+array=()
+while IFS= read -r line;do  
+   array+=("$line") #Bash专有语法
+done
+兼容性更好的写法
+array=()
+num=0
+while IFS= read -r line;do  
+   array[num]="$line"
+   num=$((num+1))
+done
+2. 从文件读入值
+array=()
+while IFS= read -r line;do  
+   array+=("$line") #Bash专有语法
+done &lt; "file.txt"
+3.数组拼接
+result=("$array1[@]" "$array2[@]" "$array3[@]") #Bash语法
+</div>
+
+<h4 id="数组元素"><a href="#数组元素" class="headerlink" title="数组元素"></a>数组元素</h4><p>bash中数组使用<span class="tips">${数组名[下标]}</span>表示数组元素，与绝大多数语言一样，数组下标从0开始</p>
+<div class="show">echo ${array1[1]} #输出20</div>
+
+<p>可以使用<span class="tips">“${数组名[@]}”</span>或<span class="tips">“${数组名[*]}”</span>表示数组中的所有元素，<span class="text-red">注意！在使用时二者都必须使用引号””包裹，以避免数组元素包含空格时，遍历或传参操作将单个数组元素拆分为多个</span>，二者的区别在于：</p>
+<ul>
+<li><span class="tips">“${array[@]}”</span>会将每个元素作为独立的字符串处理，元素之间相互孤立、隔离，适合用来遍历或传递参数，由于元素是独立处理的，因此能很好保存元素内部的空格等字符</li>
+<li><span class="tips">“${array[*]}”</span>会将所有数组元素拼接为一个字符串，拼接使用IFS变量(字段分隔符)设置的值作为分隔符(默认空格)，这意味着可以使用IFS修改”${array[*]}”输出时的分隔符，shell在处理数组元素时也会将其作为一个整体处理</li>
+</ul>
+<div class="show">数组元素的整体引用和遍历引用
+array=("apple" "banana" "cherry pie")
+IFS="|"
+1. "${array[@]}"元素间不进行任何拼接，无论有没有添加""，不存在需要使用IFS分隔元素的情况，输出也不受IFS影响
+对于echo命令，它会收到多个参数，echo只负责将参数原样输出，也不受IFS影响
+<code>echo $&#123;array[@]&#125;  #输出apple banana cherry pie
+echo "$&#123;array[@]&#125;"  #输出apple banana cherry pie</code>
+2. "${array[*]}"会拼接元素，拼接时使用|分隔字符，在未添加""时，数组元素会被拼接为apple|banana|cherry pie，由于未使用""，元素会被拆分并以IFS作为拆分依据，因此最后输入到echo的为分开的参数
+<code>echo $&#123;array[*]&#125;   #输出apple banana cherry pie</code>
+添加""后，数组元素被拼接为apple|banana|cherry pie后，它将作为一个整体输出，不再进行拆分
+<code>echo "$&#123;array[*]&#125;" #输出apple|banana|cherry pie</code>
+<span class="text-red">数组遍历</span>
+3."${array[@]}"会正确遍历数组
+<code>for item in "$&#123;array[@]&#125;"; do
+    echo "$item"
+done</code>
+输出：
+apple
+banana
+cherry pie
+4."${array[*]}"会拼接数组元素，因此的遍历结果只有一个
+<code>for item in "$&#123;array[*]&#125;"; do
+    echo "$item"
+done</code>
+输出：apple banana cherry pie
+遍历时，如果不添加""，二者的执行结果一样，数组中包含空格的元素都会被错误分割，这是因为遍历时会根据分隔符对数据进行单词拆分，因此需要严格添加""
+apple
+banana
+cherry #被拆开
+pie
+5. 数组的部分引用
+for (( i=3;i&lt;5;i++ ));do
+   echo "${array[$i]}"
+done
+</div>
 
 <h4 id="数组长度"><a href="#数组长度" class="headerlink" title="数组长度"></a>数组长度</h4><p>获取数组长度的方法与获取字符串长度的方法类似，即在需要获取的对象前加上<span class="tips">#</span>号，该方法可以获得整个数组的长度，也可以用于获取单个数组元素的长度</p>
 <div class="show">1. 获取数组长度
@@ -687,7 +857,7 @@ chmod 755 test.sh
 
 <div class="broadcast color-blue">
 <div class="iconfont icon-yinhao"></div>
-在使用$1、$2..调用参数之前，应当使用-n等命令测试用户是否传递了参数，如果直接调用了参数，而用户忘记传参，则脚本可能出现严重错误，示例：<div class="apiBox">if [ -n "$1" ]
+在使用$1、$2..调用参数之前，应当使用-n等命令测试用户是否传递了参数，如果直接调用了参数，而用户忘记传参，则脚本可能出现严重错误，示例：<div class="api-block">if [ -n "$1" ]
 then
    #正常执行功能
 else
@@ -886,7 +1056,7 @@ getopt: invalid option -- e
 
 <h5 id="getopts命令"><a href="#getopts命令" class="headerlink" title="getopts命令"></a>getopts命令</h5><p>getopts命令是bash shell的内建命令，为了弥补getopt命令的不足(如：不好处理带空格和引号的参数)，它提供了一些高级功能。</p>
 <p>getopts命令与getopt命令不同，每次调用getopts命令，它只处理命令行上检测到的一个参数，因此往往需要循环调用，处理完所有的参数后，它会退出并返回一个大于0的退出状态码。getopts命令的格式与getopt命令相似：</p>
-<div class="apiBox">getopts 解析的选项 变量</div>
+<div class="api-block">getopts 解析的选项 变量</div>
 
 <p>同样，解析选项中可以指定命令需要识别的有效字母选项，如果该选项需要参数，就加一个冒号。如果需要getopts命令忽略错误信息，可以在整个解析选项字符串前加个冒号，相当于getopt命令的-q选项。getopts命令会将输入的参数表列保存在指定的变量中，方便遍历。</p>
 <div class="show">e.g.脚本支持选项abc，其中-b选项需要跟随一个参数。
@@ -984,6 +1154,56 @@ done
 </tbody></table>
 </div>
 
+<h3 id="select生成菜单"><a href="#select生成菜单" class="headerlink" title="select生成菜单"></a>select生成菜单</h3><p>select 是 Bash 和部分其他 Shell（如 Zsh、Ksh）提供的一种 交互式菜单循环，允许用户通过数字选择选项。它通常用于编写终端交互式脚本(如安装向导、配置工具等)，方便快速生成选择菜单。select语句通常搭配case…in语句使用，语法为：</p>
+<div class="show"><div class="api-block">select 变量名 in "选项1" "选项2"...; do
+    case $变量 in
+        "选项1") 执行语句1; break ;;
+        "选项2") 执行语句2; break ;;
+        .....
+        *)       echo "无效的选项！" ;;
+    esac
+done
+</div></div>
+
+<p>当用户不指定选项变量名时，用户输入的值会自动存入<span class="tips">REPLY</span>变量。如果用户输入了无效的值(如：选项只有3个，但用户输入99)，此时<span class="tips">$变量</span>会为空，但<span class="tips">$REPLY</span>依旧会记录用户输入的值，如果不输入任何值直接回车，select语句会循环执行要求输入选项</p>
+<p>命令执行后，select命令会自行生成编号和菜单，用户只需输入编号选择功能，输入前的提示符默认为<span class="text-blue">#?</span>，该提示符可以通过<span class="text-red">$PS3</span>变量修改</p>
+<div class="show">1.默认生成菜单方式
+<code>select cmd in "安装脚本" "启动脚本" "卸载脚本"; do
+    case $cmd in
+        "安装脚本")  ./install.sh; break ;; #确保脚本有可执行权限
+        "启动脚本")  bash init.sh; break ;; #更直接的方式执行脚本
+        "卸载脚本")  ./remove.sh;break ;;
+        *)          echo "错误的选项，请重新输入" ;; #无break语句，会循环执行
+    esac
+done</code>
+上述语句会生成以下菜单
+1) 安装脚本
+2) 启动脚本
+3) 卸载脚本
+#?            #输入选项
+2. 使用REPLY变量避开中文字符比较，提高执行效率，并使用PS3变量指定选择提示语句
+<code>PS3="请选择执行编号："
+select cmd in "安装脚本" "启动脚本" "卸载脚本";do
+    case $REPLY in
+      1) ./install.sh ;;
+      2) ./init.sh ;;
+      3) ./remove.sh ;;
+      *) echo "错误的选项" ;;
+      esac
+    break                   #统一执行一次就退出
+done</code>
+上述代码中，由于遍历的选项是"安装脚本" "启动脚本" "卸载脚本"
+但匹配的选项是 "1 2 3"，所以$cmd不会有任何用户输入，也不会有执行结果
+但$REPLY会正常记录用户输入，使用该变量进行匹配，比进行中文匹配要高效一些
+执行结果为：
+1) 安装脚本
+2) 启动脚本
+3) 卸载脚本
+请选择执行编号：
+</div>
+
+
+
 <h3 id="数值声明与数值运算"><a href="#数值声明与数值运算" class="headerlink" title="数值声明与数值运算"></a>数值声明与数值运算</h3><p>默认情况下，Bash中的变量会被声明为字符串类型，如：num=22，Bash会将22作为字符串处理，诸如11+22的式子也会被识别为字符串，想要进行数值运算，需要使用特殊声明语句和运算方式</p>
 <h4 id="数值声明"><a href="#数值声明" class="headerlink" title="数值声明"></a>数值声明</h4><p>该语句用于特殊声明变量类型，使变量不再只限于字符串类型<br><span class="strong">declare [+或-] [选项] 变量名</span></p>
 <ul>
@@ -1005,13 +1225,19 @@ done
 [root@localhost ~]# num2=$[11+22]
 </div>
 
+<div class="show">直接引用计算结果
+read -t 30 -p "input x:" x
+read -t 30 -p "input y:" y
+echo "x+y=$((x+y))"
+</div>
+
 <h5 id="2-通过declare-i声明"><a href="#2-通过declare-i声明" class="headerlink" title="2.通过declare -i声明"></a>2.通过declare -i声明</h5><p><span class="strong">declare -i 变量名</span></p>
 <div class="shell">示例：
 [root@localhost ~]# declare -i num1=11+22
 </div>
 
-<h4 id="浮点数运算的解决方案"><a href="#浮点数运算的解决方案" class="headerlink" title="浮点数运算的解决方案"></a>浮点数运算的解决方案</h4><p>z shell提供了完整的浮点数运算操作，但在bash shell中，需要借助内建的bash运算器——<span class="strong">bc</span></p>
-<h3 id="输入输出"><a href="#输入输出" class="headerlink" title="输入输出"></a>输入输出</h3><h4 id="用户输入read"><a href="#用户输入read" class="headerlink" title="用户输入read"></a>用户输入read</h4><p><span class="strong">read [选项] [变量名]</span> 从键盘(默认)读取一行数据，然后将输入的数据分解成字段，并将字段分别赋值给这些变量</p>
+<h4 id="浮点数运算的解决方案"><a href="#浮点数运算的解决方案" class="headerlink" title="浮点数运算的解决方案"></a>浮点数运算的解决方案</h4><p>z shell提供了完整的浮点数运算操作，但在bash shell中，需要借助内建的bash运算器——<span class="strong">bc</span>，具体参考bc计算器的使用</p>
+<h3 id="输入输出"><a href="#输入输出" class="headerlink" title="输入输出"></a>输入输出</h3><h4 id="用户输入read"><a href="#用户输入read" class="headerlink" title="用户输入read"></a>用户输入read</h4><p><span class="strong">read [选项] [变量名]</span> 从键盘(默认)读取一行数据，然后将输入的数据分解成字段，并将字段分别赋值给这些变量，如果未指定变量，值将被存储到<span class="tips">REPLY</span>变量中</p>
 <ul>
 <li>-p “提示信息” &emsp;输出提示信息(prompt 提示)</li>
 <li>-t 秒数 &emsp;read命令只等待指定时间(timeout 超时)，如果超时未输入，read命令会以非零状态码退出</li>
@@ -1030,24 +1256,50 @@ done
 #!/bin/bash
 read -t 30 -p "input name:" name    #30s内输入姓名并赋值给name
 read -s -t 30 -p "input password:" passwd    #30s内隐藏输入密码并赋值给passwd
+read  #不指定read存储的变量时，默认保存到REPLY变量中
+echo "$REPLY" 
 </div>
 
-<p>read也支持一次输入多个数据，数据之间用空格隔开，然后赋值给多个变量。如果输入的数据个数多于变量个数，则多出来的数据连同空格会被赋值给最后一个变量。read命令也支持将多个数据直接存入数组中，如果数据间的分隔符是,或者其他符号，也可以通过<span class="tips">IFS</span>变量修改分隔符(Linux中分隔符默认为空格、制表符、换行符)，方便从文件中读入数据并作处理</p>
-<div class="show">1. 可以一次读取多个数据
+<p>read支持一次输入多个数据，数据之间用空格隔开，然后赋值给多个变量。如果输入的数据个数多于变量个数，则多出来的数据连同空格会被赋值给最后一个变量。read命令也支持将多个数据直接存入数组中</p>
+<div class="show">1. 可以一次读入并赋值多个数据
 read data1 data2 
-输入10 20 30，则data1=001，data2=20 30，空格会视为第一个数据输入完毕,多余数据赋值给最后一个变量
-2. 对于使用其他符号分隔的数据，可以重新定义分隔符
-read -p "输入数据，以逗号隔开" data
-echo "当前数据" $data
-IFS=','  #修改IFS变量的值，将分隔符改为,号
-read -a data_array <<< $data
-echo "处理完的数组为：" ${data_array[@]}
-3. read命令可以从文件中读取数据，每次调用read命令，都将从文件中读取一行文本，当文件中没有内容时，read命令会退出并返回非零状态码。读取文件时，可以借助cat命令和管道符
-cat test.txt | while read content
- do
+如果输入10 20 30，则data1=10，data2=20 30
+空格会视为第一个数据输入完毕,多余的数据连同空格会被赋值给最后一个变量
+2. 支持将多个数据一次赋值给数组
+read -a array        #输入10 20 30
+echo "${array[@]}"   #输出10 20 30
+</div>
+
+<p>默认情况下，read命令使用<span class="tips">IFS</span>变量指定的字段分隔符作为分割参数的依据(Linux中分隔符默认为空格、制表符、换行符)，因此会默认丢弃输入值前后的空格，如果输入的值本身包含空格且要保留，需要把IFS变量修改为其他值。如果输入的值分隔符是其他符号，可也以通过<span class="tips">IFS</span>变量修改分隔符，方便处理数据</p>
+<div class="show">1.为数组赋值
+array=()
+while IFS= read -r line;do  
+   array+=("$line") #Bash专有语法
+done
+临时置空IFS的值，如果输入的值为__aa__，则aa前后的空格会被正确保留
+2.指定其他分隔符
+IFS=","
+read -p "输入数据，以逗号隔开：" -a array
+echo "${array[@]}" 
+输入：java;c++;golang;javascript
+输出：java c++ golang javascript
+</div>
+
+<p>read命令可以从文件中读取数据，每次调用read命令，都将从文件中读取一行文本，当文件中没有内容时，read命令会退出并返回非零状态码。读取文件时，可以借助cat命令、管道或重定向符</p>
+<div class="show">1.使用重定向
+array=()
+while IFS= read -r line;do  
+   array+=("$line")
+done < "file.txt"
+2.从管道中读取
+cat test.txt | while read content;do
    echo $content #内容被保存到content变量中
 done
+3.从字符串中输入
+data="10 30 55 60"
+read -a data_array <<< $data #Bash特有语法
 </div>
+
 
 <h4 id="终端输出"><a href="#终端输出" class="headerlink" title="终端输出"></a>终端输出</h4><p><span class="strong">echo [选项] [输出内容]</span> 用于向终端输出文本信息</p>
 <ul>
@@ -1164,7 +1416,7 @@ ls -a test1 test2 <span class="text-red">&&gt; message.log </span>
 echo "程序抛出一个异常" <span class="text-red"> &gt;&2</span>
 </div>
 
-<h4 id="输入重定向-不常用"><a href="#输入重定向-不常用" class="headerlink" title="输入重定向(不常用)"></a>输入重定向(不常用)</h4><p>将文件等内容重定向到命令，下列命令省略了文件描述符0</p>
+<h4 id="输入重定向"><a href="#输入重定向" class="headerlink" title="输入重定向"></a>输入重定向</h4><p>将文件或字符串内容重定向到命令，下列命令省略了文件描述符0</p>
 <div class="table">
 
 <table>
@@ -1186,35 +1438,61 @@ echo "程序抛出一个异常" <span class="text-red"> &gt;&2</span>
 <td>将文件或设备内容重定向到命令</td>
 </tr>
 <tr>
-<td>内联输入重定向</td>
+<td>输入内联重定向Here Document</td>
 <td>&lt;&lt;</td>
 <td>在命令行中指定多个文本输入内容</td>
+</tr>
+<tr>
+<td>输入内联重定向Here String</td>
+<td>&lt;&lt;&lt;</td>
+<td>在命令行中指定单行输入(非POSIX标准)，相较于管道，它不会产生子shell</td>
 </tr>
 </tbody></table>
 </div>
 
-<p>如：使用wc命令统计文件中的字符</p>
-<div class="show"># wc < test
-统计输出test文件内容的行数、单词数、字节数</div>
 
-<p>内联输入重定向(inline input redirection)用于从命令行输入多行数据。在使用时，必须指定一个文本用于标记输入数据的开始和结尾，完整的语法为：</p>
-<div class="apiBox">命令 &lt;&lt; 标记文本
-输入的数据
-...
+<div class="show">1.统计输出test文件内容的行数、单词数、字节数
+ wc < test
+ 2.从/dev/urandom获取12位随机密码字符串
+ tr -dc 'A-Za-z0-9!@#$%^&*.' < /dev/urandom | head -c 12
+</div>
+
+<h5 id="Here-Document"><a href="#Here-Document" class="headerlink" title="Here Document"></a>Here Document</h5><p>Here Document用于从命令行输入多行数据，在使用时，必须指定一个文本用于标记输入数据的开始和结尾(通常是EOF)，完整的语法为：</p>
+<div class="api-block">命令 &lt;&lt; 标记文本
+..输入的数据..
+......
 标记文本
 </div>
-可以添加选项<span class="text-red">-</span>让shell忽略所输入字符串开头的制表符
 
-<div class="show">1.输入多行文本给命令
+<div class="show">1.输入多行文本给命令，字符串中可以使用变量和命令替换
 wc &lt;&lt; EOF  #指定标记文本，开始输入
 &gt;This is line1
 &gt;This is line2
+&gt;today is $(date). Hello,$name #命令会执行并将结果替换到原位置，变量同理
 &gt; EOF #遇到标记文本，终止输入
-2.当输入文本开头有制表符时，可以添加-选项来让shell忽略制表符
+</div>
+
+<p>可以添加选项<span class="text-red">-</span>让shell忽略所输入字符串开头的制表符，添加<span class="text-red">‘’</span>让重定向禁止使用变量、转义、命令替换，添加<span class="text-red">\</span>让重定向禁用变量替换、命令替换，但允许转义字符</p>
+<div class="show">1.当输入文本开头有制表符时，可以添加-选项来让shell忽略制表符
 wc &lt;&lt;- EOF  #指定标记文本，开始输入
 &gt;     This is line1
 &gt;     This is line2
 &gt; EOF #遇到标记文本，终止输入
+2. 如果想让字符串中的变量、转义、命令替换按原字符串原样输出，可以添加''
+cat &lt;&lt; 'EOF'
+DB_HOST="localhost"
+DB_PASS='${PASSWORD}'  # 避免被替换
+PATH="/usr/bin:\$PATH" # 避免转义
+EOF
+3. \EOF可以使用转义
+cat &lt;&lt; \EOF
+java\t javascript
+EOF
+</div>
+
+<h5 id="Here-String"><a href="#Here-String" class="headerlink" title="Here String"></a>Here String</h5><p>Here String用于快速为命令输入一个字符串，相较于管道，Here String不会产生子shell，更加高效，但一般只有Bash、Zsh等shell支持</p>
+<div class="show">快速输入一个数组
+read -a arr <<< "apple banana"
 </div>
 
 <h4 id="批量重定向"><a href="#批量重定向" class="headerlink" title="批量重定向"></a>批量重定向</h4><p>当脚本中有大量信息需要重定向，如果为每个命令都进行一次重定向过于繁琐，此时可以搭配<span class="tips">exec</span>命令指定shell将脚本执行期间的信息都重定向到某个位置。exec会替换当前shell的执行上下文环境，将标准输出输入和错误输出重定向到指定位置</p>
@@ -1358,7 +1636,7 @@ echo "输出数据到test文件" &gt;&3
 
 <h4 id="列出打开的文件描述符"><a href="#列出打开的文件描述符" class="headerlink" title="列出打开的文件描述符"></a>列出打开的文件描述符</h4><p>lsof命令会列出整个Linux系统打开的所有文件描述符。由于该命令会向非系统管理员用户提供Linux系统的信息，因此在很多Linux发行版中隐藏了该命令。普通用户要想运行该命令，必须使用全路径来引用该命令：<span class="strong">/usr/sbin/lsof</span></p>
 <p>管理员用户可以直接使用：</p>
-<div class="apiBox">lsof [选项]</div>
+<div class="api-block">lsof [选项]</div>
 
 <ul>
 <li>-p PID：指定对应进程PID所打开的文件描述符</li>
@@ -1427,7 +1705,7 @@ bash 3344 rich 2u CHR 136,0 2 /dev/pts/0</div>
 
 <p>由于STDIN、STDOUT和STDERR文件描述符都指向终端，因此其文件类型是字符型，输出文件的名称就是终端的设备名，且所有3种标准文件都支持读和写。</p>
 <h4 id="tee同时输出到显示器和文件"><a href="#tee同时输出到显示器和文件" class="headerlink" title="tee同时输出到显示器和文件"></a>tee同时输出到显示器和文件</h4><p>Linux提供了一个特殊命令<span class="tips">tee</span>，用于将输出同时发送到标准输出(显示器)和文件，而不用重定向多次：</p>
-<div class="apiBox">tee [选项] 文件1 文件2...</div>
+<div class="api-block">tee [选项] 文件1 文件2...</div>
 
 <ul>
 <li>默认情况下，如果指定的文件不存在，则会新建该文件，如果文件存在，tee命令会覆盖原文件内容</li>
@@ -1687,7 +1965,7 @@ fi
 <div class="show">e.g. 比较字符Test和test
 <code>str1="Test"
 str2="test"
-if [ str1 \\&lt; str2 ]
+if [ str1 \&lt; str2 ]
   then
     echo "Test小于test"  #由于ASCII中T小于t，所以输出该语句
   else
@@ -1711,8 +1989,7 @@ fi
 [ -n "$a" -a "$a" -gt 20] && echo "true" || echo "false"</code></div>
 
 <h3 id="判断语句"><a href="#判断语句" class="headerlink" title="判断语句"></a>判断语句</h3><h4 id="if语句"><a href="#if语句" class="headerlink" title="if语句"></a>if语句</h4><p>其他语言中的if语句，会判断if语句后式子的求值结果，并根据结果的true或false值进行对应处理。但bash shell中的if语句有所不同，bash会执行if语句后的命令，如果该命令的退出状态码是0，则会执行then部分的代码体，如果该命令的退出状态码是其他值，则执行else语句(没有else则不执行)，if语句的语法为：</p>
-<div class="show"><div class="apiBox"> if 命令行
-   then
+<div class="show"><div class="api-block"> if 命令行;then
      程序体
    fi
 </div></div>
@@ -1726,27 +2003,26 @@ fi</code></div>
 
 <div class="broadcast color-yellow">
 <div class="iconfont icon-dengpao14hao"></div>
-在部分脚本中，该语句会被写成
-<div class="apiBox">if 命令;then
+if语句的另外一种语法格式是:
+<div class="api-block">if 命令
+then
    程序体
-fi</div>
-形式，即如果then和if写于同一行，需要加上;号，这样它会与其他一些语言的语法类似，如果if和then不写在同一行上，则;号可要可不要
+fi
+</div>
+即then独占一行，此时不需要添加;号
 </div>
 
 <p>此外，bash shell也支持if-then-else语句和if嵌套语句，但注意，嵌套的if语句中的else-if被简化为了elif</p>
 <div class="show"><span class="text-red">if-then-else语句：</span>
-<div class="apiBox">if 命令 
-      then
+<div class="api-block">if 命令;then
             条件成立执行
       else
             条件不成立时执行
    fi
 </div><span class="text-red">多分支if语句：</span>
-<div class="apiBox">if 命令1 
-      then
+<div class="api-block">if 命令1;then
             条件成立执行
-   elif 命令2
-      then
+   elif 命令2;then
             条件成立时执行
    (.....)
    else
@@ -1755,31 +2031,58 @@ fi</div>
 </div></div>
 
 <h4 id="case命令"><a href="#case命令" class="headerlink" title="case命令"></a>case命令</h4><p>case语句类似于其他语言中的switch…case语句，用于匹配多个同类型的条件，其语法为：</p>
-<div class="show"><div class="apiBox">case 变量 in
+<div class="show"><div class="api-block">case 变量 in
    值1 | 值2)
          程序1 ;;
    值3)
          程序2 ;;
    .....
    *)
-         上述条件都不满足，执行该程序;;
+         上述条件都不满足，执行该程序 ;;
 esac
 </div></div>
 
 <p>case中的条件可以使用或符号同时设置多个条件，最后的星号会捕获所有与已有条件不匹配的值，相当于switch语句中的default</p>
 <div class="show">e.g.查询多个用户
 <code>case $USER in
-JayChou | EasonChan)
-      echo "歌手";;
-KenThompson)
-      echo "程序员";;
-*)
-      echo "未知用户";;
+  JayChou | EasonChan)
+      echo "歌星" ;;
+  KenThompson)
+      echo "程序员" ;;
+ *)
+      echo "未知用户" ;;
 esac
 </code></div>
 
+<div class="show">Case语句编写规范(整理自谷歌开发规范)
+1. 选择项缩进2个空格
+2. 单行的执行语句，与;;之间添加一个空格
+<code>case $fruit in
+  "Apple")  echo "You chose Apple." ;;
+  "Banana") echo "You love Bananas!" ;;
+  "Orange") echo "Oranges are juicy." ;;
+  "Quit")   break ;;
+  *)        echo "Invalid option!" ;;
+esac</code>
+3.多行的执行语句，选择项与执行语句应该独立成行
+4.执行语句根据需要每个命令单独成行，但;;需要独立成行
+<code>case "$&#123;expression&#125;" in
+  a)
+    variable="…"
+    some_command "$&#123;variable&#125;" "$&#123;other_expr&#125;" …
+    ;;
+  absolute)
+    actions="relative"
+    another_command "$&#123;actions&#125;" "$&#123;other_expr&#125;" …
+    ;;
+  *)
+    error "Unexpected expression '$&#123;expression&#125;'"
+    ;;
+esac</code>
+</div>
+
 <h3 id="循环语句"><a href="#循环语句" class="headerlink" title="循环语句"></a>循环语句</h3><h4 id="for命令"><a href="#for命令" class="headerlink" title="for命令"></a>for命令</h4><p>for语句遍历时，默认使用空格分割需要遍历的值，如果值本身包含空格，则需要使用双引号将值包裹，此时for语句不会将双引号作为值的一部分</p>
-<div class="show"><div class="apiBox">for 变量 in 值1 值2 值3.....
+<div class="show"><div class="api-block">for 变量 in 值1 值2 值3.....
    do 
       程序
    done</div></div>
@@ -1822,20 +2125,20 @@ done
 <p>此外，bash shell还支持一种C语言风格的for语句，但需要注意：</p>
 <ul>
 <li>使用双括号</li>
-<li>变量不以美元符$</li>
-<li>迭代过程的算式不需要用expr命令格式<div class="show"><div class="apiBox">for((初始值;条件;变量变化))
+<li>变量不使用美元符$</li>
+<li>迭代过程的算式不需要用expr命令格式<div class="show"><div class="api-block">for((初始值;条件;变量变化))
  do
    程序
  done</div></div></li>
 </ul>
 <div class="show">e.g.这种形式的for语句也支持遍历多个变量
-for (( a=1, b=10; a <= 10; a++, b-- )) 
-do 
+read count
+for (( a=1, b=10; a <= "$count"; a++, b-- ));do 
  echo "$a 与 $b" 
 done
 </div>
 
-<h4 id="while命令"><a href="#while命令" class="headerlink" title="while命令"></a>while命令</h4><div class="show"><div class="apiBox"> whlie 命令
+<h4 id="while命令"><a href="#while命令" class="headerlink" title="while命令"></a>while命令</h4><div class="show"><div class="api-block"> whlie 命令
       do
          程序
       done</div></div>
@@ -1855,7 +2158,7 @@ done
 </div>
 
 <h4 id="until命令"><a href="#until命令" class="headerlink" title="until命令"></a>until命令</h4><p>until命令和while命令工作的方式相反，until命令要求你指定一个通常返回非零退出状态码的测试命令。只有测试命令的退出状态码不为0，bash shell才会执行循环中列出的命令。一旦测试命令返回了退出状态码0，循环就结束了。即：while命令在条件满足时执行，until命令在条件满足时退出。同样，until也像while一样允许多个测试命令，但只有最后一个命令有效</p>
-<div class="apiBox">until 命令
+<div class="api-block">until 命令
    do
      程序
    done
@@ -1934,8 +2237,8 @@ do
 done
 </code></pre>
 
-<h3 id="双括号命令"><a href="#双括号命令" class="headerlink" title="(())双括号命令"></a>(())双括号命令</h3><p>双括号命令(( ))在shell中用于进行数学运算和条件判断，并提供了更灵活和方便的方式来处理数值计算和逻辑操作</p>
-<h4 id="数学运算"><a href="#数学运算" class="headerlink" title="数学运算"></a>数学运算</h4><p>双括号命令除了基本的数学运算外，还支持以下运算，且双括号中还支持使用变量</p>
+<h3 id="双括号命令"><a href="#双括号命令" class="headerlink" title="(())双括号命令"></a>(())双括号命令</h3><p>双括号命令(( ))在shell中用于进行数学运算和条件判断，并提供了更灵活和方便的方式来处理数值计算和逻辑操作，<span class="tips">(())中引用变量不需要使用$符</span>。该命令不是POSIX标准，只能在Bash/zsh等部分shell中使用</p>
+<h4 id="数学运算"><a href="#数学运算" class="headerlink" title="数学运算"></a>数学运算</h4><p>双括号命令除了基本的数学运算外，还支持以下运算，以下运算是Bash拓展语法，不是POSIX标准，其他shell可能不支持</p>
 <div class="table">
 
 <table>
@@ -1954,6 +2257,10 @@ done
 <td>前置/后置的自减</td>
 </tr>
 <tr>
+<td>**</td>
+<td>冥运算，如：2**3</td>
+</tr>
+<tr>
 <td>!</td>
 <td>逻辑取反</td>
 </tr>
@@ -1962,8 +2269,16 @@ done
 <td>按位取反</td>
 </tr>
 <tr>
-<td>**</td>
-<td>冥运算</td>
+<td>&amp;</td>
+<td>按位与</td>
+</tr>
+<tr>
+<td>&#124;</td>
+<td>按位或</td>
+</tr>
+<tr>
+<td>^</td>
+<td>按位异或</td>
 </tr>
 <tr>
 <td>&lt;&lt;</td>
@@ -1974,14 +2289,6 @@ done
 <td>右位移</td>
 </tr>
 <tr>
-<td>&amp;</td>
-<td>位布尔和</td>
-</tr>
-<tr>
-<td>&#124;</td>
-<td>位布尔或</td>
-</tr>
-<tr>
 <td>&amp;&amp;</td>
 <td>逻辑和</td>
 </tr>
@@ -1989,11 +2296,31 @@ done
 <td>&#124;&#124;</td>
 <td>逻辑或</td>
 </tr>
+<tr>
+<td>表达式?值1:值2</td>
+<td>三元表达式</td>
+</tr>
+<tr>
+<td>num+=2、num*=4等</td>
+<td>复合赋值</td>
+</tr>
+<tr>
+<td>(( a = (i++, i + 5) ))</td>
+<td>逗号运算，先执行 i++，再计算 i+5 赋值给 a</td>
+</tr>
 </tbody></table>
 </div>
 
-<div class="show">(( result = 5 * (3 + 2) ))
-echo "Result of arithmetic operation: $result"</div>
+<div class="show">1.在(())中进行赋值运算
+x=10
+y=5
+(( result = 5 * ( x+ y) ))
+echo "Result of arithmetic operation: $result"
+2.搭配for语句执行条件运算和循环
+for((i=0;i&lt;10;i++));do
+   echo "$i"
+done
+</div>
 
 <h4 id="逻辑判断"><a href="#逻辑判断" class="headerlink" title="逻辑判断"></a>逻辑判断</h4><p>双括号命令也常用于if-then等语句的逻辑判断，双括号命令支持<span class="tips">&lt;</span>、<span class="tips">&gt;</span>、<span class="tips">&lt;=</span>、<span class="tips">&gt;=</span>、<span class="tips">==</span>、<span class="tips">!=</span>运算符</p>
 <div class="show">if (( result > 10 )); then
@@ -2003,28 +2330,28 @@ else
 fi
 </div>
 
-<h3 id="双方括号命令"><a href="#双方括号命令" class="headerlink" title="[[]]双方括号命令"></a>[[]]双方括号命令</h3><p>双方括号命令提供了针对字符串比较的高级特性，双方括号命令里的表达式支持模式匹配，可以定义正则表达式来匹配字符串，因此该命令在比较字符串时功能很强大：</p>
+<h3 id="双方括号命令"><a href="#双方括号命令" class="headerlink" title="[[]]双方括号命令"></a>[[]]双方括号命令</h3><p>双方括号命令提供了针对字符串比较的高级特性，也支持文件测试和逻辑，且双方括号命令支持正则表达式。在使用时，<span class="tips">条件语句与[[和]]之间均要有空格</span>。但该命令不是POSIX标准，只能在Bash/zsh等部分shell中使用</p>
 <ul>
 <li>支持<span class="tips">&lt;</span>、<span class="tips">&gt;</span>、<span class="tips">==</span>、<span class="tips">!=</span>、<span class="tips">-gt</span>等比较符</li>
 <li>支持<span class="tips">!</span>、<span class="tips">&amp;&amp;</span>、<span class="tips">||</span>等逻辑组合</li>
 <li>支持<span class="tips">-f</span>等文件测试，如：检测文件是否存在，是否为目录等</li>
 <li>支持使用<span class="tips">*</span>、<span class="tips">?</span>等通配符，并使用<span class="tips">=~</span>结合正则表达式进行匹配</li>
 </ul>
-<div class="show">#!/bin/bash 
-if [[ $USER == r* ]] #r*使用模式匹配规则
-then 
- echo "Hello $USER" 
-else 
- echo "未知用户" 
-fi
+<div class="show">1.字符串比较
+if&emsp;[[&emsp;"$name"&emsp;==&emsp;"Linux"&emsp;]];then
+2.文件测试
+if&emsp;[[&emsp;!&emsp;-f&emsp;"$file"&emsp;]]; then
+3.使用通配符
+if&emsp;[[&emsp;"$file"&emsp;==&emsp;*.txt&emsp;]]; then
+4.匹配正则表达式
+email="user@example.com"
+if&emsp;[[&emsp;"$email"&emsp;=~&emsp;^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$&emsp;]]; then
+5.使用&&进行逻辑组合
+if&emsp;[[&emsp;"$age" -gt 18 && "$name" == "Alice"&emsp;]]; then
 </div>
 
-<div class="broadcast color-red">
-<div class="iconfont icon-gantanhao"></div>
-bash shell支持双方括号命令，但部分shell可能不支持该命令</div>
-
 <h3 id="脚本控制"><a href="#脚本控制" class="headerlink" title="脚本控制"></a>脚本控制</h3><p>脚本在执行时，终端可以通过kill命令或Ctrl+C等方式发起信号进行进程的暂停、终止操作，这些信号中有一些是可以通过脚本捕获并作相应处理的(如：在被终止时将数据写入文件做好保存，或者无视终止命令继续执行脚本)</p>
-<h4 id="捕获信号"><a href="#捕获信号" class="headerlink" title="捕获信号"></a>捕获信号</h4><div class="apiBox">trap 捕获时执行的命令 信号1 信号2 ...</div>
+<h4 id="捕获信号"><a href="#捕获信号" class="headerlink" title="捕获信号"></a>捕获信号</h4><div class="api-block">trap 捕获时执行的命令 信号1 信号2 ...</div>
 
 <ul>
 <li>信号可以是信号值或信号名，但需要是可被捕获的Linux信号</li>
@@ -2088,38 +2415,15 @@ trap -&zwnj;- SIGINT #移除信号捕获
 </div>
 
 <h3 id="函数"><a href="#函数" class="headerlink" title="函数"></a>函数</h3><h4 id="创建与调用函数"><a href="#创建与调用函数" class="headerlink" title="创建与调用函数"></a>创建与调用函数</h4><p>shell脚本中创建函数的方法有两种：</p>
-<div class="apiBox">function 函数名 {
+<div class="api-block">function 函数名 {
    #函数体
 }</div>
 或
-<div class="apiBox">函数名( ) {
+<div class="api-block">函数名( ) {
    #函数体
 }</div>
 
 <p>注意，使用第一种方式定义函数时，函数名和{之间必须有一个空格，否则{可能会被当作函数名的一部分从而报错。调用函数与其他语言类似，只是不需要括号，直接执行函数名即可，同样，shell中的函数需要在调用前的代码中创建，否则抛出command not found错误。函数可以同名，后面的函数会覆盖前面的函数，函数调用方法为：<br><span class="strong">函数名 参数1 参数2 …</span></p>
-<h4 id="变量的作用域"><a href="#变量的作用域" class="headerlink" title="变量的作用域"></a>变量的作用域</h4><p>在shell中，变量也分为全局变量和局部变量</p>
-<h5 id="全局变量"><a href="#全局变量" class="headerlink" title="全局变量"></a>全局变量</h5><p>与其他语言有所不同，shell中的全局变量作用域为定义之后的整个脚本代码，即使是函数内部定义的变量，在函数外依旧有效。若无特殊声明，脚本中定义的变量默认为全局变量。</p>
-<div class="show">e.g.函数内定义的变量，函数外也可以访问
-#! /bin/bash
-function test {
-   string="手写的从前"
-}
-test
-echo "函数外也可以获取全局变量：$string"
-</div>
-
-<h5 id="局部变量"><a href="#局部变量" class="headerlink" title="局部变量"></a>局部变量</h5><p>shell中的局部变量需要使用<span class="tips">local</span>关键字声明。局部变量如果在函数内部声明，则其作用域只在函数中，如果函数外部存在一个同名变量，二者互不干扰</p>
-<div class="show">e.g.想要变量作用域为局部，需要使用local关键字声明
-#! /bin/bash
-function test {
-   local string="手写的从前"
-   echo "函数内可以获取到变量值：$string"
-}
-test
-echo "函数外无法获取该变量：$string" #为空值
-</div>
-
-
 <h4 id="函数返回值与输出"><a href="#函数返回值与输出" class="headerlink" title="函数返回值与输出"></a>函数返回值与输出</h4><h5 id="默认退出状态码"><a href="#默认退出状态码" class="headerlink" title="默认退出状态码"></a>默认退出状态码</h5><p>bash shell会把函数当作一个小型脚本，运行结束时会返回一个退出状态码。与其他命令一样，在函数执行结束后，可以用shell中的预定义变量<span class="tips">$?</span>来确定函数的退出状态码。默认情况下，函数的退出状态码是函数中<span class="tips">最后一条命令</span>返回的退出状态码。注意，函数的默认退出状态码只看最后一条命令的退出状态，其他命令执行正确与否无法获悉，因此该方法应用场景有限。此外，就像脚本的返回值可以使用exit修改一样，函数的返回值可以使用return语句修改</p>
 <div class="show">e.g.函数func的退出状态码为最后一条命令ls的退出状态码，如果none.txt文件不存在，则函数的退出状态码为1，该状态码可以用$?调用
 #!/bin/bash
@@ -2307,7 +2611,99 @@ myTest1 #被导出的函数可以在非交互式shell执行的脚本中直接使
 myTest2 #未被导出为环境变量的函数则提示command not found</code>
 </div>
 
-<h3 id="脚本合集"><a href="#脚本合集" class="headerlink" title="脚本合集"></a>脚本合集</h3><h4 id="判断发行版"><a href="#判断发行版" class="headerlink" title="判断发行版"></a>判断发行版</h4><pre><code>#!/bin/bash  
+<h3 id="shell编程风格"><a href="#shell编程风格" class="headerlink" title="shell编程风格"></a>shell编程风格</h3><div class="broadcast color-blue">
+<div class="iconfont icon-yinhao"></div>
+整理自Google文档：
+<a target="_blank" rel="noopener" href="https://google.github.io/styleguide/shellguide.html">https://google.github.io/styleguide/shellguide.html</a>
+</div>
+
+<p>脚本以.sh作为拓展名，如果可执行文件将直接添加到 PATH环境变量中， 则首选不使用扩展名</p>
+<p>文件开始应该有顶级注释，主要是对脚本的简要概述，作者信息和版权声明视情况添加</p>
+<p>在 shell 脚本中禁止使用 SUID 和 SGID，以避免安全问题</p>
+<p>推荐为错误消息写一个专用函数</p>
+<div class="show">err() {
+  echo "[$(date +'%Y-%m-%dT%H:%M:%S%z')]: $*" >&2
+}
+if ! do_something; then
+  err "Unable to do_something"
+  exit 1
+fi
+</div>
+
+<p>函数应该带有注释，能让其他人无需阅读源码就能调用该函数，函数注释应该包括以下内容：</p>
+<ul>
+<li>对函数功能的描述</li>
+<li>全局变量</li>
+<li>输出到STDOUT和STDERR的内容</li>
+<li>返回值(注意不是函数退出状态)</li>
+</ul>
+<div class="show">####################
+# 备份文件
+# 全局变量：
+#     BACKUP_DIR
+#     ORACLE_SID
+#参数：
+#    无
+####################
+function backup() {
+  …
+}
+</div>
+
+<p>单行最大长度为80个字符，超出部分尽量使用延续字符，或者使用here文档</p>
+<div class="show">cat &lt;&lt;END
+一段很长............
+的文本
+END
+</div>
+
+<p>如果管道不能全部放在一行上，则应每行拆分一个管道，并让管道竖直对齐</p>
+<div class="show">command1 \
+  | command2 \
+  | command3 \
+  | command4
+</div>
+
+<p>if..then，for..do语句，</p>
+<div class="show">
+if ...;then
+  ....
+fi
+for arg in "$@";do
+  echo "$arg"
+done
+</div>
+
+<h3 id="脚本合集"><a href="#脚本合集" class="headerlink" title="脚本合集"></a>脚本合集</h3><h4 id="常用的文件操作"><a href="#常用的文件操作" class="headerlink" title="常用的文件操作"></a>常用的文件操作</h4><h5 id="新建文件"><a href="#新建文件" class="headerlink" title="新建文件"></a>新建文件</h5><div class="show">1. 使用touch命令创建空文件，如果文件已存在，则更新其时间戳
+touch file.txt
+2.使用重定向符，注意，如果文件已经存在，文件内容会被覆盖或清空
+&gt; file.txt
+其他同样使用重定向的操作
+echo "" &gt; file.txt
+printf "" &gt; file.txt
+3. 通过install命令
+install -b /dev/null file.txt 
+4. 创建固定大小的文件
+truncate -s 6K file.txt #创建6KiB大小的文件
+dd if=/dev/zero of=newfile.bin bs=1M count=5 #创建5M空白文件
+5.批量创建文件
+touch file_{1..5}.txt
+seq -f "file_%g.txt" 1 5 | xargs touch
+</div>
+
+<h5 id="快速清空文件"><a href="#快速清空文件" class="headerlink" title="快速清空文件"></a>快速清空文件</h5><div class="show">1. 使用重定向
+&gt; file.txt
+上述操作不需要指定将何内容重定向到file.txt文件，就可以直接清空文件，这是因为在该语法中，Shell并不会运行一个命令，而是会以写模式打开该文件，即执行C语言open("file.txt",O_WRONLY| O_CREAT|O_TRUNC,0644)，其中O_WRONLY| O_CREAT|O_TRUNC是open函数的可用参数，shell会执行以下操作：
+(1)以只写方式(O_WRONLY)打开文件，如果不存在则新建(O_CREAT)
+(2)如果文件存在，则截断为0长度(O_TRUNC)，这会清空文件内容
+(3)将标准输出重定向到这个文件
+(4)标准输出同样为空，因此文件最终为空
+2. 使用truncate命令
+truncate -s 0 file.txt
+</div>
+
+
+<h4 id="判断发行版"><a href="#判断发行版" class="headerlink" title="判断发行版"></a>判断发行版</h4><pre><code>#!/bin/bash  
 
 os_name="undefined"
 os_version="0.0"
@@ -2315,9 +2711,9 @@ os_version="0.0"
 # 检查 /etc/os-release 文件是否存在  
 if [ -f /etc/os-release ]; then  
     . /etc/os-release  
-    os_name=$NAME
+    os_name=$ID
     os_version=$VERSION
-    echo "发行版: $NAME"  
+    echo "发行版: $ID"  
     echo "版本: $VERSION"  
 else  
     # 作为替代，检查其他可能的文件  
@@ -2390,18 +2786,18 @@ echo $machine
     <div class="post-nav">
         
             <div class="post-prev ">
-                <a href="/blog/2022/02/23/Centos%E9%98%B2%E7%81%AB%E5%A2%99/">上一篇：Redhat防火墙</a>
+                <a href="/blog/2022/02/23/Linux%E9%98%B2%E7%81%AB%E5%A2%99%E4%B8%8E%E5%8C%85%E7%AE%A1%E7%90%86%E5%99%A8/">上一篇：Linux防火墙与包管理器</a>
             </div>
             
             
                 <div class="post-next">
-                    <a href="/blog/2021/12/29/LinuxShell%E4%BB%8B%E7%BB%8D%E4%B8%8E%E4%BD%BF%E7%94%A8/">下一篇：Shell介绍与使用 </a>
+                    <a href="/blog/2021/12/29/LinuxShell%E4%BB%8B%E7%BB%8D%E4%B8%8E%E4%BD%BF%E7%94%A8/">下一篇：Shell与Bash </a>
                 </div>
                  
     </div>
     <div class="container">
         <!--设计来源于B站-季夏小贞-->
-        <div class="bigHead"></div>
+        <div class="big-head"></div>
         <div class="ears"></div>
         <div class="body"></div>
         <div class="paws-front"></div>
@@ -2418,7 +2814,7 @@ echo $machine
     </div>
 </div>
 <div class="right-menu">
-    <a class="iconfont backTop" href="javascript:">&#xe655;</a>
+    <a class="iconfont back-top" href="javascript:">&#xe655;</a>
     <div class="husky"></div>
   </div>
 </div>

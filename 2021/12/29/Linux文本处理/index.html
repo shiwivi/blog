@@ -13,7 +13,7 @@
         <div class="head">
             <img src="/blog/images/head.jpg"  alt="头不见了.." title="狗">
         </div>
-        <div class="cardText">
+        <div class="card-text">
             <p>(ー`´ー)</p>
             <p>那不是bug，是彩蛋</p>
         </div> 
@@ -33,22 +33,22 @@
     </ul>
         <ul class="tag">
             <li><a href="/blog/tags/Command">#Command</a></li>
-            <li>#Java</li>
-            <li>#css</li>
-            <li>#Life</li>
-            <li>#Lua</li>
-            <li>#PCB</li>
-            <li>#Shell</li>
-            <li>#C</li>
-            <li>#html</li>
-            <li>#硬件</li>
-            <li>#JavaScript</li>
-            <li>#Firewall</li>
-            <li>#Security</li>
+            <li><a href="/blog/tags/Java">#Java</a></li>
+            <li><a href="/blog/tags/Css">#Css</a></li>
+            <li><a href="/blog/tags/Life">#Life</a></li>
+            <li><a href="/blog/tags/Lua">#Lua</a></li>
+            <li><a href="/blog/tags/PCB">#PCB</a></li>
+            <li><a href="/blog/tags/Shell">#Shell</a></li>
+            <li><a href="/blog/tags/C">#C</a></li>
+            <li><a href="/blog/tags/html">#html</a></li>
+            <li><a href="/blog/tags/%E7%A1%AC%E4%BB%B6">#硬件</a></li>
+            <li><a href="/blog/tags/JavaScrip">#JavaScript</a></li>
+            <li><a href="/blog/tags/Firewall">#Firewall</a></li>
+            <li><a href="/blog/tags/Security">#Security</a></li>
             <li><a href="/blog/tags/Linux">#Linux</a></li>
-            <li>#Python</li>
-            <li>#Serve</li>
-            <li>#Web</li>
+            <li><a href="/blog/tags/Python">#Python</a></li>
+            <li><a href="/blog/tags/Server">#Server</a></li>
+            <li><a href="/blog/tags/Web">#Web</a></li>
         </ul>
     <div class="rsstag"><a href="/blog/atom.xml"><span class="iconfont icon-rss"></span>RSS订阅</a></div>
 <div class="flower">
@@ -93,16 +93,15 @@
 </div>
 
 </div>
-<div class="menuBtn closed"> 
+<div class="menu-btn closed"> 
     <div class="menu-line"></div>
     <div class="menu-line"></div>
     <div class="menu-line"></div>
 </div>
-<div class="nightSky"><!--当关闭夜间背景模式时，子元素将在一段延时后才会被清除--></div>
 <div class="main">
     <div class="msg">
-        <div class="msgText"></div>
-        <div class="msgBar"></div>
+        <div class="msg-text"></div>
+        <div class="msg-bar"></div>
     </div>
     <div class="motto">
         <p> //sunny forever<br />
@@ -110,38 +109,37 @@
                love++;<br />
                beAwesome :)} </p>
      </div>
-     <div class="mainContent">
-    <div class="canvasWrapper"></div>
-<div class="setWrapper">
-    <ul class="setMenu">
-        <div id="setBtn" class="setButton"><</div>
-        <li class="searchContainer">
-            <input id="searchInput" class="localSearch" placeholder="搜索..." type="search" >
-            <span class="searchIco"></span>
+     <div class="main-content">
+    <div class="set-wrapper">
+    <ul class="set-menu">
+        <div id="set-btn" class="set-button"><</div>
+        <li class="search-container">
+            <input id="search-input" class="local-search" placeholder="搜索..." type="search" >
+            <span class="search-ico"></span>
         </li>
-        <li id="toggleItem">
-        主题：<span class="itemIco sun"></span>
+        <li id="toggle-theme">
+        主题：<span class="theme-ico sun"></span>
         </li>
-        <li class="setSize">
-            <span id="increaseFontSize">+</span>
-            <span class="fontSizeNum"></span>
-            <span id="reduceFontSize">-</span>
+        <li class="set-size">
+            <span id="increase-font-size">+</span>
+            <span class="font-size-num"></span>
+            <span id="reduce-font-size">-</span>
         </li>
-        <li id="clearBack">清除背景</li>
-        <li id="disableBack">禁用背景</li>
+        <li id="clear-back">清除背景</li>
+        <li id="disable-back">禁用背景</li>
     </ul> 
 </div>
-    <div class="resultContainer">
-        <div id="searchResult" class="displayResult"></div>
+    <div class="result-container">
+        <div id="search-result" class="display-result"></div>
     </div>
-    <div class="tocWrapper"><div class="tocBtn">目 录</div><div class="tocBox"><!--tocBox用于容纳生成在toc外的目录--><ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%BE%93%E5%87%BA%E6%96%87%E6%9C%AC"><span class="toc-number">1.</span> <span class="toc-text">输出文本</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#echo%E6%89%93%E5%8D%B0%E6%96%87%E6%9C%AC"><span class="toc-number">1.1.</span> <span class="toc-text">echo打印文本</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#printf%E6%A0%BC%E5%BC%8F%E5%8C%96%E6%89%93%E5%8D%B0%E6%96%87%E6%9C%AC"><span class="toc-number">1.2.</span> <span class="toc-text">printf格式化打印文本</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#shuf%E7%94%9F%E6%88%90%E9%9A%8F%E6%9C%BA%E5%AD%97%E7%AC%A6%E4%B8%B2%E6%8E%92%E5%88%97-shuffles"><span class="toc-number">1.3.</span> <span class="toc-text">shuf生成随机字符串排列(shuffles)</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#seq%E7%94%9F%E6%88%90%E8%BF%9E%E7%BB%AD%E6%95%B0%E5%AD%97%E9%98%9F%E5%88%97"><span class="toc-number">1.4.</span> <span class="toc-text">seq生成连续数字队列</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#yes%E8%BE%93%E5%87%BA%E8%BF%9E%E7%BB%AD%E5%AD%97%E7%AC%A6%E4%B8%B2"><span class="toc-number">1.5.</span> <span class="toc-text">yes输出连续字符串</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%96%87%E6%9C%AC%E5%A4%84%E7%90%86"><span class="toc-number">2.</span> <span class="toc-text">文本处理</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#grep%E6%95%B0%E6%8D%AE%E6%9F%A5%E6%89%BE"><span class="toc-number">2.1.</span> <span class="toc-text">grep数据查找</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#sort%E6%8E%92%E5%BA%8F%E5%A4%84%E7%90%86"><span class="toc-number">2.2.</span> <span class="toc-text">sort排序处理</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#wc%E7%BB%9F%E8%AE%A1%E5%AD%97%E6%95%B0-%E5%AD%97%E8%8A%82%E6%95%B0-%E8%A1%8C%E6%95%B0"><span class="toc-number">2.3.</span> <span class="toc-text">wc统计字数&#x2F;字节数&#x2F;行数</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#uniq%E5%88%A0%E9%99%A4%E9%82%BB%E8%BF%91%E9%87%8D%E5%A4%8D%E8%A1%8C-uniquify"><span class="toc-number">2.4.</span> <span class="toc-text">uniq删除邻近重复行(uniquify)</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#tr%E6%9B%BF%E6%8D%A2-%E5%88%A0%E9%99%A4%E5%8C%B9%E9%85%8D%E5%AD%97%E7%AC%A6"><span class="toc-number">2.5.</span> <span class="toc-text">tr替换&#x2F;删除匹配字符</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#cut%E6%96%87%E6%9C%AC%E6%88%AA%E5%8F%96"><span class="toc-number">2.6.</span> <span class="toc-text">cut文本截取</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%A0%BC%E5%BC%8F%E6%8E%A7%E5%88%B6"><span class="toc-number">3.</span> <span class="toc-text">格式控制</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#numfmt%E6%A0%BC%E5%BC%8F%E5%8C%96%E8%BE%93%E5%87%BA%E6%95%B0%E5%AD%97"><span class="toc-number">3.1.</span> <span class="toc-text">numfmt格式化输出数字</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#expand%E5%B0%86%E5%88%B6%E8%A1%A8%E7%AC%A6%E8%BD%AC%E6%8D%A2%E4%B8%BA%E7%A9%BA%E6%A0%BC"><span class="toc-number">3.2.</span> <span class="toc-text">expand将制表符转换为空格</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#unexpand%E5%B0%86%E7%A9%BA%E6%A0%BC%E8%BD%AC%E6%8D%A2%E4%B8%BA%E5%88%B6%E8%A1%A8%E7%AC%A6"><span class="toc-number">3.3.</span> <span class="toc-text">unexpand将空格转换为制表符</span></a></li></ol></li></ol></div></div>
+    <div class="toc-wrapper"><div class="toc-btn">目 录</div><div class="toc-box"><!--tocBox用于容纳生成在toc外的目录--><ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%BE%93%E5%87%BA%E6%96%87%E6%9C%AC"><span class="toc-number">1.</span> <span class="toc-text">输出文本</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#echo%E6%89%93%E5%8D%B0%E6%96%87%E6%9C%AC"><span class="toc-number">1.1.</span> <span class="toc-text">echo打印文本</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#printf%E6%A0%BC%E5%BC%8F%E5%8C%96%E6%89%93%E5%8D%B0%E6%96%87%E6%9C%AC"><span class="toc-number">1.2.</span> <span class="toc-text">printf格式化打印文本</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#shuf%E7%94%9F%E6%88%90%E9%9A%8F%E6%9C%BA%E5%AD%97%E7%AC%A6%E4%B8%B2%E6%8E%92%E5%88%97-shuffles"><span class="toc-number">1.3.</span> <span class="toc-text">shuf生成随机字符串排列(shuffles)</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#seq%E7%94%9F%E6%88%90%E8%BF%9E%E7%BB%AD%E6%95%B0%E5%AD%97%E9%98%9F%E5%88%97"><span class="toc-number">1.4.</span> <span class="toc-text">seq生成连续数字队列</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#yes%E8%BE%93%E5%87%BA%E8%BF%9E%E7%BB%AD%E5%AD%97%E7%AC%A6%E4%B8%B2"><span class="toc-number">1.5.</span> <span class="toc-text">yes输出连续字符串</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%96%87%E6%9C%AC%E5%A4%84%E7%90%86"><span class="toc-number">2.</span> <span class="toc-text">文本处理</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#grep%E6%95%B0%E6%8D%AE%E6%9F%A5%E6%89%BE"><span class="toc-number">2.1.</span> <span class="toc-text">grep数据查找</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#sort%E6%8E%92%E5%BA%8F%E5%A4%84%E7%90%86"><span class="toc-number">2.2.</span> <span class="toc-text">sort排序处理</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#wc%E7%BB%9F%E8%AE%A1%E5%AD%97%E6%95%B0-%E5%AD%97%E8%8A%82%E6%95%B0-%E8%A1%8C%E6%95%B0"><span class="toc-number">2.3.</span> <span class="toc-text">wc统计字数&#x2F;字节数&#x2F;行数</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#uniq%E5%88%A0%E9%99%A4%E9%82%BB%E8%BF%91%E9%87%8D%E5%A4%8D%E8%A1%8C-uniquify"><span class="toc-number">2.4.</span> <span class="toc-text">uniq删除邻近重复行(uniquify)</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#tr%E6%9B%BF%E6%8D%A2-%E5%88%A0%E9%99%A4%E5%8C%B9%E9%85%8D%E5%AD%97%E7%AC%A6"><span class="toc-number">2.5.</span> <span class="toc-text">tr替换&#x2F;删除匹配字符</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#cut%E6%96%87%E6%9C%AC%E6%88%AA%E5%8F%96"><span class="toc-number">2.6.</span> <span class="toc-text">cut文本截取</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%A0%BC%E5%BC%8F%E6%8E%A7%E5%88%B6"><span class="toc-number">3.</span> <span class="toc-text">格式控制</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#numfmt%E6%A0%BC%E5%BC%8F%E5%8C%96%E8%BE%93%E5%87%BA%E6%95%B0%E5%AD%97"><span class="toc-number">3.1.</span> <span class="toc-text">numfmt格式化输出数字</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#expand%E5%B0%86%E5%88%B6%E8%A1%A8%E7%AC%A6%E8%BD%AC%E6%8D%A2%E4%B8%BA%E7%A9%BA%E6%A0%BC"><span class="toc-number">3.2.</span> <span class="toc-text">expand将制表符转换为空格</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#unexpand%E5%B0%86%E7%A9%BA%E6%A0%BC%E8%BD%AC%E6%8D%A2%E4%B8%BA%E5%88%B6%E8%A1%A8%E7%AC%A6"><span class="toc-number">3.3.</span> <span class="toc-text">unexpand将空格转换为制表符</span></a></li></ol></li></ol></div></div>
         <div class="article">
         <h1 class="title">Linux文本处理</h1>
         <div class="art-info">
-            <div><span><span class="iconfont icon-zishu-jzl"></span>字数：8092</span>
+            <div><span><span class="iconfont icon-zishu-jzl"></span>字数：10034</span>
             <span><span class="iconfont icon-riqi"></span>写于：2021-12-29</span></div>
             <div><span><span class="iconfont icon-zuixinnew3"></span>最新更新：2022-01-23</span>
-            <span><span class="iconfont icon-shijian"></span>阅读本文预计花费您24分钟</span></div>
+            <span><span class="iconfont icon-shijian"></span>阅读本文预计花费您29分钟</span></div>
         </div>
         <div class="art-content">
         <h3 id="输出文本"><a href="#输出文本" class="headerlink" title="输出文本"></a>输出文本</h3><h4 id="echo打印文本"><a href="#echo打印文本" class="headerlink" title="echo打印文本"></a>echo打印文本</h4><p>echo命令一般有多个版本，默认情况下通常会优先使用shell的内置版本，这里的命令语法是GNU coreutils包中的语法，但通常shell内置的echo命令也支持以下语法。直接执行echo命令将默认使用shell内置的版本，因此如果需要使用GNU coreutils包中的echo命令，需要使用env(env echo…)来调用</p>
@@ -219,6 +217,7 @@
 <h4 id="printf格式化打印文本"><a href="#printf格式化打印文本" class="headerlink" title="printf格式化打印文本"></a>printf格式化打印文本</h4><p><span class="strong">printf “格式” 参数(常量或变量)…</span></p>
 <p>printf命令支持的格式字符串和C语言基本一致，有略微不同：</p>
 <ul>
+<li>%b 转义字符串中的\n,\e等字符串，shell语法专属，C语言中的printf没有该格式字符串</li>
 <li>命令会根据需要重复使用格式，并赋予所有参数，如：printf %.4d 1 2，参数1和2都会被给予格式%.4d，即便%.4d只指定了一个，输出为：00010002</li>
 <li>如果指定了格式但没有给参数，命令会根据上下文将参数赋值为null(字符串)或0(数值)，如：printf “aa%sbb%dcc”，输出为aabb0cc，对于格式%s填充值为null(不打印任何字符)，对于格式%d填充值0</li>
 </ul>
@@ -226,6 +225,11 @@
 printf "%s %s" aa bb
 2. 输出变量
 printf 用户目录：%s $HOME
+3.转义CSI字符序列
+red=$(tput setaf 1)
+reset=$(tput op)
+string="文本行"
+printf "%b\n" "${red}${string}${reset}"
 </div>
 
 <h4 id="shuf生成随机字符串排列-shuffles"><a href="#shuf生成随机字符串排列-shuffles" class="headerlink" title="shuf生成随机字符串排列(shuffles)"></a>shuf生成随机字符串排列(shuffles)</h4><p>该命令可以用来随机输出指定的文本，也可以用来生成随机值</p>
@@ -239,7 +243,7 @@ printf 用户目录：%s $HOME
 <li>-z 行结束符为NUL，而非默认的换行符</li>
 </ul>
 <div class="show">1.将字符串name1 name2 name3按随机顺序输出：
-shuf &gt;&gt;EOF
+shuf &lt;&lt;EOF
 name1
 name2
 name3
@@ -315,36 +319,75 @@ echo $(yes "别刷屏" | head -n 10 | tr -d '\n')
 yes "某个数据" | head -n 1000 &gt; test_file.txt
 </div>
 
-<h3 id="文本处理"><a href="#文本处理" class="headerlink" title="文本处理"></a>文本处理</h3><h4 id="grep数据查找"><a href="#grep数据查找" class="headerlink" title="grep数据查找"></a>grep数据查找</h4><p>grep命令用于在指定内容或文件中查找满足匹配模式的字符的行，其输出是满足匹配模式的字符串行。该命令功能强大，支持Unix风格的正则表达式，是最常用的命令之一。</p>
-<p><span class="strong">grep [参数] 匹配模式 [文件]</span> 找到或排除字符串所在行，然后输出内容</p>
+<h3 id="文本处理"><a href="#文本处理" class="headerlink" title="文本处理"></a>文本处理</h3><h4 id="grep数据查找"><a href="#grep数据查找" class="headerlink" title="grep数据查找"></a>grep数据查找</h4><p>grep命令用于在指定内容或文件中查找满足匹配模式的字符的行，其输出是满足匹配模式的字符串行</p>
+<p><span class="strong">grep [参数] 匹配模式 [文件1 文件2..]</span></p>
 <ul>
-<li>-i &emsp;不区分大小写</li>
-<li>-v &emsp;排除指定字符串</li>
-<li>-n &emsp;显示匹配内容的行号</li>
-<li>-c &emsp;显示有多少行满足匹配</li>
-<li>-e &emsp;指定多个匹配条件</li>
+<li>默认情况下，grep只支持基本正则表达式，且会输出满足匹配行的所有内容</li>
+<li>-i 不区分大小写</li>
+<li>-&zwnj;-no-ignore-case 区分大小写(默认)</li>
+<li>-v 排除满足匹配的行，即反向匹配，输出不匹配的行</li>
+<li>-o 只输出匹配的文本部分，而不是一整行</li>
+<li>-w “词”：匹配一个完整独立的单词，以避免某个单词是另外一个单词一部分的情况(如：-w “java”将只匹配java而不再匹配javaScript)</li>
+<li>-e 匹配模式：指定多个匹配条件</li>
+<li>-f 文件名：从文件中读取匹配模式，每行视为一个匹配模式，空文件视为0个模式，不匹配任何结果</li>
+<li>-E 启用扩展正则表达式</li>
+<li>-F 将匹配模式字符串视为字符串常量，而不是表达式</li>
+<li>-G 将匹配模式视为基本正则表达式解析(默认)</li>
+<li>-P 将匹配模式视为与Perl兼容的正则表达式</li>
 </ul>
-<div class="show">示例:
-# grep man /etc/file
-找到/etc/file文件中含有man的行并输出
+<p><span class="strong">输出管理</span></p>
+<ul>
+<li>-c 仅显示匹配数量，即有多少内容满足匹配，而不显示匹配内容</li>
+<li>-n 在输出开头显示匹配内容的行号，从1开始计数</li>
+<li>-l 仅显示哪个文件中的内容满足匹配，不显示匹配内容</li>
+<li>-L 仅显示哪个文件内容不满足匹配内容，不显示匹配内容，如：查找哪些文件缺少关键词(缺少某个配置)</li>
+<li>-m 值N：将文件作为查找内容来源时，找到N个匹配结果后，停止读取文件，-1视为无穷大，0会立即停止读取</li>
+<li>-b 输出匹配行在文件中的字节偏移量(从0计数)，和-o搭配使用时，输出匹配的字符串在文件中的字节偏移量(不再以本行开头计算偏移)</li>
+<li>-H 强制显示匹配结果来源于哪个文件，以<span class="tips">文件名：匹配到的内容</span>形式输出，当输入文件有多个时，该选项是默认值</li>
+<li>-h 不显示匹配结果来源于哪个文件，当输入文件是单个时，该选项是默认值</li>
+<li>-&zwnj;-label=名：为标准输入指定一个虚拟文件名，当输入结果来源于标准输入时，和-H搭配使用，显示为类似于-H选项的效果</li>
+<li>-T 在输出结果中使用制表符代替空格，这会影响H，n选项的输出，-H选项的输出将变成<code>文件名：(制表符多空格)    匹配内容</code></li>
+<li>-Z 使用空字符(\0)分隔输出结果，而不是默认的换行或者空格，以方便处理文件名本身包含空格的情况，该选项通常搭配xargs -0 或 find -print0来处理文件名包含空格/特殊字符的情况，如：grep -Z “error” *.log | xargs -0 rm，如果文件”hello world.txt”中有内容error，它会被正确删除，而不是删除hello和world.txt两个文件，grep的输出会是hello world.txt\0file.txt</li>
+<li>上下文查看：常用来查看某个关键词所在行及其前后的内容(如：日志文件中，仅一个行信息不够，查看上下文多个行)，如果匹配到多个内容，每个内容及其上下文内容间默认用<span class="tips">-&zwnj;-</span>分隔<blockquote>
+<blockquote>
+<ul>
+<li>-A 值N:显示匹配行及其之后的N行的内容(after)</li>
+<li>-B 值N:显示匹配行及其之前的N行的内容(before)</li>
+<li>-C 值N：显示匹配行及其前后各N行的内容(context)</li>
+<li>-&zwnj;-group-separator=”符号”：指定分隔符，而不是默认的-&zwnj;-</li>
+<li>-&zwnj;-no-group-separator:不使用分隔符</li>
+</ul>
+</blockquote>
+</blockquote>
+</li>
+<li>-q 安静模式，不输出任何匹配结果或数量</li>
+<li>-s 不显示任何文件不存在和文件无法读取的错误信息<br><span class="strong">文件类型处理</span></li>
+</ul>
+<div class="show">1.找到/etc/file文件中含有man的行并输出
+# grep "man" /etc/file
+2.显示/etc/inittab中除了#开头的所有行内容(#开头的内容为被注释了的内容，不想看注释)
 # grep -v ^# /etc/inittab
-显示/etc/inittab中除了#开头的所有行内容(#开头的内容为被注释了的内容，不想看注释)
+3.找出包含java、cpp、golang的行
+grep -iw -e "java" -e "cpp" -e "golang" ./log
 </div>
 
 <h4 id="sort排序处理"><a href="#sort排序处理" class="headerlink" title="sort排序处理"></a>sort排序处理</h4><p>默认情况下，sort命令按照会话指定的默认语言的排序规则对文本数据行排序，且数字也会被当作字符处理(如果要按数值排序，使用-n选项)<br><span class="strong">sort [选项] [文件名]</span><br>将文件或命令结果进行排序，默认以每行第一个字母为依据，按字母顺序排序</p>
 <ul>
 <li>-f&emsp;忽略大小写</li>
-<li>-n&emsp;将数字作为值处理，按数值大小进行排序</li>
+<li>-n&emsp;将数字作为值处理，按数值大小进行排序(排序顺序为从小到大)</li>
 <li>-r&emsp;反向排序</li>
-<li>-t&emsp;指定分隔符为分段依据</li>
+<li>-t&emsp;指定分隔符为分段依据，默认以空格、制表符、换行符作为分隔符</li>
 <li>-M&emsp;按月份排序，常用于日志文件排序</li>
-<li>-k n,m&emsp;指定字段为排序依据，若不指定m则判断依据为以n字段开始到本行末</li>
+<li>-k n,m&emsp;指定字段为排序依据，-k 2,2以第二个字段作为判断依据，若不指定m则判断依据为以n字段开始到本行末的所有字段</li>
+<li>-u 先排序所有行，然后去除相邻的重复行，等价于sort | uniq，该选项可以用来去重</li>
 </ul>
-<div class="show">示例：
+<div class="show">1.passwd文件排序输出
 sort /etc/passwd
 按passwd文件每行首字母进行排序显示
 sort -n -t ":" -k 3,3 etc/passwd
 指定字段以:分隔，按第3字段(UID)值大小进行排序显示
+2. 对TSV文件(以制表符分隔数据)，需要显式指定分隔符，以避免字段内部的空格干扰字段的分隔
+sort -t $'\t' -nr data.tsv
 </div>
 
 <p>以下为可能用到的完整命令选项及其缩写</p>
@@ -466,7 +509,7 @@ sort -n -t ":" -k 3,3 etc/passwd
 <tr>
 <td>-u</td>
 <td>-&zwnj;-unique</td>
-<td>和-c参数一起使用时，检查严格排序；不和-c参数一起用时，仅输出第一例相似的两行</td>
+<td>去重，有重复行时仅输出一次，先排序所有行，然后去除相邻的重复行，等价于sort</td>
 </tr>
 <tr>
 <td>-z</td>
@@ -512,18 +555,21 @@ wc -l &lt; test.txt
 <li>-w 值n：只对每行前n个字符进行比较</li>
 </ul>
 <h4 id="tr替换-删除匹配字符"><a href="#tr替换-删除匹配字符" class="headerlink" title="tr替换/删除匹配字符"></a>tr替换/删除匹配字符</h4><p>tr命令用来逐字符处理字符流，对字符串进行删除、替换等操作。tr命令本身不接收要处理的字符串，因此需要通过管道符或重定向符将要处理的字符串输入给tr命令。由于是逐字符处理，因此tr命令在处理大文件时可能较慢，适合用来进行简单字符转换和清理，相当于简化版的awk</p>
-<p><span class="strong">tr [选项] ‘str1’ [‘str’2]</span></p>
+<p><span class="strong">tr [选项] ‘str1’ [‘str2’]</span></p>
 <ul>
-<li>-d 删除指定字符，如果所输入字符串中出现了str1，删除所有str1</li>
-<li>-s 删除重复字符，如果所输入字符串中有相邻的重复字符，则删除到只保留一个该字符，常用来删除连续空白字符</li>
-<li>如果同时指定了str1,str2，但无选项，默认是将所输入字符串中所有str1替换为str2</li>
-<li>-c或-C 需要指定str2，将所输入字符串中所有str1以外的字符替换为str2</li>
+<li>-d 删除指定字符，需要添加str1参数来指定删除哪些字符，如果要处理的字符串中出现了str1中的字符，则删除这些字符</li>
+<li>-s 删除重复字符，需要添加str1参数来指定删除哪些重复字符，如果要处理的字符串中有相邻重复的str1字符，则删除到只保留一个该字符，常用来删除连续空白字符</li>
+<li>如果同时指定了str1,str2，但无选项，默认是将所输入字符串中所有str1替换为str2，如果str2长度不够，则会循环使用字符</li>
+<li>-c或-C 取反操作，如果搭配-d或-s选项，将删除所指定字符(str1)以外的字符；如果无其他选项但指定了str2，则是将str1以外的字符替换为str2</li>
 <li>-t 将str1截断到和str2相等的长度</li>
+<li>str1和str2不支持使用正则，但支持使用’a-zA-Z0-9’或’acfg’等字符集表达方式，也可以使用POSIX字符类([:alpha:]所有字母，[:digit:]所有数字，[:lower:]小写字母，[:upper:]大写字母，[:space:]空格、制表符等空白字符等)</li>
 </ul>
 <div class="show">1. 将输入中的所有小写字母转换为大写字母
 echo "hello world" | tr 'a-z' 'A-Z'
 2. 删除输入中的所有数字
 echo "abc123def456" | tr -d '0-9'
+或
+echo "abc123def456" | tr -d '[:digit:]'
 3.将多个连续的空格压缩为一个空格
 echo "hello    world" | tr -s ' '
 4. 将所输入字符串中所有非字母字符替换为 *
@@ -541,7 +587,6 @@ hello***world*
 <li>-d “字符”：指定输入内容的字段分隔符，默认为制表符Tab</li>
 <li>-s 搭配-f使用，不打印不包含字段分隔符的行，默认情况下会打印</li>
 <li>-&zwnj;-output-delimiter=”字符”：搭配-f使用，指定输出内容的字段分隔符</li>
-<li>-n 不要拆分多字节字符</li>
 <li>-&zwnj;-complement 搭配-b、-c、-f选项使用，不打印这些区间之间的内容，即提取除指定部分以外的所有内容</li>
 </ul>
 <div class="show">1.截取第2-5个字符
@@ -645,7 +690,7 @@ numfmt --from=si 1M
     </div>
     <div class="container">
         <!--设计来源于B站-季夏小贞-->
-        <div class="bigHead"></div>
+        <div class="big-head"></div>
         <div class="ears"></div>
         <div class="body"></div>
         <div class="paws-front"></div>
@@ -662,7 +707,7 @@ numfmt --from=si 1M
     </div>
 </div>
 <div class="right-menu">
-    <a class="iconfont backTop" href="javascript:">&#xe655;</a>
+    <a class="iconfont back-top" href="javascript:">&#xe655;</a>
     <div class="husky"></div>
   </div>
 </div>

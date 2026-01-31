@@ -2,9 +2,10 @@
  * @Author: SHIWIVI
  * @Date: 2021-08-30 03:11
  * @Last Modified by: SHIWIVI
- * @Last Modified time: 2024-07-20 09:57:37
+ * @Last Modified time: 2026-01-30 01:20:39
+ * #TODO:重构
  */
-const { PI, cos, sin, tan, abs, sqrt, pow, min, max, ceil, floor, round, random, atan2 } = Math;
+const { PI, cos, sin, tan, abs, sqrt, pow, min, max, ceil, floor, round, random, atan2, exp } = Math;
 const getRandom = (min, max) => random() * (max - min) + min;
 Float32Array.prototype.get = function (i = 0, l = 0) {
     let t = i + l;
@@ -14,37 +15,39 @@ Float32Array.prototype.get = function (i = 0, l = 0) {
     }
     return result;
 };
+const html = document.documentElement;
 const body = document.body;
 const nav = document.querySelector(".nav");
 const motto = document.querySelector(".motto");
 const main = document.querySelector(".main");
 const msg = document.querySelector(".msg");
-const msgBar = document.querySelector(".msgBar");
-const msgText = document.querySelector(".msgText");
-const menuBtn = document.querySelector(".menuBtn");
-const addFont = document.getElementById("increaseFontSize");
-const reduceFont = document.getElementById("reduceFontSize");
-const fontSizeNum = document.querySelector(".fontSizeNum");
-const setMenu = document.querySelector(".setMenu");
-const setBtn = document.getElementById("setBtn");
-const clearBack = document.getElementById("clearBack");
-const disableBack = document.getElementById("disableBack");
-const toggleItem = document.getElementById("toggleItem");
-const itemIco = document.querySelector(".itemIco");
-const menuLi = document.querySelector(".setMenu").querySelectorAll("li");
-const searchInput = document.getElementById("searchInput");
-const searchResult = document.getElementById("searchResult");
+const msgBar = document.querySelector(".msg-bar");
+const msgText = document.querySelector(".msg-text");
+const menuBtn = document.querySelector(".menu-btn");
+const addFont = document.getElementById("increase-font-size");
+const reduceFont = document.getElementById("reduce-font-size");
+const fontSizeNum = document.querySelector(".font-size-num");
+const setMenu = document.querySelector(".set-menu");
+const setBtn = document.getElementById("set-btn");
+const clearBack = document.getElementById("clear-back");
+const disableBack = document.getElementById("disable-back");
+const toggleTheme = document.getElementById("toggle-theme");
+const themeIco = document.querySelector(".theme-ico");
+const menuLi = document.querySelector(".set-menu").querySelectorAll("li");
+const searchInput = document.getElementById("search-input");
+const searchResult = document.getElementById("search-result");
 const canvasPage = document.createElement("canvas");
 const ctxPage = canvasPage.getContext("2d");
 const canvasBack = document.createElement("canvas");
 const ctxBack = canvasBack.getContext("2d");
 const mobile = navigator.userAgent.toLowerCase().match(/(phone|pad|ipod|iphone|android|mobile|MQQBrowser|JUC|coolpad|mmp|smartphone|midp|wap|xoom|symbian|j2me|blackberry|wince|windows Phone)/i);
-let colors = ["#f00", "#f80", "#fffb00", "#2bff00", "#0fd", "#2002ff", "#cc02ff", "#ff02bc", "#1b9cfc", "#25ccf7", "#fff"];//数组最后一个颜色#fff用于夜间模式
+
 let pageWidth, pageHeight;
 let pointerAni = [];
 let sparkArray = [];
-let animationID = 0;
-let webTheme;
+let mainEngine = null;//canvas引擎
+let webTheme = "";
+
 class Ball {
     constructor(x, y, r) {
         this.x = x;
@@ -97,25 +100,26 @@ class Ball {
 }
 class Spark {
     constructor(x, y, width = 5, height = 5, sugarNum = 9, live = 140, spark = false) {
-        this.x = x,
-            this.y = y,
-            this.height = height,
-            this.width = width,
-            this.sugarNum = sugarNum,
-            this.live = live,
-            this.data = new Float32Array(6 * sugarNum); //存储的参数有x,y,dx,dy,yBottom,colorIndex
+        this.x = x;
+        this.y = y;
+        this.height = height;
+        this.width = width;
+        this.sugarNum = sugarNum;
+        this.live = live;
+        this.colors = ["#f00", "#f80", "#fffb00", "#2bff00", "#0fd", "#2002ff", "#cc02ff", "#ff02bc", "#1b9cfc", "#25ccf7", "#fff"];//数组最后一个颜色#fff用于夜间模式
+        this.data = new Float32Array(6 * sugarNum); //存储的参数有x,y,dx,dy,yBottom,colorIndex
         spark ? this.setSpark() : this.setSugar();
     }
     setSpark() {
         for (let i = 0; i < this.sugarNum; i++) {
             let dy = Math.random() * (-10) - 2;
-            this.data.set([this.x, this.y, Math.random() * 9 - 3, dy, this.y + dy + this.height, colors.length - 1], i * 6)
+            this.data.set([this.x, this.y, Math.random() * 9 - 3, dy, this.y + dy + this.height, this.colors.length - 1], i * 6)
         }
     }
     setSugar() {
         for (let i = 0; i < this.sugarNum; i++) {
             let dy = Math.random() * 10 - 5;
-            this.data.set([this.x, this.y, Math.random() * 6 - 3, dy, this.y + dy + this.height, i > colors.length - 1 ? Math.round(Math.random() * colors.length - 2) : i], i * 6)
+            this.data.set([this.x, this.y, Math.random() * 6 - 3, dy, this.y + dy + this.height, i > this.colors.length - 1 ? Math.round(Math.random() * colors.length - 2) : i], i * 6)
         }
     }
     update() {
@@ -137,7 +141,7 @@ class Spark {
             x += dx;
             yBottom = y + this.height;
             this.data.set([x, y, dx, dy, yBottom], i * 6)
-            this.draw(x, y, colors[colorIndex]);
+            this.draw(x, y, this.colors[colorIndex]);
         }
         this.live--;
     }
@@ -152,45 +156,51 @@ class Spark {
 /*
 * 提示栏
 */
-let msgReady = true;
-function showMsg(text) {
-    msgText.innerText = text;
-    if (msgReady) {
-        msgReady = false;
-        msg.classList.add("msgShow");
-        msgBar.classList.add("msgbarActive");
-        setTimeout(() => {
-            msgBar.classList.remove("msgbarActive");
-            msg.classList.remove("msgShow");
-            msgReady = true;
-        }, 4000)
+
+const showMsg = (() => {
+    let msgReady = true;
+    return (text) => {
+        msgText.innerText = text;
+        if (msgReady) {
+            msgReady = false;
+            msg.classList.add("msg-show");
+            msgBar.classList.add("msg-bar-active");
+            setTimeout(() => {
+                msgBar.classList.remove("msgbarActive");
+                msg.classList.remove("msg-show");
+                msgReady = true;
+            }, 4000)
+        }
     }
-}
+})();
+
 function canvasInit() {
     pageWidth = canvasPage.width = window.innerWidth;
     pageHeight = canvasPage.height = window.innerHeight;//pageCanvas用于全屏点击特效
-    canvasBack.width = window.innerWidth;
-    canvasBack.height = window.innerHeight;//backCanvas用于背景渲染
+    // canvasBack.width = window.innerWidth;
+    // canvasBack.height = window.innerHeight;//backCanvas用于背景渲染
     canvasPage.style = "position:fixed;top:0;left:0;z-index:200;pointer-events:none;";
-    canvasBack.style = "position:absolute;top:0;left:0;z-index:-1;pointer-events:none;";
+    // canvasBack.style = "position:absolute;top:0;left:0;z-index:-1;pointer-events:none;";
+    canvasBack.style = "position:fixed;top:0;left:0;z-index:-1;pointer-events:none;";
     document.body.append(canvasPage);
-    document.querySelector(".canvasWrapper").append(canvasBack);
+    document.body.append(canvasBack);
+    // document.querySelector(".canvasWrapper").append(canvasBack);
 }
 function canvasResize() {
-    pageWidth = canvasBack.width = canvasPage.width = window.innerWidth;
-    pageHeight = canvasBack.height = canvasPage.height = window.innerHeight;
+    pageWidth = canvasPage.width = window.innerWidth;
+    pageHeight = canvasPage.height = window.innerHeight;
 }
-function throttle(func,time){
+function throttle(func, time) {
     let timer;
-    return function(){
+    return function () {
         clearTimeout(timer);
-        timer=setTimeout(()=>{
+        timer = setTimeout(() => {
             func();
-        },time)
+        }, time)
     }
 }
 
-window.addEventListener("resize", throttle(canvasResize,500));
+window.addEventListener("resize", throttle(canvasResize, 500));
 window.addEventListener("click", e => {
     webTheme == "dark" ? pointerAni.push(new Ball(e.clientX, e.clientY, 20)) : sparkArray.push(new Spark(e.clientX, e.clientY, 5, 5, 10, 140, false))
 })
@@ -200,7 +210,7 @@ function canvasAnimation() {
     sparkArray.forEach(s => s.update());
     window.requestAnimationFrame(canvasAnimation);
 }
-canvasAnimation();
+window.requestAnimationFrame(canvasAnimation);
 /*
 *   下雪
 */
@@ -266,40 +276,30 @@ reduceFont.addEventListener("click", () => {
 })
 
 //切换夜间主题
-function toggleItemfn() {
+function toggleThemefn() {
     if (webTheme === "light") {
-        body.classList.remove("loadLight");
-        nav.classList.remove("loadLight");
-        body.classList.add("dark", "loadDark");
-        nav.classList.add("dark", "loadDark");
-        itemIco.className = "itemIco moon";
+        html.classList.add("dark-theme");
+        nav.classList.add("dark-theme");
+        themeIco.className = "theme-ico moon";
         clearInterval(snowTimer);
-        for (let i = 0; i < 6; i++) {
-            pointerAni.push(new Ball(pageWidth / 6 * i, 0, 20));
-        }
         window.localStorage.setItem("webTheme", "dark");
     }
     else {
-        body.classList.remove("dark", "loadDark");
-        nav.classList.remove("dark", "loadDark");
-        body.classList.add("loadLight");
-        nav.classList.add("loadLight");
-        itemIco.className = "itemIco sun";
+        html.classList.remove("dark-theme");
+        nav.classList.remove("dark-theme");
+        themeIco.className = "theme-ico sun";
         window.localStorage.setItem("webTheme", "light");
-        for (let i = 0; i < 6; i++) {
-            sparkArray.push(new Spark(pageWidth / 6 * i, 0, 5, 5, 10, 140, false));
-        }
     }
     webTheme = window.localStorage.getItem("webTheme");
 }
-toggleItem.addEventListener("click", toggleItemfn);
+toggleTheme.addEventListener("click", toggleThemefn);
 
 
 //设置菜单
 setBtn.addEventListener("click", function () {
-    this.classList.toggle("setBtnActive");
+    this.classList.toggle("set-btn-active");
     menuLi.forEach((item) => {
-        item.classList.toggle("menuActive");
+        item.classList.toggle("menu-active");
     });
     setTimeout(() => {
         if (this.innerText === "<") {
@@ -312,33 +312,25 @@ setBtn.addEventListener("click", function () {
     searchInput.value = "";
     searchResult.innerHTML = "";
 })
+
 clearBack.addEventListener("click", () => {
-    if (animationID) {
-        window.cancelAnimationFrame(animationID);
-        ctxBack.clearRect(0, 0, pageWidth, pageHeight);
-        showMsg("已移除背景动画!");
-        animationID = 0;
-    }
-    else {
-        showMsg("未启用动画，无需清除");
+    if (!mainEngine) {
+        showMsg("该页面无背景动画")
     }
 })
+
 disableBack.addEventListener("click", () => {
+    if (mainEngine) {
+        return;//将逻辑交给homePage.js处理
+    }
     if (window.localStorage.getItem("disableBack") === "false") {
-        window.cancelAnimationFrame(animationID);
-        ctxBack.clearRect(0, 0, pageWidth, pageHeight);
-        disableBack.textContent = "启用背景";
-        showMsg("已在全局禁用动态夜间背景");
         window.localStorage.setItem("disableBack", "true");
+        disableBack.textContent = "启用背景";
+        showMsg("已在全局禁用canvas背景");
     }
     else {
-        if (window.localStorage.getItem("webTheme") == "dark") {
-            try {
-                backAni();
-            } catch (e) { };
-        }
         disableBack.textContent = "禁用背景";
-        showMsg("已启用夜间背景");
+        showMsg("已在主页启用canvas背景");
         window.localStorage.setItem("disableBack", "false");
     }
 })
@@ -360,29 +352,36 @@ function pageInit() {
     if (window.localStorage.getItem("disableBack") === "true") {
         disableBack.textContent = "启用背景";
     }
-    //其他页面继承主页的主题
+    //页面主题初始化，并且其他页面继承主页的主题
     webTheme = window.localStorage.getItem("webTheme");
-    if (webTheme == "dark") {
-        body.classList.add("dark");
-        nav.classList.add("dark");
-        itemIco.className = "itemIco moon";
+    if (webTheme === "dark") {
+        html.classList.add("dark-theme");
+        nav.classList.add("dark-theme");
+        themeIco.className = "theme-ico moon";
     }
+    //#TODO:考虑双rAF，并在执行前先移除一次html-load-theme
+    requestAnimationFrame(() => {
+        html.classList.add("html-load-theme");
+    })
+
 }
 
 canvasInit();
-pageInit();
+//当页面从/blog跳转到/blog/xxx页面时，强制重新执行pageInit
+//避免rAF防闪屏失效
+window.addEventListener("pageshow", pageInit);
 
 //JQuery代码，主打的就是一个混用
 $(function () {
-    $(".backTop").fadeOut();
+    $(".back-top").fadeOut();
     //点击关闭菜单栏
-    $(".menuBtn").click(function () {
-        if ($(".menuBtn").hasClass("closed")) {
-            $(".menuBtn").removeClass("closed");
+    $(".menu-btn").click(function () {
+        if ($(".menu-btn").hasClass("closed")) {
+            $(".menu-btn").removeClass("closed");
             $(".nav").addClass("left-move");
         }
         else {
-            $(".menuBtn").addClass("closed");
+            $(".menu-btn").addClass("closed");
             $(".nav").removeClass("left-move");
         }
     });
@@ -390,18 +389,18 @@ $(function () {
     if (($(document).innerWidth()) < 420) {
         if (!($(".nav").hasClass("left-move"))) {
             $(".nav").addClass("left-move");
-            $(".menuBtn").removeClass("closed");
+            $(".menu-btn").removeClass("closed");
         }
     }
     //滚动事件
     $(".main").scroll(function () {
         //滚动大于400，出现返回顶部和哈士奇 
         if ($(this).scrollTop() > 400) {
-            $(".backTop").fadeIn();
+            $(".back-top").fadeIn();
             $(".husky").animate({ "right": "0px" }, 200);
         }
         if ($(".main").scrollTop() == 0) {//回到顶部，按钮消失
-            $(".backTop").fadeOut();
+            $(".back-top").fadeOut();
             if ($(".husky").css("right") == "0px") {
                 $(".husky").animate({ "right": "100px" }, 500, function () {
                     $(this).css("right", "-100px");
@@ -412,7 +411,7 @@ $(function () {
             $(".husky").fadeOut();
         });
     });
-    $(".backTop").click(function () {//返回顶部
+    $(".back-top").click(function () {//返回顶部
         $(".main").animate({ "scrollTop": 0 }, 1000)
     });
     $(document).ready(function () {
@@ -421,28 +420,28 @@ $(function () {
             url: "/blog/search.json",
             dataType: "json",
             success: function (xmlResponse) {
-                var datas = xmlResponse;
+                const datas = xmlResponse;
                 if (!searchInput) return;
-                if ($("#searchInput").length > 0) {
+                if ($("#search-input").length > 0) {
                     searchInput.addEventListener("input", function () {
-                        var resultNum = 0;
-                        var str = "<ul class=\"searchResultList\">";
-                        var keywords = this.value.trim().toLowerCase().split(/[\s\-]+/);
+                        let resultNum = 0;
+                        let str = "<ul class=\"search-result-list\">";
+                        const keywords = this.value.trim().toLowerCase().split(/[\s\-]+/);
                         searchResult.innerHTML = "";
                         if (this.value.trim().length <= 0) {
                             return;
                         }
                         datas.forEach(function (data) {
-                            var isMatch = true;
+                            let isMatch = true;
                             if (!data.title || data.title.trim() === "") {
                                 data.title = "Untitled";
                             }
-                            var data_title = data.title.trim().toLowerCase();
-                            var data_content = data.content.trim().replace(/<[^>]+>/g, "").toLowerCase();
-                            var data_url = data.url;
-                            var index_title = -1;
-                            var index_content = -1;
-                            var first_occur = -1;
+                            const data_title = data.title.trim().toLowerCase();
+                            const data_content = data.content.trim().replace(/<[^>]+>/g, "").toLowerCase();
+                            const data_url = data.url;
+                            let index_title = -1;
+                            let index_content = -1;
+                            let first_occur = -1;
                             if (data_content !== "") {
                                 keywords.forEach(function (keyword, i) {
                                     index_title = data_title.indexOf(keyword);
@@ -463,11 +462,11 @@ $(function () {
                                 isMatch = false;
                             }
                             if (isMatch) {
-                                str += "<li><a href='" + data_url + "' class='search-result-title'>" + "<div class='searchResultTitle'>" + data_title + "</div>";
-                                var content = data.content.trim().replace(/<[^>]+>/g, "");
+                                str += "<li><a href='" + data_url + ">" + "<div class='search-result-title'>" + data_title + "</div>";
+                                let content = data.content.trim().replace(/<[^>]+>/g, "");
                                 if (first_occur >= 0) {
-                                    var start = first_occur - 20;
-                                    var end = first_occur + 80;
+                                    let start = first_occur - 20;
+                                    let end = first_occur + 80;
                                     if (start < 0) {
                                         start = 0;
                                     }
@@ -477,7 +476,7 @@ $(function () {
                                     if (end > content.length) {
                                         end = content.length;
                                     }
-                                    var match_content = content.substring(start, end);
+                                    let match_content = content.substring(start, end);
                                     keywords.forEach(function (keyword) {
                                         try {
                                             var regS = new RegExp(keyword, "gi");
@@ -491,9 +490,9 @@ $(function () {
                             }
                         });
                         if (resultNum == 0) {
-                            str += "<div class='noResult'>\"坏了！什么都没有 (─.─||)\"</div>";
+                            str += "<div class='no-result'>\"坏了！什么都没有 (─.─||)\"</div>";
                         }
-                        str = '<div class=\"resultInfo\">一共找到<span class="resultNum">' + resultNum + '</span>条数据</div>' + str + "</ul>";
+                        str = '<div class=\"result-info\">一共找到<span class="result-num">' + resultNum + '</span>条数据</div>' + str + "</ul>";
                         searchResult.innerHTML = str;
                     });
                 }
@@ -501,7 +500,7 @@ $(function () {
             error: function (jqxhr, textStatus, error) {
                 searchInput.disabled = true;
                 searchInput.classList.add("forbidden");
-                document.querySelector(".searchContainer").addEventListener("click", function () {
+                document.querySelector(".search-container").addEventListener("click", function () {
                     showMsg("出了亿点小问题，搜索功能已被禁用");
                 })
                 console.error("Ajax未能获取search.json文件");

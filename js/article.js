@@ -1,14 +1,14 @@
-const tocBtn = document.querySelector(".tocBtn");
-const tocWrapper = document.querySelector(".tocWrapper");
+const tocBtn = document.querySelector(".toc-btn");
+const tocWrapper = document.querySelector(".toc-wrapper");
 const articleContent = document.querySelector('.art-content')
 //折叠栏
-const contentFoldedList = document.querySelectorAll(".contentFolded");
+const contentFoldedList = document.querySelectorAll(".content-folded");
 if (contentFoldedList) {
     contentFoldedList.forEach(item => {
         let foldFlag = false;
         let foldBtn = document.createElement("div");
         foldBtn.textContent = "展开";
-        foldBtn.className = "foldBtn";
+        foldBtn.className = "fold-btn";
         item.appendChild(foldBtn);
         foldBtn.addEventListener("click", function (e) {
             e.stopPropagation();
@@ -23,7 +23,7 @@ if (contentFoldedList) {
                 foldFlag = true;
             }
             item.classList.toggle("unfolded");
-            foldBtn.classList.toggle("foldBtn-unfolded");
+            foldBtn.classList.toggle("fold-btn-unfolded");
         })
         window.addEventListener("resize", function () {
             if (foldFlag) {
@@ -35,24 +35,24 @@ if (contentFoldedList) {
 //代码高亮初始化
 hljs.highlightAll();
 hljs.initLineNumbersOnLoad();
+
 tocBtn.addEventListener("click", function () {
-    tocWrapper.classList.toggle("tocWrapperActive");
+    tocWrapper.classList.toggle("toc-wrapper-active");
 })
 //二级标题dom
 let contentH2 = articleContent.querySelectorAll('h2');
 if (contentH2) {
     contentH2.forEach(h2Dom => {
         let H2iconContainer = document.createElement('div');
-        H2iconContainer.classList.add('H2-iconContainer');
+        H2iconContainer.classList.add('H2-icon-container');
         for (let i = 1; i <= 3; i++) {
             const iconBox = document.createElement('div');
-            iconBox.classList.add('H2-iconBox', `H2-iconBox${i}`);
+            iconBox.classList.add('H2-icon-box', `H2-icon-box${i}`);
             H2iconContainer.appendChild(iconBox);
         }
         h2Dom.insertAdjacentElement('afterbegin', H2iconContainer);
     })
 }
-
 
 //图片懒加载
 let imgs = articleContent.querySelectorAll('img');
@@ -60,17 +60,17 @@ if (imgs) {
     imgs.forEach(img => {
         let imgWrapper = document.createElement('div');
         let loadWrapper=document.createElement('div');
-        imgWrapper.className = "imgWrapper";
-        loadWrapper.className="loadWrapper"
+        imgWrapper.className = "img-wrapper";
+        loadWrapper.className="load-wrapper"
         loadWrapper.innerHTML = `
-        <div class="loadLine"></div>
-        <div class="loadLine"></div>
-        <div class="loadLine"></div>
-        <div class="loadText">
+        <div class="load-line"></div>
+        <div class="load-line"></div>
+        <div class="load-line"></div>
+        <div class="load-text">
             <span>Loading</span>
-            <span class="pointText">o</span>
-            <span class="pointText">.</span>
-            <span class="pointText">0</span>
+            <span class="point-text">o</span>
+            <span class="point-text">.</span>
+            <span class="point-text">0</span>
         </div>`;
         imgWrapper.appendChild(loadWrapper);
         img.parentNode.insertBefore(imgWrapper,img);
@@ -80,13 +80,13 @@ if (imgs) {
     })
 }
 const viewH = document.documentElement.clientHeight;
-const imgWrappers = document.querySelectorAll('.imgWrapper');
+const imgWrappers = document.querySelectorAll('.img-wrapper');
 
 function loadImg(imgIndex) {
     if (imgWrappers[imgIndex].getBoundingClientRect().top < viewH) {
         imgs[imgIndex].src = imgs[imgIndex].dataset.src;
         imgs[imgIndex].onload = function () {
-            this.parentNode.querySelector('.loadWrapper').style = "display:none;";
+            this.parentNode.querySelector('.load-wrapper').style = "display:none;";
         }
     }
 }
@@ -106,7 +106,7 @@ function throttleLazyload() {
                 if (imgWrappers[imgIndex].getBoundingClientRect().top < viewH) {
                     imgs[imgIndex].src = imgs[imgIndex].dataset.src;
                     imgs[imgIndex].onload = function () {
-                        this.parentNode.querySelector('.loadWrapper').style = "display:none;";
+                        this.parentNode.querySelector('.load-wrapper').style = "display:none;";
                     }
                     imgIndex++;
                 }

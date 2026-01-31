@@ -72,7 +72,7 @@
   border-top-right-radius: 7.6px;
   transform-origin: bottom right;
   transform: rotateZ(90deg) translateX(-.5px) translateY(8px);
-  background-image: linear-gradient(70deg, transparent 20%, #ff8b56 20%);
+  background: linear-gradient(70deg, transparent 20%, #ff8b56 20%);
   z-index: -20;
 }
 

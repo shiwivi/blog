@@ -1,3 +1,4 @@
+//旧版本
 var searchFunc = function(path, search_id, content_id) {
     'use strict';
     $.ajax({

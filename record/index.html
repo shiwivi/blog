@@ -6,7 +6,7 @@
 </head>
 
   <body>
-    <div class="progressBar"></div>
+    <div class="progress-bar"></div>
     <div class="emptyBox"></div>
     <input type="radio" name="tabs" id="tab1" checked>
     <input type="radio" name="tabs" id="tab2">
@@ -16,7 +16,7 @@
     <label for="tab2" id="label2">冒泡</label>
     <label for="tab3" id="label3">网站</label>
     <label for="tab4" id="label4">日志</label>
-    <a href="/blog" class="backHome">返回</a>
+    <a href="/blog" class="back-home">返回</a>
 
     <div class="content" id="excerpt">
       <article>
@@ -891,7 +891,7 @@
 
 
     <!--网页部分-->
-    <div class="content" id="recommendWeb">
+    <div class="content" id="recommend-web">
       <div class="explain">收录了平时经常使用的在线工具和有意思的网站设计</div>
       <ul class="webs">
         <h4>沙雕网站&&解压</h4>
@@ -1446,29 +1446,29 @@ CDN不稳地，因此该页面弃用了CDN
     
 <script src="/blog/js/commonCanvas.js"></script>
 
-    <script>
-      if (window.localStorage.getItem("webTheme") == "dark") {
-        document.body.classList.add("dark");
-      }
-      console.log([
-        "    ┬┬  ┌┬┐┬  ┌─┐┬ ┬┬┬ ┬┬",
-        "    ││   │││  └─┐├─┤│││││",
-        "    ┴┴  ─┴┘┴  └─┘┴ ┴┴└┴┘┴",
-        "shiwivi.com"
-      ].join('\n'));
-      const tabs = document.getElementsByName('tabs');
-      const progress = document.querySelector('.progressBar');
-      function setProgressBar(){
+      <script>
+        if (window.localStorage.getItem("webTheme") == "dark") {
+          document.documentElement.classList.add("dark-theme");
+        }
+        console.log([
+          "    ┬┬  ┌┬┐┬  ┌─┐┬ ┬┬┬ ┬┬",
+          "    ││   │││  └─┐├─┤│││││",
+          "    ┴┴  ─┴┘┴  └─┘┴ ┴┴└┴┘┴",
+          "shiwivi.com"
+        ].join('\n'));
+        const tabs = document.getElementsByName('tabs');
+        const progress = document.querySelector('.progress-bar');
+        function setProgressBar() {
           let totalScrollHeight = document.body.scrollHeight - document.documentElement.clientHeight;
           window.onscroll = function () {
             let hasScrollHeight = document.body.scrollTop || document.documentElement.scrollTop;
             let progressLength = (hasScrollHeight / totalScrollHeight) * 100;
             progress.style.width = `${progressLength}%`
           }
-      }
-      setProgressBar();
-      for (let i = 0; i < tabs.length; i++) {
-        tabs[i].addEventListener('click', setProgressBar)
-      }
-    </script>
+        }
+        setProgressBar();
+        for (let i = 0; i < tabs.length; i++) {
+          tabs[i].addEventListener('click', setProgressBar)
+        }
+      </script>
   </body></html>

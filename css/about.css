@@ -2,13 +2,14 @@
   --body-bg: url(../images/186892ce0d5e478eb3896eb1cb4a1208.jpg);
   --glass-color:#000;
 }
+
+:root.dark-theme {
+  --body-bg: #000;
+  --glass-color:#fff;
+}
 *{
   margin: 0;
   padding: 0;
-}
-.dark {
-  --body-bg: #000;
-  --glass-color:#fff;
 }
 html {
   font-size: 14px;
@@ -128,8 +129,8 @@ label {
 
 }
 
-#r1:checked~#aboutweb,
-#r2:checked~#aboutMe,
+#r1:checked~#about-web,
+#r2:checked~#about-me,
 #r3:checked~#wish,
 #r4:checked~#privacy {
   display: grid;
@@ -258,18 +259,18 @@ label {
   font-weight: 900;
 }
 
-.glass #aboutMe ul {
+.glass #about-me ul {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
 }
 
-#aboutweb .codedata {
+#about-web .codedata {
   width: 80%;
 }
 
-#aboutweb .codedata .technology {
+#about-web .codedata .technology {
   display: grid;
   grid-template-columns: 30% 70%;
   justify-content: center;
@@ -278,11 +279,11 @@ label {
   color: #fff;
 }
 
-#aboutweb .codedata .technology .technic {
+#about-web .codedata .technology .technic {
   text-align: center;
 }
 
-#aboutweb .codedata .technology .hp {
+#about-web .codedata .technology .hp {
   height: 8px;
   border-radius: 5px;
   border: 1px solid #ffffff;
@@ -294,7 +295,7 @@ label {
     0 0 9px #ff0900;
 }
 
-#aboutweb .codedata .html .hp {
+#about-web .codedata .html .hp {
   border-color: #ff0900;
   box-shadow: 0 0 6px #ff0900;
   background: linear-gradient(to right, #ff0900 80%, transparent 81%);
@@ -306,7 +307,7 @@ label {
     0 0 9px #065dff;
 }
 
-#aboutweb .codedata .less .hp {
+#about-web .codedata .less .hp {
   border-color: #065dff;
   box-shadow: 0 0 6px #065dff;
   background: linear-gradient(to right, #065dff 90%, transparent 91%);
@@ -318,7 +319,7 @@ label {
     0 0 9px #e4fd03;
 }
 
-#aboutweb .codedata .js .hp {
+#about-web .codedata .js .hp {
   border-color: #e4fd03;
   box-shadow: 0 0 6px #e4fd03;
   background: linear-gradient(to right, #e4fd03 85%, transparent 86%);
@@ -330,7 +331,7 @@ label {
     0 0 9px #20fd03;
 }
 
-#aboutweb .codedata .vue .hp {
+#about-web .codedata .vue .hp {
   border-color: #20fd03;
   box-shadow: 0 0 6px #20fd03;
   background: linear-gradient(to right, #20fd03 20%, transparent 21%);
@@ -342,7 +343,7 @@ label {
     0 0 9px #FC427B;
 }
 
-#aboutweb .codedata .jquery .hp {
+#about-web .codedata .jquery .hp {
   border-color: #FC427B;
   box-shadow: 0 0 6px #FC427B;
   background: linear-gradient(to right, #FC427B 50%, transparent 51%);
@@ -439,8 +440,8 @@ label {
   transform: scale(.7) rotateZ(15deg);
 }
 
-.trapezoidTop,
-.trapezoidBottom {
+.trapezoid-top,
+.trapezoid-bottom {
   width: 80px;
   height: 3px;
   background-color: #00fa0d;
@@ -448,8 +449,8 @@ label {
               0 0 6px #00fa0d;
 }
 
-.trapezoidTop::before,
-.trapezoidBottom::before {
+.trapezoid-top::before,
+.trapezoid-bottom::before {
   content: '';
   position: absolute;
   top: 34px;
@@ -462,8 +463,8 @@ label {
               0 0 6px #00fa0d;
 }
 
-.trapezoidTop::after,
-.trapezoidBottom::after {
+.trapezoid-top::after,
+.trapezoid-bottom::after {
   content: '';
   position: absolute;
   top: 34px;
@@ -476,7 +477,7 @@ label {
               0 0 6px #00fa0d;
 }
 
-.trapezoidBottom {
+.trapezoid-bottom {
   transform: translateY(133px) rotateZ(180deg);
 }
 
@@ -545,10 +546,10 @@ label {
     font-size: 3rem;
   }
 
-  #aboutweb .codedata {
+  #about-web .codedata {
     width: 100%;
   }
-  #aboutweb .codedata .technology {
+  #about-web .codedata .technology {
     grid-template-columns: 35% 65%;
   }
 }
