@@ -2,7 +2,7 @@
  * @Author: SHIWIVI 
  * @Date: 2023-09-07 00:29:00 
  * @Last Modified by: SHIWIVI
- * @Last Modified time: 2026-02-01 05:07:34
+ * @Last Modified time: 2024-06-07 15:58:35
  */
 //线性插值
 const lerp = (a, b, amt) => (1 - amt) * a + amt * b;
@@ -46,7 +46,7 @@ if (document.querySelector(".update")) {
       }, 1000)
     }
   }
-  
+
   function lazyloadThrottle() {
     let picIndex = 2;
     let standby = true;
@@ -66,7 +66,7 @@ if (document.querySelector(".update")) {
     }
   }
 
-  for (let i = 0; i < Math.min(2,pics.length); i++) {
+  for (let i = 0; i < Math.min(2, pics.length); i++) {
     loadPic(i);
   }
   main.addEventListener("scroll", lazyloadThrottle());
@@ -167,6 +167,7 @@ class CanvasEngine {
         isSuspended: this.isSuspended
       },
       viewport: {
+        dpr: 1,
         width: 300,
         height: 150,
         centerX: 150,
@@ -202,18 +203,19 @@ class CanvasEngine {
     this.canvas.style.width = cssWidth + "px";
     this.canvas.style.height = cssHeight + "px";
     //更新canvas的信息
-    this.renderContext.viewport.width = cssWidth;
-    this.renderContext.viewport.height = cssHeight;
-    this.renderContext.viewport.centerX = cssWidth / 2;
-    this.renderContext.viewport.centerY = cssHeight / 2;
+    this.renderContext.viewport.dpr = dpr;
+    this.renderContext.viewport.width = physicalWidth;
+    this.renderContext.viewport.height = physicalHeight;
+    this.renderContext.viewport.centerX = physicalWidth / 2;
+    this.renderContext.viewport.centerY = physicalHeight / 2;
     //修改画布寸尺
     this.canvas.width = physicalWidth;
     this.canvas.height = physicalHeight;
     this.bufferCanvas.width = physicalWidth;
-    this.bufferCanvas.height = physicalWidth;
+    this.bufferCanvas.height = physicalHeight;
     //重置setTransform和缩放
-    this.ctx.setTransform(1, 0, 0, 1, 0, 0);
-    this.ctx.scale(dpr, dpr);
+    // this.ctx.setTransform(1, 0, 0, 1, 0, 0);
+    // this.ctx.scale(dpr, dpr);
   }
   setScene(scene) {
     this.nextScene = scene;
@@ -225,9 +227,9 @@ class CanvasEngine {
   }
   stop() {
     if (this.animationID) cancelAnimationFrame(this.animationID);
-    this.currentScene=null;
-    this.nextScene=null;
-    this.ctx.clearRect(0,0,this.canvas.width,this.canvas.height);
+    this.currentScene = null;
+    this.nextScene = null;
+    this.ctx.clearRect(0, 0, this.canvas.width, this.canvas.height);
     this.running = false;
   }
   //炸掉引擎!!尚未启用
@@ -320,7 +322,7 @@ class Kaleidoscope extends AnimationUnit {
 
     let r = 0;
     for (let i = 100; i > 0; i--) {
-      r += 2;
+      r += 3;
       this.angle = i * this.angleStep;
       const x = r * cos(this.angle);
       const y = r * sin(this.angle);
@@ -343,9 +345,9 @@ const vinePresets = {
     mainVineMaxY: 0.4,
     mainVinefrequency: 0.01,
     mainVineAmplitude: 50,
-    branchVinefrequency: 0.01 + random() * 0.003,
+    branchVinefrequency: 0.01 + random() * 0.0025,
     branchVineAmplitude: 105,
-    branchVineGrowX: 0.7,
+    branchVineGrowX: getRandom(0.5, 1.5),
     branchVine1MaxY: 0.3,
     branchVine2MaxY: 0.3 + random() * 0.2,
     flowerScale: 9,
@@ -465,7 +467,7 @@ class BranchVine extends Vine {
     this.direction = direction;
     this.frequency = vineConfig.branchVinefrequency;//频率
     this.amplitude = vineConfig.branchVineAmplitude;//幅度
-    this.growX = getRandom(0.5, 1.5);//偏移值
+    this.growX = vineConfig.branchVineGrowX;//偏移值
     this.wait = 10 + random() * 50;//延时生长
     this.maxY = viewport.height * maxYFactor;//最大值,值越小藤蔓越长
     this.initX = this.direction * sin(this.frequency * this.y) * this.amplitude + this.direction * this.growX * this.y;
@@ -837,9 +839,9 @@ class TentacleManger extends AnimationUnit {
     this.tentacleTimer = null;//点击事件延时计时器
     this._setTentacle();
     this._tentacleMove = this._tentacleMove.bind(this);
-    setTimeout(()=>{
+    setTimeout(() => {
       window.addEventListener("click", this._tentacleMove)
-    },2000)//2秒后添加监听事件,避免点击启用动画时将动画聚焦到该点  
+    }, 1000)//2秒后添加监听事件,避免点击启用动画时将动画聚焦到该点  
   }
   _setTentacle() {
     for (let i = 0; i < tentacleConfig.tentacleCount; i++) {
@@ -859,7 +861,7 @@ class TentacleManger extends AnimationUnit {
     let r = random() * 100;
     this.tentacles.forEach((tentacle, i) => {
       const t = i / this.tentacles.length * PI * 2;
-      tentacle.setTarget([e.clientX + r * cos(t + this.tick * 0.05), e.clientY + r * sin(t + this.tick * 0.05)]);
+      tentacle.setTarget([e.clientX * this.viewport.dpr + r * cos(t + this.tick * 0.05), e.clientY * this.viewport.dpr + r * sin(t + this.tick * 0.05)]);
       tentacle.follow = true;
     });
     //用户点击3s后，若无再次点击，随机移动
@@ -898,9 +900,9 @@ function homePageInit() {
   setAnimationScene();
 }
 
-function setAnimationScene(){
-const webTheme=window.localStorage.getItem("webTheme");
-if (webTheme === "dark") {
+function setAnimationScene() {
+  const webTheme = window.localStorage.getItem("webTheme");
+  if (webTheme === "dark") {
     mainEngine.setScene(random() > .9 ? new Kaleidoscope(mainEngine.renderContext) : new TentacleManger(mainEngine.renderContext))
   }
   else {
@@ -910,7 +912,7 @@ if (webTheme === "dark") {
 }
 
 window.addEventListener("DOMContentLoaded", DOMContentLoadedSet);
-window.addEventListener("load", homePageInit);
+window.addEventListener("pageshow", homePageInit);
 
 toggleTheme.addEventListener("click", () => {
   if (window.localStorage.getItem("disableBack") === "true") return;

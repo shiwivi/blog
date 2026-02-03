@@ -2,7 +2,7 @@
  * @Author: SHIWIVI
  * @Date: 2021-08-30 03:11
  * @Last Modified by: SHIWIVI
- * @Last Modified time: 2026-01-30 01:20:39
+ * @Last Modified time: 2024-06-07 15:58:35
  * #TODO:重构
  */
 const { PI, cos, sin, tan, abs, sqrt, pow, min, max, ceil, floor, round, random, atan2, exp } = Math;
@@ -166,7 +166,7 @@ const showMsg = (() => {
             msg.classList.add("msg-show");
             msgBar.classList.add("msg-bar-active");
             setTimeout(() => {
-                msgBar.classList.remove("msgbarActive");
+                msgBar.classList.remove("msg-bar-active");
                 msg.classList.remove("msg-show");
                 msgReady = true;
             }, 4000)
@@ -462,7 +462,7 @@ $(function () {
                                 isMatch = false;
                             }
                             if (isMatch) {
-                                str += "<li><a href='" + data_url + ">" + "<div class='search-result-title'>" + data_title + "</div>";
+                                str += "<li><a href=" + data_url + ">" + "<div class='search-result-title'>" + data_title + "</div>";
                                 let content = data.content.trim().replace(/<[^>]+>/g, "");
                                 if (first_occur >= 0) {
                                     let start = first_occur - 20;
