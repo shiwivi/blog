@@ -86,7 +86,7 @@ class Ball {
     draw() {
         ctxPage.save();
         ctxPage.beginPath();
-        ctxPage.arc(this.x, this.y, this.r + 30, 0, Math.PI * 2);
+        ctxPage.arc(this.x, this.y, this.r + 30, 0, PI * 2);
         const gradient = ctxPage.createRadialGradient(this.x, this.y, 0, this.x, this.y, this.r);
         gradient.addColorStop(0, "#ffffffda");
         gradient.addColorStop(0.3, "#ffffffda");
@@ -112,14 +112,14 @@ class Spark {
     }
     setSpark() {
         for (let i = 0; i < this.sugarNum; i++) {
-            let dy = Math.random() * (-10) - 2;
-            this.data.set([this.x, this.y, Math.random() * 9 - 3, dy, this.y + dy + this.height, this.colors.length - 1], i * 6)
+            let dy = random() * (-10) - 2;
+            this.data.set([this.x, this.y, random() * 9 - 3, dy, this.y + dy + this.height, this.colors.length - 1], i * 6)
         }
     }
     setSugar() {
         for (let i = 0; i < this.sugarNum; i++) {
-            let dy = Math.random() * 10 - 5;
-            this.data.set([this.x, this.y, Math.random() * 6 - 3, dy, this.y + dy + this.height, i > this.colors.length - 1 ? Math.round(Math.random() * colors.length - 2) : i], i * 6)
+            let dy = random() * 10 - 5;
+            this.data.set([this.x, this.y, random() * 6 - 3, dy, this.y + dy + this.height, i > this.colors.length - 1 ? round(random() * this.colors.length - 2) : i], i * 6)
         }
     }
     update() {
@@ -175,20 +175,16 @@ const showMsg = (() => {
 })();
 
 function canvasInit() {
-    pageWidth = canvasPage.width = window.innerWidth;
-    pageHeight = canvasPage.height = window.innerHeight;//pageCanvas用于全屏点击特效
-    // canvasBack.width = window.innerWidth;
-    // canvasBack.height = window.innerHeight;//backCanvas用于背景渲染
+    pageWidth = canvasPage.width = window.visualViewport.width || document.documentElement.clientWidth;
+    pageHeight = canvasPage.height = window.visualViewport.height || document.documentElement.clientHeight;//pageCanvas用于全屏点击特效
     canvasPage.style = "position:fixed;top:0;left:0;z-index:200;pointer-events:none;";
-    // canvasBack.style = "position:absolute;top:0;left:0;z-index:-1;pointer-events:none;";
     canvasBack.style = "position:fixed;top:0;left:0;z-index:-1;pointer-events:none;";
     document.body.append(canvasPage);
     document.body.append(canvasBack);
-    // document.querySelector(".canvasWrapper").append(canvasBack);
 }
 function canvasResize() {
-    pageWidth = canvasPage.width = window.innerWidth;
-    pageHeight = canvasPage.height = window.innerHeight;
+    pageWidth = canvasPage.width = window.visualViewport.width || document.documentElement.clientWidth;
+    pageHeight = canvasPage.height = window.visualViewport.height || document.documentElement.clientHeight;
 }
 function throttle(func, time) {
     let timer;
@@ -199,6 +195,7 @@ function throttle(func, time) {
         }, time)
     }
 }
+
 
 window.addEventListener("resize", throttle(canvasResize, 500));
 window.addEventListener("click", e => {

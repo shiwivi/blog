@@ -194,8 +194,8 @@ class CanvasEngine {
   _resize() {
     const dpr = window.devicePixelRatio || 1;
     //css像素
-    const cssWidth = window.innerWidth;
-    const cssHeight = window.innerHeight;
+    const cssWidth = window.visualViewport.width || document.documentElement.clientWidth;
+    const cssHeight = window.visualViewport.height || document.documentElement.clientHeight;
     //物理像素
     const physicalWidth = cssWidth * dpr;
     const physicalHeight = cssHeight * dpr;

@@ -31,9 +31,9 @@
     
     
     
-    <category term="Linux" scheme="https://shiwei11.github.io/blog/tags/Linux/"/>
-    
     <category term="Server" scheme="https://shiwei11.github.io/blog/tags/Server/"/>
+    
+    <category term="Linux" scheme="https://shiwei11.github.io/blog/tags/Linux/"/>
     
   </entry>
   
@@ -94,9 +94,9 @@
     
     
     
-    <category term="Web" scheme="https://shiwei11.github.io/blog/tags/Web/"/>
-    
     <category term="Serve" scheme="https://shiwei11.github.io/blog/tags/Serve/"/>
+    
+    <category term="Web" scheme="https://shiwei11.github.io/blog/tags/Web/"/>
     
   </entry>
   

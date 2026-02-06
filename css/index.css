@@ -216,6 +216,7 @@ body {
     height: 100%;
     background: linear-gradient(to top, var(--nav-flow-color), #fff0) right / 2px 350px no-repeat;
     animation: nav-flow 6s linear infinite;
+    z-index: -1;
 }
 
 .left-move {

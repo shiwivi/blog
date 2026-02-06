@@ -8,8 +8,7 @@ const { PI, cos, sin, tan, abs, sqrt, pow, min, max, ceil, floor, round, random,
 const getRandom = (min, max) => random() * (max - min) + min;
 const canvasPage = document.createElement("canvas");
 const ctxPage = canvasPage.getContext("2d");
-let colors = ["#f00", "#f80", "#fffb00", "#2bff00", "#0fd", "#2002ff", "#cc02ff", "#ff02bc", "#1b9cfc", "#25ccf7","#fff"];
-let webTheme=window.localStorage.getItem("webTheme")||"light";
+let webTheme = window.localStorage.getItem("webTheme") || "light";
 let pageWidth, pageHeight;
 let pointerAni = [];
 let sparkArray = [];
@@ -17,10 +16,10 @@ Float32Array.prototype.get = function (i = 0, l = 0) {
     let t = i + l;
     let result = [];
     for (; i < t; i++) {
-      result.push(this[i])
+        result.push(this[i])
     }
     return result;
-  };
+};
 class Ball {
     constructor(x, y, r) {
         this.x = x;
@@ -59,7 +58,7 @@ class Ball {
     draw() {
         ctxPage.save();
         ctxPage.beginPath();
-        ctxPage.arc(this.x, this.y, this.r + 30, 0, Math.PI * 2);
+        ctxPage.arc(this.x, this.y, this.r + 30, 0, PI * 2);
         const gradient = ctxPage.createRadialGradient(this.x, this.y, 0, this.x, this.y, this.r);
         gradient.addColorStop(0, "#ffffffda");
         gradient.addColorStop(0.3, "#ffffffda");
@@ -79,19 +78,20 @@ class Spark {
             this.width = width,
             this.sugarNum = sugarNum,
             this.live = live,
-            this.data = new Float32Array(6 * sugarNum); //存储的参数有x,y,dx,dy,yBottom,colorIndex
-            spark ? this.setSpark() : this.setSugar();
+            this.colors = ["#f00", "#f80", "#fffb00", "#2bff00", "#0fd", "#2002ff", "#cc02ff", "#ff02bc", "#1b9cfc", "#25ccf7", "#fff"];
+        this.data = new Float32Array(6 * sugarNum); //存储的参数有x,y,dx,dy,yBottom,colorIndex
+        spark ? this.setSpark() : this.setSugar();
     }
     setSpark() {
         for (let i = 0; i < this.sugarNum; i++) {
-            let dy = Math.random() * (-10) - 2;
-            this.data.set([this.x, this.y, Math.random() * 9 - 3, dy, this.y + dy + this.height, colors.length - 1], i * 6)
+            let dy = random() * (-10) - 2;
+            this.data.set([this.x, this.y, random() * 9 - 3, dy, this.y + dy + this.height, this.colors.length - 1], i * 6)
         }
     }
     setSugar() {
         for (let i = 0; i < this.sugarNum; i++) {
-            let dy = Math.random() * 10 - 5;
-            this.data.set([this.x, this.y, Math.random() * 6 - 3, dy, this.y + dy + this.height, i > colors.length - 1 ? Math.round(Math.random() * colors.length - 2) : i], i * 6)
+            let dy = random() * 10 - 5;
+            this.data.set([this.x, this.y, random() * 6 - 3, dy, this.y + dy + this.height, i > this.colors.length - 1 ? round(random() * this.colors.length - 2) : i], i * 6)
         }
     }
     update() {
@@ -114,7 +114,7 @@ class Spark {
             x += dx;
             yBottom = y + this.height;
             this.data.set([x, y, dx, dy, yBottom], i * 6)
-            this.draw(x, y, colors[colorIndex]);
+            this.draw(x, y, this.colors[colorIndex]);
         }
         this.live--;
     }
@@ -125,30 +125,31 @@ class Spark {
         ctxPage.closePath();
     }
 }
+
 function canvasInit() {
-    pageWidth = canvasPage.width = window.innerWidth;
-    pageHeight = canvasPage.height = window.innerHeight;//pageCanvas用于全屏点击特效
+    pageWidth = canvasPage.width = window.visualViewport.width || document.documentElement.clientWidth;
+    pageHeight = canvasPage.height = window.visualViewport.height || document.documentElement.clientHeight;//pageCanvas用于全屏点击特效
     canvasPage.style = "position:fixed;top:0;left:0;z-index:200;pointer-events:none;";
     document.body.append(canvasPage);
 }
 function canvasResize() {
-    pageWidth = canvasPage.width = window.innerWidth;
-    pageHeight = canvasPage.height = window.innerHeight;
+    pageWidth = canvasPage.width = window.visualViewport.width || document.documentElement.clientWidth;
+    pageHeight = canvasPage.height = window.visualViewport.height || document.documentElement.clientHeight;
 }
-function canvasThrottle(func,time){
+function canvasThrottle(func, time) {
     let timer;
-    return function(){
-            clearTimeout(timer);
-            timer=setTimeout(()=>{
-                func();
-        },time)
-        }
+    return function () {
+        clearTimeout(timer);
+        timer = setTimeout(() => {
+            func();
+        }, time)
+    }
 }
 
-window.addEventListener("resize", canvasThrottle(canvasResize,500));
-let clickAnimation=webTheme === "dark" ?function(e){e.stopPropagation();pointerAni.push(new Ball(e.clientX, e.clientY, 20))}:function(e){e.stopPropagation();sparkArray.push(new Spark(e.clientX, e.clientY, 5, 5, 10, 140, false));}
+window.addEventListener("resize", canvasThrottle(canvasResize, 500));
+let clickAnimation = webTheme === "dark" ? function (e) { e.stopPropagation(); pointerAni.push(new Ball(e.clientX, e.clientY, 20)) } : function (e) { e.stopPropagation(); sparkArray.push(new Spark(e.clientX, e.clientY, 5, 5, 10, 140, false)); }
 
-window.addEventListener("click",clickAnimation)
+window.addEventListener("click", clickAnimation)
 function canvasAnimation() {
     ctxPage.clearRect(0, 0, pageWidth, pageHeight);
     pointerAni.forEach(p => p.update());
