@@ -38,14 +38,12 @@ const searchInput = document.getElementById("search-input");
 const searchResult = document.getElementById("search-result");
 const canvasPage = document.createElement("canvas");
 const ctxPage = canvasPage.getContext("2d");
-const canvasBack = document.createElement("canvas");
-const ctxBack = canvasBack.getContext("2d");
 const mobile = navigator.userAgent.toLowerCase().match(/(phone|pad|ipod|iphone|android|mobile|MQQBrowser|JUC|coolpad|mmp|smartphone|midp|wap|xoom|symbian|j2me|blackberry|wince|windows Phone)/i);
 
 let pageWidth, pageHeight;
 let pointerAni = [];
 let sparkArray = [];
-let mainEngine = null;//canvas引擎
+let canvasEngines = [];//canvas引擎
 let webTheme = "";
 
 class Ball {
@@ -178,9 +176,7 @@ function canvasInit() {
     pageWidth = canvasPage.width = window.visualViewport.width || document.documentElement.clientWidth;
     pageHeight = canvasPage.height = window.visualViewport.height || document.documentElement.clientHeight;//pageCanvas用于全屏点击特效
     canvasPage.style = "position:fixed;top:0;left:0;z-index:200;pointer-events:none;";
-    canvasBack.style = "position:fixed;top:0;left:0;z-index:-1;pointer-events:none;";
     document.body.append(canvasPage);
-    document.body.append(canvasBack);
 }
 function canvasResize() {
     pageWidth = canvasPage.width = window.visualViewport.width || document.documentElement.clientWidth;
@@ -311,13 +307,14 @@ setBtn.addEventListener("click", function () {
 })
 
 clearBack.addEventListener("click", () => {
-    if (!mainEngine) {
+    //文章页面
+    if (canvasEngines.length === 0) {
         showMsg("该页面无背景动画")
     }
 })
 
 disableBack.addEventListener("click", () => {
-    if (mainEngine) {
+    if (canvasEngines.length != 0) {
         return;//将逻辑交给homePage.js处理
     }
     if (window.localStorage.getItem("disableBack") === "false") {

@@ -106,13 +106,6 @@ if (document.querySelector(".update")) {
   });
 }
 
-// console.log([
-//   "    ┬┬  ┌┬┐┬  ┌─┐┬ ┬┬┬ ┬┬",
-//   "    ││   │││  └─┐├─┤│││││",
-//   "    ┴┴  ─┴┘┴  └─┘┴ ┴┴└┴┘┴",
-//   "shiwivi.com"
-// ].join("\n"));
-
 console.log(`
 ┬┬  ┌┬┐┬  ┌─┐┬ ┬┬┬ ┬┬
 ││   │││  └─┐├─┤│││││
@@ -139,22 +132,23 @@ if (document.getElementById("day")) {
   }, 1000)
 }
 
-/*
-*==== 动画引擎 =====
-* 
-*TODO:重构
-*
-*================*/
 
+
+/**
+*==== canvas引擎 =====
+*  创建Canvas动画引擎
+* @param {HTMLCanvasElement} canvas - Canvas元素
+* @param {boolean} [highRes=false] - 是否创建高分辨率画布
+*
+*
+*=====================*/
 class CanvasEngine {
-  constructor(canvas) {
+  constructor(canvas, highRes = false) {
     this.canvas = canvas;
     this.ctx = canvas.getContext("2d");
-    this.bufferCanvas = document.createElement("canvas");
-    this.bufferCtx = this.bufferCanvas.getContext("2d");
+    this.highRes = highRes;
     //渲染场景
-    this.currentScene = null;
-    this.nextScene = null;
+    this.scene = null;
     //动画引擎状态
     this.running = false;//是否正在运行
     this.isSuspended = false;//是否因为特殊原因(如resize)暂停
@@ -162,7 +156,7 @@ class CanvasEngine {
     //canvas信息，为动画类提供参数
     this.renderContext = {
       ctx: this.ctx,
-      bufferCtx: this.bufferCtx,
+      bufferCtx: null,
       status: {
         isSuspended: this.isSuspended
       },
@@ -174,12 +168,21 @@ class CanvasEngine {
         centerY: 75,
       }
     };
-    this._loop = this._loop.bind(this);
+    if (!this.highRes) {
+      this._setBufferCanvas();
+    }
     //设置寸尺信息
     this._resize();
     this.resizeHandler = this._debounce(this._resize, 800);
     window.addEventListener("resize", this.resizeHandler);
+    this._setLoop();
   };
+  //离屏canvas
+  _setBufferCanvas() {
+    this.bufferCanvas = document.createElement("canvas");
+    this.bufferCtx = this.bufferCanvas.getContext("2d");
+    this.renderContext.bufferCtx = this.bufferCtx;
+  }
   _debounce(fn, delay = 300) {
     let timer = null;
     return (...args) => {
@@ -193,32 +196,36 @@ class CanvasEngine {
   }
   _resize() {
     const dpr = window.devicePixelRatio || 1;
+    const vv = window.visualViewport;
     //css像素
-    const cssWidth = window.visualViewport.width || document.documentElement.clientWidth;
-    const cssHeight = window.visualViewport.height || document.documentElement.clientHeight;
+    const cssWidth = vv ? vv.width : document.documentElement.clientWidth;
+    const cssHeight = vv ? vv.height : document.documentElement.clientHeight;
     //物理像素
     const physicalWidth = cssWidth * dpr;
     const physicalHeight = cssHeight * dpr;
     //CSS
     this.canvas.style.width = cssWidth + "px";
     this.canvas.style.height = cssHeight + "px";
+    //当前使用的坐标系
+    const renderWidth = this.highRes ? physicalWidth : cssWidth;
+    const renderHeight = this.highRes ? physicalHeight : cssHeight;
     //更新canvas的信息
-    this.renderContext.viewport.dpr = dpr;
-    this.renderContext.viewport.width = physicalWidth;
-    this.renderContext.viewport.height = physicalHeight;
-    this.renderContext.viewport.centerX = physicalWidth / 2;
-    this.renderContext.viewport.centerY = physicalHeight / 2;
+    const vp = this.renderContext.viewport;
+    vp.dpr = dpr;
+    vp.width = renderWidth;
+    vp.height = renderHeight;
+    vp.centerX = renderWidth / 2;
+    vp.centerY = renderHeight / 2;
     //修改画布寸尺
-    this.canvas.width = physicalWidth;
-    this.canvas.height = physicalHeight;
-    this.bufferCanvas.width = physicalWidth;
-    this.bufferCanvas.height = physicalHeight;
-    //重置setTransform和缩放
-    // this.ctx.setTransform(1, 0, 0, 1, 0, 0);
-    // this.ctx.scale(dpr, dpr);
+    this.canvas.width = renderWidth;
+    this.canvas.height = renderHeight;
+    if (!this.highRes) {
+      this.bufferCanvas.width = renderWidth;
+      this.bufferCanvas.height = renderHeight;
+    }
   }
   setScene(scene) {
-    this.nextScene = scene;
+    this.scene = scene;
   }
   start() {
     if (this.running) return;
@@ -226,61 +233,58 @@ class CanvasEngine {
     this.running = true;
   }
   stop() {
-    if (this.animationID) cancelAnimationFrame(this.animationID);
-    this.currentScene = null;
-    this.nextScene = null;
-    this.ctx.clearRect(0, 0, this.canvas.width, this.canvas.height);
+    if (!this.running) return
     this.running = false;
+    if (this.animationID) cancelAnimationFrame(this.animationID);
+    this.scene = null;
+    this.ctx.clearRect(0, 0, this.canvas.width, this.canvas.height);
   }
-  //炸掉引擎!!尚未启用
+  //未启用
   boom() {
     this.stop();
     window.removeEventListener('resize', this.resizeHandler);
   }
-  _renderGlow() {
-    this.ctx.save();
-    this.ctx.globalCompositeOperation = "lighter";
-    this.ctx.filter = "blur(8px) brightness(200%)";
-    this.ctx.drawImage(this.bufferCanvas, 0, 0);
-    this.ctx.filter = "blur(4px) brightness(200%)";
-    this.ctx.drawImage(this.bufferCanvas, 0, 0);
-    this.ctx.filter = "none";
-    this.ctx.drawImage(this.bufferCanvas, 0, 0);
-    this.ctx.restore();
-  }
-  _loop() {
-    if (!this.running) return;
-    if (this.isSuspended) {
-      if (this.currentScene) {
-        this.currentScene.handleCanvasChange()
-      }
-      this.animationID = requestAnimationFrame(this._loop)
-      return;
+  _setLoop() {
+    const renderGlow = () => {
+      this.ctx.save();
+      this.ctx.globalCompositeOperation = "lighter";
+      this.ctx.filter = "blur(8px) brightness(200%)";
+      this.ctx.drawImage(this.bufferCanvas, 0, 0);
+      this.ctx.filter = "blur(4px) brightness(200%)";
+      this.ctx.drawImage(this.bufferCanvas, 0, 0);
+      this.ctx.filter = "none";
+      this.ctx.drawImage(this.bufferCanvas, 0, 0);
+      this.ctx.restore();
     }
-    // Scene 切换
-    if (this.nextScene) {
-      if (this.currentScene) {
-        this.currentScene.onExit();
-      }
-      this.currentScene = this.nextScene;
-      this.nextScene = null;
-
-      this.ctx.clearRect(0, 0,
-        this.canvas.width,
-        this.canvas.height);
-      this.bufferCtx.clearRect(0, 0,
-        this.bufferCanvas.width,
-        this.bufferCanvas.height);
-    }
-    if (this.currentScene) {
-      this.currentScene.update();
-      if (this.currentScene.needsBlending) {
-        this._renderGlow();
-      }
-    }
-    this.animationID = requestAnimationFrame(this._loop)
+    this._loop = this.highRes ?
+      () => {
+        if (!this.running) return;
+        if (this.isSuspended) {
+          if (this.scene) {
+            this.scene.handleCanvasChange()
+          }
+          this.animationID = requestAnimationFrame(this._loop)
+          return;
+        }
+        this.scene.update();
+        this.animationID = requestAnimationFrame(this._loop)
+      } :
+      () => {
+        if (!this.running) return;
+        if (this.isSuspended) {
+          if (this.scene) {
+            this.scene.handleCanvasChange()
+          }
+          this.animationID = requestAnimationFrame(this._loop)
+          return;
+        }
+        this.scene.update();
+        renderGlow();
+        this.animationID = requestAnimationFrame(this._loop)
+      };
   }
 }
+
 /*
 *==== 动画类 =====
 * 
@@ -290,7 +294,6 @@ class AnimationUnit {
     this.ctx = renderContext.ctx;
     this.status = renderContext.status;
     this.viewport = renderContext.viewport;
-    this.needsBlending = false;//是否需要图像混合
   }
   handleCanvasChange() {
     this.update()
@@ -310,6 +313,7 @@ class Kaleidoscope extends AnimationUnit {
     this.angle = 0;//角度
     this.angleStep = 0;//角度旋转增量
     this.hue = 0;//色相
+    this.rStep = 2 * (this.viewport.dpr || 1);
   }
   update() {
     this.ctx.clearRect(0, 0, this.viewport.width, this.viewport.height);
@@ -322,7 +326,7 @@ class Kaleidoscope extends AnimationUnit {
 
     let r = 0;
     for (let i = 100; i > 0; i--) {
-      r += 3;
+      r += this.rStep;
       this.angle = i * this.angleStep;
       const x = r * cos(this.angle);
       const y = r * sin(this.angle);
@@ -335,7 +339,7 @@ class Kaleidoscope extends AnimationUnit {
   }
 }
 /*=======藤蔓动画======
- * 
+ *
  * 
  * 
  * 
@@ -716,24 +720,26 @@ class VineManger extends AnimationUnit {
  * 
 */
 //动画预设值
-const tentacleConfig_mobile = {
-  tentacleCount: 20,
-  segmentCountMin: 8,
-  segmentCountMax: 15,
-  segmentLengthMin: 20,
-  segmentLengthMax: 30,
-  colonyRadius: 100,
-}
-const tentacleConfig_PC = {
-  tentacleCount: 30,
-  segmentCountMin: 10,
-  segmentCountMax: 20,
-  segmentLengthMin: 20,
-  segmentLengthMax: 40,
-  colonyRadius: 200,
+const tentaclePresets = {
+  PC: {
+    tentacleCount: 30,
+    segmentCountMin: 10,
+    segmentCountMax: 20,
+    segmentLengthMin: 20,
+    segmentLengthMax: 40,
+    colonyRadius: 200,
+  },
+  mobile: {
+    tentacleCount: 20,
+    segmentCountMin: 8,
+    segmentCountMax: 15,
+    segmentLengthMin: 20,
+    segmentLengthMax: 30,
+    colonyRadius: 100,
+  }
 }
 
-const tentacleConfig = mobile ? tentacleConfig_mobile : tentacleConfig_PC;
+const tentacleConfig = mobile ? tentaclePresets.mobile : tentaclePresets.PC;
 
 class Tentacle {
   constructor(ctx, x, y, segmentNum, baseLength, baseDirection, baseColor) {
@@ -832,7 +838,6 @@ class TentacleManger extends AnimationUnit {
     this.ctx = renderContext.ctx;
     this.bufferCtx = renderContext.bufferCtx;
     this.tick = 0;//帧参数
-    this.needsBlending = true;//需要光影渲染
     this.baseColor = random() * 360;
     this.simplex = new SimplexNoise();
     this.tentacles = [];
@@ -861,7 +866,7 @@ class TentacleManger extends AnimationUnit {
     let r = random() * 100;
     this.tentacles.forEach((tentacle, i) => {
       const t = i / this.tentacles.length * PI * 2;
-      tentacle.setTarget([e.clientX * this.viewport.dpr + r * cos(t + this.tick * 0.05), e.clientY * this.viewport.dpr + r * sin(t + this.tick * 0.05)]);
+      tentacle.setTarget([e.clientX + r * cos(t + this.tick * 0.05), e.clientY + r * sin(t + this.tick * 0.05)]);
       tentacle.follow = true;
     });
     //用户点击3s后，若无再次点击，随机移动
@@ -892,7 +897,8 @@ class TentacleManger extends AnimationUnit {
 }
 
 function DOMContentLoadedSet() {
-  mainEngine = new CanvasEngine(canvasBack);
+  canvasEngines.push(new CanvasEngine(document.getElementById("canvas-high-res"), true));
+  canvasEngines.push(new CanvasEngine(document.getElementById("canvas-low-res"), false));
 }
 
 function homePageInit() {
@@ -903,12 +909,21 @@ function homePageInit() {
 function setAnimationScene() {
   const webTheme = window.localStorage.getItem("webTheme");
   if (webTheme === "dark") {
-    mainEngine.setScene(random() > .9 ? new Kaleidoscope(mainEngine.renderContext) : new TentacleManger(mainEngine.renderContext))
+    canvasEngines.forEach(item => item.stop());
+    if (random() > .9) {
+      canvasEngines[0].setScene(new Kaleidoscope(canvasEngines[0].renderContext));
+      canvasEngines[0].start();
+    }
+    else {
+      canvasEngines[1].setScene(new TentacleManger(canvasEngines[1].renderContext))
+      canvasEngines[1].start();
+    }
   }
   else {
-    mainEngine.setScene(new VineManger(mainEngine.renderContext))
+    canvasEngines.forEach(item => item.stop());
+    canvasEngines[0].setScene(new VineManger(canvasEngines[0].renderContext));
+    canvasEngines[0].start();
   }
-  mainEngine.start();
 }
 
 window.addEventListener("DOMContentLoaded", DOMContentLoadedSet);
@@ -920,20 +935,18 @@ toggleTheme.addEventListener("click", () => {
 });
 
 clearBack.addEventListener("click", () => {
-  if (mainEngine.running) {
-    mainEngine.stop();
-    showMsg("已移除canvas背景!");
-  }
-  else {
+  const allStoped = canvasEngines.every(item => !item.running);
+  if(allStoped){
     showMsg("未启用动画，无需清除");
   }
+  canvasEngines.forEach(item => {
+      item.stop();
+  })
 })
 
 disableBack.addEventListener("click", () => {
   if (window.localStorage.getItem("disableBack") === "false") {
-    if (mainEngine.running) {
-      mainEngine.stop();
-    }
+    canvasEngines.forEach(item => item.stop());
     disableBack.textContent = "启用背景";
     showMsg("已在全局禁用canvas背景");
     window.localStorage.setItem("disableBack", "true");

@@ -180,6 +180,14 @@ body {
         url('https://at.alicdn.com/t/font_2602916_zy5x7j996xd.ttf?t=1630093660324') format('truetype');
 }
 
+#canvas-high-res,
+#canvas-low-res{
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
 @keyframes nav-flow {
     0% {
         background-position: right -350px;
