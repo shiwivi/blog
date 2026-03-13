@@ -1382,7 +1382,7 @@ body {
         background: var(--nav-bg-mobile);
     }
 
-    .nav::before {
+    .nav::after {
         content: '';
         position: absolute;
         top: 0px;

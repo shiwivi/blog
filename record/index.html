@@ -355,6 +355,27 @@
         
           
             <section>
+              <span class="point-time point-color5"></span>
+              <time>
+                <span class="text-color5">
+                  3-4
+                </span>
+                <span class="text-color5">
+                  2026
+                </span>
+              </time>
+              <aside>
+                <div class="details">陪伴了我4年的服务器
+                </div>
+                <div class="brief">
+                  <span class="text-color5">
+                    45.xx.xx.49
+                  </span>
+                </div>
+              </aside>
+            </section>
+            
+            <section>
               <span class="point-time point-color4"></span>
               <time>
                 <span class="text-color4">
@@ -762,12 +783,12 @@
         
           
             <section>
-              <span class="point-time point-color4"></span>
+              <span class="point-time point-color5"></span>
               <time>
-                <span class="text-color4">
+                <span class="text-color5">
                   
                 </span>
-                <span class="text-color4">
+                <span class="text-color5">
                   规划
                 </span>
               </time>
@@ -777,6 +798,28 @@
 ✔ 文章字体大小调整、锚点跳转功能
 加入一个归档页面
 有时间去备个案
+                </div>
+                <div class="brief">
+                  <span class="text-color5">
+                    
+                  </span>
+                </div>
+              </aside>
+            </section>
+            
+            <section>
+              <span class="point-time point-color4"></span>
+              <time>
+                <span class="text-color4">
+                  2/4
+                </span>
+                <span class="text-color4">
+                  --
+                </span>
+              </time>
+              <aside>
+                <div class="details">
+                  <div class="append">新增canvas动画引擎</div> <div class="append">新设计了canvas藤蔓动画，设计和开发花了很长时间</div> <div class="modify">重新设计了canvas背景动画</div>
                 </div>
                 <div class="brief">
                   <span class="text-color4">
@@ -790,15 +833,15 @@
               <span class="point-time point-color3"></span>
               <time>
                 <span class="text-color3">
-                  2/4
+                  3/31
                 </span>
                 <span class="text-color3">
-                  --
+                  2024
                 </span>
               </time>
               <aside>
                 <div class="details">
-                  <div class="append">新增canvas动画引擎</div> <div class="append">新设计了canvas藤蔓动画，设计和开发花了很长时间</div> <div class="modify">重新设计了canvas背景动画</div>
+                  <div class="append">文章新增了段落折叠功能</div> <div class="append">文章新增了一些css高亮样式</div> <div class="append">所有页面都将支持点击动画</div> <div class="remove">原本用于留言板的域名到期了，留言板暂时禁用</div> <div class="modify">重新设计了各组件在移动端的层级优先级</div> <div class="repair">重写了懒加载、聚焦功能的节流函数，以及canvas的resize()函数的防抖</div>
                 </div>
                 <div class="brief">
                   <span class="text-color3">
@@ -812,15 +855,15 @@
               <span class="point-time point-color2"></span>
               <time>
                 <span class="text-color2">
-                  3/31
+                  10/16
                 </span>
                 <span class="text-color2">
-                  2024
+                  2023
                 </span>
               </time>
               <aside>
                 <div class="details">
-                  <div class="append">文章新增了段落折叠功能</div> <div class="append">文章新增了一些css高亮样式</div> <div class="append">所有页面都将支持点击动画</div> <div class="remove">原本用于留言板的域名到期了，留言板暂时禁用</div> <div class="modify">重新设计了各组件在移动端的层级优先级</div> <div class="repair">重写了懒加载、聚焦功能的节流函数，以及canvas的resize()函数的防抖</div>
+                  <div class="append">新增基于canvas的夜间背景动画，该动画会占用一定GPU资源，可以通过主页右侧的菜单栏清除或禁用</div> <div class="append">新增基于canvas的夜间模式点击动画，重写了日间模式的点击动画，优化了性能</div> <div class="append">为文章中的图片添加了CSS加载动画，并且添加了懒加载功能</div> <div class="append">添加了一些新的鼠标样式</div> <div class="remove">移除了基于Dom的夜间背景动画</div> <div class="modify">jsDelivr不太稳定，jQuery文件将使用BootCDN引用，其余文件不再使用CDN</div> <div class="modify">调整了文章的代码复制功能，只有在document.execCommand("copy")和navigator.clipboard.writeText()都不支持时，代码才会抛出异常</div> <div class="modify">调整了部分移动端下的CSS</div> <div class="repair">修复了搜索功能的bug，之前bug原因是：markdown中的html标签被错误解析为xml标签，导致xml文件无法通过DTD验证，Ajax无法获取到文件</div> <div class="repair">使用localStorage替换了sessionStorage，原本想本站的数据尽量用会话存储，这样访问者在退出本站后不会在浏览器中留下任何数据，干干净净。但后来发现在站内进行页面跳转时，部分移动端浏览器会认为当前会话结束而删掉sessionStorage，导致其他页面无法读取到sessionStorage中的数据，造成网站的一些功能在移动端Chrome上能正常运行，而在一些浏览器上会直接失效</div> <div class="repair">重写了懒加载功能，之前的懒加载在一个特殊情况下会产生bug</div>
                 </div>
                 <div class="brief">
                   <span class="text-color2">
@@ -834,31 +877,9 @@
               <span class="point-time point-color1"></span>
               <time>
                 <span class="text-color1">
-                  10/16
-                </span>
-                <span class="text-color1">
-                  2023
-                </span>
-              </time>
-              <aside>
-                <div class="details">
-                  <div class="append">新增基于canvas的夜间背景动画，该动画会占用一定GPU资源，可以通过主页右侧的菜单栏清除或禁用</div> <div class="append">新增基于canvas的夜间模式点击动画，重写了日间模式的点击动画，优化了性能</div> <div class="append">为文章中的图片添加了CSS加载动画，并且添加了懒加载功能</div> <div class="append">添加了一些新的鼠标样式</div> <div class="remove">移除了基于Dom的夜间背景动画</div> <div class="modify">jsDelivr不太稳定，jQuery文件将使用BootCDN引用，其余文件不再使用CDN</div> <div class="modify">调整了文章的代码复制功能，只有在document.execCommand("copy")和navigator.clipboard.writeText()都不支持时，代码才会抛出异常</div> <div class="modify">调整了部分移动端下的CSS</div> <div class="repair">修复了搜索功能的bug，之前bug原因是：markdown中的html标签被错误解析为xml标签，导致xml文件无法通过DTD验证，Ajax无法获取到文件</div> <div class="repair">使用localStorage替换了sessionStorage，原本想本站的数据尽量用会话存储，这样访问者在退出本站后不会在浏览器中留下任何数据，干干净净。但后来发现在站内进行页面跳转时，部分移动端浏览器会认为当前会话结束而删掉sessionStorage，导致其他页面无法读取到sessionStorage中的数据，造成网站的一些功能在移动端Chrome上能正常运行，而在一些浏览器上会直接失效</div> <div class="repair">重写了懒加载功能，之前的懒加载在一个特殊情况下会产生bug</div>
-                </div>
-                <div class="brief">
-                  <span class="text-color1">
-                    
-                  </span>
-                </div>
-              </aside>
-            </section>
-            
-            <section>
-              <span class="point-time point-color8"></span>
-              <time>
-                <span class="text-color8">
                   8/12
                 </span>
-                <span class="text-color8">
+                <span class="text-color1">
                   2023
                 </span>
               </time>
@@ -876,6 +897,30 @@ CDN不稳地，因此该页面弃用了CDN
  
                 </div>
                 <div class="brief">
+                  <span class="text-color1">
+                    
+                  </span>
+                </div>
+              </aside>
+            </section>
+            
+            <section>
+              <span class="point-time point-color8"></span>
+              <time>
+                <span class="text-color8">
+                  3/5
+                </span>
+                <span class="text-color8">
+                  2023
+                </span>
+              </time>
+              <aside>
+                <div class="details">
+                  新增本地搜索功能，搜索框位于右侧菜单里
+新增文章目录跳转功能，支持三级目录跳转
+调整了懒加载功能，减少了性能消耗，也更稳定了
+                </div>
+                <div class="brief">
                   <span class="text-color8">
                     
                   </span>
@@ -887,33 +932,9 @@ CDN不稳地，因此该页面弃用了CDN
               <span class="point-time point-color7"></span>
               <time>
                 <span class="text-color7">
-                  3/5
-                </span>
-                <span class="text-color7">
-                  2023
-                </span>
-              </time>
-              <aside>
-                <div class="details">
-                  新增本地搜索功能，搜索框位于右侧菜单里
-新增文章目录跳转功能，支持三级目录跳转
-调整了懒加载功能，减少了性能消耗，也更稳定了
-                </div>
-                <div class="brief">
-                  <span class="text-color7">
-                    
-                  </span>
-                </div>
-              </aside>
-            </section>
-            
-            <section>
-              <span class="point-time point-color6"></span>
-              <time>
-                <span class="text-color6">
                   1/11
                 </span>
-                <span class="text-color6">
+                <span class="text-color7">
                   2023
                 </span>
               </time>
@@ -929,7 +950,7 @@ CDN不稳地，因此该页面弃用了CDN
 优化部分JS功能
                 </div>
                 <div class="brief">
-                  <span class="text-color6">
+                  <span class="text-color7">
                     
                   </span>
                 </div>
@@ -937,12 +958,12 @@ CDN不稳地，因此该页面弃用了CDN
             </section>
             
             <section>
-              <span class="point-time point-color5"></span>
+              <span class="point-time point-color6"></span>
               <time>
-                <span class="text-color5">
+                <span class="text-color6">
                   —
                 </span>
-                <span class="text-color5">
+                <span class="text-color6">
                   2022
                 </span>
               </time>
@@ -957,7 +978,7 @@ CDN不稳地，因此该页面弃用了CDN
 调整了部分css
                 </div>
                 <div class="brief">
-                  <span class="text-color5">
+                  <span class="text-color6">
                     component
                   </span>
                 </div>
@@ -965,12 +986,12 @@ CDN不稳地，因此该页面弃用了CDN
             </section>
             
             <section>
-              <span class="point-time point-color4"></span>
+              <span class="point-time point-color5"></span>
               <time>
-                <span class="text-color4">
+                <span class="text-color5">
                   2/10
                 </span>
-                <span class="text-color4">
+                <span class="text-color5">
                   2022
                 </span>
               </time>
@@ -987,7 +1008,7 @@ CDN不稳地，因此该页面弃用了CDN
 部署了一个镜像站，CDN服务有时候会挂掉，这个作为备用
                 </div>
                 <div class="brief">
-                  <span class="text-color4">
+                  <span class="text-color5">
                     shooting star
                   </span>
                 </div>
@@ -995,12 +1016,12 @@ CDN不稳地，因此该页面弃用了CDN
             </section>
             
             <section>
-              <span class="point-time point-color3"></span>
+              <span class="point-time point-color4"></span>
               <time>
-                <span class="text-color3">
+                <span class="text-color4">
                   后续
                 </span>
-                <span class="text-color3">
+                <span class="text-color4">
                   2021
                 </span>
               </time>
@@ -1016,7 +1037,7 @@ CDN不稳地，因此该页面弃用了CDN
 又新增了亿点点bug 
                 </div>
                 <div class="brief">
-                  <span class="text-color3">
+                  <span class="text-color4">
                     All in
                   </span>
                 </div>
@@ -1024,12 +1045,12 @@ CDN不稳地，因此该页面弃用了CDN
             </section>
             
             <section>
-              <span class="point-time point-color2"></span>
+              <span class="point-time point-color3"></span>
               <time>
-                <span class="text-color2">
+                <span class="text-color3">
                   5/10
                 </span>
-                <span class="text-color2">
+                <span class="text-color3">
                   2021
                 </span>
               </time>
@@ -1041,7 +1062,7 @@ CDN不稳地，因此该页面弃用了CDN
 加入了新的欢迎页。
                 </div>
                 <div class="brief">
-                  <span class="text-color2">
+                  <span class="text-color3">
                     Photoshop Cursor
                   </span>
                 </div>
@@ -1049,12 +1070,12 @@ CDN不稳地，因此该页面弃用了CDN
             </section>
             
             <section>
-              <span class="point-time point-color1"></span>
+              <span class="point-time point-color2"></span>
               <time>
-                <span class="text-color1">
+                <span class="text-color2">
                   4/28
                 </span>
-                <span class="text-color1">
+                <span class="text-color2">
                   2021
                 </span>
               </time>
@@ -1065,8 +1086,30 @@ CDN不稳地，因此该页面弃用了CDN
 制做雪松背景图片和精灵图。
                 </div>
                 <div class="brief">
-                  <span class="text-color1">
+                  <span class="text-color2">
                     Particulars Sprite
+                  </span>
+                </div>
+              </aside>
+            </section>
+            
+            <section>
+              <span class="point-time point-color1"></span>
+              <time>
+                <span class="text-color1">
+                  4/4
+                </span>
+                <span class="text-color1">
+                  2021
+                </span>
+              </time>
+              <aside>
+                <div class="details">
+                  首页加入了轮播图(已移除)
+                </div>
+                <div class="brief">
+                  <span class="text-color1">
+                    Carousel
                   </span>
                 </div>
               </aside>
@@ -1076,7 +1119,7 @@ CDN不稳地，因此该页面弃用了CDN
               <span class="point-time point-color8"></span>
               <time>
                 <span class="text-color8">
-                  4/4
+                  3/26
                 </span>
                 <span class="text-color8">
                   2021
@@ -1084,11 +1127,11 @@ CDN不稳地，因此该页面弃用了CDN
               </time>
               <aside>
                 <div class="details">
-                  首页加入了轮播图(已移除)
+                  欢迎页放了各平台的账号，首页加入字体动画
                 </div>
                 <div class="brief">
                   <span class="text-color8">
-                    Carousel
+                    Byte Dance
                   </span>
                 </div>
               </aside>
@@ -1098,7 +1141,7 @@ CDN不稳地，因此该页面弃用了CDN
               <span class="point-time point-color7"></span>
               <time>
                 <span class="text-color7">
-                  3/26
+                  3/22
                 </span>
                 <span class="text-color7">
                   2021
@@ -1106,11 +1149,11 @@ CDN不稳地，因此该页面弃用了CDN
               </time>
               <aside>
                 <div class="details">
-                  欢迎页放了各平台的账号，首页加入字体动画
+                  首页加入了新的动画(已移除)
                 </div>
                 <div class="brief">
                   <span class="text-color7">
-                    Byte Dance
+                    animation: card-transform 2s ease forwards;
                   </span>
                 </div>
               </aside>
@@ -1120,31 +1163,9 @@ CDN不稳地，因此该页面弃用了CDN
               <span class="point-time point-color6"></span>
               <time>
                 <span class="text-color6">
-                  3/22
-                </span>
-                <span class="text-color6">
-                  2021
-                </span>
-              </time>
-              <aside>
-                <div class="details">
-                  首页加入了新的动画(已移除)
-                </div>
-                <div class="brief">
-                  <span class="text-color6">
-                    animation: card-transform 2s ease forwards;
-                  </span>
-                </div>
-              </aside>
-            </section>
-            
-            <section>
-              <span class="point-time point-color5"></span>
-              <time>
-                <span class="text-color5">
                   3/16
                 </span>
-                <span class="text-color5">
+                <span class="text-color6">
                   2021
                 </span>
               </time>
@@ -1153,7 +1174,7 @@ CDN不稳地，因此该页面弃用了CDN
                   重新开发一个新的博客，完成首页和网站结构设计
                 </div>
                 <div class="brief">
-                  <span class="text-color5">
+                  <span class="text-color6">
                     Hello World
                   </span>
                 </div>
