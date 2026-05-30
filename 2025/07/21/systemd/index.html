@@ -1,4 +1,4 @@
-<!DOCTYPE html><html lang="zh-CN"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="author" content="shiwi"><meta name="copyright" content="SHIWIVI"><link rel="shortcut icon" href="/blog/images/favicon.ico" type="image/x-icon"><style>.preload{position:absolute;display:flex;flex-direction:column;align-items:center;justify-content:center;left:0;top:0;width:100%;height:100%;background-color:#000;z-index:100}.text{margin-bottom:10px;color:#00cff3;text-shadow:0 0 3px #00cff3;font-size:20px}.text span{display:inline-block}.dance{animation:dance .8s linear}.text span:nth-child(1){animation-delay:0s}.text span:nth-child(2){animation-delay:.1s}.text span:nth-child(3){animation-delay:.2s}.text span:nth-child(4){animation-delay:.3s}.text span:nth-child(5){animation-delay:.4s}.text span:nth-child(6){animation-delay:.5s}.text span:nth-child(7){animation-delay:.6s}.text span:nth-child(8){animation-delay:.7s}.text span:nth-child(9){animation-delay:.8s}.text span:nth-child(10){animation-delay:.9s}@keyframes dance{0%{transform:translateY(0)}50%{transform:translateY(-20px)}100%{transform:translateY(0)}}.loading{width:80%;max-width:260px;height:6px;background-color:#e1e4e8;border-radius:6px}.bar{display:flex;height:100%;background:linear-gradient(90deg,#ffd33d,#ea4aaa 10%,#b34bff 30%,#01feff 51%,#ffb33d 68%,#ea4aaa 85%,#b34bff);background-size:300% 100%;animation:bar 2s linear infinite}@keyframes bar{0%{background-position:100%}100%{background-position:0}}</style><body><div class="preload"><div class="text"><span>L</span> <span>o</span> <span>a</span> <span>d</span> <span>i</span> <span>n</span> <span>g</span> <span>.</span> <span>.</span> <span>.</span></div><div class="loading"><span class="bar"></span></div></div><script>let texts=document.querySelector('.text').querySelectorAll('span');let timer=setInterval(()=>{texts.forEach((item)=>{item.classList.toggle("dance")})},1700);window.onload=function(){clearInterval(timer);document.querySelector('.preload').style="display:none;"}</script><title>SHIWIVI-文章</title>
+<!DOCTYPE html><html lang="zh-CN"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="author" content="shiwi"><meta name="copyright" content="SHIWIVI"><link rel="shortcut icon" href="/blog/images/icon.png" type="image/x-icon"><style>.preload{position:absolute;display:flex;flex-direction:column;align-items:center;justify-content:center;left:0;top:0;width:100%;height:100%;background-color:#000;z-index:100}.text{margin-bottom:10px;color:#00cff3;text-shadow:0 0 3px #00cff3;font-size:20px}.text span{display:inline-block}.dance{animation:dance .8s linear}.text span:nth-child(1){animation-delay:0s}.text span:nth-child(2){animation-delay:.1s}.text span:nth-child(3){animation-delay:.2s}.text span:nth-child(4){animation-delay:.3s}.text span:nth-child(5){animation-delay:.4s}.text span:nth-child(6){animation-delay:.5s}.text span:nth-child(7){animation-delay:.6s}.text span:nth-child(8){animation-delay:.7s}.text span:nth-child(9){animation-delay:.8s}.text span:nth-child(10){animation-delay:.9s}@keyframes dance{0%{transform:translateY(0)}50%{transform:translateY(-20px)}100%{transform:translateY(0)}}.loading{width:80%;max-width:260px;height:6px;background-color:#e1e4e8;border-radius:6px}.bar{display:flex;height:100%;background:linear-gradient(90deg,#ffd33d,#ea4aaa 10%,#b34bff 30%,#01feff 51%,#ffb33d 68%,#ea4aaa 85%,#b34bff);background-size:300% 100%;animation:bar 2s linear infinite}@keyframes bar{0%{background-position:100%}100%{background-position:0}}</style><body><div class="preload"><div class="text"><span>L</span> <span>o</span> <span>a</span> <span>d</span> <span>i</span> <span>n</span> <span>g</span> <span>.</span> <span>.</span> <span>.</span></div><div class="loading"><span class="bar"></span></div></div><script>let texts=document.querySelector('.text').querySelectorAll('span');let timer=setInterval(()=>{texts.forEach((item)=>{item.classList.toggle("dance")})},1700);window.onload=function(){clearInterval(timer);document.querySelector('.preload').style="display:none;"}</script><title>SHIWIVI-文章</title>
 <link rel="stylesheet" href="https://at.alicdn.com/t/font_2856826_bu73u0ahu7a.css">
 
 <link rel="stylesheet" href="/blog/css/index.css">
@@ -136,13 +136,13 @@
         <div class="article">
         <h1 class="title">systemd</h1>
         <div class="art-info">
-            <div><span><span class="iconfont icon-zishu-jzl"></span>字数：25339</span>
+            <div><span><span class="iconfont icon-zishu-jzl"></span>字数：25174</span>
             <span><span class="iconfont icon-riqi"></span>写于：2025-07-21</span></div>
             <div><span><span class="iconfont icon-zuixinnew3"></span>最新更新：2025-07-21</span>
-            <span><span class="iconfont icon-shijian"></span>阅读本文预计花费您73分钟</span></div>
+            <span><span class="iconfont icon-shijian"></span>阅读本文预计花费您72分钟</span></div>
         </div>
         <div class="art-content">
-        <h3 id="systemd"><a href="#systemd" class="headerlink" title="systemd"></a>systemd</h3><h4 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h4><p>systemd 是由Lennart Poettering(当时就职于Red Hat公司)领导开发的一套Linux服务和系统管理工具，用来为Linux提供一种更高效的启动管理机制以替代曾经的initd守护进程，并为用户提供并行化管理服务。systemd在Linux启动时会作为系统的第一个进程(PID为1)启动，然后由其负责启动系统的其它进程，大多数现代 Linux 发行版(如 Ubuntu、Debian、Fedora、CentOS、Arch Linux 等)都默认使用systemd来管理服务和系统进程，systemd主要提供以下功能：</p>
+        <html><head></head><body><h3 id="systemd"><a href="#systemd" class="headerlink" title="systemd"></a>systemd</h3><h4 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h4><p>systemd 是由Lennart Poettering(当时就职于Red Hat公司)领导开发的一套Linux服务和系统管理工具，用来为Linux提供一种更高效的启动管理机制以替代曾经的initd守护进程，并为用户提供并行化管理服务。systemd在Linux启动时会作为系统的第一个进程(PID为1)启动，然后由其负责启动系统的其它进程，大多数现代 Linux 发行版(如 Ubuntu、Debian、Fedora、CentOS、Arch Linux 等)都默认使用systemd来管理服务和系统进程，systemd主要提供以下功能：</p>
 <ul>
 <li>服务管理：管理各类服务的启动、自启动、停止</li>
 <li>依赖管理：管理服务依赖关系，确保服务按正确顺序启动</li>
@@ -392,14 +392,14 @@ systemd官网：<a target="_blank" rel="noopener" href="https://systemd.io/">htt
 <h4 id="service配置案例"><a href="#service配置案例" class="headerlink" title="service配置案例"></a>service配置案例</h4><div class="shell">e.g.Nginx的配置
 [Unit]
 Description=The NGINX HTTP and reverse proxy server
-After=network.target</br>
+After=network.target<br>
 [Service]
 Type=forking
 ExecStart=/usr/sbin/nginx
 ExecReload=/usr/sbin/nginx -s reload
 ExecStop=/usr/sbin/nginx -s stop
 PIDFile=/run/nginx.pid
-PrivateTmp=true</br>
+PrivateTmp=true<br>
 [Install]
 WantedBy=multi-user.target
 </div>
@@ -506,7 +506,7 @@ systemctl start testA
 </li>
 </ul>
 <h4 id="开机自启动与target"><a href="#开机自启动与target" class="headerlink" title="开机自启动与target"></a>开机自启动与target</h4><p>当用户执行<span class="tips">systemctl enable unit名</span>设置单元开机自启动时，systemd会在<span class="tips">/etc/systemd/system/multi-user.target.wants/</span>(假设当前开机默认启动target为multi-user.target)中创建一个该单元文件的符号链接，这样就实现了开机启动该单元的功能。相反，当用户执行<span class="tips">systemctl disable unit名</span>来禁止单元开机自启动时，systemd会删除<span class="tips">/etc/systemd/system/multi-user.target.wants/unit名 </span>符号链接，从而阻止其在系统启动时自动启动。</p>
-<h3 id="systemctl"><a href="#systemctl" class="headerlink" title="systemctl"></a>systemctl</h3><p>systemctl是systemd的提供的主要命令行工具，用来通过统一的接口来管理系统的各项服务，调用systemctl时会默认使用<span class="tips">-&zwnj;-system</span>选项，用于管理系统级单元，这可能需要root权限。如果需要管理用户级单元，应该显式指定<span class="strong">systemctl -&zwnj;-user</span></p>
+<h3 id="systemctl"><a href="#systemctl" class="headerlink" title="systemctl"></a>systemctl</h3><p>systemctl是systemd的提供的主要命令行工具，用来通过统一的接口来管理系统的各项服务，调用systemctl时会默认使用<span class="tips">-‌-system</span>选项，用于管理系统级单元，这可能需要root权限。如果需要管理用户级单元，应该显式指定<span class="strong">systemctl -‌-user</span></p>
 <h4 id="系统管理"><a href="#系统管理" class="headerlink" title="系统管理"></a>系统管理</h4><p>在systemd被广泛运用到各发行版中后，Linux中传统的系统管理命令(如：halt、poweroff、reboot等)通常会调用systemd 提供的命令，如：执行 halt 实际上会调用 systemctl halt命令</p>
 <ul>
 <li><div class="strong">systemctl is-system-running</div>
@@ -535,7 +535,7 @@ https://www.freedesktop.org/software/systemd/man/latest/systemctl.html#System%20
 <h4 id="查看系统状态"><a href="#查看系统状态" class="headerlink" title="查看系统状态"></a>查看系统状态</h4><ul>
 <li><p><span class="strong">systemctl status</span>查看系统状态</p>
 </li>
-<li><p><span class="strong">systemctl -&zwnj;-failed</span>列出失败的单元</p>
+<li><p><span class="strong">systemctl -‌-failed</span>列出失败的单元</p>
 </li>
 <li><p><span class="strong">systemctl list-unit-files</span>列出已经安装的单元</p>
 </li>
@@ -546,9 +546,9 @@ https://www.freedesktop.org/software/systemd/man/latest/systemctl.html#System%20
 </ul>
 <h4 id="单元管理命令"><a href="#单元管理命令" class="headerlink" title="单元管理命令"></a>单元管理命令</h4><p><span class="strong">systemctl [选项] 命令 单元名/模式</span></p>
 <ul>
-<li>-t unit类型(-&zwnj;-type=unit类型)：在列出unit单元信息时，默认会列出所有类型的单元，通过该选项可以指定只列出某几个类型的单元</li>
-<li>-&zwnj;-state=状态：在列出unit单元信息时，默认会列出所有状态的单元，通过该选项可以指定只列出处于所指定状态的单元</li>
-<li>-p 属性名(-&zwnj;-property=属性名)：显式属性时，默认显式所有属性，该选项可以用来指定只显示所指定的1个或多个属性</li>
+<li>-t unit类型(-‌-type=unit类型)：在列出unit单元信息时，默认会列出所有类型的单元，通过该选项可以指定只列出某几个类型的单元</li>
+<li>-‌-state=状态：在列出unit单元信息时，默认会列出所有状态的单元，通过该选项可以指定只列出处于所指定状态的单元</li>
+<li>-p 属性名(-‌-property=属性名)：显式属性时，默认显式所有属性，该选项可以用来指定只显示所指定的1个或多个属性</li>
 <li>该命令中的单元名，可以使用模式(PATTERN)来匹配多个单元(模式支持使用<span class="tips">*</span>和<span class="tips">?</span>，也支持使用<span class="tips">[]</span>匹配字符范围)，也可以是具体的单元名，当指定具体单元名时，需要指定其完整的单元名，包括扩展名(如：sshd.socket)，以下情况可以省略扩展名：<blockquote>
 <blockquote>
 <ul>
@@ -623,11 +623,11 @@ https://www.freedesktop.org/software/systemd/man/latest/systemctl.html#System%20
 <td>取消屏蔽单元</td>
 </tr>
 </tbody></table>
-</table>
+
 </div>
 
 <h5 id="systemctl-status返回值"><a href="#systemctl-status返回值" class="headerlink" title="systemctl status返回值"></a>systemctl status返回值</h5><ul>
-<li><span class="strong">systemctl status</span> [单元名或PID]<br>如果指定了单元，则显示指定单元的运行时状态信息，以及这些单元最近的日志数据。如果指定了PID，那么显示指定PID所属单元的运行状态信息，以及这些单元最近的日志数据，默认输出10行日志，且会截断超长的部分。如果未指定任何单元或PID，那么显示整个系统的状态信息，此时若与 -&zwnj;-all 连用，则同时显示所有已加载单元(可以用-t选项限定单元类型)的状态信息。该命令旨在生成人类可读的输出，如果需要输出方便脚本分析的信息，应该使用systemctl show命令</li>
+<li><span class="strong">systemctl status</span> [单元名或PID]<br>如果指定了单元，则显示指定单元的运行时状态信息，以及这些单元最近的日志数据。如果指定了PID，那么显示指定PID所属单元的运行状态信息，以及这些单元最近的日志数据，默认输出10行日志，且会截断超长的部分。如果未指定任何单元或PID，那么显示整个系统的状态信息，此时若与 -‌-all 连用，则同时显示所有已加载单元(可以用-t选项限定单元类型)的状态信息。该命令旨在生成人类可读的输出，如果需要输出方便脚本分析的信息，应该使用systemctl show命令</li>
 </ul>
 <div class="shell">systemctl status nginx命令的返回值：
 <span style="color:#55ff55;">●</span> nginx.service -  Nginx is an HTTP(S) server, HTTP(S) reverse proxy and IMAP/POP3 proxy server
@@ -672,21 +672,21 @@ since之后表示服务启动时间，以及服务已经运行时间
 </div>
 
 <h4 id="单元状态查询命令"><a href="#单元状态查询命令" class="headerlink" title="单元状态查询命令"></a>单元状态查询命令</h4><ul>
-<li><p><span class="strong">systemctl 或 systemctl list-units </span> 单元名<br>列出systemd已经加载的单元，默认列出处于活动、失败状态和正在处于任务队列的单元，使用-&zwnj;-all选项可以列出所有单元，可以使用-&zwnj;-type选项和-&zwnj;-state选项过滤要列出的单元</p>
+<li><p><span class="strong">systemctl 或 systemctl list-units </span> 单元名<br>列出systemd已经加载的单元，默认列出处于活动、失败状态和正在处于任务队列的单元，使用-‌-all选项可以列出所有单元，可以使用-‌-type选项和-‌-state选项过滤要列出的单元</p>
 </li>
-<li><p><span class="strong">systemctl list-sockets [PATTERN]</span> 单元名<br>列出已加载的套接字(socket)单元，并按照监听地址排序。使用-&zwnj;-show-types选项可以显示套接字类型，支持-&zwnj;-all和-&zwnj;-state选项<br><span class="strong">systemctl list-timers [PATTERN]</span><br>列出已加载的定时器(timer)单元，并按照下次执行的时间点排序，支持-&zwnj;-all和-&zwnj;-state选项</p>
+<li><p><span class="strong">systemctl list-sockets [PATTERN]</span> 单元名<br>列出已加载的套接字(socket)单元，并按照监听地址排序。使用-‌-show-types选项可以显示套接字类型，支持-‌-all和-‌-state选项<br><span class="strong">systemctl list-timers [PATTERN]</span><br>列出已加载的定时器(timer)单元，并按照下次执行的时间点排序，支持-‌-all和-‌-state选项</p>
 </li>
-<li><p><span class="strong">systemctl is-active</span> 单元名<br>检查指定的单元中，是否有处于活动(active)状态的单元。如果存在至少一个处于活动(active)状态的单元，返回状态0，否则返回非零值。命令还会在标准输出打印单元状态，使用-&zwnj;-quiet选项可以禁止该输出</p>
+<li><p><span class="strong">systemctl is-active</span> 单元名<br>检查指定的单元中，是否有处于活动(active)状态的单元。如果存在至少一个处于活动(active)状态的单元，返回状态0，否则返回非零值。命令还会在标准输出打印单元状态，使用-‌-quiet选项可以禁止该输出</p>
 </li>
-<li><p><span class="strong">systemctl is-failed</span> 单元名<br>检查指定的单元中，是否有处于失败(failed)状态的单元。如果存在至少一个处于失败(failed)状态的单元，返回状态0，否则返回非零值。命令还会在标准输出打印单元状态，使用-&zwnj;-quiet选项可以禁止该输出</p>
+<li><p><span class="strong">systemctl is-failed</span> 单元名<br>检查指定的单元中，是否有处于失败(failed)状态的单元。如果存在至少一个处于失败(failed)状态的单元，返回状态0，否则返回非零值。命令还会在标准输出打印单元状态，使用-‌-quiet选项可以禁止该输出</p>
 </li>
-<li><p><span class="strong">systemctl show</span> [单元名或JOB]<br>以”属性=值”的形式显示指定单元或任务的所有属性。单元用其名称表示，而任务则用其id表示。如果没有指定任何单元或任务，那么显示管理器(systemd)自身的属性。默认不显示属性值为空的属性，使用-&zwnj;-all选项可以显示所有属性。可以使用-&zwnj;-property选项可以仅显示特定的属性</p>
+<li><p><span class="strong">systemctl show</span> [单元名或JOB]<br>以”属性=值”的形式显示指定单元或任务的所有属性。单元用其名称表示，而任务则用其id表示。如果没有指定任何单元或任务，那么显示管理器(systemd)自身的属性。默认不显示属性值为空的属性，使用-‌-all选项可以显示所有属性。可以使用-‌-property选项可以仅显示特定的属性</p>
 </li>
 <li><p><span class="strong">systemctl cat</span> 单元名<br>显示指定单元的单元文件内容，首行会显示该单元文件的绝对路径</p>
 </li>
-<li><p><span class="strong">systemctl set-property</span> 属性名 值<br>在运行时修改单元的属性值，主要用于修改单元的资源控制属性值而无需直接修改单元文件，并非所有属性都可以在运行时被修改。 作修改会立即生效，并永久保存在磁盘上，以确保永远有效。如果使用了 -&zwnj;-runtime选项，那么此修改仅临时有效，下次重启此单元后，将会恢复到原有的设置。设置属性的语法与单元文件中的写法相同。如：systemctl set-property foobar.service CPUShares=777，可以同时修改多个属性值，只需依次将各个属性用空格分隔即可。</p>
+<li><p><span class="strong">systemctl set-property</span> 属性名 值<br>在运行时修改单元的属性值，主要用于修改单元的资源控制属性值而无需直接修改单元文件，并非所有属性都可以在运行时被修改。 作修改会立即生效，并永久保存在磁盘上，以确保永远有效。如果使用了 -‌-runtime选项，那么此修改仅临时有效，下次重启此单元后，将会恢复到原有的设置。设置属性的语法与单元文件中的写法相同。如：systemctl set-property foobar.service CPUShares=777，可以同时修改多个属性值，只需依次将各个属性用空格分隔即可。</p>
 </li>
-<li><p><span class="strong">systemctl list-dependencies</span> [单元名]<br>显示单元的依赖关系，即显示由 Requires=, Requisite=, ConsistsOf=, Wants=, BindsTo= 所形成的依赖关系。如果没有明确指定单元的名称，那么表示显示default.target的依赖关系树。默认情况下，仅以递归方式显示 target 单元的依赖关系树，而对于其他类型的单元，仅显示一层依赖关系(不递归)。 但如果使用了-&zwnj;-all 选项，那么将对所有类型的单元都强制递归的显示完整的依赖关系树。还可以使用 -&zwnj;-reverse, -&zwnj;-after, -&zwnj;-before 选项指定仅显示特定类型的依赖关系</p>
+<li><p><span class="strong">systemctl list-dependencies</span> [单元名]<br>显示单元的依赖关系，即显示由 Requires=, Requisite=, ConsistsOf=, Wants=, BindsTo= 所形成的依赖关系。如果没有明确指定单元的名称，那么表示显示default.target的依赖关系树。默认情况下，仅以递归方式显示 target 单元的依赖关系树，而对于其他类型的单元，仅显示一层依赖关系(不递归)。 但如果使用了-‌-all 选项，那么将对所有类型的单元都强制递归的显示完整的依赖关系树。还可以使用 -‌-reverse, -‌-after, -‌-before 选项指定仅显示特定类型的依赖关系</p>
 </li>
 </ul>
 <h3 id="systemd-journald"><a href="#systemd-journald" class="headerlink" title="systemd-journald"></a>systemd-journald</h3><p>systemd-journald是systemd内置的日志收集和存储服务</p>
@@ -704,8 +704,8 @@ since之后表示服务启动时间，以及服务已经运行时间
 <li>字段=值：过滤出指定的字段，如：_PID=1234(查看该PID服务的日志)，_UID=1111(查看该用户的日志)</li>
 <li>-n 值：显示指定数量的日志条目</li>
 <li>-u 服务名：查看指定服务的日志</li>
-<li>-&zwnj;-since 日期：查看指定日期之后的日志，规范的指定日期形式为”yyyy-MM-dd HH:mm:ss”</li>
-<li>-&zwnj;-untile 日期：查看指定日期之前的日志，规范的指定日期形式为”yyyy-MM-dd HH:mm:ss”</li>
+<li>-‌-since 日期：查看指定日期之后的日志，规范的指定日期形式为”yyyy-MM-dd HH:mm:ss”</li>
+<li>-‌-untile 日期：查看指定日期之前的日志，规范的指定日期形式为”yyyy-MM-dd HH:mm:ss”</li>
 <li>-f 实时查看日志，类似于tail -f命令</li>
 <li>-p 日志等级：查看指定等级以上的日志，可取值有emerg, alert, crit, err, warning, notice, info, debug，也可以使用0-7的值依次代替这些等级</li>
 <li>-o 输出格式：指定日志的输出格式，常用的输出格式有<blockquote>
@@ -719,13 +719,13 @@ since之后表示服务启动时间，以及服务已经运行时间
 </blockquote>
 </blockquote>
 </li>
-<li>-&zwnj;-no-pager 禁用分页模式</li>
-<li>-&zwnj;-disk-usage 显示所有日志文件在当前磁盘的占用情况</li>
-<li>-&zwnj;-rotate 立即开始日志轮换，将当前活跃的日志文件立即归档并重命名，然后标记为archived，然后新建新的日志文件作为活跃文件</li>
-<li>-&zwnj;-vacuum-size=值：删除最早的归档日志，直到日志所占用空间小于指定值，接受K、M、G、T单位</li>
-<li>-&zwnj;-vacuum-time=值：删除早于指定时间跨度的归档日志，单位默认为s，接受m、h、days、weeks、months、years单位</li>
-<li>-&zwnj;-vacuum-files=值：只保留指定数量的归档日志文件</li>
-<li>-&zwnj;-sync 立即将日志同步到磁盘，在同步操作完成之前，此调用不会返回</li>
+<li>-‌-no-pager 禁用分页模式</li>
+<li>-‌-disk-usage 显示所有日志文件在当前磁盘的占用情况</li>
+<li>-‌-rotate 立即开始日志轮换，将当前活跃的日志文件立即归档并重命名，然后标记为archived，然后新建新的日志文件作为活跃文件</li>
+<li>-‌-vacuum-size=值：删除最早的归档日志，直到日志所占用空间小于指定值，接受K、M、G、T单位</li>
+<li>-‌-vacuum-time=值：删除早于指定时间跨度的归档日志，单位默认为s，接受m、h、days、weeks、months、years单位</li>
+<li>-‌-vacuum-files=值：只保留指定数量的归档日志文件</li>
+<li>-‌-sync 立即将日志同步到磁盘，在同步操作完成之前，此调用不会返回</li>
 </ul>
 <div class="broadcast color-purple">
 完整命令和选项参考官方文档：<a target="_blank" rel="noopener" href="https://www.freedesktop.org/software/systemd/man/latest/journalctl.html">journalctl命令</a></div>
@@ -837,14 +837,14 @@ since之后表示服务启动时间，以及服务已经运行时间
 <li><p><span class="strong">LineMax=</span><br>指定journald从stdout/stderr读取流数据，并将其转换为记录日志时允许的最大行长度，默认为48k，超出部分会被journald截断并添加…后缀，表示此行已被截断。可以使用K、M、G、T为单位，最小可设置的值为79(bytes)，小于该值的设置会被提升到79bytes</p>
 </li>
 </ul>
-
+</body></html>
         </div>
     </div>
     <div class="post-nav">
         
             
                 <div class="post-next">
-                    <a href="/blog/2023/10/13/C%E8%AF%AD%E8%A8%80%E5%9B%9E%E9%A1%BE/">下一篇：C语言 </a>
+                    <a href="/blog/2023/09/07/JavaScript%E4%B8%AD%E7%9A%84%E5%90%84%E7%A7%8D%E5%B0%BA%E5%AF%B8/">下一篇：JavaScript中的各种尺寸 </a>
                 </div>
                  
     </div>

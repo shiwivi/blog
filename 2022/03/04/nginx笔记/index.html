@@ -1,4 +1,4 @@
-<!DOCTYPE html><html lang="zh-CN"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="author" content="shiwi"><meta name="copyright" content="SHIWIVI"><link rel="shortcut icon" href="/blog/images/favicon.ico" type="image/x-icon"><style>.preload{position:absolute;display:flex;flex-direction:column;align-items:center;justify-content:center;left:0;top:0;width:100%;height:100%;background-color:#000;z-index:100}.text{margin-bottom:10px;color:#00cff3;text-shadow:0 0 3px #00cff3;font-size:20px}.text span{display:inline-block}.dance{animation:dance .8s linear}.text span:nth-child(1){animation-delay:0s}.text span:nth-child(2){animation-delay:.1s}.text span:nth-child(3){animation-delay:.2s}.text span:nth-child(4){animation-delay:.3s}.text span:nth-child(5){animation-delay:.4s}.text span:nth-child(6){animation-delay:.5s}.text span:nth-child(7){animation-delay:.6s}.text span:nth-child(8){animation-delay:.7s}.text span:nth-child(9){animation-delay:.8s}.text span:nth-child(10){animation-delay:.9s}@keyframes dance{0%{transform:translateY(0)}50%{transform:translateY(-20px)}100%{transform:translateY(0)}}.loading{width:80%;max-width:260px;height:6px;background-color:#e1e4e8;border-radius:6px}.bar{display:flex;height:100%;background:linear-gradient(90deg,#ffd33d,#ea4aaa 10%,#b34bff 30%,#01feff 51%,#ffb33d 68%,#ea4aaa 85%,#b34bff);background-size:300% 100%;animation:bar 2s linear infinite}@keyframes bar{0%{background-position:100%}100%{background-position:0}}</style><body><div class="preload"><div class="text"><span>L</span> <span>o</span> <span>a</span> <span>d</span> <span>i</span> <span>n</span> <span>g</span> <span>.</span> <span>.</span> <span>.</span></div><div class="loading"><span class="bar"></span></div></div><script>let texts=document.querySelector('.text').querySelectorAll('span');let timer=setInterval(()=>{texts.forEach((item)=>{item.classList.toggle("dance")})},1700);window.onload=function(){clearInterval(timer);document.querySelector('.preload').style="display:none;"}</script><title>SHIWIVI-文章</title>
+<!DOCTYPE html><html lang="zh-CN"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="author" content="shiwi"><meta name="copyright" content="SHIWIVI"><link rel="shortcut icon" href="/blog/images/icon.png" type="image/x-icon"><style>.preload{position:absolute;display:flex;flex-direction:column;align-items:center;justify-content:center;left:0;top:0;width:100%;height:100%;background-color:#000;z-index:100}.text{margin-bottom:10px;color:#00cff3;text-shadow:0 0 3px #00cff3;font-size:20px}.text span{display:inline-block}.dance{animation:dance .8s linear}.text span:nth-child(1){animation-delay:0s}.text span:nth-child(2){animation-delay:.1s}.text span:nth-child(3){animation-delay:.2s}.text span:nth-child(4){animation-delay:.3s}.text span:nth-child(5){animation-delay:.4s}.text span:nth-child(6){animation-delay:.5s}.text span:nth-child(7){animation-delay:.6s}.text span:nth-child(8){animation-delay:.7s}.text span:nth-child(9){animation-delay:.8s}.text span:nth-child(10){animation-delay:.9s}@keyframes dance{0%{transform:translateY(0)}50%{transform:translateY(-20px)}100%{transform:translateY(0)}}.loading{width:80%;max-width:260px;height:6px;background-color:#e1e4e8;border-radius:6px}.bar{display:flex;height:100%;background:linear-gradient(90deg,#ffd33d,#ea4aaa 10%,#b34bff 30%,#01feff 51%,#ffb33d 68%,#ea4aaa 85%,#b34bff);background-size:300% 100%;animation:bar 2s linear infinite}@keyframes bar{0%{background-position:100%}100%{background-position:0}}</style><body><div class="preload"><div class="text"><span>L</span> <span>o</span> <span>a</span> <span>d</span> <span>i</span> <span>n</span> <span>g</span> <span>.</span> <span>.</span> <span>.</span></div><div class="loading"><span class="bar"></span></div></div><script>let texts=document.querySelector('.text').querySelectorAll('span');let timer=setInterval(()=>{texts.forEach((item)=>{item.classList.toggle("dance")})},1700);window.onload=function(){clearInterval(timer);document.querySelector('.preload').style="display:none;"}</script><title>SHIWIVI-文章</title>
 <link rel="stylesheet" href="https://at.alicdn.com/t/font_2856826_bu73u0ahu7a.css">
 
 <link rel="stylesheet" href="/blog/css/index.css">
@@ -136,13 +136,13 @@
         <div class="article">
         <h1 class="title">Nginx笔记(上)</h1>
         <div class="art-info">
-            <div><span><span class="iconfont icon-zishu-jzl"></span>字数：11391</span>
+            <div><span><span class="iconfont icon-zishu-jzl"></span>字数：11257</span>
             <span><span class="iconfont icon-riqi"></span>写于：2022-03-04</span></div>
             <div><span><span class="iconfont icon-zuixinnew3"></span>最新更新：2022-03-06</span>
             <span><span class="iconfont icon-shijian"></span>阅读本文预计花费您33分钟</span></div>
         </div>
         <div class="art-content">
-        <div class="broadcast color-yellow">
+        <html><head></head><body><div class="broadcast color-yellow">
 <div class="iconfont icon-dengpao14hao"></div>
 nginx官方文档：<a target="_blank" href="http://nginx.org/en/docs/">http://nginx.org/en/docs/</a></div>
 
@@ -259,7 +259,7 @@ nginx官方文档：<a target="_blank" href="http://nginx.org/en/docs/">http://n
 worker_processes  1;   //允许生成的worker process数
 
 <p>#error_log  logs/error.log;     //日志级别与存放路径<br>#error_log  logs/error.log  notice;<br>#error_log  logs/error.log  info;</p>
-<p>#pid        logs/nginx.pid; //master进程pid存放路径<br>……</div></p>
+<p>#pid        logs/nginx.pid; //master进程pid存放路径<br>……</p></div><p></p>
 <h5 id="user配置进程权限"><a href="#user配置进程权限" class="headerlink" title="user配置进程权限"></a>user配置进程权限</h5><p><span class="strong">user 用户名 [用户组];</span></p>
 <p>默认为nobody，配置决定了worker进程的调用用户，以及nginx对文件(一般指资源文件和目录)的读写权限，而日志文件、pid文件、配置文件等由master进程调用的文件则不受此配置影响，所有者一般为root。当配置的用户对指定文件无访问权限时，Nginx将返回403错误，此时需要授予该用户相关权限，或者更改为权限更高的用户。</p>
 <h5 id="worker-processes配置进程数量"><a href="#worker-processes配置进程数量" class="headerlink" title="worker_processes配置进程数量"></a>worker_processes配置进程数量</h5><ul>
@@ -517,56 +517,56 @@ location ~* \正则表达式  {   //在test目录下正则匹配(添加*号不�
 <h4 id="http块配置"><a href="#http块配置" class="headerlink" title="http块配置"></a>http块配置</h4><p>定义两个变量server1和server2，用于配置日志格式，两个服务的配置文件独立存放于/webservers/conf.d路径下，使用include引入nginx.conf配置文件中。</p>
 <div class="show">http{
     ......
-    log_format server1 'new access =>$time_local';
-    log_format server2 'new access =>$time_local';
+    log_format server1 'new access =&gt;$time_local';
+    log_format server2 'new access =&gt;$time_local';
     include /webservers/conf.d/*.conf;//引入两个服务的配置文件
 }
 </div>
 
 <h4 id="server1配置"><a href="#server1配置" class="headerlink" title="server1配置"></a>server1配置</h4><p>访问<span class="tips"><code>http://45.77.77.10:8081</code></span>访问web1页面</p>
 <p>访问<span class="tips"><code>http://45.77.77.10:8081/pages</code></span>访问web2页面</p>
-<pre><code>server&#123;
+<pre><code>server{
     listen 8081;
     server_name 45.77.77.10;
     access_log /webservers/web/server1/logs/access.log server1;
     error_page 404 /404.html;
-    location /&#123;
+    location /{
     alias /webservers/web/server1/webpages/;
     index web1.html;
-    &#125;
-    location /pages&#123;
+    }
+    location /pages{
     alias /webservers/web/server1/webpages/;
     index web2.html;
-    &#125;
-    location =/404.html&#123;
+    }
+    location =/404.html{
     root /webservers/web;
     index 404.html;
-    &#125;
-      &#125;
+    }
+      }
 </code></pre>
 
 <h5 id="server2配置"><a href="#server2配置" class="headerlink" title="server2配置"></a>server2配置</h5><p>访问<span class="tips"><code>http://45.77.77.10:8082/web3.html</code></span>访问web3页面</p>
 <p>访问<span class="tips"><code>http://45.77.77.10:8082/webpages</code></span>访问web4页面</p>
-<pre><code>server&#123;
+<pre><code>server{
     listen 8082;
     server_name 45.77.77.10;
     access_log /webservers/web/server2/logs/access.log server2;
     error_page 404 /404.html;
-    location /web3.html&#123;
+    location /web3.html{
     root /webservers/web/server2/webpages;
     index web3.html;
-    &#125;
+    }
     
-    location /webpages&#123;
+    location /webpages{
     root /webservers/web/server2;
     index web4.html;
-    &#125;
+    }
 
-    location =/404.html&#123;
+    location =/404.html{
     root /webservers/web;
     index 404.html;
-    &#125;
-      &#125;
+    }
+      }
 </code></pre>
 
 <div class="broadcast color-blue">
@@ -575,45 +575,45 @@ location ~* \正则表达式  {   //在test目录下正则匹配(添加*号不�
 
 
 
-<h3 id="静态资源提供服务"><a href="#静态资源提供服务" class="headerlink" title="静态资源提供服务"></a>静态资源提供服务</h3><pre><code>http &#123;
+<h3 id="静态资源提供服务"><a href="#静态资源提供服务" class="headerlink" title="静态资源提供服务"></a>静态资源提供服务</h3><pre><code>http {
     .......
 gzip on;
 gzip_min_length 1;  //设置最小压缩大小，小于1字节的文件不进行压缩
 gzip_comp_level 3; //压缩级别(压缩比)，取值范围为1-9，值越大，压缩越多，cpu占用率越高
 gzip_types text/css text/javascript; //配置压缩的文件类型
-    server &#123;
+    server {
         listen      80;
         server_name  45.77.78.10;
         #charset koi8-r;
         #access_log  logs/host.access.log  main;
-        location /images/ &#123;  //匹配路径
+        location /images/ {  //匹配路径
         root /test;         //资源所在路径
         autoindex on;  //自动生成资源归档页面
-         &#125;
-        location /images &#123;  //匹配路径
+         }
+        location /images {  //匹配路径
         root /test;         //资源所在路径
-         &#125;
-         location /other/ &#123;  //匹配路径
+         }
+         location /other/ {  //匹配路径
         alias /test/images;         //资源所在路径
-         &#125;
+         }
         #error_page  404              /404.html;
         # redirect server error pages to the static page /50x.html
         #
         error_page   500 502 503 504  /50x.html;
-        location = /50x.html &#123;
+        location = /50x.html {
             root   html;
-        &#125;
+        }
         .....
-    &#125;
+    }
     ........
-&#125;</code></pre>
+}</code></pre>
 <p>test目录服务器根目录下，并且在/test/images路径下存放了photo.jpg照片</p>
 <ul>
 <li>使用第一个location配置时，当访问 http:<span></span>//45.77.78.10/images/ 时，ngxin会在自动生成的归档页面上输出/test/images/目录下的所有文件。请求只能为location后面配置的参数，若请求为 http:<span></span>//45.77.78.10/test/images/则会返回404</li>
 <li>使用第二个location配置时，由于未使用 <span class="tips">autoindex on</span> 配置，nginx不会生成归档页面，当访问 http:<span></span>//45.77.78.10/images/ 时nginx将返回403，访问文件需指定具体文件路径，如：http:<span></span>//45.77.78.10/test/images/photo.jpg</li>
 <li>当需要对访问者隐藏服务器实际文件路径时，可以使用<span class="tips">alias</span>进行配置，使用第三个location配置，url应当为http:<span></span>//45.77.78.10/other/photo.jpg，此时实际访问的依旧alias指定的/test/images路径下的文件</li>
 </ul>
-
+</body></html>
         </div>
     </div>
     <div class="post-nav">

@@ -1,4 +1,4 @@
-<!DOCTYPE html><html lang="zh-CN"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="author" content="shiwi"><meta name="copyright" content="SHIWIVI"><link rel="shortcut icon" href="/blog/images/favicon.ico" type="image/x-icon"><style>.preload{position:absolute;display:flex;flex-direction:column;align-items:center;justify-content:center;left:0;top:0;width:100%;height:100%;background-color:#000;z-index:100}.text{margin-bottom:10px;color:#00cff3;text-shadow:0 0 3px #00cff3;font-size:20px}.text span{display:inline-block}.dance{animation:dance .8s linear}.text span:nth-child(1){animation-delay:0s}.text span:nth-child(2){animation-delay:.1s}.text span:nth-child(3){animation-delay:.2s}.text span:nth-child(4){animation-delay:.3s}.text span:nth-child(5){animation-delay:.4s}.text span:nth-child(6){animation-delay:.5s}.text span:nth-child(7){animation-delay:.6s}.text span:nth-child(8){animation-delay:.7s}.text span:nth-child(9){animation-delay:.8s}.text span:nth-child(10){animation-delay:.9s}@keyframes dance{0%{transform:translateY(0)}50%{transform:translateY(-20px)}100%{transform:translateY(0)}}.loading{width:80%;max-width:260px;height:6px;background-color:#e1e4e8;border-radius:6px}.bar{display:flex;height:100%;background:linear-gradient(90deg,#ffd33d,#ea4aaa 10%,#b34bff 30%,#01feff 51%,#ffb33d 68%,#ea4aaa 85%,#b34bff);background-size:300% 100%;animation:bar 2s linear infinite}@keyframes bar{0%{background-position:100%}100%{background-position:0}}</style><body><div class="preload"><div class="text"><span>L</span> <span>o</span> <span>a</span> <span>d</span> <span>i</span> <span>n</span> <span>g</span> <span>.</span> <span>.</span> <span>.</span></div><div class="loading"><span class="bar"></span></div></div><script>let texts=document.querySelector('.text').querySelectorAll('span');let timer=setInterval(()=>{texts.forEach((item)=>{item.classList.toggle("dance")})},1700);window.onload=function(){clearInterval(timer);document.querySelector('.preload').style="display:none;"}</script><title>SHIWIVI-文章</title>
+<!DOCTYPE html><html lang="zh-CN"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="author" content="shiwi"><meta name="copyright" content="SHIWIVI"><link rel="shortcut icon" href="/blog/images/icon.png" type="image/x-icon"><style>.preload{position:absolute;display:flex;flex-direction:column;align-items:center;justify-content:center;left:0;top:0;width:100%;height:100%;background-color:#000;z-index:100}.text{margin-bottom:10px;color:#00cff3;text-shadow:0 0 3px #00cff3;font-size:20px}.text span{display:inline-block}.dance{animation:dance .8s linear}.text span:nth-child(1){animation-delay:0s}.text span:nth-child(2){animation-delay:.1s}.text span:nth-child(3){animation-delay:.2s}.text span:nth-child(4){animation-delay:.3s}.text span:nth-child(5){animation-delay:.4s}.text span:nth-child(6){animation-delay:.5s}.text span:nth-child(7){animation-delay:.6s}.text span:nth-child(8){animation-delay:.7s}.text span:nth-child(9){animation-delay:.8s}.text span:nth-child(10){animation-delay:.9s}@keyframes dance{0%{transform:translateY(0)}50%{transform:translateY(-20px)}100%{transform:translateY(0)}}.loading{width:80%;max-width:260px;height:6px;background-color:#e1e4e8;border-radius:6px}.bar{display:flex;height:100%;background:linear-gradient(90deg,#ffd33d,#ea4aaa 10%,#b34bff 30%,#01feff 51%,#ffb33d 68%,#ea4aaa 85%,#b34bff);background-size:300% 100%;animation:bar 2s linear infinite}@keyframes bar{0%{background-position:100%}100%{background-position:0}}</style><body><div class="preload"><div class="text"><span>L</span> <span>o</span> <span>a</span> <span>d</span> <span>i</span> <span>n</span> <span>g</span> <span>.</span> <span>.</span> <span>.</span></div><div class="loading"><span class="bar"></span></div></div><script>let texts=document.querySelector('.text').querySelectorAll('span');let timer=setInterval(()=>{texts.forEach((item)=>{item.classList.toggle("dance")})},1700);window.onload=function(){clearInterval(timer);document.querySelector('.preload').style="display:none;"}</script><title>SHIWIVI-文章</title>
 <link rel="stylesheet" href="https://at.alicdn.com/t/font_2856826_bu73u0ahu7a.css">
 
 <link rel="stylesheet" href="/blog/css/index.css">
@@ -136,13 +136,13 @@
         <div class="article">
         <h1 class="title">Linux文本处理</h1>
         <div class="art-info">
-            <div><span><span class="iconfont icon-zishu-jzl"></span>字数：10034</span>
+            <div><span><span class="iconfont icon-zishu-jzl"></span>字数：9799</span>
             <span><span class="iconfont icon-riqi"></span>写于：2021-12-29</span></div>
             <div><span><span class="iconfont icon-zuixinnew3"></span>最新更新：2022-01-23</span>
-            <span><span class="iconfont icon-shijian"></span>阅读本文预计花费您29分钟</span></div>
+            <span><span class="iconfont icon-shijian"></span>阅读本文预计花费您28分钟</span></div>
         </div>
         <div class="art-content">
-        <h3 id="输出文本"><a href="#输出文本" class="headerlink" title="输出文本"></a>输出文本</h3><h4 id="echo打印文本"><a href="#echo打印文本" class="headerlink" title="echo打印文本"></a>echo打印文本</h4><p>echo命令一般有多个版本，默认情况下通常会优先使用shell的内置版本，这里的命令语法是GNU coreutils包中的语法，但通常shell内置的echo命令也支持以下语法。直接执行echo命令将默认使用shell内置的版本，因此如果需要使用GNU coreutils包中的echo命令，需要使用env(env echo…)来调用</p>
+        <html><head></head><body><h3 id="输出文本"><a href="#输出文本" class="headerlink" title="输出文本"></a>输出文本</h3><h4 id="echo打印文本"><a href="#echo打印文本" class="headerlink" title="echo打印文本"></a>echo打印文本</h4><p>echo命令一般有多个版本，默认情况下通常会优先使用shell的内置版本，这里的命令语法是GNU coreutils包中的语法，但通常shell内置的echo命令也支持以下语法。直接执行echo命令将默认使用shell内置的版本，因此如果需要使用GNU coreutils包中的echo命令，需要使用env(env echo…)来调用</p>
 <p><span class="strong">echo [选项] [字符串]</span></p>
 <ul>
 <li>默认情况下，指定多个字符串时，每个字符串之间会有一个空格，所有字符串输出完毕后会有一个换行符</li>
@@ -324,7 +324,7 @@ yes "某个数据" | head -n 1000 &gt; test_file.txt
 <ul>
 <li>默认情况下，grep只支持基本正则表达式，且会输出满足匹配行的所有内容</li>
 <li>-i 不区分大小写</li>
-<li>-&zwnj;-no-ignore-case 区分大小写(默认)</li>
+<li>-‌-no-ignore-case 区分大小写(默认)</li>
 <li>-v 排除满足匹配的行，即反向匹配，输出不匹配的行</li>
 <li>-o 只输出匹配的文本部分，而不是一整行</li>
 <li>-w “词”：匹配一个完整独立的单词，以避免某个单词是另外一个单词一部分的情况(如：-w “java”将只匹配java而不再匹配javaScript)</li>
@@ -345,17 +345,17 @@ yes "某个数据" | head -n 1000 &gt; test_file.txt
 <li>-b 输出匹配行在文件中的字节偏移量(从0计数)，和-o搭配使用时，输出匹配的字符串在文件中的字节偏移量(不再以本行开头计算偏移)</li>
 <li>-H 强制显示匹配结果来源于哪个文件，以<span class="tips">文件名：匹配到的内容</span>形式输出，当输入文件有多个时，该选项是默认值</li>
 <li>-h 不显示匹配结果来源于哪个文件，当输入文件是单个时，该选项是默认值</li>
-<li>-&zwnj;-label=名：为标准输入指定一个虚拟文件名，当输入结果来源于标准输入时，和-H搭配使用，显示为类似于-H选项的效果</li>
+<li>-‌-label=名：为标准输入指定一个虚拟文件名，当输入结果来源于标准输入时，和-H搭配使用，显示为类似于-H选项的效果</li>
 <li>-T 在输出结果中使用制表符代替空格，这会影响H，n选项的输出，-H选项的输出将变成<code>文件名：(制表符多空格)    匹配内容</code></li>
 <li>-Z 使用空字符(\0)分隔输出结果，而不是默认的换行或者空格，以方便处理文件名本身包含空格的情况，该选项通常搭配xargs -0 或 find -print0来处理文件名包含空格/特殊字符的情况，如：grep -Z “error” *.log | xargs -0 rm，如果文件”hello world.txt”中有内容error，它会被正确删除，而不是删除hello和world.txt两个文件，grep的输出会是hello world.txt\0file.txt</li>
-<li>上下文查看：常用来查看某个关键词所在行及其前后的内容(如：日志文件中，仅一个行信息不够，查看上下文多个行)，如果匹配到多个内容，每个内容及其上下文内容间默认用<span class="tips">-&zwnj;-</span>分隔<blockquote>
+<li>上下文查看：常用来查看某个关键词所在行及其前后的内容(如：日志文件中，仅一个行信息不够，查看上下文多个行)，如果匹配到多个内容，每个内容及其上下文内容间默认用<span class="tips">-‌-</span>分隔<blockquote>
 <blockquote>
 <ul>
 <li>-A 值N:显示匹配行及其之后的N行的内容(after)</li>
 <li>-B 值N:显示匹配行及其之前的N行的内容(before)</li>
 <li>-C 值N：显示匹配行及其前后各N行的内容(context)</li>
-<li>-&zwnj;-group-separator=”符号”：指定分隔符，而不是默认的-&zwnj;-</li>
-<li>-&zwnj;-no-group-separator:不使用分隔符</li>
+<li>-‌-group-separator=”符号”：指定分隔符，而不是默认的-‌-</li>
+<li>-‌-no-group-separator:不使用分隔符</li>
 </ul>
 </blockquote>
 </blockquote>
@@ -373,12 +373,12 @@ grep -iw -e "java" -e "cpp" -e "golang" ./log
 
 <h4 id="sort排序处理"><a href="#sort排序处理" class="headerlink" title="sort排序处理"></a>sort排序处理</h4><p>默认情况下，sort命令按照会话指定的默认语言的排序规则对文本数据行排序，且数字也会被当作字符处理(如果要按数值排序，使用-n选项)<br><span class="strong">sort [选项] [文件名]</span><br>将文件或命令结果进行排序，默认以每行第一个字母为依据，按字母顺序排序</p>
 <ul>
-<li>-f&emsp;忽略大小写</li>
-<li>-n&emsp;将数字作为值处理，按数值大小进行排序(排序顺序为从小到大)</li>
-<li>-r&emsp;反向排序</li>
-<li>-t&emsp;指定分隔符为分段依据，默认以空格、制表符、换行符作为分隔符</li>
-<li>-M&emsp;按月份排序，常用于日志文件排序</li>
-<li>-k n,m&emsp;指定字段为排序依据，-k 2,2以第二个字段作为判断依据，若不指定m则判断依据为以n字段开始到本行末的所有字段</li>
+<li>-f 忽略大小写</li>
+<li>-n 将数字作为值处理，按数值大小进行排序(排序顺序为从小到大)</li>
+<li>-r 反向排序</li>
+<li>-t 指定分隔符为分段依据，默认以空格、制表符、换行符作为分隔符</li>
+<li>-M 按月份排序，常用于日志文件排序</li>
+<li>-k n,m 指定字段为排序依据，-k 2,2以第二个字段作为判断依据，若不指定m则判断依据为以n字段开始到本行末的所有字段</li>
 <li>-u 先排序所有行，然后去除相邻的重复行，等价于sort | uniq，该选项可以用来去重</li>
 </ul>
 <div class="show">1.passwd文件排序输出
@@ -403,117 +403,117 @@ sort -t $'\t' -nr data.tsv
 </thead>
 <tbody><tr>
 <td>-b</td>
-<td>-&zwnj;-ignore-leading-blanks</td>
+<td>-‌-ignore-leading-blanks</td>
 <td>排序时忽略起始的空白</td>
 </tr>
 <tr>
 <td>-c</td>
-<td>-&zwnj;-check</td>
+<td>-‌-check</td>
 <td>检查输入的数据或文件是否已排序，如果未全部排序，则打印第一个未排序的行，并以状态码1退出</td>
 </tr>
 <tr>
 <td>-C</td>
-<td>-&zwnj;-check=quiet</td>
+<td>-‌-check=quiet</td>
 <td>检查输入的数据或文件是否已排序，如果未全部排序，以状态码1退出，但不打印未排序的行内容</td>
 </tr>
 <tr>
 <td>-d</td>
-<td>-&zwnj;-dictionary-order</td>
+<td>-‌-dictionary-order</td>
 <td>以通讯录方式排序，只考虑空白字符、字母、数字进行排序，忽略其他所有字符</td>
 </tr>
 <tr>
 <td>-f</td>
-<td>-&zwnj;-ignore-case</td>
+<td>-‌-ignore-case</td>
 <td>默认情况下，大写字母排于小写字母前，这个选项会忽略大小写</td>
 </tr>
 <tr>
 <td>-g</td>
-<td>-&zwnj;-general-number-sort</td>
+<td>-‌-general-number-sort</td>
 <td>按数字排序(GNU建议只有别无选择时再使用该选项)，该选项会将每行数字前缀部分转换为双精度浮点数，按照：非数字开头的行、NaNs(Not a Number)、负数、正数的顺序排序(该选项处理速度比-n选项慢得多，且可能在转换浮点数时丢失信息)</td>
 </tr>
 <tr>
 <td>-h</td>
-<td>-&zwnj;-human-numeric-sort</td>
+<td>-‌-human-numeric-sort</td>
 <td>按照人类可读的数字格式排序，即该选项会识别KMGTPEZYRQ等数值单位，如:1023M将排序于1G之前</td>
 </tr>
 <tr>
 <td>-i</td>
-<td>-&zwnj;-ignore-nonprinting</td>
+<td>-‌-ignore-nonprinting</td>
 <td>在排序时忽略非打印字符</td>
 </tr>
 <tr>
 <td>-k pos1,pos2</td>
-<td>-&zwnj;-key=POS1[,POS2]</td>
+<td>-‌-key=POS1[,POS2]</td>
 <td>排序从POS1位置开始；如果指定了POS2的话，到POS2位置结束</td>
 </tr>
 <tr>
 <td>-M</td>
-<td>-&zwnj;-month-sort</td>
+<td>-‌-month-sort</td>
 <td>用三字符月份名按月份排序，如：Jan,Feb,Mar</td>
 </tr>
 <tr>
 <td>-m</td>
-<td>-&zwnj;-merge</td>
+<td>-‌-merge</td>
 <td>合并多个多个已排序的文件，合并后的文件也是按顺序排序的，该选项会视为原文件已经排序好，只负责两个文合并时的归并排序，而不会会文件重排，速度更快</td>
 </tr>
 <tr>
 <td>-n</td>
-<td>-&zwnj;-numeric-sort</td>
+<td>-‌-numeric-sort</td>
 <td>按字符串数值来排序（并不转换为浮点数）</td>
 </tr>
 <tr>
 <td>-o</td>
-<td>-&zwnj;-output=file</td>
+<td>-‌-output=file</td>
 <td>将排序结果写出到指定的文件中</td>
 </tr>
 <tr>
 <td>-R</td>
-<td>-&zwnj;-random-sort</td>
+<td>-‌-random-sort</td>
 <td>对输入的值进行哈希处理，按生成的哈希值排序</td>
 </tr>
 <tr>
 <td>无</td>
-<td>-&zwnj;-random-source=FILE</td>
+<td>-‌-random-source=FILE</td>
 <td>指定-R参数用到的随机字节的源文件</td>
 </tr>
 <tr>
 <td>-V</td>
-<td>-&zwnj;-version-sort</td>
+<td>-‌-version-sort</td>
 <td>按版本号排序，字母加数字组合将识别为版本号，且排序方法将与小数排序有所不同，如：v1,v1.4,v1.12,v1.40,v2</td>
 </tr>
 <tr>
 <td>-r</td>
-<td>-&zwnj;-reverse</td>
+<td>-‌-reverse</td>
 <td>反序排序（升序变成降序）</td>
 </tr>
 <tr>
 <td>-S</td>
-<td>-&zwnj;-buffer-size=SIZE</td>
+<td>-‌-buffer-size=SIZE</td>
 <td>指定使用的内存大小</td>
 </tr>
 <tr>
 <td>-s</td>
-<td>-&zwnj;-stable</td>
+<td>-‌-stable</td>
 <td>禁用最后重排序比较</td>
 </tr>
 <tr>
 <td>-T</td>
-<td>-&zwnj;-temporary-directory=DIR</td>
+<td>-‌-temporary-directory=DIR</td>
 <td>指定一个位置来存储临时工作文件</td>
 </tr>
 <tr>
 <td>-t</td>
-<td>-&zwnj;-field-separator=SEP</td>
+<td>-‌-field-separator=SEP</td>
 <td>指定一个用来区分键位置的字符</td>
 </tr>
 <tr>
 <td>-u</td>
-<td>-&zwnj;-unique</td>
+<td>-‌-unique</td>
 <td>去重，有重复行时仅输出一次，先排序所有行，然后去除相邻的重复行，等价于sort</td>
 </tr>
 <tr>
 <td>-z</td>
-<td>-&zwnj;-zero-terminated</td>
+<td>-‌-zero-terminated</td>
 <td>用NULL字符作为行尾，而不是用换行符</td>
 </tr>
 </tbody></table>
@@ -586,8 +586,8 @@ hello***world*
 <li>-f 值：按字段截取指定文本</li>
 <li>-d “字符”：指定输入内容的字段分隔符，默认为制表符Tab</li>
 <li>-s 搭配-f使用，不打印不包含字段分隔符的行，默认情况下会打印</li>
-<li>-&zwnj;-output-delimiter=”字符”：搭配-f使用，指定输出内容的字段分隔符</li>
-<li>-&zwnj;-complement 搭配-b、-c、-f选项使用，不打印这些区间之间的内容，即提取除指定部分以外的所有内容</li>
+<li>-‌-output-delimiter=”字符”：搭配-f使用，指定输出内容的字段分隔符</li>
+<li>-‌-complement 搭配-b、-c、-f选项使用，不打印这些区间之间的内容，即提取除指定部分以外的所有内容</li>
 </ul>
 <div class="show">1.截取第2-5个字符
 echo "abcdefg" | cut -c 2-5
@@ -611,11 +611,11 @@ Jane
 <ul>
 <li>如果未指定数字，命令将默认从stdin读取</li>
 <li>-d 字符：使用指定字符作为字段分隔符，默认为空格</li>
-<li>-&zwnj;-format=”格式字符串”:使用printf支持格式作为输出格式，格式字符串必须包含一个<span class="tips">%f</span></li>
-<li>-&zwnj;-suffix=字符串：为输出的数字添加后缀，如添加单位符号，并且允许输入的数字中也携带该后缀</li>
-<li>-&zwnj;-grouping 根据当前区域设置分组规则(如：是否添加千分位分隔符<span class="tips">,</span>)</li>
-<li>-&zwnj;-header=值n：前n行不转换格式，直接输出</li>
-<li>-&zwnj;-invalid=工作模式：当输入的数字出现错误时，可以使用该选项指定numfmt的工作模式，工作模式可以取以下值：<blockquote>
+<li>-‌-format=”格式字符串”:使用printf支持格式作为输出格式，格式字符串必须包含一个<span class="tips">%f</span></li>
+<li>-‌-suffix=字符串：为输出的数字添加后缀，如添加单位符号，并且允许输入的数字中也携带该后缀</li>
+<li>-‌-grouping 根据当前区域设置分组规则(如：是否添加千分位分隔符<span class="tips">,</span>)</li>
+<li>-‌-header=值n：前n行不转换格式，直接输出</li>
+<li>-‌-invalid=工作模式：当输入的数字出现错误时，可以使用该选项指定numfmt的工作模式，工作模式可以取以下值：<blockquote>
 <blockquote>
 <ul>
 <li>abort：(默认)如果有错误的输入，立即退出命令，并返回状态码2</li>
@@ -626,8 +626,8 @@ Jane
 </blockquote>
 </blockquote>
 </li>
-<li>-&zwnj;-padding=值n：通过添加空格将输出数字填充到 n 个字符。如果 n 为正数，则数字将右对齐。如果 n 为负数，则数字将左对齐</li>
-<li>-&zwnj;-round=方法：当值从易读格式转换为纯数字格式时，指定数字四舍五入的方法，方法可以取以下值：<blockquote>
+<li>-‌-padding=值n：通过添加空格将输出数字填充到 n 个字符。如果 n 为正数，则数字将右对齐。如果 n 为负数，则数字将左对齐</li>
+<li>-‌-round=方法：当值从易读格式转换为纯数字格式时，指定数字四舍五入的方法，方法可以取以下值：<blockquote>
 <blockquote>
 <ul>
 <li>up：向上取整</li>
@@ -639,15 +639,15 @@ Jane
 </blockquote>
 </blockquote>
 </li>
-<li>-&zwnj;-from=unit标准:将输入单位转换为相应数值，如果输入的值中包含K、M等单位，需要指定该选项，命令无法解析将返回错误,unit的取值参考下一个选项</li>
-<li>-&zwnj;-to=unit标准：将输出值转换为相应单位，如果输出的值需要转换为K、M等单位，需要指定该选项，unit的取值如下:<blockquote>
+<li>-‌-from=unit标准:将输入单位转换为相应数值，如果输入的值中包含K、M等单位，需要指定该选项，命令无法解析将返回错误,unit的取值参考下一个选项</li>
+<li>-‌-to=unit标准：将输出值转换为相应单位，如果输出的值需要转换为K、M等单位，需要指定该选项，unit的取值如下:<blockquote>
 <blockquote>
 <ul>
 <li>none：不执行任何转换</li>
 <li>si：使用国际单位制SI进行转换，K、M、G等单位是以1000为基底的转换</li>
 <li>iec：使用国际电工委员会(IEC)标准进行转换，K、M、G等单位是以1024为基底的转换，大于1024的值将被四舍五入，这不是完全标准，但被经常使用</li>
 <li>iec-i：使用国际电工委员会(IEC)标准进行转换，Ki、Mi、Gi等单位是以1024为基底的转换，大于1024的值将被四舍五入</li>
-<li>auto：只能用于-&zwnj;-from选项，当输入值后单位为K、M等字符时，解析为SI标准，输入值后单位为Ki、Mi等双字母字符时，解析为IEC标准</li>
+<li>auto：只能用于-‌-from选项，当输入值后单位为K、M等字符时，解析为SI标准，输入值后单位为Ki、Mi等双字母字符时，解析为IEC标准</li>
 </ul>
 </blockquote>
 </blockquote>
@@ -673,7 +673,7 @@ numfmt --from=si 1M
 <li>-t 值：指定转换的空格数量，默认为8，可以指定多个值，如：-t 2,4,8 表示一行中的多个不同数量的空格依次替换为制表符</li>
 <li>-a 转换所有空格，包括非行首的空格和不足连续8个的连续空格</li>
 </ul>
-
+</body></html>
         </div>
     </div>
     <div class="post-nav">

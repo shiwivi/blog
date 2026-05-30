@@ -34,15 +34,15 @@ const fadeInOut = (t, m) => {
 
 //图片懒加载
 const viewH = document.documentElement.clientHeight;
-if (document.querySelector(".update")) {
-  let pics = document.querySelectorAll(".update-pic");
+if (document.querySelector(".post-list")) {
+  let pics = document.querySelectorAll(".card-media");
   function loadPic(picIndex) {
     let img = pics[picIndex].querySelector("img");
     img.src = img.dataset.src;
     img.onload = function () {
       setTimeout(() => {
-        this.parentNode.previousElementSibling.style = "display:none;";
-        this.parentNode.style = "visibility:visible;";
+        this.previousElementSibling.style = "display:none;";
+        this.style = "visibility:visible;";
       }, 1000)
     }
   }
@@ -71,7 +71,7 @@ if (document.querySelector(".update")) {
   }
   main.addEventListener("scroll", lazyloadThrottle());
   //文章聚焦
-  let lis = document.querySelector(".update").querySelectorAll("li");
+  let lis = document.querySelector(".post-list").querySelectorAll("li");
   function articleFocus() {
     let standby = true;
     return function () {

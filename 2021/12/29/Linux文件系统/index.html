@@ -1,4 +1,4 @@
-<!DOCTYPE html><html lang="zh-CN"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="author" content="shiwi"><meta name="copyright" content="SHIWIVI"><link rel="shortcut icon" href="/blog/images/favicon.ico" type="image/x-icon"><style>.preload{position:absolute;display:flex;flex-direction:column;align-items:center;justify-content:center;left:0;top:0;width:100%;height:100%;background-color:#000;z-index:100}.text{margin-bottom:10px;color:#00cff3;text-shadow:0 0 3px #00cff3;font-size:20px}.text span{display:inline-block}.dance{animation:dance .8s linear}.text span:nth-child(1){animation-delay:0s}.text span:nth-child(2){animation-delay:.1s}.text span:nth-child(3){animation-delay:.2s}.text span:nth-child(4){animation-delay:.3s}.text span:nth-child(5){animation-delay:.4s}.text span:nth-child(6){animation-delay:.5s}.text span:nth-child(7){animation-delay:.6s}.text span:nth-child(8){animation-delay:.7s}.text span:nth-child(9){animation-delay:.8s}.text span:nth-child(10){animation-delay:.9s}@keyframes dance{0%{transform:translateY(0)}50%{transform:translateY(-20px)}100%{transform:translateY(0)}}.loading{width:80%;max-width:260px;height:6px;background-color:#e1e4e8;border-radius:6px}.bar{display:flex;height:100%;background:linear-gradient(90deg,#ffd33d,#ea4aaa 10%,#b34bff 30%,#01feff 51%,#ffb33d 68%,#ea4aaa 85%,#b34bff);background-size:300% 100%;animation:bar 2s linear infinite}@keyframes bar{0%{background-position:100%}100%{background-position:0}}</style><body><div class="preload"><div class="text"><span>L</span> <span>o</span> <span>a</span> <span>d</span> <span>i</span> <span>n</span> <span>g</span> <span>.</span> <span>.</span> <span>.</span></div><div class="loading"><span class="bar"></span></div></div><script>let texts=document.querySelector('.text').querySelectorAll('span');let timer=setInterval(()=>{texts.forEach((item)=>{item.classList.toggle("dance")})},1700);window.onload=function(){clearInterval(timer);document.querySelector('.preload').style="display:none;"}</script><title>SHIWIVI-文章</title>
+<!DOCTYPE html><html lang="zh-CN"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="author" content="shiwi"><meta name="copyright" content="SHIWIVI"><link rel="shortcut icon" href="/blog/images/icon.png" type="image/x-icon"><style>.preload{position:absolute;display:flex;flex-direction:column;align-items:center;justify-content:center;left:0;top:0;width:100%;height:100%;background-color:#000;z-index:100}.text{margin-bottom:10px;color:#00cff3;text-shadow:0 0 3px #00cff3;font-size:20px}.text span{display:inline-block}.dance{animation:dance .8s linear}.text span:nth-child(1){animation-delay:0s}.text span:nth-child(2){animation-delay:.1s}.text span:nth-child(3){animation-delay:.2s}.text span:nth-child(4){animation-delay:.3s}.text span:nth-child(5){animation-delay:.4s}.text span:nth-child(6){animation-delay:.5s}.text span:nth-child(7){animation-delay:.6s}.text span:nth-child(8){animation-delay:.7s}.text span:nth-child(9){animation-delay:.8s}.text span:nth-child(10){animation-delay:.9s}@keyframes dance{0%{transform:translateY(0)}50%{transform:translateY(-20px)}100%{transform:translateY(0)}}.loading{width:80%;max-width:260px;height:6px;background-color:#e1e4e8;border-radius:6px}.bar{display:flex;height:100%;background:linear-gradient(90deg,#ffd33d,#ea4aaa 10%,#b34bff 30%,#01feff 51%,#ffb33d 68%,#ea4aaa 85%,#b34bff);background-size:300% 100%;animation:bar 2s linear infinite}@keyframes bar{0%{background-position:100%}100%{background-position:0}}</style><body><div class="preload"><div class="text"><span>L</span> <span>o</span> <span>a</span> <span>d</span> <span>i</span> <span>n</span> <span>g</span> <span>.</span> <span>.</span> <span>.</span></div><div class="loading"><span class="bar"></span></div></div><script>let texts=document.querySelector('.text').querySelectorAll('span');let timer=setInterval(()=>{texts.forEach((item)=>{item.classList.toggle("dance")})},1700);window.onload=function(){clearInterval(timer);document.querySelector('.preload').style="display:none;"}</script><title>SHIWIVI-文章</title>
 <link rel="stylesheet" href="https://at.alicdn.com/t/font_2856826_bu73u0ahu7a.css">
 
 <link rel="stylesheet" href="/blog/css/index.css">
@@ -136,13 +136,13 @@
         <div class="article">
         <h1 class="title">Linux文件系统与文件类型</h1>
         <div class="art-info">
-            <div><span><span class="iconfont icon-zishu-jzl"></span>字数：11104</span>
+            <div><span><span class="iconfont icon-zishu-jzl"></span>字数：18057</span>
             <span><span class="iconfont icon-riqi"></span>写于：2021-12-29</span></div>
             <div><span><span class="iconfont icon-zuixinnew3"></span>最新更新：2021-12-29</span>
-            <span><span class="iconfont icon-shijian"></span>阅读本文预计花费您32分钟</span></div>
+            <span><span class="iconfont icon-shijian"></span>阅读本文预计花费您52分钟</span></div>
         </div>
         <div class="art-content">
-        <h3 id="文件与目录类型"><a href="#文件与目录类型" class="headerlink" title="文件与目录类型"></a>文件与目录类型</h3><h4 id="常见的文件类型"><a href="#常见的文件类型" class="headerlink" title="常见的文件类型"></a>常见的文件类型</h4><ol>
+        <html><head></head><body><h3 id="文件与目录类型"><a href="#文件与目录类型" class="headerlink" title="文件与目录类型"></a>文件与目录类型</h3><h4 id="常见的文件类型"><a href="#常见的文件类型" class="headerlink" title="常见的文件类型"></a>常见的文件类型</h4><ol>
 <li><span class="tips"><strong>普通文件：</strong></span>最为常见的文件类型，包括纯文本文件(ASCII)，二进制文件(binary)，数据文件(data)等</li>
 <li><span class="tips"><strong>目录：</strong></span>即文件夹，用于包含更多目录和文件</li>
 <li><span class="tips"><strong>块设备文件：</strong></span>将硬盘、光盘等存储设备以文件形式供用户操作</li>
@@ -152,40 +152,40 @@
 <li><span class="tips"><strong>链接文件：</strong></span>分为硬链接和软链接，用于通过快捷方式或引用快速访问另一个文件或目录</li>
 </ol>
 <h4 id="Linux目录"><a href="#Linux目录" class="headerlink" title="Linux目录"></a>Linux目录</h4><h5 id="指令集"><a href="#指令集" class="headerlink" title="指令集"></a>指令集</h5><ul>
-<li><strong>/bin</strong> &emsp; Binaries的缩写，存放普通用户可使用的系统命令,如:ls</li>
-<li><strong>/sbin</strong>&emsp;Super user Binary的缩写，存放只有系统管理员才能使用的系统命令，如:shutdown、reboot</li>
-<li><strong>/usr/bin</strong>&emsp;存放安装软件后，普通用户可以使用的软件命令，如:c++、make、wget等</li>
-<li><strong>/usr/sbin</strong>&emsp;存放系统管理员用户安装使用的高级管理程序和系统服务程序，如:httpd、netconfig、tcpd等</li>
+<li><strong>/bin</strong>   Binaries的缩写，存放普通用户可使用的系统命令,如:ls</li>
+<li><strong>/sbin</strong> Super user Binary的缩写，存放只有系统管理员才能使用的系统命令，如:shutdown、reboot</li>
+<li><strong>/usr/bin</strong> 存放安装软件后，普通用户可以使用的软件命令，如:c++、make、wget等</li>
+<li><strong>/usr/sbin</strong> 存放系统管理员用户安装使用的高级管理程序和系统服务程序，如:httpd、netconfig、tcpd等</li>
 </ul>
 <h5 id="系统文件"><a href="#系统文件" class="headerlink" title="系统文件"></a>系统文件</h5><ul>
-<li><strong>/etc</strong>&emsp;Etcetera(其他)的缩写，这个目录用来存放所有系统管理所需要的<strong>配置文件</strong>和子目录</li>
-<li><strong>/var</strong>&emsp;存放一些经常被修改、扩充的文件，如各种日志文件</li>
-<li>/boot&emsp;存放引导启动Linux时使用的核心文件,如镜像文件等</li>
-<li>/sys&emsp; Linux2.6内核新增的文件系统sysfs，sysfs文件系统集成了3种文件系统的信息：针对进程信息的proc文件系统、针对设备的devfs文件系统以及针对伪终端的devpts文件系统</li>
-<li>/lib&emsp;存放系统所需要的动态链接库(如C++库)，相当于windows的dll文件</li>
-<li>/dev&emsp;Device的缩写, 将Linux主机的硬件以文件形式存储并提供访问，相当于Windows的设备管理器</li>
-<li>/usr/src&emsp;内核源代码、说明文档等默认放置目录</li>
-<li>/opt&emsp;默认为空，常用于安装额外软件，通常为第三方软件</li>
-<li>/proc&emsp;Processes(进程)的缩写，虚拟的目录，用于管理内存空间，是系统内存的映射，我们可以直接访问这个目录来获取系统信息。这个目录的内容不在硬盘上而是在内存里</li>
-<li>/selinux&emsp;全称为security-enhanced linux，该目录是 Redhat/CentOS 所特有的目录，是Redhat/CentOS的安全子系统</li>
-<li>/srv&emsp;service缩写，存放一些服务启动后需要提取的数据</li>
+<li><strong>/etc</strong> Etcetera(其他)的缩写，这个目录用来存放所有系统管理所需要的<strong>配置文件</strong>和子目录</li>
+<li><strong>/var</strong> 存放一些经常被修改、扩充的文件，如各种日志文件</li>
+<li>/boot 存放引导启动Linux时使用的核心文件,如镜像文件等</li>
+<li>/sys  Linux2.6内核新增的文件系统sysfs，sysfs文件系统集成了3种文件系统的信息：针对进程信息的proc文件系统、针对设备的devfs文件系统以及针对伪终端的devpts文件系统</li>
+<li>/lib 存放系统所需要的动态链接库(如C++库)，相当于windows的dll文件</li>
+<li>/dev Device的缩写, 将Linux主机的硬件以文件形式存储并提供访问，相当于Windows的设备管理器</li>
+<li>/usr/src 内核源代码、说明文档等默认放置目录</li>
+<li>/opt 默认为空，常用于安装额外软件，通常为第三方软件</li>
+<li>/proc Processes(进程)的缩写，虚拟的目录，用于管理内存空间，是系统内存的映射，我们可以直接访问这个目录来获取系统信息。这个目录的内容不在硬盘上而是在内存里</li>
+<li>/selinux 全称为security-enhanced linux，该目录是 Redhat/CentOS 所特有的目录，是Redhat/CentOS的安全子系统</li>
+<li>/srv service缩写，存放一些服务启动后需要提取的数据</li>
 </ul>
 <h5 id="用户"><a href="#用户" class="headerlink" title="用户"></a>用户</h5><ul>
-<li><strong>/root</strong>&emsp;系统管理员的账号主目录</li>
-<li><strong>/home</strong>&emsp;存放普通用户的相关文件，Linux会在home目录下为每一个用户生成一个以用户账号命名的目录</li>
-<li><strong>/usr</strong>&emsp;Unix Software Resource(共享资源)的缩写,放置用户的应用程序和文件，类似于windows下的program files目录</li>
-<li><strong>/usr/local</strong>&emsp;软件安装目录，一般通过源码编译安装方式安装的软件都会存放于该目录下</li>
-<li>/usr/include&emsp;放置如c/c++等程序语言的头文件(header)与包含档(include)</li>
-<li>/usr/lib&emsp;放置各应用软件的函式库、目标文件等，如果使用的是X86_64的Linux系统，则可能会生成/usr/lib64文件夹</li>
+<li><strong>/root</strong> 系统管理员的账号主目录</li>
+<li><strong>/home</strong> 存放普通用户的相关文件，Linux会在home目录下为每一个用户生成一个以用户账号命名的目录</li>
+<li><strong>/usr</strong> Unix Software Resource(共享资源)的缩写,放置用户的应用程序和文件，类似于windows下的program files目录</li>
+<li><strong>/usr/local</strong> 软件安装目录，一般通过源码编译安装方式安装的软件都会存放于该目录下</li>
+<li>/usr/include 放置如c/c++等程序语言的头文件(header)与包含档(include)</li>
+<li>/usr/lib 放置各应用软件的函式库、目标文件等，如果使用的是X86_64的Linux系统，则可能会生成/usr/lib64文件夹</li>
 </ul>
 <h5 id="外部文件"><a href="#外部文件" class="headerlink" title="外部文件"></a>外部文件</h5><ul>
-<li><strong>/media</strong>&emsp;挂载U盘、光驱等设备的目录，类似于windows的其他设备</li>
-<li>/mnt&emsp;让用户挂载其他的文件系统，如将Windows上的某个目录挂载在/mnt下，可用于共享文件等</li>
+<li><strong>/media</strong> 挂载U盘、光驱等设备的目录，类似于windows的其他设备</li>
+<li>/mnt 让用户挂载其他的文件系统，如将Windows上的某个目录挂载在/mnt下，可用于共享文件等</li>
 </ul>
 <h4 id="临时文件"><a href="#临时文件" class="headerlink" title="临时文件"></a>临时文件</h4><ul>
-<li>/lost+found&emsp;一般情况下为空目录，用于存放系统非法关机或者发生意外错误后，fsck(磁盘修复)过程修复的部分文件</li>
-<li>/tmp&emsp;用于存放临时文件</li>
-<li>/run&emsp;一个临时文件系统，存放存储系统启动以来的信息。当系统重启时，这个目录下的文件应该被删掉或清除。</li>
+<li>/lost+found 一般情况下为空目录，用于存放系统非法关机或者发生意外错误后，fsck(磁盘修复)过程修复的部分文件</li>
+<li>/tmp 用于存放临时文件</li>
+<li>/run 一个临时文件系统，存放存储系统启动以来的信息。当系统重启时，这个目录下的文件应该被删掉或清除。</li>
 </ul>
 <h3 id="链接文件"><a href="#链接文件" class="headerlink" title="链接文件"></a>链接文件</h3><p>链接文件是Linux文件系统的一个优势。当需要在系统上维护同一文件的两份或多份副本时，除了保存多份单独的物理文件副本之外(复制文件)，还可以采用保存一份物理文件副本和多个虚拟副本的方法(链接文件)，这种虚拟的副本就称为链接。Linux文件系统有两种链接文件：</p>
 <ul>
@@ -269,7 +269,7 @@ mknod /dev/myblockdevice b 8 1  #8是主设备号，1是次设备号
 <li>-t 在 $TMPDIR 环境变量指定的目录中创建文件或目录。如果未设置 $TMPDIR，则在/tmp路径下生成临时文件或目录，返回完整路径名</li>
 <li>-d 创建临时目录</li>
 <li>-q 在无法创建临时文件或目录时不产生错误信息</li>
-<li>-&zwnj;-suffix=”字符串”：为生成的文件添加指定后缀</li>
+<li>-‌-suffix=”字符串”：为生成的文件添加指定后缀</li>
 </ul>
 <div class="show">1.在当前目录下创建临时文件
 $ mktemp testing.XXXXXX
@@ -321,9 +321,9 @@ trap "rm -rf $tempdir" EXIT
 <div class="show">1.从 /dev/urandom 读取16字节随机数据
 head -c 16 /dev/urandom | base64
 2.随机生成12位密码
-< /dev/urandom tr -dc 'A-Za-z0-9!@#$%^&*()_' | head -c 12
+&lt; /dev/urandom tr -dc 'A-Za-z0-9!@#$%^&amp;*()_' | head -c 12
 或
-head -c 30 /dev/urandom | tr -dc 'A-Za-z0-9!@#$%^&*()_' | head -c 12; echo
+head -c 30 /dev/urandom | tr -dc 'A-Za-z0-9!@#$%^&amp;*()_' | head -c 12; echo
 </div>
 
 
@@ -466,8 +466,8 @@ head -c 30 /dev/urandom | tr -dc 'A-Za-z0-9!@#$%^&*()_' | head -c 12; echo
 </div>
 
 <h4 id="2-查看简短帮助"><a href="#2-查看简短帮助" class="headerlink" title="2. 查看简短帮助"></a>2. 查看简短帮助</h4><ul>
-<li><span class="strong">what 命令</span>&emsp;只显示命令帮助文档中NAME部分的内容</li>
-<li><span class="strong">apropos 配置文件</span>&emsp;简短查看配置文件作用</li>
+<li><span class="strong">what 命令</span> 只显示命令帮助文档中NAME部分的内容</li>
+<li><span class="strong">apropos 配置文件</span> 简短查看配置文件作用</li>
 </ul>
 <h4 id="3-查看命令的选项"><a href="#3-查看命令的选项" class="headerlink" title="3. 查看命令的选项"></a>3. 查看命令的选项</h4><p>只查看命令的可选参数选项，不需要查看命令完整帮助信息</p>
 <p><span class="strong">命令 --help</span></p>
@@ -587,15 +587,15 @@ head -c 30 /dev/urandom | tr -dc 'A-Za-z0-9!@#$%^&*()_' | head -c 12; echo
 </ul>
 <div class="shell">简单预览：
 +--------------------+
-|    应用程序层      |  <---- 用户通过命令或程序操作文件
+|    应用程序层      |  &lt;---- 用户通过命令或程序操作文件
 +--------------------+
-|    系统调用层      |  <---- 系统调用（如 `open`、`read`、`write`）
+|    系统调用层      |  &lt;---- 系统调用（如 `open`、`read`、`write`）
 +--------------------+
 |   虚拟文件系统 (VFS)|
 +--------------------+
-|   实际文件系统层   |  <---- ext4, XFS, Btrfs, FAT32, NFS 等
+|   实际文件系统层   |  &lt;---- ext4, XFS, Btrfs, FAT32, NFS 等
 +--------------------+
-|   存储设备层      |  <---- 硬盘、SSD、USB 驱动器
+|   存储设备层      |  &lt;---- 硬盘、SSD、USB 驱动器
 +--------------------+
 </div>
 
@@ -664,15 +664,15 @@ head -c 30 /dev/urandom | tr -dc 'A-Za-z0-9!@#$%^&*()_' | head -c 12; echo
 <p><span class="strong">df [参数] [挂载点]</span></p>
 <ul>
 <li>默认情况下，命令会输出所有当前已挂载文件系统的信息</li>
-<li>-a &emsp;显示所有文件系统信息，包括特殊文件系统，这些文件系统通常无法直接访问，因此默认不显示</li>
-<li>-h &emsp;将磁盘大小单位换算为KB、MB等单位，以1024作为基数进行换算</li>
-<li>-H &emsp;等价于-&zwnj;-si选项，换算单位为K、M等单位，以1000作为基数进行换算</li>
-<li>-m &emsp;以MB为单位显示容量</li>
-<li>-k &emsp;以KB为单位显示容量，默认值</li>
-<li>-T &emsp;显示文件系统类型</li>
-<li>-i &emsp;列出 inode 使用情况信息，而不是块使用情况</li>
-<li>-l &emsp;只列出本地文件系统，默认情况下还会列出远程文件系统</li>
-<li>-&zwnj;-output=项目：只列出指定项目，指定多个项目可以用逗号分隔(如-&zwnj;-output=source,target)，接收的参数有：source(挂载来源，通常是设备)、target(挂载点)、fstype(文件系统类型)、itotal(inode总数)、iused(已用inode数量)、iavail(可用inode数量)、ipcent(iused除以 itotal的百分比)、size(块总数)、used(已使用的块数)、avail(可用的块数)、pcent(used除以size)、file(文件名，需要在命令行指定)</li>
+<li>-a  显示所有文件系统信息，包括特殊文件系统，这些文件系统通常无法直接访问，因此默认不显示</li>
+<li>-h  将磁盘大小单位换算为KB、MB等单位，以1024作为基数进行换算</li>
+<li>-H  等价于-‌-si选项，换算单位为K、M等单位，以1000作为基数进行换算</li>
+<li>-m  以MB为单位显示容量</li>
+<li>-k  以KB为单位显示容量，默认值</li>
+<li>-T  显示文件系统类型</li>
+<li>-i  列出 inode 使用情况信息，而不是块使用情况</li>
+<li>-l  只列出本地文件系统，默认情况下还会列出远程文件系统</li>
+<li>-‌-output=项目：只列出指定项目，指定多个项目可以用逗号分隔(如-‌-output=source,target)，接收的参数有：source(挂载来源，通常是设备)、target(挂载点)、fstype(文件系统类型)、itotal(inode总数)、iused(已用inode数量)、iavail(可用inode数量)、ipcent(iused除以 itotal的百分比)、size(块总数)、used(已使用的块数)、avail(可用的块数)、pcent(used除以size)、file(文件名，需要在命令行指定)</li>
 <li>-t 文件系统：只显示某个文件系统的信息，可以指定多个-t选项</li>
 </ul>
 <div class="show">df命令会输出以下信息：
@@ -707,13 +707,13 @@ df命令会统计包括一些磁盘碎片在内的空间，而该类空间是被
 <li>-c 在处理完所有文件后，打印总计</li>
 <li>-s 只统计总大小，不列出子目录和文件</li>
 <li>-d 值depth：只从当前目录向下统计depth层(文件的层次结构)，当前目录为第0层</li>
-<li>-&zwnj;-inodes 列出inode的使用情况，而不是块使用情况</li>
+<li>-‌-inodes 列出inode的使用情况，而不是块使用情况</li>
 <li>-L 显示链接指向的文件或目录的所占用空间大小，而不是链接文件本身</li>
 <li>-t 值：如果给定的值为正数，则只打印大于等于该值的目录或文件信息，如果值为负数，则只打印小于等于该值的目录或文件，这里的值可以使用kB、k、KiB等单位</li>
-<li>-&zwnj;-time：打印文件或目录的上一次内容修改时间mtime</li>
-<li>-&zwnj;-time=ctime：打印文件或目录上一次属性修改时间ctime</li>
-<li>-&zwnj;-time=atime：打印文件或目录上一次访问时间atime</li>
-<li>-&zwnj;-exclude=正则pattern：递归统计时，跳过与pattern匹配的子目录或文件，如du -&zwnj;-exclude=’*.o’ 排除以.o结尾的文件</li>
+<li>-‌-time：打印文件或目录的上一次内容修改时间mtime</li>
+<li>-‌-time=ctime：打印文件或目录上一次属性修改时间ctime</li>
+<li>-‌-time=atime：打印文件或目录上一次访问时间atime</li>
+<li>-‌-exclude=正则pattern：递归统计时，跳过与pattern匹配的子目录或文件，如du -‌-exclude=’*.o’ 排除以.o结尾的文件</li>
 <li>-X 文件名：从该文件中获取需要排除的文件或目录，每一行表示一个或一类文件，可以使用正则表达式，如果文件名为-，表示从标准输入获取</li>
 </ul>
 <div class="broadcast color-green">
@@ -722,8 +722,8 @@ ls命令只统计目录下一级子文件和子目录文件信息大小，而不
 
 <h4 id="文件系统修复"><a href="#文件系统修复" class="headerlink" title="文件系统修复"></a>文件系统修复</h4><p><span class="strong">fsck [参数] 分区设备名</span></p>
 <ul>
-<li>-a &emsp;不显示用户提示，自动修复文件系统</li>
-<li>-y &emsp;功能同-a，部分文件系统仅支持-y</li>
+<li>-a  不显示用户提示，自动修复文件系统</li>
+<li>-y  功能同-a，部分文件系统仅支持-y</li>
 </ul>
 <h3 id="文件系统的挂载与卸载"><a href="#文件系统的挂载与卸载" class="headerlink" title="文件系统的挂载与卸载"></a>文件系统的挂载与卸载</h3><p>Linux文件系统将所有的磁盘都并入一个虚拟目录下。在使用新的存储媒体之前(如载入U盘等)，需要把它映射到虚拟目录下的某个位置，方便通过虚拟目录直接操作文件和设备，这个步骤称为挂载(mounting)</p>
 <h4 id="etc-fstab文件"><a href="#etc-fstab文件" class="headerlink" title="/etc/fstab文件"></a>/etc/fstab文件</h4><p><span class="tips">/etc/fstab</span>(File System Table)文件用来存储文件系统的静态信息，包括可以挂载的文件系统、挂载点路径、文件系统类型以及它们的挂载选项(如读写权限、是否需要自动挂载等)，fsck、mount、umount、swapon、swapoff等命令都会读取该文件作为配置来源</p>
@@ -891,13 +891,13 @@ UUID=aecbeedf-6eeb-40f6-b185-03030fc62888 / ext4 defaults 0 1
 <h4 id="挂载U盘"><a href="#挂载U盘" class="headerlink" title="挂载U盘"></a>挂载U盘</h4><ol>
 <li><p><span class="strong">fdisk -l</span>查看U盘设备文件名</p>
 </li>
-<li><p><span class="strong">mount -t &emsp;文件系统 &emsp;/dev/U盘设备文件名 &emsp;/mnt</span></p>
+<li><p><span class="strong">mount -t  文件系统  /dev/U盘设备文件名  /mnt</span></p>
 </li>
 </ol>
 <p>linux默认不支持NTFS文件系统(大部分移动硬盘设备使用NTFS文件系统)，但可以通过插件提供支持</p>
 <h4 id="卸载设备"><a href="#卸载设备" class="headerlink" title="卸载设备"></a>卸载设备</h4><p>注意，如果有任何程序正在使用设备上的文件，系统就不允许卸载，而是会提示 device is busy，注意命令不是un开头，没有n<br><span class="strong">umount 设备文件名或挂载点目录名</span>卸载设备</p>
 <p>如果在卸载设备时，系统提示设备繁忙，无法卸载设备，通常是有进程还在访问该设备或使用该设备上的文件。这时可用lsof命令获得使用它的进程信息，然后在应用中停止使用该设备或停止该进程。如：lsof /path/to/device/node，或者lsof /path/to/mount/point</p>
-
+</body></html>
         </div>
     </div>
     <div class="post-nav">

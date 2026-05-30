@@ -1,4 +1,4 @@
-<!DOCTYPE html><html lang="zh-CN"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="author" content="shiwi"><meta name="copyright" content="SHIWIVI"><link rel="shortcut icon" href="/blog/images/favicon.ico" type="image/x-icon"><style>.preload{position:absolute;display:flex;flex-direction:column;align-items:center;justify-content:center;left:0;top:0;width:100%;height:100%;background-color:#000;z-index:100}.text{margin-bottom:10px;color:#00cff3;text-shadow:0 0 3px #00cff3;font-size:20px}.text span{display:inline-block}.dance{animation:dance .8s linear}.text span:nth-child(1){animation-delay:0s}.text span:nth-child(2){animation-delay:.1s}.text span:nth-child(3){animation-delay:.2s}.text span:nth-child(4){animation-delay:.3s}.text span:nth-child(5){animation-delay:.4s}.text span:nth-child(6){animation-delay:.5s}.text span:nth-child(7){animation-delay:.6s}.text span:nth-child(8){animation-delay:.7s}.text span:nth-child(9){animation-delay:.8s}.text span:nth-child(10){animation-delay:.9s}@keyframes dance{0%{transform:translateY(0)}50%{transform:translateY(-20px)}100%{transform:translateY(0)}}.loading{width:80%;max-width:260px;height:6px;background-color:#e1e4e8;border-radius:6px}.bar{display:flex;height:100%;background:linear-gradient(90deg,#ffd33d,#ea4aaa 10%,#b34bff 30%,#01feff 51%,#ffb33d 68%,#ea4aaa 85%,#b34bff);background-size:300% 100%;animation:bar 2s linear infinite}@keyframes bar{0%{background-position:100%}100%{background-position:0}}</style><body><div class="preload"><div class="text"><span>L</span> <span>o</span> <span>a</span> <span>d</span> <span>i</span> <span>n</span> <span>g</span> <span>.</span> <span>.</span> <span>.</span></div><div class="loading"><span class="bar"></span></div></div><script>let texts=document.querySelector('.text').querySelectorAll('span');let timer=setInterval(()=>{texts.forEach((item)=>{item.classList.toggle("dance")})},1700);window.onload=function(){clearInterval(timer);document.querySelector('.preload').style="display:none;"}</script><title>SHIWIVI-文章</title>
+<!DOCTYPE html><html lang="zh-CN"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="author" content="shiwi"><meta name="copyright" content="SHIWIVI"><link rel="shortcut icon" href="/blog/images/icon.png" type="image/x-icon"><style>.preload{position:absolute;display:flex;flex-direction:column;align-items:center;justify-content:center;left:0;top:0;width:100%;height:100%;background-color:#000;z-index:100}.text{margin-bottom:10px;color:#00cff3;text-shadow:0 0 3px #00cff3;font-size:20px}.text span{display:inline-block}.dance{animation:dance .8s linear}.text span:nth-child(1){animation-delay:0s}.text span:nth-child(2){animation-delay:.1s}.text span:nth-child(3){animation-delay:.2s}.text span:nth-child(4){animation-delay:.3s}.text span:nth-child(5){animation-delay:.4s}.text span:nth-child(6){animation-delay:.5s}.text span:nth-child(7){animation-delay:.6s}.text span:nth-child(8){animation-delay:.7s}.text span:nth-child(9){animation-delay:.8s}.text span:nth-child(10){animation-delay:.9s}@keyframes dance{0%{transform:translateY(0)}50%{transform:translateY(-20px)}100%{transform:translateY(0)}}.loading{width:80%;max-width:260px;height:6px;background-color:#e1e4e8;border-radius:6px}.bar{display:flex;height:100%;background:linear-gradient(90deg,#ffd33d,#ea4aaa 10%,#b34bff 30%,#01feff 51%,#ffb33d 68%,#ea4aaa 85%,#b34bff);background-size:300% 100%;animation:bar 2s linear infinite}@keyframes bar{0%{background-position:100%}100%{background-position:0}}</style><body><div class="preload"><div class="text"><span>L</span> <span>o</span> <span>a</span> <span>d</span> <span>i</span> <span>n</span> <span>g</span> <span>.</span> <span>.</span> <span>.</span></div><div class="loading"><span class="bar"></span></div></div><script>let texts=document.querySelector('.text').querySelectorAll('span');let timer=setInterval(()=>{texts.forEach((item)=>{item.classList.toggle("dance")})},1700);window.onload=function(){clearInterval(timer);document.querySelector('.preload').style="display:none;"}</script><title>SHIWIVI-文章</title>
 <link rel="stylesheet" href="https://at.alicdn.com/t/font_2856826_bu73u0ahu7a.css">
 
 <link rel="stylesheet" href="/blog/css/index.css">
@@ -136,17 +136,17 @@
         <div class="article">
         <h1 class="title">Grid栅格布局</h1>
         <div class="art-info">
-            <div><span><span class="iconfont icon-zishu-jzl"></span>字数：10592</span>
+            <div><span><span class="iconfont icon-zishu-jzl"></span>字数：10552</span>
             <span><span class="iconfont icon-riqi"></span>写于：2022-06-14</span></div>
             <div><span><span class="iconfont icon-zuixinnew3"></span>最新更新：2022-06-14</span>
             <span><span class="iconfont icon-shijian"></span>阅读本文预计花费您31分钟</span></div>
         </div>
         <div class="art-content">
-        <div class="broadcast color-yellow">
+        <html><head></head><body><div class="broadcast color-yellow">
 <div class="iconfont icon-dengpao14hao"></div>
 Grid在MDN上翻译为网格布局，在《CSS权威指南》中翻译为栅格布局，其实是同一种布局方案，本文语句主要整理自《CSS权威指南》一书</div>
 
-<h3 id="1-栅格布局"><a href="#1-栅格布局" class="headerlink" title="1. 栅格布局"></a>1. 栅格布局</h3><p>Grid 是一种强大的布局方案，也是最为普适的布局方案，允许在Web上创建二维布局，通过对父元素定义不同参数的行与列垂直线，再将子元素部署于行列网格上，由此实现各类灵活的布局，如：<br><br/></p>
+<h3 id="1-栅格布局"><a href="#1-栅格布局" class="headerlink" title="1. 栅格布局"></a>1. 栅格布局</h3><p>Grid 是一种强大的布局方案，也是最为普适的布局方案，允许在Web上创建二维布局，通过对父元素定义不同参数的行与列垂直线，再将子元素部署于行列网格上，由此实现各类灵活的布局，如：<br><br></p>
 <div style="display:grid;grid-template-areas:'a a a' 'b c d' 'b e e';text-align:center;color:#fff;width:280px;height:200px;margin:0 auto;">
 <div style="background-color:#EA2027;grid-area:a;">box1</div>
 <div style="background-color:#fff200;grid-area:b;">box2</div>
@@ -154,7 +154,7 @@ Grid在MDN上翻译为网格布局，在《CSS权威指南》中翻译为栅格�
 <div style="background-color:#32ff7e;grid-area:d;">box4</div>
 <div style="background-color:#4b4b4b;grid-area:e;">box5</div>
 </div>
-<br/>
+<br>
 
 <p>通过标准流、float、flex也可以实现类似的布局，但这些方案往往需要更多的DOM元素，或者需要指定更多的参数，并且很多情况下无法做到自适应，此时，grid布局方案的优势就体现出来了。并且语法兼容性也很好，除了那位大爷…..</p>
 <div class="table">
@@ -164,8 +164,8 @@ Grid在MDN上翻译为网格布局，在《CSS权威指南》中翻译为栅格�
 <th>Chrome</th><th>Edeg</th><th>Firefox</th><th>IE</th><th>Opera</th><th>Safari</th>
 </tr>
 </thead>
-<tr><td>57</td><td>16</td><td>52</td><td style="color:red;">不支持</td><td>44</td><td>10.1</td></tr>
-</table>
+<tbody><tr><td>57</td><td>16</td><td>52</td><td style="color:red;">不支持</td><td>44</td><td>10.1</td></tr>
+</tbody></table>
 </div>
 
 <h3 id="2-栅格容器"><a href="#2-栅格容器" class="headerlink" title="2. 栅格容器"></a>2. 栅格容器</h3><p>创建栅格的第一步就是创建一个栅格容器，并将其中的内容定义为栅格布局</p>
@@ -586,8 +586,8 @@ A 格子 B 格子 A 格子 B 格子 A 格子 B 格子
 .parbox {
     display:grid;
     grid-template-areas: 'a a a'
-                        &emsp;&emsp;&emsp;&emsp;'b c d'
-                        &emsp;&emsp;&emsp;&emsp;'b e e';
+                            'b c d'
+                            'b e e';
 }
 排列方法可以写于同一行上，但需要注意'&nbsp;'号
 grid-template-areas: 'a a a''b c d''b e e';
@@ -733,9 +733,9 @@ box1、box2、box3、box4在显式栅格内，高为100px，box5，box6超出了
 <div style="background-color:#4b4b4b;">box5</div>
 <div style="background-color:#67e6dc;">box6</div>
 </div>
-<br/>
-<br/>
-<br/>
+<br>
+<br>
+<br>
 
 <h3 id="6-栅格流"><a href="#6-栅格流" class="headerlink" title="6. 栅格流"></a>6. 栅格流</h3><p>栅格流主要分为优先行、优先列、密集流三种模式，由<span class="tips">grid-auto-flow</span>决定</p>
 <div class="show">grid-auto-flow的取值有row、column、dense(密集流)
@@ -755,7 +755,7 @@ box1、box2、box3、box4在显式栅格内，高为100px，box5，box6超出了
 <div style="background-color:#32ff7e;">box4</div>
 <div style="background-color:#4b4b4b;">box5</div>
 </div>
-<br/>
+<br>
 <div style="display:grid;grid-template: repeat(3,80px) / repeat(3,80px);width: 240px;height: 240px; grid-auto-flow: column;text-align:center;color:#fff;margin:0 auto;border:1px solid black;box-sizing: border-box;">
 <div style="background-color:#EA2027;">box1</div>
 <div style="background-color:#fff200;">box2</div>
@@ -786,7 +786,7 @@ grid将修正为
 
 <div class="broadcast color-purple">
 <div class="iconfont icon-fengche"></div>
-当栅格元素出现重叠时，可以使用 z-index 或 order 进行排序，并且栅格元素可以使用margin、position等标准流、定位等属性。并且还有其他一些更复杂的属性简写语法，本文不再展开说明，具体可以查阅MDN的文档</div>
+当栅格元素出现重叠时，可以使用 z-index 或 order 进行排序，并且栅格元素可以使用margin、position等标准流、定位等属性。并且还有其他一些更复杂的属性简写语法，本文不再展开说明，具体可以查阅MDN的文档</div></body></html>
         </div>
     </div>
     <div class="post-nav">

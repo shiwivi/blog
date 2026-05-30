@@ -1,4 +1,4 @@
-<!DOCTYPE html><html lang="zh-CN"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="author" content="shiwi"><meta name="copyright" content="SHIWIVI"><link rel="shortcut icon" href="/blog/images/favicon.ico" type="image/x-icon"><style>.preload{position:absolute;display:flex;flex-direction:column;align-items:center;justify-content:center;left:0;top:0;width:100%;height:100%;background-color:#000;z-index:100}.text{margin-bottom:10px;color:#00cff3;text-shadow:0 0 3px #00cff3;font-size:20px}.text span{display:inline-block}.dance{animation:dance .8s linear}.text span:nth-child(1){animation-delay:0s}.text span:nth-child(2){animation-delay:.1s}.text span:nth-child(3){animation-delay:.2s}.text span:nth-child(4){animation-delay:.3s}.text span:nth-child(5){animation-delay:.4s}.text span:nth-child(6){animation-delay:.5s}.text span:nth-child(7){animation-delay:.6s}.text span:nth-child(8){animation-delay:.7s}.text span:nth-child(9){animation-delay:.8s}.text span:nth-child(10){animation-delay:.9s}@keyframes dance{0%{transform:translateY(0)}50%{transform:translateY(-20px)}100%{transform:translateY(0)}}.loading{width:80%;max-width:260px;height:6px;background-color:#e1e4e8;border-radius:6px}.bar{display:flex;height:100%;background:linear-gradient(90deg,#ffd33d,#ea4aaa 10%,#b34bff 30%,#01feff 51%,#ffb33d 68%,#ea4aaa 85%,#b34bff);background-size:300% 100%;animation:bar 2s linear infinite}@keyframes bar{0%{background-position:100%}100%{background-position:0}}</style><body><div class="preload"><div class="text"><span>L</span> <span>o</span> <span>a</span> <span>d</span> <span>i</span> <span>n</span> <span>g</span> <span>.</span> <span>.</span> <span>.</span></div><div class="loading"><span class="bar"></span></div></div><script>let texts=document.querySelector('.text').querySelectorAll('span');let timer=setInterval(()=>{texts.forEach((item)=>{item.classList.toggle("dance")})},1700);window.onload=function(){clearInterval(timer);document.querySelector('.preload').style="display:none;"}</script><title>SHIWIVI-文章</title>
+<!DOCTYPE html><html lang="zh-CN"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="author" content="shiwi"><meta name="copyright" content="SHIWIVI"><link rel="shortcut icon" href="/blog/images/icon.png" type="image/x-icon"><style>.preload{position:absolute;display:flex;flex-direction:column;align-items:center;justify-content:center;left:0;top:0;width:100%;height:100%;background-color:#000;z-index:100}.text{margin-bottom:10px;color:#00cff3;text-shadow:0 0 3px #00cff3;font-size:20px}.text span{display:inline-block}.dance{animation:dance .8s linear}.text span:nth-child(1){animation-delay:0s}.text span:nth-child(2){animation-delay:.1s}.text span:nth-child(3){animation-delay:.2s}.text span:nth-child(4){animation-delay:.3s}.text span:nth-child(5){animation-delay:.4s}.text span:nth-child(6){animation-delay:.5s}.text span:nth-child(7){animation-delay:.6s}.text span:nth-child(8){animation-delay:.7s}.text span:nth-child(9){animation-delay:.8s}.text span:nth-child(10){animation-delay:.9s}@keyframes dance{0%{transform:translateY(0)}50%{transform:translateY(-20px)}100%{transform:translateY(0)}}.loading{width:80%;max-width:260px;height:6px;background-color:#e1e4e8;border-radius:6px}.bar{display:flex;height:100%;background:linear-gradient(90deg,#ffd33d,#ea4aaa 10%,#b34bff 30%,#01feff 51%,#ffb33d 68%,#ea4aaa 85%,#b34bff);background-size:300% 100%;animation:bar 2s linear infinite}@keyframes bar{0%{background-position:100%}100%{background-position:0}}</style><body><div class="preload"><div class="text"><span>L</span> <span>o</span> <span>a</span> <span>d</span> <span>i</span> <span>n</span> <span>g</span> <span>.</span> <span>.</span> <span>.</span></div><div class="loading"><span class="bar"></span></div></div><script>let texts=document.querySelector('.text').querySelectorAll('span');let timer=setInterval(()=>{texts.forEach((item)=>{item.classList.toggle("dance")})},1700);window.onload=function(){clearInterval(timer);document.querySelector('.preload').style="display:none;"}</script><title>SHIWIVI-文章</title>
 <link rel="stylesheet" href="https://at.alicdn.com/t/font_2856826_bu73u0ahu7a.css">
 
 <link rel="stylesheet" href="/blog/css/index.css">
@@ -136,13 +136,13 @@
         <div class="article">
         <h1 class="title">Linux命令补充</h1>
         <div class="art-info">
-            <div><span><span class="iconfont icon-zishu-jzl"></span>字数：3424</span>
+            <div><span><span class="iconfont icon-zishu-jzl"></span>字数：3423</span>
             <span><span class="iconfont icon-riqi"></span>写于：2021-12-29</span></div>
             <div><span><span class="iconfont icon-zuixinnew3"></span>最新更新：2022-01-23</span>
             <span><span class="iconfont icon-shijian"></span>阅读本文预计花费您10分钟</span></div>
         </div>
         <div class="art-content">
-        <h3 id="sleep延时"><a href="#sleep延时" class="headerlink" title="sleep延时"></a>sleep延时</h3><p><span class="strong">sleep 时间值</span></p>
+        <html><head></head><body><h3 id="sleep延时"><a href="#sleep延时" class="headerlink" title="sleep延时"></a>sleep延时</h3><p><span class="strong">sleep 时间值</span></p>
 <ul>
 <li>单位默认为s(秒)，可以使用m(分钟)、h(小时)、d(天)</li>
 <li>sleep inf 表示无限期延时</li>
@@ -153,7 +153,7 @@
 <li>默认情况下，命令每2秒刷新一次</li>
 <li>-n 秒数：指定每隔多少秒刷新一次，单位为秒，最小值为0.1s</li>
 <li>-d 高亮显示输出中变化的部分</li>
-<li>-&zwnj;-differences[=permanent]：该选项是-d选项的完整长选项，长选项支持添加一个可选参数permanent，如果添加了该参数，watch命令将显示自第一次输出以来的所有更改，而不是对比上一次输出结果</li>
+<li>-‌-differences[=permanent]：该选项是-d选项的完整长选项，长选项支持添加一个可选参数permanent，如果添加了该参数，watch命令将显示自第一次输出以来的所有更改，而不是对比上一次输出结果</li>
 <li>-t 隐藏标题栏，默认情况下，命令首行会显示刷新时间、命令、刷新间隔等信息，该选项会将这些信息隐藏</li>
 <li>-e 在命令出错时冻结输出结果，且在用户按下键盘后退出，可用来保留错误输出信息</li>
 <li>-x 允许传递参数给监控的命令，如：watch -x ls -l /home/user 表示将-l和/home/user路径传递给ls命令，而不是watch命令</li>
@@ -221,7 +221,7 @@ GNU社区的bc文档：<a target="_blank" rel="noopener" href="https://www.gnu.o
 <h4 id="命令"><a href="#命令" class="headerlink" title="命令"></a>命令</h4><p><span class="strong">bc [选项] [文件]</span></p>
 <ul>
 <li>默认情况下，bc命令进行整数运算，通过scale变量可以指定小数位数，进行浮点数运算，并且打开bc时默认会打印版本信息</li>
-<li>-q 安静模式，不打印版本信息、GNU提示信息，其长选项为-&zwnj;-quiet</li>
+<li>-q 安静模式，不打印版本信息、GNU提示信息，其长选项为-‌-quiet</li>
 <li>-l 加载数学库，可以使用sin、sqrt等数学函数</li>
 </ul>
 <h4 id="变量"><a href="#变量" class="headerlink" title="变量"></a>变量</h4><p>bc内部预定义了几个变量：</p>
@@ -296,7 +296,7 @@ var1=10.46
 var2=43.67 
 var3=33.2 
 var4=71 
-var5=$(bc << EOF 
+var5=$(bc &lt;&lt; EOF 
 scale = 4 
 a1 = ( $var1 * $var2) 
 b1 = ($var3 * $var4) 
@@ -306,7 +306,7 @@ EOF
 echo "最终结果为：" $var5
 </div></div>
 
-
+</body></html>
         </div>
     </div>
     <div class="post-nav">

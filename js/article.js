@@ -55,68 +55,22 @@ if (contentH2) {
 }
 
 //图片懒加载
-let imgs = articleContent.querySelectorAll('img');
-if (imgs) {
-    imgs.forEach(img => {
-        let imgWrapper = document.createElement('div');
-        let loadWrapper=document.createElement('div');
-        imgWrapper.className = "img-wrapper";
-        loadWrapper.className="load-wrapper"
-        loadWrapper.innerHTML = `
-        <div class="load-line"></div>
-        <div class="load-line"></div>
-        <div class="load-line"></div>
-        <div class="load-text">
-            <span>Loading</span>
-            <span class="point-text">o</span>
-            <span class="point-text">.</span>
-            <span class="point-text">0</span>
-        </div>`;
-        imgWrapper.appendChild(loadWrapper);
-        img.parentNode.insertBefore(imgWrapper,img);
-        imgWrapper.appendChild(img);
-        // img.insertAdjacentElement('beforebegin', imgWrapper);
-        // imgWrapper.insertBefore(img, null);
-    })
-}
-const viewH = document.documentElement.clientHeight;
-const imgWrappers = document.querySelectorAll('.img-wrapper');
+let imgs = articleContent.querySelectorAll('.img-wrapper img');
+function hideImgLoader(img) {
+    const wrapper = img.closest('.img-wrapper');
+    if (!wrapper) return;
+    wrapper.querySelector('.load-wrapper').style.display = 'none'; // 隐藏占位
+};
 
-function loadImg(imgIndex) {
-    if (imgWrappers[imgIndex].getBoundingClientRect().top < viewH) {
-        imgs[imgIndex].src = imgs[imgIndex].dataset.src;
-        imgs[imgIndex].onload = function () {
-            this.parentNode.querySelector('.load-wrapper').style = "display:none;";
-        }
+imgs.forEach(img => {
+    if (img.complete) {
+        hideImgLoader(img)
     }
-}
-for (let i = 0; i < imgWrappers.length; i++) {
-    loadImg(i);
-}
-function throttleLazyload() {
-    let imgIndex = 0;
-    let timer = null;
-    return function () {
-        if (!timer) {
-            timer = setTimeout(() => {
-                if (imgIndex >= imgWrappers.length) {
-                    main.removeEventListener('scroll', throttleLazyload);
-                    return;
-                }
-                if (imgWrappers[imgIndex].getBoundingClientRect().top < viewH) {
-                    imgs[imgIndex].src = imgs[imgIndex].dataset.src;
-                    imgs[imgIndex].onload = function () {
-                        this.parentNode.querySelector('.load-wrapper').style = "display:none;";
-                    }
-                    imgIndex++;
-                }
-                timer = null;
-            }, 300)
-        }
+    else {
+        img.addEventListener("load", () => hideImgLoader(img))
     }
-}
+})
 
-main.addEventListener('scroll', throttleLazyload());
 const pres = document.querySelectorAll('pre');
 if (pres) {
     for (let i = 0; i < pres.length; i++) {

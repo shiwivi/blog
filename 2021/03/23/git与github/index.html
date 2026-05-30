@@ -1,4 +1,4 @@
-<!DOCTYPE html><html lang="zh-CN"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="author" content="shiwi"><meta name="copyright" content="SHIWIVI"><link rel="shortcut icon" href="/blog/images/favicon.ico" type="image/x-icon"><style>.preload{position:absolute;display:flex;flex-direction:column;align-items:center;justify-content:center;left:0;top:0;width:100%;height:100%;background-color:#000;z-index:100}.text{margin-bottom:10px;color:#00cff3;text-shadow:0 0 3px #00cff3;font-size:20px}.text span{display:inline-block}.dance{animation:dance .8s linear}.text span:nth-child(1){animation-delay:0s}.text span:nth-child(2){animation-delay:.1s}.text span:nth-child(3){animation-delay:.2s}.text span:nth-child(4){animation-delay:.3s}.text span:nth-child(5){animation-delay:.4s}.text span:nth-child(6){animation-delay:.5s}.text span:nth-child(7){animation-delay:.6s}.text span:nth-child(8){animation-delay:.7s}.text span:nth-child(9){animation-delay:.8s}.text span:nth-child(10){animation-delay:.9s}@keyframes dance{0%{transform:translateY(0)}50%{transform:translateY(-20px)}100%{transform:translateY(0)}}.loading{width:80%;max-width:260px;height:6px;background-color:#e1e4e8;border-radius:6px}.bar{display:flex;height:100%;background:linear-gradient(90deg,#ffd33d,#ea4aaa 10%,#b34bff 30%,#01feff 51%,#ffb33d 68%,#ea4aaa 85%,#b34bff);background-size:300% 100%;animation:bar 2s linear infinite}@keyframes bar{0%{background-position:100%}100%{background-position:0}}</style><body><div class="preload"><div class="text"><span>L</span> <span>o</span> <span>a</span> <span>d</span> <span>i</span> <span>n</span> <span>g</span> <span>.</span> <span>.</span> <span>.</span></div><div class="loading"><span class="bar"></span></div></div><script>let texts=document.querySelector('.text').querySelectorAll('span');let timer=setInterval(()=>{texts.forEach((item)=>{item.classList.toggle("dance")})},1700);window.onload=function(){clearInterval(timer);document.querySelector('.preload').style="display:none;"}</script><title>SHIWIVI-文章</title>
+<!DOCTYPE html><html lang="zh-CN"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="author" content="shiwi"><meta name="copyright" content="SHIWIVI"><link rel="shortcut icon" href="/blog/images/icon.png" type="image/x-icon"><style>.preload{position:absolute;display:flex;flex-direction:column;align-items:center;justify-content:center;left:0;top:0;width:100%;height:100%;background-color:#000;z-index:100}.text{margin-bottom:10px;color:#00cff3;text-shadow:0 0 3px #00cff3;font-size:20px}.text span{display:inline-block}.dance{animation:dance .8s linear}.text span:nth-child(1){animation-delay:0s}.text span:nth-child(2){animation-delay:.1s}.text span:nth-child(3){animation-delay:.2s}.text span:nth-child(4){animation-delay:.3s}.text span:nth-child(5){animation-delay:.4s}.text span:nth-child(6){animation-delay:.5s}.text span:nth-child(7){animation-delay:.6s}.text span:nth-child(8){animation-delay:.7s}.text span:nth-child(9){animation-delay:.8s}.text span:nth-child(10){animation-delay:.9s}@keyframes dance{0%{transform:translateY(0)}50%{transform:translateY(-20px)}100%{transform:translateY(0)}}.loading{width:80%;max-width:260px;height:6px;background-color:#e1e4e8;border-radius:6px}.bar{display:flex;height:100%;background:linear-gradient(90deg,#ffd33d,#ea4aaa 10%,#b34bff 30%,#01feff 51%,#ffb33d 68%,#ea4aaa 85%,#b34bff);background-size:300% 100%;animation:bar 2s linear infinite}@keyframes bar{0%{background-position:100%}100%{background-position:0}}</style><body><div class="preload"><div class="text"><span>L</span> <span>o</span> <span>a</span> <span>d</span> <span>i</span> <span>n</span> <span>g</span> <span>.</span> <span>.</span> <span>.</span></div><div class="loading"><span class="bar"></span></div></div><script>let texts=document.querySelector('.text').querySelectorAll('span');let timer=setInterval(()=>{texts.forEach((item)=>{item.classList.toggle("dance")})},1700);window.onload=function(){clearInterval(timer);document.querySelector('.preload').style="display:none;"}</script><title>SHIWIVI-文章</title>
 <link rel="stylesheet" href="https://at.alicdn.com/t/font_2856826_bu73u0ahu7a.css">
 
 <link rel="stylesheet" href="/blog/css/index.css">
@@ -136,13 +136,13 @@
         <div class="article">
         <h1 class="title">Git</h1>
         <div class="art-info">
-            <div><span><span class="iconfont icon-zishu-jzl"></span>字数：5420</span>
+            <div><span><span class="iconfont icon-zishu-jzl"></span>字数：5415</span>
             <span><span class="iconfont icon-riqi"></span>写于：2021-03-23</span></div>
             <div><span><span class="iconfont icon-zuixinnew3"></span>最新更新：2021-03-23</span>
             <span><span class="iconfont icon-shijian"></span>阅读本文预计花费您16分钟</span></div>
         </div>
         <div class="art-content">
-        <div class="broadcast color-yellow">
+        <html><head></head><body><div class="broadcast color-yellow">
 <div class="iconfont icon-dengpao14hao"></div>
 整理自《Git版本控制管理》第2版-Jon Loeliger(美)著</div>
 
@@ -230,7 +230,7 @@ git config --global user.email xxx@xxx.com</div>
 <p>即：</p>
 <ul>
     <li>删除操作已经提交到本地库  <span class="strong"> git reset --hard 哈希值</span></li>
-    <li>删除操作未提交到本地库<span class="strong">  &emsp;git reset --hard HEAD</span></li>
+    <li>删除操作未提交到本地库<span class="strong">   git reset --hard HEAD</span></li>
 </ul>
 <h6>2.3.7  文件比较</h6>
 <ul>
@@ -238,8 +238,8 @@ git config --global user.email xxx@xxx.com</div>
      若无文件名则将比较所有文件
 删除内容将以红色表示，新增文件绿色标识
     <li>将工作区文件和历史版本进行比较  <span class="strong"> git diff 历史版本 文件名</span></li>
-eg：git diff HEAD new1.txt 和当前版本进行比较<br/>
-eg：git diff HEAD^^ new1.txt 和上上个版本比较<br/>
+eg：git diff HEAD new1.txt 和当前版本进行比较<br>
+eg：git diff HEAD^^ new1.txt 和上上个版本比较<br>
 eg：git diff 哈希值 new1.txt 和该哈希值对应的版本进行比较
 </ul>
 <h4>2.4 分支</h4>
@@ -265,7 +265,7 @@ eg：git diff 哈希值 new1.txt 和该哈希值对应的版本进行比较
 然后使用
 <p> <span class="strong"> git add 文件名</span></p>
 <p> <span class="strong">git commit -m “提交说明”</span></p>
-完成合并<br/>
+完成合并<br>
 注意！！git commit 命令后不跟文件名，否则会提示合并状态下无法进行提交
 
 <h4>2.5 创建标签</h4>
@@ -349,7 +349,7 @@ git init 在本地初始化文件夹，建立本地仓库
 <p>将链接中的https改为git</p>
 <h4>6.2 git push 时报错 error 10054</h4>
 最常见的问题，有时候是网络问题，还有个原因是push的文件太大，缓存默认只有1M，将缓存改为500M
-<div class="code">git config http.postBuffer 524288000 </div>
+<div class="code">git config http.postBuffer 524288000 </div></body></html>
         </div>
     </div>
     <div class="post-nav">

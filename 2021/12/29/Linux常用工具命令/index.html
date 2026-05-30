@@ -1,4 +1,4 @@
-<!DOCTYPE html><html lang="zh-CN"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="author" content="shiwi"><meta name="copyright" content="SHIWIVI"><link rel="shortcut icon" href="/blog/images/favicon.ico" type="image/x-icon"><style>.preload{position:absolute;display:flex;flex-direction:column;align-items:center;justify-content:center;left:0;top:0;width:100%;height:100%;background-color:#000;z-index:100}.text{margin-bottom:10px;color:#00cff3;text-shadow:0 0 3px #00cff3;font-size:20px}.text span{display:inline-block}.dance{animation:dance .8s linear}.text span:nth-child(1){animation-delay:0s}.text span:nth-child(2){animation-delay:.1s}.text span:nth-child(3){animation-delay:.2s}.text span:nth-child(4){animation-delay:.3s}.text span:nth-child(5){animation-delay:.4s}.text span:nth-child(6){animation-delay:.5s}.text span:nth-child(7){animation-delay:.6s}.text span:nth-child(8){animation-delay:.7s}.text span:nth-child(9){animation-delay:.8s}.text span:nth-child(10){animation-delay:.9s}@keyframes dance{0%{transform:translateY(0)}50%{transform:translateY(-20px)}100%{transform:translateY(0)}}.loading{width:80%;max-width:260px;height:6px;background-color:#e1e4e8;border-radius:6px}.bar{display:flex;height:100%;background:linear-gradient(90deg,#ffd33d,#ea4aaa 10%,#b34bff 30%,#01feff 51%,#ffb33d 68%,#ea4aaa 85%,#b34bff);background-size:300% 100%;animation:bar 2s linear infinite}@keyframes bar{0%{background-position:100%}100%{background-position:0}}</style><body><div class="preload"><div class="text"><span>L</span> <span>o</span> <span>a</span> <span>d</span> <span>i</span> <span>n</span> <span>g</span> <span>.</span> <span>.</span> <span>.</span></div><div class="loading"><span class="bar"></span></div></div><script>let texts=document.querySelector('.text').querySelectorAll('span');let timer=setInterval(()=>{texts.forEach((item)=>{item.classList.toggle("dance")})},1700);window.onload=function(){clearInterval(timer);document.querySelector('.preload').style="display:none;"}</script><title>SHIWIVI-文章</title>
+<!DOCTYPE html><html lang="zh-CN"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="author" content="shiwi"><meta name="copyright" content="SHIWIVI"><link rel="shortcut icon" href="/blog/images/icon.png" type="image/x-icon"><style>.preload{position:absolute;display:flex;flex-direction:column;align-items:center;justify-content:center;left:0;top:0;width:100%;height:100%;background-color:#000;z-index:100}.text{margin-bottom:10px;color:#00cff3;text-shadow:0 0 3px #00cff3;font-size:20px}.text span{display:inline-block}.dance{animation:dance .8s linear}.text span:nth-child(1){animation-delay:0s}.text span:nth-child(2){animation-delay:.1s}.text span:nth-child(3){animation-delay:.2s}.text span:nth-child(4){animation-delay:.3s}.text span:nth-child(5){animation-delay:.4s}.text span:nth-child(6){animation-delay:.5s}.text span:nth-child(7){animation-delay:.6s}.text span:nth-child(8){animation-delay:.7s}.text span:nth-child(9){animation-delay:.8s}.text span:nth-child(10){animation-delay:.9s}@keyframes dance{0%{transform:translateY(0)}50%{transform:translateY(-20px)}100%{transform:translateY(0)}}.loading{width:80%;max-width:260px;height:6px;background-color:#e1e4e8;border-radius:6px}.bar{display:flex;height:100%;background:linear-gradient(90deg,#ffd33d,#ea4aaa 10%,#b34bff 30%,#01feff 51%,#ffb33d 68%,#ea4aaa 85%,#b34bff);background-size:300% 100%;animation:bar 2s linear infinite}@keyframes bar{0%{background-position:100%}100%{background-position:0}}</style><body><div class="preload"><div class="text"><span>L</span> <span>o</span> <span>a</span> <span>d</span> <span>i</span> <span>n</span> <span>g</span> <span>.</span> <span>.</span> <span>.</span></div><div class="loading"><span class="bar"></span></div></div><script>let texts=document.querySelector('.text').querySelectorAll('span');let timer=setInterval(()=>{texts.forEach((item)=>{item.classList.toggle("dance")})},1700);window.onload=function(){clearInterval(timer);document.querySelector('.preload').style="display:none;"}</script><title>SHIWIVI-文章</title>
 <link rel="stylesheet" href="https://at.alicdn.com/t/font_2856826_bu73u0ahu7a.css">
 
 <link rel="stylesheet" href="/blog/css/index.css">
@@ -136,13 +136,13 @@
         <div class="article">
         <h1 class="title">Linux常用工具命令</h1>
         <div class="art-info">
-            <div><span><span class="iconfont icon-zishu-jzl"></span>字数：6801</span>
+            <div><span><span class="iconfont icon-zishu-jzl"></span>字数：6754</span>
             <span><span class="iconfont icon-riqi"></span>写于：2021-12-29</span></div>
             <div><span><span class="iconfont icon-zuixinnew3"></span>最新更新：2024-08-01</span>
             <span><span class="iconfont icon-shijian"></span>阅读本文预计花费您20分钟</span></div>
         </div>
         <div class="art-content">
-        <h3 id="curl"><a href="#curl" class="headerlink" title="curl"></a>curl</h3><h4 id="curl介绍"><a href="#curl介绍" class="headerlink" title="curl介绍"></a>curl介绍</h4><p>curl(client url)是一个强大且开源的数据传输工具，它支持通过URL上传或下载数据，适合用来执行上传或下载文件、执行API请求、提交表单数据等任务，curl支持以下协议：DICT、FILE、FTP、FTPS、GOPHER、GOPHERS、HTTP、HTTPS、IMAP、IMAPS、LDAPS、MQTT、POP3、POP3S、RTMP、RTMPS、RTSP、SCP、SFTP、SMB、SMBS、SMTP、SMTPS、TELNET、TFTP、WS、WSS。</p>
+        <html><head></head><body><h3 id="curl"><a href="#curl" class="headerlink" title="curl"></a>curl</h3><h4 id="curl介绍"><a href="#curl介绍" class="headerlink" title="curl介绍"></a>curl介绍</h4><p>curl(client url)是一个强大且开源的数据传输工具，它支持通过URL上传或下载数据，适合用来执行上传或下载文件、执行API请求、提交表单数据等任务，curl支持以下协议：DICT、FILE、FTP、FTPS、GOPHER、GOPHERS、HTTP、HTTPS、IMAP、IMAPS、LDAPS、MQTT、POP3、POP3S、RTMP、RTMPS、RTSP、SCP、SFTP、SMB、SMBS、SMTP、SMTPS、TELNET、TFTP、WS、WSS。</p>
 <div class="broadcast color-blue">
 <div class="iconfont icon-yinhao"></div>
 curl官方文档：<a href="https://curl.se/docs/manpage.html" target="_blank">https://curl.se/docs/manpage.html</a></div>
@@ -155,19 +155,19 @@ curl官方文档：<a href="https://curl.se/docs/manpage.html" target="_blank">h
 </li>
 <li><p>如果curl接收到的数据被-o选项或重定向符输出到stdout以外的地方，则curl默认会显示一个<span class="text-blue">进度表</span>，进度表会显示传输数据量、传输速度和估计剩余时间</p>
 </li>
-<li><p>-#或-&zwnj;-progress-bar 显示一个<span class="text-blue">进度条</span>，使用进度条替换进度表</p>
+<li><p>-#或-‌-progress-bar 显示一个<span class="text-blue">进度条</span>，使用进度条替换进度表</p>
 </li>
 <li><p>-s 静默模式(silent)，不显示进度和错误信息，但仍会显示HTTP响应的内容，如返回的html、json等数据</p>
 </li>
 <li><p>-q 完全安静模式(quiet)，完全阻止所有输出，包括进度信息、错误信息、返回的响应信息</p>
 </li>
-<li><p><span class="strong">-&zwnj;-retry 值：</span>设置重试次数，该值默认为0，curl默认只会在响应超时、FTP返回4xx或HTTP返回408、429、500、502、503或504时进行重试，该选项可以搭配以下选项：</p>
+<li><p><span class="strong">-‌-retry 值：</span>设置重试次数，该值默认为0，curl默认只会在响应超时、FTP返回4xx或HTTP返回408、429、500、502、503或504时进行重试，该选项可以搭配以下选项：</p>
 <blockquote>
 <blockquote>
 <ul>
-<li>-&zwnj;-retry-all -errors：出现任何错误时均重试，包括HTTP 404等情况</li>
-<li>-&zwnj;-retry-delay 值：每一次重试前的延迟时间，单位为秒</li>
-<li>-&zwnj;-retry-max-time 值：最大总重试时间，单位为秒，到达该时间后，即使还有剩余重试次数，也停止重试</li>
+<li>-‌-retry-all -errors：出现任何错误时均重试，包括HTTP 404等情况</li>
+<li>-‌-retry-delay 值：每一次重试前的延迟时间，单位为秒</li>
+<li>-‌-retry-max-time 值：最大总重试时间，单位为秒，到达该时间后，即使还有剩余重试次数，也停止重试</li>
 </ul>
 </blockquote>
 </blockquote>
@@ -178,15 +178,15 @@ curl官方文档：<a href="https://curl.se/docs/manpage.html" target="_blank">h
 </li>
 <li><p>-O 将接收到的数据在当前路径下以<span class="tips">原文件名</span>保存(不会保存路径)，文件不存在则会新建，文件存在则会覆盖</p>
 </li>
-<li><p>-&zwnj;-no-clobber (7.83.0版本以上支持)使用-o等选项将传输的数据保存到本地时，如果文件已经存在原文件会被覆盖。该选项可以避免覆盖已经存在的文件，如果文件已经存在，curl会在新保存的文件名后加上一个点和一个数字(如：test.1)来生成不同的文件名，这只支持生成到test.100，之后curl将不创建任何文件</p>
+<li><p>-‌-no-clobber (7.83.0版本以上支持)使用-o等选项将传输的数据保存到本地时，如果文件已经存在原文件会被覆盖。该选项可以避免覆盖已经存在的文件，如果文件已经存在，curl会在新保存的文件名后加上一个点和一个数字(如：test.1)来生成不同的文件名，这只支持生成到test.100，之后curl将不创建任何文件</p>
 </li>
 <li><p>-k 默认情况下，curl 建立的连接都会进行验证(如验证TLS 证书)，此选项会让curl跳过验证步骤，这可能引发安全问题</p>
 </li>
 <li><p>-f 当请求的URL返回4xx响应码时，http服务一般会返回一个404页面文本，该选项可以禁止curl输出该数据，而是提前返回http错误码22，这在脚本中比较有用，脚本获取一个404相关的页面数据也没什么用，可以提前抛弃掉</p>
 </li>
-<li><p>-&zwnj;-fail-early 在指定多个URL时，curl会依次执行这些传输任务，默认情况下，curl命令的执行结果只取决于最后一个URL是否成功传输，如果中间的某个URL返回错误代码也会被覆盖。该选项会让curl在遇到第一次传输失败时就返回一个错误，方便捕捉错误</p>
+<li><p>-‌-fail-early 在指定多个URL时，curl会依次执行这些传输任务，默认情况下，curl命令的执行结果只取决于最后一个URL是否成功传输，如果中间的某个URL返回错误代码也会被覆盖。该选项会让curl在遇到第一次传输失败时就返回一个错误，方便捕捉错误</p>
 </li>
-<li><p>-:或-&zwnj;-next：用来重置所有本地选项，指定多个URL时如果要为不同的URL指定不同的选项，可以使用该选项重置之前指定的选项，该选项不会重置全局选项</p>
+<li><p>-:或-‌-next：用来重置所有本地选项，指定多个URL时如果要为不同的URL指定不同的选项，可以使用该选项重置之前指定的选项，该选项不会重置全局选项</p>
 </li>
 <li><p>-I 只获取响应头</p>
 </li>
@@ -249,8 +249,8 @@ GNU社区的wget文档：<a target="_blank" rel="noopener" href="https://www.gnu
 <li>-N 仅下载比本地文件新的文件(根据时间戳判断)，适合用来同步文件</li>
 <li>-nd 不创建目录结构，将所有下载的文件都保存到当前目录</li>
 <li><span class="strong">-i 文件名</span>从文件中读取URL，并依次下载</li>
-<li><span class="strong">-&zwnj;-wait=值</span>设置文件下载的时间间隔，避免对服务器造成过大负载</li>
-<li>-&zwnj;-random-wait 设置随机等待时间，模拟更自然的用户行为</li>
+<li><span class="strong">-‌-wait=值</span>设置文件下载的时间间隔，避免对服务器造成过大负载</li>
+<li>-‌-random-wait 设置随机等待时间，模拟更自然的用户行为</li>
 <li><span class="strong">–tries=值</span> 设置下载失败后的重试次数，默认为20次</li>
 </ul>
 <div class="show">1. 正常下载文件
@@ -262,7 +262,7 @@ Connecting to shiwivi.com (shiwivi.com)|170.196.108.153|:80... connected.
 HTTP request sent, awaiting response... 200 OK
 Length: 3355 (3.3K) [text/html]
 Saving to: ‘index.html.1’
-100%[===================>] 3,355       --.-K/s   in 0.1s    
+100%[===================&gt;] 3,355       --.-K/s   in 0.1s    
 2021-08-31 00:12:37 (23.3 KB/s) - ‘index.html.1’ saved [3355/3355]
 2. 静默模式
 wget -q http://example.com/file.zip
@@ -367,7 +367,7 @@ Command being timed: "ls"
     Signals delivered: 0
     Page size (bytes): 4096
     Exit status: 0
-</div>
+</div></body></html>
         </div>
     </div>
     <div class="post-nav">

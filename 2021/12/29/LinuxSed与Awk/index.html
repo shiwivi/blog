@@ -1,4 +1,4 @@
-<!DOCTYPE html><html lang="zh-CN"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="author" content="shiwi"><meta name="copyright" content="SHIWIVI"><link rel="shortcut icon" href="/blog/images/favicon.ico" type="image/x-icon"><style>.preload{position:absolute;display:flex;flex-direction:column;align-items:center;justify-content:center;left:0;top:0;width:100%;height:100%;background-color:#000;z-index:100}.text{margin-bottom:10px;color:#00cff3;text-shadow:0 0 3px #00cff3;font-size:20px}.text span{display:inline-block}.dance{animation:dance .8s linear}.text span:nth-child(1){animation-delay:0s}.text span:nth-child(2){animation-delay:.1s}.text span:nth-child(3){animation-delay:.2s}.text span:nth-child(4){animation-delay:.3s}.text span:nth-child(5){animation-delay:.4s}.text span:nth-child(6){animation-delay:.5s}.text span:nth-child(7){animation-delay:.6s}.text span:nth-child(8){animation-delay:.7s}.text span:nth-child(9){animation-delay:.8s}.text span:nth-child(10){animation-delay:.9s}@keyframes dance{0%{transform:translateY(0)}50%{transform:translateY(-20px)}100%{transform:translateY(0)}}.loading{width:80%;max-width:260px;height:6px;background-color:#e1e4e8;border-radius:6px}.bar{display:flex;height:100%;background:linear-gradient(90deg,#ffd33d,#ea4aaa 10%,#b34bff 30%,#01feff 51%,#ffb33d 68%,#ea4aaa 85%,#b34bff);background-size:300% 100%;animation:bar 2s linear infinite}@keyframes bar{0%{background-position:100%}100%{background-position:0}}</style><body><div class="preload"><div class="text"><span>L</span> <span>o</span> <span>a</span> <span>d</span> <span>i</span> <span>n</span> <span>g</span> <span>.</span> <span>.</span> <span>.</span></div><div class="loading"><span class="bar"></span></div></div><script>let texts=document.querySelector('.text').querySelectorAll('span');let timer=setInterval(()=>{texts.forEach((item)=>{item.classList.toggle("dance")})},1700);window.onload=function(){clearInterval(timer);document.querySelector('.preload').style="display:none;"}</script><title>SHIWIVI-文章</title>
+<!DOCTYPE html><html lang="zh-CN"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="author" content="shiwi"><meta name="copyright" content="SHIWIVI"><link rel="shortcut icon" href="/blog/images/icon.png" type="image/x-icon"><style>.preload{position:absolute;display:flex;flex-direction:column;align-items:center;justify-content:center;left:0;top:0;width:100%;height:100%;background-color:#000;z-index:100}.text{margin-bottom:10px;color:#00cff3;text-shadow:0 0 3px #00cff3;font-size:20px}.text span{display:inline-block}.dance{animation:dance .8s linear}.text span:nth-child(1){animation-delay:0s}.text span:nth-child(2){animation-delay:.1s}.text span:nth-child(3){animation-delay:.2s}.text span:nth-child(4){animation-delay:.3s}.text span:nth-child(5){animation-delay:.4s}.text span:nth-child(6){animation-delay:.5s}.text span:nth-child(7){animation-delay:.6s}.text span:nth-child(8){animation-delay:.7s}.text span:nth-child(9){animation-delay:.8s}.text span:nth-child(10){animation-delay:.9s}@keyframes dance{0%{transform:translateY(0)}50%{transform:translateY(-20px)}100%{transform:translateY(0)}}.loading{width:80%;max-width:260px;height:6px;background-color:#e1e4e8;border-radius:6px}.bar{display:flex;height:100%;background:linear-gradient(90deg,#ffd33d,#ea4aaa 10%,#b34bff 30%,#01feff 51%,#ffb33d 68%,#ea4aaa 85%,#b34bff);background-size:300% 100%;animation:bar 2s linear infinite}@keyframes bar{0%{background-position:100%}100%{background-position:0}}</style><body><div class="preload"><div class="text"><span>L</span> <span>o</span> <span>a</span> <span>d</span> <span>i</span> <span>n</span> <span>g</span> <span>.</span> <span>.</span> <span>.</span></div><div class="loading"><span class="bar"></span></div></div><script>let texts=document.querySelector('.text').querySelectorAll('span');let timer=setInterval(()=>{texts.forEach((item)=>{item.classList.toggle("dance")})},1700);window.onload=function(){clearInterval(timer);document.querySelector('.preload').style="display:none;"}</script><title>SHIWIVI-文章</title>
 <link rel="stylesheet" href="https://at.alicdn.com/t/font_2856826_bu73u0ahu7a.css">
 
 <link rel="stylesheet" href="/blog/css/index.css">
@@ -136,13 +136,13 @@
         <div class="article">
         <h1 class="title">sed与awk</h1>
         <div class="art-info">
-            <div><span><span class="iconfont icon-zishu-jzl"></span>字数：45856</span>
+            <div><span><span class="iconfont icon-zishu-jzl"></span>字数：45911</span>
             <span><span class="iconfont icon-riqi"></span>写于：2021-12-29</span></div>
             <div><span><span class="iconfont icon-zuixinnew3"></span>最新更新：2024-06-02</span>
             <span><span class="iconfont icon-shijian"></span>阅读本文预计花费您132分钟</span></div>
         </div>
         <div class="art-content">
-        <h3 id="sed流编辑器"><a href="#sed流编辑器" class="headerlink" title="sed流编辑器"></a>sed流编辑器</h3><h4 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h4><p>sed被称为流编辑器（stream editor），是Linux和Unix系统中一个强大的文本处理工具。它被设计用于大批量的文本处理，可以逐行读入文本，并根据命令进行字符串的查找、筛选、移动、替换、添加和删除等操作。sed非常适合对大量文本进行批处理，也适合在脚本中进行自动化文本处理。</p>
+        <html><head></head><body><h3 id="sed流编辑器"><a href="#sed流编辑器" class="headerlink" title="sed流编辑器"></a>sed流编辑器</h3><h4 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h4><p>sed被称为流编辑器（stream editor），是Linux和Unix系统中一个强大的文本处理工具。它被设计用于大批量的文本处理，可以逐行读入文本，并根据命令进行字符串的查找、筛选、移动、替换、添加和删除等操作。sed非常适合对大量文本进行批处理，也适合在脚本中进行自动化文本处理。</p>
 <p>与交互式编辑器(如vim)不同，vim等编辑器适合用来进行交互式编辑和细粒度的文本修改，而流编辑器适合用来进行大批量的非交互式文本处理，适合执行自动化文本处理任务，如进行批量文件修改、数据清洗、日志文件分析等。</p>
 <h5 id="sed的工作流程"><a href="#sed的工作流程" class="headerlink" title="sed的工作流程"></a>sed的工作流程</h5><p>sed强调逐行处理文本，默认情况下，sed编辑器会基于换行符的位置将文本流分成行，以一行文本作为一个处理单位，sed编辑器对文本的处理会在一个名为<span class="tips">模式空间</span>(pattern space)的临时缓冲区中进行，sed编辑器在工作时会依次执行以下流程：</p>
 <ul>
@@ -457,7 +457,7 @@ sed 's/AAA/替换内容/2g' data.txt
 sed -n 's/AAA/替换内容/2p' data.txt
 p标记符用于输出匹配到的字符串行，如果没有-n选项，由于sed命令本身默认就会输出完整文件内容，加上p选项输出的匹配内容，因此会输出完整文件内容+匹配内容，匹配到的部分会输出两遍，因此需要使用-n取消掉sed命令的默认输出，只输出内容被修改的部分
 5. 如果要先输出一行原文件内容，再输出一行被替换的内容，二者一上一下以作比较，可以使用以下命令
-sed -n -e 's/AAA/&/p' -e 's/AAA/替换内容/p' data.txt
+sed -n -e 's/AAA/&amp;/p' -e 's/AAA/替换内容/p' data.txt
 6. 将替换的内容另存到另外一个文件
 sed 's/AAA/替换内容/w result.txt' data.txt
 上述命令依旧会输出默认的完整文件到屏幕，但w标记符只会将替换过到的第1，2，3行保存到文件，没有AAA字符串的第4行将不被另存
@@ -642,8 +642,8 @@ DDDDDD
 <span class="text-blue">sed -n '/uuid/{n;p}' data</span>
 e.g.删除文件data.txt中第一行后的空白行
 <span class="strong">data.txt文件内容：</span>
-this is first line.</br>
-this is second line.</br>
+this is first line.<br>
+this is second line.<br>
 this is last line.
 如果使用命令 sed '/^$/d' data.txt，文件中的所有空白行都会被删除，如果只想删除第一行后的空白行，则可以先定位到第一行，然后通过 n 命令读入下一行并覆盖第一行内容，然后通过删除命令删除该行即可，命令为：
 <span class="text-blue">sed '/first/{n; d}' data.txt</span>
@@ -941,7 +941,7 @@ $p
 
 <h4 id="模式引用-amp"><a href="#模式引用-amp" class="headerlink" title="模式引用&amp;"></a>模式引用&amp;</h4><p>当sed匹配到了字符串时，可以在后续的命令中使用<span class="tips">&amp;</span>引用匹配到的字符串</p>
 <div class="show">e.g.查找文本中以at结尾的单词，并在该单词外加上双引号""
- echo "The cat sleeps in his hat." | sed 's/*at/"<span class="text-red">&</span>"/g'
+ echo "The cat sleeps in his hat." | sed 's/*at/"<span class="text-red">&amp;</span>"/g'
  文本会替换为：
  The "cat" sleeps in his "hat".
 sed替换命令中，替换后的字符串不能使用*等通配符，因此上述语句改为以下命令将不会正常完成替换工作：
@@ -995,7 +995,7 @@ sed '/date/e' date.txt
 2021-01-23
 2. e命令支持接收一个参数，作为要执行的命令
 sed '/date/{e date +%Y年%y月%d日
-&gt;> d}' date.txt
+&gt;&gt; d}' date.txt
 输出为：
 2021-01-12
 2022-02-06
@@ -1056,7 +1056,7 @@ while [ $counter -gt 1 ]
  done
 outputValue=$(echo $result | sed '
 :start
-s/\(.*[0-9]\)\([0-9]\&#123;3\&#125;\)/\1,\2/
+s/\(.*[0-9]\)\([0-9]\{3\}\)/\1,\2/
 t start')
 echo "计算结果为：$outputValue"</code></pre>
 
@@ -1067,9 +1067,9 @@ bash test.sh 20
 </div>
 
 <h5 id="加倍行距"><a href="#加倍行距" class="headerlink" title="加倍行距"></a>加倍行距</h5><div class="show">我们可以向文本文件的行间插入空白行，使得文本行看起来没那么密集
-This is the header line. </br>
-This is the first data line.</br>
-This is the second data line.</br>
+This is the header line. <br>
+This is the first data line.<br>
+This is the second data line.<br>
 This is the last line.
 插入空白行可以从以下几点出发考虑：
 1.如果文件本身已经有一些空白行，如果再加入空白行每两行文本之间可能会有多个空白行，因此应该先删除原文件的空白行(除非文本本身需要刻意保留这些空白行)
@@ -1168,14 +1168,14 @@ sed -n 'N;/\n/p' data.txt
 
 <h5 id="删除HTML标签"><a href="#删除HTML标签" class="headerlink" title="删除HTML标签"></a>删除HTML标签</h5><div class="show">如果需要删除html文件或xml文件中的标签，只留下标签之间的内容，通过sed也可以轻松实现
 如果使用命令：
-sed 's/<.*>//g' index.html
+sed 's/&lt;.*&gt;//g' index.html
 /&lt;.*&gt;/首先会匹配该行中最开始遇到的&lt;，此后由于.*会进行贪婪匹配，*会匹配尽可能多的字符，&gt;将匹配闭合标签中最末尾的&gt;，这会导致标签中的文本也被替换掉，如：
 &lt;div&gt; test &lt;/div&gt;
 该正则表达式会匹配高亮的两个尖括号：
 <span class="text-red">&lt;</span>div&gt; test &lt;/div <span class="text-red">&gt;</span>
 这会导致整个标签，包括标签中的内容也会被替换掉，因此，正确的删除标签的命令是：
-<span class="text-blue">sed 's/<[^>]*>//g' 文件名</span>
-正则表达式<[^>]*>表示匹配以 '&lt;' 开头，后面跟任意数量的非 '&gt;' 字符，并以 '&gt;' 结束的字符串，这正是一个HTML标签的形式。这样它会单独匹配双标签中的前半部分，由于使用了全局匹配g，标签的后半部分也会被匹配到，且对单标签也生效
+<span class="text-blue">sed 's/&lt;[^&gt;]*&gt;//g' 文件名</span>
+正则表达式&lt;[^&gt;]*&gt;表示匹配以 '&lt;' 开头，后面跟任意数量的非 '&gt;' 字符，并以 '&gt;' 结束的字符串，这正是一个HTML标签的形式。这样它会单独匹配双标签中的前半部分，由于使用了全局匹配g，标签的后半部分也会被匹配到，且对单标签也生效
 <span class="text-red">&lt;</span>div<span class="text-red">&gt;</span> test &lt;/div&gt;
 这样，标签会被依次替换删除，只留下标签中的字符串部分
 </div>
@@ -1202,7 +1202,7 @@ sed 's/<.*>//g' index.html
 <li>awk的程序体用一对大括号<span class="tips">{ }</span>定义，并且当程序是在命令行中指定时需要放到单引号<span class="tips">‘ ‘</span>中，这样shell会将其视为字符串，而不会去尝试解析awk程序，如果从文件中调用awk程序，则不需要单引号</li>
 <li>-i inplace:(GNU awk 4.1.0+支持)直接修改原文件，类似于sed -i，</li>
 </ul>
-</br>
+<br>
 
 <p>通常情况下，awk程序包含模式和命令两个部分，命令部分使用大括号包裹，模式或命令部分可以省略其中一个，但不能两个都省略。如果省略模式，则会对所有输入的行都执行命令。如果省略命令(包括大括号在内的命令部分)只保留模式，则会默认打印所有与模式匹配的行。<br>与sed不同，awk不会将不匹配的行也打印一遍，可以在命令末尾使用命令<span class="tips">1</span>强制打印所有语句，该命令等价于<span class="tips">print $0</span>，该命令在修改文件时十分常用</p>
 <div class="show">1.打印data.txt文件中所有包含"li"字符串的行
@@ -1293,7 +1293,7 @@ print "信息来自/etc/passwd文件"
 <code>当前Linux的用户列表和默认登录shell
 用户名         默认登录shell
 ------------------------
-root        &emsp; /bin/bash
+root          /bin/bash
 bin            /sbin/nologin
 daemon         /sbin/nologin
 adm            /sbin/nologin
@@ -1509,11 +1509,11 @@ drwxr-xr-x 2 root root 4.0K Jul 16 05:40 test
 Riley Mullen 
 123 Main Street 
 Chicago, IL 60601 
-(312)555-1234 <br />
+(312)555-1234 <br>
 Frank Williams 
 456 Oak Street 
 Indianapolis, IN 46201 
-(317)555-9876 <br />
+(317)555-9876 <br>
 Haley Snell 
 4231 Elm Street 
 Detroit, MI 48201 
@@ -1765,10 +1765,10 @@ delete array["name"]
 33 33CC 33AA
 44 44DD 44AA
 如果字段1大于30，则输出字段2，否则输出字段3
-awk '{if($1>30){ print "大于30";print $2}else {print "小于30"; print $3}}' data.txt
+awk '{if($1&gt;30){ print "大于30";print $2}else {print "小于30"; print $3}}' data.txt
 使用多行模式代码更为清晰
  awk '{
-&gt; if($1>30)
+&gt; if($1&gt;30)
 &gt; {
 &gt; print "大于30"
 &gt; print $2
@@ -1891,7 +1891,7 @@ awk '{printf "数据：%s\t%s\t%s\n",$1,$2,$3}' data.txt
 数据：22    22BB    22AA
 数据：33    33CC    33AA
 数据：44    44DD    44AA
-<br />2.输出浮点数，保留两位小数
+<br>2.输出浮点数，保留两位小数
 awk 'BEGIN{printf "%6.2f",10.175}
 输出6位，因此左边会补两个空格
   10.18
@@ -2024,7 +2024,7 @@ awk 'BEGIN{print index("aa bb cc dd","cc")}'
 如：输出data文件每行内容的文本长度(包含字段间的空格)
 awk '{print length()}' data.txt
 </div>
-<div class="show">3. asort(s [,d])函数会按照数组元素在ASCII中的顺序对数组元素进行排序，大致排序类型为：数值(从小到大)->首字母大写的数组元素->首字母小写的数组元素，使用该函数进行排序时注意两点：
+<div class="show">3. asort(s [,d])函数会按照数组元素在ASCII中的顺序对数组元素进行排序，大致排序类型为：数值(从小到大)-&gt;首字母大写的数组元素-&gt;首字母小写的数组元素，使用该函数进行排序时注意两点：
 (1)如果数组元素有数值，也有字符串，数值会按其大小正常排序，而不会将其转换为字符串进行处理
 (2)排序完的数组使用for-in遍历会乱序输出，无法正确看到被排序后的数组结果
 (3)关联数组的索引会被替换为从1开始的连续数字，索引从1开始而非0
@@ -2215,8 +2215,8 @@ awk -i inplace 'BEGIN{FS=":";OFS=":"}/port/{$2="2020,"} 1' config.json
 必须指定输出字段分隔符OFS，否则输出的字段分隔符将被替换为默认的空格，变为"port" 2020
 最后必须使用1或{print $0}将所有文件行输出一次
 2.修改文件data.txt中的字符串old_text为new_text，然后将awk处理结果重定向到临时文件temp中，处理完毕后修改其文件名为data.txt进行覆盖(在此之前应该先备份好data.txt)
-awk '{gsub(/old_text/, "new_text"); print}' data.txt > temp && mv temp data.txt
-</div>
+awk '{gsub(/old_text/, "new_text"); print}' data.txt &gt; temp &amp;&amp; mv temp data.txt
+</div></body></html>
         </div>
     </div>
     <div class="post-nav">

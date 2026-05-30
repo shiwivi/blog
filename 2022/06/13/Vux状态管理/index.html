@@ -1,4 +1,4 @@
-<!DOCTYPE html><html lang="zh-CN"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="author" content="shiwi"><meta name="copyright" content="SHIWIVI"><link rel="shortcut icon" href="/blog/images/favicon.ico" type="image/x-icon"><style>.preload{position:absolute;display:flex;flex-direction:column;align-items:center;justify-content:center;left:0;top:0;width:100%;height:100%;background-color:#000;z-index:100}.text{margin-bottom:10px;color:#00cff3;text-shadow:0 0 3px #00cff3;font-size:20px}.text span{display:inline-block}.dance{animation:dance .8s linear}.text span:nth-child(1){animation-delay:0s}.text span:nth-child(2){animation-delay:.1s}.text span:nth-child(3){animation-delay:.2s}.text span:nth-child(4){animation-delay:.3s}.text span:nth-child(5){animation-delay:.4s}.text span:nth-child(6){animation-delay:.5s}.text span:nth-child(7){animation-delay:.6s}.text span:nth-child(8){animation-delay:.7s}.text span:nth-child(9){animation-delay:.8s}.text span:nth-child(10){animation-delay:.9s}@keyframes dance{0%{transform:translateY(0)}50%{transform:translateY(-20px)}100%{transform:translateY(0)}}.loading{width:80%;max-width:260px;height:6px;background-color:#e1e4e8;border-radius:6px}.bar{display:flex;height:100%;background:linear-gradient(90deg,#ffd33d,#ea4aaa 10%,#b34bff 30%,#01feff 51%,#ffb33d 68%,#ea4aaa 85%,#b34bff);background-size:300% 100%;animation:bar 2s linear infinite}@keyframes bar{0%{background-position:100%}100%{background-position:0}}</style><body><div class="preload"><div class="text"><span>L</span> <span>o</span> <span>a</span> <span>d</span> <span>i</span> <span>n</span> <span>g</span> <span>.</span> <span>.</span> <span>.</span></div><div class="loading"><span class="bar"></span></div></div><script>let texts=document.querySelector('.text').querySelectorAll('span');let timer=setInterval(()=>{texts.forEach((item)=>{item.classList.toggle("dance")})},1700);window.onload=function(){clearInterval(timer);document.querySelector('.preload').style="display:none;"}</script><title>SHIWIVI-文章</title>
+<!DOCTYPE html><html lang="zh-CN"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="author" content="shiwi"><meta name="copyright" content="SHIWIVI"><link rel="shortcut icon" href="/blog/images/icon.png" type="image/x-icon"><style>.preload{position:absolute;display:flex;flex-direction:column;align-items:center;justify-content:center;left:0;top:0;width:100%;height:100%;background-color:#000;z-index:100}.text{margin-bottom:10px;color:#00cff3;text-shadow:0 0 3px #00cff3;font-size:20px}.text span{display:inline-block}.dance{animation:dance .8s linear}.text span:nth-child(1){animation-delay:0s}.text span:nth-child(2){animation-delay:.1s}.text span:nth-child(3){animation-delay:.2s}.text span:nth-child(4){animation-delay:.3s}.text span:nth-child(5){animation-delay:.4s}.text span:nth-child(6){animation-delay:.5s}.text span:nth-child(7){animation-delay:.6s}.text span:nth-child(8){animation-delay:.7s}.text span:nth-child(9){animation-delay:.8s}.text span:nth-child(10){animation-delay:.9s}@keyframes dance{0%{transform:translateY(0)}50%{transform:translateY(-20px)}100%{transform:translateY(0)}}.loading{width:80%;max-width:260px;height:6px;background-color:#e1e4e8;border-radius:6px}.bar{display:flex;height:100%;background:linear-gradient(90deg,#ffd33d,#ea4aaa 10%,#b34bff 30%,#01feff 51%,#ffb33d 68%,#ea4aaa 85%,#b34bff);background-size:300% 100%;animation:bar 2s linear infinite}@keyframes bar{0%{background-position:100%}100%{background-position:0}}</style><body><div class="preload"><div class="text"><span>L</span> <span>o</span> <span>a</span> <span>d</span> <span>i</span> <span>n</span> <span>g</span> <span>.</span> <span>.</span> <span>.</span></div><div class="loading"><span class="bar"></span></div></div><script>let texts=document.querySelector('.text').querySelectorAll('span');let timer=setInterval(()=>{texts.forEach((item)=>{item.classList.toggle("dance")})},1700);window.onload=function(){clearInterval(timer);document.querySelector('.preload').style="display:none;"}</script><title>SHIWIVI-文章</title>
 <link rel="stylesheet" href="https://at.alicdn.com/t/font_2856826_bu73u0ahu7a.css">
 
 <link rel="stylesheet" href="/blog/css/index.css">
@@ -136,13 +136,13 @@
         <div class="article">
         <h1 class="title">Vux状态管理</h1>
         <div class="art-info">
-            <div><span><span class="iconfont icon-zishu-jzl"></span>字数：15003</span>
+            <div><span><span class="iconfont icon-zishu-jzl"></span>字数：14081</span>
             <span><span class="iconfont icon-riqi"></span>写于：2022-06-13</span></div>
             <div><span><span class="iconfont icon-zuixinnew3"></span>最新更新：2022-06-13</span>
-            <span><span class="iconfont icon-shijian"></span>阅读本文预计花费您43分钟</span></div>
+            <span><span class="iconfont icon-shijian"></span>阅读本文预计花费您41分钟</span></div>
         </div>
         <div class="art-content">
-        <div class="broadcast color-blue">
+        <html><head></head><body><div class="broadcast color-blue">
 <div class="iconfont icon-yinhao"></div>
 Vux官网：<a target="_blank" rel="noopener" href="https://vuex.vuejs.org/zh/">https://vuex.vuejs.org/zh/</a></div>
 
@@ -151,7 +151,7 @@ Vux官网：<a target="_blank" rel="noopener" href="https://vuex.vuejs.org/zh/">
 <p>在脚手架中执行：</p>
 <pre><code>npm i vuex@3</code></pre>
 
-<h4 id="工作流程"><a href="#工作流程" class="headerlink" title="工作流程"></a>工作流程</h4><img data-src="/blog/images/vuex_art.jpg" src="/blog/images/vuex_art.jpg" alt="vuex工作流程">
+<h4 id="工作流程"><a href="#工作流程" class="headerlink" title="工作流程"></a>工作流程</h4><div class="img-wrapper"><div class="load-wrapper"><div class="load-line"></div><div class="load-text">loading</div></div><img data-src="/blog/images/vuex_art.jpg" src="/blog/images/vuex_art.jpg" alt="vuex工作流程"></div>
 
 
 <ul>
@@ -169,24 +169,24 @@ import Vue from 'vue'
 import Vuex from 'vuex'
 Vue.use(Vuex)
 //创建action、mutations、state
-const actions=&#123;....&#125;
-const mutations=&#123;....&#125;
-const state=&#123;.....&#125;
+const actions={....}
+const mutations={....}
+const state={.....}
 //创建并暴露Store
-export default new Vuex.Store(&#123;
+export default new Vuex.Store({
     actions,
     mutations,
     state,
     getters
-&#125;)</code></pre>
+})</code></pre>
 
 <h5 id="2-引入store配置项"><a href="#2-引入store配置项" class="headerlink" title="2. 引入store配置项"></a>2. 引入store配置项</h5><p>在main.js中引入store配置项</p>
 <pre><code>// 全写为import store from './store/index.js'
 import store from './store'
-new Vue(&#123;
-  render: h => h(App),
+new Vue({
+  render: h =&gt; h(App),
   store
-  &#125;).$mount('#app')</code></pre>
+  }).$mount('#app')</code></pre>
 
 <h4 id="案例"><a href="#案例" class="headerlink" title="案例"></a>案例</h4><p>eg：简单求和差案例，4个按钮分别实现求和、求差、判断偶数后求和、定时器延时1s求和</p>
 <ul>
@@ -195,104 +195,104 @@ new Vue(&#123;
 <li>需要多次处理的数据可以在Action中多次dispatch，处理完毕再commit</li>
 </ul>
 <h5 id="1-创建组件"><a href="#1-创建组件" class="headerlink" title="1. 创建组件"></a>1. 创建组件</h5><p>在components中创建Count.vue</p>
-<pre><code>&lt;template>
-  &lt;div>
-    &lt;h2>求和案例&lt;/h2>
-    &lt;h2>sum经过getters预处理后&#123;&#123;$store.getters.addTen&#125;&#125;&lt;/h2>
-    &lt;h3>当前值为&#123;&#123;$store.state.sum&#125;&#125;&lt;/h3>
-    &lt;select v-model.number="num">
-        &lt;option value="1">1&lt;/option>
-        &lt;option value="2">2&lt;/option>
-        &lt;option value="3">3&lt;/option>
-        &lt;option value="4">4&lt;/option>
-    &lt;/select>
-    &lt;button @click="incrace">加&lt;/button>
-    &lt;button @click="decrace">减&lt;/button>
-    &lt;button @click="addOpp">偶数才加&lt;/button>
-    &lt;button @click="addLate">延迟3s加&lt;/button>
-  &lt;/div>
-&lt;/template>
-&lt;script>
- export default &#123;
+<pre><code>&lt;template&gt;
+  &lt;div&gt;
+    &lt;h2&gt;求和案例&lt;/h2&gt;
+    &lt;h2&gt;sum经过getters预处理后{{$store.getters.addTen}}&lt;/h2&gt;
+    &lt;h3&gt;当前值为{{$store.state.sum}}&lt;/h3&gt;
+    &lt;select v-model.number="num"&gt;
+        &lt;option value="1"&gt;1&lt;/option&gt;
+        &lt;option value="2"&gt;2&lt;/option&gt;
+        &lt;option value="3"&gt;3&lt;/option&gt;
+        &lt;option value="4"&gt;4&lt;/option&gt;
+    &lt;/select&gt;
+    &lt;button @click="incrace"&gt;加&lt;/button&gt;
+    &lt;button @click="decrace"&gt;减&lt;/button&gt;
+    &lt;button @click="addOpp"&gt;偶数才加&lt;/button&gt;
+    &lt;button @click="addLate"&gt;延迟3s加&lt;/button&gt;
+  &lt;/div&gt;
+&lt;/template&gt;
+&lt;script&gt;
+ export default {
     name:'CountSum',
-    data()&#123;
-        return &#123;
+    data(){
+        return {
             num:1, //加数
-        &#125;
-    &#125;,
-    methods:&#123;
+        }
+    },
+    methods:{
         // 求和、求差直接commit
-    incrace()&#123;
+    incrace(){
         this.$store.commit('JIA',this.num)
-    &#125;,
-    decrace()&#123;
+    },
+    decrace(){
         this.$store.commit('JIAN',this.num)
-    &#125;,
+    },
     //延时、判断奇偶dispatch到actions经过处理后再提交
-    addOpp()&#123;
+    addOpp(){
         this.$store.dispatch('addOpp',this.num)
-    &#125;,
-    addLate()&#123;
+    },
+    addLate(){
         this.$store.dispatch('addLate',this.num)
-    &#125;
-    &#125;
- &#125;
-&lt;/script>
+    }
+    }
+ }
+&lt;/script&gt;
 </code></pre>
 
 <h5 id="2-配置store"><a href="#2-配置store" class="headerlink" title="2. 配置store"></a>2. 配置store</h5><p>新建store目录并在该目录下新建index.js</p>
 <pre><code>import Vue from 'vue'
 import Vuex from 'vuex'
 Vue.use(Vuex)
-const actions=&#123;
+const actions={
     // actions里的方法名一般小写
     //接收参数 (context,实参)
     // context是一个对象，拥有store的部分属性,变量名可以为其他
-    addOpp(context,value)&#123;          
-        if(!(value%2))&#123;             //判断是否为偶数，为偶数则commit到mutations
+    addOpp(context,value){          
+        if(!(value%2)){             //判断是否为偶数，为偶数则commit到mutations
         context.commit('JIA',value)
-        &#125;else&#123;
+        }else{
             console.log('非偶数，数未提交')
-        &#125;
-    &#125;,
-    addLate(context,value)&#123;       //数据想要多道处理时，可以在actions内多次dispatch，无限套娃
-        setTimeout(()=>&#123;
+        }
+    },
+    addLate(context,value){       //数据想要多道处理时，可以在actions内多次dispatch，无限套娃
+        setTimeout(()=&gt;{
             context.dispatch('addLate2',value);
             console.log('第一次延迟处理')
-        &#125;,500)
-    &#125;,
-    addLate2(context,value)&#123;      //数据经过第二道处理后，再提交
-        setTimeout(()=>&#123;
+        },500)
+    },
+    addLate2(context,value){      //数据经过第二道处理后，再提交
+        setTimeout(()=&gt;{
             context.commit('JIA',value);
             console.log('第二次延迟处理')
-        &#125;,500)
-    &#125;
-&#125;
+        },500)
+    }
+}
 // mutations里的方法名一般大写，用于和actions里的区别
-const mutations=&#123;
+const mutations={
     //接收参数(state,实参)
-    JIA(state,value)&#123;           //加
+    JIA(state,value){           //加
         state.sum+=value
-    &#125;,
-    JIAN(state,value)&#123;          //减
+    },
+    JIAN(state,value){          //减
         state.sum-=value;
-    &#125;
-&#125;
-const state=&#123; //存储数据
+    }
+}
+const state={ //存储数据
     sum:0
- &#125;
-const getters=&#123;                //读取数据前，想要预先进行处理使用getters
-    addTen(state)&#123;
+ }
+const getters={                //读取数据前，想要预先进行处理使用getters
+    addTen(state){
         return state.sum+10
-    &#125;
-&#125;
+    }
+}
 // 创建并暴露store
-export default new Vuex.Store(&#123;
+export default new Vuex.Store({
     actions,
     mutations,
     state,
     getters
- &#125;)
+ })
 </code></pre>
 
 <h5 id="3-引入store配置项"><a href="#3-引入store配置项" class="headerlink" title="3. 引入store配置项"></a>3. 引入store配置项</h5><p>在main.js中引入store配置</p>
@@ -300,39 +300,39 @@ export default new Vuex.Store(&#123;
 import App from './App.vue'
 import store from './store'// 全写为import store from './store/index.js'
 Vue.config.productionTip = false
- new Vue(&#123;
-  render: h => h(App),
+ new Vue({
+  render: h =&gt; h(App),
   store
- &#125;).$mount('#app')
+ }).$mount('#app')
 </code></pre>
 
 <h5 id="4-引入Count组件"><a href="#4-引入Count组件" class="headerlink" title="4. 引入Count组件"></a>4. 引入Count组件</h5><p>在App中使用Count组件</p>
-<pre><code>&lt;template>
-  &lt;div id="app">
-    &lt;Count/>
-  &lt;/div>
-&lt;/template>
-&lt;script>
+<pre><code>&lt;template&gt;
+  &lt;div id="app"&gt;
+    &lt;Count/&gt;
+  &lt;/div&gt;
+&lt;/template&gt;
+&lt;script&gt;
 import Count from'./components/Count.vue'
-export default &#123;
+export default {
   name:'App',
-  components:&#123;
+  components:{
     Count
-             &#125;
-   &#125;
-&lt;/script></code></pre>
+             }
+   }
+&lt;/script&gt;</code></pre>
 
 <h3 id="getters"><a href="#getters" class="headerlink" title="getters"></a>getters</h3><p>组件从state读取数据前，如果需要对数据进行预处理，可以在getter中进行。如：读取state中的num前进行处理(完整代码位于上一个案例)</p>
 <h4 id="1-在store中添加getter"><a href="#1-在store中添加getter" class="headerlink" title="1. 在store中添加getter"></a>1. 在store中添加getter</h4><pre><code>
-const actions=&#123;.....&#125;
-const mutations=&#123;....&#125;
-const state=&#123;.....&#125;
-const getter=&#123; 
+const actions={.....}
+const mutations={....}
+const state={.....}
+const getter={ 
     //读取state中的sum前，将值增大10
-     addTen(state)&#123;
+     addTen(state){
         return state.sum+10;
-     &#125;
-&#125;
+     }
+}
 </code></pre>
 
 <h4 id="2-读取数据"><a href="#2-读取数据" class="headerlink" title="2. 读取数据"></a>2. 读取数据</h4><p>读取数据使用</p>
@@ -342,95 +342,95 @@ const getter=&#123;
 <h4 id="通过对象"><a href="#通过对象" class="headerlink" title="通过对象"></a>通过对象</h4><p>当组件中的方法名、变量名与State、Mutations…中的变量名不同时，需要通过对象方式接收。并借助模板语法解析变量，以读取State中的数据为例：</p>
 <div class="show">...mapState({组件中的变量名:'state数据',.....})</div>
 
-<pre><code>&lt;template>
-  &lt;div>
-    &lt;h2>求和案例&lt;/h2>
-    &lt;h2>sum经过getters预处理后&#123;&#123;addTen&#125;&#125;&lt;/h2>
-    &lt;h3>当前值为&#123;&#123;sum1&#125;&#125;&lt;/h3>
-    &lt;h2>从state获取name为&#123;&#123;name1&#125;&#125;,从state获取song为&#123;&#123;song1&#125;&#125;&lt;/h2>
-    &lt;select v-model.number="num">
-        &lt;option value="1">1&lt;/option>
-        &lt;option value="2">2&lt;/option>
-        &lt;option value="3">3&lt;/option>
-        &lt;option value="4">4&lt;/option>
-    &lt;/select>
+<pre><code>&lt;template&gt;
+  &lt;div&gt;
+    &lt;h2&gt;求和案例&lt;/h2&gt;
+    &lt;h2&gt;sum经过getters预处理后{{addTen}}&lt;/h2&gt;
+    &lt;h3&gt;当前值为{{sum1}}&lt;/h3&gt;
+    &lt;h2&gt;从state获取name为{{name1}},从state获取song为{{song1}}&lt;/h2&gt;
+    &lt;select v-model.number="num"&gt;
+        &lt;option value="1"&gt;1&lt;/option&gt;
+        &lt;option value="2"&gt;2&lt;/option&gt;
+        &lt;option value="3"&gt;3&lt;/option&gt;
+        &lt;option value="4"&gt;4&lt;/option&gt;
+    &lt;/select&gt;
     //当使用mapState等语法时，需要在写函数时传参(num)
-    &lt;button @click="incrace(num)">加&lt;/button>
-    &lt;button @click="decrace(num)">减&lt;/button>
-    &lt;button @click="addOpp(num)">偶数才加&lt;/button>
-    &lt;button @click="addLate(num)">延迟3s加&lt;/button>
-  &lt;/div>
-&lt;/template>
-&lt;script>
+    &lt;button @click="incrace(num)"&gt;加&lt;/button&gt;
+    &lt;button @click="decrace(num)"&gt;减&lt;/button&gt;
+    &lt;button @click="addOpp(num)"&gt;偶数才加&lt;/button&gt;
+    &lt;button @click="addLate(num)"&gt;延迟3s加&lt;/button&gt;
+  &lt;/div&gt;
+&lt;/template&gt;
+&lt;script&gt;
 //引入mapState、mapGetters、mapMutations、mapActions
- import &#123;mapState,mapGetters, mapMutations,mapActions&#125; from 'vuex'
- export default &#123;
+ import {mapState,mapGetters, mapMutations,mapActions} from 'vuex'
+ export default {
     name:'CountSum',
-    data()&#123;
-        return &#123;
+    data(){
+        return {
             num:1,
-        &#125;
-    &#125;,
-    computed:&#123;
+        }
+    },
+    computed:{
         //模板语法
-        ...mapState(&#123;sum1:'sum',name1:'name',song1:'song'&#125;),
-        ...mapGetters(&#123;addTen:'addTen'&#125;)
+        ...mapState({sum1:'sum',name1:'name',song1:'song'}),
+        ...mapGetters({addTen:'addTen'})
         // 可以简写为数组形式...mapGetters(['addTen'])，在对象中不能简写，会解析为addTen:addTen，值也解析为变量
-    &#125;,
-    methods:&#123;
+    },
+    methods:{
     //原语句
-    // incrace()&#123;this.$store.commit('JIA',this.num)&#125;,
-    // decrace()&#123;this.$store.commit('JIAN',this.num)&#125;,
+    // incrace(){this.$store.commit('JIA',this.num)},
+    // decrace(){this.$store.commit('JIAN',this.num)},
     // 借助mapMutations生成对应方法，该方法会自动调用commit，数组写法在另一组件中
-     ...mapMutations(&#123;incrace:'JIA',decrace:'JIAN'&#125;),
+     ...mapMutations({incrace:'JIA',decrace:'JIAN'}),
     //原语句
-    // addOpp()&#123;this.$store.dispatch('addOpp',this.num)&#125;,
-    // addLate()&#123;this.$store.dispatch('addLate',this.num)&#125;
-     ...mapActions(&#123;addOpp:'addOpp',addLate:'addLate'&#125;)
-     &#125;
- &#125;
-&lt;/script></code></pre>
+    // addOpp(){this.$store.dispatch('addOpp',this.num)},
+    // addLate(){this.$store.dispatch('addLate',this.num)}
+     ...mapActions({addOpp:'addOpp',addLate:'addLate'})
+     }
+ }
+&lt;/script&gt;</code></pre>
 
 <h4 id="通过数组"><a href="#通过数组" class="headerlink" title="通过数组"></a>通过数组</h4><p>当组件中的方法名、变量名与State、Mutations…中的变量名相同时，可以直接使用数组</p>
 <div class="show">...mapState(['变量名1','变量名2',....])</div>
-<pre><code>&lt;template>
-  &lt;div>
-    &lt;h2>不同的mapstate等写法&lt;/h2>
-    &lt;h2>sum经过getters预处理后&#123;&#123;addTen&#125;&#125;&lt;/h2>
-    &lt;h3>当前值为&#123;&#123;sum&#125;&#125;&lt;/h3>
-    &lt;h2>从state获取name为&#123;&#123;name&#125;&#125;,从state获取song为&#123;&#123;song&#125;&#125;&lt;/h2>
-    &lt;select v-model.number="num">
-        &lt;option value="1">1&lt;/option>
-        &lt;option value="2">2&lt;/option>
-        &lt;option value="3">3&lt;/option>
-        &lt;option value="4">4&lt;/option>
-    &lt;/select>
-    &lt;button @click="JIA(num)">加&lt;/button>
-    &lt;button @click="JIAN(num)">减&lt;/button>
-    &lt;button @click="addOpp(num)">偶数才加&lt;/button>
-    &lt;button @click="addLate(num)">延迟3s加&lt;/button>
-  &lt;/div>
-&lt;/template>
-&lt;script>
-import &#123;mapState,mapGetters, mapMutations,mapActions&#125; from 'vuex'
-export default &#123;
+<pre><code>&lt;template&gt;
+  &lt;div&gt;
+    &lt;h2&gt;不同的mapstate等写法&lt;/h2&gt;
+    &lt;h2&gt;sum经过getters预处理后{{addTen}}&lt;/h2&gt;
+    &lt;h3&gt;当前值为{{sum}}&lt;/h3&gt;
+    &lt;h2&gt;从state获取name为{{name}},从state获取song为{{song}}&lt;/h2&gt;
+    &lt;select v-model.number="num"&gt;
+        &lt;option value="1"&gt;1&lt;/option&gt;
+        &lt;option value="2"&gt;2&lt;/option&gt;
+        &lt;option value="3"&gt;3&lt;/option&gt;
+        &lt;option value="4"&gt;4&lt;/option&gt;
+    &lt;/select&gt;
+    &lt;button @click="JIA(num)"&gt;加&lt;/button&gt;
+    &lt;button @click="JIAN(num)"&gt;减&lt;/button&gt;
+    &lt;button @click="addOpp(num)"&gt;偶数才加&lt;/button&gt;
+    &lt;button @click="addLate(num)"&gt;延迟3s加&lt;/button&gt;
+  &lt;/div&gt;
+&lt;/template&gt;
+&lt;script&gt;
+import {mapState,mapGetters, mapMutations,mapActions} from 'vuex'
+export default {
     name:'CountSum',
-    data()&#123;
-        return &#123;
+    data(){
+        return {
             num:1,
-        &#125;
-    &#125;,
-    computed:&#123;
+        }
+    },
+    computed:{
         ...mapState(['sum','name','song']),
         ...mapGetters(['addTen'])
-    &#125;,
-    methods:&#123;
+    },
+    methods:{
         //数组写法
     ...mapMutations(['JIA','JIAN']),
      ...mapActions(['addOpp','addLate'])
-    &#125;
- &#125;
-&lt;/script></code></pre>
+    }
+ }
+&lt;/script&gt;</code></pre>
 
 <h3 id="模块化与命名空间"><a href="#模块化与命名空间" class="headerlink" title="模块化与命名空间"></a>模块化与命名空间</h3><p>当有多类数据需要vuex管理时，可以将他们的state、actions、mutation封装到多个js文件中，并为它们开启<span class="tips">命名空间</span></p>
 <h4 id="方法"><a href="#方法" class="headerlink" title="方法"></a>方法</h4><ol>
@@ -446,32 +446,32 @@ export default &#123;
 import Vue from 'vue'
 import Vuex from 'vuex'
 Vue.use(Vuex)
- const person = &#123;
+ const person = {
     namespaced:true, //开启命名空间
-    actions:&#123;
-        addPersonZhou(context,value)&#123;
-            if(value.name.indexOf('周')===0)&#123;
+    actions:{
+        addPersonZhou(context,value){
+            if(value.name.indexOf('周')===0){
                 context.commit('ADD_PERSON',value)
-            &#125;
-            else&#123;
+            }
+            else{
                 alert('只能添加姓周的名')
-            &#125;
-        &#125;,     
-    &#125;,
-    mutations:&#123;
-        ADD_PERSON(state,personObj)&#123;
+            }
+        },     
+    },
+    mutations:{
+        ADD_PERSON(state,personObj){
             state.personList.unshift(personObj);
-        &#125;
-    &#125;,
-    state:&#123;
-        personList:[&#123;id:'001',name:'张三'&#125;]
-    &#125;,
-    getters:&#123;
-        getFirstName(state)&#123;
+        }
+    },
+    state:{
+        personList:[{id:'001',name:'张三'}]
+    },
+    getters:{
+        getFirstName(state){
             return state.personList[0].name;
-        &#125;
-    &#125;
- &#125;
+        }
+    }
+ }
  export default person</code></pre>
 
 <p>在store目录新建 count.js文件</p>
@@ -479,48 +479,48 @@ Vue.use(Vuex)
 import Vue from 'vue'
 import Vuex from 'vuex'
 Vue.use(Vuex)
-export default &#123;
+export default {
     namespaced:true, //开启命名空间
-    actions: &#123;
-        addOpp(context,value)&#123;          //判断是否为偶数
-            if(!(value%2))&#123;
+    actions: {
+        addOpp(context,value){          //判断是否为偶数
+            if(!(value%2)){
             context.commit('JIA',value)
-            &#125;else&#123;
+            }else{
                 console.log('非偶数，数未提交')
-            &#125;
-        &#125;,
-        addLate(context,value)&#123;        //数据想要多道处理时，可以dispatch为actions内的其他方法，无限套娃
-            setTimeout(()=>&#123;
+            }
+        },
+        addLate(context,value){        //数据想要多道处理时，可以dispatch为actions内的其他方法，无限套娃
+            setTimeout(()=&gt;{
                 context.dispatch('addLate2',value);
                 console.log('第一次延迟处理')
-            &#125;,500)
-        &#125;,
-        addLate2(context,value)&#123;      //数据经过第二道处理后，再提交
-            setTimeout(()=>&#123;
+            },500)
+        },
+        addLate2(context,value){      //数据经过第二道处理后，再提交
+            setTimeout(()=&gt;{
                 context.commit('JIA',value);
                 console.log('第二次延迟处理')
-            &#125;,500)
-        &#125;
-    &#125;,
-    mutations:&#123;
-        JIA(state,value)&#123;           //加
+            },500)
+        }
+    },
+    mutations:{
+        JIA(state,value){           //加
             state.sum+=value
-        &#125;,
-        JIAN(state,value)&#123;          //减
+        },
+        JIAN(state,value){          //减
             state.sum-=value;
-        &#125;,
-    &#125;,
-    state:&#123;
+        },
+    },
+    state:{
         sum:0,
         name:'周杰伦',
         song:'夜曲',
-    &#125;,
-    getters:&#123;
-        addTen(state)&#123;
+    },
+    getters:{
+        addTen(state){
             return state.sum+10
-        &#125;
-    &#125;
-&#125;</code></pre>
+        }
+    }
+}</code></pre>
 
 <h5 id="2-在index-js中引入"><a href="#2-在index-js中引入" class="headerlink" title="2. 在index.js中引入"></a>2. 在index.js中引入</h5><p> 在store目录下index.js中引入</p>
 <pre><code> import Vue from 'vue'
@@ -530,151 +530,151 @@ Vue.use(Vuex)
 import count from './count'
 import person from './person'
 // 创建并暴露store
-export default new Vuex.Store(&#123;
+export default new Vuex.Store({
     //引入模块
-    modules:&#123;
+    modules:{
         //全写count: count,
         count,
         person
-    &#125;
- &#125;)</code></pre>
+    }
+ })</code></pre>
 
 <h4 id="3-在main-js中引入store"><a href="#3-在main-js中引入store" class="headerlink" title="3. 在main.js中引入store"></a>3. 在main.js中引入store</h4> <pre><code>import Vue from 'vue'
 import App from './App.vue'
 import store from './store'
-new Vue(&#123;
-  render: h => h(App),
+new Vue({
+  render: h =&gt; h(App),
   store
-&#125;).$mount('#app')</code></pre>
+}).$mount('#app')</code></pre>
 
 <h5 id="4-书写组件"><a href="#4-书写组件" class="headerlink" title="4. 书写组件"></a>4. 书写组件</h5><p>创建count.vue组件</p>
 <pre><code>
-&lt;template>
-  &lt;div>
-    &lt;h2>求和案例&lt;/h2>
-    &lt;h2>sum经过getters预处理后&#123;&#123;addTen&#125;&#125;&lt;/h2>
-    &lt;h3>当前值为&#123;&#123;sum&#125;&#125;&lt;/h3>
-    &lt;h2>从state获取name为&#123;&#123;name&#125;&#125;,从state获取song为&#123;&#123;song&#125;&#125;&lt;/h2>
+&lt;template&gt;
+  &lt;div&gt;
+    &lt;h2&gt;求和案例&lt;/h2&gt;
+    &lt;h2&gt;sum经过getters预处理后{{addTen}}&lt;/h2&gt;
+    &lt;h3&gt;当前值为{{sum}}&lt;/h3&gt;
+    &lt;h2&gt;从state获取name为{{name}},从state获取song为{{song}}&lt;/h2&gt;
     
-    &lt;select v-model.number="num">
-        &lt;option value="1">1&lt;/option>
-        &lt;option value="2">2&lt;/option>
-        &lt;option value="3">3&lt;/option>
-        &lt;option value="4">4&lt;/option>
-    &lt;/select>
-    &lt;button @click="incrace(num)">加&lt;/button>
-    &lt;button @click="decrace(num)">减&lt;/button>
-    &lt;button @click="addOpp(num)">偶数才加&lt;/button>
-    &lt;button @click="addLate(num)">延迟3s加&lt;/button>
-    &lt;h1>组件2共享过来的人员名单&lt;/h1>
-   &lt;ol class="person-list">
-    &lt;li v-for="person in personList" :key="person.id">&#123;&#123;person.name&#125;&#125;&lt;/li>
-    &lt;/ol>
-  &lt;/div>
-&lt;/template>
-&lt;script>
- import &#123;mapState,mapGetters, mapMutations,mapActions&#125; from 'vuex'
- export default &#123;
+    &lt;select v-model.number="num"&gt;
+        &lt;option value="1"&gt;1&lt;/option&gt;
+        &lt;option value="2"&gt;2&lt;/option&gt;
+        &lt;option value="3"&gt;3&lt;/option&gt;
+        &lt;option value="4"&gt;4&lt;/option&gt;
+    &lt;/select&gt;
+    &lt;button @click="incrace(num)"&gt;加&lt;/button&gt;
+    &lt;button @click="decrace(num)"&gt;减&lt;/button&gt;
+    &lt;button @click="addOpp(num)"&gt;偶数才加&lt;/button&gt;
+    &lt;button @click="addLate(num)"&gt;延迟3s加&lt;/button&gt;
+    &lt;h1&gt;组件2共享过来的人员名单&lt;/h1&gt;
+   &lt;ol class="person-list"&gt;
+    &lt;li v-for="person in personList" :key="person.id"&gt;{{person.name}}&lt;/li&gt;
+    &lt;/ol&gt;
+  &lt;/div&gt;
+&lt;/template&gt;
+&lt;script&gt;
+ import {mapState,mapGetters, mapMutations,mapActions} from 'vuex'
+ export default {
     name:'CountSum',
-    data()&#123;
-        return &#123;
+    data(){
+        return {
             num:1,
-        &#125;
-    &#125;,
+        }
+    },
     //使用mapState,mapGetters, mapMutations,mapActions时更简洁
-    computed:&#123;
+    computed:{
         // 从count组件获取数据
-        ...mapState('count',&#123;sum:'sum',name:'name',song:'song'&#125;),
+        ...mapState('count',{sum:'sum',name:'name',song:'song'}),
          // 从person组件获取数据
         ...mapState('person',['personList']),
 
-        ...mapGetters('count',&#123;addTen:'addTen'&#125;)
-    &#125;,
-    methods:&#123;
-    ...mapMutations('count',&#123;incrace:'JIA',decrace:'JIAN'&#125;),
-    ...mapActions('count',&#123;addOpp:'addOpp',addLate:'addLate'&#125;)
-    &#125;
- &#125;
-&lt;/script></code></pre>
+        ...mapGetters('count',{addTen:'addTen'})
+    },
+    methods:{
+    ...mapMutations('count',{incrace:'JIA',decrace:'JIAN'}),
+    ...mapActions('count',{addOpp:'addOpp',addLate:'addLate'})
+    }
+ }
+&lt;/script&gt;</code></pre>
 <div class="broadcast color-blue">
 <div class="iconfont icon-yinhao"></div>
 辅助函数指向命名空间时，需要在数据和方法名前添加命名空间名，如：...mapState('命名空间',{参数})</div>
 
 <p>person.vue组件</p>
-<pre><code>&lt;template>
-  &lt;div>
-    &lt;h2>组件2：添加成员&lt;/h2>
-    &lt;input type="text" v-model="personName" placeholder="添加成员">
-    &lt;button @click="add">添加&lt;/button>
-    &lt;button @click="addZhou">只添加姓周的人&lt;/button>
-    &lt;ul>
-        &lt;li v-for="person in personList" :key="person.id">&#123;&#123;person.name&#125;&#125;&lt;/li>
-    &lt;/ul>
-    &lt;h2>名单第一个人为&#123;&#123;firstPersonName&#125;&#125;&lt;/h2>
-    &lt;h2>组件一共享的值&lt;/h2>
-    &lt;h3>和为：&#123;&#123;sum&#125;&#125;&lt;/h3>
-  &lt;/div>
-&lt;/template>
-&lt;script>
-import &#123; nanoid &#125; from 'nanoid'
-export default &#123;
+<pre><code>&lt;template&gt;
+  &lt;div&gt;
+    &lt;h2&gt;组件2：添加成员&lt;/h2&gt;
+    &lt;input type="text" v-model="personName" placeholder="添加成员"&gt;
+    &lt;button @click="add"&gt;添加&lt;/button&gt;
+    &lt;button @click="addZhou"&gt;只添加姓周的人&lt;/button&gt;
+    &lt;ul&gt;
+        &lt;li v-for="person in personList" :key="person.id"&gt;{{person.name}}&lt;/li&gt;
+    &lt;/ul&gt;
+    &lt;h2&gt;名单第一个人为{{firstPersonName}}&lt;/h2&gt;
+    &lt;h2&gt;组件一共享的值&lt;/h2&gt;
+    &lt;h3&gt;和为：{{sum}}&lt;/h3&gt;
+  &lt;/div&gt;
+&lt;/template&gt;
+&lt;script&gt;
+import { nanoid } from 'nanoid'
+export default {
     name:'CountSum',
-    data()&#123;
-        return &#123;
+    data(){
+        return {
             personName:''
-        &#125;
-    &#125;,
+        }
+    },
     //不使用mapState,mapGetters, mapMutations,mapActions时更新、获取数据的方法
-    computed:&#123;
-        personList()&#123;
+    computed:{
+        personList(){
             return this.$store.state.person.personList
-        &#125;,
-        sum()&#123;
+        },
+        sum(){
             return this.$store.state.count.sum
-        &#125;,
+        },
         //通过getters获取时，想要指定组件名与路径
-        firstPersonName()&#123;
+        firstPersonName(){
             return this.$store.getters['person/getFirstName']
-        &#125;
-    &#125;,
-    methods:&#123;
-     add()&#123;
-        const personObj=&#123;id:nanoid(),name:this.personName&#125;;
+        }
+    },
+    methods:{
+     add(){
+        const personObj={id:nanoid(),name:this.personName};
         //指定为person组件下的ADD_PERSON函数
         this.$store.commit('person/ADD_PERSON',personObj);
         this.personName='';
-     &#125;,
-     addZhou()&#123;
-         const personObj=&#123;id:nanoid(),name:this.personName&#125;;
+     },
+     addZhou(){
+         const personObj={id:nanoid(),name:this.personName};
          this.$store.dispatch('person/addPersonZhou',personObj);
          this.personName='';
-     &#125;
-    &#125;
-  &#125;
-&lt;/script></code></pre>
+     }
+    }
+  }
+&lt;/script&gt;</code></pre>
 
 <div class="broadcast color-pink">
 <div class="iconfont icon-yinle1"></div>
 不借助mapState等辅助函数，需要使用路径来指定命名空间名称，其中读取state中的数据使用<span class="tips">this.$store.state.配置文件名.数据名</span>来指向命名空间，而<span class="tips">dispatch</span>、<span class="tips">commit</span>、<span class="tips">getter</span>等api需要使用<span class="tips">this.$store.api名['命名空间/方法名',变量名]</span>语句来指向命名空间</div>
 
-<h5 id="5-App-vue引入两个组件即可"><a href="#5-App-vue引入两个组件即可" class="headerlink" title="5. App.vue引入两个组件即可"></a>5. App.vue引入两个组件即可</h5><pre><code>&lt;template>
-  &lt;div id="app">
-    &lt;Count/>
-    &lt;Person/>
-  &lt;/div>
-&lt;/template>
- &lt;script>
+<h5 id="5-App-vue引入两个组件即可"><a href="#5-App-vue引入两个组件即可" class="headerlink" title="5. App.vue引入两个组件即可"></a>5. App.vue引入两个组件即可</h5><pre><code>&lt;template&gt;
+  &lt;div id="app"&gt;
+    &lt;Count/&gt;
+    &lt;Person/&gt;
+  &lt;/div&gt;
+&lt;/template&gt;
+ &lt;script&gt;
  import Count from'./components/Count.vue'
  import Person from'./components/Person.vue'
- export default &#123;
+ export default {
   name:'App',
-  components:&#123;
+  components:{
     Count,
     Person
-  &#125;
- &#125;
-&lt;/script>
-</code></pre>
+  }
+ }
+&lt;/script&gt;
+</code></pre></body></html>
         </div>
     </div>
     <div class="post-nav">

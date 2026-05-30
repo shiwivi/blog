@@ -1,4 +1,4 @@
-<!DOCTYPE html><html lang="zh-CN"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="author" content="shiwi"><meta name="copyright" content="SHIWIVI"><link rel="shortcut icon" href="/blog/images/favicon.ico" type="image/x-icon"><style>.preload{position:absolute;display:flex;flex-direction:column;align-items:center;justify-content:center;left:0;top:0;width:100%;height:100%;background-color:#000;z-index:100}.text{margin-bottom:10px;color:#00cff3;text-shadow:0 0 3px #00cff3;font-size:20px}.text span{display:inline-block}.dance{animation:dance .8s linear}.text span:nth-child(1){animation-delay:0s}.text span:nth-child(2){animation-delay:.1s}.text span:nth-child(3){animation-delay:.2s}.text span:nth-child(4){animation-delay:.3s}.text span:nth-child(5){animation-delay:.4s}.text span:nth-child(6){animation-delay:.5s}.text span:nth-child(7){animation-delay:.6s}.text span:nth-child(8){animation-delay:.7s}.text span:nth-child(9){animation-delay:.8s}.text span:nth-child(10){animation-delay:.9s}@keyframes dance{0%{transform:translateY(0)}50%{transform:translateY(-20px)}100%{transform:translateY(0)}}.loading{width:80%;max-width:260px;height:6px;background-color:#e1e4e8;border-radius:6px}.bar{display:flex;height:100%;background:linear-gradient(90deg,#ffd33d,#ea4aaa 10%,#b34bff 30%,#01feff 51%,#ffb33d 68%,#ea4aaa 85%,#b34bff);background-size:300% 100%;animation:bar 2s linear infinite}@keyframes bar{0%{background-position:100%}100%{background-position:0}}</style><body><div class="preload"><div class="text"><span>L</span> <span>o</span> <span>a</span> <span>d</span> <span>i</span> <span>n</span> <span>g</span> <span>.</span> <span>.</span> <span>.</span></div><div class="loading"><span class="bar"></span></div></div><script>let texts=document.querySelector('.text').querySelectorAll('span');let timer=setInterval(()=>{texts.forEach((item)=>{item.classList.toggle("dance")})},1700);window.onload=function(){clearInterval(timer);document.querySelector('.preload').style="display:none;"}</script><title>SHIWIVI-文章</title>
+<!DOCTYPE html><html lang="zh-CN"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="author" content="shiwi"><meta name="copyright" content="SHIWIVI"><link rel="shortcut icon" href="/blog/images/icon.png" type="image/x-icon"><style>.preload{position:absolute;display:flex;flex-direction:column;align-items:center;justify-content:center;left:0;top:0;width:100%;height:100%;background-color:#000;z-index:100}.text{margin-bottom:10px;color:#00cff3;text-shadow:0 0 3px #00cff3;font-size:20px}.text span{display:inline-block}.dance{animation:dance .8s linear}.text span:nth-child(1){animation-delay:0s}.text span:nth-child(2){animation-delay:.1s}.text span:nth-child(3){animation-delay:.2s}.text span:nth-child(4){animation-delay:.3s}.text span:nth-child(5){animation-delay:.4s}.text span:nth-child(6){animation-delay:.5s}.text span:nth-child(7){animation-delay:.6s}.text span:nth-child(8){animation-delay:.7s}.text span:nth-child(9){animation-delay:.8s}.text span:nth-child(10){animation-delay:.9s}@keyframes dance{0%{transform:translateY(0)}50%{transform:translateY(-20px)}100%{transform:translateY(0)}}.loading{width:80%;max-width:260px;height:6px;background-color:#e1e4e8;border-radius:6px}.bar{display:flex;height:100%;background:linear-gradient(90deg,#ffd33d,#ea4aaa 10%,#b34bff 30%,#01feff 51%,#ffb33d 68%,#ea4aaa 85%,#b34bff);background-size:300% 100%;animation:bar 2s linear infinite}@keyframes bar{0%{background-position:100%}100%{background-position:0}}</style><body><div class="preload"><div class="text"><span>L</span> <span>o</span> <span>a</span> <span>d</span> <span>i</span> <span>n</span> <span>g</span> <span>.</span> <span>.</span> <span>.</span></div><div class="loading"><span class="bar"></span></div></div><script>let texts=document.querySelector('.text').querySelectorAll('span');let timer=setInterval(()=>{texts.forEach((item)=>{item.classList.toggle("dance")})},1700);window.onload=function(){clearInterval(timer);document.querySelector('.preload').style="display:none;"}</script><title>SHIWIVI-文章</title>
 <link rel="stylesheet" href="https://at.alicdn.com/t/font_2856826_bu73u0ahu7a.css">
 
 <link rel="stylesheet" href="/blog/css/index.css">
@@ -136,13 +136,13 @@
         <div class="article">
         <h1 class="title">代理服务器搭建</h1>
         <div class="art-info">
-            <div><span><span class="iconfont icon-zishu-jzl"></span>字数：2068</span>
+            <div><span><span class="iconfont icon-zishu-jzl"></span>字数：12381</span>
             <span><span class="iconfont icon-riqi"></span>写于：2022-03-10</span></div>
             <div><span><span class="iconfont icon-zuixinnew3"></span>最新更新：2022-03-10</span>
-            <span><span class="iconfont icon-shijian"></span>阅读本文预计花费您6分钟</span></div>
+            <span><span class="iconfont icon-shijian"></span>阅读本文预计花费您36分钟</span></div>
         </div>
         <div class="art-content">
-        <div class="broadcast color-blue">
+        <html><head></head><body><div class="broadcast color-blue">
 <div class="iconfont icon-yinhao"></div>
 本文采用 WTFPL 许可证书，转载请不要标注任何本站信息
 <div><a target="_blank" rel="noopener" href="https://wtfpl2.com/">WTFPL © Do What the Fuck You Want to Public License</a></div></div>
@@ -204,7 +204,7 @@ certbot renew --dry-run
 </ul>
 <h2 id="v2fly"><a href="#v2fly" class="headerlink" title="v2fly"></a>v2fly</h2><p>v2fly是源于v2ray的开源网络代理项目，用于打造专属基础通信网络，Github开源项目地址：<a target="_blank" rel="noopener" href="https://github.com/v2fly/v2ray-core">https://github.com/v2fly/v2ray-core</a></p>
 <h4 id="安装v2fly"><a href="#安装v2fly" class="headerlink" title="安装v2fly"></a>安装v2fly</h4><p>安装/更新 v2fly命令：</p>
-<pre><code>bash <(curl -L https://raw.githubusercontent.com/v2fly/fhs-install-v2ray/master/install-release.sh)</code></pre>
+<pre><code>bash &lt;(curl -L https://raw.githubusercontent.com/v2fly/fhs-install-v2ray/master/install-release.sh)</code></pre>
 
 <p>该安装脚本的开源项目地址：<a target="_blank" rel="noopener" href="https://github.com/v2fly/fhs-install-v2ray">https://github.com/v2fly/fhs-install-v2ray</a></p>
 <h4 id="v2ray常用命令"><a href="#v2ray常用命令" class="headerlink" title="v2ray常用命令"></a>v2ray常用命令</h4><ul>
@@ -213,58 +213,58 @@ certbot renew --dry-run
 <li><span class="strong">v2ray version</span>查看当前版本</li>
 </ul>
 <h3 id="VLESS-TLS-WS"><a href="#VLESS-TLS-WS" class="headerlink" title="VLESS+TLS+WS"></a>VLESS+TLS+WS</h3><h4 id="服务端配置"><a href="#服务端配置" class="headerlink" title="服务端配置"></a>服务端配置</h4><p>使用vim/nano在<span class="tips">/usr/local/etc/v2ray/config.json</span>配置文件中添加配置设置，并移除注释。</p>
-<pre><code>&#123;
-    "log": &#123;
+<pre><code>{
+    "log": {
     "loglevel": "warning",
     "access": "/var/log/v2ray/access.log",   
     "error": "/var/log/v2ray/error.log"  //日志输出路径
-    &#125;,
-    "inbounds": [&#123;
+    },
+    "inbounds": [{
     "port": 8180 ,  //监听端口
     "protocol": "vless",//主传入协议
-    "settings": &#123;
+    "settings": {
     "decryption": "none",
     "clients": [
-    &#123;
+    {
     "id": "41803377-xxxx-xxxx-xxxx-ddaad659554c",//UUID
     "level": 0
-        &#125;
+        }
       ]
-    &#125;,
-    "streamSettings": &#123;
+    },
+    "streamSettings": {
     "network":"ws",  //传输协议
     "security": "tls", //传输层安全
-    "wsSettings":&#123;
+    "wsSettings":{
     "path":"/",     //路径
-    "headers":&#123;&#125;
-    &#125;,
-    "tlsSettings": &#123;
+    "headers":{}
+    },
+    "tlsSettings": {
     "serverName": "xxxx.xyz", //域名
-    "certificates": [&#123;
+    "certificates": [{
     "certificateFile": "/etc/ssl/certificate.crt",//SSL证书路径
     "keyFile": "/etc/ssl/private.key" //密钥路径
-            &#125;]
-         &#125;
-      &#125;
-    &#125;],
-    "outbounds": [&#123;
+            }]
+         }
+      }
+    }],
+    "outbounds": [{
     "protocol": "freedom",//主传出协议
-    "settings": &#123;&#125;
-    &#125;,&#123;
+    "settings": {}
+    },{
     "protocol": "blackhole",
-    "settings": &#123;&#125;,
+    "settings": {},
     "tag": "blocked"
-    &#125;],
-    "routing": &#123;
+    }],
+    "routing": {
     "rules": [
-    &#123;
+    {
     "type": "field",
     "ip": ["geoip:private"],
     "outboundTag": "blocked"
-        &#125;
+        }
       ]
-   &#125;
- &#125;
+   }
+ }
 </code></pre>
 
 <p>检测配置文件是否正确命令：</p>
@@ -323,14 +323,14 @@ Configuration OK.</div>
 <h3 id="VLESS-TLS-WS-伪装"><a href="#VLESS-TLS-WS-伪装" class="headerlink" title="VLESS+TLS+WS+伪装"></a>VLESS+TLS+WS+伪装</h3><p>服务器的入站流量由Nginx接收，配置一个特殊的路径/somepath，将访问该路径的流量通过Nginx反向代理给v2ray，其余流量正常由Nginx处理</p>
 <h4 id="Nginx配置"><a href="#Nginx配置" class="headerlink" title="Nginx配置"></a>Nginx配置</h4><p>向Nginx配置文件<span class="tips">/etc/nginx/nginx.conf</span>的http块内添加以下配置，并通过<span class="tips">nginx -s reload</span>命令重新载入配置</p>
 <pre><code>#对于80端口，通过IP和域名的访问都重定向到https
-server &#123;
+server {
     listen 80;
     server_name _;
     return 301 https://$host$request_uri;
-&#125;
+}
 
 #处理https
-server &#123;
+server {
     listen 443 ssl;#对443端口启用ssl监听
     server_name xxx.com www.xxx.com 22.33.44.55;#接受的域名和IP
 
@@ -341,16 +341,16 @@ server &#123;
     index index.html;
 
     # 主页
-    location = / &#123;
+    location = / {
         try_files /index.html =404;
-    &#125;
+    }
 
     #转发到V2Ray
-    location ^~ /somepath &#123;
+    location ^~ /somepath {
         # 如果请求不是ws，返回404
-        if ($http_upgrade != "websocket") &#123;
+        if ($http_upgrade != "websocket") {
         return 404;
-        &#125;
+        }
 
         proxy_pass http://127.0.0.1:8080;
 
@@ -363,58 +363,58 @@ server &#123;
         proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
 
         proxy_read_timeout 86400;
-    &#125;
+    }
 
     # 其他路径全部404
-    location / &#123;
+    location / {
         return 404;
-    &#125;
-&#125;</code></pre>
+    }
+}</code></pre>
 
 <h4 id="v2ray配置"><a href="#v2ray配置" class="headerlink" title="v2ray配置"></a>v2ray配置</h4><p>使用vim/nano在<span class="tips">/usr/local/etc/v2ray/config.json</span>配置文件中添加配置设置，并移除注释。</p>
-<pre><code>&#123;
-  "log": &#123;
+<pre><code>{
+  "log": {
     "loglevel": "error",
     "access": "/var/log/v2ray/access.log",
     "error": "/var/log/v2ray/error.log"
-   &#125;,
-  "inbounds": [&#123;
+   },
+  "inbounds": [{
     "listen": "127.0.0.1", #建议只监听本地
     "port": 8080, #监听端口
     "protocol": "vless",
-    "settings": &#123;
+    "settings": {
       "decryption": "none",
       "clients": [
-        &#123;
+        {
       "id": "0c03a292-xxxx-xxxx-xxxx-xxxxxxxxx" #UUID
-        &#125;
+        }
       ]
-    &#125;,
-    "streamSettings": &#123;
+    },
+    "streamSettings": {
         "network": "ws",
-        "wsSettings": &#123;
+        "wsSettings": {
           "path": "/somepath" #需要与nginx配置的路径一致
-        &#125;
-      &#125;
-  &#125;],
-  "outbounds": [&#123;
+        }
+      }
+  }],
+  "outbounds": [{
     "protocol": "freedom",
-    "settings": &#123;&#125;
-  &#125;,&#123;
+    "settings": {}
+  },{
     "protocol": "blackhole",
-    "settings": &#123;&#125;,
+    "settings": {},
     "tag": "blocked"
-  &#125;],
-  "routing": &#123;
+  }],
+  "routing": {
     "rules": [
-      &#123;
+      {
         "type": "field",
         "ip": ["geoip:private"],
         "outboundTag": "blocked"
-      &#125;
+      }
     ]
-  &#125;
-&#125;
+  }
+}
 </code></pre>
 
 <h4 id="客户端配置-1"><a href="#客户端配置-1" class="headerlink" title="客户端配置"></a>客户端配置</h4><ul>
@@ -445,101 +445,101 @@ server &#123;
 </ul>
 <h3 id="VLESS-TCP-XTLS-flow"><a href="#VLESS-TCP-XTLS-flow" class="headerlink" title="VLESS+TCP+XTLS+flow"></a>VLESS+TCP+XTLS+flow</h3><p>由Xray接收入站流量，如果是VLESS协议流量，则由Xray处理，非VLESS流量则回落到所指定的端口，交给Nginx处理。此外流控方式XTLS-RPRX-Vision(flow)会使代理流量在外部表现为普通TLS连接，提升传输效率并降低协议特征</p>
 <h4 id="服务端配置-1"><a href="#服务端配置-1" class="headerlink" title="服务端配置"></a>服务端配置</h4><p>使用vim/nano在<span class="tips">/usr/local/etc/xray/config.json</span>配置文件中添加配置并移除注释</p>
-<pre><code>&#123;
- "log": &#123;
+<pre><code>{
+ "log": {
     "loglevel": "error",
     "access": "/var/log/xray/access.log",
     "error": "/var/log/xray/error.log"
-  &#125;,
-  "dns": &#123;
+  },
+  "dns": {
     "servers": [
       "https+local://1.1.1.1/dns-query",
       "localhost"
     ]
-  &#125;,
-  "routing": &#123;
+  },
+  "routing": {
     "domainStrategy": "IPIfNonMatch",
     "rules": [
-      &#123;
+      {
         "ip": [
           "geoip:private"
         ],
         "outboundTag": "block"
-      &#125;,
-      &#123;
+      },
+      {
         "ip": ["geoip:cn"],
         "outboundTag": "block"
-      &#125;,
-      &#123;
+      },
+      {
         "domain": [
           "geosite:category-ads-all"
         ],
         "outboundTag": "block"
-      &#125;
+      }
     ]
-  &#125;,
+  },
   "inbounds": [
-    &#123;
+    {
       "port": 443,
       "protocol": "vless",
-      "settings": &#123;
+      "settings": {
         "clients": [
-          &#123;
+          {
             "id": "0c03a292-xxxx-xxxx-xxxx-375cab768a57", //UUID
             "flow": "xtls-rprx-vision",
             "level": 0
-          &#125;
+          }
         ],
         "decryption": "none",
         "fallbacks": [
-          &#123;
+          {
             "dest": 8080  //回落端口
-          &#125;
+          }
         ]
-      &#125;,
-      "streamSettings": &#123;
+      },
+      "streamSettings": {
         "network": "tcp",
         "security": "tls",
-        "tlsSettings": &#123;
+        "tlsSettings": {
           "alpn": "http/1.1",
           "certificates": [
-            &#123;
+            {
               "certificateFile": "/etc/letsencrypt/live/xxxx.com/fullchain.pem", //证书
               "keyFile": "/etc/letsencrypt/live/xxxx.com/privkey.pem"  //密钥
-            &#125;
+            }
           ]
-        &#125;
-      &#125;
-    &#125;
+        }
+      }
+    }
   ],
   "outbounds": [
-    &#123;
+    {
       "tag": "direct",
       "protocol": "freedom"
-    &#125;,
-    &#123;
+    },
+    {
       "tag": "block",
       "protocol": "blackhole"
-    &#125;
+    }
   ]
-&#125;</code></pre>
+}</code></pre>
 
 <h4 id="Nginx接收回落"><a href="#Nginx接收回落" class="headerlink" title="Nginx接收回落"></a>Nginx接收回落</h4><h5 id="添加HTML文件"><a href="#添加HTML文件" class="headerlink" title="添加HTML文件"></a>添加HTML文件</h5><p>在<span class="tips">/var/www/域名.com</span>目录下上传html文件，并确保Nginx的默认用户www-data对该目录有访问权限，对html文件有r读取权限</p>
 <h5 id="添加Nginx配置"><a href="#添加Nginx配置" class="headerlink" title="添加Nginx配置"></a>添加Nginx配置</h5><p><span class="tips">/etc/nginx/nginx.conf</span>，在http块中添加</p>
 <pre><code>#重定向80端口的访问，443由Xray监听
-server &#123;
+server {
     listen 80;
     server_name _;
     return 301 https://$host$request_uri;
-&#125;
+}
 
 # Xray回落的流量由Nginx处理
-server &#123;
+server {
           listen 127.0.0.1:8080;
           server_name xxxx.top www.xxxx.top;
           root /var/www/xxxx.top;
           index index.html;
-        &#125;
+        }
 </code></pre>
 
 <h4 id="客户端配置-2"><a href="#客户端配置-2" class="headerlink" title="客户端配置"></a>客户端配置</h4><ul>
@@ -593,29 +593,29 @@ DNS:i.s-microsoft.com, DNS:microsoft.com, DNS:c.s-microsoft.com, DNS:privacy.mic
 
 <p>服务端的serverNames配置可以挑选该SAN列表中的一个或多个(分配给多个Xray客户端)，客户端的SNI值需要是该serverNames中的其中一个。</p>
 <h4 id="服务端配置-2"><a href="#服务端配置-2" class="headerlink" title="服务端配置"></a>服务端配置</h4><p>使用vim/nano在<span class="tips">/usr/local/etc/xray/config.json</span>配置文件中添加配置并移除注释</p>
-<pre><code>&#123;
- "log": &#123;
+<pre><code>{
+ "log": {
    "access": "/var/log/xray/access.log",
    "error": "/var/log/xray/error.log",
    "loglevel": "error"
- &#125;,
+ },
   "inbounds": [
-    &#123;
+    {
       "port": 443,
       "protocol": "vless",
-      "settings": &#123;
+      "settings": {
         "clients": [
-          &#123;
+          {
             "id": "0c-xxxx-xxx-8a57", #UUID
             "flow": "xtls-rprx-vision"
-          &#125;
+          }
         ],
         "decryption": "none"
-      &#125;,
-      "streamSettings": &#123;
+      },
+      "streamSettings": {
         "network": "tcp",
         "security": "reality",
-        "realitySettings": &#123;
+        "realitySettings": {
           "show": false,
           "target": "www.microsoft.com:443",#target网站
           "xver": 0,
@@ -626,16 +626,16 @@ DNS:i.s-microsoft.com, DNS:microsoft.com, DNS:c.s-microsoft.com, DNS:privacy.mic
           "shortIds": [
             "0312abcd6201" #shortIds
           ]
-        &#125;
-      &#125;
-    &#125;
+        }
+      }
+    }
   ],
   "outbounds": [
-    &#123;
+    {
       "protocol": "freedom"
-    &#125;
+    }
   ]
-&#125;
+}
 </code></pre>
 
 
@@ -667,7 +667,7 @@ iptables -I INPUT -p tcp --dport 8080 -j ACCEPT
 //保存添加的规则链
 service iptables save
 </div>
-
+</body></html>
         </div>
     </div>
     <div class="post-nav">

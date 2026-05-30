@@ -1,4 +1,4 @@
-<!DOCTYPE html><html lang="zh-CN"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="author" content="shiwi"><meta name="copyright" content="SHIWIVI"><link rel="shortcut icon" href="/blog/images/favicon.ico" type="image/x-icon"><style>.preload{position:absolute;display:flex;flex-direction:column;align-items:center;justify-content:center;left:0;top:0;width:100%;height:100%;background-color:#000;z-index:100}.text{margin-bottom:10px;color:#00cff3;text-shadow:0 0 3px #00cff3;font-size:20px}.text span{display:inline-block}.dance{animation:dance .8s linear}.text span:nth-child(1){animation-delay:0s}.text span:nth-child(2){animation-delay:.1s}.text span:nth-child(3){animation-delay:.2s}.text span:nth-child(4){animation-delay:.3s}.text span:nth-child(5){animation-delay:.4s}.text span:nth-child(6){animation-delay:.5s}.text span:nth-child(7){animation-delay:.6s}.text span:nth-child(8){animation-delay:.7s}.text span:nth-child(9){animation-delay:.8s}.text span:nth-child(10){animation-delay:.9s}@keyframes dance{0%{transform:translateY(0)}50%{transform:translateY(-20px)}100%{transform:translateY(0)}}.loading{width:80%;max-width:260px;height:6px;background-color:#e1e4e8;border-radius:6px}.bar{display:flex;height:100%;background:linear-gradient(90deg,#ffd33d,#ea4aaa 10%,#b34bff 30%,#01feff 51%,#ffb33d 68%,#ea4aaa 85%,#b34bff);background-size:300% 100%;animation:bar 2s linear infinite}@keyframes bar{0%{background-position:100%}100%{background-position:0}}</style><body><div class="preload"><div class="text"><span>L</span> <span>o</span> <span>a</span> <span>d</span> <span>i</span> <span>n</span> <span>g</span> <span>.</span> <span>.</span> <span>.</span></div><div class="loading"><span class="bar"></span></div></div><script>let texts=document.querySelector('.text').querySelectorAll('span');let timer=setInterval(()=>{texts.forEach((item)=>{item.classList.toggle("dance")})},1700);window.onload=function(){clearInterval(timer);document.querySelector('.preload').style="display:none;"}</script><title>SHIWIVI-文章</title>
+<!DOCTYPE html><html lang="zh-CN"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="author" content="shiwi"><meta name="copyright" content="SHIWIVI"><link rel="shortcut icon" href="/blog/images/icon.png" type="image/x-icon"><style>.preload{position:absolute;display:flex;flex-direction:column;align-items:center;justify-content:center;left:0;top:0;width:100%;height:100%;background-color:#000;z-index:100}.text{margin-bottom:10px;color:#00cff3;text-shadow:0 0 3px #00cff3;font-size:20px}.text span{display:inline-block}.dance{animation:dance .8s linear}.text span:nth-child(1){animation-delay:0s}.text span:nth-child(2){animation-delay:.1s}.text span:nth-child(3){animation-delay:.2s}.text span:nth-child(4){animation-delay:.3s}.text span:nth-child(5){animation-delay:.4s}.text span:nth-child(6){animation-delay:.5s}.text span:nth-child(7){animation-delay:.6s}.text span:nth-child(8){animation-delay:.7s}.text span:nth-child(9){animation-delay:.8s}.text span:nth-child(10){animation-delay:.9s}@keyframes dance{0%{transform:translateY(0)}50%{transform:translateY(-20px)}100%{transform:translateY(0)}}.loading{width:80%;max-width:260px;height:6px;background-color:#e1e4e8;border-radius:6px}.bar{display:flex;height:100%;background:linear-gradient(90deg,#ffd33d,#ea4aaa 10%,#b34bff 30%,#01feff 51%,#ffb33d 68%,#ea4aaa 85%,#b34bff);background-size:300% 100%;animation:bar 2s linear infinite}@keyframes bar{0%{background-position:100%}100%{background-position:0}}</style><body><div class="preload"><div class="text"><span>L</span> <span>o</span> <span>a</span> <span>d</span> <span>i</span> <span>n</span> <span>g</span> <span>.</span> <span>.</span> <span>.</span></div><div class="loading"><span class="bar"></span></div></div><script>let texts=document.querySelector('.text').querySelectorAll('span');let timer=setInterval(()=>{texts.forEach((item)=>{item.classList.toggle("dance")})},1700);window.onload=function(){clearInterval(timer);document.querySelector('.preload').style="display:none;"}</script><title>SHIWIVI-文章</title>
 <link rel="stylesheet" href="https://at.alicdn.com/t/font_2856826_bu73u0ahu7a.css">
 
 <link rel="stylesheet" href="/blog/css/index.css">
@@ -136,13 +136,13 @@
         <div class="article">
         <h1 class="title">路由与路由守卫</h1>
         <div class="art-info">
-            <div><span><span class="iconfont icon-zishu-jzl"></span>字数：16522</span>
+            <div><span><span class="iconfont icon-zishu-jzl"></span>字数：15747</span>
             <span><span class="iconfont icon-riqi"></span>写于：2022-07-16</span></div>
             <div><span><span class="iconfont icon-zuixinnew3"></span>最新更新：2022-07-16</span>
-            <span><span class="iconfont icon-shijian"></span>阅读本文预计花费您48分钟</span></div>
+            <span><span class="iconfont icon-shijian"></span>阅读本文预计花费您45分钟</span></div>
         </div>
         <div class="art-content">
-        <div class="broadcast color-yellow">
+        <html><head></head><body><div class="broadcast color-yellow">
 <div class="iconfont icon-dengpao14hao"></div>
 vue路由官方网站：<a target="_blank" rel="noopener" href="https://router.vuejs.org/zh/">https://router.vuejs.org/zh/</a></div>
 
@@ -155,7 +155,7 @@ vue路由官方网站：<a target="_blank" rel="noopener" href="https://router.v
 <li>但每个路由组件都有自己的<span class="tips">$route</span>属性</li>
 </ul>
 <h4 id="安装vue-router"><a href="#安装vue-router" class="headerlink" title="安装vue router"></a>安装vue router</h4><p>vue2的工程使用vue-router3，vue3的工程使用vue-router4，版本需要对应，这里以安装vue-router3为例</p>
-<p>在脚手架中执行：<br><code><pre>npm i vue-router@3</pre></code></p>
+<p>在脚手架中执行：<br><code></code></p><pre><code>npm i vue-router@3</code></pre><p></p>
 <h3 id="路由的使用"><a href="#路由的使用" class="headerlink" title="路由的使用"></a>路由的使用</h3><p>案例：通过组件嵌套，实现功能</p>
 <ol>
 <li>在app单个页面中通过按钮实现Home和About页面的切换</li>
@@ -163,66 +163,66 @@ vue路由官方网站：<a target="_blank" rel="noopener" href="https://router.v
 </ol>
 <p><span class="strong">1. 新建pages目录，存放Home.vue、About.vue、aboutMe、aboutWeb组件</span></p>
 <p>Home.vue文件:</p>
-<pre><code>&lt;template>
-  &lt;div class="home">
-    &lt;h2>Home页面&lt;/h2>
-  &lt;/div>
-&lt;/template>
-&lt;script>
-export default &#123;
+<pre><code>&lt;template&gt;
+  &lt;div class="home"&gt;
+    &lt;h2&gt;Home页面&lt;/h2&gt;
+  &lt;/div&gt;
+&lt;/template&gt;
+&lt;script&gt;
+export default {
     name:'pageHome'
-  &#125;
-&lt;/script></code></pre>
+  }
+&lt;/script&gt;</code></pre>
 
 <p>About.vue文件:</p>
-<pre><code>&lt;template>
-  &lt;div class="about">
-    &lt;h2>About页面&lt;/h2>
-    &lt;div class="about-btn">
-    &lt;!--router-link标签路由切换按钮的两种写法，该标签最后会被解析为a标签-->
-    &lt;!--1. 根据路径调用组件-->
-    &lt;router-link to="/about/aboutWeb">关于网页&lt;/router-link> 
-    &lt;router-link to="/about/aboutMe">关于我&lt;/router-link> 
-    &lt;!--2. 根据路由规则中的name属性调用组件-->
-    &lt;router-link :to="&#123;name: 'aboutme'&#125;">关于网页&lt;/router-link> 
-    &lt;router-link :to="&#123;name: 'aboutweb'&#125;">关于我&lt;/router-link> 
-    &lt;/div>
-    &lt;div class="about-content">
-    &lt;!--子组件显示的位置-->
-    &lt;router-view>&lt;/router-view> 
-    &lt;/div>
-  &lt;/div>
-&lt;/template>
- &lt;script>
- export default &#123;
+<pre><code>&lt;template&gt;
+  &lt;div class="about"&gt;
+    &lt;h2&gt;About页面&lt;/h2&gt;
+    &lt;div class="about-btn"&gt;
+    &lt;!--router-link标签路由切换按钮的两种写法，该标签最后会被解析为a标签--&gt;
+    &lt;!--1. 根据路径调用组件--&gt;
+    &lt;router-link to="/about/aboutWeb"&gt;关于网页&lt;/router-link&gt; 
+    &lt;router-link to="/about/aboutMe"&gt;关于我&lt;/router-link&gt; 
+    &lt;!--2. 根据路由规则中的name属性调用组件--&gt;
+    &lt;router-link :to="{name: 'aboutme'}"&gt;关于网页&lt;/router-link&gt; 
+    &lt;router-link :to="{name: 'aboutweb'}"&gt;关于我&lt;/router-link&gt; 
+    &lt;/div&gt;
+    &lt;div class="about-content"&gt;
+    &lt;!--子组件显示的位置--&gt;
+    &lt;router-view&gt;&lt;/router-view&gt; 
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/template&gt;
+ &lt;script&gt;
+ export default {
      name:'pageAbout'
- &#125;
-&lt;/script></code></pre>
+ }
+&lt;/script&gt;</code></pre>
 
 <p>aboutWeb.vue文件 (aboutMe.vue类似)</p>
-<pre><code>&lt;template>
-  &lt;div>
-    &lt;ul>
-        &lt;li v-for="(t,index) in tech" :key="index">&#123;&#123;t&#125;&#125;&lt;/li>
-    &lt;/ul>
-  &lt;/div>
-&lt;/template>
+<pre><code>&lt;template&gt;
+  &lt;div&gt;
+    &lt;ul&gt;
+        &lt;li v-for="(t,index) in tech" :key="index"&gt;{{t}}&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/div&gt;
+&lt;/template&gt;
 
-&lt;script>
- export default &#123;
+&lt;script&gt;
+ export default {
     name:'aboutWeb',
-    data()&#123;
-        return&#123;
-            tech:&#123;
+    data(){
+        return{
+            tech:{
                 前端:'html/css/javaScript',
                 后端:'java',
                 系统:'CentOS7',
                 服务器:'nginx'
-            &#125;
-        &#125;
-    &#125;
- &#125;
-&lt;/script></code></pre>
+            }
+        }
+    }
+ }
+&lt;/script&gt;</code></pre>
 
 <p><span class="strong">2. 新建router目录，新建index.js文件用于创建路由器</span><br>index.js文件：</p>
 <pre><code>// 引入vueRouter插件
@@ -233,33 +233,33 @@ import About from '../pages/pageAbout'
 import aboutMe from '../pages/aboutMe'
 import aboutWeb from '../pages/aboutWeb'
 // 创建路由器
-export default new VueRouter(&#123;
-    // 创建路由规则一个&#123;&#125;内为一条路由
+export default new VueRouter({
+    // 创建路由规则一个{}内为一条路由
     routes:[
-        &#123;
+        {
             name: 'home',    //路由规则指定的组件别名
             path:'/home',   //路由路径
             component:Home //调用的组件
-        &#125;,
-        &#123;   
+        },
+        {   
             name: 'about',
             path:'/about',
             component:About,
             children:[     //组件嵌套
-                &#123;   
+                {   
                     name:'aboutme',
                     path:'aboutMe',
                     component:aboutMe
-                &#125;,
-                &#123;   
+                },
+                {   
                     name:'aboutweb',
                     path:'aboutWeb',
                     component:aboutWeb
-                &#125;
+                }
             ]
-        &#125;
+        }
     ]
- &#125;)
+ })
 </code></pre>
 
 <p><span class="strong">3. 在main.js中引入路由器</span></p>
@@ -271,209 +271,209 @@ import VueRouter from 'vue-router'
 Vue.use(VueRouter)
 // 引入创建的路由器
 import router from './router'
-new Vue(&#123;
-  render: h => h(App),
+new Vue({
+  render: h =&gt; h(App),
   router:router   //配置路由器
-&#125;).$mount('#app')</code></pre>
+}).$mount('#app')</code></pre>
 
 <p><span class="strong">4. 在App中调用路由组件</span></p>
-<pre><code>&lt;template>
-  &lt;div id="app">
-    &lt;div class="btn">
-      &lt;!-- active-class用于指定该链接按钮被选中时生效的样式-->
-      &lt;router-link class="link" active-class="active" to="/home">Home&lt;/router-link>
-      &lt;router-link class="link" active-class="active" to="/about">About&lt;/router-link>
-      &lt;!-- 同样，to可以写为对象形式 -->
-      &lt;router-link class="link" active-class="active" :to="&#123;name:'home'&#125;">Home&lt;/router-link>
-      &lt;router-link class="link" active-class="active" :to="&#123;name:'about'&#125;">About&lt;/router-link>
-    &lt;/div>
-    &lt;div class="content">
-      &lt;!-- 指定组件显示的位置 -->
-      &lt;router-view>&lt;/router-view>
-    &lt;/div>
-  &lt;/div>
-&lt;/template>
-&lt;script>
- export default &#123;
+<pre><code>&lt;template&gt;
+  &lt;div id="app"&gt;
+    &lt;div class="btn"&gt;
+      &lt;!-- active-class用于指定该链接按钮被选中时生效的样式--&gt;
+      &lt;router-link class="link" active-class="active" to="/home"&gt;Home&lt;/router-link&gt;
+      &lt;router-link class="link" active-class="active" to="/about"&gt;About&lt;/router-link&gt;
+      &lt;!-- 同样，to可以写为对象形式 --&gt;
+      &lt;router-link class="link" active-class="active" :to="{name:'home'}"&gt;Home&lt;/router-link&gt;
+      &lt;router-link class="link" active-class="active" :to="{name:'about'}"&gt;About&lt;/router-link&gt;
+    &lt;/div&gt;
+    &lt;div class="content"&gt;
+      &lt;!-- 指定组件显示的位置 --&gt;
+      &lt;router-view&gt;&lt;/router-view&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/template&gt;
+&lt;script&gt;
+ export default {
   name:'App',
- &#125;
-&lt;/script></code></pre>
+ }
+&lt;/script&gt;</code></pre>
 
 <h3 id="路由传参"><a href="#路由传参" class="headerlink" title="路由传参"></a>路由传参</h3><h4 id="query传参"><a href="#query传参" class="headerlink" title="query传参"></a>query传参</h4><p>父组件可通过向<span class="tips"> to </span>属性添加参数进行传参，类似于带参数的http请求，子路由可通过<span class="tips">$route.query.参数名</span>读取数据</p>
 <p>案例：为aboutWeb组件添加子组件webTech，并由aboutWeb向webTech传参</p>
 <h5 id="方法1：通过字符串传参"><a href="#方法1：通过字符串传参" class="headerlink" title="方法1：通过字符串传参"></a>方法1：通过字符串传参</h5><p>在路由路径后添加查询字符串<span class="tips"> ? </span>，并在之后以键值对的方式传参。</p>
 <p>父组件 aboutWeb.vue</p>
-<pre><code>&lt;template>
-  &lt;div>
-    &lt;ul>
-        &lt;li v-for="(t,index) in tech" :key="index">
-        &lt;!-- 字符串写法 -->
-        &lt;!-- 注意：由于to前使用了:解析js语法，因此要添加``将语句解析为字符串 -->
-        &lt;router-link :to="`/about/aboutWeb/webTech?name=$&#123;t.name&#125;&lang=$&#123;t.language&#125;`">&#123;&#123;t.name&#125;&#125;&lt;/router-link>
-        &lt;/li>
-    &lt;/ul>
-    &lt;router-view>&lt;/router-view>
-  &lt;/div>
-&lt;/template>
-&lt;script>
- export default &#123;
+<pre><code>&lt;template&gt;
+  &lt;div&gt;
+    &lt;ul&gt;
+        &lt;li v-for="(t,index) in tech" :key="index"&gt;
+        &lt;!-- 字符串写法 --&gt;
+        &lt;!-- 注意：由于to前使用了:解析js语法，因此要添加``将语句解析为字符串 --&gt;
+        &lt;router-link :to="`/about/aboutWeb/webTech?name=${t.name}&amp;lang=${t.language}`"&gt;{{t.name}}&lt;/router-link&gt;
+        &lt;/li&gt;
+    &lt;/ul&gt;
+    &lt;router-view&gt;&lt;/router-view&gt;
+  &lt;/div&gt;
+&lt;/template&gt;
+&lt;script&gt;
+ export default {
     name:'aboutWeb',
-    data()&#123;
-        return&#123;
+    data(){
+        return{
             tech:[
-                &#123;name:'前端',language:'html/css/javaScript'&#125;,
-                &#123;name:'框架',language:'vue'&#125;,
-                &#123;name:'后端',language:'java'&#125;,
-                &#123;name:'系统',language:'CentOS7'&#125;,
-                &#123;name:'服务器',language:'nginx'&#125;,
+                {name:'前端',language:'html/css/javaScript'},
+                {name:'框架',language:'vue'},
+                {name:'后端',language:'java'},
+                {name:'系统',language:'CentOS7'},
+                {name:'服务器',language:'nginx'},
                 ]
-            &#125;
-        &#125;
- &#125;
-&lt;/script></code></pre>
+            }
+        }
+ }
+&lt;/script&gt;</code></pre>
 
-<h5 id="方法2：通过对象传参"><a href="#方法2：通过对象传参" class="headerlink" title="方法2：通过对象传参"></a>方法2：通过对象传参</h5><pre><code>&lt;template>
-  &lt;div>
-    &lt;ul>
-        &lt;li v-for="(t,index) in tech" :key="index">
-        &lt;!-- 对象写法 -->
-            &lt;router-link :to="&#123;
+<h5 id="方法2：通过对象传参"><a href="#方法2：通过对象传参" class="headerlink" title="方法2：通过对象传参"></a>方法2：通过对象传参</h5><pre><code>&lt;template&gt;
+  &lt;div&gt;
+    &lt;ul&gt;
+        &lt;li v-for="(t,index) in tech" :key="index"&gt;
+        &lt;!-- 对象写法 --&gt;
+            &lt;router-link :to="{
             path:'/about/aboutWeb/webTech',
-            query:&#123;
+            query:{
                 name:t.name,
                 lang:t.language
-            &#125;
-            &#125;">
-            &#123;&#123;t.name&#125;&#125;
-            &lt;/router-link>
-        &lt;/li>
-    &lt;/ul>
-    &lt;router-view>&lt;/router-view>
-  &lt;/div>
-&lt;/template>
-&lt;script>
- export default &#123;
+            }
+            }"&gt;
+            {{t.name}}
+            &lt;/router-link&gt;
+        &lt;/li&gt;
+    &lt;/ul&gt;
+    &lt;router-view&gt;&lt;/router-view&gt;
+  &lt;/div&gt;
+&lt;/template&gt;
+&lt;script&gt;
+ export default {
     name:'aboutWeb',
-    data()&#123;
-        return&#123;
+    data(){
+        return{
             tech:[
-                &#123;name:'前端',language:'html/css/javaScript'&#125;,
-                &#123;name:'框架',language:'vue'&#125;,
-                &#123;name:'后端',language:'java'&#125;,
-                &#123;name:'系统',language:'CentOS7'&#125;,
-                &#123;name:'服务器',language:'nginx'&#125;,
+                {name:'前端',language:'html/css/javaScript'},
+                {name:'框架',language:'vue'},
+                {name:'后端',language:'java'},
+                {name:'系统',language:'CentOS7'},
+                {name:'服务器',language:'nginx'},
                 ]
-            &#125;
-        &#125;
- &#125;
-&lt;/script></code></pre>
+            }
+        }
+ }
+&lt;/script&gt;</code></pre>
 
 <h5 id="子路由读取参数"><a href="#子路由读取参数" class="headerlink" title="子路由读取参数"></a>子路由读取参数</h5><p>webTech.vue文件：</p>
-<pre><code>&lt;template>
-  &lt;div class="show">
-  &lt;!-- 读取数据 -->
-    &lt;span class="tech-name">&#123;&#123;$route.query.name&#125;&#125;：&lt;/span>
-    &lt;span class="tech-lang">&#123;&#123;$route.query.lang&#125;&#125;&lt;/span>
-  &lt;/div>
-&lt;/template>
+<pre><code>&lt;template&gt;
+  &lt;div class="show"&gt;
+  &lt;!-- 读取数据 --&gt;
+    &lt;span class="tech-name"&gt;{{$route.query.name}}：&lt;/span&gt;
+    &lt;span class="tech-lang"&gt;{{$route.query.lang}}&lt;/span&gt;
+  &lt;/div&gt;
+&lt;/template&gt;
 
-&lt;script>
- export default &#123;
+&lt;script&gt;
+ export default {
     name:'webTech'
- &#125;
-&lt;/script></code></pre>
+ }
+&lt;/script&gt;</code></pre>
 
 <h4 id="params传参"><a href="#params传参" class="headerlink" title="params传参"></a>params传参</h4><h5 id="方法1：通过字符串传参-1"><a href="#方法1：通过字符串传参-1" class="headerlink" title="方法1：通过字符串传参"></a>方法1：通过字符串传参</h5><p>通过字符串传参时，必须在配置路由规则时在<span class="tips">path</span>路径中指定解析的参数</p>
-<pre><code> &#123;   
+<pre><code> {   
   name:'aboutweb',
   path:'aboutWeb',
   component:aboutWeb,
-  children:[&#123;
+  children:[{
     path:'webTech/:name/:lang', //在路径中解析参数
     conpontent:webTech
-  &#125;]
-      &#125;</code></pre>
+  }]
+      }</code></pre>
 
 <p>父组件通过附带参数的路径传输参数</p>
-<pre><code>&lt;router-link :to="`/about/aboutWeb/webTech?name=$&#123;t.name&#125;&lang=$&#123;t.language&#125;`">&#123;&#123;t.name&#125;&#125;&lt;/router-link></code></pre>
+<pre><code>&lt;router-link :to="`/about/aboutWeb/webTech?name=${t.name}&amp;lang=${t.language}`"&gt;{{t.name}}&lt;/router-link&gt;</code></pre>
 
 <p>子组件通过<span class="tips">$route.params.参数名</span>读取参数</p>
-<pre><code>&lt;span class="tech-name">&#123;&#123;$route.params.name&#125;&#125;&lt;/span>
-&lt;span class="tech-lang">&#123;&#123;$route.params.lang&#125;&#125;&lt;/span></code></pre>
+<pre><code>&lt;span class="tech-name"&gt;{{$route.params.name}}&lt;/span&gt;
+&lt;span class="tech-lang"&gt;{{$route.params.lang}}&lt;/span&gt;</code></pre>
 
 <h5 id="方法2：通过对象传参-1"><a href="#方法2：通过对象传参-1" class="headerlink" title="方法2：通过对象传参"></a>方法2：通过对象传参</h5><p>通过对象传参时，<span class="tips">to</span>属性不能再使用<span class="tips">path</span>调用组件，而需要使用<span class="tips">name</span>属性，因此路由规则中一定需要给予组件name属性</p>
-<pre><code>&#123;   
+<pre><code>{   
   name:'aboutweb',
   path:'aboutWeb',
   component:aboutWeb,
-  children:[&#123;
+  children:[{
     name:'webtech' //必须
     path:'webTech/:name/:lang', //必须
     conpontent:webTech
-  &#125;]
-      &#125;</code></pre>
+  }]
+      }</code></pre>
 
 <p>传参的父组件</p>
-<pre><code>&lt;router-link :to="&#123;
+<pre><code>&lt;router-link :to="{
             name:'webtech', //不能使用path
-            params:&#123;
+            params:{
                 name:t.name,
                 lang:t.language
-            &#125;&#125;">
-            &#123;&#123;t.name&#125;&#125;
-&lt;/router-link></code></pre>
+            }}"&gt;
+            {{t.name}}
+&lt;/router-link&gt;</code></pre>
 <p>子组件通过<span class="tips">$route.params.参数名</span>读取参数，代码同上</p>
 <h4 id="props属性"><a href="#props属性" class="headerlink" title="props属性"></a>props属性</h4><p>当需要大量调用参数时，频繁使用$route.query增加了代码量，可以在路由中配置<span class="tips">props</span>属性简化代码。props属性支持三种配置方法。</p>
-<h5 id="1-对象形式，传输固定参数"><a href="#1-对象形式，传输固定参数" class="headerlink" title="1. 对象形式，传输固定参数"></a>1. 对象形式，传输固定参数</h5><pre><code>&#123;   
+<h5 id="1-对象形式，传输固定参数"><a href="#1-对象形式，传输固定参数" class="headerlink" title="1. 对象形式，传输固定参数"></a>1. 对象形式，传输固定参数</h5><pre><code>{   
   name:'aboutweb',
   path:'aboutWeb',
   component:aboutWeb,
-  children:[&#123;
+  children:[{
     name:'webtech' 
     path:'webTech',
     conpontent:webTech,
     //对象形式，传输固定参数
-    props:&#123; name:'框架',
-            lang:'Vue'&#125;
-  &#125;]
-      &#125;</code></pre>
-<h5 id="2-函数形式，传输指定参数-用query"><a href="#2-函数形式，传输指定参数-用query" class="headerlink" title="2. 函数形式，传输指定参数(用query)"></a>2. 函数形式，传输指定参数(用query)</h5><pre><code>&#123;   
+    props:{ name:'框架',
+            lang:'Vue'}
+  }]
+      }</code></pre>
+<h5 id="2-函数形式，传输指定参数-用query"><a href="#2-函数形式，传输指定参数-用query" class="headerlink" title="2. 函数形式，传输指定参数(用query)"></a>2. 函数形式，传输指定参数(用query)</h5><pre><code>{   
   name:'aboutweb',
   path:'aboutWeb',
   component:aboutWeb,
-  children:[&#123;
+  children:[{
     name:'webtech' 
     path:'webTech',
     conpontent:webTech,
     //对象形式，传输固定参数
-    pros(route)&#123;
-      return &#123;
+    pros(route){
+      return {
         name: route.query.name,
         lang: route.query.language
-      &#125;
-    &#125;
-  &#125;]
-      &#125;</code></pre>
+      }
+    }
+  }]
+      }</code></pre>
 
-<h5 id="3-布尔值，自动传输所有params参数"><a href="#3-布尔值，自动传输所有params参数" class="headerlink" title="3. 布尔值，自动传输所有params参数"></a>3. 布尔值，自动传输所有params参数</h5><pre><code>&#123;   
+<h5 id="3-布尔值，自动传输所有params参数"><a href="#3-布尔值，自动传输所有params参数" class="headerlink" title="3. 布尔值，自动传输所有params参数"></a>3. 布尔值，自动传输所有params参数</h5><pre><code>{   
   name:'aboutweb',
   path:'aboutWeb',
   component:aboutWeb,
-  children:[&#123;
+  children:[{
     name:'webtech' 
     path:'webTech/:name/:lang', //自动传输所有参数
     conpontent:webTech,
     //布尔值形式
     pros: true
-  &#125;]
-      &#125;</code></pre>
+  }]
+      }</code></pre>
 <h5 id="接收参数"><a href="#接收参数" class="headerlink" title="接收参数"></a>接收参数</h5><p>子组件需要通过<span class="tips">props</span>属性接收参数</p>
-<pre><code>&lt;span>&#123;&#123;name&#125;&#125;&lt;/span> //直接调用
-&lt;span>&#123;&#123;lang&#125;&#125;&lt;/span>
-export default&#123;
+<pre><code>&lt;span&gt;{{name}}&lt;/span&gt; //直接调用
+&lt;span&gt;{{lang}}&lt;/span&gt;
+export default{
    name:'webTech',
   pros:['name','lang'] //接收参数
-   &#125;</code></pre>
+   }</code></pre>
 
 <h3 id="路由导航"><a href="#路由导航" class="headerlink" title="路由导航"></a>路由导航</h3><p>路由导航分为声明式和编程式</p>
 <ul>
@@ -481,8 +481,8 @@ export default&#123;
 <li><span class="strong">编程式：</span>通过调用push、back等API跳转组件</li>
 </ul>
 <h4 id="路由导航与浏览器历史记录"><a href="#路由导航与浏览器历史记录" class="headerlink" title="路由导航与浏览器历史记录"></a>路由导航与浏览器历史记录</h4><p>浏览器历史记录默认为<span class="tips">push</span>状态，组件的跳转会记录到历史记录中，通过浏览器的前进/后退按钮，或者调用<span class="tips">go</span>、<span class="tips">back</span>等API，能根据历史记录实现页面的前进、回退。当浏览器历史记录切换为<span class="tips">replace</span>状态时，浏览器会使用当前页面的记录替换掉上一条历史记录。</p>
-<pre><code> &lt;--跳转到About页面后，About页面的历史记录会替换掉该页的历史记录，此时无法再使用浏览器的回退按钮返回该页面了-->
-&lt;router-link replace to="...">跳转到About页面&lt;/router-link></code></pre>
+<pre><code> &lt;--跳转到About页面后，About页面的历史记录会替换掉该页的历史记录，此时无法再使用浏览器的回退按钮返回该页面了--&gt;
+&lt;router-link replace to="..."&gt;跳转到About页面&lt;/router-link&gt;</code></pre>
 
 <h4 id="编程式路由导航"><a href="#编程式路由导航" class="headerlink" title="编程式路由导航"></a>编程式路由导航</h4><p>不借助&lt;router-link&gt;标签，实现路由跳转<br>API：</p>
 <ul>
@@ -493,87 +493,87 @@ export default&#123;
 <li><span class="strong">go(值)：</span>根据值前进/回退指定次数</li>
 </ul>
 <p>eg：通过按钮实现(或div)实现路由跳转</p>
-<pre><code>&lt;template>
-  &lt;div>
-   &lt;button class="link" @click="backTo">回退&lt;/button>
-    &lt;button class="link" @click="forwardTo">前进&lt;/button>
-    &lt;button class="link" @click="goTo">跳转&lt;/button>
-    &lt;ul>
-        &lt;li v-for="(t,index) in tech" :key="index">
-            &lt;button @click="pushTo(t)">push&lt;/button>
-            &lt;button @click="replaceTo(t)">replace&lt;/button>
-        &lt;/li>
-    &lt;/ul>
-    &lt;router-view>&lt;/router-view>
-  &lt;/div>
-&lt;/template>
+<pre><code>&lt;template&gt;
+  &lt;div&gt;
+   &lt;button class="link" @click="backTo"&gt;回退&lt;/button&gt;
+    &lt;button class="link" @click="forwardTo"&gt;前进&lt;/button&gt;
+    &lt;button class="link" @click="goTo"&gt;跳转&lt;/button&gt;
+    &lt;ul&gt;
+        &lt;li v-for="(t,index) in tech" :key="index"&gt;
+            &lt;button @click="pushTo(t)"&gt;push&lt;/button&gt;
+            &lt;button @click="replaceTo(t)"&gt;replace&lt;/button&gt;
+        &lt;/li&gt;
+    &lt;/ul&gt;
+    &lt;router-view&gt;&lt;/router-view&gt;
+  &lt;/div&gt;
+&lt;/template&gt;
 
-&lt;script>
- export default &#123;
+&lt;script&gt;
+ export default {
     name:'aboutWeb',
-    data()&#123;
-        return&#123;
+    data(){
+        return{
             tech:[
-                &#123;name:'前端',language:'html/css/javaScript'&#125;,
-                &#123;name:'后端',language:'java'&#125;,
-                &#123;name:'系统',language:'CentOS7'&#125;,
-                &#123;name:'服务器',language:'nginx'&#125;,
+                {name:'前端',language:'html/css/javaScript'},
+                {name:'后端',language:'java'},
+                {name:'系统',language:'CentOS7'},
+                {name:'服务器',language:'nginx'},
                 ]
-            &#125;
-        &#125;,
-    methods:&#123;
-        backTo()&#123;
+            }
+        },
+    methods:{
+        backTo(){
       this.$router.back() //回退一次
-    &#125;,
-    forwardTo()&#123;
+    },
+    forwardTo(){
       this.$router.forward() //前进一次
-    &#125;,
-    goTo()&#123;
+    },
+    goTo(){
       this.$router.go(-2) //，回退2步，正数前进，负数后退
-    &#125;,
-        pushTo(m)&#123;    //跳转到指定组件
-            this.$router.push(&#123;
+    },
+        pushTo(m){    //跳转到指定组件
+            this.$router.push({
                 path:'/about/aboutWeb/webTech',
-                query:&#123;
+                query:{
                 name:m.name,
                 lang:m.language
-            &#125;
-            &#125;)
-        &#125;,
-        replaceTo(n)&#123;  //跳转到指定组件并替换上一个历史记录
-            this.$router.replace(&#123;
+            }
+            })
+        },
+        replaceTo(n){  //跳转到指定组件并替换上一个历史记录
+            this.$router.replace({
                 path:'/about/aboutWeb/webTech',
-                query:&#123;
+                query:{
                 name:n.name,
                 lang:n.language
-            &#125;
-            &#125;)
-        &#125;
-    &#125;
- &#125;
-&lt;/script></code></pre>
+            }
+            })
+        }
+    }
+ }
+&lt;/script&gt;</code></pre>
 
 <h3 id="路由组件的缓存"><a href="#路由组件的缓存" class="headerlink" title="路由组件的缓存"></a>路由组件的缓存</h3><p>当组件进行切换时，原组件会被销毁，原组件中未保存的表单内容等数据同时也会被删除，此时，可以使用<span class="tips">&lt;keep-alive&gt;</span>标签阻止组件被销毁，保留数据。</p>
 <pre><code> //缓存多组件使用 :include="['组件1','组件2',...]"
-&lt;keep-alive include="aboutMe"> 
-  &lt;router-view>&lt;/router-view>
-&lt;/keep-alive></code></pre>
+&lt;keep-alive include="aboutMe"&gt; 
+  &lt;router-view&gt;&lt;/router-view&gt;
+&lt;/keep-alive&gt;</code></pre>
 
 <h3 id="路由独有生命周期"><a href="#路由独有生命周期" class="headerlink" title="路由独有生命周期"></a>路由独有生命周期</h3><ul>
 <li><span class="strong">activated：</span>当组件被激活时(显示到页面)</li>
 <li><span class="strong">deactivated：</span>当组件失活时<br>当组件被&lt;keep-alive&gt;时，组件不会被销毁，在切换组件时created、destory等钩子函数不会执行，此时可以使用activated、deactivated替代。</li>
 </ul>
 <p>eg：使某组件在激活时启用定时器，失活时关闭</p>
-<pre><code> export default &#123;
+<pre><code> export default {
   name:'webTech',
-  data()&#123;.....&#125;,
-  activated()&#123;
+  data(){.....},
+  activated(){
             let timer=setInterval(....);
-            &#125;,
-  deactivated()&#123;
+            },
+  deactivated(){
             clearInterval(this.timer)
-            &#125;
- &#125;</code></pre>
+            }
+ }</code></pre>
 
 <h3 id="路由守卫"><a href="#路由守卫" class="headerlink" title="路由守卫"></a>路由守卫</h3><p> 在切换组件时，可借助路由守卫来阻止/放行组件的跳转，常用于判断用户是否有权限访问，无权限时阻止访问,也可用于在组件跳转前后执行某些功能。</p>
 <h4 id="前置、后置路由守卫-全局"><a href="#前置、后置路由守卫-全局" class="headerlink" title="前置、后置路由守卫(全局)"></a>前置、后置路由守卫(全局)</h4><p> 该路由守卫写于路由器配置文件中</p>
@@ -588,100 +588,100 @@ export default&#123;
  import aboutMe from '../pages/aboutMe'
  import aboutWeb from '../pages/aboutWeb'
  import webTech from '../pages/webTech'
- const router= new VueRouter(&#123;
+ const router= new VueRouter({
     routes:[
-        &#123;
+        {
             name:'home',
             path:'/home',   
             component:Home, 
-            meta:&#123;title:'首页'&#125;//meta为自定义属性，程序员可自定义添加任何参数
-        &#125;,
-        &#123;
+            meta:{title:'首页'}//meta为自定义属性，程序员可自定义添加任何参数
+        },
+        {
             name:'about',
             path:'/about',
             component:About,
-            meta:&#123;title:'关于'&#125;,
+            meta:{title:'关于'},
             children:[
-                &#123;
+                {
                     name:'aboutme',
                     path:'aboutMe',
                     component:aboutMe,
-                    meta:&#123;isAuth:true,//标识该组件是否需要鉴别权限
-                          title:'关于我'&#125;//用于组件跳转后修改地址栏标题
-                &#125;,
-                &#123;
+                    meta:{isAuth:true,//标识该组件是否需要鉴别权限
+                          title:'关于我'}//用于组件跳转后修改地址栏标题
+                },
+                {
                     name:'aboutweb',
                     path:'aboutWeb',
                     component:aboutWeb,
-                    meta:&#123;isAuth:true,
-                        title:'关于网站'&#125;,
+                    meta:{isAuth:true,
+                        title:'关于网站'},
                     children:[
-                        &#123;
+                        {
                             name:'webTech',
                             path:'webTech',
                             component:webTech,
-                            meta:&#123;title:'关于本站采用的技术'&#125;
-                        &#125;
+                            meta:{title:'关于本站采用的技术'}
+                        }
                     ]
-                &#125;
+                }
             ]
-        &#125;
+        }
     ]
- &#125;)
+ })
 // 全局前置路由守卫
- router.beforeEach((to,from,next)=>&#123;
-        if(to.meta.isAuth)&#123;//确认是否鉴权，避免对所有组件都进行鉴权消耗性能
+ router.beforeEach((to,from,next)=&gt;{
+        if(to.meta.isAuth){//确认是否鉴权，避免对所有组件都进行鉴权消耗性能
  // 当组件不多时，可以使用下面的代码通过判断路径来识别哪些组件需要权限认证
         // if(to.name==='aboutme'||to.path==='/about/aboutWeb')
         //只有localStorage中的user为zhoujielun才能访问
-            if(localStorage.getItem('user')==='zhoujielun')&#123;
+            if(localStorage.getItem('user')==='zhoujielun'){
                 next() //放行访问
-            &#125;
-            else&#123;
+            }
+            else{
                 alert('无权限访问')
-            &#125;
-        &#125;
-        else&#123;
+            }
+        }
+        else{
             next()  //对不需要权限认证的页面直接放行
-        &#125; 
- &#125;)
+        } 
+ })
 // 全局后置路由守卫
 //用于切换完毕后，修改网页地址栏的标题
- router.afterEach((to)=>&#123;
+ router.afterEach((to)=&gt;{
     document.title=to.meta.title  
- &#125;)
+ })
  export default router</code></pre>
 
 <h4 id="独享路由守卫"><a href="#独享路由守卫" class="headerlink" title="独享路由守卫"></a>独享路由守卫</h4><p>只为某个路由组件配置的路由守卫， 同样写于路由器配置文件中<br><span class="strong">beforeEnter:(to,from,next)=&gt;{ }</span>只对针对某个组件配置守卫，同样接收to,from,next三个参数，to代表即将跳转的组件，from为来源组件，next代表放行</p>
 <p>eg: 判断用户是否为指定用户，不是则禁止访问aboutMe组件</p>
-<pre><code>&#123;
+<pre><code>{
             name:'about',
             path:'/about',
             component:About,
-            meta:&#123;title:'关于'&#125;,
+            meta:{title:'关于'},
             children:[
-                &#123;
+                {
                     name:'aboutme',
                     path:'aboutMe',
                     component:aboutMe,
-                    meta:&#123;isAuth:true,//鉴别权限
-                          title:'关于我'&#125;,
+                    meta:{isAuth:true,//鉴别权限
+                          title:'关于我'},
                           //独享路由守卫
-                          beforeEnter:(to,from,next)=>&#123;
-                                if(to.meta.isAuth)&#123;
+                          beforeEnter:(to,from,next)=&gt;{
+                                if(to.meta.isAuth){
                                   //只有localStorage中的user为zhoujielun才能访问
-                                    if(localStorage.getItem('user')==='zhoujielun')&#123;
+                                    if(localStorage.getItem('user')==='zhoujielun'){
                                         next()
-                                    &#125;
-                                    else&#123;
+                                    }
+                                    else{
                                         alert('无权限访问')
-                                    &#125;
-                                &#125;
-                                else&#123;
+                                    }
+                                }
+                                else{
                                     next()
-                                &#125; 
-                          &#125;
-                &#125;,</code></pre>
+                                } 
+                          }
+                },</code></pre>
 
 <h4 id="组件内路由守卫"><a href="#组件内路由守卫" class="headerlink" title="组件内路由守卫"></a>组件内路由守卫</h4><p>无法修改路由器配置文件时，可以将路由守卫设于组件.vue的文件中。<span class="tips">组件内的路由守卫只会在通过路由规则进入组件时才会执行</span>，如果将组件标签直接添加到页面中，该组件会被调用，但此时不属于通过路由规则进入组件，不会执行下述路由守卫函数。</p>
 <ul>
@@ -689,40 +689,40 @@ export default&#123;
 <li><span class="strong">beforeRouteLeave(to,from,next){ }</span>：离开组件前执行</li>
 <li><span class="strong">beforeRouteUpdate(to,from,next){ }</span>：组件更新时执行</li>
 </ul>
-<pre><code>&lt;template>
-  &lt;div class="about">
-    &lt;h2>About页面&lt;/h2>
-    &lt;div class="about-btn">
-    &lt;router-link  to="/about/aboutWeb">关于网页&lt;/router-link>
-    &lt;router-link  to="/about/aboutMe">关于我&lt;/router-link>
-    &lt;/div>
-    &lt;div class="about-content">
-      &lt;keep-alive include="aboutMe">
-      &lt;router-view>&lt;/router-view>
-      &lt;/keep-alive>
-    &lt;/div>
-  &lt;/div>
- &lt;/template>
- &lt;script>
- export default &#123;
+<pre><code>&lt;template&gt;
+  &lt;div class="about"&gt;
+    &lt;h2&gt;About页面&lt;/h2&gt;
+    &lt;div class="about-btn"&gt;
+    &lt;router-link  to="/about/aboutWeb"&gt;关于网页&lt;/router-link&gt;
+    &lt;router-link  to="/about/aboutMe"&gt;关于我&lt;/router-link&gt;
+    &lt;/div&gt;
+    &lt;div class="about-content"&gt;
+      &lt;keep-alive include="aboutMe"&gt;
+      &lt;router-view&gt;&lt;/router-view&gt;
+      &lt;/keep-alive&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+ &lt;/template&gt;
+ &lt;script&gt;
+ export default {
     name:'pageAbout',
     // 通过路由规则进入组件时调用
-    beforeRouteEnter(to,from,next)&#123;
+    beforeRouteEnter(to,from,next){
       //只有localStorage中的user为zhoujielun才能访问
-            if(localStorage.getItem('user')==='zhoujielun')&#123;
+            if(localStorage.getItem('user')==='zhoujielun'){
                     next()
-                    &#125;
-            else&#123;
+                    }
+            else{
                  alert('无权限访问')
-             &#125;
-    &#125;,
+             }
+    },
      // 通过路由规则离开组件时调用
-    beforeRouteLeave(to,from,next)&#123;
+    beforeRouteLeave(to,from,next){
       console.log('即将离开组件')
         next();//放行
-    &#125;
-&#125;
- &lt;/script></code></pre>
+    }
+}
+ &lt;/script&gt;</code></pre></body></html>
         </div>
     </div>
     <div class="post-nav">

@@ -1,4 +1,4 @@
-<!DOCTYPE html><html lang="zh-CN"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="author" content="shiwi"><meta name="copyright" content="SHIWIVI"><link rel="shortcut icon" href="/blog/images/favicon.ico" type="image/x-icon"><style>.preload{position:absolute;display:flex;flex-direction:column;align-items:center;justify-content:center;left:0;top:0;width:100%;height:100%;background-color:#000;z-index:100}.text{margin-bottom:10px;color:#00cff3;text-shadow:0 0 3px #00cff3;font-size:20px}.text span{display:inline-block}.dance{animation:dance .8s linear}.text span:nth-child(1){animation-delay:0s}.text span:nth-child(2){animation-delay:.1s}.text span:nth-child(3){animation-delay:.2s}.text span:nth-child(4){animation-delay:.3s}.text span:nth-child(5){animation-delay:.4s}.text span:nth-child(6){animation-delay:.5s}.text span:nth-child(7){animation-delay:.6s}.text span:nth-child(8){animation-delay:.7s}.text span:nth-child(9){animation-delay:.8s}.text span:nth-child(10){animation-delay:.9s}@keyframes dance{0%{transform:translateY(0)}50%{transform:translateY(-20px)}100%{transform:translateY(0)}}.loading{width:80%;max-width:260px;height:6px;background-color:#e1e4e8;border-radius:6px}.bar{display:flex;height:100%;background:linear-gradient(90deg,#ffd33d,#ea4aaa 10%,#b34bff 30%,#01feff 51%,#ffb33d 68%,#ea4aaa 85%,#b34bff);background-size:300% 100%;animation:bar 2s linear infinite}@keyframes bar{0%{background-position:100%}100%{background-position:0}}</style><body><div class="preload"><div class="text"><span>L</span> <span>o</span> <span>a</span> <span>d</span> <span>i</span> <span>n</span> <span>g</span> <span>.</span> <span>.</span> <span>.</span></div><div class="loading"><span class="bar"></span></div></div><script>let texts=document.querySelector('.text').querySelectorAll('span');let timer=setInterval(()=>{texts.forEach((item)=>{item.classList.toggle("dance")})},1700);window.onload=function(){clearInterval(timer);document.querySelector('.preload').style="display:none;"}</script><title>SHIWIVI-文章</title>
+<!DOCTYPE html><html lang="zh-CN"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="author" content="shiwi"><meta name="copyright" content="SHIWIVI"><link rel="shortcut icon" href="/blog/images/icon.png" type="image/x-icon"><style>.preload{position:absolute;display:flex;flex-direction:column;align-items:center;justify-content:center;left:0;top:0;width:100%;height:100%;background-color:#000;z-index:100}.text{margin-bottom:10px;color:#00cff3;text-shadow:0 0 3px #00cff3;font-size:20px}.text span{display:inline-block}.dance{animation:dance .8s linear}.text span:nth-child(1){animation-delay:0s}.text span:nth-child(2){animation-delay:.1s}.text span:nth-child(3){animation-delay:.2s}.text span:nth-child(4){animation-delay:.3s}.text span:nth-child(5){animation-delay:.4s}.text span:nth-child(6){animation-delay:.5s}.text span:nth-child(7){animation-delay:.6s}.text span:nth-child(8){animation-delay:.7s}.text span:nth-child(9){animation-delay:.8s}.text span:nth-child(10){animation-delay:.9s}@keyframes dance{0%{transform:translateY(0)}50%{transform:translateY(-20px)}100%{transform:translateY(0)}}.loading{width:80%;max-width:260px;height:6px;background-color:#e1e4e8;border-radius:6px}.bar{display:flex;height:100%;background:linear-gradient(90deg,#ffd33d,#ea4aaa 10%,#b34bff 30%,#01feff 51%,#ffb33d 68%,#ea4aaa 85%,#b34bff);background-size:300% 100%;animation:bar 2s linear infinite}@keyframes bar{0%{background-position:100%}100%{background-position:0}}</style><body><div class="preload"><div class="text"><span>L</span> <span>o</span> <span>a</span> <span>d</span> <span>i</span> <span>n</span> <span>g</span> <span>.</span> <span>.</span> <span>.</span></div><div class="loading"><span class="bar"></span></div></div><script>let texts=document.querySelector('.text').querySelectorAll('span');let timer=setInterval(()=>{texts.forEach((item)=>{item.classList.toggle("dance")})},1700);window.onload=function(){clearInterval(timer);document.querySelector('.preload').style="display:none;"}</script><title>SHIWIVI-文章</title>
 <link rel="stylesheet" href="https://at.alicdn.com/t/font_2856826_bu73u0ahu7a.css">
 
 <link rel="stylesheet" href="/blog/css/index.css">
@@ -136,13 +136,13 @@
         <div class="article">
         <h1 class="title">JavaScript异步与AJAX</h1>
         <div class="art-info">
-            <div><span><span class="iconfont icon-zishu-jzl"></span>字数：14464</span>
+            <div><span><span class="iconfont icon-zishu-jzl"></span>字数：14498</span>
             <span><span class="iconfont icon-riqi"></span>写于：2021-04-01</span></div>
             <div><span><span class="iconfont icon-zuixinnew3"></span>最新更新：2021-04-01</span>
             <span><span class="iconfont icon-shijian"></span>阅读本文预计花费您42分钟</span></div>
         </div>
         <div class="art-content">
-        <div class="broadcast color-yellow">
+        <html><head></head><body><div class="broadcast color-yellow">
 <div class="iconfont icon-dengpao14hao"></div>
 文中所声明对象和语法基于javaScript</div>
 
@@ -157,17 +157,17 @@
 <p>以最常见的遍历数组为例：我们可以用for…of等语句对其进行遍历，是因为数组中原生内置了iterator接口。</p>
 <pre><code> const songs=['夜曲','手写的从前','反方向的钟','晴天','最长的电影'];
     console.log(songs);</code></pre>
-    <img data-src="/blog/images/iterator01.jpg" src="#" alt="iterator接口">
+    <div class="img-wrapper"><div class="load-wrapper"><div class="load-line"></div><div class="load-text">loading</div></div><img data-src="/blog/images/iterator01.jpg" src="#" alt="iterator接口"></div>
 <p>按照其原理，先定义一个对象来获取该Symbol.iterator属性，找到该对象中包含的next方法。调用这个next()方法，它会返回一个包含done和value属性的对象。</p>
 <pre><code>const songs=['夜曲','手写的从前','最长的电影','晴天','明明就'];
         // console.log(songs);
         let iterator=songs[Symbol.iterator]();
         console.log(iterator);
         console.log(iterator.next());</code></pre>
-        <img data-src="/blog/images/iterator02.jpg" src="#" alt="iterator中的next方法">
+        <div class="img-wrapper"><div class="load-wrapper"><div class="load-line"></div><div class="load-text">loading</div></div><img data-src="/blog/images/iterator02.jpg" src="#" alt="iterator中的next方法"></div>
 <p>重复调用next()方法，该方法会依次遍历数组成员并返回多个包含done和value属性的对象，遍历完数组后，再返回一个done属性值为true,value属性值为undefined的对象，表示数组遍历结束。</p>
-<img data-src="/blog/images/iterator03.jpg" src="#" alt="遍历结束">
-<p>在JavaScript中，原生自带iterator接口的数据结构有：<br/>
+<div class="img-wrapper"><div class="load-wrapper"><div class="load-line"></div><div class="load-text">loading</div></div><img data-src="/blog/images/iterator03.jpg" src="#" alt="遍历结束"></div>
+<p>在JavaScript中，原生自带iterator接口的数据结构有：<br>
 <span class="tips">Array</span>、<span class="tips">Map</span>、<span class="tips">Set</span>、<span class="tips">String</span>、<span class="tips">TypedArray</span>、<span class="tips">函数的 arguments 对象</span>、<span class="tips">NodeList 对象</span>
 </p>
 
@@ -181,35 +181,35 @@
 </ol>
 完整代码：
 <pre><code> //遍历输出对象的songs属性
-        const Rapper=&#123;
+        const Rapper={
             name:'王以太',
             shows:['Chengdu','Hangzhou','Shenzhen'],
             songs:['三思而后行','阿司匹林','童言无忌','目不转睛','人间天堂'],
-            [Symbol.iterator]()&#123;
+            [Symbol.iterator](){
                 let index=0;//索引号
-                return&#123;
-                    next: ()=>&#123;
-                        if(index< this.songs.length)&#123;
-                            const result=&#123;
+                return{
+                    next: ()=&gt;{
+                        if(index&lt; this.songs.length){
+                            const result={
                                 value:this.songs[index],
-                                done:false&#125;;
+                                done:false};
                                 index++;
                                 return result;
-                            &#125;
-                            else&#123;
-                                return&#123;
+                            }
+                            else{
+                                return{
                                     value:undefined,
                                     done:true
-                                &#125;
-                            &#125;
-                        &#125;
-                    &#125;
-                &#125;
-            &#125;;
+                                }
+                            }
+                        }
+                    }
+                }
+            };
           //遍历输出
-        for(let m of Rapper)&#123;
+        for(let m of Rapper){
         console.log(m);
-    &#125;
+    }
 </code></pre>
 <div class="broadcast color-pink">
 <div class="iconfont icon-yinle1"></div>
@@ -266,19 +266,19 @@ iterator.next("DDD");</div>
 <h4 id="异步调用"><a href="#异步调用" class="headerlink" title="异步调用"></a>异步调用</h4><p>由于生成器函数每次执行到yield语句就会暂停，利用这个特性我们可以进行对资源的异步顺序加载，</p>
 <div class="show">实现：先加载"用户数据"，等待"用户数据"加载完毕再加载"订单数据"，最后加载"商品数据"，案列使用定时器模拟异步环境
 function getUsers(){
-    setTimeout(()=>{
+    setTimeout(()=&gt;{
         let user="用户数据";
         iterator.next(user);//加载完的数据通过next()方法传给生成器函数，并开始加载下一项数据
     },1000)
 }
 function getOrders(){
-    setTimeout(()=>{
+    setTimeout(()=&gt;{
         let order="订单数据";
         iterator.next(order);
     },1000)
 }
 function getGoods(){
-    setTimeout(()=>{
+    setTimeout(()=&gt;{
         let goods="商品数据";
         iterator.next(goods);
     },1000)
@@ -306,7 +306,7 @@ iterator.next();//初次执行next()方法
 <p>该属性只能被修改一次，并且修改完毕后也只有一个结果(resolved或rejected)和结果数据</p>
 <p><span class="strong">PromiseResult</span>即Promise封装的异步任务成功/失败的结果数据，只能通过<span class="tips">resolve()</span>或<span class="tips">reject()</span>函数修改，并且可以传递给<span class="tips">then()</span>方法，Promise成功时结果数据一般使用value为实参名，失败则使用reason作为实参名</p>
 <h4 id="实例化"><a href="#实例化" class="headerlink" title="实例化"></a>实例化</h4><p>使用<span class="tips">new</span>关键字进行实例化，实例化时接收一个函数类型的参数，该函数又接收两个函数类型的形参，<span class="tips">resolve()</span>用于异步任务执行成功时调用，<span class="tips">reject()</span>用于异步任务执行失败时调用</p>
-<div class="show"><span class="strong" style="white-space:pre;">const p=new Promise((resolve,reject)=>{
+<div class="show"><span class="strong" style="white-space:pre;">const p=new Promise((resolve,reject)=&gt;{
                         //封装异步任务
                          if(异步任务执行成功){
                             resolve(data);
@@ -318,12 +318,12 @@ iterator.next();//初次执行next()方法
 
 
 <p>当resolve被调用后，Promise状态会被修改为成功，随后执行<span class="tips">then()</span>方法的第一个回调函数。reject则会将Promise状态会被修改为失败，随后执行<span class="tips">then()</span>方法的第二个回调函数</p>
-<div class="show"><span class="strong" style="white-space:pre;">p.then((value)=>{
+<div class="show"><span class="strong" style="white-space:pre;">p.then((value)=&gt;{
             //Promise状态为成功时执行
-    },(reason)=>{
+    },(reason)=&gt;{
             //Promise状态为失败时执行
 });</span></div>
-<div class="show"><span class="strong" style="white-space:pre;">p.catch(resaon=>{
+<div class="show"><span class="strong" style="white-space:pre;">p.catch(resaon=&gt;{
             //只会在Promise状态为失败时执行
 });</span></div>
 此外，Promise状态为失败时也可以使用<span class="tips">catch()</span>方法，该方法被单独封装用于处理失败情况，底层依旧调用了then()方法
@@ -334,7 +334,7 @@ iterator.next();//初次执行next()方法
 <ul>
 <li>Promise.resolve(value)<br>value可以为任意类型的数据，或者一个Promise对象<br>返回一个成功的Promise对象，但如果传入了一个Promise对象，则其状态取决于传入对象的状态，如果传入的Promise对象为成功，则返回的对象也为成功状态，反之亦然。该方法用于快速将一个数据转换为一个状态为成功的Promise对象<div class="show">
 const p1=Promise.resolve(100);//
-const p2=Promise.resolve(new Promise((resolve,reject)=>{
+const p2=Promise.resolve(new Promise((resolve,reject)=&gt;{
   reject();//由于传入的Promise对象状态为rejected，依次p2也为rejected状态
 }))
 </div></li>
@@ -349,11 +349,11 @@ const p2=Promise.resolve(new Promise((resolve,reject)=>{
       let p=Promise.all([p1,p2,p3]);
       console.log(p);//p对象的PromiseResult为"aaa"
       
-<pre><code>  p2.catch(reason=&gt;&#123;&#125;);
-  p3.catch(reason=&gt;&#123;&#125;);
-  p.catch(reason=&gt;&#123;&#125;);&lt;/div&gt;
+<pre><code>  p2.catch(reason=&gt;{});
+  p3.catch(reason=&gt;{});
+  p.catch(reason=&gt;{});&lt;/div&gt;
 </code></pre>
-</li>
+</div></li>
 </ul>
 <p>否则返回一个rejected状态的Promise</p>
 <ul>
@@ -365,13 +365,13 @@ const p2=Promise.resolve(new Promise((resolve,reject)=>{
 <li>throw 函数</li>
 </ul>
 <h5 id="执行多个回调"><a href="#执行多个回调" class="headerlink" title="执行多个回调"></a>执行多个回调</h5><p>Promise允许指定多个回调，即可以指定多个then()方法</p>
-<div class="show">let p=new Promise((resolve,reject)=>{
+<div class="show">let p=new Promise((resolve,reject)=&gt;{
      resolve("go");
 });
-p.then(value=>{
+p.then(value=&gt;{
     console.log("第一个回调"+value);
 });
-p.then(value=>{
+p.then(value=&gt;{
     console.log("第二个回调"+value);
 });</div>
 
@@ -381,57 +381,57 @@ p.then(value=>{
 <li>如果该回调函数无return语句(默认返回undefined)，或者返回一个非Promise对象的值(如：返回字符串等)，则总是返回一个fulfilled状态的Promise</li>
 <li>如果该回调函数throw异常，则返回rejected状态的Promise对象</li>
 </ul>
-<div class="show">let p=new Promise((resolve,reject)=>{
+<div class="show">let p=new Promise((resolve,reject)=&gt;{
             resolve();
         })
-        let result1=p.then(value=>{throw '异常'});//状态为rejected
-        let result2=p.then(value=>{return 'aaa'});//状态为fulfilled
-        let result3=p.then(value=>{
-            return new Promise((resolve,reject)=>{
+        let result1=p.then(value=&gt;{throw '异常'});//状态为rejected
+        let result2=p.then(value=&gt;{return 'aaa'});//状态为fulfilled
+        let result3=p.then(value=&gt;{
+            return new Promise((resolve,reject)=&gt;{
             reject('error');
         })
         });//状态为rejected
 </div>
 
 <h5 id="链式调用"><a href="#链式调用" class="headerlink" title="链式调用"></a>链式调用</h5><p>由于then()方法返回了一个新的Promise对象，因此该对象也可以调用then()方法，而该then()方法又返回一个新的Promise对象，又能调用then()方法，因此then()方法可以链式调用</p>
-<div class="show"> let p=new Promise((resolve,reject)=>{
+<div class="show"> let p=new Promise((resolve,reject)=&gt;{
             resolve('success');
         })
-        p.then(value=>{
+        p.then(value=&gt;{
             console.log(value);//success
-        }).then(value=>{
+        }).then(value=&gt;{
             console.log(value);//由于上一个then()无返回值，因此其返回的Promise对象的PromiseResult为undefined，因此输出undefined
         })</div>
 
 <h5 id="异常穿透"><a href="#异常穿透" class="headerlink" title="异常穿透"></a>异常穿透</h5><p>当then()方法进行链式调用时，只需要在最后进行异常处理，前面的链式调用出现的任何异常，都会被传到最后处理异常的回调函数中进行处理(异常穿透特性)</p>
-<div class="show"> let p=new Promise((resolve,reject)=>{
+<div class="show"> let p=new Promise((resolve,reject)=&gt;{
             resolve('success');
         })
-        p.then(value=>{
+        p.then(value=&gt;{
             console.log(value);
             throw '异常'  //抛出异常
-        }).then(value=>{
+        }).then(value=&gt;{
             console.log(value);//由于上一个Promise状态为rejected，then()方法第一个回调不执行
-        }).then(value=>{
+        }).then(value=&gt;{
             console.log(value);//同上，不执行
-        }).then(value=>{
+        }).then(value=&gt;{
             console.log(value);//同上，不执行
-        }).catch(reason=>{
+        }).catch(reason=&gt;{
             console.warn(reason);//在链式最后进行异常处理
         })</div>
 
 <h5 id="中断Promise链"><a href="#中断Promise链" class="headerlink" title="中断Promise链"></a>中断Promise链</h5><p>当then()方法进行链式调用时，如果想在某个节点中断Promise链，只需要在该节点返回一个<span class="tips">pending</span>状态的Promise对象，因为处于pending状态的Promise对象不会触发then()方法的执行，而其他任何返回值、异常抛出等操作都会使链式继续进行。注意：中断以后的Promise链，最后的异常捕获会依旧执行</p>
-<div class="show">let p=new Promise((resolve,reject)=>{
+<div class="show">let p=new Promise((resolve,reject)=&gt;{
             resolve('success');
         })
-        p.then(value=>{
+        p.then(value=&gt;{
             console.log(111);//输出111
             throw 'error'
-        }).then(value=>{
-            return new Promise(()=>{});//返回pending状态的Promise对象
-        }).then(value=>{
+        }).then(value=&gt;{
+            return new Promise(()=&gt;{});//返回pending状态的Promise对象
+        }).then(value=&gt;{
             console.log(222);//上一个Promise对象为pending状态，不执行then()方法
-        }).catch(reason=>{
+        }).catch(reason=&gt;{
             console.warn(reason);//但由于异常穿透，该语句会继续执行
         })</div>
 
@@ -450,8 +450,8 @@ p.then(value=>{
 </ul>
 <div class="show"> async function main(){
             try{
-                let result=await new Promise((resolve,reject)=>{
-                setTimeout(()=>{
+                let result=await new Promise((resolve,reject)=&gt;{
+                setTimeout(()=&gt;{
                     resolve('success')
                 },1000)
             })
@@ -514,14 +514,14 @@ p.then(value=>{
 </ul>
 <h4 id="发起请求"><a href="#发起请求" class="headerlink" title="发起请求"></a>发起请求</h4><h5 id="发起get请求"><a href="#发起get请求" class="headerlink" title="发起get请求"></a>发起get请求</h5><p>如果get请求需要携带参数，可以直接在URL地址后以键值对的形式拼接<span class="tips">查询字符串</span>，多个参数使用<span class="tips">&amp;</span>拼接</p>
 <div class="show">xhr.open('GET','http://shiwivi.com')</div>
-<div class="show">xhr.open('GET','http://shiwivi.com?id=1&author=shiwivi')</div>
+<div class="show">xhr.open('GET','http://shiwivi.com?id=1&amp;author=shiwivi')</div>
 
 
 <div class="show"> let xhr=new XMLHttpRequest();
     xhr.open('GET','http://shiwivi.com')
     xhr.send();
     xhr.onreadystatechange=function(){
-        if(xhr.readyState===4&&xhr.status===200){
+        if(xhr.readyState===4&amp;&amp;xhr.status===200){
             console.log(xhr.responseText)
         }
     }</div>
@@ -539,9 +539,9 @@ p.then(value=>{
 <div class="show">var xhr=new XMLHttpRequest();
     xhr.open('POST','http://shiwivi.com');
     xhr.setRequestHeader('content-Type','application/x-www-form-urlencoded')
-    xhr.send('id=1&author=shiwivi');
+    xhr.send('id=1&amp;author=shiwivi');
     xhr.onreadystatechange=function(){
-        if(xhr.readyState===4&&xhr.status===200){
+        if(xhr.readyState===4&amp;&amp;xhr.status===200){
             console.log(xhr.responseText)
         }
     }</div>
@@ -564,7 +564,7 @@ URL中只允许出现英文字母、数字、标点符号，在拼接查询字�
 
 <div class="show">$.get('http://shiwivi.com',{id:1,author:''shiwivi},function(res){...})
 //等价于
-$.get('http://shiwivi.com?id=1&author=shiwivi',function(res){...})
+$.get('http://shiwivi.com?id=1&amp;author=shiwivi',function(res){...})
 </div>
 
 <h5 id="发起post请求-1"><a href="#发起post请求-1" class="headerlink" title="发起post请求"></a>发起post请求</h5><p><span class="strong">$.post(url,[data],[function(){…}])</span> 发起post请求</p>
@@ -603,7 +603,7 @@ $.get('http://shiwivi.com?id=1&author=shiwivi',function(res){...})
                     console.log(error);//Not Found
                 }
              })
-        </div>
+        </div></body></html>
         </div>
     </div>
     <div class="post-nav">

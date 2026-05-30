@@ -24,12 +24,12 @@
     --rss-text-shadow: transparent;
     --motto-color: #fff;
     --motto-text-shadow: transparent;
-    --update-content-h1: #0a0101;
-    --update-content-p: #2b2424;
-    --update-focus-border: #fff;
-    --update-bg-color: #f5f0f033;
-    --update-box-shadow: transparent;
-    --update-li-blur: blur(3px);
+    --post-content-h2: #0a0101;
+    --post-content-p: #2b2424;
+    --post-focus-border: #fff;
+    --post-bg-color: #f5f0f033;
+    --post-box-shadow: transparent;
+    --post-li-blur: blur(3px);
     --set-menu-color: #000;
     --set-btn-border: #ffffff70;
     --set-btn-bg-color: #ffffff33;
@@ -54,12 +54,12 @@
     --rss-text-shadow: #ff8181;
     --motto-color: #45f4ff;
     --motto-text-shadow: #45f4ff;
-    --update-content-h1: #ffffff;
-    --update-content-p: #ffffff;
-    --update-focus-border: #fff;
-    --update-bg-color: #71c0e730;
-    --update-box-shadow: #4d5051a8;
-    --update-li-blur: blur(0px);
+    --post-content-h2: #ffffff;
+    --post-content-p: #ffffff;
+    --post-focus-border: #fff;
+    --post-bg-color: #71c0e730;
+    --post-box-shadow: #4d5051a8;
+    --post-li-blur: blur(0px);
     --set-menu-color: #fff;
     --set-btn-border: #01ccfffa;
     --set-btn-bg-color: #1db2f299;
@@ -381,14 +381,14 @@ body {
 
 .tag li:nth-child(8n+1),
 .tag li:nth-child(8n+1)>a,
-.main-content .update .label1 {
+.label1 {
     color: #1a98ff;
     background-color: rgba(26, 152, 255, .15);
 }
 
 .tag li:nth-child(8n+2),
 .tag li:nth-child(8n+2)>a,
-.main-content .update .label2 {
+.label2 {
     color: #00ff22;
     background-color: rgba(51, 213, 122, .15);
 }
@@ -401,7 +401,7 @@ body {
 
 .tag li:nth-child(8n+4),
 .tag li:nth-child(8n+4)>a,
-.main-content .update .label3 {
+.label3 {
     color: #faea04;
     background-color: rgba(252, 236, 19, 0.055);
 
@@ -409,28 +409,28 @@ body {
 
 .tag li:nth-child(8n+5),
 .tag li:nth-child(8n+5)>a,
-.main-content .update .label4 {
+.label4 {
     color: #9090ff;
     background-color: rgba(144, 144, 255, .15);
 }
 
 .tag li:nth-child(8n+6),
 .tag li:nth-child(8n+6)>a,
-.main-content .update .label5 {
+.label5 {
     color: #ef0bf7;
     background-color: rgba(239, 11, 247, .15);
 }
 
 .tag li:nth-child(8n+7),
 .tag li:nth-child(8n+7)>a,
-.main-content .update .label6 {
+.label6 {
     color: #ff4e6a;
     background-color: rgba(255, 78, 106, .15);
 }
 
 .tag li:nth-child(8n),
 .tag li:nth-child(8n)>a,
-.main-content .update .label7 {
+.label7 {
     color: #ff761e;
     background-color: rgba(255, 118, 30, .15);
 }
@@ -930,7 +930,7 @@ body {
 }
 
 /* 最新 */
-.update {
+.post-list {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
@@ -943,7 +943,8 @@ body {
     padding-top: 2rem;
 }
 
-.update li {
+.post-card{
+    position: relative;
     display: flex;
     flex-wrap: wrap;
     box-sizing: border-box;
@@ -955,8 +956,8 @@ body {
     transition: all .5s;
 }
 
-.update li::before,
-.update li::after {
+.post-card::before,
+.post-card::after {
     content: '';
     pointer-events: none;
     position: absolute;
@@ -966,55 +967,61 @@ body {
     height: 0;
 }
 
-.update li::before {
+.post-card::before {
     top: 0;
     left: 0;
 }
 
-.update li::after {
+.post-card::after {
     bottom: 0;
     right: 0;
 }
 
-.focus {
-    border-radius: 5px;
-    background-color: var(--update-bg-color);
-    box-shadow: 16px 16px 1px var(--update-box-shadow);
-    transform: translate(-10px, -10px);
-    backdrop-filter: var(--update-li-blur);
+.card-link{
+    position: absolute;
+    inset: 0;
+    z-index: 1;
 }
 
-.update .focus::before,
-.update .focus::after {
+.focus {
+    border-radius: 5px;
+    background-color: var(--post-bg-color);
+    box-shadow: 16px 16px 1px var(--post-box-shadow);
+    transform: translate(-10px, -10px);
+    backdrop-filter: var(--post-li-blur);
+}
+
+.focus::before,
+.focus::after {
     width: 100%;
     height: 100%;
 }
 
-.update .focus::before {
-    border-top-color: var(--update-focus-border);
-    border-right-color: var(--update-focus-border);
+.focus::before {
+    border-top-color: var(--post-focus-border);
+    border-right-color: var(--post-focus-border);
     transition: width .5s ease-out, height .5s ease-out .5s;
 }
 
-.update .focus::after {
-    border-bottom-color: var(--update-focus-border);
-    border-left-color: var(--update-focus-border);
+.focus::after {
+    border-bottom-color: var(--post-focus-border);
+    border-left-color: var(--post-focus-border);
     transition: width ease-out .5s, height .5s ease-out .5s;
 }
 
-.update li:nth-child(odd) {
+.post-card:nth-child(odd){
     flex-direction: row;
 }
 
-.update li:nth-child(even) {
+.post-card:nth-child(even){
     flex-direction: row-reverse;
 }
 
-.update li:hover {
+.post-card:hover {
     box-shadow: -3px 2px 5px rgba(19, 2, 2, 0.527);
 }
 
-.update li .update-pic {
+.card-media {
     position: relative;
     top: 0;
     left: 0;
@@ -1025,7 +1032,7 @@ body {
     transition: all .5s;
 }
 
-.update li .update-pic .pic-loading {
+.card-media .loading-container {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -1037,10 +1044,10 @@ body {
     height: 100%;
     color: #fff;
     text-shadow: 2px 2px 6px rgb(231, 34, 245);
-    z-index: 10;
+    z-index: 1;
 }
 
-.update li .update-pic .pic-loading .load-line {
+.loading-spinner {
     position: absolute;
     width: 16vh;
     height: 16vh;
@@ -1051,7 +1058,7 @@ body {
     animation: ringringring 2s linear infinite;
 }
 
-.update li .update-pic .pic-loading .load-line::before {
+.loading-spinner::before {
     content: '';
     position: absolute;
     top: 5px;
@@ -1064,7 +1071,7 @@ body {
     animation: ringringring 3s linear infinite;
 }
 
-.update li .update-pic .pic-loading .load-line::after {
+.loading-spinner::after {
     content: '';
     position: absolute;
     top: 15px;
@@ -1077,15 +1084,15 @@ body {
     animation: ringringring 1.5s linear infinite;
 }
 
-.update li:nth-child(2n) .update-pic .pic-loading .load-line {
+.post-card:nth-child(2n) .loading-spinner {
     border-top-color: rgb(149, 0, 255);
 }
 
-.update li:nth-child(2n) .update-pic .pic-loading .load-line::before {
+.post-card:nth-child(2n) .loading-spinner::before {
     border-top-color: rgb(255, 0, 102);
 }
 
-.update li:nth-child(2n) .update-pic .pic-loading .load-line::after {
+.post-card:nth-child(2n) .loading-spinner::after {
     border-top-color: rgb(255, 255, 255);
 }
 
@@ -1100,49 +1107,41 @@ body {
     }
 }
 
-
-.update li .update-pic a {
-    display: block;
-    text-align: center;
-    visibility: hidden;
-    width: 100%;
-    height: 100%;
-}
-
-.update li .update-pic a img {
+.card-media img {
     position: absolute;
     top: 50%;
     left: 50%;
     max-width: 90%;
     max-height: 90%;
     transform: translate(-50%, -50%);
+    visibility: hidden;
     transition: all .5s;
 }
 
-.update li .update-content {
+.post-card .card-content {
     padding: 0 .8rem;
     min-height: 50%;
     flex: 1;
     box-sizing: border-box;
 }
 
-.update li .update-content p {
+.post-card .card-content p {
     margin-top: 9px;
-    color: var(--update-content-p);
+    color: var(--post-content-p);
     -webkit-line-clamp: 3;
     text-overflow: ellipsis;
     overflow: hidden;
 }
 
-.update li .update-content h1 {
+.post-card .card-content h2 {
     width: 100%;
     font-size: 1.3rem;
     text-align: center;
-    color: var(--update-content-h1);
+    color: var(--post-content-h2);
     font-size: 1.4rem;
 }
 
-.update li .update-content .content-line {
+.post-card .card-content .card-line {
     width: 10%;
     height: 3px;
     margin: 1em 1em;
@@ -1150,7 +1149,7 @@ body {
     transition: all .5s;
 }
 
-.update li .update-content .content-tag {
+.post-card .card-content .card-tag {
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -1158,16 +1157,17 @@ body {
     margin: 0 auto;
 }
 
-.update li .update-content .content-label {
+.post-card .card-content .card-label {
     padding: 0 6px;
+    z-index: 10;
 }
 
-.update li:hover .update-pic a img {
+.post-card:hover .card-media img {
     max-width: 100%;
     max-height: 100%;
 }
 
-.update li:hover .update-content .content-line {
+.post-card:hover .card-content .card-line {
     width: 80%;
 }
 
@@ -1331,36 +1331,36 @@ body {
 }
 
 @media screen and (max-width:1100px) {
-    .update li {
+    .post-card {
         width: 75%;
     }
 }
 
 @media screen and (max-width:935px) {
-    .update li {
+    .post-card {
         width: 85%;
     }
 }
 
 @media screen and (max-width: 700px) {
-    .update li {
+    .post-card {
         flex-direction: column !important;
         width: 65%;
         height: auto !important;
     }
 
-    /* .update li{
+    /* .post-card{
         position: relative;
         width: 65%;
         border: 1px solid red;
      }
-     .update li .update-pic{
+     .card-media{
         width: 100%;
         height: 100%;
      }
 
 
-     .update li .update-content{
+     .post-card .card-content{
         position: absolute;
         top: 0;
         left: 0;
@@ -1437,28 +1437,28 @@ body {
     }
 
     .focus {
-        box-shadow: 14px 15px 1px var(--update-box-shadow);
+        box-shadow: 14px 15px 1px var(--post-box-shadow);
     }
 
-    .update li {
+    .post-card {
         width: 85%;
         height: auto !important;
         padding: .4rem 0px 1.4rem 0px;
     }
 
-    .update li .update-pic {
+    .card-media {
         min-height: 18vh;
     }
 
-    .update li .update-content h1 {
+    .post-card .card-content h1 {
         font-size: 1.5rem;
     }
 
-    .update li .update-content p {
+    .post-card .card-content p {
         font-size: 1rem;
     }
 
-    .update li .update-content .content-label {
+    .post-card .card-content .content-label {
         font-size: 1rem;
     }
 

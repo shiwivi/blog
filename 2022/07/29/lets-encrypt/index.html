@@ -1,4 +1,4 @@
-<!DOCTYPE html><html lang="zh-CN"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="author" content="shiwi"><meta name="copyright" content="SHIWIVI"><link rel="shortcut icon" href="/blog/images/favicon.ico" type="image/x-icon"><style>.preload{position:absolute;display:flex;flex-direction:column;align-items:center;justify-content:center;left:0;top:0;width:100%;height:100%;background-color:#000;z-index:100}.text{margin-bottom:10px;color:#00cff3;text-shadow:0 0 3px #00cff3;font-size:20px}.text span{display:inline-block}.dance{animation:dance .8s linear}.text span:nth-child(1){animation-delay:0s}.text span:nth-child(2){animation-delay:.1s}.text span:nth-child(3){animation-delay:.2s}.text span:nth-child(4){animation-delay:.3s}.text span:nth-child(5){animation-delay:.4s}.text span:nth-child(6){animation-delay:.5s}.text span:nth-child(7){animation-delay:.6s}.text span:nth-child(8){animation-delay:.7s}.text span:nth-child(9){animation-delay:.8s}.text span:nth-child(10){animation-delay:.9s}@keyframes dance{0%{transform:translateY(0)}50%{transform:translateY(-20px)}100%{transform:translateY(0)}}.loading{width:80%;max-width:260px;height:6px;background-color:#e1e4e8;border-radius:6px}.bar{display:flex;height:100%;background:linear-gradient(90deg,#ffd33d,#ea4aaa 10%,#b34bff 30%,#01feff 51%,#ffb33d 68%,#ea4aaa 85%,#b34bff);background-size:300% 100%;animation:bar 2s linear infinite}@keyframes bar{0%{background-position:100%}100%{background-position:0}}</style><body><div class="preload"><div class="text"><span>L</span> <span>o</span> <span>a</span> <span>d</span> <span>i</span> <span>n</span> <span>g</span> <span>.</span> <span>.</span> <span>.</span></div><div class="loading"><span class="bar"></span></div></div><script>let texts=document.querySelector('.text').querySelectorAll('span');let timer=setInterval(()=>{texts.forEach((item)=>{item.classList.toggle("dance")})},1700);window.onload=function(){clearInterval(timer);document.querySelector('.preload').style="display:none;"}</script><title>SHIWIVI-文章</title>
+<!DOCTYPE html><html lang="zh-CN"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="author" content="shiwi"><meta name="copyright" content="SHIWIVI"><link rel="shortcut icon" href="/blog/images/icon.png" type="image/x-icon"><style>.preload{position:absolute;display:flex;flex-direction:column;align-items:center;justify-content:center;left:0;top:0;width:100%;height:100%;background-color:#000;z-index:100}.text{margin-bottom:10px;color:#00cff3;text-shadow:0 0 3px #00cff3;font-size:20px}.text span{display:inline-block}.dance{animation:dance .8s linear}.text span:nth-child(1){animation-delay:0s}.text span:nth-child(2){animation-delay:.1s}.text span:nth-child(3){animation-delay:.2s}.text span:nth-child(4){animation-delay:.3s}.text span:nth-child(5){animation-delay:.4s}.text span:nth-child(6){animation-delay:.5s}.text span:nth-child(7){animation-delay:.6s}.text span:nth-child(8){animation-delay:.7s}.text span:nth-child(9){animation-delay:.8s}.text span:nth-child(10){animation-delay:.9s}@keyframes dance{0%{transform:translateY(0)}50%{transform:translateY(-20px)}100%{transform:translateY(0)}}.loading{width:80%;max-width:260px;height:6px;background-color:#e1e4e8;border-radius:6px}.bar{display:flex;height:100%;background:linear-gradient(90deg,#ffd33d,#ea4aaa 10%,#b34bff 30%,#01feff 51%,#ffb33d 68%,#ea4aaa 85%,#b34bff);background-size:300% 100%;animation:bar 2s linear infinite}@keyframes bar{0%{background-position:100%}100%{background-position:0}}</style><body><div class="preload"><div class="text"><span>L</span> <span>o</span> <span>a</span> <span>d</span> <span>i</span> <span>n</span> <span>g</span> <span>.</span> <span>.</span> <span>.</span></div><div class="loading"><span class="bar"></span></div></div><script>let texts=document.querySelector('.text').querySelectorAll('span');let timer=setInterval(()=>{texts.forEach((item)=>{item.classList.toggle("dance")})},1700);window.onload=function(){clearInterval(timer);document.querySelector('.preload').style="display:none;"}</script><title>SHIWIVI-文章</title>
 <link rel="stylesheet" href="https://at.alicdn.com/t/font_2856826_bu73u0ahu7a.css">
 
 <link rel="stylesheet" href="/blog/css/index.css">
@@ -136,13 +136,13 @@
         <div class="article">
         <h1 class="title">基于certbot获取TLS证书</h1>
         <div class="art-info">
-            <div><span><span class="iconfont icon-zishu-jzl"></span>字数：8222</span>
+            <div><span><span class="iconfont icon-zishu-jzl"></span>字数：8192</span>
             <span><span class="iconfont icon-riqi"></span>写于：2022-07-29</span></div>
             <div><span><span class="iconfont icon-zuixinnew3"></span>最新更新：2022-07-29</span>
             <span><span class="iconfont icon-shijian"></span>阅读本文预计花费您24分钟</span></div>
         </div>
         <div class="art-content">
-        <div class="broadcast color-blue">
+        <html><head></head><body><div class="broadcast color-blue">
 <div class="iconfont icon-yinhao"></div>
 Let’s Encrypt 官网：<a target="_blank" rel="noopener" href="https://letsencrypt.org/">https://letsencrypt.org/</a></div>
 
@@ -167,7 +167,7 @@ certbot官方文档：<a target="_blank" rel="noopener" href="https://certbot.ef
 </ul>
 <h4 id="通过pip3安装"><a href="#通过pip3安装" class="headerlink" title="通过pip3安装"></a>通过pip3安装</h4><p>如果无法安装snapd，那只能绕过它，通过其他包管理工具安装，以pip（python包管理工具）为例</p>
 <p>安装python并通过pip安装certbot</p>
-<pre><code>yum install -y python3 && pip3 install certbot</code></pre>
+<pre><code>yum install -y python3 &amp;&amp; pip3 install certbot</code></pre>
 
 <h5 id="pip3版本较低报错问题"><a href="#pip3版本较低报错问题" class="headerlink" title="pip3版本较低报错问题"></a>pip3版本较低报错问题</h5><p>在安装certbot时，如果yum源中的pip3版本较低，可能会导致模块导入失败，从而报错</p>
 <div class="shell">Complete output from command python setup.py egg_info:
@@ -178,8 +178,8 @@ certbot官方文档：<a target="_blank" rel="noopener" href="https://certbot.ef
             users. See: https://pip.pypa.io/en/stable/installing/#upgrading-pip
             =============================DEBUG ASSISTANCE==========================
     Traceback (most recent call last):
-      File "&lt;string>", line 1, in &lt;module>
-      File "/tmp/pip-build-2bwzqu_0/cryptography/setup.py", line 14, in &lt;module>
+      File "&lt;string&gt;", line 1, in &lt;module&gt;
+      File "/tmp/pip-build-2bwzqu_0/cryptography/setup.py", line 14, in &lt;module&gt;
         from setuptools_rust import RustExtension
     ModuleNotFoundError: No module named 'setuptools_rust'
     ----------------------------------------
@@ -197,10 +197,10 @@ Command "python setup.py egg_info" failed with error code 1 in /tmp/pip-build-2b
 <h5 id="1-Nginx"><a href="#1-Nginx" class="headerlink" title="1. Nginx"></a>1. Nginx</h5><p>如果部署了Nginx，可以直接执行（但要确保安装了certbot-nginx插件）</p>
 <pre><code>sudo certbot --nginx</code></pre>
 <p>certbot将自动获取域名，并在进入证书申请流程时让你确认域名，也可以在执行上述命令时通过添加<span class="tips">-d</span>参数来指定域名，如：</p>
-<div class="show"><code>sudo certbot -&zwnj;-nginx -d  shiwivi.com -d  www.shiwivi.com</code></div>
+<div class="show"><code>sudo certbot -‌-nginx -d  shiwivi.com -d  www.shiwivi.com</code></div>
 
-<p>可以通过<span class="tips">-&zwnj;-email</span>来添加邮箱，Let’s Encrypt会在证书即将到期时发邮件通知你更新证书。</p>
-<div class="show"><code>sudo certbot -&zwnj;-nginx --email xxxx@gmail.com -d  shiwivi.com -d  www.shiwivi.com</code></div>
+<p>可以通过<span class="tips">-‌-email</span>来添加邮箱，Let’s Encrypt会在证书即将到期时发邮件通知你更新证书。</p>
+<div class="show"><code>sudo certbot -‌-nginx --email xxxx@gmail.com -d  shiwivi.com -d  www.shiwivi.com</code></div>
 
 <p>如果不添加上述参数，certbot会在验证通过后要求你添加，邮箱一般只需要在首次验证证书或者更改邮箱时添加。</p>
 <h5 id="2-Apache"><a href="#2-Apache" class="headerlink" title="2. Apache"></a>2. Apache</h5><p>Apache中的验证方法与上类似</p>
@@ -216,7 +216,7 @@ Command "python setup.py egg_info" failed with error code 1 in /tmp/pip-build-2b
 <h5 id="3-Standalone模式"><a href="#3-Standalone模式" class="headerlink" title="3. Standalone模式"></a>3. Standalone模式</h5><p>如果服务器上没有部署任何web服务，或者不想使用已部署的服务，则可以使用Standalone模式，该模式下，certbot 会自动运行一个 web server 来进行验证。该服务需要占用<span class="tips">80</span>端口，如果我们自己的服务器上已经有 web server 正在运行 （如 Nginx 或 Apache ）并且占用了80端口，则使用Standalone前应该关闭相关服务或修改端口。</p>
 <pre><code>certbot certonly --standalone -d 域名</code></pre>
 <p>可以在命令中指定验证的端口和协议</p>
-<div class="show"><code>certbot certonly --standalone --&lt;challenge-type>-address  -d 域名</code></div>
+<div class="show"><code>certbot certonly --standalone --&lt;challenge-type&gt;-address  -d 域名</code></div>
 
 <div class="broadcast color-purple">
 <div class="iconfont icon-fengche"></div>
@@ -241,8 +241,8 @@ Command "python setup.py egg_info" failed with error code 1 in /tmp/pip-build-2b
    certificates, run "certbot renew"
  - If you like Certbot, please consider supporting our work by:
 
-<p>   Donating to ISRG / Let’s Encrypt:   <a target="_blank" rel="noopener" href="https://letsencrypt.org/donate">https://letsencrypt.org/donate</a><br>   Donating to EFF:                    <a target="_blank" rel="noopener" href="https://eff.org/donate-le">https://eff.org/donate-le</a></div></p>
-<h4 id="插件未安装报错问题"><a href="#插件未安装报错问题" class="headerlink" title="插件未安装报错问题"></a>插件未安装报错问题</h4><p>以nginx为例，执行<span class="tips">sudo certbot -&zwnj;-nginx</span>时，可能会有nginx插件未被正确安装报错</p>
+<p>   Donating to ISRG / Let’s Encrypt:   <a target="_blank" rel="noopener" href="https://letsencrypt.org/donate">https://letsencrypt.org/donate</a><br>   Donating to EFF:                    <a target="_blank" rel="noopener" href="https://eff.org/donate-le">https://eff.org/donate-le</a></p></div><p></p>
+<h4 id="插件未安装报错问题"><a href="#插件未安装报错问题" class="headerlink" title="插件未安装报错问题"></a>插件未安装报错问题</h4><p>以nginx为例，执行<span class="tips">sudo certbot -‌-nginx</span>时，可能会有nginx插件未被正确安装报错</p>
 <div class="shell">The requested nginx plugin does not appear to be installed</div>
 
 <p>安装nginx插件</p>
@@ -261,7 +261,7 @@ Error: Nothing to do</div>
 <p>安装完epel，再重新尝试安装插件，安装完成就可以开始申请证书了</p>
 <pre><code>yum install python-certbot-nginx</code></pre>
 
-<h4 id="web服务无法找到报错问题"><a href="#web服务无法找到报错问题" class="headerlink" title="web服务无法找到报错问题"></a>web服务无法找到报错问题</h4><p>执行<span class="tips">sudo certbot -&zwnj;-nginx</span>时，还可能会遇到 certbot 无法找到 web server 或配置文件报错，这是路径问题，可以建一个软链接到 /etc/nginx 目录下</p>
+<h4 id="web服务无法找到报错问题"><a href="#web服务无法找到报错问题" class="headerlink" title="web服务无法找到报错问题"></a>web服务无法找到报错问题</h4><p>执行<span class="tips">sudo certbot -‌-nginx</span>时，还可能会遇到 certbot 无法找到 web server 或配置文件报错，这是路径问题，可以建一个软链接到 /etc/nginx 目录下</p>
 <pre><code>ln -s /usr/local/nginx/conf/ /etc/nginx</code></pre>
 <p>或者在申请证书时手动指定nginx配置文件路径</p>
 <pre><code>certbot --nginx-server-root /usr/local/nginx/conf</code></pre>
@@ -280,7 +280,7 @@ Error: Nothing to do</div>
 ssl_session_timeout 1440m;
 
 <p>ssl_protocols TLSv1.2;<br>ssl_prefer_server_ciphers off;</p>
-<p>ssl_ciphers “FCDHE-FCLSA….”;</div></p>
+<p>ssl_ciphers “FCDHE-FCLSA….”;</p></div><p></p>
 <ul>
 <li>ssl_session_cache：会话缓存</li>
 <li>ssl_session_timeout：用户会话缓存失效时间，如果对安全性有较高要求，可以降低此值</li>
@@ -296,14 +296,14 @@ listen 443 ssl;
 
 <p>#配置SSL证书和密钥路径<br>ssl_certificate    /etc/letsencrypt/live/域名/fullchain.pem;<br>ssl_certificate_key    /etc/letsencrypt/live/域名/privkey.pem;</p>
 <p>#可以将certbot生成的通用配置文件包含进去，自由选择<br>include    /etc/letsencrypt/options-ssl-nginx.conf;</p>
-<p>#使用生成的Diffie-Hellman 密钥，自由选择<br>ssl_dhparam    /etc/letsencrypt/ssl-dhparams.pem;<br>……<br>}</div></p>
+<p>#使用生成的Diffie-Hellman 密钥，自由选择<br>ssl_dhparam    /etc/letsencrypt/ssl-dhparams.pem;<br>……<br>}</p></div><p></p>
 <div class="broadcast color-pink">
 <div class="iconfont icon-yinle1"></div>
 Diffie-Hellman密钥用于密钥交换</div>
 
 
 <h3 id="常用命令"><a href="#常用命令" class="headerlink" title="常用命令"></a>常用命令</h3><h4 id="测试自动续订"><a href="#测试自动续订" class="headerlink" title="测试自动续订"></a>测试自动续订</h4><ul>
-<li><span class="strong">sudo certbot renew -&zwnj;-dry-run</span> 测试更新证书</li>
+<li><span class="strong">sudo certbot renew -‌-dry-run</span> 测试更新证书</li>
 </ul>
 <p>如果测试成功，certbot会返回成功信息</p>
 <div class="shell">- - - - -
@@ -327,7 +327,7 @@ The requested nginx plugin does not appear to be installed</div>
 
 <h4 id="续订证书"><a href="#续订证书" class="headerlink" title="续订证书"></a>续订证书</h4><ul>
 <li><span class="strong">certbot renew</span> 自动更新30天内到期的证书（推荐）</li>
-<li><span class="strong">certbot renew -&zwnj;-force-renewal</span> 强制更新未到期的证书</li>
+<li><span class="strong">certbot renew -‌-force-renewal</span> 强制更新未到期的证书</li>
 </ul>
 <p>在初次申请证书时，certbot会记住所使用的配置和插件，并在续订时使用相同的配置和插件。如果需要更改配置（如：修改文件路径），则需要以下步骤</p>
 <ol>
@@ -358,15 +358,15 @@ CA机构会限制证书颁发速度并阻止用户在短时间内多次续订同
 
 <h4 id="吊销与删除证书"><a href="#吊销与删除证书" class="headerlink" title="吊销与删除证书"></a>吊销与删除证书</h4><p>删除与吊销证书前，应当从web服务器软件的配置文件中删除对对应证书的引用</p>
 <ul>
-<li><span class="strong">certbot revoke -&zwnj;-cert-name 域名.xxx</span> 吊销证书(根据域名)</li>
-<li><span class="strong">certbot revoke -&zwnj;-cert-path /etc/letsencrypt/live/域名.xxx/cert.pem</span> 吊销证书(根据路径)</li>
-<li><span class="strong">certbot delete -&zwnj;-cert-name 域名.xxx</span> 删除指定证书</li>
+<li><span class="strong">certbot revoke -‌-cert-name 域名.xxx</span> 吊销证书(根据域名)</li>
+<li><span class="strong">certbot revoke -‌-cert-path /etc/letsencrypt/live/域名.xxx/cert.pem</span> 吊销证书(根据路径)</li>
+<li><span class="strong">certbot delete -‌-cert-name 域名.xxx</span> 删除指定证书</li>
 <li><span class="strong">certbot delete</span> 从列表中选择删除证书</li>
 </ul>
 <div class="broadcast color-blue">
 <div class="iconfont icon-yinhao"></div>
 官方命令和文档：<a target="_blank" rel="noopener" href="https://eff-certbot.readthedocs.io/en/stable/using.html">https://eff-certbot.readthedocs.io/en/stable/using.html</a></div>
-
+</body></html>
         </div>
     </div>
     <div class="post-nav">
