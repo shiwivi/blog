@@ -131,6 +131,8 @@
     background-color: #626262;
 }
 
+
+
 .toc-link {
     display: inline-block;
     width: 100%;
@@ -139,6 +141,11 @@
     text-overflow: ellipsis;
     white-space: nowrap;
     overflow: hidden;
+}
+
+.toc-level-2>.toc-link{
+    color: #01ffff;
+    font-weight: 900;
 }
 
 .toc-child {
@@ -643,34 +650,42 @@
     color: #f48266;
 }
 
-.art-content .text-red {
+.art-content .text-red,
+.art-content .text-red-num {
     font-weight: 800;
     color: #f48266;
-    margin: 0 8px;
 }
 
-.art-content .text-blue {
+.art-content .text-blue,
+.art-content .text-blue-num {
     font-weight: 800;
     color: #3498db;
-    margin: 0 8px;
 }
 
-.art-content .text-green {
+.art-content .text-green,
+.art-content .text-green-num {
     font-weight: 800;
     color: #2ecc71;
-    margin: 0 8px;
 }
 
-.art-content .text-yellow {
+.art-content .text-yellow,
+.art-content .text-yellow-num {
     font-weight: 800;
     color: #fbc531;
-    margin: 0 8px;
+}
+
+.text-red,
+.text-blue,
+.text-green,
+.text-yellow {
+margin: 0 8px;
 }
 
 .art-content .formula {
     /*块级元素，用于展示公式*/
     width: 100%;
     text-align: center;
+    font-size: 18px;
     margin: 15px 0px;
 }
 
