@@ -43,11 +43,11 @@
             <li><a href="/blog/tags/html">#html</a></li>
             <li><a href="/blog/tags/%E7%A1%AC%E4%BB%B6">#硬件</a></li>
             <li><a href="/blog/tags/JavaScrip">#JavaScript</a></li>
-            <li><a href="/blog/tags/Firewall">#Firewall</a></li>
+            <li><a href="/blog/tags/408">#408</a></li>
             <li>#Security</li>
             <li><a href="/blog/tags/Linux">#Linux</a></li>
             <li>#Python</li>
-            <li><a href="/blog/tags/Server">#Server</a></li>
+            <li><a href="/blog/tags/Servr">#Server</a></li>
             <li><a href="/blog/tags/Web">#Web</a></li>
         </ul>
     <div class="rsstag"><a href="/blog/atom.xml"><span class="iconfont icon-rss"></span>RSS订阅</a></div>
@@ -136,13 +136,13 @@
         <div class="article">
         <h1 class="title">C语言</h1>
         <div class="art-info">
-            <div><span><span class="iconfont icon-zishu-jzl"></span>字数：74169</span>
+            <div><span><span class="iconfont icon-zishu-jzl"></span>字数：74315</span>
             <span><span class="iconfont icon-riqi"></span>写于：2020-10-13</span></div>
             <div><span><span class="iconfont icon-zuixinnew3"></span>最新更新：2020-12-13</span>
-            <span><span class="iconfont icon-shijian"></span>阅读本文预计花费您212分钟</span></div>
+            <span><span class="iconfont icon-shijian"></span>阅读本文预计花费您213分钟</span></div>
         </div>
         <div class="art-content">
-        <html><head></head><body><h3 id="介绍"><a href="#介绍" class="headerlink" title="介绍"></a>介绍</h3><h4 id="发展历史"><a href="#发展历史" class="headerlink" title="发展历史"></a>发展历史</h4><div class="content-folded">在计算机诞生初期，人们使用<span class="strong">机器语言</span>来编写程序，机器语言的指令由操作码和操作数组成，均使用二进制代码表示，而二进制则通过在纸带上打孔来表示0或1，程序员将编写的机器语言指令打在纸带上并通过纸带机输入计算机中，以此进行运算。机器语言虽然能被计算机直接执行，但对人类来说难以阅读和记忆，不便编写。
+        <html><head></head><body><h3 id="介绍"><a href="#介绍" class="headerlink" title="介绍"></a>介绍</h3><h4 id="发展历史"><a href="#发展历史" class="headerlink" title="发展历史"></a>发展历史</h4><div class="content-folded">计算机诞生初期，程序的编写依赖于<span class="strong">机器语言</span>，机器语言指令由操作码和操作数组成，均使用二进制代码表示，而二进制则通过在纸带上打孔来表示0或1，程序员将编写的机器语言指令打在纸带上并通过纸带机输入计算机中，以此进行运算。机器语言虽然能被计算机直接执行，但对于人类而言，难以阅读和记忆，编写起来十分不便。
 
 <p>为了简化机器语言的编写，1950年代中期，<span class="strong">汇编语言</span>应运而生。它使用助记符（mnemonic）来表示机器指令，极大地提高了程序员的工作效率。即便如此，书写和调试一个程序也需要用很长时间，并且需要程序员详细了解编写代码需要的指令、寄存器和CPU知识。</p>
 <p>为了解决这些问题，IBM公司的一个研究小组开始着手研究一门能高效运行且简单易用的编程语言。1956年，IBM公司的John Backus带领他的团队开发出了世界上第一个<span class="strong">高级语言</span><span class="tips">FORTRAN</span>(FORmula TRANslation，意为公式翻译)，在科学和工程计算领域取得了很大成功，但该语言是专门为IBM 704计算机设计的，只能在特定型号的机器上工作。</p>
@@ -152,18 +152,18 @@
 <p>1963年，剑桥大学基于ALGOL 60发布了<span class="tips">CPL</span>（Combined Programming Langurage）语言，该语言旨在用于工业控制、数据处理等更为广泛的领域，因此规模宏大而复杂，编译器的编写进度十分缓慢，该语言并未大规模流行。</p>
 <p>1967年，英国剑桥大学的Matin Richards对CPL语言做了简化，推出了<span class="tips">BCPL</span>(the Basic Combined Programming Language)语言，该语言是最早使用库函数封装基本输入输出的语言之一，主要用于编写系统和编译器，但BCPL对字符串的支持很差，并且内存管理很糟糕。</p>
 <p>1969年，美国贝尔实验室的Kenneth Lane Thompson对BCPL语言做了改进和优化，由此衍生出了<span class="tips">B语言</span>，并用于书写<span class="strong">UNIX</span>系统，该语言的名字取自BCPL中的第一个字母，但此时的B语言过于简单，功能有限。</p>
-<p>1972年，贝尔实验室的Dennis MacAlistair Ritchie在B语言的基础上设计出了<span class="tips">C语言</span>(取BCPL的第二个字母作为该语言的名字)，C语言保留了BCPL和B语言的优点，简练而接近硬件，又克服了它们无数据类型等缺点。1973年初， C语言的主体完成，汤普森和里奇使用C语言重写了UNIX操作系统，极大地提升了UNIX操作系统的可移植性，而C语言随着UNIX的广泛使用得到了迅速推广，成为了应用最广泛的计算机语言之一。</p>
-<p>1983年，美国国家标准化协会(ANSI)制定了C语言标准——<span class="strong">ANSI C</span>，1987年，ANSI又公布了新的标准<span class="strong">87 ANSI C</span>，该标准于1990年被国际标准化组织(Internation Standard Organization)接受成为C语言国际标准——ISO/IEC 9899,简称<span class="strong">C89/C90</span>标准，是C语言的主流标准，被广泛应用于各个领域。1999年，ISO对C语言进行了大量扩展和改进，加入了如long long等新的数据类型，发布了<span class="strong">C99</span>标准，该标准在部分领域使用广泛，但在工业等领域普及度较低。目前最新标准为2018年发布的C17标准，但尚未被广泛使用。</p></div><p></p>
-<h4 id="编译流程"><a href="#编译流程" class="headerlink" title="编译流程"></a>编译流程</h4><p>C语言源文件通常以<span class="tips">.c</span>为文件名后缀，从高级语言转换为机器码程需要经过<span class="strong">预处理</span>、<span class="strong">编译</span>、<span class="strong">汇编</span>、<span class="strong">链接</span>四个过程</p>
-<h6 id="预处理"><a href="#预处理" class="headerlink" title="预处理"></a>预处理</h6><p>C语言源文件首先会被预处理，以一个名为hello.c的源文件为例，<span class="tips">hello.c</span>源文件经过预处理器处理，会生成一个<span class="tips">hello.i</span>临时文件，预处理阶段会进行以下工作：</p>
+<p>1972年，贝尔实验室的Dennis MacAlistair Ritchie在B语言的基础上设计出了<span class="tips">C语言</span>(取BCPL的第二个字母作为该语言的名字)，C语言保留了BCPL和B语言的优点，简练而接近硬件，又克服了它们无数据类型等缺点。1973年初， C语言的主体完成，Kenneth Lane Thompson和Dennis MacAlistair Ritchie使用C语言重写了UNIX操作系统，极大地提升了UNIX操作系统的可移植性，而C语言随着UNIX的广泛使用得到了迅速推广，成为了应用最广泛的计算机语言之一。</p>
+<p>1983年，美国国家标准化协会(ANSI)制定了C语言标准——<span class="strong">ANSI C</span>，1987年，ANSI又公布了新的标准<span class="strong">87 ANSI C</span>，该标准于1990年被国际标准化组织(Internation Standard Organization)接受成为C语言国际标准——ISO/IEC 9899（简称<span class="strong">C89/C90</span>标准，是C语言的主流标准），被广泛应用于各个领域。1999年，ISO对C语言进行了大量扩展和改进，加入了如long long等新的数据类型，发布了<span class="strong">C99</span>标准，该标准在部分领域使用广泛，但在工业等领域普及度较低。目前最新标准为2018年发布的C17标准，但尚未被广泛使用。</p></div><p></p>
+<h4 id="编译流程"><a href="#编译流程" class="headerlink" title="编译流程"></a>编译流程</h4><p>C语言源文件通常以<span class="text-red">.c</span>为文件名后缀，从高级语言转换为机器码需要经历<span class="strong">预处理</span>、<span class="strong">编译</span>、<span class="strong">汇编</span>、<span class="strong">链接</span>四个阶段</p>
+<h6 id="预处理"><a href="#预处理" class="headerlink" title="预处理"></a>预处理</h6><p>以一个名为<span class="tips">hello.c</span>的源文件为例，该源文件经过预处理器处理，会生成一个<span class="tips">hello.i</span>临时文件（称为preprocessed input file），预处理阶段会进行以下工作：</p>
 <ul>
 <li>删除代码中的所有注释</li>
 <li>对宏进行代码扩展，通过<span class="strong">#define</span>等指令定义的常量或表达式，会被替换到文件中，对<span class="strong">#if</span>等条件编译指令限定的代码进行选择性编译</li>
 <li>包含文件，通过<span class="strong">#include</span>指令包含的文件，其内容会被添加到源文件中</li>
 </ul>
-<h6 id="编译"><a href="#编译" class="headerlink" title="编译"></a>编译</h6><p>编译器会将临时文件<span class="tips">hello.i</span>编译为汇编文件<span class="tips">hello.s</span>，该阶段编译器会对代码进行语法检查，并返回源代码中存在的语法错误和警告</p>
+<h6 id="编译"><a href="#编译" class="headerlink" title="编译"></a>编译</h6><p>编译器会将临时文件<span class="tips">hello.i</span>编译为汇编文件<span class="tips">hello.s</span>（称为assembly source file），该阶段编译器会对代码进行语法检查，并返回源代码中存在的语法错误和警告</p>
 <h6 id="汇编"><a href="#汇编" class="headerlink" title="汇编"></a>汇编</h6><p>汇编程序将<span class="tips">hello.s</span>汇编文件编译成机器码，在<span class="strong">Windows</span>环境下生成<span class="tips">hello.obj</span>对象文件，在<span class="strong">Linux</span>环境下生成<span class="tips">hello.o</span>目标文件</p>
-<h6 id="链接"><a href="#链接" class="headerlink" title="链接"></a>链接</h6><p>链接器会将多个目标文件合并为一个文件，并与库函数文件(.lib)等依赖链接，生成可执行文件，在Windows环境下生成一个可执行文件 hello.exe，在 Linux环境下中生成 hello.out文件</p>
+<h6 id="链接"><a href="#链接" class="headerlink" title="链接"></a>链接</h6><p>链接器会将多个目标文件合并为一个文件，并与库函数文件(.lib)等依赖链接，生成可执行文件，在Windows环境下生成一个可执行文件 hello.exe，在 Linux环境下中生成 hello.out文件（称为object file）</p>
 <p>库函数文件由各软件公司编写并已经编译成目标文件(.obj文件)，它们将在链接阶段与源程序编译而成的目标文件(.obj文件)相链接，生成可执行文件。</p>
 <h4 id="C语言内存模型"><a href="#C语言内存模型" class="headerlink" title="C语言内存模型"></a>C语言内存模型</h4><p>准确来讲，这是Linux的虚拟空间布局的一部分，Linux系统内核进程和用户进程所占的虚拟内存比是1：3，Windows是2：2，以32位Linux系统为例，模拟一个4GB的内存地址块沙盘，其中高地址位的1GB内存为系统内核进程占用的内核空间，低地址位的3GB内存为用于用户内进程的用户空间，内核空间由操作系统负责维护和处理，因此本文只涉及日常开发中C程序可以操控的3GB用户空间部分。</p>
 <p>该虚拟沙盘地址通过页表(Page Table)映射到物理内存，其中，蓝色区域会被映射到物理内存的不同内存段，白色区域只用于虚拟内存地址的分析，不会映射到物理内存中，不占用内存空间</p>
@@ -345,19 +345,10 @@ auto int num=10;
 <h5 id="static静态变量"><a href="#static静态变量" class="headerlink" title="static静态变量"></a>static静态变量</h5><p>静态变量分为静态局部变量和静态外部变量，二者用于不同的场景。静态变量在<span class="text-blue">静态存储区</span>分配内存，在整个程序运行期间不会被释放，与程序共存亡。对于已经初始化的静态变量，其内存空间位于静态存储区的.data段，在编译时赋予内存。对于未初始化的静态变量，其内存空间位于静态存储区的.bss段，并在程序初始化时，给变量赋值0(对数值型变量)或空字符(对字符变量)。</p>
 <h6 id="静态局部变量"><a href="#静态局部变量" class="headerlink" title="静态局部变量"></a>静态局部变量</h6><p>自动变量的内存会在代码退出函数块后被释放，其值也不会被保留，下次进入该函数块，该变量会被分配新的内存，如果希望变量的值在退出函数语句块后依旧被保留，其占用的存储单元不释放，方便函数基于上一次的运算结果进一步进行计算，此时可以使用static关键字将局部变量定义为静态局部变量。</p>
 <div class="show">eg:计算n的阶乘
-<code>int main(void){
-    int i,n;
-    scanf("%d",&amp;n);
-    for(i=1;i&lt;=n;i++){
-        Func(i);
-    }
-    return 0;
-}
-long Func(int n){
-    static long p=1;
-    return p*n;
-}</code></div>
+<code>#include <stdio.h>
+long Func(int n);
 
+</stdio.h></code><p><code>int main(void){<br>    int i,n;<br>    scanf(“%d”,&amp;n);<br>    for(i=1;i&lt;=n;i++){<br>        printf(“%ld\n”,Func(i));<br>    }<br>    return 0;<br>}<br>long Func(int n){<br>    static long p=1;<br>    p  *= n;<br>    return p ;<br>}</code></p></div><p></p>
 <p>静态局部变量，有以下特点：</p>
 <ul>
 <li>如果定义静态局部变量时不赋初值，编译器会自动赋为0(对数值型变量)或空字符(对字符变量)</li>
@@ -373,8 +364,9 @@ long Func(int n){
 </code></div>
 
 
-<h5 id="extern外部变量"><a href="#extern外部变量" class="headerlink" title="extern外部变量"></a>extern外部变量</h5><p>如果定义在函数之外的变量没有指定其他存储类别，那么它就是一个外部变量，外部变量是全局变量，作用域是从它的定义点到本文件末尾。但如果要在定义点之前或在其他文件中使用它，那就需要使用关键字extern对其进行声明(注意不是定义，编译器不为其分配内存)<br>声明语句为:<br><span class="strong">extern 类型名 变量名;</span><br>其中类型名可以省略，因此以下语句等价</p>
-<div class="show"><code>extern int Num1;
+<h5 id="extern外部变量"><a href="#extern外部变量" class="headerlink" title="extern外部变量"></a>extern外部变量</h5><p>如果定义在函数之外的变量没有指定其他存储类别，那么它就是一个外部变量，外部变量是全局变量，作用域是从它的定义点到本文件末尾。但如果要在定义点之前或在其他文件中使用它，那就需要使用关键字extern对其进行声明(注意不是定义，编译器不为其分配内存)<br>声明语句为:<br><span class="strong">extern 类型名 变量名;</span></p>
+<div class="show"><code>由于int类型隐含,类型名可以省略，因此以下语句等价
+extern int Num1;
 extern Num1;</code>
 注意！
 在定义外部变量时，直接在函数外定义 int Num1;  即可
@@ -411,7 +403,7 @@ int main(void){
     return 0;
 }</code>
 file2.c文件:
-<code><span class="text-red">extern Num;</span>//声明A为其他文件已经定义的外部变量
+<code><span class="text-red">extern Num;</span>//声明Num为其他文件已经定义的外部变量
 int getValue(int n)
 {
     return Num*n;
@@ -3043,7 +3035,7 @@ int randomNum = rand()%(101-1)+1;//生成1-101(不包括101)之间的整数</cod
             
             
                 <div class="post-next">
-                    <a href="/blog/2020/05/20/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E5%85%AD%E6%97%A0%E7%BA%BF%E7%BD%91%E7%BB%9C%E4%B8%8E%E9%9F%B3%E8%A7%86%E9%A2%91/">下一篇：计算机网络(六)无线/移动网络、音视频服务 </a>
+                    <a href="/blog/2020/08/10/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E4%B8%8B/">下一篇：操作系统(下) </a>
                 </div>
                  
     </div>

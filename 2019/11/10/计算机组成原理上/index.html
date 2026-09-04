@@ -43,11 +43,11 @@
             <li><a href="/blog/tags/html">#html</a></li>
             <li><a href="/blog/tags/%E7%A1%AC%E4%BB%B6">#硬件</a></li>
             <li><a href="/blog/tags/JavaScrip">#JavaScript</a></li>
-            <li><a href="/blog/tags/Firewall">#Firewall</a></li>
+            <li><a href="/blog/tags/408">#408</a></li>
             <li>#Security</li>
             <li><a href="/blog/tags/Linux">#Linux</a></li>
             <li>#Python</li>
-            <li><a href="/blog/tags/Server">#Server</a></li>
+            <li><a href="/blog/tags/Servr">#Server</a></li>
             <li><a href="/blog/tags/Web">#Web</a></li>
         </ul>
     <div class="rsstag"><a href="/blog/atom.xml"><span class="iconfont icon-rss"></span>RSS订阅</a></div>
@@ -136,10 +136,10 @@
         <div class="article">
         <h1 class="title">计算机组成原理(上)</h1>
         <div class="art-info">
-            <div><span><span class="iconfont icon-zishu-jzl"></span>字数：45514</span>
+            <div><span><span class="iconfont icon-zishu-jzl"></span>字数：45856</span>
             <span><span class="iconfont icon-riqi"></span>写于：2019-11-10</span></div>
             <div><span><span class="iconfont icon-zuixinnew3"></span>最新更新：2019-11-10</span>
-            <span><span class="iconfont icon-shijian"></span>阅读本文预计花费您131分钟</span></div>
+            <span><span class="iconfont icon-shijian"></span>阅读本文预计花费您132分钟</span></div>
         </div>
         <div class="art-content">
         <html><head></head><body><div class="broadcast color-red">
@@ -957,7 +957,7 @@ Cache被分为 2<sup>q</sup> 个分组
 <li>按磁头的工作方式分为：<blockquote>
 <blockquote>
 <ul>
-<li>固定磁头磁盘存储器：磁头位置固定不动，磁盘上的每一个磁道都对应一个磁头，省去了磁头沿盘片径向运动所需寻找磁道的时间，存取速度快，只要磁头进人工作状态即可进行读写操作</li>
+<li>固定磁头磁盘存储器：磁头位置固定不动，磁盘上的每一个磁道都对应一个磁头，省去了磁头沿盘片径向运动所需寻找磁道的时间，存取速度快，只要磁头进入工作状态即可进行读写操作，该结构主要用于大容量磁盘上</li>
 <li>移动磁头磁盘存储器：在存取数据时，磁头在盘面上作径向运动，这类存储器可以由一个盘片组成，也可由多个盘片装在一个同心主轴上，每个记录面各有一个磁头，所有这些磁头连成一体，固定在一个支架上可以移动，任何时刻各磁头都位于距圆心相等距离的磁道上，这组磁道称为一个柱面。目前，这类结构的硬磁盘存储器应用最广泛，最典型的就是<span class="strong">温切斯特磁盘</span>。</li>
 </ul>
 </blockquote>
@@ -996,12 +996,14 @@ Cache被分为 2<sup>q</sup> 个分组
 <li>间隔字段：相邻记录或扇区之间预留的空白区域，用于补偿转速误差、控制器处理延迟以及磁头切换时间</li>
 <li>结束标志：标识记录或数据块结束，某些记录格式中会使用</li>
 </ul>
-<h5 id="磁道-柱面-扇区"><a href="#磁道-柱面-扇区" class="headerlink" title="磁道/柱面/扇区"></a>磁道/柱面/扇区</h5><p><span class="strong">磁道（Track）</span>是磁盘盘面上的同心圆形记录区域，用于存放磁记录信息。每个盘面由内向外（或由外向内）划分为若干条磁道，每条磁道具有唯一编号</p>
-<p>每个盘面上的磁道被进一步划分为若干<span class="strong">扇区（Sector）</span>，扇区本质上是磁道的一段圆弧，它是磁盘进行数据读写和寻址的基本单位。</p>
+<h5 id="磁道-柱面-扇区"><a href="#磁道-柱面-扇区" class="headerlink" title="磁道/柱面/扇区"></a>磁道/柱面/扇区</h5><p>每个盘片拥有一个或两个<span class="strong">存储面(Surface)</span>，每个盘面上有若干磁道。<span class="strong">磁道（Track）</span>是磁盘盘面上的同心圆形记录区域，用于存放磁记录信息。每个盘面由内向外（或由外向内）划分为若干条磁道，每条磁道具有唯一编号，磁道之间留有磁道<span class="tips">间隙(Gap)</span>(Gap 一般不是物理介质的断裂，而是连续的磁性记录介质上，被刻意预留、通常不用于存储用户数据的区域)。</p>
+<p>每个盘面上的磁道被进一步划分为若干<span class="strong">扇区（Sector）</span>，扇区本质上是磁道的一段圆弧，它是磁盘进行数据读写和寻址的基本单位。扇区之间也会留下若干字节长度的<span class="tips">间隙(Gap)</span>，方便磁头识别。</p>
 <p>一个具有n个盘片的磁盘组，各盘面上具有同一半径的2n个磁道共同构成一个<span class="strong">柱面（Cylinder）</span>。在可移动磁头磁盘中，由于所有磁头由同一执行机构驱动，一次寻道即可同时定位到某一柱面的所有磁道，因此柱面常作为磁盘数据组织和访问的重要单位。</p>
+<div class="img-wrapper"><div class="load-wrapper"><div class="load-line"></div><div class="load-text">loading</div></div><img src="/blog/images/CO/HDDSurface.png" alt="盘面" loading="lazy" decoding="async"></div>
+
+<h6 id="磁盘寻址"><a href="#磁盘寻址" class="headerlink" title="磁盘寻址"></a>磁盘寻址</h6><p>传统磁盘采用CHS寻址方式，通过<span class="text-red">柱面号、磁头号、扇区号</span>这一三元组唯一确定数据位置。访问数据时需依次完成寻道、选头和扇区定位三个过程。由于柱面个数正好等于磁道数，因此柱面号就是磁道号，磁头号则是盘面号。在定长记录格式中，磁盘寻址时的地址由磁道号(选中柱面)、盘面号(选中磁头)、扇区号(选中扇区)组成，书上还有台号作为地址组成部分，台号是磁盘设备编号，已被淘汰。</p>
 <div class="img-wrapper"><div class="load-wrapper"><div class="load-line"></div><div class="load-text">loading</div></div><img src="/blog/images/CO/diskAddress.png" alt="磁道寻址" loading="lazy" decoding="async"></div>
 
-<p>传统磁盘采用CHS寻址方式，通过柱面号、磁头号和扇区号唯一确定数据位置。访问数据时需依次完成寻道、选头和扇区定位三个过程。由于柱面个数正好等于磁道数，因此柱面号就是磁道号，磁头号则是盘面号。在定长记录格式中，磁盘寻址时的地址由磁道号(选中柱面)、盘面号(选中磁头)、扇区号(选中扇区)组成，书上还有台号作为地址组成部分，台号是磁盘设备编号，已被淘汰。</p>
 <p>通常而言，一个机械硬盘包含多个盘面（如盘面 A、B、C 等），各盘面上半径相同、编号相同的磁道共同构成一个柱面。为了减少磁头寻道次数，连续数据通常优先存放在同一柱面的不同盘面上，即在盘面 A 的某条磁道写满后，继续写入盘面 B、盘面 C 上对应的磁道，而不是先写满盘面 A 的全部磁道再切换到其他盘面。采用柱面组织方式后，访问连续数据时通常只需进行磁头切换，而无需移动磁臂重新寻道，从而降低寻道时间，提高顺序读写效率。当一个柱面中的空间使用完毕后，磁头组件再移动到下一个柱面继续存取数据。要注意的是，传统机械硬盘虽然能够在同一柱面的不同盘面之间快速切换磁头，但通常一次只有一个磁头处于工作状态，因此数据仍然是依次读写的，而非多个盘面同时并行传输数据。柱面组织的主要作用是减少磁头移动开销，而不是提供类似磁盘阵列（RAID）的并行读写能力</p>
 <h5 id="磁盘阵列RAID"><a href="#磁盘阵列RAID" class="headerlink" title="磁盘阵列RAID"></a>磁盘阵列RAID</h5><p>磁盘阵列 RAID(Redundant Array ofIndependent Disks)的基本原理是将并行处理技术引入到磁盘系统，使用多台小型温盘构成同步化的磁盘阵列，然后将数据展开分放在磁盘设备上，读取时，它们能并行提供数据，显著提到磁盘在中大型机中的工作效率。</p>
 <h5 id="定长记录格式"><a href="#定长记录格式" class="headerlink" title="定长记录格式"></a>定长记录格式</h5><p>定长记录格式的特点是每条记录长度固定，并按固定边界顺序存放，一条记录结束后，下一条记录从新的记录区或扇区边界开始写入，而不会紧接前一条记录的剩余空间存放。这会造成一定的内部空间浪费，但由于记录长度固定，系统可根据记录号直接计算其存储位置，寻址简单、随机访问效率高。现代磁盘采用固定大小扇区（如512B或4KB），本质上继承了定长记录格式便于寻址和管理的思想</p>
@@ -1101,7 +1103,7 @@ Cache被分为 2<sup>q</sup> 个分组
 <p>与程序查询方式相比，在I/O设备进行准备的阶段，CPU无需时刻查询设备状态，不会出现“原地踏步”现象。这意味着CPU执行程序与I/O设备做准备可以同时进行，从而极大地提高了CPU的工作效率。</p>
 <h5 id="DMA方式"><a href="#DMA方式" class="headerlink" title="DMA方式"></a>DMA方式</h5><p><span class="strong">DMA</span>(Direct Memory Access，称为<span class="strong">直接存储器存取</span>或<span class="strong">直接内存访问</span>)方式在程序中断方式的基础上，进一步减少了CPU在I/O-内存数据传输过程中的参与度。虽然程序中断方式消除了程序查询方式的“踏步”现象，提高了CPU资源的利用率，但CPU在响应中断请求后，仍须暂停当前程序并转入中断服务程序，且为了完成I/O设备与主存之间的信息交换，可能需要占用CPU内部的一些寄存器，这同样是对CPU资源的消耗。如果I/O设备能直接与主存交换信息而不占用CPU，则CPU的资源利用率可进一步提高，由此便出现了DMA方式。</p>
 <p>在DMA方式中，主存与I/O设备之间设有专门的数据通路，数据块的传送由DMA控制器负责，传送过程中不需要CPU参与，也不需要调用中断服务程序。CPU只需要数据传输前进行DMA的初始化（设置主存起始地址、传送长度、方向/模式等控制信息）、启动DMA控制器，以及在传送结束或发生错误时处理中断，而不需要参与数据传输过程。</p>
-<p>当DMA与CPU同时需要访问主存时，需要通过总线仲裁决定总线使用权。在多数系统中，DMA的优先级较高，因此总线占有权会优先交给DMA。这种DMA占用了本可能属于CPU的存取周期，使CPU暂时无法访问主存的现象，称为<span class="strong">周期窃取</span>或<span class="strong">周期挪用</span>，窃取的时间一般为一个或多个存取周期，因此又将DMA占用的存取周期称为<span class="text-red">窃取周期</span>或<span class="text-red">挪用周期</span>。而且，在DMA窃取存取周期期间，CPU不能进行需要访问主存的操作，仍可继续执行内部操作（如某些算术逻辑运算）。因此，与程序查询方式和程序中断方式相比，DMA方式减少了CPU对大量数据传送的直接干预，提高了数据传送效率和CPU资源利用率</p>
+<p>当DMA与CPU同时需要访问主存时，需要通过总线仲裁决定总线使用权。在多数系统中，DMA的优先级较高，因此总线占有权会优先交给DMA。这种DMA占用了本可能属于CPU的存取周期，使CPU暂时无法访问主存的现象，称为<span class="strong">周期窃取</span>或<span class="strong">周期挪用</span>，窃取的时间一般为一个或多个存取周期，因此又将DMA占用的存取周期称为<span class="text-red">窃取周期</span>或<span class="text-red">挪用周期</span>。而且，在DMA窃取存取周期期间，CPU不能进行需要访问主存的操作，仍可继续执行内部操作（如某些算术逻辑运算）。因此，与程序查询方式和程序中断方式相比，DMA方式减少了CPU对大量数据传送的直接干预，提高了数据传送效率和CPU资源利用率，同时，DMA的周期窃取只需要等待一个或多个存取周期，不需要像程序中断那样保存/恢复CPU上下文。</p>
 <h5 id="现代计算机的传输控制"><a href="#现代计算机的传输控制" class="headerlink" title="现代计算机的传输控制"></a>现代计算机的传输控制</h5><p>在现代计算机中，上述三种传输控制的使用场景：</p>
 <ul>
 <li>DMA：高速I/O设备进行数据传输的主要方式，广泛用于需要传输大量数据、且对传输效率要求较高的场景，如NVMe SSD通过PCIe总线直接访问内存，网卡通过DMA将网络数据报写入内存的接收缓冲区。显卡通过DMA在显存与主存之间传输纹理、模型和计算结果等，使用DMA的设备包括固态硬盘（SSD）、机械硬盘、网卡、显卡、USB控制器、声卡以及各种高速采集设备等</li>
@@ -1223,7 +1225,7 @@ Cache被分为 2<sup>q</sup> 个分组
 <ul>
 <li>第一种是CPU此时不需要访问主存(如CPU正在执行乘法指令，由于乘法指令执行时间较长，此时CPU不需要访问主存)，故I/O设备与CPU不发生冲突</li>
 <li>第二种情况是I/O设备请求 DMA传送时，CPU正在访问主存，此时必须待存取周期结束，CPU才能将总线占有权让出</li>
-<li>第三种情况是I/O设备要求访问主存时，CPU也要求访问主存,这就出现了访问冲突。通常，I/O访存优先于CPU访问主存，因为I/O不立即访问主存就可能丢失数据，这时I/O要窃取一、二个存取周期，意味着CPU在执行访问主存指令过程中插人了DMA请求，并挪用了一、二个存取周期，使CPU延缓了一、二个存取周期再访问主存<br>与CPU暂停访存的方式相比，这种方式既实现了I/O传送，又较好地发挥了主存与CPU的效率，是一种广泛采用的方法。应该指出，I/O设备每挪用一个主存周期都要申请总线控制权、建立总线控制权和归还总线控制权。因此，尽管传送一个字对主存而言只占用一个主存周期，但对DMA接口而言，实质上要占2~5个主存周期(由逻辑线路的延迟特性而定)。因此周期挪用的方法比较适合于I/O设备的读/写周期大于主存周期的情况。</li>
+<li>第三种情况是I/O设备要求访问主存时，CPU也要求访问主存,这就出现了访问冲突。通常，I/O访存优先于CPU访问主存，因为I/O不立即访问主存就可能丢失数据，这时I/O要窃取一、二个存取周期，意味着CPU在执行访问主存指令过程中插入了DMA请求，并挪用了一、二个存取周期，使CPU延缓了一、二个存取周期再访问主存<br>与CPU暂停访存的方式相比，这种方式既实现了I/O传送，又较好地发挥了主存与CPU的效率，是一种广泛采用的方法。应该指出，I/O设备每挪用一个主存周期都要申请总线控制权、建立总线控制权和归还总线控制权。因此，尽管传送一个字对主存而言只占用一个主存周期，但对DMA接口而言，实质上要占2~5个主存周期(由逻辑线路的延迟特性而定)。因此周期挪用的方法比较适合于I/O设备的读/写周期大于主存周期的情况。</li>
 </ul>
 </blockquote>
 </blockquote>
@@ -1232,11 +1234,11 @@ Cache被分为 2<sup>q</sup> 个分组
 </ul>
 <h4 id="DMA接口电路"><a href="#DMA接口电路" class="headerlink" title="DMA接口电路"></a>DMA接口电路</h4><p>利用DMA方式传送数据时，数据的传输过程完全由DMA接口电路控制，故DMA接口又称为<span class="strong">DMA控制器</span>(<span class="strong">DMAC</span>，Direct Memory Access Controller)，一个典型的DMA控制器主要包括以下几个逻辑部件：</p>
 <ul>
-<li><span class="strong">主存地址寄存器(AR)</span>：存放要交换的数据在主存中的起始地址，每次传送后自动加1，直到一批数据传送完毕为止</li>
-<li><span class="strong">字计数器(WC)</span>：记录传送数据的总字数，通常会以将要交换数据的字数的补码值作为预设值，每传送一个字，字计数器加1，当最高位产生进位时，计数器变为0，表示该批数据传送完毕，DMA接口向CPU发送中断请求信号</li>
-<li><span class="strong">数据缓冲寄存器(BR)</span>：用于暂存每次传送的数据。通常DMA接口与主存之间采用字传送，而DMA与I/O设备之间可能是字节或位传送。因此 DMA接口中还可能包括有装配或拆卸字信息的硬件逻辑，如数据移位缓冲寄存器、字节计数器等</li>
+<li><span class="strong">主存地址寄存器(AR)</span>(Address Register)：OS中记为<span class="strong">MAR</span>(Memory Address Register)，存放要交换的数据在主存中的起始地址，每次传送后自动加1，直到一批数据传送完毕为止</li>
+<li><span class="strong">字计数器(WC)</span>(Word Counter)：OS中记为<span class="strong">DC</span>(Data Counter)，记录传送数据的总字数，通常会以将要交换数据的字数的补码值作为预设值，每传送一个字，字计数器加1，当最高位产生进位时，计数器变为0，表示该批数据传送完毕，DMA接口向CPU发送中断请求信号</li>
+<li><span class="strong">数据缓冲寄存器(BR)</span>(Buffer Register)：OS中记为<span class="strong">DR</span>(Data Register)，用于暂存每次传送的数据。通常DMA接口与主存之间采用字传送，而DMA与I/O设备之间可能是字节或位传送。因此 DMA接口中还可能包括有装配或拆卸字信息的硬件逻辑，如数据移位缓冲寄存器、字节计数器等</li>
 <li><span class="strong">DMA控制逻辑</span>：管理DMA的传送过程，由控制电路、时序电路及命令状态控制寄存器等组成。每当设备准备好一个数据字(或一个字传送结束)，就向DMA接口提出申请(DREQ)，DMA控制逻辑便向CPU请求 DMA服务，发出总线使用权的请求信号(HRQ)。待收到CPU发出的响应信号HLDA后，DMA控制逻辑便开始负责管理 DMA传送的全过程，包括对主存地址寄存器和字计数器的修改、识别总线地址、指定传送类型(输入或输出)以及通知设备已经被授予一个DMA 周期(DACK)等</li>
-<li><span class="strong">中断机构</span>：当字计数器全0时，表示一批数据交换完毕，由“溢出信号”通过中断机构向CPU提出中断请求,请求 CPU作DMA操作的后处理。必须注意,这里的中断与5.5节介绍的L/O中断的技术相同，但中断的目的不同，前面是为了数据的输人或输出，而这里是为了报告一批数据传送结束。它们是I/0系统中不同的中断事件。</li>
+<li><span class="strong">中断机构</span>：当字计数器全0时，表示一批数据交换完毕，由“溢出信号”通过中断机构向CPU提出中断请求,请求 CPU作DMA操作的后处理。必须注意,这里的中断与5.5节介绍的L/O中断的技术相同，但中断的目的不同，前面是为了数据的输入或输出，而这里是为了报告一批数据传送结束。它们是I/0系统中不同的中断事件。</li>
 <li><span class="strong">设备地址寄存器(DAR)</span>：存放I/O设备的设备码或表示设备信息存储区的寻址信息，如磁盘数据所在的区号盘面号和柱面号</li>
 </ul>
 <h4 id="DMA的工作流程"><a href="#DMA的工作流程" class="headerlink" title="DMA的工作流程"></a>DMA的工作流程</h4><p>DMA的数据传送过程分为预处理、数据传送和后处理3个阶段：</p>
