@@ -46,7 +46,7 @@
             <li><a href="/blog/tags/408">#408</a></li>
             <li>#Security</li>
             <li><a href="/blog/tags/Linux">#Linux</a></li>
-            <li>#Python</li>
+            <li><a href="/blog/tags/Python">#Python</a></li>
             <li><a href="/blog/tags/Servr">#Server</a></li>
             <li><a href="/blog/tags/Web">#Web</a></li>
         </ul>
@@ -136,7 +136,7 @@
         <div class="article">
         <h1 class="title">计算机网络(一)计算机网络概述与应用层</h1>
         <div class="art-info">
-            <div><span><span class="iconfont icon-zishu-jzl"></span>字数：26643</span>
+            <div><span><span class="iconfont icon-zishu-jzl"></span>字数：26834</span>
             <span><span class="iconfont icon-riqi"></span>写于：2020-03-24</span></div>
             <div><span><span class="iconfont icon-zuixinnew3"></span>最新更新：2020-03-24</span>
             <span><span class="iconfont icon-shijian"></span>阅读本文预计花费您77分钟</span></div>
@@ -286,13 +286,15 @@ urn:uuid:6ba7b810-9dad-11d1-80b4-00c04fd430c8
 <h4 id="URL统一资源定位符"><a href="#URL统一资源定位符" class="headerlink" title="URL统一资源定位符"></a>URL统一资源定位符</h4><p><span class="strong">统一资源定位符URL</span>(Uniform Resource Locator)用于在标识资源的位置和访问资源的方式，它不仅标识资源，还说明获取方式和位置，强调“定位”，典型格式为：</p>
 <div class="strong">协议:<span style="color: #04cb04;">&lt;//&gt;</span><span style="color: #3498db;">&lt;用户名:密码@&gt;</span>主机名
 <span style="color: #f48266;">&lt;:端口&gt;</span>
-<span style="color: #fbc531;">&lt;/路径&gt;</span>
-<span style="color: #ce4747;">&lt;?参数1=值&amp;参数2=值&gt;
+<span style="color: #fbc531;">&lt;/路径&gt;&lt;;路径参数&gt;</span>
+<span style="color: #ce4747;">&lt;?查询参数1=值&amp;参数2=值&gt;
 <span style="color: #04cb6d;">&lt;#片段&gt;</span>
 </span></div>
 
+<div class="shell"><code><span class="strong">https:</span><span style="color: #04cb04;">//</span><span style="color: #3498db;">tom:secret123@</span><span class="strong">example.com</span><span style="color: #f48266;">:8080</span><span style="color: #fbc531;">/Path/A/BB;brand=apple;color=black</span><span style="color: #ce4747;">?sort=price&amp;page=2<span style="color: #04cb6d;">#reviews</span></span></code></div>
+
 <ul>
-<li>协议：协议后紧跟<span class="tips">:</span>号，常用协议有：<blockquote>
+<li><span class="snip">协议</span>：协议后紧跟<span class="tips">:</span>号，很多协议还会带有<span class="tips">//</span>，常用协议有：<blockquote>
 <blockquote>
 <ul>
 <li>网络协议：http、https、ws、wss</li>
@@ -304,19 +306,19 @@ urn:uuid:6ba7b810-9dad-11d1-80b4-00c04fd430c8
 <li>本地文件file：file:///C:/Users/name/Documents/file.pdf</li>
 <li>本地数据data：data:[&lt;MIME类型&gt;][;charset=&lt;字符集&gt;][;base64],&lt;编码数据&gt;，如data:image/png;base64,iVBORw0KGgo</li>
 <li>大型本地内存对象blob：blob:http://xxx.com/xxx</li>
-<li>js代码：javascript:alert(‘Hello’)</li>
+<li>js代码：javascript:alert('Hello')</li>
 <li>地理位置geo：定位北京坐标并缩放4倍geo:39.9042,116.4074?z=4</li>
 <li>资源命名符urn</li>
 </ul>
 </blockquote>
 </blockquote>
 </li>
-<li>用户信息：以<span class="tips">username[:password]@</span>标识用户名和密码，但现代 Web很少在URL里明文传密码</li>
-<li>主机名：可以是域名(www.example.com)、IPv4地址(192.168.1.1)、IPv6地址必须用方括号包裹([2001:db8::1])、本地回环地址localhost，部分协议mailto、tel等不需要主机名</li>
-<li>端口：以<span class="tips">:数字</span>形式添加，如果使用协议对应的默认端口，则可以省略</li>
-<li>路径：通过<span class="tips">/</span>分隔标识资源路径，可以为空(表示隐藏的根路径/)</li>
-<li>查询参数：以<span class="tips">?</span>开头，<span class="tips">键=值</span>形式添加，多个参数使用<span class="tips">&amp;</span>分隔</li>
-<li>片段：以<span class="tips">#</span>开头，用于定位页面内某个锚点或元素ID，它不会被发送给服务器，只在客户端使用</li>
+<li><span class="snip">用户信息</span>：以<span class="tips">username[:password]@</span>标识用户名和密码，但现代 Web很少在URL里明文传密码</li>
+<li><span class="snip">主机名</span>：可以是域名(www.example.com)、IPv4地址(192.168.1.1)、IPv6地址必须用方括号包裹([2001:db8::1])、本地回环地址localhost，部分协议mailto、tel等不需要主机名</li>
+<li><span class="snip">端口</span>：以<span class="tips">:数字</span>形式添加，如果使用协议对应的默认端口，则可以省略</li>
+<li><span class="snip">路径</span>：通过<span class="tips">/</span>分隔标识资源路径，可以为空(表示隐藏的根路径/)，路径中可以包含以<span class="tips">;</span>分隔的路径参数，用于进一步限定路径资源，多个参数继续用 ; 分隔，但很多现代Web路径参数为空</li>
+<li><span class="snip">查询参数</span>：以<span class="tips">?</span>开头，<span class="tips">键=值</span>形式添加，多个参数使用<span class="tips">&amp;</span>分隔</li>
+<li><span class="snip">片段</span>：以<span class="tips">#</span>开头，用于定位页面内某个锚点或元素ID，它通常不会被发送给服务器，只在客户端使用</li>
 </ul>
 <h3 id="应用层协议概述"><a href="#应用层协议概述" class="headerlink" title="应用层协议概述"></a>应用层协议概述</h3><p><span class="strong">应用层协议(application-layer protocol)</span>定义了运行在不同端系统上的应用程序进程如何相互传递报文，它们大多数都是以<span class="strong">客户-服务器</span>方式工作，协议主要包括以下内容:</p>
 <ul>
@@ -346,7 +348,7 @@ urn:uuid:6ba7b810-9dad-11d1-80b4-00c04fd430c8
 <h4 id="HTTP的报文结构"><a href="#HTTP的报文结构" class="headerlink" title="HTTP的报文结构"></a>HTTP的报文结构</h4><p>HTTP报文分为<span class="strong">请求报文</span>和<span class="strong">响应报文</span>，报文都由三部分组成：<span class="strong">请求行/状态行</span>、<span class="strong">首部行</span>、<span class="strong">消息体</span>(旧文档称为实体主体entity body，现代文档称为有效载荷主体payload body)：</p>
 <ul>
 <li>请求行/状态行、首部行所有字段都必须使用ASCII字符集(这意味着不允许使用中文)</li>
-<li>每行都由一个回车”CR”和换行”LF”结束</li>
+<li>每行都由一个回车"CR"和换行"LF"结束</li>
 <li>消息体可以是任意二进制数据</li>
 <li>首部行与消息体之间有一个空行</li>
 </ul>
@@ -547,14 +549,14 @@ www.example.com.
 
 <h4 id="DNS服务器"><a href="#DNS服务器" class="headerlink" title="DNS服务器"></a>DNS服务器</h4><p>DNS服务器使用分布式、层次设计，它们分为以下类型：</p>
 <ul>
-<li><span class="strong">根域名服务器</span>：最高层次的域名服务器，负责提供TLD服务器的IP地址。目前世界上有数千台根DNS服务器，这些根服务器是13个不同根服务器的副本(13个根服务器域名为从a-m为前缀的a.rootservers.net…m.rootservers.net)。根域名服务器使用了<span class="strong">任播</span>技术以加快DNS查询，任播IP数据报的终点是一组在不同地点的主机，但它们具有相同的IP地址，IP数据报交付离源点最近的主机。</li>
+<li><span class="strong">根域名服务器</span>：最高层次的域名服务器，负责提供TLD服务器的IP地址。目前世界上有数千台根DNS服务器，这些根服务器是13个不同根服务器的副本(13个根服务器域名为从a-m为前缀的a.rootservers.net...m.rootservers.net)。根域名服务器使用了<span class="strong">任播</span>技术以加快DNS查询，任播IP数据报的终点是一组在不同地点的主机，但它们具有相同的IP地址，IP数据报交付离源点最近的主机。</li>
 <li><span class="strong">顶级域名服务器(TLD)</span>：负责管理在该顶级域名服务器下注册的二级域名。常见的顶级域名有：com(公司)，net(网络服务机构)，org(非营利组织)，edu(教育部门)，gov(政府部门)，以及表示国家的cn(中国)，us(美国)等。顶级域名服务器在国内由中国互联网络信息中心 CNNIC 运营管理。</li>
 <li><span class="strong">权威域名服务器</span>：客户端所查询域名的IP地址最终来源，顶级域名服务器通常不直接提供二级域名的IP地址，而是会告诉本地DNS服务器其权威域名服务器的地址，再由本地DNS服务器向权威域名服务器进行迭代查询，因此权威域名服务器才是所查询域名的IP地址来源。权威域名服务器通常由域名托管服务商(如：GoDaddy、Cloudflare、阿里云)以及大型企业(Google、AWS、腾讯)、大学/银行(可能自己架构，也可能托管于专业的互联网公司)负责维护架构。</li>
 <li><span class="strong">本地域名服务器</span>：又称默认域名服务器，它不属于域名服务器的层次结构，但它是进行DNS查询的主力。在windows中，可以通过设置-网络和Internet-WLAN/以太网-当前网络的属性-Internet协议版本4-属性中，就可以看见当前使用的本地域名服务器。它通常由ISP提供，或者可以使用Google(8.8.8.8)，Cloudflare(1.1.1.1)的公共DNS作为我们的本地域名服务器。</li>
 </ul>
 <h4 id="域名解析的流程"><a href="#域名解析的流程" class="headerlink" title="域名解析的流程"></a>域名解析的流程</h4><ul>
 <li><span class="strong">主机向本地域名服务器的<span class="text-red">递归查询</span></span>：当主机向本地域名服务器进行DNS查询时，如果本地域名服务器不知道所查询域名的IP，它会以DNS客户身份向其他根域名服务器/权威域名服务器发出查询请求，而不是让主机进行下一步查询。因此，本地域名服务器是DNS查询中工作最多的。</li>
-<li><span class="strong">本地域名服务器向其他服务器的<span class="text-red">迭代查询</span></span>：当本地域名服务器向其他(根/权威)域名服务器进行查询时，该服务器要么返回IP地址，要么告诉本地域名服务器：”你下一步应该向哪个服务器进行查询”，再由本地服务器进行后续查询，该过程中，根/权威域名服务器不会替本地域名服务器进行后续查询，因此称为迭代查询。</li>
+<li><span class="strong">本地域名服务器向其他服务器的<span class="text-red">迭代查询</span></span>：当本地域名服务器向其他(根/权威)域名服务器进行查询时，该服务器要么返回IP地址，要么告诉本地域名服务器："你下一步应该向哪个服务器进行查询"，再由本地服务器进行后续查询，该过程中，根/权威域名服务器不会替本地域名服务器进行后续查询，因此称为迭代查询。</li>
 </ul>
 <div class="show">当某人在GoDaddy注册了一个域名example.com并绑定了某个IP地址，电脑第一次访问该域名，dns请求步骤：
 1.检查浏览器缓存，检查是否近期访问过并缓存了该域名的IP
@@ -585,7 +587,7 @@ www.example.com.
 <li>PTR记录：将IP地址解析为域名(反向解析)，如：1.2.0.192.in-addr.arpa. IN PTR example.com.</li>
 <li>SOA记录：起始授权机构记录，每个DNS区域必须有且仅有一条SOA记录，包含区域的管理信息，如：区域的主DNS服务器、管理员邮箱、序列号、刷新间隔等</li>
 <li>SRV记录：即服务定位记录，用于指定特定服务（如 VoIP、游戏服务）的地址与端口，如：_sip._tcp.example.com. IN SRV 10 5 5060 sipserver.example.com.</li>
-<li>CAA记录：即证书颁发机构授权记录，指定哪些CA（证书颁发机构）可以为该域名颁发SSL/TLS证书，如：example.com. IN CAA 0 issue “letsencrypt.org”</li>
+<li>CAA记录：即证书颁发机构授权记录，指定哪些CA（证书颁发机构）可以为该域名颁发SSL/TLS证书，如：example.com. IN CAA 0 issue "letsencrypt.org"</li>
 </ul>
 </blockquote>
 </blockquote>
@@ -672,7 +674,7 @@ flags QR RD RA //标志为，QR表示这是响应报文，RD表示期望服务�
 <li>SMTP客户发送<span class="tips">HELO 发送方主机名</span>命令并附上发送方主机名。SMTP服务器若是能接收邮件，则应答<span class="tips">250</span>如：250 OK，若无法接收则应答<span class="tips">421</span>，如：421 service not available</li>
 <li>SMTP客户发送<span class="tips">MAIL FROM：发件人邮箱地址</span>指明发件人地址，如：MAIL FROM：xxx@Gmail.com。如果SMTP服务器准备好接收，则应答250 OK，否则返回一个应答码并指出原因，如：451(处理出错)，452(存储空间不足)，500(命令无法识别)等</li>
 <li>SMTP客户发送<span class="tips">RCPT TO：收件人邮箱地址</span>(RCPT是recipient收件人的缩写)指定收件人地址，如果要发送给多个收件人，则发送多个RCPT命令，SMTP对每一个RCPT命令，都需要返回一个应答，如：250 OK或550 No such user here，以表示指定的邮箱是否在接收方服务器中</li>
-<li>SMTP客户发送<span class="tips">DATA</span>命令表示即将发送邮件内容，SMTP服务器应答<span class="tips">354</span>，如：354 Enter mail,end width “.” on a line by itself，表示邮件内容应该以独立成行的.结束。如果SMTP服务器无法接收邮件内容，则应答421(服务器不可用)，500(命令无法识别)等</li>
+<li>SMTP客户发送<span class="tips">DATA</span>命令表示即将发送邮件内容，SMTP服务器应答<span class="tips">354</span>，如：354 Enter mail,end width "." on a line by itself，表示邮件内容应该以独立成行的.结束。如果SMTP服务器无法接收邮件内容，则应答421(服务器不可用)，500(命令无法识别)等</li>
 <li>SMTP客户发送邮件内容，并在邮件内容结束后发送<span class="tips">&lt;CRLF&gt;.&lt;CRLF&gt;</span>(即两个回车换行符之间加上.)表示邮件内容结束，SMTP服务器应答<span class="tips">250 OK</span>，或发生错误的应答码</li>
 <li>SMTP发送<span class="tips">QUIT</span>命令表示即将关闭SMTP连接，SMTP服务器应答<span class="tips">221</span>(服务关闭)并随后释放TCP连接</li>
 </ol>
@@ -714,7 +716,7 @@ S：221 smtp.gmail.com closing connection
 <h5 id="内容传送编码"><a href="#内容传送编码" class="headerlink" title="内容传送编码"></a>内容传送编码</h5><p>当邮件内容包含非ASCII字符，为了能通过SMTP通道传输，需要在发送前进行编码，并在接收端解码还原。MIME 规范定义了几种标准的传输编码方式，它们会在首部字段Content-Transfer-Encoding中指定：</p>
 <ul>
 <li>7 bit：表示邮件内容本身就是标准 7-bit ASCII，不需要额外编码</li>
-<li>quoted-printable：主要用于以文本为主，但包含少量非ASCII字符的邮件，=号和非ASCII字节会被编码为<span class="tips">=XX</span>(两个十六进制数)形式，如：”系统”会被编码为=CF=B5=CD=B3</li>
+<li>quoted-printable：主要用于以文本为主，但包含少量非ASCII字符的邮件，=号和非ASCII字节会被编码为<span class="tips">=XX</span>(两个十六进制数)形式，如："系统"会被编码为=CF=B5=CD=B3</li>
 <li>base64：将任意二进制数据编码为由64个安全 ASCII 字符组成的文本形式，常用于附件、图片等二进制内容，但会增加约 33% 的体积。具体方法是将每24bit(3字节)数据拆分为4个6bit的单元(所以每个单元都可以使用64个字符表示A-Za-z0-9+/，=作为填充字符)，不足3字节的部分使用=填充为一个字节，这样所有二进制数据都可以映射为可在文本通道中的传输的字符</li>
 <li>8 bit：仅ESMTP支持，表示内容包含8-bit字节，不进行重新编码</li>
 <li>binary：仅ESMTP支持，表示原始二进制数据未作任何转换，要求传输链路完全支持二进制透明传输</li>
@@ -828,7 +830,7 @@ S：221 smtp.gmail.com closing connection
 <p>每一个洪流都有一个基础设施结点，称为<span class="strong">追踪器</span>，每一个对等方需要周期性地通知追踪器它仍在洪流中。当有一个新的对等方A加入洪流，追踪器会随机选择若干个(如30个)对等方并将它们的IP地址告诉对等方A，A会与它们建立TCP连接，A和所有与它建立了TCP连接的对等方称为<span class="strong">相邻对等方</span>。</p>
 <p>BitTorrent使用<span class="strong">最稀缺优先</span>策略来决定优先传输哪些文件块，即如果A需要的某个文件块，很多相邻对方都有，则排后传输，如果该块只有少数相邻对方有，则优先传输，越稀缺的块，传输优先级越高。</p>
 <p>当A收到多个邻居的请求时，BitTorrent采用一种基于速率评估的对换算法来决定响应哪些下载请求。A会持续监测它从邻居那接收比特的速率，并每10秒重新计算一次。A会从中选出速率最高的4个邻居，称为<span class="strong">疏通</span>(unchoked)对等方，只有它们能从A处获取数据块。</p>
-<p>除上述4个疏通对象外，A每30秒会随机选择一个邻居B并向其发送数据块，如果B以足够高的速率向A回应数据，B有可能进入A的前4名列表，从而与A建立双向对换关系。这种双向对换将持续进行，直到其中一方发现速率更高的对等方为止。除上述5个对等方(4个疏通对象加1个随机试探对等方)外，A的所有其他相邻对等方均处于”阻塞”状态，无法从A处获取任何数据块，该机制能使所有对对方都能以满意的速率进行文件块传输工作。此外，BitTorrent还有残局模型、反怠慢、随机优先选择等机制保障P2P工作。</p>
+<p>除上述4个疏通对象外，A每30秒会随机选择一个邻居B并向其发送数据块，如果B以足够高的速率向A回应数据，B有可能进入A的前4名列表，从而与A建立双向对换关系。这种双向对换将持续进行，直到其中一方发现速率更高的对等方为止。除上述5个对等方(4个疏通对象加1个随机试探对等方)外，A的所有其他相邻对等方均处于"阻塞"状态，无法从A处获取任何数据块，该机制能使所有对对方都能以满意的速率进行文件块传输工作。此外，BitTorrent还有残局模型、反怠慢、随机优先选择等机制保障P2P工作。</p>
 </body></html>
         </div>
     </div>

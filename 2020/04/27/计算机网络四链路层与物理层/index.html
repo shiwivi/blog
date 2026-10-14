@@ -46,7 +46,7 @@
             <li><a href="/blog/tags/408">#408</a></li>
             <li>#Security</li>
             <li><a href="/blog/tags/Linux">#Linux</a></li>
-            <li>#Python</li>
+            <li><a href="/blog/tags/Python">#Python</a></li>
             <li><a href="/blog/tags/Servr">#Server</a></li>
             <li><a href="/blog/tags/Web">#Web</a></li>
         </ul>
@@ -136,7 +136,7 @@
         <div class="article">
         <h1 class="title">计算机网络(四)数据链路层与物理层</h1>
         <div class="art-info">
-            <div><span><span class="iconfont icon-zishu-jzl"></span>字数：27255</span>
+            <div><span><span class="iconfont icon-zishu-jzl"></span>字数：27257</span>
             <span><span class="iconfont icon-riqi"></span>写于：2020-04-27</span></div>
             <div><span><span class="iconfont icon-zuixinnew3"></span>最新更新：2020-04-27</span>
             <span><span class="iconfont icon-shijian"></span>阅读本文预计花费您78分钟</span></div>
@@ -279,7 +279,7 @@ PPP既支持异步链路，也支持同步链路，同步与异步链路区别�
 </li>
 <li>在“网络层协议”状态，PPP链路的两端的网络控制协议NCP会根据网络层协议互相交换网络控制分组，PPP协议两端的网络层可以运行不同的网络层协议，但使用同一个PPP协议进行通信。如果在PPP链路上运行的是IP协议，则两端在配置IP协议模块时，要使用NCP支持的IP控制协议<span class="strong">IPCP</span>(IP Control Protocol)来配置IP协议(如从ISP处协商获取公网IP地址)。IPCP分组也封装在PPP帧(其中的协议字段为0x8021)中并在PPP链路上传送。在低速链路上运行时，双方还可以协商使用压缩的TCP和IP首部，以减少在链路上发送的比特数。</li>
 <li>当网络层配置完毕后，链路就进入可进行数据通信的“链路打开”(LinkOpen)状态。链路的两个PPP 端点可以彼此向对方发送分组。两个PPP 端点还可发送回送请求LCP分组(Echo-Request)和回送回答LCP分组(Echo-Reply)，来检查链路的状态</li>
-<li>数据传输结束后，可以由链路的一端发送终止请求LCP分组(Terminate-Request)来请求终止链路连接，在收到对方发来的终止确认LCP分组(Terminate-Ack)后，转到“链路终止”状态。如果链路出现故障，也会从“链路打开”状态转到“链路终止”状态。当调制解调器的载波停止后，则回到“链路静止”状态。</li>
+<li>数据传输结束后，可以由链路的一端发送终止请求LCP分组(Terminate-Request)来请求终止链路连接，在收到对方发来的终止确认LCP分组(Terminate-Ack)后，转到“链路终止"状态。如果链路出现故障，也会从“链路打开”状态转到“链路终止”状态。当调制解调器的载波停止后，则回到“链路静止”状态。</li>
 </ul>
 <h3 id="链路层的广播信道"><a href="#链路层的广播信道" class="headerlink" title="链路层的广播信道"></a>链路层的广播信道</h3><p>广播信道是链路层另一类十分重要的信道，与点对点信道不同，广播信道支持一对多的通信方式，计算机网络中最为典型、日常使用最广泛的广播信道网络，就是<span class="strong">局域网LAN</span>（Local Area Network），局域网按照网络拓扑分为星形网、环形网、总线网。其中总线网以传统<span class="strong">以太网</span>最为著名，并且随着以太网技术的快速发展，以太网已经在局域网市场中占据了绝对优势，现在以太网几乎成为了局域网的同义词。</p>
 <p>早年的局域网使用<span class="strong">集线器(hub)</span>和<span class="strong">双绞线</span>连接多台主机，集线器是物理层设备，它只做信号复制、整形增强，因此它从任意一个端口接收到的电信号都会被广播到除了信号来源端口以外的其他所有端口，这意味着连接在集线器上的所有主机的网卡，都会收到这个电信号，并将其还原成数据帧。随后，网卡在链路层检查帧头部的目的MAC地址，丢弃不是发给自己的帧。现在主流使用的交换机工作在链路层，不再会广播转发所有收到的帧(ARP等刻意广播的除外)，更主要以单播形式工作。</p>
@@ -330,7 +330,7 @@ PPP既支持异步链路，也支持同步链路，同步与异步链路区别�
 <h5 id="重传与截断二进制指数退避"><a href="#重传与截断二进制指数退避" class="headerlink" title="重传与截断二进制指数退避"></a>重传与截断二进制指数退避</h5><p>当主机确定发生碰撞后，所有主机都会停止发送，随后信道将进入空闲，如果所有主机监听到空闲后又立马开始重新发送，并让会导致再次碰撞，因此以太网使用<span class="strong">截断二进制指数退避</span>(truncated binary exponential backoff)策略来确定碰撞后重传的时机，有的主机可以立马重传，有的主机则需要<span class="tips">退避</span>(推迟)一个间隔：</p>
 <ul>
 <li>协议规定基本退避时间为争用期2τ，具体的争用期时间是51.2μs(该值是为10Mbit/s，最大传输距离2500米的以太网标准计算出来的)。对于10Mbit/s以太网，争用期内可发送512bit，即64字节。因此说争用期是512比特时间(发送512bit所需的时间)，或者直接使用比特作为争用期的单位，即争用期是512bit。</li>
-<li>重传延迟时间计算方式：从整数集合 [0,1,….,(2<sup>k</sup>-1)] (其中 k=min(重传次数,10) )随机取一个数<span class="tips">r</span>，延迟时间为<span class="tips">r*争用期</span></li>
+<li>重传延迟时间计算方式：从整数集合 [0,1,....,(2<sup>k</sup>-1)] (其中 k=min(重传次数,10) )随机取一个数<span class="tips">r</span>，延迟时间为<span class="tips">r*争用期</span></li>
 <li>当重传达16次仍不能成功时(这表明同时打算发送数据的站太多，以致连续发生冲突)，则丢弃该帧，并向上层报告</li>
 <li>推迟的时间随重传次数而增大，因此也称为<span class="strong">动态退避</span><div class="show">+ 在第1次重传时，k=1，随机数r从整数{0，1}中选一个数，因此重传可选择的推迟时间是0或1*争用期(随机选取)，即主机可能立即重传，也可能需要等待2τ</div></li>
 <li>若再发生碰撞，则在第2次重传时，k=2，随机数r就从整数{0,1,2,3}中选一个数。因此重传推迟的时间是在0,2τ,4τ和6τ这4个时间中随机选取的值</li>

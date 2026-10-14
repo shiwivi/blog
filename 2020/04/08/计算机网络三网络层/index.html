@@ -46,7 +46,7 @@
             <li><a href="/blog/tags/408">#408</a></li>
             <li>#Security</li>
             <li><a href="/blog/tags/Linux">#Linux</a></li>
-            <li>#Python</li>
+            <li><a href="/blog/tags/Python">#Python</a></li>
             <li><a href="/blog/tags/Servr">#Server</a></li>
             <li><a href="/blog/tags/Web">#Web</a></li>
         </ul>
@@ -156,7 +156,7 @@
 <li>网络层使用的中间设备称为<span class="strong">路由器</span>，早期的RFC文档则将它们称为网关</li>
 <li>网络层以上使用的中间设备称为<span class="strong">网关</span>，用网关连接两个不兼容的系统时，需要在高层进行协议转换</li>
 </ul>
-<p>当这些异构网络通过路由器互连起来时，如果所有的网络都使用相同的IP协议，这些网络中的主机就好像在一个单个网络上通信一样，不需要管互连的各网络的具体异构细节，即它们形成了一个虚拟互联网络，称为IP网。这里的”虚拟”，是指底层各种物理网络的异构性客观存在，但IP协议将其屏蔽，使得从网络层往上看，这些差异各异的网络仿佛是一个统一的整体。</p>
+<p>当这些异构网络通过路由器互连起来时，如果所有的网络都使用相同的IP协议，这些网络中的主机就好像在一个单个网络上通信一样，不需要管互连的各网络的具体异构细节，即它们形成了一个虚拟互联网络，称为IP网。这里的"虚拟"，是指底层各种物理网络的异构性客观存在，但IP协议将其屏蔽，使得从网络层往上看，这些差异各异的网络仿佛是一个统一的整体。</p>
 <h3 id="IPv4地址"><a href="#IPv4地址" class="headerlink" title="IPv4地址"></a>IPv4地址</h3><p>IP协议将整个的互联网抽象为了一个单一的网络，因此IP地址是用来给互联网上的每一台主机(或路由器)的每一个<span class="strong">接口</span>分配的一个在全世界范围内是唯一的寻址地址，IP地址现在由ICANN组织旗下的IANA小组负责分配。IP地址有以下特点：</p>
 <ul>
 <li>IP地址都由<span class="strong">网络号</span>和<span class="strong">主机号</span>组成</li>
@@ -378,7 +378,7 @@
 
 
 <h4 id="IPv4地址的早期分类"><a href="#IPv4地址的早期分类" class="headerlink" title="IPv4地址的早期分类"></a>IPv4地址的早期分类</h4><p>IP地址的分类概念源于互联网早期发展阶段，随着无类别域间路由技术的普及，这种分类方法已经不再主流使用。</p>
-<p>早期分类方法把IP地址划分为A、B、C、D、E五大类，称为”有类编址”，其中A、B、C类地址都由两个固定长度的字段组成，第一个字段是网络号(net-id)，网络字段的前1-3位为类别位，用于区别ABC的类别；第二个字段是主机号(host-id)，它们都是<span class="strong">单播地址</span>。D类地址用于多播通信，E类地址保留为以后使用。</p>
+<p>早期分类方法把IP地址划分为A、B、C、D、E五大类，称为"有类编址"，其中A、B、C类地址都由两个固定长度的字段组成，第一个字段是网络号(net-id)，网络字段的前1-3位为类别位，用于区别ABC的类别；第二个字段是主机号(host-id)，它们都是<span class="strong">单播地址</span>。D类地址用于多播通信，E类地址保留为以后使用。</p>
 <p><div class="img-wrapper"><div class="load-wrapper"><div class="load-line"></div><div class="load-text">loading</div></div><img src="/blog/images/ComputerNetwork/IP-4-5.png" alt="IP" loading="lazy" decoding="async"></div></p>
 <h5 id="A类地址"><a href="#A类地址" class="headerlink" title="A类地址"></a>A类地址</h5><ul>
 <li>A类地址网络号字段占用1字节(默认子网掩码为255.0.0.0)，最高位固定为0(作为它的类别位)，数值范围从1到126。由于类别位占用了1位，因此可指派的网络号是126个(即2<sup>7</sup>-2)，减2是因为有两个保留地址：<blockquote>
@@ -394,7 +394,7 @@
 <blockquote>
 <ul>
 <li><span class="text-red">全0的主机号</span>用于表示该IP地址所属的网络地址，即用于标识<span class="text-blue">该网络本身</span>(如：若一主机的IP地址为5.6.7.8，则该主机所在的网络地址就是5.0.0.0，IP地址5.0.0.0表示网络号为5的网络本身)</li>
-<li><span class="text-red">全1的主机号</span>用于表示该网络上的<span class="text-blue">广播地址(Broadcast Address)</span>，表示该网络上的”所有主机”，(如：5.255.255.255表示网络5.0.0.0上的所有主机)</li>
+<li><span class="text-red">全1的主机号</span>用于表示该网络上的<span class="text-blue">广播地址(Broadcast Address)</span>，表示该网络上的"所有主机"，(如：5.255.255.255表示网络5.0.0.0上的所有主机)</li>
 </ul>
 </blockquote>
 </blockquote>
@@ -459,7 +459,7 @@
 </tbody></table>
 </div></div>
 
-<h4 id="无分类编址CIDR-构造超网"><a href="#无分类编址CIDR-构造超网" class="headerlink" title="无分类编址CIDR(构造超网)"></a>无分类编址CIDR(构造超网)</h4><p>无分类域间路由选择CIDR(Classless Inter-Domain Routing,发音为“sider”)消除了传统的A类、B类和C类地址以及划分子网的概念，不再限制网络号位数，从而更加高效地分配IPv4地址：</p>
+<h4 id="无分类编址CIDR-构造超网"><a href="#无分类编址CIDR-构造超网" class="headerlink" title="无分类编址CIDR(构造超网)"></a>无分类编址CIDR(构造超网)</h4><p>无分类域间路由选择CIDR(Classless Inter-Domain Routing,发音为“sider")消除了传统的A类、B类和C类地址以及划分子网的概念，不再限制网络号位数，从而更加高效地分配IPv4地址：</p>
 <ul>
 <li>使用<span class="strong">网络前缀</span>(network-prefix)来指明网络，其余部分用来指明主机号，IP地址通过<span class="text-blue">{网络前缀,主机号}</span>两级结构表示</li>
 <li>使用<span class="strong">斜线记法</span>(slash notation，又称为CIDR记法)来表示网络前缀所占的位数，如：128.14.35.7/20</li>
@@ -498,7 +498,7 @@
 <blockquote>
 <ul>
 <li>标志字段中的最低位记为MF(More Fragment)。MF=1 即表示后面“还有分片”的数据报。MF=0表示这已是若干数据报片中的最后一个。</li>
-<li>标志字段中间的一位记为DF(Don’t Fragment)，意思是“不能分片”。只有当DF=0时才允许分片。</li>
+<li>标志字段中间的一位记为DF(Don't Fragment)，意思是“不能分片”。只有当DF=0时才允许分片。</li>
 </ul>
 </blockquote>
 </blockquote>
@@ -712,7 +712,7 @@
 <li>主机A要向主机B发送IP数据报时，先在其ARP高速缓存中查看有无主机B的IP地址。如果有，就把这个硬件地址写入MAC帧，如果没有，主机A就自动运行ARP，然后按后续步骤查询主机B的硬件地址</li>
 <li>ARP进程在本局域网上以<span class="text-red">广播</span>形式发送一个ARP请求分组(目标MAC地址FF:FF:FF:FF:FF:FF)。ARP请求分组的内容类似于:“我的IP地址是209.0.0.5，硬件地址是00-00-C0-15-AD-18。我想知道IP地址为209.0.0.6的主机的硬件地址。”</li>
 <li>在本局域网上的所有主机上运行的ARP进程都将收到此ARP请求分组，如果某个主机的IP地址与ARP请求分组中要查询的IP地址不一致，则丢弃该ARP请求分组</li>
-<li>主机B的IP地址与ARP请求分组中要查询的IP地址一致，就收下这个ARP请求分组，并以<span class="text-red">单播</span>形式向主机A发送ARP响应分组，响应分组的内容类似于:“我的IP地址是209.0.0.6，我的硬件地址是08-00-2B-00-EE-0A.”</li>
+<li>主机B的IP地址与ARP请求分组中要查询的IP地址一致，就收下这个ARP请求分组，并以<span class="text-red">单播</span>形式向主机A发送ARP响应分组，响应分组的内容类似于:“我的IP地址是209.0.0.6，我的硬件地址是08-00-2B-00-EE-0A."</li>
 <li>主机A收到主机B的ARP响应分组后，就在其ARP高速缓存中写入主机B的IP地址到硬件地址的映射。通常而言，主机B收到A的ARP请求分组时，也会把主机A的MAC地址写入主机B自己的ARP高速缓存中</li>
 <li>ARP高速缓存中的地址映射具有<span class="strong">生存时间</span>，超过生存时间的映射会从高速缓存中删除，防止以下情况：主机A的ARP高速缓存里保存有B的硬件地址，但B的网络适配器突然坏了，B立即更换了一块，因此B的硬件地址就改变了，假定A继续使用ARP高速缓存中旧硬件地址，则将无法向B发送数据帧。生存时间保证了能即时更新ARP信息</li>
 </ul>
@@ -790,7 +790,7 @@
 </blockquote>
 </blockquote>
 </li>
-<li><p><span class="strong">需要分片</span>：Type = 3，code=4，当一个数据包的大小超过了路径上某个链路的MTU，但IP头部又设置了”禁止分片”标志时，由器会丢弃该包并发送此ICMP 报文</p>
+<li><p><span class="strong">需要分片</span>：Type = 3，code=4，当一个数据包的大小超过了路径上某个链路的MTU，但IP头部又设置了"禁止分片"标志时，由器会丢弃该包并发送此ICMP 报文</p>
 </li>
 <li><p><span class="strong">源抑制(已废弃)</span>：Type = 4,Code = 0,通知发送方“网络拥塞，请降低速率”，现已被TCP拥塞控制替代</p>
 </li>
@@ -959,7 +959,7 @@ IP地址D和两个路由项(大学和物理系的网络前缀)均匹配，根据
 </ul>
 <h4 id="内部网关协议OSPF"><a href="#内部网关协议OSPF" class="headerlink" title="内部网关协议OSPF"></a>内部网关协议OSPF</h4><p><span class="strong">OSPF</span>(Open Shortest Path First，开放最短路径优先)是互联网中应用最广泛的内部网关协议之一，采用Dijkstra提出的最短路径算法SPF，每台路由器都维护着一张完整的网络拓扑图，并基于此独立计算最优路径，它是为克服RIP的缺点开发出来的，其核心特点如下：</p>
 <ul>
-<li><span class="strong">使用链路状态算法</span>：OSPF使用分布式的链路状态协议(link state protocol)，运行OSPF的路由器不直接交换路由表，而是通过链路状态通告（LSA）向整个网络泛洪自身的接口状态、链路开销、邻居关系等信息，而不是像RIP那样只发送距离向量。每台路由器收集所有LSA后，构建出完全相同的链路状态数据库（LSDB），这张数据库本质上是一张精确到每一条链路的网络拓扑图。随后，路由器以自身为根节点，运行Dijkstra最短路径优先（SPF）算法，计算出到达各目的网络的无环路最优路径。这种”先掌握全局，再独立计算”的机制从根本上避免了路由环路</li>
+<li><span class="strong">使用链路状态算法</span>：OSPF使用分布式的链路状态协议(link state protocol)，运行OSPF的路由器不直接交换路由表，而是通过链路状态通告（LSA）向整个网络泛洪自身的接口状态、链路开销、邻居关系等信息，而不是像RIP那样只发送距离向量。每台路由器收集所有LSA后，构建出完全相同的链路状态数据库（LSDB），这张数据库本质上是一张精确到每一条链路的网络拓扑图。随后，路由器以自身为根节点，运行Dijkstra最短路径优先（SPF）算法，计算出到达各目的网络的无环路最优路径。这种"先掌握全局，再独立计算"的机制从根本上避免了路由环路</li>
 <li><span class="strong">快速收敛与触发更新</span>：OSPF在网络稳定后仅依靠轻量的Hello报文维持邻居关系，当链路状态发生变化时才触发LSA的洪泛更新，而不是像RIP那样采用周期性（每30秒）的全量路由表广播，这种事件驱动的更新方式极大降低了协议自身的带宽开销，同时配合SPF算法的增量计算能力，使得网络故障后的路由重收敛时间远低于距离矢量协议</li>
 <li><span class="strong">层次化区域架构</span>：为了使OSPF能够用于规模很大的网络，OSPF将一个自治系统划分为若干个区域(area)，并用一个32位的区域标识符标识区域。这样洪泛法交换链路状态信息的范围局限于每一个区域而不是整个的自治系统，减少了整个网络上的通信量。在一个区域内部的路由器只知道本区域的完整网络拓扑，而不知道其他区域的网络拓扑的情况。为了使每一个区域能够和本区域以外的区域进行通信，OSPF使用层次结构的区域划分，上层的区域叫做主干区域(backbonerea，标识符规定为0.0.0.0)，主干区域的作用是用来连通其他下层区域。每一个区域至少有一个区域边界路由器(area border router)负责收纳该区域的信息，并与主干区交互。整个自治系统也会有一个自治系统边界路由器负责与其他自治系统交换路由信息</li>
 <li><span class="strong">支持负载均衡</span>：OSPF允许管理员给每条路由指派不同的代价，当到达同一目的地存在多条开销相同的路径时，OSPF可以将流量平均分配到这些链路上，提升链路利用率与冗余性</li>

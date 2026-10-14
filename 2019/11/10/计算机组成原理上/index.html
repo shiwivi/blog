@@ -46,7 +46,7 @@
             <li><a href="/blog/tags/408">#408</a></li>
             <li>#Security</li>
             <li><a href="/blog/tags/Linux">#Linux</a></li>
-            <li>#Python</li>
+            <li><a href="/blog/tags/Python">#Python</a></li>
             <li><a href="/blog/tags/Servr">#Server</a></li>
             <li><a href="/blog/tags/Web">#Web</a></li>
         </ul>
@@ -136,7 +136,7 @@
         <div class="article">
         <h1 class="title">计算机组成原理(上)</h1>
         <div class="art-info">
-            <div><span><span class="iconfont icon-zishu-jzl"></span>字数：45856</span>
+            <div><span><span class="iconfont icon-zishu-jzl"></span>字数：45862</span>
             <span><span class="iconfont icon-riqi"></span>写于：2019-11-10</span></div>
             <div><span><span class="iconfont icon-zuixinnew3"></span>最新更新：2019-11-10</span>
             <span><span class="iconfont icon-shijian"></span>阅读本文预计花费您132分钟</span></div>
@@ -195,7 +195,7 @@
 <li>AGP总线：Intel于1996年推出的显卡专用局部总线，以提升对三维技术的支持，其带宽是传统PCI总线的2倍，已被PCIe取代</li>
 <li>RS-232C总线:由美国电子工业协会EIA推荐的一种串行通信总线标准，它是最经典的古老串行标准，应用于串行二进制交换的数据终端设备(DTE)和数据通信设备(DCE)之间，已逐渐被USB取代</li>
 <li><span class="strong">USB总线</span>：(Universal Serial Bus)通用串行总线是IBM、Intel、Microsoft等公司于1994年11月联合开发的计算机串行接口总线标准，它是一种开放性的不具有版权专利的工业标准，广泛用于键盘、鼠标、数码相机、U盘等设备，支持不关机即插即用，标准USB 2.0使用4芯电缆，2条用于信号连接，2条用于电源/接地，能为外设提供+5V直流电源。在充电领域，快充头默认首先输出5V，然后通过快充协议协商，将电压从最初的5V升到9V、12V、20V等值。USB 3.0在保留4芯电缆的基础上，额外增加了5根高速线用于数据传输。</li>
-<li><span class="strong">PCIe</span>：由Intel、IBM、AMD等公司于2002年发布的一种高速串行、点对点、全双工系统总线，它采用了类似TCP/IP协议的分层结构和数据帧逐层传递的模式，以确保数据的可靠性，总线由一条或多条”通道”组成，每条通道包含两对差分线。可以灵活组合x1、x4、x8、x16等通道数来提供不同的带宽，主要用于显卡、网卡、支持NVMe协议的高速固态硬盘等</li>
+<li><span class="strong">PCIe</span>：由Intel、IBM、AMD等公司于2002年发布的一种高速串行、点对点、全双工系统总线，它采用了类似TCP/IP协议的分层结构和数据帧逐层传递的模式，以确保数据的可靠性，总线由一条或多条"通道"组成，每条通道包含两对差分线。可以灵活组合x1、x4、x8、x16等通道数来提供不同的带宽，主要用于显卡、网卡、支持NVMe协议的高速固态硬盘等</li>
 <li><span class="strong">SATA</span>：由SATA-IO组织(由Intel、APTI、Dell等公司牵头)制定，用串行传输方式，支持热插拔，是当前连接硬盘和光驱等存储设备的主流方案</li>
 <li><span class="strong">HDMI</span>：由HDMI Forum制定(创始公司包括日立、松下、飞利浦、索尼等)，是一种串行、单向传输的音视频通信总线</li>
 <li><span class="strong">DisplayPort</span>：由VESA组织制定，串行、单向传输的音视频通信总线，与HDMI不同的是，它将视频、音频和数据都打包成微小的数据包，通过一条主链路进行传输，提供了更高的带宽</li>
@@ -235,7 +235,7 @@
 <li><span class="text-green">特点</span>：计数器的起始值和计数方式决定了设备优先级：<blockquote>
 <blockquote>
 <ul>
-<li>固定优先级：计数从0开始，此时设备地址0优先级最高，1次之，依次递减。优先级顺序固定为 0, 1, 2…</li>
+<li>固定优先级：计数从0开始，此时设备地址0优先级最高，1次之，依次递减。优先级顺序固定为 0, 1, 2...</li>
 <li>循环/平等优先级：计数从上次的终止点继续，此时所有设备获得总线的机会均等，优先级平等</li>
 <li>可编程优先级：计数器的初始值可由程序设置，因此优先级顺序可以按需灵活改变</li>
 </ul>
@@ -454,7 +454,7 @@ d=3可以同时检错1位,纠错1位
 </tbody></table>
 </div>
 
-<h6 id="检测码的放置位置"><a href="#检测码的放置位置" class="headerlink" title="检测码的放置位置"></a>检测码的放置位置</h6><p>汉明码的数据和检验会混合放置，校验位会被放置在特定位置，来实现给每个数据位建立唯一的错误地址的能力。具体而言，校验位被放在索引为<span class="text-red">2的幂次方</span>的位置，即第1、2、4、8、16…位，如：</p>
+<h6 id="检测码的放置位置"><a href="#检测码的放置位置" class="headerlink" title="检测码的放置位置"></a>检测码的放置位置</h6><p>汉明码的数据和检验会混合放置，校验位会被放置在特定位置，来实现给每个数据位建立唯一的错误地址的能力。具体而言，校验位被放在索引为<span class="text-red">2的幂次方</span>的位置，即第1、2、4、8、16...位，如：</p>
 <div class="table-show">
 
 <table>
@@ -496,7 +496,7 @@ d=3可以同时检错1位,纠错1位
 </tbody></table>
 </div>
 
-<p>校验位放在2的幂位置，这样每个位置都能用唯一的二进制编号表示，如：位置1对于0001，位置2对应0010，位置3对应0011…，由此，每个校验位监督一组特定的、位置编号具有一定规律的数据位：</p>
+<p>校验位放在2的幂位置，这样每个位置都能用唯一的二进制编号表示，如：位置1对于0001，位置2对应0010，位置3对应0011...，由此，每个校验位监督一组特定的、位置编号具有一定规律的数据位：</p>
 <ul>
 <li>P1(它的位置为1:0001)：监督所有位号二进制<span class="strong">最低位为1</span>的位(1,3,5,7,9…)</li>
 <li>P2(它的位置为2:0010)：监督所有位号二进制<span class="strong">第二位为1</span>的位(2,3,6,7,10,11…)</li>

@@ -46,7 +46,7 @@
             <li><a href="/blog/tags/408">#408</a></li>
             <li>#Security</li>
             <li><a href="/blog/tags/Linux">#Linux</a></li>
-            <li>#Python</li>
+            <li><a href="/blog/tags/Python">#Python</a></li>
             <li><a href="/blog/tags/Servr">#Server</a></li>
             <li><a href="/blog/tags/Web">#Web</a></li>
         </ul>
@@ -136,7 +136,7 @@
         <div class="article">
         <h1 class="title">systemd</h1>
         <div class="art-info">
-            <div><span><span class="iconfont icon-zishu-jzl"></span>字数：25174</span>
+            <div><span><span class="iconfont icon-zishu-jzl"></span>字数：25180</span>
             <span><span class="iconfont icon-riqi"></span>写于：2025-07-21</span></div>
             <div><span><span class="iconfont icon-zuixinnew3"></span>最新更新：2025-07-21</span>
             <span><span class="iconfont icon-shijian"></span>阅读本文预计花费您72分钟</span></div>
@@ -221,13 +221,13 @@ systemd官网：<a target="_blank" rel="noopener" href="https://systemd.io/">htt
 </div>
 
 <ul>
-<li><p><span class="strong">Description=</span><br>指定对该单元的简短描述，根据官方文档，这里的属性虽然是Description，但所指定的字符串应该是对该单元功能或身份的简洁”标识”或”标签”，方便用户快速识别，而不是详细描述它，如果需要详细描述，应该写在Documentation字段指向的外部文档中。Description所指定的字符串，systemcted会在状态消息中(如执行 systemctl status时)显示该字符串(因此应该开头大写)，如：Description=Nginx Web Server，systemd将在启动nginx时显示Starting Nginx Web Server</p>
+<li><p><span class="strong">Description=</span><br>指定对该单元的简短描述，根据官方文档，这里的属性虽然是Description，但所指定的字符串应该是对该单元功能或身份的简洁"标识"或"标签"，方便用户快速识别，而不是详细描述它，如果需要详细描述，应该写在Documentation字段指向的外部文档中。Description所指定的字符串，systemcted会在状态消息中(如执行 systemctl status时)显示该字符串(因此应该开头大写)，如：Description=Nginx Web Server，systemd将在启动nginx时显示Starting Nginx Web Server</p>
 </li>
-<li><p><span class="strong">Documentation=</span><br>该单元以及其配置文件的相关文档，可以指定多个URI(可以是URL或URN)，使用空格进行分隔。这里的URI仅支持”http://“、”https://“、”file：”、”info：”、”man：” 类型的 URI，如：man:command(6)</p>
+<li><p><span class="strong">Documentation=</span><br>该单元以及其配置文件的相关文档，可以指定多个URI(可以是URL或URN)，使用空格进行分隔。这里的URI仅支持"http://"、"https://"、"file："、"info："、"man：" 类型的 URI，如：man:command(6)</p>
 </li>
 <li><p><span class="strong">Wants=</span><br>指定该单元的弱依赖单元，即使依赖单元启动失败，该单元仍会继续运行。此选项可以多次指定，也可以在一个选项中指定多个空格分隔的单位。注意，该选项配置的依赖关系不会影响服务的启动顺序，通常情况下，依赖单元和当前单元会同时启动。向单元文件附带的 .wants/ 目录添加单元的符号链接等同于在该配置项中添加单元。</p>
 </li>
-<li><p><span class="strong">Requires=</span><br>指定该单元的强依赖单元，该单位启动时，也将启动该选项配置的这些单元。如果依赖单元启动失败、中途被”显式”停止或重启，该单元也将相应地启动失败、停止、重启。但这并不意味着当此单元运行时，另一个单元必须始终处于活动状态，如：单元启动成功后，某些依赖单元完成使命正常退出，这将不会影响到当前的单元。向单元文件附带的 .requires/ 目录添加单元的符号链接等同于在该配置项中添加单元。</p>
+<li><p><span class="strong">Requires=</span><br>指定该单元的强依赖单元，该单位启动时，也将启动该选项配置的这些单元。如果依赖单元启动失败、中途被"显式"停止或重启，该单元也将相应地启动失败、停止、重启。但这并不意味着当此单元运行时，另一个单元必须始终处于活动状态，如：单元启动成功后，某些依赖单元完成使命正常退出，这将不会影响到当前的单元。向单元文件附带的 .requires/ 目录添加单元的符号链接等同于在该配置项中添加单元。</p>
 </li>
 <li><p><span class="strong">Requisite=</span><br>类似于requires，但是，该选项配置的是当前单元运行的必要前提条件，即当前单元运行前，这些单元必须已经运行，如果该选项指定的单元未启动，systemd将不再尝试启动当前单元，而将直接判定启动失败。因此，该设置通常与 After= 结合使用，以确保当前单元不会在Requisite配置的单元之前启动</p>
 </li>
@@ -290,8 +290,8 @@ systemd官网：<a target="_blank" rel="noopener" href="https://systemd.io/">htt
 <blockquote>
 <ul>
 <li><span class="strong">forking</span>：服务会通过父进程创建子进程(fork)的方式运行，并且父进程会退出，子进程作为服务的主进程。这是传统UNIX守护进程设计模式的一种方式，当一个进程启动时，通常会绑定到启动它的终端tty，如果终端关闭，进程可能会受到 SIGHUP 信号的影响而退出，因此传统的守护进程(daemon)设计时，会先启动一个父进程，然后通过fork()创建子进程，然后父进程退出，子进程作为主进程继续运行。此时子进程可以在一个相对干净的环境中运行，且脱离了终端控制，成为孤儿进程并交由systemd接管。当Type=forking时，systemd会在父进程退出时，视为服务启动完成，由于这是传统UNIX的设计，因此对于现代项目，文档不建议使用此类型，而是建议改用 notify、notify-reload 或 dbus。如果一定要用该类型，建议同时PIDFile= 选项一起使用，以便 systemd 能够可靠地识别服务的主进程</li>
-<li><span class="strong">notify</span>：notify的行为类似于exec，不同之处在于服务在完成启动时会通过 sd_notify()或其他兼容的库的类似调用向systemd 发送”READY=1”消息，来告诉systemd当前服务已经启动完成。systemd会等待通知消息后再认为服务已启动。适用于需要执行一些初始化工作后，明确通知启动完成的服务</li>
-<li><span class="strong">oneshot</span>：类似于simple，但oneshot表示该服务是一次性的短期任务，systemd会在该服务成功执行并退出后才视为服务启动完毕，然后开始执行后续任务。该类型适合用来配置哪些需要前期迅速执行完毕，为后续任务铺设环境的一次性任务，如初始化脚本、配置加载、清理上次登录的临时文件等任务。该选项通常需要配合 RemainAfterExit=true 配置项，来让systemd在返回其状态时返回值为”active”，否则，由于该服务会在执行完毕后退出，会导致其状态会直接从”activating”跳到”dead”或”deactivating”。当Type=和ExecStart=配置均未指定时，systemd将默认指定Type=oneshot</li>
+<li><span class="strong">notify</span>：notify的行为类似于exec，不同之处在于服务在完成启动时会通过 sd_notify()或其他兼容的库的类似调用向systemd 发送"READY=1"消息，来告诉systemd当前服务已经启动完成。systemd会等待通知消息后再认为服务已启动。适用于需要执行一些初始化工作后，明确通知启动完成的服务</li>
+<li><span class="strong">oneshot</span>：类似于simple，但oneshot表示该服务是一次性的短期任务，systemd会在该服务成功执行并退出后才视为服务启动完毕，然后开始执行后续任务。该类型适合用来配置哪些需要前期迅速执行完毕，为后续任务铺设环境的一次性任务，如初始化脚本、配置加载、清理上次登录的临时文件等任务。该选项通常需要配合 RemainAfterExit=true 配置项，来让systemd在返回其状态时返回值为"active"，否则，由于该服务会在执行完毕后退出，会导致其状态会直接从"activating"跳到"dead"或"deactivating"。当Type=和ExecStart=配置均未指定时，systemd将默认指定Type=oneshot</li>
 <li><span class="strong">dbus</span>：dbus的行为类似于simple，但这种类型的单元必须指定 BusName= 配置，相反，如果指定了BusName=的值而未指定Type，则默认为Type=dbus。服务通过D-Bus总线注册完成后，systemd才会认为它已启动，该类型适用于基于D-Bus的服务</li>
 <li><span class="strong">idle</span>：类似于simple，但服务的启动会延迟到所有其他任务完成后再运行，避免服务启动时，shell的输出混乱。该值仅用于避免控制台输出混乱，不用作通用的unit启动排序工具，因此服务启动延迟时间限制为5s，超时后无论如何都会启动服务。可用于非关键任务，让它们系统启动完成后再启动</li>
 </ul>
@@ -308,7 +308,7 @@ systemd官网：<a target="_blank" rel="noopener" href="https://systemd.io/">htt
 </blockquote>
 </blockquote>
 </li>
-<li><p><span class="strong">ExecStart=</span><br>启动服务时执行的命令，如果服务类型Type是oneshot，可以指定多个命令，否则<span class="text-red">只能指定一个命令！</span>通过该命令启动的进程将被视为守护进程的主进程(Type=forking的服务除外，因为此时子进程才是主进程)。当Type=oneshot时，可以指定多个要执行的命令，空格分隔，systemd会依次执行它们，如果其中一个命令失败，则该单元会被视为启动失败。可以在命令前添加”-“，则此时即便该命令执行失败，systemd也会继续执行后续命令，且不会视为单元启动失败。</p>
+<li><p><span class="strong">ExecStart=</span><br>启动服务时执行的命令，如果服务类型Type是oneshot，可以指定多个命令，否则<span class="text-red">只能指定一个命令！</span>通过该命令启动的进程将被视为守护进程的主进程(Type=forking的服务除外，因为此时子进程才是主进程)。当Type=oneshot时，可以指定多个要执行的命令，空格分隔，systemd会依次执行它们，如果其中一个命令失败，则该单元会被视为启动失败。可以在命令前添加"-"，则此时即便该命令执行失败，systemd也会继续执行后续命令，且不会视为单元启动失败。</p>
 </li>
 <li><p><span class="strong">RemainAfterExit=</span><br>一个boolean值，该值指定是否应将服务视为活动状态，即使其所有进程都已退出，默认为 no，通常Type=oneshot会用到该配置项</p>
 </li>
@@ -316,9 +316,9 @@ systemd官网：<a target="_blank" rel="noopener" href="https://systemd.io/">htt
 </li>
 <li><p><span class="strong">BusName=</span><br>指定服务应使用的D-Bus目标名称，该配置项是Type=dbus时的必须配置</p>
 </li>
-<li><p><span class="strong">ExecStartPre=</span><br>在 ExecStart= 所指定的命令执行前执行的其他命令。语法与 ExecStart= 相同，但允许指定多个命令，命令会依次执行。这些命令中任何一个命令(不以”-“前缀)执行失败，都将不再执行后续命令，并视为该单元启动失败。ExecStart所指定的命令只会在ExecStartPre所指定的所有命令(不以”-“前缀)成功退出后才开始执行</p>
+<li><p><span class="strong">ExecStartPre=</span><br>在 ExecStart= 所指定的命令执行前执行的其他命令。语法与 ExecStart= 相同，但允许指定多个命令，命令会依次执行。这些命令中任何一个命令(不以"-"前缀)执行失败，都将不再执行后续命令，并视为该单元启动失败。ExecStart所指定的命令只会在ExecStartPre所指定的所有命令(不以"-"前缀)成功退出后才开始执行</p>
 </li>
-<li><p><span class="strong">ExecStartPost=</span><br>在 ExecStart= 所指定的命令执行后执行的其他命令。语法与 ExecStart= 相同，但允许指定多个命令，命令会依次执行。这些命令中任何一个命令(不以”-“前缀)执行失败，都将不再执行后续命令，并视为该单元启动失败。ExecStartPost所指定的命令只会在ExecStart所指定命令成功启动后执行，具体执行时间取决于systemd何时收到服务启动通知，具体参考Type配置项各类型的服务何时视为启动成功</p>
+<li><p><span class="strong">ExecStartPost=</span><br>在 ExecStart= 所指定的命令执行后执行的其他命令。语法与 ExecStart= 相同，但允许指定多个命令，命令会依次执行。这些命令中任何一个命令(不以"-"前缀)执行失败，都将不再执行后续命令，并视为该单元启动失败。ExecStartPost所指定的命令只会在ExecStart所指定命令成功启动后执行，具体执行时间取决于systemd何时收到服务启动通知，具体参考Type配置项各类型的服务何时视为启动成功</p>
 </li>
 <li><p><span class="strong">ExecReload=</span><br>服务的配置被重新加载时需要执行的命令，可以指定多个命令，遵循与ExecStart=相同的配置方案</p>
 </li>
@@ -640,7 +640,7 @@ https://www.freedesktop.org/software/systemd/man/latest/systemctl.html#System%20
            ├─6205 nginx: worker process
            └─8473 nginx: master process /usr/local/nginx/sbin/nginx -c /usr/local/nginx/conf/nginx.conf
 
-<p>Nov 18 10:15:42 server-name nginx[1234]: 2021/11/18 10:15:42 [error] 2345#0: *1 open() …<br>Nov 18 10:15:53 server-name nginx[1234]: 2021/11/18 10:15:42 [error] 2345#0: *1 open() …</p>
+<p>Nov 18 10:15:42 server-name nginx[1234]: 2021/11/18 10:15:42 [error] 2345#0: *1 open() ...<br>Nov 18 10:15:53 server-name nginx[1234]: 2021/11/18 10:15:42 [error] 2345#0: *1 open() ...</p>
 </div>
 
 <div class="show">以nginx为例，systemctl status nginx命令返回值主要包括以下部分：
@@ -680,7 +680,7 @@ since之后表示服务启动时间，以及服务已经运行时间
 </li>
 <li><p><span class="strong">systemctl is-failed</span> 单元名<br>检查指定的单元中，是否有处于失败(failed)状态的单元。如果存在至少一个处于失败(failed)状态的单元，返回状态0，否则返回非零值。命令还会在标准输出打印单元状态，使用-‌-quiet选项可以禁止该输出</p>
 </li>
-<li><p><span class="strong">systemctl show</span> [单元名或JOB]<br>以”属性=值”的形式显示指定单元或任务的所有属性。单元用其名称表示，而任务则用其id表示。如果没有指定任何单元或任务，那么显示管理器(systemd)自身的属性。默认不显示属性值为空的属性，使用-‌-all选项可以显示所有属性。可以使用-‌-property选项可以仅显示特定的属性</p>
+<li><p><span class="strong">systemctl show</span> [单元名或JOB]<br>以"属性=值"的形式显示指定单元或任务的所有属性。单元用其名称表示，而任务则用其id表示。如果没有指定任何单元或任务，那么显示管理器(systemd)自身的属性。默认不显示属性值为空的属性，使用-‌-all选项可以显示所有属性。可以使用-‌-property选项可以仅显示特定的属性</p>
 </li>
 <li><p><span class="strong">systemctl cat</span> 单元名<br>显示指定单元的单元文件内容，首行会显示该单元文件的绝对路径</p>
 </li>
@@ -704,8 +704,8 @@ since之后表示服务启动时间，以及服务已经运行时间
 <li>字段=值：过滤出指定的字段，如：_PID=1234(查看该PID服务的日志)，_UID=1111(查看该用户的日志)</li>
 <li>-n 值：显示指定数量的日志条目</li>
 <li>-u 服务名：查看指定服务的日志</li>
-<li>-‌-since 日期：查看指定日期之后的日志，规范的指定日期形式为”yyyy-MM-dd HH:mm:ss”</li>
-<li>-‌-untile 日期：查看指定日期之前的日志，规范的指定日期形式为”yyyy-MM-dd HH:mm:ss”</li>
+<li>-‌-since 日期：查看指定日期之后的日志，规范的指定日期形式为"yyyy-MM-dd HH:mm:ss"</li>
+<li>-‌-untile 日期：查看指定日期之前的日志，规范的指定日期形式为"yyyy-MM-dd HH:mm:ss"</li>
 <li>-f 实时查看日志，类似于tail -f命令</li>
 <li>-p 日志等级：查看指定等级以上的日志，可取值有emerg, alert, crit, err, warning, notice, info, debug，也可以使用0-7的值依次代替这些等级</li>
 <li>-o 输出格式：指定日志的输出格式，常用的输出格式有<blockquote>
@@ -794,7 +794,7 @@ since之后表示服务启动时间，以及服务已经运行时间
 </blockquote>
 </blockquote>
 </li>
-<li><p><span class="strong">RateLimitIntervalSec=,RateLimitBurst=</span><br>用于限制日志的写入速率，防止占用太多系统资源，默认值为30s内最多允许写入1000条日志，多余的日志会被丢弃。RateLimitIntervalSec用于指定限制时间，默认值为30，可以使用s、min、h、ms、us单位；RateLimitBurst用于指定上述时间内的限制写入条数，默认值为1000，二者需要搭配使用。当达到限制速率时，systemd-journald 会生成类似日志信息：”Rate limit reached for messages, suppressing X messages from Y services”，X表示被丢弃的日志数量，Y表示服务来源。将值设置为0表示不进行任何限制</p>
+<li><p><span class="strong">RateLimitIntervalSec=,RateLimitBurst=</span><br>用于限制日志的写入速率，防止占用太多系统资源，默认值为30s内最多允许写入1000条日志，多余的日志会被丢弃。RateLimitIntervalSec用于指定限制时间，默认值为30，可以使用s、min、h、ms、us单位；RateLimitBurst用于指定上述时间内的限制写入条数，默认值为1000，二者需要搭配使用。当达到限制速率时，systemd-journald 会生成类似日志信息："Rate limit reached for messages, suppressing X messages from Y services"，X表示被丢弃的日志数量，Y表示服务来源。将值设置为0表示不进行任何限制</p>
 </li>
 </ul>
 <ul>
@@ -834,7 +834,7 @@ since之后表示服务启动时间，以及服务已经运行时间
 </li>
 <li><p><span class="strong">Audit=</span><br>控制 journald 是否从内核审计子系统(Audit Framework)读取审计日志，审计日志记录系统的安全相关事件(如用户登录、权限更改等)，通常由内核的审计功能生成，默认为yes</p>
 </li>
-<li><p><span class="strong">LineMax=</span><br>指定journald从stdout/stderr读取流数据，并将其转换为记录日志时允许的最大行长度，默认为48k，超出部分会被journald截断并添加…后缀，表示此行已被截断。可以使用K、M、G、T为单位，最小可设置的值为79(bytes)，小于该值的设置会被提升到79bytes</p>
+<li><p><span class="strong">LineMax=</span><br>指定journald从stdout/stderr读取流数据，并将其转换为记录日志时允许的最大行长度，默认为48k，超出部分会被journald截断并添加...后缀，表示此行已被截断。可以使用K、M、G、T为单位，最小可设置的值为79(bytes)，小于该值的设置会被提升到79bytes</p>
 </li>
 </ul>
 </body></html>

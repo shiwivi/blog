@@ -46,7 +46,7 @@
             <li><a href="/blog/tags/408">#408</a></li>
             <li>#Security</li>
             <li><a href="/blog/tags/Linux">#Linux</a></li>
-            <li>#Python</li>
+            <li><a href="/blog/tags/Python">#Python</a></li>
             <li><a href="/blog/tags/Servr">#Server</a></li>
             <li><a href="/blog/tags/Web">#Web</a></li>
         </ul>
@@ -136,7 +136,7 @@
         <div class="article">
         <h1 class="title">SVG矢量图</h1>
         <div class="art-info">
-            <div><span><span class="iconfont icon-zishu-jzl"></span>字数：11703</span>
+            <div><span><span class="iconfont icon-zishu-jzl"></span>字数：11705</span>
             <span><span class="iconfont icon-riqi"></span>写于：2023-05-19</span></div>
             <div><span><span class="iconfont icon-zuixinnew3"></span>最新更新：2023-05-19</span>
             <span><span class="iconfont icon-shijian"></span>阅读本文预计花费您34分钟</span></div>
@@ -170,7 +170,7 @@
 </li>
 <li>width和height属性用于指定画布大小，单位会自行解析为px而无需指定，默认大小为300px*150px</li>
 <li>viewBox属性用于指定显示区域，上述参数解析为仅显示从(0,0)坐标开始，长宽均为100px的矩形区域内的图形</li>
-<li>xmlns属性用于声明命名空间，这里的URL只做该命名空间的字符串名称，并不是要”链接”到某个地址。命名空间用于多个文档声明了相同的标签时，帮助XML内容的使用者区别该标签属于哪一个命名空间</li>
+<li>xmlns属性用于声明命名空间，这里的URL只做该命名空间的字符串名称，并不是要"链接"到某个地址。命名空间用于多个文档声明了相同的标签时，帮助XML内容的使用者区别该标签属于哪一个命名空间</li>
 <li>拥有命名空间后意味着该&lt;svg&gt; 标签和它的子节点都属于该命名空间</li>
 </ul>
 <h5 id="svg写入xml文件"><a href="#svg写入xml文件" class="headerlink" title="svg写入xml文件"></a>svg写入xml文件</h5><div class="show">&lt;?xml version="1.0" ?&gt;
@@ -265,7 +265,7 @@ points="0,0 10,10 20,0 30,10"
 <h4 id="命令参数"><a href="#命令参数" class="headerlink" title="命令参数"></a>命令参数</h4><div class="show">&lt;path d="M250 150 L150 350 L350 350 Z" /&gt;</div>
 
 <ul>
-<li>d属性通过”命令+坐标参数”的组合来描述路径</li>
+<li>d属性通过"命令+坐标参数"的组合来描述路径</li>
 <li>命令为<span class="tips">大写字母</span>时表示<span class="strong">绝对定位</span>，即相对于svg左上角坐标原点的坐标，命令为<span class="tips">小写字母</span>时表示<span class="strong">相对定位</span>，即相对于上一个命令终点的相对位移</li>
 </ul>
 <p> 命令包括以下：</p>
@@ -309,14 +309,14 @@ points="0,0 10,10 20,0 30,10"
 </ul>
 <h3 id="颜色与样式"><a href="#颜色与样式" class="headerlink" title="颜色与样式"></a>颜色与样式</h3><h4 id="描边"><a href="#描边" class="headerlink" title="描边"></a>描边</h4><p>默认情况下，创建路径后不会进行描边，需要使用<span class="stroke">stroke</span>属性指定描边颜色</p>
 <ul>
-<li><span class="strong">stroke=”颜色” 指定描边颜色，取值同CSS</span></li>
-<li><span class="strong">stroke-opacity=”值” 单独指定不透明度</span></li>
-<li><span class="strong">stroke-width=”值” 指定描边线宽度</span></li>
+<li><span class="strong">stroke="颜色" 指定描边颜色，取值同CSS</span></li>
+<li><span class="strong">stroke-opacity="值" 单独指定不透明度</span></li>
+<li><span class="strong">stroke-width="值" 指定描边线宽度</span></li>
 </ul>
 <h4 id="描边终点与折点样式"><a href="#描边终点与折点样式" class="headerlink" title="描边终点与折点样式"></a>描边终点与折点样式</h4><ul>
-<li><span class="strong">stroke-linecap=”butt/round/square”  描边终点为正常(平头截断)/圆形线帽/矩形线帽</span></li>
-<li><span class="strong">stroke-linejoin=”miter/round/bevel” 描边折点为尖角/圆角/切角</span></li>
-<li><span class="strong">stroke-miterlimit=”值” 设置折点斜切面的限制长度</span></li>
+<li><span class="strong">stroke-linecap="butt/round/square"  描边终点为正常(平头截断)/圆形线帽/矩形线帽</span></li>
+<li><span class="strong">stroke-linejoin="miter/round/bevel" 描边折点为尖角/圆角/切角</span></li>
+<li><span class="strong">stroke-miterlimit="值" 设置折点斜切面的限制长度</span></li>
 </ul>
 <div class="broadcast color-blue">
 <div class="iconfont icon-yinhao"></div>
@@ -324,12 +324,12 @@ points="0,0 10,10 20,0 30,10"
 
 <h4 id="填充"><a href="#填充" class="headerlink" title="填充"></a>填充</h4><p>默认情况下，闭合图形或路径的填充色为黑色，可以通过<span class="tips">fill</span>属性修改</p>
 <ul>
-<li><span class="strong">fill=”颜色” 指定填充颜色，取值同CSS</span></li>
-<li><span class="strong">fill-opacity=”值” 单独指定填充不透明度</span></li>
+<li><span class="strong">fill="颜色" 指定填充颜色，取值同CSS</span></li>
+<li><span class="strong">fill-opacity="值" 单独指定填充不透明度</span></li>
 </ul>
 <h4 id="虚线"><a href="#虚线" class="headerlink" title="虚线"></a>虚线</h4><ul>
-<li><span class="strong">stroke-dasharray=”值,值…” 设置虚线线段和间隙的长度</span></li>
-<li><span class="strong">stroke-dashoffset=”值” 设置虚线偏移值</span></li>
+<li><span class="strong">stroke-dasharray="值,值..." 设置虚线线段和间隙的长度</span></li>
+<li><span class="strong">stroke-dashoffset="值" 设置虚线偏移值</span></li>
 </ul>
 <h4 id="使用CSS定义样式"><a href="#使用CSS定义样式" class="headerlink" title="使用CSS定义样式"></a>使用CSS定义样式</h4><p>svg的属性除了能在标签属性中定义外，也能在CSS中直接声明，但仅适用于部分属性</p>
 <ul>
@@ -339,13 +339,13 @@ points="0,0 10,10 20,0 30,10"
 <h3 id="特殊标签"><a href="#特殊标签" class="headerlink" title="特殊标签"></a>特殊标签</h3><h4 id="defs标签"><a href="#defs标签" class="headerlink" title="defs标签"></a>defs标签</h4><p>defs标签用于定义需要重复使用的图形元素，该标签中定义的图形元素不会直接呈现，只供后续调用</p>
 <h4 id="g标签"><a href="#g标签" class="headerlink" title="g标签"></a>g标签</h4><p>容器标签，用于包含一组标签，然后将该组标签的共同样式属性添加到g标签上，这样该属性值会对所有子标签继承。注意：g标签不支持使用x,y属性来进行定位，需要修改位置时，可以使用transform属性或CSS修改</p>
 <h3 id="渐变"><a href="#渐变" class="headerlink" title="渐变"></a>渐变</h3><h4 id="线性渐变"><a href="#线性渐变" class="headerlink" title="线性渐变"></a>线性渐变</h4><p>在<span class="tips">&lt;defs&gt;</span>标签内创建一个<span class="tips">&lt;linearGradient&gt;</span>标签，在该标签内定义线性渐变，并通过<span class="tips">&lt;stop/&gt;</span>标签的属性定义颜色、渐变位置、不透明度，然后在需要调用的图形中，用<span class="tips">fill</span>属性或<span class="tips">stroke</span>属性调用<span class="tips">url</span>引用<span class="tips">&lt;linearGradient&gt;</span>标签的<span class="tips">ID</span>值(调用类名无效)</p>
-<p><span class="strong">&lt;linearGradient x1=”0” x2=”1” y1=”0” y2=”0”&gt;&lt;/linearGradient&gt;</span></p>
+<p><span class="strong">&lt;linearGradient x1="0" x2="1" y1="0" y2="0"&gt;&lt;/linearGradient&gt;</span></p>
 <ul>
 <li>x1,x2,y1,y2通过确定两个点来定义渐变路径走向，一般取值0-1间的小数，取大于1的值将导致渐变超出图形范围(溢出的渐变部分不可见)</li>
-<li>默认从左往右，即x1=”0” x2=”1” y1=”0” y2=”0”</li>
-<li>x1=”0” x2=”0” y1=”0” y2=”1”即调整为从上到下</li>
+<li>默认从左往右，即x1="0" x2="1" y1="0" y2="0"</li>
+<li>x1="0" x2="0" y1="0" y2="1"即调整为从上到下</li>
 </ul>
-<p><span class="strong">&lt;stop offset=”50%” stop-color=”#00f” /&gt;</span></p>
+<p><span class="strong">&lt;stop offset="50%" stop-color="#00f" /&gt;</span></p>
 <ul>
 <li>offset属性定义颜色渐变(偏移)位置，可以取0%-100%，也可以取0-1间的小数</li>
 <li>stop-color定义颜色，取值同CSS</li>
@@ -361,7 +361,7 @@ points="0,0 10,10 20,0 30,10"
 &lt;rect x="0" y="0" rx="10" ry="10" width="300" height="300" fill="url(#G1)"/&gt;</div>
 
 <h4 id="径向渐变"><a href="#径向渐变" class="headerlink" title="径向渐变"></a>径向渐变</h4><p>与线性渐变类似，径向渐变需要在<span class="tips">&lt;defs&gt;</span>标签内创建一个<span class="tips">&lt;radialGradient&gt;</span>标签，然后通过<span class="tips">&lt;stop/&gt;</span>标签的属性定义颜色、渐变位置、不透明度</p>
-<p><span class="strong">&lt;radialGradient cx=”.5” cy=”.5” r=”.5” fx=”.2” fy=”.2”&gt;&lt;radialGradient&gt;</span></p>
+<p><span class="strong">&lt;radialGradient cx=".5" cy=".5" r=".5" fx=".2" fy=".2"&gt;&lt;radialGradient&gt;</span></p>
 <ul>
 <li>cx,cy定义渐变结束所围绕的圆环，取值0-1</li>
 <li>r定义渐变圆在当前图形中的占用半径，一般取值0-1，大于1将导致渐变溢出图形</li>
@@ -435,7 +435,7 @@ points="0,0 10,10 20,0 30,10"
         <rect x="220" y="0" width="100" height="130" fill="url(#g4)"></rect>
 </svg>
 
-<h3 id="Pattern"><a href="#Pattern" class="headerlink" title="Pattern"></a>Pattern</h3><p>与canvas相同，svg也有一个模板对象，常用于定义需要重复填充的背景图等。与渐变一样，&lt;pattern&gt; 也需要定义在的 &lt;defs&gt; 内部，然后使用其他图形引用Patterns的ID<br><span class="strong">&lt;pattern x=”0” y=”0” width=”.25” height=”.25”&gt;&lt;/pattern&gt;</span></p>
+<h3 id="Pattern"><a href="#Pattern" class="headerlink" title="Pattern"></a>Pattern</h3><p>与canvas相同，svg也有一个模板对象，常用于定义需要重复填充的背景图等。与渐变一样，&lt;pattern&gt; 也需要定义在的 &lt;defs&gt; 内部，然后使用其他图形引用Patterns的ID<br><span class="strong">&lt;pattern x="0" y="0" width=".25" height=".25"&gt;&lt;/pattern&gt;</span></p>
 <ul>
 <li>x,y定义Pattern图形的开始位置</li>
 <li>width,height决定该Pattern图形会在x轴和y轴上重复几次，0.25意味着将在横轴和纵轴方向上均重复4次</li>
@@ -452,7 +452,7 @@ points="0,0 10,10 20,0 30,10"
 </div>
 
 <p><svg width="200" height="200" xmlns="pattern" style="display:block;margin:0 auto;"><defs><pattern id="pattern" x="0" y="0" width=".25" height=".25"><rect x="0" y="0" width="50" height="50" fill="skyblue" stroke="#000"></rect><circle cx="25" cy="25" r="20" fill="yellow" fill-opacity="0.5"></circle></pattern></defs><rect fill="url(#pattern)" x="0" y="0" width="200" height="200"></rect></svg><br></p>
-<h3 id="文本"><a href="#文本" class="headerlink" title="文本"></a>文本</h3><h4 id="text标签"><a href="#text标签" class="headerlink" title="text标签"></a>text标签</h4><p><span class="strong">&lt;text x=”0” y=”0”&gt;&lt;/text&gt;</span></p>
+<h3 id="文本"><a href="#文本" class="headerlink" title="文本"></a>文本</h3><h4 id="text标签"><a href="#text标签" class="headerlink" title="text标签"></a>text标签</h4><p><span class="strong">&lt;text x="0" y="0"&gt;&lt;/text&gt;</span></p>
 <ul>
 <li>x,y定义文字左下角在SVG中的开始位置(y值)</li>
 <li>通过fill属性和stroke属性指定文字填充/描边颜色</li>
@@ -498,10 +498,10 @@ points="0,0 10,10 20,0 30,10"
 
 <p><svg width="300" height="150" xmlns="textPath" style="display:block;margin:0 auto;"><path d="M 10 80 Q 50 200 100 100 T 200 120" id="my_path" fill="none" stroke="red"></path><text fill="skyblue" font-size="20"> <textPath xlink:href="#my_path">So live a life you will remember</textPath></text></svg><br></p>
 <h3 id="变形、剪切、遮罩、图片"><a href="#变形、剪切、遮罩、图片" class="headerlink" title="变形、剪切、遮罩、图片"></a>变形、剪切、遮罩、图片</h3><h4 id="变形"><a href="#变形" class="headerlink" title="变形"></a>变形</h4><ul>
-<li><span class="strong">transform=”translate(x,y)” 平移</span>(如果只指定一个值，则默认第二个值为0)</li>
-<li><span class="strong">transform=”rotate(角度值)” 沿着图形左上角顺时针(正值)旋转</span></li>
-<li><span class="strong">transform=”skewX(角度值)或skewY(角度值)” 在x/y轴方向上斜切</span></li>
-<li><span class="strong">transform=”scale(x缩放,y缩放)” 在x/y轴进行缩放</span>(如果只指定一个值，则默认第二个值等于第一个值)</li>
+<li><span class="strong">transform="translate(x,y)" 平移</span>(如果只指定一个值，则默认第二个值为0)</li>
+<li><span class="strong">transform="rotate(角度值)" 沿着图形左上角顺时针(正值)旋转</span></li>
+<li><span class="strong">transform="skewX(角度值)或skewY(角度值)" 在x/y轴方向上斜切</span></li>
+<li><span class="strong">transform="scale(x缩放,y缩放)" 在x/y轴进行缩放</span>(如果只指定一个值，则默认第二个值等于第一个值)</li>
 <li>多个属性值可以写到一个transform中，用空格隔开</li>
 </ul>
 <div class="show"> &lt;rect x="0" y="0" width="200" height="200" fill="red" transform="translate(50,10) scale(.2,1.2) rotate(60)"/&gt;</div>
@@ -525,8 +525,8 @@ points="0,0 10,10 20,0 30,10"
     &lt;/mask&gt;
 &lt;/defs&gt;
 
-<p>  &lt;rect x=”0” y=”0” width=”200” height=”200” fill=”green”/&gt;<br>  &lt;rect x=”0” y=”0” width=”200” height=”200” fill=”red” mask=”url(#Mask)” /&gt;</p></div><p></p>
-<h4 id="图片"><a href="#图片" class="headerlink" title="图片"></a>图片</h4><p>SVG使用<span class="tips">image</span>标签插入图片，并且可以在图像上使用剪切、变形、遮罩等SVG提供的功能<br><span class="strong">&lt;image xlink:href=””/&gt;</span></p>
+<p>  &lt;rect x="0" y="0" width="200" height="200" fill="green"/&gt;<br>  &lt;rect x="0" y="0" width="200" height="200" fill="red" mask="url(#Mask)" /&gt;</p></div><p></p>
+<h4 id="图片"><a href="#图片" class="headerlink" title="图片"></a>图片</h4><p>SVG使用<span class="tips">image</span>标签插入图片，并且可以在图像上使用剪切、变形、遮罩等SVG提供的功能<br><span class="strong">&lt;image xlink:href=""/&gt;</span></p>
 <ul>
 <li>可以使用x,y属性指定图片位置</li>
 <li>可以使用width,height属性指定图片宽高</li>
@@ -540,7 +540,7 @@ SVG中还有链接、动画、滤镜等标签，详见MDN文档:<a target="_blan
     <div class="post-nav">
         
             <div class="post-prev ">
-                <a href="/blog/2023/05/25/xml/">上一篇：xml</a>
+                <a href="/blog/2023/09/07/JavaScript%E4%B8%AD%E7%9A%84%E5%90%84%E7%A7%8D%E5%B0%BA%E5%AF%B8/">上一篇：JavaScript中的各种尺寸</a>
             </div>
             
             

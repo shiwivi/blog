@@ -46,7 +46,7 @@
             <li><a href="/blog/tags/408">#408</a></li>
             <li>#Security</li>
             <li><a href="/blog/tags/Linux">#Linux</a></li>
-            <li>#Python</li>
+            <li><a href="/blog/tags/Python">#Python</a></li>
             <li><a href="/blog/tags/Servr">#Server</a></li>
             <li><a href="/blog/tags/Web">#Web</a></li>
         </ul>
@@ -136,7 +136,7 @@
         <div class="article">
         <h1 class="title">Linux文件操作</h1>
         <div class="art-info">
-            <div><span><span class="iconfont icon-zishu-jzl"></span>字数：45973</span>
+            <div><span><span class="iconfont icon-zishu-jzl"></span>字数：46015</span>
             <span><span class="iconfont icon-riqi"></span>写于：2021-12-29</span></div>
             <div><span><span class="iconfont icon-zuixinnew3"></span>最新更新：2021-12-29</span>
             <span><span class="iconfont icon-shijian"></span>阅读本文预计花费您132分钟</span></div>
@@ -152,10 +152,10 @@
 <li>-d (directory)查看当前目录信息而非展示目录所含文件</li>
 <li>-h (human-readable)常与l参数一起使用，文件大小会被换算为KB、MB等人类方便读的单位，但该选项会将文件大小四舍五入输出，如：2000bytes输出为2k(2048bytes)，1536bytes输出为1.5k，需要准确字节数应当使用-l选项或其他命令(stat、du等)</li>
 <li>-H 在查看链接文件时，显示链接的原文件信息而不是链接文件本身的信息</li>
-<li>-I 模式：忽略与模式相匹配文件名的信息，这里的模式指shell支持的模式，而非所有正则表达式语法，如：ls -I ‘.[^.]’ 表示忽略所有以.号开头，文件名长度为2个字符的文件</li>
+<li>-I 模式：忽略与模式相匹配文件名的信息，这里的模式指shell支持的模式，而非所有正则表达式语法，如：ls -I '.[^.]' 表示忽略所有以.号开头，文件名长度为2个字符的文件</li>
 <li>-i (iNode)查看文件i节点，并打印于最左侧</li>
 <li>-F (classify)对不同文件进行特殊标识，该标识会添加于文件名后，/表示目录，*表示可执行文件，@表示链接文件，|表示管道文件，=表示套接字文件，普通文件不添加任何标识</li>
-<li>-‌-time-style=’+时间格式’：按指定格式输出文件的时间信息，时间格式参考date命令</li>
+<li>-‌-time-style='+时间格式'：按指定格式输出文件的时间信息，时间格式参考date命令</li>
 <li>-R (recursive)递归显示，列出目录下的子目录和子文件，输出较长</li>
 <li>-c 显示文件元信息(文件权限、所有者、硬链接等)最后被修改的时间，需要搭配-l使用，默认情况下，ls -l命令显示的时间是文件内容最后被修改的时间，-c选项会将该时间替换为文件元信息最后被修改的时间</li>
 <li>-u (use) 需要搭配-l使用，类似于-c，将时间替换为文件最后被访问的时间(但许多文件系统为了优化性能，只会在某些情况下更新文件最后访问时间atime，以减少对磁盘的写入，因此默认情况下文件系统很少记录atime，该选项输出信息可能是错误的)</li>
@@ -233,7 +233,7 @@ drwxr-xr-x   2 root root 4.0K Aug 18 14:15 data/
 </ul>
 <p>权限除了可以使用rwx表示，在chmod等命令中还可以用权限值来表示：当用户拥有rwx权限时，表示为二进制的111，换算为十进制，其权值为7，当用户拥有r-x权限时，表示为101，权值为5，以此类推，巧妙使用二进制和十进制的转换来更简洁地表示权限</p>
 <p><strong>第11位 .号</strong> </p>
-<p>.号为安装有SElinux的系统特有，这个点表示该文件带有“SELinux的安全上下文”</p>
+<p>.号为安装有SElinux的系统特有，这个点表示该文件带有“SELinux的安全上下文"</p>
 <h6 id="其他字段"><a href="#其他字段" class="headerlink" title="其他字段"></a>其他字段</h6><p>之后的字段分别表示</p>
 <ul>
 <li>该文件的硬链接总数</li>
@@ -243,14 +243,14 @@ drwxr-xr-x   2 root root 4.0K Aug 18 14:15 data/
 <li>文件最后一次修改时间，无修改则为创建时间</li>
 <li>文件名</li>
 </ul>
-<h4 id="stat查看文件与文件系统状态"><a href="#stat查看文件与文件系统状态" class="headerlink" title="stat查看文件与文件系统状态"></a>stat查看文件与文件系统状态</h4><p>stat命令以另外一种方式显示文件的详细信息，输出内容包含大小、权限、时间戳、inode 号等，并且可用自定义这些信息的输出样式，此外，它还可以用来查看文件所属文件系统的状态。<br><span class="strong">stat [选项] 文件名1 文件名2…</span></p>
+<h4 id="stat查看文件与文件系统状态"><a href="#stat查看文件与文件系统状态" class="headerlink" title="stat查看文件与文件系统状态"></a>stat查看文件与文件系统状态</h4><p>stat命令以另外一种方式显示文件的详细信息，输出内容包含大小、权限、时间戳、inode 号等，并且可用自定义这些信息的输出样式，此外，它还可以用来查看文件所属文件系统的状态。<br><span class="strong">stat [选项] 文件名1 文件名2...</span></p>
 <ul>
 <li>默认情况下，命令会输出文件的信息，如果文件是链接文件，默认输出链接文件本身的信息</li>
 <li>-f 输出文件所属文件系统的状态，而非文件本身信息</li>
 <li>-L 输出链接文件所指向的文件的状态，而不是符号链接文件本身的状态</li>
 <li>-t 以简洁形式在一行上打印信息，方便其他程序解析。在不同版本的GNU coreutils包中，该选项的输出可能不同，可能输出<span class="tips">文件名、文件大小(字节)、文件占用块数、文件权限(八进制或十六进制)、设备主编号、设备次编号、十六进制设备号、Inode编号、硬链接数、文件所有者UID、文件所属组GID、最近访问时间戳atime、最近修改时间戳mtime、最近文件属性修改时间戳ctime、文件创建的时间戳btime、IO块大小</span>等</li>
-<li>-c “格式字符串”：按照指定格式显示信息，末尾会自动添加换行，因此如果指定多个文件，则会输出多行信息</li>
-<li>-‌-printf=”格式字符串”：按照指定格式显示信息，且不自动添加换行符</li>
+<li>-c "格式字符串"：按照指定格式显示信息，末尾会自动添加换行，因此如果指定多个文件，则会输出多行信息</li>
+<li>-‌-printf="格式字符串"：按照指定格式显示信息，且不自动添加换行符</li>
 </ul>
 <p>格式字符串支持以下字符：</p>
 <div class="table">
@@ -268,7 +268,7 @@ drwxr-xr-x   2 root root 4.0K Aug 18 14:15 data/
 </tr>
 <tr>
 <td>%A</td>
-<td>文本形式显示的文件权限（如 -rw-r–r–）</td>
+<td>文本形式显示的文件权限（如 -rw-r--r--）</td>
 </tr>
 <tr>
 <td>%s</td>
@@ -284,7 +284,7 @@ drwxr-xr-x   2 root root 4.0K Aug 18 14:15 data/
 </tr>
 <tr>
 <td>%F</td>
-<td>文件类型（如 “regular file”、”directory” 等）</td>
+<td>文件类型（如 "regular file"、"directory" 等）</td>
 </tr>
 <tr>
 <td>%u</td>
@@ -436,17 +436,17 @@ source ~/.bashrc
 <li>-v 每成功删除一个目录就打印其消息</li>
 </ul>
 <h3 id="文件操作"><a href="#文件操作" class="headerlink" title="文件操作"></a>文件操作</h3><h4 id="touch创建空文件"><a href="#touch创建空文件" class="headerlink" title="touch创建空文件"></a>touch创建空文件</h4><p>该命令原本是用来修改文件的访问或修改时间戳的，当指定的文件不存在时，命令会创建一个空文件</p>
-<p><span class="strong"> touch 文件名1 文件名2…</span></p>
+<p><span class="strong"> touch 文件名1 文件名2...</span></p>
 <ul>
 <li>默认情况下，命令会将文件最后一次访问时间(atime)和修改时间(mtime)更改为当前时间，如果文件不存在，则会新建一个空文件</li>
-<li>如果文件名中有空格符，需要使用””</li>
+<li>如果文件名中有空格符，需要使用""</li>
 <li>-c 如果文件不存在，不新建文件，也不进行警告</li>
 <li>-a 仅更改文件最后一次被访问的时间(atime)</li>
 <li>-m 仅更改文件最后一次被修改的时间(mtime)</li>
-<li>-d 时间：将文件的atime和ctime更改为指定时间，而不是当前时间，该选项接受的时间格式很多，参考date命令，如：-d ‘2021-07-10 14:20:59 +0800’</li>
+<li>-d 时间：将文件的atime和ctime更改为指定时间，而不是当前时间，该选项接受的时间格式很多，参考date命令，如：-d '2021-07-10 14:20:59 +0800'</li>
 <li>-t [[cc]yy]mmddhhmm[.ss]：将文件的atime和ctime更改为指定时间，该选项的格式要求较为严格，要按照指定格式书写</li>
 <li>-h 修改链接文件的时间戳</li>
-<li>-r 文件：使用该文件的atime和ctime作为更改的数据来源，该选项可以搭配-d选项，如：-r old.txt -s ‘-60 seconds’表示以old.txt文件的atime和mtime为原点，比该时间早60秒作为指定文件的atime和mtime</li>
+<li>-r 文件：使用该文件的atime和ctime作为更改的数据来源，该选项可以搭配-d选项，如：-r old.txt -s '-60 seconds'表示以old.txt文件的atime和mtime为原点，比该时间早60秒作为指定文件的atime和mtime</li>
 </ul>
 <div class="show">示例：
 # touch file1 file2
@@ -464,7 +464,7 @@ source ~/.bashrc
 </ul>
 <h5 id="tac反向查看短文件内容"><a href="#tac反向查看短文件内容" class="headerlink" title="tac反向查看短文件内容"></a>tac反向查看短文件内容</h5><p><span class="strong"> tac [选项] [文件名]</span><br>cat反写，从尾到头显示文件(文件末行为第一行)</p>
 <ul>
-<li>-s “分隔符”：指定分隔符，默认是换行符</li>
+<li>-s "分隔符"：指定分隔符，默认是换行符</li>
 <li>-b 将分隔符添加到记录开头</li>
 <li>-r 将分隔符字符串识别为正则表达式</li>
 </ul>
@@ -487,7 +487,7 @@ BBBB,AAAA,
 <li>Enter    换行</li>
 <li>q或Q   退出</li>
 </ul>
-<p><span class="strong"> less [文件名]</span><br>该命令来源于less软件包，其命令名来源于”less is more”，因此也比more提供了更多高级功能，如使用上下箭头翻页，它同样会分页显示文件，一般用于查看长文件，支持关键字搜索</p>
+<p><span class="strong"> less [文件名]</span><br>该命令来源于less软件包，其命令名来源于"less is more"，因此也比more提供了更多高级功能，如使用上下箭头翻页，它同样会分页显示文件，一般用于查看长文件，支持关键字搜索</p>
 <ul>
 <li> 空格或f或PageDown 向下翻页</li>
 <li>b或PageUp     向上翻页</li>
@@ -495,7 +495,7 @@ BBBB,AAAA,
 <li>可以使用<span class="tips"> /关键字 </span>进行关键字搜索，使用<span class="tips"> n </span>跳转到下一个高亮显示的关键字</li>
 <li>q或Q   退出</li>
 </ul>
-<h5 id="head-amp-tail仅查看前几行或后几行"><a href="#head-amp-tail仅查看前几行或后几行" class="headerlink" title="head&amp;tail仅查看前几行或后几行"></a>head&amp;tail仅查看前几行或后几行</h5><p><span class="strong"> head [选项] 文件1 文件2….</span>查看文件前几行内容</p>
+<h5 id="head-amp-tail仅查看前几行或后几行"><a href="#head-amp-tail仅查看前几行或后几行" class="headerlink" title="head&amp;tail仅查看前几行或后几行"></a>head&amp;tail仅查看前几行或后几行</h5><p><span class="strong"> head [选项] 文件1 文件2....</span>查看文件前几行内容</p>
 <ul>
 <li>默认显示前10行</li>
 <li>如果指定多个文件，在输出每个文件内容前会以<span class="tips">==&gt;文件名&lt;==</span>形式输出文件名</li>
@@ -609,14 +609,14 @@ rm -‌- -filename
 <h4 id="cp复制文件或目录-copy"><a href="#cp复制文件或目录-copy" class="headerlink" title="cp复制文件或目录(copy)"></a>cp复制文件或目录(copy)</h4><p><span class="strong"> cp [选项] [源文件或目录] [目标文件或目录]</span></p>
 <ul>
 <li>注意！默认情况下，如果cp命令指定目标文件名，而该路径下已经有一个同名文件，则原本存在的文件会被cp命令覆盖</li>
-<li>复制时可以同时指定多个源文件，此时最后一个参数”目标文件”需要指定一个已经存在的目录，cp命令不会自行创建目录</li>
+<li>复制时可以同时指定多个源文件，此时最后一个参数"目标文件"需要指定一个已经存在的目录，cp命令不会自行创建目录</li>
 <li>-r或-R 递归复制目录，如果目录下有链接文件，则默认只复制链接文件本身</li>
 <li>-p 保留文件属性，如文件修改时间、文件所有者、权限等</li>
 <li>-a 归档模式，尽可能多地保留原有的文件结构和属性，等价于-dpr</li>
 <li>-i 需要覆盖已有文件前询问用户</li>
 <li>-f 强制覆盖文件，即使目标文件是只读的，它也会尝试删除后再复制</li>
 <li>-b 覆盖已有文件前先备份该已有文件，默认以~作为后缀名，备份方式参考Linux命令的通用备份方案</li>
-<li>-S “字符串”：通常与-b选项搭配使用，备份文件时使用指定的字符串作为文件后缀名</li>
+<li>-S "字符串"：通常与-b选项搭配使用，备份文件时使用指定的字符串作为文件后缀名</li>
 <li>-n 不覆盖已存在的文件</li>
 <li>-u 只在原文件比目标文件更新，或目标文件不存在时复制文件</li>
 <li>-v 详细模式，详细输出每个复制的文件或目录名</li>
@@ -676,7 +676,7 @@ dd if=/dev/zero of=testfile bs=2G count=1
 <p><span class="strong">install [选项] [源文件] [目标文件]</span></p>
 <ul>
 <li>-b 复制时如果目标文件已存在，则覆盖，覆盖前进行备份</li>
-<li>-S “字符串”：备份时指定文件后缀名</li>
+<li>-S "字符串"：备份时指定文件后缀名</li>
 <li>-C 比较源文件和目标文件的内容，如果目标内容、所有者、组、权限和SELinux上下文没有变化，不进行复制，否则复制文件</li>
 <li>-g 组ID或组名：设置已安装文件或目录的所属组，默认为当前组</li>
 <li>-o 用户ID或用户名：设置已安装文件或目录的所有者，默认为root用户</li>
@@ -689,7 +689,7 @@ dd if=/dev/zero of=testfile bs=2G count=1
 <ul>
 <li>注意！如果指定的目标文件路径下已经有同名文件，mv命令默认会直接覆盖该文件，源文件或目录可以有多个来同时移动多个文件</li>
 <li>-b 如果目标文件已存在，则进行备份</li>
-<li>-S “字符串”：指定备份文件的后缀名</li>
+<li>-S "字符串"：指定备份文件的后缀名</li>
 <li>-f 目标文件存在时，直接覆盖，不询问用户</li>
 <li>-i 目标文件存在时，覆盖前询问用户</li>
 <li>-n 目标文件存在时，不覆盖已经存在的文件，视为操作失败</li>
@@ -764,7 +764,7 @@ KhXWNVbInIhkxw==
 <li>-c 保留每行的缩进格式，如：原文件首行缩进2字符，该选项会保留这个缩进</li>
 <li>-t 在处理带有标签或行号等段落时，保留这些行的缩进等格式</li>
 <li>-u 文本中包含多个连续空格符时，删减到只保留一个空格符</li>
-<li>-p “字符”：仅格式化以该字符开头的行，如：-p “#”将只格式化以#开头的行(如：注释行)</li>
+<li>-p "字符"：仅格式化以该字符开头的行，如：-p "#"将只格式化以#开头的行(如：注释行)</li>
 </ul>
 <div class="show">e.g.假设文件test.txt中有以下内容
 1. AAA AA AA A AAAAA
@@ -803,7 +803,7 @@ fmt -t test.txt
 <li>-l 行数：指定每一页的行数，默认值为66行，如果一页不满足66行，则会填充空白行</li>
 <li>-w 宽度：指定每行的字符数，默认值为72个字符，</li>
 <li>-d 双倍行距输出，这会在每行之间插入一个空行，更容易阅读</li>
-<li>-h “页眉字符串”:设置页眉，默认情况下，pr命令会在每页顶部显示文件名和日期</li>
+<li>-h "页眉字符串":设置页眉，默认情况下，pr命令会在每页顶部显示文件名和日期</li>
 <li>-o 缩进数：指定每行的缩进空格数</li>
 <li>-n 为每行添加行号</li>
 <li>-m 并列显示多个文件的内容。如果提供了多个文件，此选项可以将它们的内容并列显示在同一页上</li>
@@ -820,14 +820,14 @@ fmt -t test.txt
 <h5 id="split文件拆分"><a href="#split文件拆分" class="headerlink" title="split文件拆分"></a>split文件拆分</h5><p>split命令用于将文件分割成多个较小的文件，它可以按指定的字节数、行数或其他标准来分割文件，非常适合处理大型数据文件或将文件分割成适合传输的小块，尤其是在需要将其传输至大小受限的环境中时</p>
 <p><span class="strong">split [选项] 文件名 [新文件名前缀]</span></p>
 <ul>
-<li>默认情况下，该命令会为每个文件写入最多1000行文本，默认输出的文件名为xaa,xab…..</li>
-<li>如果指定了新文件名前缀newfile_，输出的文件名为newfile_xaa…</li>
+<li>默认情况下，该命令会为每个文件写入最多1000行文本，默认输出的文件名为xaa,xab.....</li>
+<li>如果指定了新文件名前缀newfile_，输出的文件名为newfile_xaa...</li>
 <li>-n 数量：将文件拆分为5个部分</li>
 <li>-b 字节数：按指定的字节数拆分文件，该选项不考虑行的完整性，可能会将同一行内容拆分到两个文件中</li>
 <li>-C 字节数：按指定的字节数拆分文件，该选项不会拆分行，它会在文件达到指定大小时，寻找下一个换行符进行分割，从而确保每一行都完整保留在同一个文件中</li>
 <li>-l 行数：按指定的行数拆分文件</li>
-<li>-d:使用数字作为输出文件的后缀，如x00,x01….</li>
-<li>-a 值：指定输出文件的后缀长度，如：-a 4表示输出文件名为xaaaa,xaaab…，默认值为2</li>
+<li>-d:使用数字作为输出文件的后缀，如x00,x01....</li>
+<li>-a 值：指定输出文件的后缀长度，如：-a 4表示输出文件名为xaaaa,xaaab...，默认值为2</li>
 <li>-‌-additional-suffix=字符串：为文件名添加后缀</li>
 <li>-‌-numeric-suffixes=值：指定文件的数字后缀从该值开始</li>
 </ul>
@@ -844,12 +844,12 @@ split -l 100 -d --additional-suffix=.txt test newFile_
 </div>
 
 <h5 id="csplit按内容拆分文件"><a href="#csplit按内容拆分文件" class="headerlink" title="csplit按内容拆分文件"></a>csplit按内容拆分文件</h5><p>csplit是一个用于按特定模式或位置分割文件的命令,与split不同，csplit可以根据正则表达式模式匹配或指定行号将文件拆分为多个部分，适合处理需要基于内容分割的场景</p>
-<p><span class="strong">csplit [选项] 文件名 ‘正则表达式/PATTERN/或行数n’ ‘{重复次数}’</span></p>
+<p><span class="strong">csplit [选项] 文件名 '正则表达式/PATTERN/或行数n' '{重复次数}'</span></p>
 <ul>
 <li>默认情况下，命令会在内容写入文件后打印该文件的大小(字节数)</li>
 <li>如果指定正则表达式，命令会在匹配处分割文件，并且匹配的这一行会写入下一个文件。如果还指定了重复次数，则会继续查找下一次匹配的内容，默认只匹配一次</li>
 <li>如果指定的是行的数量，则从数量对应的该行处分割文件，并且该行写入下一个文件。如果指定重复次数，也会继续进行分割</li>
-<li>分割后生成的文件名默认为xx00，xx01，xx02…..</li>
+<li>分割后生成的文件名默认为xx00，xx01，xx02.....</li>
 <li>-f 字符串：指定生成的文件名前缀，默认是xx</li>
 <li>-b 格式字符串：指定生成文件名的后缀，默认为%02d(两位数字)</li>
 <li>-n 值：指定生成文件名后缀中的数字位数，默认为2</li>
@@ -889,11 +889,11 @@ xx02文件：
 DDDD
 </div>
 
-<h4 id="合并文件"><a href="#合并文件" class="headerlink" title="合并文件"></a>合并文件</h4><h5 id="paste合并文件"><a href="#paste合并文件" class="headerlink" title="paste合并文件"></a>paste合并文件</h5><p><span class="strong">paste [选项] [文件名1] [文件名2]…</span></p>
+<h4 id="合并文件"><a href="#合并文件" class="headerlink" title="合并文件"></a>合并文件</h4><h5 id="paste合并文件"><a href="#paste合并文件" class="headerlink" title="paste合并文件"></a>paste合并文件</h5><p><span class="strong">paste [选项] [文件名1] [文件名2]...</span></p>
 <ul>
 <li>默认情况下，如果命令只指定一个文件，paste会原样输出文件；如果指定多个文件，该命令会将多个文件的第一行都粘贴到第一行，第二行都粘贴到第二行，依此类推，同一行内容之间使用tab分隔</li>
 <li>-s 如果只指定一个文件，命令会将该文件的所有内容合并到同一行上，以tab分隔。如果指定多个文件，命令会将文件1的内容都粘贴到第一行，文件2内容粘贴到第二行，其他文件以此类推</li>
-<li>-d “字符1字符2..”：使用指定的字符作为内容分隔符，默认为tab，可以指定多个字符，这些字符会循环使用，文件合并后的内容将写为：文件1字符1文件2字符2</li>
+<li>-d "字符1字符2.."：使用指定的字符作为内容分隔符，默认为tab，可以指定多个字符，这些字符会循环使用，文件合并后的内容将写为：文件1字符1文件2字符2</li>
 <li><span class="tips">paste - - - </span> paste命令的特殊用法，允许命令从标准输入中将每n行合并为1行，n取决于-的数量，每个-间有空格</li>
 </ul>
 <div class="show">e.g.文件num.txt内容为
@@ -961,7 +961,7 @@ paste file1.txt - - file2.txt
 <li>-t 分隔符：指定字段分隔符，默认为空格</li>
 <li>-i 比较时忽略大小写</li>
 <li>-a 1或-a 2：输出文件1或文件2中未匹配到的行</li>
-<li>-e “字符串”：指定在某个字段缺失时，用哪个字符串代替</li>
+<li>-e "字符串"：指定在某个字段缺失时，用哪个字符串代替</li>
 <li>-v 1或-v 2：仅显示文件1或文件2中未匹配的行</li>
 <li>-‌-check-order：如果任一输入文件排序错误，则失败并显示错误消息</li>
 <li>-‌-nocheck-order：不检查两个输入文件是否按排序顺序排列(默认)</li>
@@ -992,7 +992,7 @@ join -a 1 file1 file2
 <li>-1或-2或-3选项，可以禁止打印对应的列</li>
 <li>-‌-check-order 检查输入的文本行是否是已经排序过的，如果任一文件排序错误则报错并退出</li>
 <li>-‌-nocheck-order 不检查文件是否排序</li>
-<li>-‌-output-delimiter=”字符串”:替换所输出三列信息之间的分隔字符串，默认为Tab</li>
+<li>-‌-output-delimiter="字符串":替换所输出三列信息之间的分隔字符串，默认为Tab</li>
 </ul>
 <h4 id="文件校验"><a href="#文件校验" class="headerlink" title="文件校验"></a>文件校验</h4><h5 id="sum计算文件占用的磁盘块数与校验和"><a href="#sum计算文件占用的磁盘块数与校验和" class="headerlink" title="sum计算文件占用的磁盘块数与校验和"></a>sum计算文件占用的磁盘块数与校验和</h5><p>sum命令会为每个给定文件计算一个16位校验和(checksum)，以及文件占用的块大小，该命令是为了与旧Unix系统兼容而提供的，GNU更推荐使用cksum命令</p>
 <p><span class="strong">sum [选项] 文件</span></p>
@@ -1006,7 +1006,7 @@ join -a 1 file1 file2
 <li>命令会默认输出文件的校验和、文件大小(字节数)、文件名三个信息</li>
 <li>命令默认使用CRC-32 算法，生成32位校验和，输出时通常以十进制形式表示，通常输出10位</li>
 <li>该命令主要用于检测随机性错误，安全性相较于md5sum、sha256sum 等哈希命令会较低</li>
-<li>-a ‘算法’：使用指定的摘要算法计算校验和，支持sysv,bsd,crc,md5,sha1,sha224,sha256,sha384,sha512,blake2b,sm3等</li>
+<li>-a '算法'：使用指定的摘要算法计算校验和，支持sysv,bsd,crc,md5,sha1,sha224,sha256,sha384,sha512,blake2b,sm3等</li>
 <li>-b 以二进制数据形式读取文件</li>
 <li>-c 文件名：从指定文件中读取校验和与文件名(可以包含路径)，并检查校验和与文件是否匹配，以下选项需要与-c选项搭配使用：<blockquote>
 <blockquote>
@@ -1081,7 +1081,7 @@ Bourne-Again shell script, ASCII text executable说明该可执行程序编译�
 <li>-d 只同步该文件数据，而不刷新文件的元数据(例如文件权限、所有者、时间戳等)</li>
 <li>-f 将包含该文件的整个文件系统同步到磁盘，而不仅仅是该文件的数据部分</li>
 </ul>
-<h4 id="truncate扩大或缩小文件大小"><a href="#truncate扩大或缩小文件大小" class="headerlink" title="truncate扩大或缩小文件大小"></a>truncate扩大或缩小文件大小</h4><p><span class="strong">truncate 选项 文件1 文件2…</span></p>
+<h4 id="truncate扩大或缩小文件大小"><a href="#truncate扩大或缩小文件大小" class="headerlink" title="truncate扩大或缩小文件大小"></a>truncate扩大或缩小文件大小</h4><p><span class="strong">truncate 选项 文件1 文件2...</span></p>
 <ul>
 <li>默认情况下，如果所指定的文件不存在，将创建该文件，如果未指定-s选项，则新建的文件大小为0字节</li>
 <li>-c 不创建不存在的文件</li>
@@ -1192,13 +1192,13 @@ dirname checkOS.sh
 <li>-P 如果文件名为空，或文件路径中的任一目录名或文件名以-开头，则报错</li>
 </ul>
 <h4 id="realpath获取绝对路径与相对路径"><a href="#realpath获取绝对路径与相对路径" class="headerlink" title="realpath获取绝对路径与相对路径"></a>realpath获取绝对路径与相对路径</h4><p>realpath命令可以用来获取文件的绝对路径、文件之间的相对路径、符号链接所指向目标的真实路径等，通常用来在脚本中标准化路径，避免路径混淆，使脚本更具可移植性和可靠性</p>
-<p><span class="strong">realpath [选项] 文件1 文件2…</span></p>
+<p><span class="strong">realpath [选项] 文件1 文件2...</span></p>
 <ul>
 <li>默认情况下，命令会输出所给定文件的绝对路径，如果文件是一个符号链接，则输出其指向源文件的绝对路径</li>
 <li>-e 只解析存在的文件或目录路径，如果所指定的路径中任一文件或目录不存在，立即报错</li>
 <li>-m 如果所指定的路径中有文件或目录不存在，将其视为目录，并返回标准化路径，而不报错</li>
-<li>–relative-to=目录名DIR：输出realpath命令指定的文件1(文件2…)与目录DIR之间的相对路径</li>
-<li>–relative-base=目录名DIR：以该DIR路径作为解析时的基准起始点，如果文件1、文件2…在DIR路径下的子目录中，则输出相对路径，如果文件1、文件2…在DIR目录以外的位置，输出绝对路径</li>
+<li>--relative-to=目录名DIR：输出realpath命令指定的文件1(文件2...)与目录DIR之间的相对路径</li>
+<li>--relative-base=目录名DIR：以该DIR路径作为解析时的基准起始点，如果文件1、文件2...在DIR路径下的子目录中，则输出相对路径，如果文件1、文件2...在DIR目录以外的位置，输出绝对路径</li>
 <li>-s 不解析符号链接</li>
 <li>-P (默认)解析路径中所有的符号链接，返回它们的真实路径(源文件的路径)，如：/home/user/link-to-dir/file中link-to-dir是一个符号链接，该选项会找出它所指向的源文件的路径，并替换到要输出的路径中</li>
 <li>-L 不解析父目录中的符号链接，路径中任何中间部分的符号链接将被保留，只有在最终文件或目录是符号链接时解析，如：/home/user/link-to-dir/file中link-to-dir是符号链接，由于它属于父目录，因此该链接文件不会被解析。如果最终目标文件file是符号链接时，则会解析file所指向源文件的路径</li>
@@ -1271,8 +1271,8 @@ echo -e "path1\npath2" | tr '\n' '\0' &gt; paths.txt
 <p><span class="strong">find的工作流程</span>:</p>
 <p>find 命令会以所指定的查找路径作为起点，递归地执行<span class="text-blue">深度优先</span>遍历(可通过 -maxdepth 或 -mindepth 控制遍历深度)，在遍历过程中，find会依次访问路径下的所有文件和子目录(但可以使用 -prune 等选项主动排除特定目录)，对于访问到的每个文件或目录，find会按照命令行中的条件表达式从<span class="text-blue">从左到右</span>的顺序，逐一检查其是否满足指定的条件(如：-name检查文件名、-type检查文件类型等，可以使用-and、-or等逻辑运算组合这些条件)，当条件满足时，find命令会对匹配的文件执行指定的操作(默认动作是打印该条目的完整路径)，如果条件不满足，则跳过该条目，继续处理下一个。</p>
 <h4 id="根据文件名查找"><a href="#根据文件名查找" class="headerlink" title="根据文件名查找"></a>根据文件名查找</h4><ul>
-<li><span class="strong">-name “pattern”</span>根据文件名查找</li>
-<li><span class="strong">-iname “pattern”</span>根据文件名查找(不区分大小写，GNU拓展)</li>
+<li><span class="strong">-name "pattern"</span>根据文件名查找</li>
+<li><span class="strong">-iname "pattern"</span>根据文件名查找(不区分大小写，GNU拓展)</li>
 <li>pattern不应该包含任何/以及路径，-name a/b永远不会匹配任何内容，匹配路径应该使用-path或-regex</li>
 </ul>
 <div class="show">示例:
@@ -1285,12 +1285,12 @@ echo -e "path1\npath2" | tr '\n' '\0' &gt; paths.txt
 </div>
 
 <h4 id="根据完整路径查找"><a href="#根据完整路径查找" class="headerlink" title="根据完整路径查找"></a>根据完整路径查找</h4><ul>
-<li><span class="strong">-path “pattern”</span> 根据完整路径查找，可以使用通配符</li>
-<li><span class="strong">-ipath “pattern”</span> 根据完整路径查找(不区分大小写，GNU拓展)，可以使用通配符</li>
-<li><span class="strong">-regex “正则表达式”</span> 使用正则匹配完整路径，在正则中使用<span class="tips">.</span>等符号作为路径或文件后缀名时，需要转义，如：”\.txt”</li>
-<li><span class="strong">-iregex “正则表达式”</span> 使用正则匹配完整路径(不区分大小写，GNU拓展)</li>
-<li>上述表达式匹配的是<span class="tips">完整路径</span>，所以所给定的模式应当能匹配到起始查找路径，find是将模式与查找路径下的每个文件或目录的完整路径进行比较，如果模式不包括起始查找路径将无法匹配到任何结果，如：命令find /a -path “b”中，find会在/a路径下开始遍历，路径至少为/a/…，因此不会匹配到b，表达式b应当包含查找路径部分，如：-path “*/b”或明确指定-path “/a/b”，如果b只是文件名而不包含路径，应该使用-name “b”以匹配文件名</li>
-<li>完整路径指定的是表达式中需要包含起始路径，但也可以可以包括文件名的模式表示形式，以批量匹配文件，如：-path “*.c”中*既能匹配到路径，也能匹配到文件名</li>
+<li><span class="strong">-path "pattern"</span> 根据完整路径查找，可以使用通配符</li>
+<li><span class="strong">-ipath "pattern"</span> 根据完整路径查找(不区分大小写，GNU拓展)，可以使用通配符</li>
+<li><span class="strong">-regex "正则表达式"</span> 使用正则匹配完整路径，在正则中使用<span class="tips">.</span>等符号作为路径或文件后缀名时，需要转义，如："\.txt"</li>
+<li><span class="strong">-iregex "正则表达式"</span> 使用正则匹配完整路径(不区分大小写，GNU拓展)</li>
+<li>上述表达式匹配的是<span class="tips">完整路径</span>，所以所给定的模式应当能匹配到起始查找路径，find是将模式与查找路径下的每个文件或目录的完整路径进行比较，如果模式不包括起始查找路径将无法匹配到任何结果，如：命令find /a -path "b"中，find会在/a路径下开始遍历，路径至少为/a/...，因此不会匹配到b，表达式b应当包含查找路径部分，如：-path "*/b"或明确指定-path "/a/b"，如果b只是文件名而不包含路径，应该使用-name "b"以匹配文件名</li>
+<li>完整路径指定的是表达式中需要包含起始路径，但也可以可以包括文件名的模式表示形式，以批量匹配文件，如：-path "*.c"中*既能匹配到路径，也能匹配到文件名</li>
 <li>-regextype 类型：指定正则表达式的解析类型，值可以是：emacs(默认，使用与GNU Emacs兼容的正则表达式)，posix-awk(与 POSIX awk命令兼容的正则表达式)，posix-basic(基本正则表达式)，posix-egrep(与 POSIX egrep 命令兼容的正则表达式)，posix-extended(扩展正则表达式)</li>
 </ul>
 <div class="show">假设有以下文件结构
@@ -1342,8 +1342,8 @@ test目录为空时，返回结果也有.或/test表示当前目录，如果只�
 </div>
 
 <h4 id="处理符号链接"><a href="#处理符号链接" class="headerlink" title="处理符号链接"></a>处理符号链接</h4><ul>
-<li><span class="strong">-lname “pattern”</span>查找符号链接</li>
-<li><span class="strong">-ilname “pattern”</span>查找符号链接(不区分大小写)</li>
+<li><span class="strong">-lname "pattern"</span>查找符号链接</li>
+<li><span class="strong">-ilname "pattern"</span>查找符号链接(不区分大小写)</li>
 <li>以下选项是全局选项，会影响find命令的路径解析方式，<span class="tips">必须在查找路径之前指定</span></li>
 <li><span class="strong">-P</span>不跟随符号链接(默认)，不访问其指向的实际目录或文件，直接处理链接本身</li>
 <li><span class="strong">-H</span>只跟随命令行所指定路径中的符号链接，如果后续遍历该路径下的文件时，遇到其他符号链接，将不再跟随</li>
@@ -1438,7 +1438,7 @@ find . -empty
 <blockquote>
 <ul>
 <li><span class="tips">/</span>前缀用来表示文件只需要包含任意一个权限位即可，如-perm /111(或-perm /u=x,g=x,o=x)表示满足u=x,g=x,o=x中的任意一个条件即可</li>
-<li><span class="tips">-</span>前缀用来表示文件必须至少包含所指定的权限，如：-perm -644(或-perm -u=rw,g=r,o=r)表示文件权限要大于等于644(rw-r–r–)，这意味着755,744,655等大于该值的权限也满足匹配，而640不满足匹配(缺少其他用户的r权限)</li>
+<li><span class="tips">-</span>前缀用来表示文件必须至少包含所指定的权限，如：-perm -644(或-perm -u=rw,g=r,o=r)表示文件权限要大于等于644(rw-r--r--)，这意味着755,744,655等大于该值的权限也满足匹配，而640不满足匹配(缺少其他用户的r权限)</li>
 </ul>
 </blockquote>
 </blockquote>
@@ -1500,7 +1500,7 @@ find . -daystart -mtime 1
 <li>B 文件创建时间(需要文件系统支持)</li>
 <li>c 文件元信息修改时间</li>
 <li>m 文件内容修改时间</li>
-<li>t “时间”：将查找路径下的文件时间戳与指定时间的时间戳进行比较，此时不需要再指定参考文件，时间戳来源由参考文件的访问/元信息修改/修改时间改为在命令行中明确指定，使用该参数时仅支持-newerXt形式(如：-newerat )</li>
+<li>t "时间"：将查找路径下的文件时间戳与指定时间的时间戳进行比较，此时不需要再指定参考文件，时间戳来源由参考文件的访问/元信息修改/修改时间改为在命令行中明确指定，使用该参数时仅支持-newerXt形式(如：-newerat )</li>
 </ul>
 </blockquote>
 </blockquote>
@@ -1546,7 +1546,7 @@ dir下的子目录需要确保事先已经删除目录下的文件，否则依�
 </div>
 
 <h4 id="跳过目录"><a href="#跳过目录" class="headerlink" title="跳过目录"></a>跳过目录</h4><p><span class="strong">-prune</span>跳过目录，不进入之前选项所匹配的目录下进行遍历</p>
-<p>由于该选项的作用只是不让find进入某些目录遍历，因此具体不进入哪些目录需要通过其他选项来指定，但在搭配了其他选项时，这些选项又会将遍历结果筛选得只剩下满足要求的目录，同时-prune又禁止进入这些目录遍历，在组合搭配下，最后结果将只剩下前置选项匹配的目录本身。因此该选项通常需要搭配<span class="tips">-o</span>选项使用，来避免前置选项在-prune选项之前就筛选掉不需要跳过的目录，常用语法为：<br><span class="strong">find [搜索路径] -name “要排除的目录名” -prune -o [其他条件] -print</span></p>
+<p>由于该选项的作用只是不让find进入某些目录遍历，因此具体不进入哪些目录需要通过其他选项来指定，但在搭配了其他选项时，这些选项又会将遍历结果筛选得只剩下满足要求的目录，同时-prune又禁止进入这些目录遍历，在组合搭配下，最后结果将只剩下前置选项匹配的目录本身。因此该选项通常需要搭配<span class="tips">-o</span>选项使用，来避免前置选项在-prune选项之前就筛选掉不需要跳过的目录，常用语法为：<br><span class="strong">find [搜索路径] -name "要排除的目录名" -prune -o [其他条件] -print</span></p>
 <ul>
 <li>-name可以任意替换为其他选项</li>
 <li>-prune只对它之前的一个选项有效，要跳过多个选项的目录需要使用分组实现，参考以下示例</li>
@@ -1639,8 +1639,8 @@ find . \( -name "*.txt" -or -name "*.log" \) -printf "%f-----%s\n"
 <li>-fprint0 文件名：将print0的输出写入指定文件</li>
 </ul>
 <h5 id="格式化打印"><a href="#格式化打印" class="headerlink" title="格式化打印"></a>格式化打印</h5><ul>
-<li><span class="strong">-printf “格式字符串”</span> 根据格式字符串输出指定信息，末尾不会输出换行符，因此如果需要换行符需要手动添加’\n’</li>
-<li>-fprintf 文件名 “格式字符串”:将printf选项输出结果输出到指定文件</li>
+<li><span class="strong">-printf "格式字符串"</span> 根据格式字符串输出指定信息，末尾不会输出换行符，因此如果需要换行符需要手动添加'\n'</li>
+<li>-fprintf 文件名 "格式字符串":将printf选项输出结果输出到指定文件</li>
 <li>转义字符、指定字段宽度和精度的方法与C语言printf函数一样，部分字符代表的含义不一样</li>
 </ul>
 <div class="table">
@@ -1654,7 +1654,7 @@ find . \( -name "*.txt" -or -name "*.log" \) -printf "%f-----%s\n"
 </thead>
 <tbody><tr>
 <td>%p</td>
-<td>输出文件路径与文件名，路径表示形式取决于所给定的搜索路径，如：find . -name…输出形式为./path/file，find dir -name…输出形式为dir/path/file</td>
+<td>输出文件路径与文件名，路径表示形式取决于所给定的搜索路径，如：find . -name...输出形式为./path/file，find dir -name...输出形式为dir/path/file</td>
 </tr>
 <tr>
 <td>%f</td>
@@ -1694,7 +1694,7 @@ find . \( -name "*.txt" -or -name "*.log" \) -printf "%f-----%s\n"
 </tr>
 <tr>
 <td>%M</td>
-<td>文件字符串形式的权限，如：-rw-r–r–</td>
+<td>文件字符串形式的权限，如：-rw-r--r--</td>
 </tr>
 <tr>
 <td>%s</td>
@@ -1738,7 +1738,7 @@ find . \( -name "*.txt" -or -name "*.log" \) -printf "%f-----%s\n"
 </tr>
 <tr>
 <td>%Y</td>
-<td>文件类型，对于符号链接，%Y会追踪并输出源文件类型，如果符号链接断开，打印”N”，如果是循环执行的符号链接，打印为”L”，如果出错无法检查，打印”?”</td>
+<td>文件类型，对于符号链接，%Y会追踪并输出源文件类型，如果符号链接断开，打印"N"，如果是循环执行的符号链接，打印为"L"，如果出错无法检查，打印"?"</td>
 </tr>
 <tr>
 <td>%a</td>
@@ -1825,7 +1825,7 @@ file1.txt---20210712
 <a target="_blank" rel="noopener" href="https://www.gnu.org/software/findutils/manual/html_mono/find.html#Time-Components">https://www.gnu.org/software/findutils/manual/html_mono/find.html#Time-Components</a></div>
 
 <h5 id="详细打印文件信息"><a href="#详细打印文件信息" class="headerlink" title="详细打印文件信息"></a>详细打印文件信息</h5><ul>
-<li><span class="strong">-ls</span>详细列出匹配到的文件，输出结果类似于”ls -dils”命令执行结果</li>
+<li><span class="strong">-ls</span>详细列出匹配到的文件，输出结果类似于"ls -dils"命令执行结果</li>
 <li>-fls 文件名：将-ls的输出写入指定文件，工作方式与fprint类似</li>
 </ul>
 <div class="show">输出示例：
@@ -1845,12 +1845,12 @@ find . -name "file*" -print -quit
 <li><span class="strong">-exec 命令c {} \;</span> 找到文件后执行命令c，find会对每一个找到的文件单独执行一次exec选项后指定的命令，命令c如果要用到文件名作为参数，会以匹配文件的<span class="tips">完整路径</span>作为参数执行命令。该选项会直接在find命令的搜索根路径下工作，不会进入匹配文件所在目录，然后以完整路径执行命令。适合那些可以接收完整路径作为命令参数的命令，如：cat,cp等，但它没有-execdir安全(参考下文)。-exec之后的所有参数都会作为命令c的一部分，直到遇到<span class="tips">;</span>为止，可以在命令c中使用<span class="tips">{}</span>代表当前正在处理的文件名</li>
 <li><span class="strong">-execdir 命令c {} \;</span> (GNU拓展)找到文件后执行命令c，find会对每一个找到的文件单独执行一次execdir选项后指定的命令，命令c如果要用到文件名作为参数，会以匹配文件的<span class="tips">文件名(不包含路径)</span>作为参数执行命令。该选项在执行命令前，会进入匹配文件所在目录，然后直接以文件名作为命令执行参数，因此该选项适合执行那些命令参数中适合直接使用文件名，而不应该包含路径的命令(如：tar命令)，它比-exec安全。同样，-execdir之后的所有参数都会作为命令c的一部分，直到遇到<span class="tips">;</span>为止，可以在命令c中使用<span class="tips">{}</span>代表当前正在处理的文件名</li>
 </ul>
-<p>上述命令都使用<span class="tips">;</span>作为命令终止符，为了防止shell解析，<span class="tips">;</span>号需要使用引号包裹或转义符转义，写成<span class="tips">\;</span>或者<span class="tips">‘;’</span>形式</p>
+<p>上述命令都使用<span class="tips">;</span>作为命令终止符，为了防止shell解析，<span class="tips">;</span>号需要使用引号包裹或转义符转义，写成<span class="tips">\;</span>或者<span class="tips">';'</span>形式</p>
 <p><span class="strong">关于安全性</span>：-execdir选项在执行命令前，会进入匹配文件所在目录，这一行为可能会带来安全风险。如果这些目录包含恶意程序(如：攻击者自定义的ls命令)，而用户的PATH环境变量中包含了相对路径.或空值，则此时系统查找命令的路径也会随着切换到当前目录中，并且可能会将攻击者的程序作为系统命令执行，因此，-execdir会在命令执行前会检查PATH环境变量，要求PATH必须满足：</p>
 <ul>
-<li>所有路径都必须是绝对路径(如”/bin:/usr/bin:/sbin:/usr/local/bin”合格)</li>
-<li>不能包含空元素(如”/bin:/usr/bin::/usr/local/bin”中间::之间包含空元素)</li>
-<li>不能包含相对路径(如”/bin:/usr/bin:.:/usr/local/bin:sbin”中包含相对路径.和非绝对路径目录sbin)</li>
+<li>所有路径都必须是绝对路径(如"/bin:/usr/bin:/sbin:/usr/local/bin"合格)</li>
+<li>不能包含空元素(如"/bin:/usr/bin::/usr/local/bin"中间::之间包含空元素)</li>
+<li>不能包含相对路径(如"/bin:/usr/bin:.:/usr/local/bin:sbin"中包含相对路径.和非绝对路径目录sbin)</li>
 </ul>
 <p>当PATH不满足上述要求时，find会在执行-execdir及其所指定的命令时拒绝执行命令并报错</p>
 <div class="show">风险案例：

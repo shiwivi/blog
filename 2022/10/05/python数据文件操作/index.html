@@ -46,7 +46,7 @@
             <li><a href="/blog/tags/408">#408</a></li>
             <li>#Security</li>
             <li><a href="/blog/tags/Linux">#Linux</a></li>
-            <li>#Python</li>
+            <li><a href="/blog/tags/Python">#Python</a></li>
             <li><a href="/blog/tags/Servr">#Server</a></li>
             <li><a href="/blog/tags/Web">#Web</a></li>
         </ul>
@@ -132,311 +132,167 @@
     <div class="result-container">
         <div id="search-result" class="display-result"></div>
     </div>
-    <div class="toc-wrapper"><div class="toc-btn">目 录</div><div class="toc-box"><!--tocBox用于容纳生成在toc外的目录--><ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%AE%80%E4%BB%8B"><span class="toc-number">1.</span> <span class="toc-text">简介</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%85%B3%E4%BA%8E"><span class="toc-number">1.1.</span> <span class="toc-text">关于</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%9F%BA%E6%9C%AC%E8%AF%AD%E6%B3%95"><span class="toc-number">1.2.</span> <span class="toc-text">基本语法</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AF%B9%E8%B1%A1"><span class="toc-number">2.</span> <span class="toc-text">对象</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%AF%B9%E8%B1%A1%E5%86%99%E6%B3%95"><span class="toc-number">2.1.</span> <span class="toc-text">对象写法</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%BC%A9%E8%BF%9B%E4%B8%8E%E5%B5%8C%E5%A5%97"><span class="toc-number">2.2.</span> <span class="toc-text">缩进与嵌套</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%A4%8D%E6%9D%82%E5%AF%B9%E8%B1%A1%E6%A0%BC%E5%BC%8F"><span class="toc-number">2.3.</span> <span class="toc-text">复杂对象格式</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%95%B0%E7%BB%84"><span class="toc-number">3.</span> <span class="toc-text">数组</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%95%B0%E7%BB%84%E5%86%99%E6%B3%95"><span class="toc-number">3.1.</span> <span class="toc-text">数组写法</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%BC%A9%E8%BF%9B%E4%B8%8E%E5%B5%8C%E5%A5%97-1"><span class="toc-number">3.2.</span> <span class="toc-text">缩进与嵌套</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%A0%87%E9%87%8F"><span class="toc-number">4.</span> <span class="toc-text">标量</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AD%97%E7%AC%A6%E4%B8%B2%E5%A4%84%E7%90%86"><span class="toc-number">5.</span> <span class="toc-text">字符串处理</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%8D%95%E5%BC%95%E5%8F%B7%E4%B8%8E%E5%8F%8C%E5%BC%95%E5%8F%B7"><span class="toc-number">5.1.</span> <span class="toc-text">单引号与双引号</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%8C%BA%E5%9D%97%E5%AD%97%E7%AC%A6%E4%B8%B2%E5%A4%84%E7%90%86"><span class="toc-number">5.2.</span> <span class="toc-text">区块字符串处理</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%B7%BB%E5%8A%A0HTML%E6%A0%87%E7%AD%BE"><span class="toc-number">6.</span> <span class="toc-text">添加HTML标签</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%94%9A%E7%82%B9%E4%B8%8E%E5%BC%95%E7%94%A8"><span class="toc-number">7.</span> <span class="toc-text">锚点与引用</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%96%87%E4%BB%B6%E6%A0%BC%E5%BC%8F"><span class="toc-number">8.</span> <span class="toc-text">文件格式</span></a></li></ol></div></div>
+    <div class="toc-wrapper"><div class="toc-btn">目 录</div><div class="toc-box"><!--tocBox用于容纳生成在toc外的目录--><ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#CSV"><span class="toc-number">1.</span> <span class="toc-text">CSV</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%89%B9%E7%82%B9"><span class="toc-number">1.1.</span> <span class="toc-text">特点</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%AF%BC%E5%85%A5-csv-%E6%A8%A1%E5%9D%97"><span class="toc-number">1.2.</span> <span class="toc-text">导入 csv 模块</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%AF%BB%E5%8F%96CSV"><span class="toc-number">1.3.</span> <span class="toc-text">读取CSV</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%86%99%E5%85%A5CSV"><span class="toc-number">1.4.</span> <span class="toc-text">写入CSV</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#json"><span class="toc-number">2.</span> <span class="toc-text">json</span></a></li></ol></div></div>
         <div class="article">
-        <h1 class="title">yaml语法</h1>
+        <h1 class="title">python数据文件操作</h1>
         <div class="art-info">
-            <div><span><span class="iconfont icon-zishu-jzl"></span>字数：4218</span>
-            <span><span class="iconfont icon-riqi"></span>写于：2022-07-14</span></div>
-            <div><span><span class="iconfont icon-zuixinnew3"></span>最新更新：2022-07-14</span>
-            <span><span class="iconfont icon-shijian"></span>阅读本文预计花费您13分钟</span></div>
+            <div><span><span class="iconfont icon-zishu-jzl"></span>字数：3923</span>
+            <span><span class="iconfont icon-riqi"></span>写于：2022-10-05</span></div>
+            <div><span><span class="iconfont icon-zuixinnew3"></span>最新更新：2026-10-05</span>
+            <span><span class="iconfont icon-shijian"></span>阅读本文预计花费您12分钟</span></div>
         </div>
         <div class="art-content">
-        <html><head></head><body><div class="broadcast color-blue">
-<div class="iconfont icon-yinhao"></div>
-YAML官方文档：<a target="_blank" rel="noopener" href="https://yaml.org/spec/1.2.2/">YAML 1.2.2</a></div>
-
-<h3 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h3><h4 id="关于"><a href="#关于" class="headerlink" title="关于"></a>关于</h4><p>YAML是一种数据序列化语言，可用于存储和传输数据，常用于编写配置文件、数据文件、日志文件，以及跨语言进行数据共享等环境，大多数编程语言都可以使用 YAML 进行数据序列化。</p>
-<p>YAML文件后缀为<span class="tips">.yml</span>或<span class="tips">.yaml</span></p>
-<h4 id="基本语法"><a href="#基本语法" class="headerlink" title="基本语法"></a>基本语法</h4><p><span class="strong">1. 通常使用键值对形式</span></p>
-<ul>
-<li>键与值通常不需要引号包裹 (这点与json不同)</li>
-<li>值可以为：数组、对象、标量值</li>
-<li>标量值是指：整数、浮点数、字符串、布尔值、Null、时间、日期</li>
+        <html><head></head><body><h3 id="CSV"><a href="#CSV" class="headerlink" title="CSV"></a>CSV</h3><p><span class="strong">CSV</span>（Comma-Separated Values，逗号分隔值）是一种用于存储表格数据的纯文本文件格式。它用纯文本的形式，按行列结构组织数据，每行是一条记录，每列是一个字段，字段之间通常用逗号分隔</p>
+<h4 id="特点"><a href="#特点" class="headerlink" title="特点"></a>特点</h4><ul>
+<li>第一行通常为表头，如：姓名,年龄,城市，方便csv.DictReader()、excel程序读取，第一行也可能直接为数据(通过代码手动指定表头)</li>
+<li>默认使用<span class="tips">逗号,</span>分隔，也可自定义分隔符，如使用制表符(\t)，分号(;)等</li>
+<li>如果字段本身包含分隔符、换行符，需要加引号，如：Alice,"Hello, world" </li>
+<li>拓展名通常为<span class="tips">.csv</span>，也可以为.tsv（制表符分隔）等</li>
+<li>所有数据都是文本，代码读取需要数值等类型需要手动转换类型</li>
+<li>文件编码方式不唯一，建议手动指定 UTF-8</li>
+<li>支持被 Excel 等导入，随便一个文本编辑器可打开，支持跨平台，但需要处理换行符：Windows用\r\n，Linux/Mac用\n</li>
 </ul>
-<p><span class="strong">2. 通过缩进或者样式流表示数据结构</span></p>
+<div class="shell"><code>姓名,年龄,城市
+张三,25,北京
+李四,30,上海
+王五,35,重庆</code></div>
+
+<h4 id="导入-csv-模块"><a href="#导入-csv-模块" class="headerlink" title="导入 csv 模块"></a>导入 csv 模块</h4><p>Python 内置 csv 模块</p>
+<pre><code>import csv</code></pre>
+
+<h4 id="读取CSV"><a href="#读取CSV" class="headerlink" title="读取CSV"></a>读取CSV</h4><h6 id="读取为列表"><a href="#读取为列表" class="headerlink" title="读取为列表"></a>读取为列表</h6><p><span class="strong">csv.reader(fd...)</span>返回一个可迭代对象，包含多个列表，每行数据为一个列表</p>
 <ul>
-<li>数据可以通过空格缩进来表示层级关系，但不能用制表符(Tab)</li>
-<li>子结构相较父结构必须缩进至少一个空格，同一级数据须缩进相同空格数，即左端对齐</li>
-<li>也可以使用花括号{&nbsp;}，中括号[&nbsp;]等样式流表示层级关系<br><span class="strong">3. 大小写敏感</span><br><span class="strong">4. 使用#号注释</span></li>
-</ul>
-<h3 id="对象"><a href="#对象" class="headerlink" title="对象"></a>对象</h3><p>最为常用的数据类型，又称为字典、哈希、映射，以<span class="tips"> key: &nbsp;value </span>键值对的形式存储数据，<span class="tips">key: 后需要有空格!</span></p>
-<h4 id="对象写法"><a href="#对象写法" class="headerlink" title="对象写法"></a>对象写法</h4><div class="show">name: JayChou
-album: 十一月的萧邦
-</div>
-
-<p>或者使用样式流：</p>
-<div class="show">{
-    name: JayChou,
-    album: 十一月的萧邦
-}
-</div>
-等同于json格式下的
-<div class="show">{
-  "name": "JayChou",
-  "album": "十一月的萧邦"
-}
-</div>
-
-<h4 id="缩进与嵌套"><a href="#缩进与嵌套" class="headerlink" title="缩进与嵌套"></a>缩进与嵌套</h4><p>可以通过缩进至少一个空格表示层级关系，从而嵌套其他对象、数组等</p>
-<div class="show">student:
-   name: aaa
-   age: 16
-   hobby:
-    - basketball
-    - swimming</div>
-<div class="broadcast color-red">
-<div class="iconfont icon-gantanhao"></div>
-多级嵌套时，每层嵌套都应当缩进，<span class="tips">且每个子元素左边应该缩进相等的空格数，即左端对齐</span></div>
-   使用样式流：
-   <div class="show">student: {
-        name: aaa,
-        age: 16,
-        hobby: [ basketball , swimming ]
-   }</div>
-
-<h4 id="复杂对象格式"><a href="#复杂对象格式" class="headerlink" title="复杂对象格式"></a>复杂对象格式</h4><p>使用<span class="tips">?加空格</span>可以指定多个key值，使用<span class="tips">:加空格</span>指定多个value</p>
-<div class="show">? 
-      - key1
-      - key2
-: 
-      - value1
-      - value2</div>
-    表示key是一个数组，值也是一个数组，样式流：
-    <div class="show">key1,key2: ["value1","value2"]</div>
-
-<h3 id="数组"><a href="#数组" class="headerlink" title="数组"></a>数组</h3><p>使用<span class="tips strong">-</span>开头表示数组元素</p>
-<h4 id="数组写法"><a href="#数组写法" class="headerlink" title="数组写法"></a>数组写法</h4><div class="show">- value1
-- value2
-- value3</div>
-样式流：
-<div class="show">[value1,value2,value3]</div>
-
-<h4 id="缩进与嵌套-1"><a href="#缩进与嵌套-1" class="headerlink" title="缩进与嵌套"></a>缩进与嵌套</h4><p>可以通过缩进表示层级关系，来嵌套数组、对象等</p>
-<div class="show">- name: 周杰伦,
-  age: 42,
-  songs: 
-   - 夜曲
-   - 米兰的小铁匠
-- name: 林肯公园,
-  age: 41,
-  songs:
-   - In the End
-   - Numb
-</div>
-样式流
-<div class="show">[
-  {
-    name: 周杰伦,
-    age: 42,
-    songs: [ 夜曲 , 米兰的小铁匠 ]
-  },
-  {
-    name: 林肯公园,
-    age: 41,
-    songs: [ In the End , Numb ]
-  }
-]</div>
-
-<h3 id="标量"><a href="#标量" class="headerlink" title="标量"></a>标量</h3><p>标量指最基本的，不可再分的值，这里指：整数、浮点数、字符串、布尔值、Null、时间、日期</p>
-<p>基本使用方法：</p>
-<div class="show">1. 整数可以为非十进制数
-num1: 120           #普通十进制数
-num2: 0b10_1011     #二进制以0b开头
-num3: 07100         #八进制以0开头
-num4: 0xf1ab        #十六进制以0x开头
-2. 浮点数可以使用科学计数法
-float1: 3.14
-float2: 3.1415926e+5 #科学计数法314159.26
-float3: -.inf        #负无穷大
-flota4: .nan         #不是数字
-3. 布尔值大小写均可
-bool: true
-值为：true、True、TRUE均可，但TRUe将被解析为字符串
-4. Null可用<span class="tips">~</span>表示
-data: ~
-5. 日期必须使用ISO 8601格式，即yyyy-MM-dd
-date: 2021-07-15
-6. 时间使用ISO 8601格式，时间和日期之间使用T连接，最后使用+代表时区
-time: 2021-07-15T00:42:31+08:00
-在JavaScript中解析为Thu Jul 15 2021 00:42:31 GMT+0800 (中国标准时间)
-7. 使用<span class="tips">!!数据类型 值</span>进行类型转换
-date: !!str 2021-01-15
-</div>
-
-<h3 id="字符串处理"><a href="#字符串处理" class="headerlink" title="字符串处理"></a>字符串处理</h3><p>一般情况下，字符串不需要添加引号，但如果字符串中间包含特殊字符，尤其是<span class="tips">冒号加空格</span>组合时，为了避免被yaml解析为键值对，需要添加引号</p>
-<div class="show">str: 'said: meet you like wind'</div>
-
-<p>给数值等标量添加引号将解析为字符串</p>
-<div class="show">str: '99.99'</div>
-
-<p>多行字符串，<span class="tips">第二行开始所有行需要缩进至少一个空格</span>，但解析时将被解析为一行字符串，且换行符会被替换为空格</p>
-<div class="show">str: aaaa
- bbbb
- cccc
- 将被解析为
- str: "aaaa bbbb cccc"</div>
-
-<h4 id="单引号与双引号"><a href="#单引号与双引号" class="headerlink" title="单引号与双引号"></a>单引号与双引号</h4><p> 单引号和双引号均可以用于包裹字符串</p>
+<li><span class="snip">fd</span>：可以是任何支持迭代、且每次返回一个字符串的对象，如文件对象、列表</li>
+<li><span class="snip">delimiter</span>指定字段分隔符，默认为逗号','</li>
+<li><span class="snip">quotechar</span>指定默认使用的引号，默认为双引号""</li>
+<li><span class="snip">quoting</span>引号策略，常用值有：<blockquote>
 <ul>
-<li><span class="strong">单引号会原样输出，将转义字符作为普通字符串输出</span></li>
-<li><span class="strong">双引号会转义字符串，如将 \n 转义为换行</span></li>
+<li>csv.QUOTE_MINIMAL：仅在必要时加引号（默认）</li>
+<li>csv.QUOTE_ALL：所有字段加引号</li>
+<li>csv.QUOTE_NONNUMERIC：非数字字段加引号，读取时自动转 float</li>
+<li>csv.QUOTE_NONE：不加引号</li>
 </ul>
-<div class="show">如：
-content: '不会\n换行'
-内容输出为：
-<span class="tips">不会\n换行</span>
-content: "进行\n换行"
-内容输出为：
- <span class="tips">进行
-  换行</span>
-</div>
+</blockquote>
+</li>
+<li><span class="snip">lineterminator</span>指定行结束符，默认为'\r\n'</li>
+<li><span class="snip">dialect</span>：用于指定一套"方言"，里面同时打包好了分隔符、引号规则、换行符等参数，方便快速切换，内置了3个值，excel(默认，逗号分隔，\r\n换行)，excel-tab(制表符分隔TSV)，unix(逗号分隔，\n换行)</li>
+</ul>
+<pre><code>import csv
 
-<h4 id="区块字符串处理"><a href="#区块字符串处理" class="headerlink" title="区块字符串处理"></a>区块字符串处理</h4><ol>
-<li><p>多行字符串可以使用<span class="tips strong">|</span>保留所有换行符，内容从第二行开始需要缩进至少一个空格，且最后一行的换行符也会保留。</p>
-<div class="show">lyrics: |
-aaaa 
-bbbb
-cccc 
-dddd
-</div>
-输出为：
-<div class="show">aaaa 
-bbbb
-cccc 
-dddd
-<br></div></li>
-<li><p>可以使用<span class="tips strong">&gt;</span>去除换行，换行符将被空格代替 (如果某一行是空行，该空行会被额外保留)</p>
-<div class="show">lyrics: &gt;
-aaaa 
-bbbb
-cccc 
-dddd</div>
-输出为：
-<div class="show">aaaa bbbb cccc dddd</div></li>
-<li><p>可以使用<span class="tips strong">+</span>保留文字块末尾的换行</p>
-<div class="show">lyrics: |+
-aaaa 
-bbbb
-cccc 
-dddd</div>
-输出为：
-<div class="show">aaaa 
-bbbb
-cccc 
-dddd
-<br></div></li>
-<li><p>可以使用<span class="tips strong">-</span>去除文字块末尾的换行</p>
-<div class="show">lyrics: |-
-aaaa 
-bbbb
-cccc 
-dddd</div>
-输出为：
-<div class="show">aaaa 
-bbbb
-cccc 
-dddd
-</div>
-<div class="broadcast color-blue">
-<div class="iconfont icon-yinhao"></div>
-在yml文件中配置好字符串格式后，读取到html中时往往需要添加如<span class="tips">white-space: pre-line;</span>等css属性来保留换行符和空格，否则读入的数据可能会被css默认样式去除换行符，从而无法展示原生yml指定的数据格式</div></li>
-<li><div class="tips strong">在样式流中，无法使用 | &gt; + -</div>
-<div class="show">如：以上数据写为样式流
-          { 
-            lyrics: |-
-             aaaa 
-             bbbb
-             cccc 
-             dddd
-            }
-|- 将无法解析，抛出错误</div></li>
-</ol>
-<h3 id="添加HTML标签"><a href="#添加HTML标签" class="headerlink" title="添加HTML标签"></a>添加HTML标签</h3><p>yaml允许在值中添加HTML标签，并且标签会被正确地解析为DOM</p>
-<div class="show">- tag: web
-  content: 推荐网站&lt;a href='SHIWIVI'&gt;SHIWIVI&lt;/a&gt;</div>
-  或
-  <div class="show">- tag: web
-  content: |-
-   推荐
-   网站&lt;a href='SHIWIVI'&gt;SHIWIVI&lt;/a&gt;</div>
-解析为：
-<div class="show">推荐网站 <a href="#">SHIWIVI</a></div>
-   <div class="broadcast color-green">
-<div class="iconfont icon-qiqiu"></div>
-使用时需要注意，插入的HTML标签是否会被其他语言解析为字符串，但yaml本身是可以输出为DOM元素的</div>
+with open('data.csv', 'r', encoding='utf-8') as file:
+    reader = csv.reader(file)
+    for row in reader:
+        print(row)
+#返回值为列表
+['姓名', '年龄', '城市']
+['张三', '25', '北京']
+['李四', '30', '上海']
+['王五', '35', '重庆']
+</code></pre>
 
-<h3 id="锚点与引用"><a href="#锚点与引用" class="headerlink" title="锚点与引用"></a>锚点与引用</h3><p>可以使用<span class="tips">&amp;</span>定义一个锚点，然后使用<span class="tips">*</span>引用锚点</p>
-<div class="show">first: &amp;anchor  #定义锚点
- - aaa
- - bbb
-second:  *anchor #调用锚点</div>
-解析为
-<div class="show">first: [aaaaa,bbb]
-second: [aaaaa,bbb] </div>
+<h6 id="读取为字典"><a href="#读取为字典" class="headerlink" title="读取为字典"></a>读取为字典</h6><p><span class="strong">csv.DictReader(fd....)</span>返回可迭代对象，遍历结果为字典，通常以首行表头或fieldnames参数指定字段作为键，文件内容作为值</p>
+<ul>
+<li><span class="snip">fd</span>文件对象或可迭代对象</li>
+<li><span class="snip">fieldnames = ['a','b'...]</span>手动指定表头字段名序列，省略则用首行作字段名</li>
+<li><span class="snip">restkey</span>多余字段的键名</li>
+<li><span class="snip">restval</span>缺失字段的默认值，默认 None</li>
+<li><span class="snip">dialect</span>指定"方言"，默认 'excel'，参考上文</li>
+</ul>
+<pre><code>import csv
 
-<p>如果将多个键值对引用到其他地方，可以使用<span class="tips">&lt;&lt;</span>合并数据</p>
-<div class="show">first: &amp;data  #定义锚点
-   name: lol
-   age: 18
-   hobby:
-    - sing
-    - swing
-second: 
-   &lt;&lt;: *data    #将数据插入此处
-   address: zzz</div>
- 解析为：
- <div class="show">{
-  "first": {
-      "name": "lol",
-      "age": 18,
-      "hobby": "sing  swimming"
-  },
-  "second": {
-      "name": "lol",
-      "age": 18,
-      "hobby": "sing  swimming",
-      "address": "zzz"
-  }
-}</div>
-<div class="broadcast color-purple">
-<div class="iconfont icon-fengche"></div>
-如果多次定义了同名的锚点(重定义)，则先定义的锚点会被覆盖</div>
+with open('data.csv', 'r', encoding='utf-8') as file:
+    reader = csv.DictReader(file)
+    for row in reader:
+        print(row)  
+#输出字典 
+{'姓名': '张三', '年龄': '25', '城市': '北京'}
+{'姓名': '李四', '年龄': '30', '城市': '上海'}
+{'姓名': '王五', '年龄': '35', '城市': '重庆'}</code></pre>
 
-<h3 id="文件格式"><a href="#文件格式" class="headerlink" title="文件格式"></a>文件格式</h3><p>一个完整的yml文档以<span class="tips">-‌-‌-</span>标识文档开始，以<span class="tips">…</span>标识文档结束，该标识非必须，无标识的称为<span class="tips">裸文档</span>，文件开头可以添加<span class="tips">%YAML</span>来识别文件的YAML版本</p>
-<div class="show">%YAML 1.2
-# 开头注释，注明文档作者等信息
----
-ip: 45.77.77.49
-port: 443
-...</div>
+<h4 id="写入CSV"><a href="#写入CSV" class="headerlink" title="写入CSV"></a>写入CSV</h4><p>Windows下，通过 open() 打开文件并写入 csv 时，一定要指定 <span class="tips">newline=''</span>，否则会在每行后多出一个空行，原因：</p>
+<ul>
+<li>windows下 csv.writer() 会在写入每一行后添加行结束符'\r\n'</li>
+<li>Windows下，用 open(..., 'w') 打开文件时，默认处于文本模式，会做换行符转换，写入文件时会自动把 '\n' 自动转换成 '\r\n'</li>
+<li>由此，最终行结束符会被写入为 '\r\r\n'</li>
+</ul>
+<h6 id="按列表写入"><a href="#按列表写入" class="headerlink" title="按列表写入"></a>按列表写入</h6><p><span class="strong">csv.writer(csvfile...)</span>返回一个 writer 对象</p>
+<ul>
+<li><span class="snip">csvfile</span>任何有write()方法的对象，如文件对象</li>
+<li><span class="snip">delimiter,quotechar,quoting</span>指定字段分隔符，引号字符，引号策略，参考上文</li>
+<li><span class="snip">lineterminator</span>行结束符，默认'\r\n'<br><span class="text-green">DictWriter对象方法</span></li>
+<li><span class="snip">writer.writerow(row)</span>写入一行（row 为可迭代对象）</li>
+<li><span class="snip">writer.writerows(rows)</span>写入多行（rows 为行的可迭代对象）</li>
+</ul>
+<pre><code>data = [['姓名', '年龄', '城市'],
+        ['张三', 25, '北京'],
+        ['李四', 30, '上海']]
 
-<p>一个yml文件中可能有多个文档</p>
-<div class="show">---
-ip: 45.77.77.10
-port: 80
-...
----
-ip: 45.77.77.11
-port: 443
-...</div>
-但如果在一个yml文件中写入多个文档，在某些环境下读入可能报错，需要分割为多个文件
-<div class="shell">err: YAMLException: expected a single document in the stream, but found more</div>
+with open('output.csv', 'w', encoding='utf-8-sig', newline='') as f:
+    writer = csv.writer(f)
+    writer.writerow(['姓名', '年龄', '城市'])   # 写一行
+    writer.writerows(data)                      # 写多行
+</code></pre>
 
-<div class="broadcast color-yellow">
-<div class="iconfont icon-dengpao14hao"></div>
-更多语法和拓展详见官方文档</div></body></html>
+<h6 id="按字典写入"><a href="#按字典写入" class="headerlink" title="按字典写入"></a>按字典写入</h6><p><span class="strong">csv.DictWriter(f, fieldnames,...)</span> 返回一个 writer 对象</p>
+<ul>
+<li><span class="snip">f</span>文件对象</li>
+<li><span class="snip">fieldnames</span>必填，字段名序列，决定写入顺序</li>
+<li><span class="snip">restval</span>缺失字段的默认值（默认 ''）</li>
+<li><span class="snip">extrasaction</span>多余键的处理，'raise'（默认，抛 ValueError）或 'ignore'</li>
+<li><span class="snip">dialect</span>方言，默认'excel'，参考上文<br><span class="text-green">DictWriter对象方法</span></li>
+<li><span class="snip">writer.writeheader()</span>写入表头，写入内容通过 fieldnames 参数指定</li>
+<li><span class="snip">writer.writerow(rowdict)</span>写入一行（字典）</li>
+<li><span class="snip">writer.writerows(rowdicts)</span>写入多行（字典的可迭代对象）</li>
+</ul>
+<pre><code>with open('output.csv', 'w', encoding='utf-8-sig', newline='') as f:
+    fieldnames = ['姓名', '年龄', '城市']
+    writer = csv.DictWriter(f, fieldnames=fieldnames)
+    writer.writeheader()                                    # 写表头
+    writer.writerow({'姓名': '张三', '年龄': 25, '城市': '北京'})
+    writer.writerows([{'姓名': '李四', '年龄': 30, '城市': '上海'}])</code></pre>
+
+<h3 id="json"><a href="#json" class="headerlink" title="json"></a>json</h3><p>json 标准库，用于处理 JSON 数据的编码（序列化）和解码（反序列化）</p>
+<ul>
+<li><span class="snip">json.loads(text)</span>JSON 字符串 → Python 对象</li>
+<li><span class="snip">json.load(file)</span>从文件对象读取 JSON → Python 对象</li>
+<li><span class="snip">json.dumps(obj,ensure_ascii=False,indent=2)</span>Python 对象 → JSON 字符串<blockquote>
+<ul>
+<li>如果内容有中文，推荐将 ensure_ascii 改为 False，来直接输出中文，而不是类似于 \u4e2d\u6587</li>
+<li>indent：格式化缩进，适合配置文件、调试和日志，如果用于网络传输等紧凑 JSON，则可以省略indent</li>
+</ul>
+</blockquote>
+</li>
+<li><span class="snip">json.dump(obj, file,ensure_ascii=False,indent=2)</span>将 Python 对象写入 JSON 文件</li>
+</ul>
+<pre><code># 将JSON 字符串转为 Python 对象
+json_str = '{"name": "张三", "age": 25}'
+data = json.loads(json_str)
+print(data["name"]) # 通过键读取数据
+# 从文件读取 → Python 对象
+with open("data.json", "r", encoding="utf-8") as f:
+    data = json.load(f)
+
+# Python 对象 → JSON 字符串
+data = {"name": "张三", "age": 25, "city": "北京"}
+json_str = json.dumps(data, ensure_ascii=False)
+print(json_str)  # {"name": "张三", "age": 25, "city": "北京"}
+# Python 对象 → 写入文件
+with open("data.json", "w", encoding="utf-8") as f:
+    json.dump(data, f, ensure_ascii=False, indent=2)
+</code></pre>
+
+</body></html>
         </div>
     </div>
     <div class="post-nav">
         
             <div class="post-prev ">
-                <a href="/blog/2022/07/16/%E8%B7%AF%E7%94%B1%E4%B8%8E%E8%B7%AF%E7%94%B1%E5%AE%88%E5%8D%AB/">上一篇：路由与路由守卫</a>
+                <a href="/blog/2022/10/12/playwright/">上一篇：playwright</a>
             </div>
             
             
                 <div class="post-next">
-                    <a href="/blog/2022/06/14/Grid%E5%B8%83%E5%B1%80/">下一篇：Grid栅格布局 </a>
+                    <a href="/blog/2022/09/27/python%E7%88%AC%E8%99%AB%E5%BA%93/">下一篇：python爬虫库 </a>
                 </div>
                  
     </div>

@@ -46,7 +46,7 @@
             <li><a href="/blog/tags/408">#408</a></li>
             <li>#Security</li>
             <li><a href="/blog/tags/Linux">#Linux</a></li>
-            <li>#Python</li>
+            <li><a href="/blog/tags/Python">#Python</a></li>
             <li><a href="/blog/tags/Servr">#Server</a></li>
             <li><a href="/blog/tags/Web">#Web</a></li>
         </ul>
@@ -382,7 +382,7 @@ vim会高亮显示查找到的内容，若想取消高亮显示，使用<span cl
 <li><span class="strong">:行号1,行号2s/替换内容/新内容/g  替换行号1到行号2之间的所有目标内容</span></li>
 </ul>
 
-<h6 id="4-在选取内容中替换-可视模式下"><a href="#4-在选取内容中替换-可视模式下" class="headerlink" title="4.在选取内容中替换(可视模式下)"></a>4.在选取内容中替换(可视模式下)</h6><p>只替换选中区域中的指定内容，需要在可视模式下先选中需要替换的区域，选取区域后输入<span class="tips">:</span>,vim会自动补全为<span class="tips">:’&lt;,&gt;’</span>，完整语法为:</p>
+<h6 id="4-在选取内容中替换-可视模式下"><a href="#4-在选取内容中替换-可视模式下" class="headerlink" title="4.在选取内容中替换(可视模式下)"></a>4.在选取内容中替换(可视模式下)</h6><p>只替换选中区域中的指定内容，需要在可视模式下先选中需要替换的区域，选取区域后输入<span class="tips">:</span>,vim会自动补全为<span class="tips">:'&lt;,&gt;'</span>，完整语法为:</p>
 <ul>
 <li><span class="strong">:'&lt;,&gt;'s/替换内容/新内容/g  替换选择区域中的所有目标</span></li>
 </ul>
@@ -551,7 +551,7 @@ dd 删除光标当前所在行后
 :ab gmail sheiyoubingbayouxiangxiezhemechang@Gmail.com
 之后只需输入gmail空格或者回车，vim会自动补全该长字符串</code></div>
 
-<h3 id="使用寄存器"><a href="#使用寄存器" class="headerlink" title="使用寄存器"></a>使用寄存器</h3><p>使用复制粘贴时，vim是将内容缓存在寄存器中。用户可以自定义寄存器，vim中使用<span class="tips">“字母</span>来定义一个该字母(大小写均可)命名的寄存器，寄存器后往往加上具体命令，空定义寄存器无效。</p>
+<h3 id="使用寄存器"><a href="#使用寄存器" class="headerlink" title="使用寄存器"></a>使用寄存器</h3><p>使用复制粘贴时，vim是将内容缓存在寄存器中。用户可以自定义寄存器，vim中使用<span class="tips">"字母</span>来定义一个该字母(大小写均可)命名的寄存器，寄存器后往往加上具体命令，空定义寄存器无效。</p>
 <ul>
 <li><span class="strong">"字母yy  复制当前行到该寄存器中</span></li>
 <li><span class="strong">"字母p  从该寄存器中取出内容并粘贴</span></li>

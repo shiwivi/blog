@@ -46,7 +46,7 @@
             <li><a href="/blog/tags/408">#408</a></li>
             <li>#Security</li>
             <li><a href="/blog/tags/Linux">#Linux</a></li>
-            <li>#Python</li>
+            <li><a href="/blog/tags/Python">#Python</a></li>
             <li><a href="/blog/tags/Servr">#Server</a></li>
             <li><a href="/blog/tags/Web">#Web</a></li>
         </ul>
@@ -136,7 +136,7 @@
         <div class="article">
         <h1 class="title">计算机网络(六)无线/移动网络、音视频服务</h1>
         <div class="art-info">
-            <div><span><span class="iconfont icon-zishu-jzl"></span>字数：31930</span>
+            <div><span><span class="iconfont icon-zishu-jzl"></span>字数：31936</span>
             <span><span class="iconfont icon-riqi"></span>写于：2020-05-20</span></div>
             <div><span><span class="iconfont icon-zuixinnew3"></span>最新更新：2020-05-20</span>
             <span><span class="iconfont icon-shijian"></span>阅读本文预计花费您92分钟</span></div>
@@ -171,7 +171,7 @@
 <ul>
 <li>信道1的中心频率是2.412GHz</li>
 <li>信道2的中心频率是2.417GHz</li>
-<li>…以此类推…</li>
+<li>...以此类推...</li>
 <li>信道13的中心频率是2.472GHz</li>
 </ul>
 <p>将中心频率间隔(5MHz)规定为一个远小于信道频带宽度(22MHz)的值，带来的好处是可以在有限的频谱里多塞几个“标记点”，拆分出多个信道，但代价是相邻的信道工作频率会<span class="tips">重叠</span>，当两个设备在有重叠的信道上通信时，会出现严重的同频干扰，导致通信冲突、等待和降速。为了让信号彻底不干扰，设备工作时其所处信道的中心频率至少相隔22MHz，即<span class="text-red">间隔4个以上信道</span>(22/5=4.4)。</p>
@@ -288,7 +288,7 @@
 </blockquote>
 </blockquote>
 </li>
-<li>802.11标准也使用二进制指数退避算法来决定退避时间，即第<span class="text-red">i</span>轮退避就在<span class="text-red">{0,1,…,2<sup>2+i}</sup></span>个时隙中随机选择一个并等待，如：第1轮退避在0-8时隙中随机选择一个，第2轮退避在0-16时隙中随机选择一个，i的最大值为6，此时发送站会在0-255时隙中随机选一个，这与CSMA/CD稍有不同</li>
+<li>802.11标准也使用二进制指数退避算法来决定退避时间，即第<span class="text-red">i</span>轮退避就在<span class="text-red">{0,1,...,2<sup>2+i}</sup></span>个时隙中随机选择一个并等待，如：第1轮退避在0-8时隙中随机选择一个，第2轮退避在0-16时隙中随机选择一个，i的最大值为6，此时发送站会在0-255时隙中随机选一个，这与CSMA/CD稍有不同</li>
 </ul>
 <h5 id="退避的执行条件"><a href="#退避的执行条件" class="headerlink" title="退避的执行条件"></a>退避的执行条件</h5><ul>
 <li>等待时间为SIFS而不是DIFS的帧通常不需要参与退避和竞争，它们可以在等待SIFS后直接发送，这类帧有：ACK帧、CTS帧、分片确认帧、RTS/CTS过程中的响应帧、某些控制帧</li>

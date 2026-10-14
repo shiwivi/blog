@@ -46,7 +46,7 @@
             <li><a href="/blog/tags/408">#408</a></li>
             <li>#Security</li>
             <li><a href="/blog/tags/Linux">#Linux</a></li>
-            <li>#Python</li>
+            <li><a href="/blog/tags/Python">#Python</a></li>
             <li><a href="/blog/tags/Servr">#Server</a></li>
             <li><a href="/blog/tags/Web">#Web</a></li>
         </ul>
@@ -136,13 +136,13 @@
         <div class="article">
         <h1 class="title">Linux服务与系统资源管理</h1>
         <div class="art-info">
-            <div><span><span class="iconfont icon-zishu-jzl"></span>字数：31209</span>
+            <div><span><span class="iconfont icon-zishu-jzl"></span>字数：31216</span>
             <span><span class="iconfont icon-riqi"></span>写于：2021-12-29</span></div>
             <div><span><span class="iconfont icon-zuixinnew3"></span>最新更新：2022-01-20</span>
             <span><span class="iconfont icon-shijian"></span>阅读本文预计花费您90分钟</span></div>
         </div>
         <div class="art-content">
-        <html><head></head><body><h3 id="proc目录"><a href="#proc目录" class="headerlink" title="proc目录"></a>proc目录</h3><p><span class="strong">/proc</span>目录是由Linux内核生成的虚拟文件目录，用来向用户以文件形式提供一种动态访问内核数据和系统信息的接口，，该目录下的大部分文件大小通常显示为0(占用内存空间)，文件内容随着系统状态实时变化，在读取时会实时返回数据。该目录下大部分文件内容的字段分隔符为<span class="strong">NUL字符\0</span>，因此在读取文件内容时推荐使用命令<span class="text-red">cat 文件名 | tr ‘\000’ ‘ ‘</span>来使用空格替换\0</p>
+        <html><head></head><body><h3 id="proc目录"><a href="#proc目录" class="headerlink" title="proc目录"></a>proc目录</h3><p><span class="strong">/proc</span>目录是由Linux内核生成的虚拟文件目录，用来向用户以文件形式提供一种动态访问内核数据和系统信息的接口，，该目录下的大部分文件大小通常显示为0(占用内存空间)，文件内容随着系统状态实时变化，在读取时会实时返回数据。该目录下大部分文件内容的字段分隔符为<span class="strong">NUL字符\0</span>，因此在读取文件内容时推荐使用命令<span class="text-red">cat 文件名 | tr '\000' ' '</span>来使用空格替换\0</p>
 <h4 id="proc-lt-pid-gt"><a href="#proc-lt-pid-gt" class="headerlink" title="/proc/<pid>"></a>/proc/&lt;pid&gt;</h4><p>在proc目录下，每个正在运行的进程都有一个以pid为目录名的伪文件系统目录，里面包含了一些进程相关的文件，以下是部分文件包含的信息：</p>
 <h5 id="基本信息"><a href="#基本信息" class="headerlink" title="基本信息"></a>基本信息</h5><ul>
 <li><span class="strong">cmdline</span>启动该进程时的完整命令行参数，内容以NUL字符分隔</li>
@@ -288,7 +288,7 @@ pgrep -f "/usr/sbin/sshd -D"
 <li>-d 秒数:指定每几秒更新系统状态，默认是3秒</li>
 <li>-n 次数:在刷新指定次数后退出</li>
 <li>-b 批处理模式，通常用来将输出写入文件或交给其他程序处理，top会一次性输出信息，通常搭配-d和-n使用</li>
-<li>-p pid1,pid2…:查看指定进程的资源使用情况</li>
+<li>-p pid1,pid2...:查看指定进程的资源使用情况</li>
 <li>-u 用户名或ID:查看用户名下进程的资源使用情况</li>
 <li>-</li>
 <li>-H 显示线程而非进程资源，可以在运行后按H切换</li>
@@ -492,7 +492,7 @@ KiB Swap:        0 total,        0 free,        0 used.   375944 avail Mem
 </tbody></table>
 </div>
 
-<h5 id="kill向进程发送信号"><a href="#kill向进程发送信号" class="headerlink" title="kill向进程发送信号"></a>kill向进程发送信号</h5><p><span class="strong">kill [-信号] [进程PID1,PID2…]</span> </p>
+<h5 id="kill向进程发送信号"><a href="#kill向进程发送信号" class="headerlink" title="kill向进程发送信号"></a>kill向进程发送信号</h5><p><span class="strong">kill [-信号] [进程PID1,PID2...]</span> </p>
 <ul>
 <li>默认情况下，如果不指定信号，命令将发送SIGTERM(15)信号</li>
 <li>信号可以使用<span class="tips">代号</span>形式，也可以使用<span class="tips">信号名</span>形式，也可以是去除了<span class="tips">SIG</span>前缀的信号名形式</li>
@@ -1122,7 +1122,7 @@ at -f ./test.sh
 <h3 id="日志服务"><a href="#日志服务" class="headerlink" title="日志服务"></a>日志服务</h3><h4 id="rsyslog服务"><a href="#rsyslog服务" class="headerlink" title="rsyslog服务"></a>rsyslog服务</h4><p>Syslog(系统日志协议)是在一个IP网络中转发系统日志信息的标准，syslogd服务被广泛用于老版Unix/Linux系统中负责记录系统日志，RSyslog是syslog的多线程增强版，CentOS6以后系统默认使用Rsyslogd服务记录系统日志。</p>
 <h5 id="查询rsyslog服务是否在运行"><a href="#查询rsyslog服务是否在运行" class="headerlink" title="查询rsyslog服务是否在运行"></a>查询rsyslog服务是否在运行</h5><p>可使用命令<span class="strong">ps aux | grep rsyslogd</span>查看rsyslog进程是否在运行，红帽系列可使用命令<span class="strong">systemctl status rsyslog</span>查看</p>
 <h5 id="查看rsyslog服务是否开机自启动"><a href="#查看rsyslog服务是否开机自启动" class="headerlink" title="查看rsyslog服务是否开机自启动"></a>查看rsyslog服务是否开机自启动</h5><ul>
-<li><span class="strong">chkconfig –list |grep rsyslog</span></li>
+<li><span class="strong">chkconfig --list |grep rsyslog</span></li>
 <li><span class="strong">systemctl list-unit-files | grep rsyslog</span>(centos7)</li>
 </ul>
 <h4 id="日志文件"><a href="#日志文件" class="headerlink" title="日志文件"></a>日志文件</h4><p>系统日志默认保存在 <span class="tips">/var/log</span> 路径下，对应文件的作用:</p>
@@ -1496,7 +1496,7 @@ weekly
 <li><strong>/var/spool/mail</strong> 邮件</li>
 <li><strong>/etc/</strong> 重要服务的配置文件</li>
 <li><strong>/var/log</strong> 常用服务的日志</li>
-<li><strong>数据库数据、账户资料….</strong></li>
+<li><strong>数据库数据、账户资料....</strong></li>
 </ul>
 <h4 id="dump文件备份系统"><a href="#dump文件备份系统" class="headerlink" title="dump文件备份系统"></a>dump文件备份系统</h4><h5 id="1-安装dump"><a href="#1-安装dump" class="headerlink" title="1. 安装dump"></a>1. 安装dump</h5><ul>
 <li><strong>yum -y install dump</strong> (redhalt系列)</li>

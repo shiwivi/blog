@@ -46,7 +46,7 @@
             <li><a href="/blog/tags/408">#408</a></li>
             <li>#Security</li>
             <li><a href="/blog/tags/Linux">#Linux</a></li>
-            <li>#Python</li>
+            <li><a href="/blog/tags/Python">#Python</a></li>
             <li><a href="/blog/tags/Servr">#Server</a></li>
             <li><a href="/blog/tags/Web">#Web</a></li>
         </ul>
@@ -136,7 +136,7 @@
         <div class="article">
         <h1 class="title">Nginx笔记(上)</h1>
         <div class="art-info">
-            <div><span><span class="iconfont icon-zishu-jzl"></span>字数：11257</span>
+            <div><span><span class="iconfont icon-zishu-jzl"></span>字数：11263</span>
             <span><span class="iconfont icon-riqi"></span>写于：2022-03-04</span></div>
             <div><span><span class="iconfont icon-zuixinnew3"></span>最新更新：2022-03-06</span>
             <span><span class="iconfont icon-shijian"></span>阅读本文预计花费您33分钟</span></div>
@@ -259,7 +259,7 @@ nginx官方文档：<a target="_blank" href="http://nginx.org/en/docs/">http://n
 worker_processes  1;   //允许生成的worker process数
 
 <p>#error_log  logs/error.log;     //日志级别与存放路径<br>#error_log  logs/error.log  notice;<br>#error_log  logs/error.log  info;</p>
-<p>#pid        logs/nginx.pid; //master进程pid存放路径<br>……</p></div><p></p>
+<p>#pid        logs/nginx.pid; //master进程pid存放路径<br>......</p></div><p></p>
 <h5 id="user配置进程权限"><a href="#user配置进程权限" class="headerlink" title="user配置进程权限"></a>user配置进程权限</h5><p><span class="strong">user 用户名 [用户组];</span></p>
 <p>默认为nobody，配置决定了worker进程的调用用户，以及nginx对文件(一般指资源文件和目录)的读写权限，而日志文件、pid文件、配置文件等由master进程调用的文件则不受此配置影响，所有者一般为root。当配置的用户对指定文件无访问权限时，Nginx将返回403错误，此时需要授予该用户相关权限，或者更改为权限更高的用户。</p>
 <h5 id="worker-processes配置进程数量"><a href="#worker-processes配置进程数量" class="headerlink" title="worker_processes配置进程数量"></a>worker_processes配置进程数量</h5><ul>
@@ -492,7 +492,7 @@ location ~* \正则表达式  {   //在test目录下正则匹配(添加*号不�
 <ul>
 <li>地址：error_page 404 http://<span></span>wrong.com</li>
 <li>重定向:<div class="show">error_page   500 502 503 504  /50x.html;<br>location = /50x.html {<br>root   html;<br>}</div></li>
-<li>返回信息:<div class="show">error_page 404 @goto<br>loaction @goto{<br>  default_type text/plain;<br>  return 404 ‘not found….’<br>}</div></li>
+<li>返回信息:<div class="show">error_page 404 @goto<br>loaction @goto{<br>  default_type text/plain;<br>  return 404 'not found....'<br>}</div></li>
 </ul>
 <h3 id="Web服务器配置实例"><a href="#Web服务器配置实例" class="headerlink" title="Web服务器配置实例"></a>Web服务器配置实例</h3><p><strong>需求：</strong>在服务器8081和8082端口分别配置server1、server2两个服务，每个服务下有两个页面，根据客户端请求返回不同页面，为每个服务配置单独的访问日志。</p>
 <h4 id="目录树"><a href="#目录树" class="headerlink" title="目录树"></a>目录树</h4><p>webservers目录位于服务器根目录下，conf.d目录用于存放每个服务的配置文件，web目录用于存放页面和访问日志。每个服务下的logs目录用于存放access_log日志文件，webpages目录用于存放页面。</p>

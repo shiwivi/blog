@@ -46,7 +46,7 @@
             <li><a href="/blog/tags/408">#408</a></li>
             <li>#Security</li>
             <li><a href="/blog/tags/Linux">#Linux</a></li>
-            <li>#Python</li>
+            <li><a href="/blog/tags/Python">#Python</a></li>
             <li><a href="/blog/tags/Servr">#Server</a></li>
             <li><a href="/blog/tags/Web">#Web</a></li>
         </ul>
@@ -136,7 +136,7 @@
         <div class="article">
         <h1 class="title">Linux常用工具命令</h1>
         <div class="art-info">
-            <div><span><span class="iconfont icon-zishu-jzl"></span>字数：6754</span>
+            <div><span><span class="iconfont icon-zishu-jzl"></span>字数：6755</span>
             <span><span class="iconfont icon-riqi"></span>写于：2021-12-29</span></div>
             <div><span><span class="iconfont icon-zuixinnew3"></span>最新更新：2024-08-01</span>
             <span><span class="iconfont icon-shijian"></span>阅读本文预计花费您20分钟</span></div>
@@ -212,7 +212,7 @@ curl -o index.html test.shiwivi.com/mobileTest.html
 100   184    0   184    0     0    351      0 --:--:-- --:--:-- --:--:--   352
 </div>
 
-<h4 id="url通配"><a href="#url通配" class="headerlink" title="url通配"></a>url通配</h4><p>curl支持允许使用<span class="tips">大括号{}</span>、<span class="tips">中括号[]</span>来指定一个URL地址范围，此时需要使用<span class="tips">双引号””</span>来包裹URL地址，避免shell等程序解析这些字符</p>
+<h4 id="url通配"><a href="#url通配" class="headerlink" title="url通配"></a>url通配</h4><p>curl支持允许使用<span class="tips">大括号{}</span>、<span class="tips">中括号[]</span>来指定一个URL地址范围，此时需要使用<span class="tips">双引号""</span>来包裹URL地址，避免shell等程序解析这些字符</p>
 <div class="show">1.支持使用{ }指定多个地址
 curl "http://test.{one,two,three}.com"
 2.支持使用[ ]来指定一个域名或文件名范围
@@ -251,7 +251,7 @@ GNU社区的wget文档：<a target="_blank" rel="noopener" href="https://www.gnu
 <li><span class="strong">-i 文件名</span>从文件中读取URL，并依次下载</li>
 <li><span class="strong">-‌-wait=值</span>设置文件下载的时间间隔，避免对服务器造成过大负载</li>
 <li>-‌-random-wait 设置随机等待时间，模拟更自然的用户行为</li>
-<li><span class="strong">–tries=值</span> 设置下载失败后的重试次数，默认为20次</li>
+<li><span class="strong">--tries=值</span> 设置下载失败后的重试次数，默认为20次</li>
 </ul>
 <div class="show">1. 正常下载文件
 wget http://example.com/file.zip

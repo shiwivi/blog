@@ -46,7 +46,7 @@
             <li><a href="/blog/tags/408">#408</a></li>
             <li>#Security</li>
             <li><a href="/blog/tags/Linux">#Linux</a></li>
-            <li>#Python</li>
+            <li><a href="/blog/tags/Python">#Python</a></li>
             <li><a href="/blog/tags/Servr">#Server</a></li>
             <li><a href="/blog/tags/Web">#Web</a></li>
         </ul>
@@ -150,7 +150,7 @@
 ">https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/canvas</a></div>
 
 
-<h4 id="创建画布"><a href="#创建画布" class="headerlink" title="创建画布"></a>创建画布</h4><h5 id="通过HTML标签"><a href="#通过HTML标签" class="headerlink" title="通过HTML标签"></a>通过HTML标签</h5><p>可以通过直接添加HTML标签的方式创建canvas，并设置画布的宽高，然后通过<span class="tips">getContext()</span>方法获得画布的 2D 渲染上下文对象，需要为该方法提供<span class="tips">‘2d’</span>作为参数，该对象提供了用于在画布上绘图的方法和属性</p>
+<h4 id="创建画布"><a href="#创建画布" class="headerlink" title="创建画布"></a>创建画布</h4><h5 id="通过HTML标签"><a href="#通过HTML标签" class="headerlink" title="通过HTML标签"></a>通过HTML标签</h5><p>可以通过直接添加HTML标签的方式创建canvas，并设置画布的宽高，然后通过<span class="tips">getContext()</span>方法获得画布的 2D 渲染上下文对象，需要为该方法提供<span class="tips">'2d'</span>作为参数，该对象提供了用于在画布上绘图的方法和属性</p>
 <pre><code>&lt;body&gt;
     &lt;canvas width="600" height="400" id="canvas"&gt;&lt;/canvas&gt;
     &lt;script&gt;
@@ -270,11 +270,11 @@
 <h4 id="描边"><a href="#描边" class="headerlink" title="描边"></a>描边</h4><ul>
 <li><span class="strong">context.stroke() 绘制当前路径</span></li>
 <li><span class="strong">context.lineWidth=值; 修改描边线条的宽度</span></li>
-<li><span class="strong">context.strokeStyle=”颜色/渐变对象/Pattern对象”; 设置描边样式</span></li>
+<li><span class="strong">context.strokeStyle="颜色/渐变对象/Pattern对象"; 设置描边样式</span></li>
 </ul>
 <h4 id="填充"><a href="#填充" class="headerlink" title="填充"></a>填充</h4><ul>
 <li><span class="strong">context.fill() 填充已闭合的路径</span></li>
-<li><span class="strong">context.fillStyle=”颜色/渐变对象/Pattern对象”; 设置填充的样式</span></li>
+<li><span class="strong">context.fillStyle="颜色/渐变对象/Pattern对象"; 设置填充的样式</span></li>
 </ul>
 <h4 id="裁剪"><a href="#裁剪" class="headerlink" title="裁剪"></a>裁剪</h4><p><span class="strong">context.clip() 根据当前路径进行裁剪</span><br>沿着路径进行裁剪，裁剪路径外的图形将不再显示在Canvas中</p>
 <h4 id="清除"><a href="#清除" class="headerlink" title="清除"></a>清除</h4><p><span class="strong">context.clearRect(x,y,width,height) 清除指定区域内的画布内容</span></p>
@@ -303,7 +303,7 @@
 <li><span class="strong">context.isPointInPath(path2D对象, x, y) 返回boolean值，判断(x,y)点是否在封装的path2D路径内</span></li>
 </ul>
 <h3 id="线段"><a href="#线段" class="headerlink" title="线段"></a>线段</h3><h4 id="实线线段"><a href="#实线线段" class="headerlink" title="实线线段"></a>实线线段</h4><h5 id="线段路径"><a href="#线段路径" class="headerlink" title="线段路径"></a>线段路径</h5><p><span class="strong">context.lineTo(x,y) 连接直线路径到指定坐标</span></p>
-<h5 id="线段折点"><a href="#线段折点" class="headerlink" title="线段折点"></a>线段折点</h5><p><span class="strong">context.lineJoin=”miter/round/bevel”; </span></p>
+<h5 id="线段折点"><a href="#线段折点" class="headerlink" title="线段折点"></a>线段折点</h5><p><span class="strong">context.lineJoin="miter/round/bevel"; </span></p>
 <p>设置或返回两条线交汇时，线段折线处的样式</p>
 <ul>
 <li><strong>miter</strong> 尖锐折线(默认)</li>
@@ -331,8 +331,8 @@
        
 </script>
 
-<h5 id="线段末端"><a href="#线段末端" class="headerlink" title="线段末端"></a>线段末端</h5><p><span class="strong">context.lineCap=”butt/round/square;”</span></p>
-<p>设置或返回线段末端线帽的样式，”round” 和 “square” 值会使线条略微变长</p>
+<h5 id="线段末端"><a href="#线段末端" class="headerlink" title="线段末端"></a>线段末端</h5><p><span class="strong">context.lineCap="butt/round/square;"</span></p>
+<p>设置或返回线段末端线帽的样式，"round" 和 "square" 值会使线条略微变长</p>
 <ul>
 <li><strong>butt</strong> 末端以方形结束(默认)</li>
 <li><strong>round</strong>末端添加圆形线帽</li>
@@ -445,7 +445,7 @@ context.stroke();
 <p>创建矩形路径并描边，参数同上，相当于rect()方法和stroke()方法同时执行，可以使用<span class="tips">lineWidth</span>修改线宽，使用<span class="tips">strokeStyle</span>修改线条样式</p>
 <h5 id="填充矩形"><a href="#填充矩形" class="headerlink" title="填充矩形"></a>填充矩形</h5><p><span class="strong">context.fillRect(x, y, width, height) 填充一个矩形</span></p>
 <p>创建矩形路径并填充，参数同上，相当于rect()方法和fill()方法同时执行，可以使用<span class="tips">fillStyle</span>修改填充样式</p>
-<h3 id="渐变对象"><a href="#渐变对象" class="headerlink" title="渐变对象"></a>渐变对象</h3><h4 id="添加渐变色"><a href="#添加渐变色" class="headerlink" title="添加渐变色"></a>添加渐变色</h4><p><span class="strong">渐变对象名.addColorStop(偏移量,”颜色”)</span></p>
+<h3 id="渐变对象"><a href="#渐变对象" class="headerlink" title="渐变对象"></a>渐变对象</h3><h4 id="添加渐变色"><a href="#添加渐变色" class="headerlink" title="添加渐变色"></a>添加渐变色</h4><p><span class="strong">渐变对象名.addColorStop(偏移量,"颜色")</span></p>
 <ul>
 <li>对象名为以下三种渐变对象创建的实例</li>
 <li>偏移量为0~1之间的值，代表渐变开始到渐变终止的位置，等同于CSS中的百分比位置</li>
@@ -708,7 +708,7 @@ const gradient=ctx.createLinearGradient(0,0,600,400);
 <li>x, y为文本左下角在画布中开始绘制的坐标(因此坐标不应该为0,0)</li>
 <li>maxWidth(可选)，指定绘制的最大宽度，会对文本进行水平缩放</li>
 </ul>
-<h4 id="获取文本宽度"><a href="#获取文本宽度" class="headerlink" title="获取文本宽度"></a>获取文本宽度</h4><p><span class="strong">context.measureText(“文本”);</span></p>
+<h4 id="获取文本宽度"><a href="#获取文本宽度" class="headerlink" title="获取文本宽度"></a>获取文本宽度</h4><p><span class="strong">context.measureText("文本");</span></p>
 <p>返回文本的TextMetrics 对象，一般会从该对象中获得文本宽度，以判断文字是否需要在Canva中进行换行</p>
 <div class="show">&lt;canvas width="300" height="700" id="canvasText"&gt;&lt;/canvas&gt;
 &lt;script&gt;
@@ -733,7 +733,7 @@ let rowWidth=0;//每一行的文本长度
 &lt;/script&gt;
 </div>
 
-<h4 id="文本属性"><a href="#文本属性" class="headerlink" title="文本属性"></a>文本属性</h4><p><span class="strong">context.font = “value”;</span><br>指定文本属性，默认为 10px sans-serif，value为CSS中的font简写属性，可以按顺序设置<span class="tips">[font-style]  [font-variant] [font-weight]  font-size[/line-height]  font-family</span></p>
+<h4 id="文本属性"><a href="#文本属性" class="headerlink" title="文本属性"></a>文本属性</h4><p><span class="strong">context.font = "value";</span><br>指定文本属性，默认为 10px sans-serif，value为CSS中的font简写属性，可以按顺序设置<span class="tips">[font-style]  [font-variant] [font-weight]  font-size[/line-height]  font-family</span></p>
 <ul>
 <li>必须包含font-size和font-family</li>
 <li>font-style：字体样式，常用取值normal(正常)、italic(斜体)、oblique(倾斜)</li>
@@ -756,18 +756,18 @@ ctxText.strokeText("hello world",50,180)//对文字进行描边</div>
        ctxText.strokeText("hello world",50,180)
     </script>
 
-<h4 id="文本方向"><a href="#文本方向" class="headerlink" title="文本方向"></a>文本方向</h4><p><span class="strong">context.direction =”ltr/rtl/inherit”; 设置当前文本方向</span> </p>
+<h4 id="文本方向"><a href="#文本方向" class="headerlink" title="文本方向"></a>文本方向</h4><p><span class="strong">context.direction ="ltr/rtl/inherit"; 设置当前文本方向</span> </p>
 <ul>
 <li>ltr ,从左往右</li>
 <li>rtl ,从右往左(部分国家读写习惯)</li>
 <li>inherit(默认)，从父元素继承</li>
 </ul>
-<p><span class="strong">context.textAlign = “left/right/center/start/end”; 定义文本水平方向上的对齐方式</span> </p>
+<p><span class="strong">context.textAlign = "left/right/center/start/end"; 定义文本水平方向上的对齐方式</span> </p>
 <ul>
 <li>center以绘制文本时的x坐标为基准，一半位于x左边，一半位于右边</li>
 <li>start与end属性以direction定义的文本方向为基准</li>
 </ul>
-<p><span class="strong">context.textBaseline = “tophanging/middle/alphabetic/ideographic/bottom”; 定义文本垂直方向上的对齐方式</span></p>
+<p><span class="strong">context.textBaseline = "tophanging/middle/alphabetic/ideographic/bottom"; 定义文本垂直方向上的对齐方式</span></p>
 <ul>
 <li>与CSS相同，以文本基线为基准，详见MDN文档</li>
 </ul>
@@ -819,7 +819,7 @@ ctxText.strokeText("hello world",50,180)//对文字进行描边</div>
 <li><span class="strong">context.shadowOffsetX = value; 阴影的水平偏移距离</span></li>
 <li><span class="strong">context.shadowOffsetY = value; 阴影的垂直偏移距离</span></li>
 <li><span class="strong">context.shadowBlur = value;  阴影的模糊值</span></li>
-<li><span class="strong">context.shadowColor = “颜色”; 阴影颜色</span><div class="show">const ctx=canvas.getContext('2d');
+<li><span class="strong">context.shadowColor = "颜色"; 阴影颜色</span><div class="show">const ctx=canvas.getContext('2d');
 ctx.shadowOffsetX=16;
 ctx.shadowOffsetY=8;
 ctx.shadowBlur=5;
@@ -828,7 +828,7 @@ ctx.moveTo(50,50);
 ctx.bezierCurveTo(300, 50, 50, 300,250, 290);
 ctx.stroke()</div></li>
 </ul>
-<h3 id="滤镜"><a href="#滤镜" class="headerlink" title="滤镜"></a>滤镜</h3><p>类似于CSS3中的效果<br><span class="strong">context.filter = “一个或多个值”</span></p>
+<h3 id="滤镜"><a href="#滤镜" class="headerlink" title="滤镜"></a>滤镜</h3><p>类似于CSS3中的效果<br><span class="strong">context.filter = "一个或多个值"</span></p>
 <ul>
 <li>blur(值px)：高斯模糊</li>
 <li>brightness(百分比)：亮度</li>
@@ -844,7 +844,7 @@ ctx.stroke()</div></li>
 ctx.filter = "blur(4px) brightness(200%)";
 </div>
 
-<h3 id="图像合成模式"><a href="#图像合成模式" class="headerlink" title="图像合成模式"></a>图像合成模式</h3><p><span class="strong">context.globalCompositeOperation = “type”;</span></p>
+<h3 id="图像合成模式"><a href="#图像合成模式" class="headerlink" title="图像合成模式"></a>图像合成模式</h3><p><span class="strong">context.globalCompositeOperation = "type";</span></p>
 <ul>
 <li><span class="strong">source-over</span> 图像叠加显示(默认)</li>
 <li><span class="strong">source-in</span> 只显示图像重叠部分</li>
@@ -923,7 +923,7 @@ ctx.fillRect(50,50,100,100);//将绘制为黄色而非绿色
     &lt;/script&gt;
 </div>
 
-<h3 id="案例"><a href="#案例" class="headerlink" title="案例"></a>案例</h3><p>使用图像合成模式的<span class="strong">“destination-out”</span>属性值制作刮刮卡</p>
+<h3 id="案例"><a href="#案例" class="headerlink" title="案例"></a>案例</h3><p>使用图像合成模式的<span class="strong">"destination-out"</span>属性值制作刮刮卡</p>
 <div class="ticketContainer" style="position:relative;width:100%;">
 <div class="scratchTicket" style="width: 300px;height: 150px;font-size: 24px;color: red;text-align: center;line-height: 150px;margin:0 auto;letter-spacing: 8px;background-color: #ffffff;pointer-events: none;user-select: none;">再刮一次</div>
 <canvas width="300" height="150" id="canvasTicket" style="position:absolute;top:0;left:50%;transform:translateX(-50%);"></canvas>
@@ -1068,7 +1068,7 @@ ctx.fillRect(50,50,100,100);//将绘制为黄色而非绿色
             
             
                 <div class="post-next">
-                    <a href="/blog/2022/09/18/History-of-browser/">下一篇：Web的发展旅程 </a>
+                    <a href="/blog/2022/10/12/playwright/">下一篇：playwright </a>
                 </div>
                  
     </div>

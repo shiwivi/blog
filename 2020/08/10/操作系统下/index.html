@@ -46,7 +46,7 @@
             <li><a href="/blog/tags/408">#408</a></li>
             <li>#Security</li>
             <li><a href="/blog/tags/Linux">#Linux</a></li>
-            <li>#Python</li>
+            <li><a href="/blog/tags/Python">#Python</a></li>
             <li><a href="/blog/tags/Servr">#Server</a></li>
             <li><a href="/blog/tags/Web">#Web</a></li>
         </ul>
@@ -136,7 +136,7 @@
         <div class="article">
         <h1 class="title">操作系统(下)</h1>
         <div class="art-info">
-            <div><span><span class="iconfont icon-zishu-jzl"></span>字数：45986</span>
+            <div><span><span class="iconfont icon-zishu-jzl"></span>字数：46010</span>
             <span><span class="iconfont icon-riqi"></span>写于：2020-08-10</span></div>
             <div><span><span class="iconfont icon-zuixinnew3"></span>最新更新：2020-08-10</span>
             <span><span class="iconfont icon-shijian"></span>阅读本文预计花费您132分钟</span></div>
@@ -388,9 +388,9 @@ DMA知识点详见《计算机组成原理上》笔记</div>
 <td>2046</td>
 </tr>
 <tr>
-<td>……</td>
-<td>……</td>
-<td>……</td>
+<td>......</td>
+<td>......</td>
+<td>......</td>
 </tr>
 </tbody></table>
 </div>
@@ -594,14 +594,14 @@ void Putbuf(type,number){
 <li><span class="strong">循环扫描算法（CSCAN）</span>：规定磁头只能单向移动，如：自里向外移动时，如果磁头移到最外磁道访问完成后，立即移到最里的欲访问磁道。这样进程等待时间从2T减为 T+S，其中S为从最外磁道立即移到最立磁道的寻道时间。</li>
 <li><span class="text-red">磁臂粘着(Armstickiness)问题</span>：SSTF、SCAN、CSCAN调度算法都可能出现磁臂停留在某处不动的情况，如：有多个进程对某一个磁道有较高访问率，这些进程反复请求对某一磁道的I/O操作，导致磁头一直没有移动</li>
 <li><span class="strong">N步扫描(NStepSCAN)算法</span>：将磁盘请求队列分成若干长度为N的子队列，各子队列内部采用SCAN算法，子队列间按FCFS调度。在处理某个子队列时，如果出现新的磁盘I/O请求，则将新请求放入其他队列，可有效防止“磁臂黏着”</li>
-<li><span class="strong">FSCAN</span>：NStepSCAN的特例（N=1），FSCAN算法只将磁盘请求队列分为两个子队列，即每次只处理一个子队列，处理期间的新请求加入另一个队列，也可有效防止”磁臂黏着”</li>
+<li><span class="strong">FSCAN</span>：NStepSCAN的特例（N=1），FSCAN算法只将磁盘请求队列分为两个子队列，即每次只处理一个子队列，处理期间的新请求加入另一个队列，也可有效防止"磁臂黏着"</li>
 </ul>
 <h4 id="减少延迟时间"><a href="#减少延迟时间" class="headerlink" title="减少延迟时间"></a>减少延迟时间</h4><div class="broadcast color-red">
 <div class="iconfont icon-gantanhao"></div>
 知识点老，教材已删减</div>
 
 <ul>
-<li><span class="strong">交替编号</span>（Interleaving / Sector Skew）：如果物理扇区连续编号（0,1,2…），当磁盘控制器处理完扇区0的读写并准备读写扇区1时，需要一定的准备时间，但盘片是匀速转动的，磁盘控制器准备好时，磁头可能已经转过了扇区1的位置，必须等磁盘再转一圈，带来极大延迟。交替编号的思想是在物理层面上，相邻的扇区在磁道上并不连续排列。例如：将物理扇区编号为 1, 3, 5, 7…（交错因子为2），给磁盘控制器留出处理数据传输的时间。该设计主要用于早期磁盘控制器处理能力弱的磁盘，现代磁盘控制器处理速度极快，且内置缓存，静态的交错编号已很少见。</li>
+<li><span class="strong">交替编号</span>（Interleaving / Sector Skew）：如果物理扇区连续编号（0,1,2...），当磁盘控制器处理完扇区0的读写并准备读写扇区1时，需要一定的准备时间，但盘片是匀速转动的，磁盘控制器准备好时，磁头可能已经转过了扇区1的位置，必须等磁盘再转一圈，带来极大延迟。交替编号的思想是在物理层面上，相邻的扇区在磁道上并不连续排列。例如：将物理扇区编号为 1, 3, 5, 7...（交错因子为2），给磁盘控制器留出处理数据传输的时间。该设计主要用于早期磁盘控制器处理能力弱的磁盘，现代磁盘控制器处理速度极快，且内置缓存，静态的交错编号已很少见。</li>
 <li><span class="strong">错位命名</span>（Slip / Cylinder Skew）：当程序顺序读取完一个磁道的所有扇区，需要切换到相邻磁道继续读取。如果两个磁道的0号扇区都在同一径向角度（正对着），那么磁头移动到新磁道后，目标扇区可能刚刚转过磁头下方。因此错位命名的核心思想是相邻磁道的起始扇区位置会错开一定的角度。外圈磁道的起始点与内圈磁道的起始点不在一条半径上，而是沿着旋转方向偏移若干个扇区，方便磁头在磁道间移动时，可以无缝顺序读取。</li>
 <li><span class="strong">磁盘地址结构设计</span>：传统磁盘结构使用CHS寻址，使用<span class="tips">（柱面号Cylinder，磁头号Head，扇区号Sector）</span>这一三元组确定地址，当扇区号达到最大值(如：读完(00,00,000)到(00,00,111))后，通过修改磁头号即可切换到另外一个盘面的相同柱面(磁道)继续读/写，而不需要移动磁臂(有较大开销)，因此该磁盘地址格式相比根据物理逻辑寻址(磁头号，柱面号，扇区号)，即先决定盘面，再选择磁道，最后选择扇区，有更好的读写性能。</li>
 </ul>
@@ -739,7 +739,7 @@ WA = 1.5
 <h5 id="文件属性"><a href="#文件属性" class="headerlink" title="文件属性"></a>文件属性</h5><p>一个文件通常包含文件名、标识符(inode)、文件类型、文件位置、文件大小、创建时间、上次修改时间、保护信息等文件属性</p>
 <h5 id="文件名和拓展名"><a href="#文件名和拓展名" class="headerlink" title="文件名和拓展名"></a>文件名和拓展名</h5><ul>
 <li>文件名：不同文件系统对于文件名的要求不同，如：是否区分大小写，允许多长的文件名，但通常都不允许在同一目录下有两个同名文件</li>
-<li>拓展名：又称为后缀名，拓展名是指文件名后添加的若干附加字符，它是文件名的组成部分，通常使用”.”分隔，用于方便系统和用户识别文件类型</li>
+<li>拓展名：又称为后缀名，拓展名是指文件名后添加的若干附加字符，它是文件名的组成部分，通常使用"."分隔，用于方便系统和用户识别文件类型</li>
 </ul>
 <h5 id="文件类型"><a href="#文件类型" class="headerlink" title="文件类型"></a>文件类型</h5><p>根据不同的区分方式，文件可以被分类成诸多不同的文件类型，如：根据读写权限可分为：只读文件、只写文件、可读写文件，而根据文件组织形式，可分为：</p>
 <ul>
@@ -1131,7 +1131,7 @@ WA = 1.5
 <h3 id="虚拟文件系统VFS"><a href="#虚拟文件系统VFS" class="headerlink" title="虚拟文件系统VFS"></a>虚拟文件系统VFS</h3><p>各类设备上的文件系统的种类极其丰富，如：硬盘上的 ext4、NTFS、XFS，移动设备的FAT32、exFAT，内存中的 procfs、sysfs，网络存储的 NFS 等等，这些文件系统的内部组织方式和磁盘数据结构完全不同，会带来以下问题：</p>
 <ul>
 <li>类似作用的数据结构实现细节不同，比如：ext4使用inode、directory entry、extent等结构，NTFS使用MFT、Attribute、RunDATA等数据结构</li>
-<li>每个文件系统都有自己的访问方式，应用程序必须针对每种文件系统写不同的代码，如：open()系统调用会有ext4_open()、ntfs_open()…</li>
+<li>每个文件系统都有自己的访问方式，应用程序必须针对每种文件系统写不同的代码，如：open()系统调用会有ext4_open()、ntfs_open()...</li>
 <li>OS内核系统调用层需要直接耦合每一种文件系统的具体实现，内核膨胀</li>
 </ul>
 <p>VFS的核心思想：在内核中引入一个抽象层，让用户程序和系统调用以统一的方式访问所有文件系统，而无需关心底层究竟是哪种具体实现。</p>
@@ -1228,7 +1228,7 @@ WA = 1.5
 <div class="img-wrapper"><div class="load-wrapper"><div class="load-line"></div><div class="load-text">loading</div></div><img src="/blog/images/OS/singleindexallocation.png" alt="单级索引组织方式" loading="lazy" decoding="async" style="height:300px;"></div>
 
 <h5 id="多级索引组织方式"><a href="#多级索引组织方式" class="headerlink" title="多级索引组织方式"></a>多级索引组织方式</h5><p>为一个大文件分配磁盘空间时，其索引表也很大，一个索引块可能装不下，而需要多个索引块，如果使用链接指针将它们链接起来，则会存在链式数据结构带来的问题：访问效率低。</p>
-<p><span class="strong">多级索引组织方式</span>：为这些索引块再建立一级索引块，称为第一级索引，将存放了索引表的索引块1、索引块2….等索引块的盘块号填入一级索引表中(类似于多久页表)，形成两级索引。如果文件非常大，还可以使用三级、四级索引。</p>
+<p><span class="strong">多级索引组织方式</span>：为这些索引块再建立一级索引块，称为第一级索引，将存放了索引表的索引块1、索引块2....等索引块的盘块号填入一级索引表中(类似于多久页表)，形成两级索引。如果文件非常大，还可以使用三级、四级索引。</p>
 <ul>
 <li><span class="text-green">优点</span>：大大加快了大型文件的查找速度</li>
 <li><span class="text-red">缺点</span>：随着索引级数增多，磁盘启动次数也增多</li>
@@ -1304,7 +1304,7 @@ inode中的二级地址指向了一个磁盘块，该磁盘块中的盘块又指
 <li>将所有空闲盘块分为若干个组，如：每100个盘块为一组，并将这些盘块号写入一个磁盘块中，所写入的最后一个盘块号是存储了下一组空闲盘号的磁盘块号(上图中红色标记的盘块号)</li>
 <li>内存中以栈形式管理、分配空闲盘块，作为临界资源，栈会被上锁，一次只允许一个进程访问</li>
 <li>上图中栈顶位于底部，栈顶是201，其指针号为99(指针范围为0-99)，因此栈顶指针也给出了当前组所剩余空闲盘数量</li>
-<li><span class="tips">分配</span>：当需要为文件分配空闲磁盘块时，从栈顶依次取出盘块号进行分配，如：依次取出201-202…，当取到磁盘块300时(栈指针指向0)，盘块300存储了下一组空闲磁盘块号，因此OS从300读入一组(100个)新的空闲盘块号</li>
+<li><span class="tips">分配</span>：当需要为文件分配空闲磁盘块时，从栈顶依次取出盘块号进行分配，如：依次取出201-202...，当取到磁盘块300时(栈指针指向0)，盘块300存储了下一组空闲磁盘块号，因此OS从300读入一组(100个)新的空闲盘块号</li>
 <li><span class="tips">回收</span>：当有磁盘块被释放，该盘块号会被添加到栈顶，如果当前栈长度已经达到100，则将现有栈中的100个盘块号写入新回收的盘块中，并将该盘块号作为新栈底</li>
 </ul>
 <h3 id="廉价磁盘冗余阵列RAID"><a href="#廉价磁盘冗余阵列RAID" class="headerlink" title="廉价磁盘冗余阵列RAID"></a>廉价磁盘冗余阵列RAID</h3><p><span class="strong">廉价磁盘冗余阵列RAID</span>(Redundant Array of Inexpensive Disks)：是将多个物理磁盘组合成一个逻辑单元，以提升性能、容量或数据冗余能力的技术，后被改名为独立磁盘冗余阵列(Redundant Array of Independent Disks)，该系统利用一台磁盘阵列控制器来统一管理和控制几十台磁盘驱动器，组成一个大型磁盘系统，以大幅增加磁盘容量，极大提高磁盘I/O速度和磁盘可靠性，其特点包括：</p>
@@ -1346,7 +1346,7 @@ inode中的二级地址指向了一个磁盘块，该磁盘块中的盘块又指
 <li>具备容错能力，数据恢复能力，在系统出现故障或差错时，仍能保证系统正常运行</li>
 <li>提供文件加密、压缩等功能</li>
 </ul>
-<h5 id="磁盘组织"><a href="#磁盘组织" class="headerlink" title="磁盘组织"></a>磁盘组织</h5><p>NTFS文件系统依旧以<span class="text-red">簇</span>为磁盘分配和回收的基本单位，卷上簇大小称为<span class="tips">卷因子</span>，卷因子是在磁盘格式化时确定的，大小为物理扇区的整数倍，可以为512B、1KB…64KB。对于小于512MB的磁盘，默认簇大小为512B，1GB磁盘默认簇为1KB，2GB以上的磁盘，大多数情况下，默认簇大小为4KB，同一卷内簇大小固定，<span class="tips">不同的卷可以指定不同的簇大小</span>。</p>
+<h5 id="磁盘组织"><a href="#磁盘组织" class="headerlink" title="磁盘组织"></a>磁盘组织</h5><p>NTFS文件系统依旧以<span class="text-red">簇</span>为磁盘分配和回收的基本单位，卷上簇大小称为<span class="tips">卷因子</span>，卷因子是在磁盘格式化时确定的，大小为物理扇区的整数倍，可以为512B、1KB...64KB。对于小于512MB的磁盘，默认簇大小为512B，1GB磁盘默认簇为1KB，2GB以上的磁盘，大多数情况下，默认簇大小为4KB，同一卷内簇大小固定，<span class="tips">不同的卷可以指定不同的簇大小</span>。</p>
 <h5 id="MFT"><a href="#MFT" class="headerlink" title="MFT"></a>MFT</h5><p>NTFS不再使用FAT表<span class="tips">(显式链接组织方式)</span>管理记录文件的磁盘块关系，而是改为使用MFT记录文件所属的盘块<span class="tips">(增量式索引组织方式)</span></p>
 <p><span class="strong">主控文件表MFT</span>（Master File Table）是NTFS的核心数据结构，卷上每个文件/目录至少对应 1 条 MFT记录（大小固定为1KB），这些MFT记录又称为文件的<span class="tips">元数据</span>(metadata)或<span class="tips">文件控制字</span>，记录由若干属性（Attribute）组成，分为：</p>
 <ul>

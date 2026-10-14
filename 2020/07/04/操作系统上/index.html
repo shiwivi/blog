@@ -46,7 +46,7 @@
             <li><a href="/blog/tags/408">#408</a></li>
             <li>#Security</li>
             <li><a href="/blog/tags/Linux">#Linux</a></li>
-            <li>#Python</li>
+            <li><a href="/blog/tags/Python">#Python</a></li>
             <li><a href="/blog/tags/Servr">#Server</a></li>
             <li><a href="/blog/tags/Web">#Web</a></li>
         </ul>
@@ -136,7 +136,7 @@
         <div class="article">
         <h1 class="title">操作系统(上)</h1>
         <div class="art-info">
-            <div><span><span class="iconfont icon-zishu-jzl"></span>字数：49037</span>
+            <div><span><span class="iconfont icon-zishu-jzl"></span>字数：49060</span>
             <span><span class="iconfont icon-riqi"></span>写于：2020-07-04</span></div>
             <div><span><span class="iconfont icon-zuixinnew3"></span>最新更新：2020-07-04</span>
             <span><span class="iconfont icon-shijian"></span>阅读本文预计花费您141分钟</span></div>
@@ -332,7 +332,7 @@
 <p><span class="text-green">缺点</span>：</p>
 <ul>
 <li>性能低，执行程序需要频繁的切换用户态/核心态，，会引入额外的运行开销</li>
-<li>用户态下的各功能模块不可以直接相互调用，只能通过内核的”消息传递”来间接通信</li>
+<li>用户态下的各功能模块不可以直接相互调用，只能通过内核的"消息传递"来间接通信</li>
 </ul>
 <h5 id="宏内核OS结构"><a href="#宏内核OS结构" class="headerlink" title="宏内核OS结构"></a>宏内核OS结构</h5><p>其基本思想是将操作系统的大部分功能模块集中放置在内核空间中统一运行。在这种结构中，进程管理、存储管理、文件系统、设备驱动以及网络协议等核心功能都作为内核的一部分存在，运行在同一特权级别下。模块之间通过函数调用的方式直接通信，共享同一内核地址空间。从实现角度看，宏内核更接近一个“功能高度集成的大型程序”，所有核心服务都紧密耦合在内核中</p>
 <p><span class="text-red">优点</span>：</p>
@@ -538,7 +538,7 @@
 <h4 id="进程阻塞与唤醒"><a href="#进程阻塞与唤醒" class="headerlink" title="进程阻塞与唤醒"></a>进程阻塞与唤醒</h4><p>当出现阻塞事件，进程调用<span class="tips">阻塞原语(block)</span><span class="text-green">自行</span>切换到阻塞状态，其执行步骤：</p>
 <ul>
 <li>找到要阻塞的进程对应的PCB</li>
-<li>保护进程运行现场，将PCB状态信息设置为“阻塞态”，暂时停止进程运行</li>
+<li>保护进程运行现场，将PCB状态信息设置为“阻塞态"，暂时停止进程运行</li>
 <li>将PCB插入相应事件的等待队列</li>
 </ul>
 <p><span class="text-green">引起进程阻塞的事件</span>：</p>
@@ -660,7 +660,7 @@
 <h2 id="处理机调度"><a href="#处理机调度" class="headerlink" title="处理机调度"></a>处理机调度</h2><p><span class="strong">调度（Scheduling）</span>指操作系统按照一定的调度算法，在多个作业（Job）、进程（Process）或线程（Thread）之间分配系统资源（尤其是CPU资源），其目的是提高系统资源利用率、吞吐量和响应速度，并保证系统能够公平、高效地运行</p>
 <h4 id="处理机调度的层次"><a href="#处理机调度的层次" class="headerlink" title="处理机调度的层次"></a>处理机调度的层次</h4><p>操作系统通常将调度划分为三级：</p>
 <ul>
-<li><span class="text-red">高级调度</span>（High-Level Scheduling）：又称为<span class="strong">作业调度</span>（Job Scheduling）或<span class="strong">长程调度</span>（Long-term scheduling），它的调度对象是<span class="text-green">作业</span>（Job），主要负责从外存后备队列中选择一个或多个作业，为其创建进程并分配必要资源，使其进入就绪状态，正式成为系统中的进程。由于一个作业通常只会被创建一次，因此高级调度对同一作业一般只执行一次。如：银行的大型批处理机，工作人员于下班前提交任务，调度程序在夜晚调入硬盘中的Job1,Job2…，进行批量结算。在分时、实时操作系统中，由于用户程序通常直接创建进程，因此一般不存在独立的高级调度。如：用户直接通过shell执行任务，会立即创建进程，不再经历作业调度。</li>
+<li><span class="text-red">高级调度</span>（High-Level Scheduling）：又称为<span class="strong">作业调度</span>（Job Scheduling）或<span class="strong">长程调度</span>（Long-term scheduling），它的调度对象是<span class="text-green">作业</span>（Job），主要负责从外存后备队列中选择一个或多个作业，为其创建进程并分配必要资源，使其进入就绪状态，正式成为系统中的进程。由于一个作业通常只会被创建一次，因此高级调度对同一作业一般只执行一次。如：银行的大型批处理机，工作人员于下班前提交任务，调度程序在夜晚调入硬盘中的Job1,Job2...，进行批量结算。在分时、实时操作系统中，由于用户程序通常直接创建进程，因此一般不存在独立的高级调度。如：用户直接通过shell执行任务，会立即创建进程，不再经历作业调度。</li>
 <li><span class="text-red">中级调度</span>（Medium-Level Scheduling）：又称为<span class="strong">内存调度</span>（Memory Scheduling）或<span class="strong">中程调度</span>（Medium-term scheduling），主要负责在内存和外存之间调度进程，它的调度对象是<span class="text-green">处于挂起状态的进程</span>。当系统内存不足或需要提高吞吐量时，操作系统会将部分暂时不能运行的进程挂起（Suspend），并将其所占内存换出（Swap Out）到外存等待；当条件满足后，再将其重新换入（Swap In）内存并恢复运行。中级调度实际上就是存储器管理中的内存交换功能(Swap)。</li>
 <li><span class="text-red">低级调度</span>（Low-Level Scheduling）：又称为<span class="strong">进程调度</span>、<span class="strong">CPU调度</span>、<span class="strong">中程调度</span>（Short-term scheduling），主要负责从就绪队列中选择一个进程，为其分配CPU，使其进入运行状态，其调度对象是<span class="text-green">就绪的进程</span>，是最基本、最频繁发生的一种调度。当出现以下情况时，通常需要重新进行低级调度：<blockquote>
 <ul>
@@ -684,7 +684,7 @@
 <h6 id="闲逛进程"><a href="#闲逛进程" class="headerlink" title="闲逛进程"></a>闲逛进程</h6><p><span class="strong">闲逛进程（Idle Process）</span>又称空闲进程，是操作系统在启动时创建的一个特殊进程（或线程），它具有最低的调度优先级，始终处于就绪状态。当系统中没有任何其他可运行进程时，调度器就会选择闲逛进程运行。闲逛进程的主要作用包括：</p>
 <ul>
 <li>保证调度器始终有可调度对象，避免调度程序设计需要处理就绪队列空这一异常情况</li>
-<li>CPU需要时刻执行指令，不存在”什么都不执行”这种状态，闲逛进程提供了一段合法、安全执行的代码，它通常会调用 HLT、MWAIT等省电指令，使 CPU 进入低功耗状态，等待中断或新的可运行任务到来</li>
+<li>CPU需要时刻执行指令，不存在"什么都不执行"这种状态，闲逛进程提供了一段合法、安全执行的代码，它通常会调用 HLT、MWAIT等省电指令，使 CPU 进入低功耗状态，等待中断或新的可运行任务到来</li>
 <li>操作系统可以利用闲逛进程的运行时间统计 CPU 空闲率和利用率</li>
 </ul>
 <h4 id="进程调度的方式"><a href="#进程调度的方式" class="headerlink" title="进程调度的方式"></a>进程调度的方式</h4><ul>
@@ -732,7 +732,7 @@
 <li>不会发生饥饿现象。</li>
 <li>适用于批处理系统。<br><span class="text-red">缺点：</span></li>
 <li>平均周转时间较长。</li>
-<li>容易产生”护航效应（Convoy Effect）”，长作业阻塞大量短作业。</li>
+<li>容易产生"护航效应（Convoy Effect）"，长作业阻塞大量短作业。</li>
 <li>响应速度差，不适合交互式系统。</li>
 </ul>
 <h4 id="最短作业优先SJF"><a href="#最短作业优先SJF" class="headerlink" title="最短作业优先SJF"></a>最短作业优先SJF</h4><p><span class="strong">最短作业优先</span>（SJF，Shortest Job First）：每次选择预计运行时间（CPU Burst）最短的作业或进程执行。可分为非抢占式SJF和抢占式SRTF（Shortest Remaining Time First）</p>
@@ -787,7 +787,7 @@
 <li>适用于实时系统。</li>
 <li>调度灵活。<br><span class="text-red">缺点：</span></li>
 <li>低优先级进程可能长期得不到执行，发生饥饿。</li>
-<li>通常需要采用”老化（Aging）”机制提高等待进程优先级。</li>
+<li>通常需要采用"老化（Aging）"机制提高等待进程优先级。</li>
 </ul>
 <h4 id="多级队列调度"><a href="#多级队列调度" class="headerlink" title="多级队列调度"></a>多级队列调度</h4><p><span class="strong">多级队列调度</span>（Multilevel Queue）：按照进程类型划分多个固定队列（如系统进程、前台进程、后台进程、批处理进程等），每个队列采用不同调度算法，进程进入后通常不能在队列间移动</p>
 <p><span class="text-blue">特点：</span></p>
@@ -832,7 +832,7 @@
 <li>负载均衡：尽可能让所有每次CPU都同等忙碌</li>
 <li>处理机亲和性：尽量让一个进程的多轮调度到同一个CPU上运行，以发挥CPU中缓存的作用(Cache)</li>
 </ul>
-<h4 id="公共就绪队列"><a href="#公共就绪队列" class="headerlink" title="公共就绪队列"></a>公共就绪队列</h4><p>所有CPU共享同一个就绪进程队列。每个CPU时运行调度程序，从公共就绪队列中选择一个进程运行(每个CPU访问公共就绪队列时需要上锁，确保互斥)。该方案优点是可以天然地实现负载均衡，缺点是各个进程可能会频繁地换CPU运行，“亲和性”不好</p>
+<h4 id="公共就绪队列"><a href="#公共就绪队列" class="headerlink" title="公共就绪队列"></a>公共就绪队列</h4><p>所有CPU共享同一个就绪进程队列。每个CPU时运行调度程序，从公共就绪队列中选择一个进程运行(每个CPU访问公共就绪队列时需要上锁，确保互斥)。该方案优点是可以天然地实现负载均衡，缺点是各个进程可能会频繁地换CPU运行，“亲和性"不好</p>
 <p>为提高公共就绪队列方式下的处理器亲和度，有以下两种方式：</p>
 <ul>
 <li>软亲和：由进程调度程序尽量保证“亲和性”</li>
@@ -1149,7 +1149,7 @@ P2( ) {
 
 <ul>
 <li>如果V(S)操作先被调度执行，则V(S)内部S++后S=1，之后执行P2中的P(S)后将能够继续执行到代码4</li>
-<li>如果P(S)操作先被调度执行，则P(S)内部由于S–后S=-1，P2进程会主动请求阻塞，不再向下执行。等到V(S)操作被执行后，唤醒P2进程并继续执行到代码4，由此实现代码4一定在代码2之后执行</li>
+<li>如果P(S)操作先被调度执行，则P(S)内部由于S--后S=-1，P2进程会主动请求阻塞，不再向下执行。等到V(S)操作被执行后，唤醒P2进程并继续执行到代码4，由此实现代码4一定在代码2之后执行</li>
 </ul>
 <h5 id="信号量实现前驱图"><a href="#信号量实现前驱图" class="headerlink" title="信号量实现前驱图"></a>信号量实现前驱图</h5><p><span class="strong">前驱图</span>（Precedence Graph）是一种有向无循环图(DAG，Directed Acyclic Graph)，用于描述程序的执行顺序和并发执行情况，图中的每个结点表示一个程序、程序段或者语句，如：有向边 Pi → Pj 表示 Pi 必须在 Pj 开始执行前完成，即 Pi是 Pj 的前驱。前驱图必须<span class="tips">无环</span>，否则会产生无法解决的死锁或循环等待。</p>
 <p>通过信号量机制实现前驱关系的步骤：</p>
@@ -1183,12 +1183,12 @@ semaphore g = 0 ;
 </tr>
 </thead>
 <tbody><tr>
-<td>…</td>
-<td>…</td>
-<td>…</td>
-<td>…</td>
-<td>…</td>
-<td>…</td>
+<td>...</td>
+<td>...</td>
+<td>...</td>
+<td>...</td>
+<td>...</td>
+<td>...</td>
 </tr>
 <tr>
 <td>S1 ;</td>
@@ -1215,11 +1215,11 @@ semaphore g = 0 ;
 <td>P(g);</td>
 </tr>
 <tr>
-<td>…</td>
+<td>...</td>
 <td>V(d) ;</td>
-<td>…</td>
-<td>…</td>
-<td>…</td>
+<td>...</td>
+<td>...</td>
+<td>...</td>
 <td>S6;</td>
 </tr>
 <tr>

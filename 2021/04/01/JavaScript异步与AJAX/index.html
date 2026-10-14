@@ -46,7 +46,7 @@
             <li><a href="/blog/tags/408">#408</a></li>
             <li>#Security</li>
             <li><a href="/blog/tags/Linux">#Linux</a></li>
-            <li>#Python</li>
+            <li><a href="/blog/tags/Python">#Python</a></li>
             <li><a href="/blog/tags/Servr">#Server</a></li>
             <li><a href="/blog/tags/Web">#Web</a></li>
         </ul>
@@ -136,7 +136,7 @@
         <div class="article">
         <h1 class="title">JavaScript异步与AJAX</h1>
         <div class="art-info">
-            <div><span><span class="iconfont icon-zishu-jzl"></span>字数：14498</span>
+            <div><span><span class="iconfont icon-zishu-jzl"></span>字数：14504</span>
             <span><span class="iconfont icon-riqi"></span>写于：2021-04-01</span></div>
             <div><span><span class="iconfont icon-zuixinnew3"></span>最新更新：2021-04-01</span>
             <span><span class="iconfont icon-shijian"></span>阅读本文预计花费您42分钟</span></div>
@@ -446,7 +446,7 @@ p.then(value=&gt;{
 <ul>
 <li>如果为其他值，则await返回值与其相同</li>
 <li>如果为Promise对象，则返回值为该对象fulfilled状态下的PromiseResult属性值</li>
-<li>如果为Promise对象，且状态为rejected，则必须用<span class="tips">try…catch</span>进行异常捕获处理</li>
+<li>如果为Promise对象，且状态为rejected，则必须用<span class="tips">try...catch</span>进行异常捕获处理</li>
 </ul>
 <div class="show"> async function main(){
             try{
@@ -509,7 +509,7 @@ p.then(value=&gt;{
 </li>
 <li>responseText    以字符串返回响应数据</li>
 <li>responseXML    以 XML 数据返回响应数据</li>
-<li>statusText    返回状态文本（比如 “OK” 或 “Not Found”）</li>
+<li>statusText    返回状态文本（比如 "OK" 或 "Not Found"）</li>
 <li>status        返回请求的状态号</li>
 </ul>
 <h4 id="发起请求"><a href="#发起请求" class="headerlink" title="发起请求"></a>发起请求</h4><h5 id="发起get请求"><a href="#发起get请求" class="headerlink" title="发起get请求"></a>发起get请求</h5><p>如果get请求需要携带参数，可以直接在URL地址后以键值对的形式拼接<span class="tips">查询字符串</span>，多个参数使用<span class="tips">&amp;</span>拼接</p>
@@ -550,7 +550,7 @@ p.then(value=&gt;{
 URL中只允许出现英文字母、数字、标点符号，在拼接查询字符串时，如果我们在URL中拼接了中文字符，或者其他被预定义的字符，则浏览器会对其进行URL编码，其中中文字符会被编码为%xx%xx%xx形式(x为16进制数)，JavaScript中可以使用encodeURI('字符串')对该字符串进行编码，使用decodeURI('%xx%xx')对该字符串进行解码</div>
 
 <h4 id="JQuery中的Ajax"><a href="#JQuery中的Ajax" class="headerlink" title="JQuery中的Ajax"></a>JQuery中的Ajax</h4><p>JQuery对XMLHttpRequest进行了封装</p>
-<h5 id="发起get请求-1"><a href="#发起get请求-1" class="headerlink" title="发起get请求"></a>发起get请求</h5><p><span class="strong">$.get(url,[data],[function(){…}])</span> 发起get请求</p>
+<h5 id="发起get请求-1"><a href="#发起get请求-1" class="headerlink" title="发起get请求"></a>发起get请求</h5><p><span class="strong">$.get(url,[data],[function(){...}])</span> 发起get请求</p>
 <ul>
 <li>url为请求地址，必须</li>
 <li>data为请求所携带的参数，非必须，参数也可以以查询字符串的形式拼接到URL后</li>
@@ -567,7 +567,7 @@ URL中只允许出现英文字母、数字、标点符号，在拼接查询字�
 $.get('http://shiwivi.com?id=1&amp;author=shiwivi',function(res){...})
 </div>
 
-<h5 id="发起post请求-1"><a href="#发起post请求-1" class="headerlink" title="发起post请求"></a>发起post请求</h5><p><span class="strong">$.post(url,[data],[function(){…}])</span> 发起post请求</p>
+<h5 id="发起post请求-1"><a href="#发起post请求-1" class="headerlink" title="发起post请求"></a>发起post请求</h5><p><span class="strong">$.post(url,[data],[function(){...}])</span> 发起post请求</p>
 <ul>
 <li>url为提交数据地址，必须</li>
 <li>data为所要提交的数据，非必须</li>
@@ -579,7 +579,7 @@ $.get('http://shiwivi.com?id=1&amp;author=shiwivi',function(res){...})
                 })
         })</div>
 
-<h5 id="get与post通用"><a href="#get与post通用" class="headerlink" title="get与post通用"></a>get与post通用</h5><p><span class="strong" style="white-space:pre;">$.ajax({<br>            type:’get/post/put/delete’,<br>            url:’’,<br>            data:{ },<br>            dataType:’html/text/json/xml/script/jsonp’,<br>            success:function(res,textStatus,jqXHR){ },<br>            error:function(jqXHR,textStatus,error){ }<br>})</span> </p>
+<h5 id="get与post通用"><a href="#get与post通用" class="headerlink" title="get与post通用"></a>get与post通用</h5><p><span class="strong" style="white-space:pre;">$.ajax({<br>            type:'get/post/put/delete',<br>            url:'',<br>            data:{ },<br>            dataType:'html/text/json/xml/script/jsonp',<br>            success:function(res,textStatus,jqXHR){ },<br>            error:function(jqXHR,textStatus,error){ }<br>})</span> </p>
 <ul>
 <li>type为请求方式，可选get/post/put/delete，默认get</li>
 <li>url为请求地址</li>

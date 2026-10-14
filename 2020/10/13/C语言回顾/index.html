@@ -46,7 +46,7 @@
             <li><a href="/blog/tags/408">#408</a></li>
             <li>#Security</li>
             <li><a href="/blog/tags/Linux">#Linux</a></li>
-            <li>#Python</li>
+            <li><a href="/blog/tags/Python">#Python</a></li>
             <li><a href="/blog/tags/Servr">#Server</a></li>
             <li><a href="/blog/tags/Web">#Web</a></li>
         </ul>
@@ -136,7 +136,7 @@
         <div class="article">
         <h1 class="title">C语言</h1>
         <div class="art-info">
-            <div><span><span class="iconfont icon-zishu-jzl"></span>字数：74315</span>
+            <div><span><span class="iconfont icon-zishu-jzl"></span>字数：74333</span>
             <span><span class="iconfont icon-riqi"></span>写于：2020-10-13</span></div>
             <div><span><span class="iconfont icon-zuixinnew3"></span>最新更新：2020-12-13</span>
             <span><span class="iconfont icon-shijian"></span>阅读本文预计花费您213分钟</span></div>
@@ -212,7 +212,7 @@ const 声明的字符串常量存储于静态区只读区 const char* str="hello
 <h4 id="include文件包含"><a href="#include文件包含" class="headerlink" title="#include文件包含"></a>#include文件包含</h4><p><span class="strong">文件包含</span>处理指将一个源文件中的内容包含到另一个源文件中，被包含的文件称为<span class="strong">头文件</span>(或标题文件)，文件名常以<span class="tips">.h</span>作为后缀，也可以以<span class="tips">.c</span>作为后缀甚至没有后缀。在编译的预处理阶段，头文件中的内容会被复制到主文件中，替换掉 #include &lt;xxx.h&gt;语句，得到一个新的源文件，再对该文件进行编译。</p>
 <ul>
 <li><span class="strong">#include &lt;文件名&gt;</span>一般用于包含系统库函数头文件</li>
-<li><span class="strong">#include “文件名”</span>一般用于包含用户自己编写的头文件</li>
+<li><span class="strong">#include "文件名"</span>一般用于包含用户自己编写的头文件</li>
 </ul>
 <div class="show">eg:C语言中常用的标准输入输出函数头文件
 #include &lt;stdio.h&gt;
@@ -221,7 +221,7 @@ const 声明的字符串常量存储于静态区只读区 const char* str="hello
 <p>注意事项：</p>
 <ul>
 <li>一个#include语句只能包含一个文件，如果要包含多个文件，则只能使用多个语句</li>
-<li>使用<span class="tips">&lt;文件名&gt;</span>包含文件时，系统会到存放C语言库函数头文件的路径下寻找该文件，，使用<span class="tips">“文件名”</span>包含文件时，系统会首先在用户当前目录中寻找文件，如果没有，再去C语言库函数路径下</li>
+<li>使用<span class="tips">&lt;文件名&gt;</span>包含文件时，系统会到存放C语言库函数头文件的路径下寻找该文件，，使用<span class="tips">"文件名"</span>包含文件时，系统会首先在用户当前目录中寻找文件，如果没有，再去C语言库函数路径下</li>
 <li>如果A文件包含了B文件，而B文件需要使用C文件中的内容，则可以在A文件中使用两个#include命令同时包含文件B和C，且包含C文件的指令需要出现在包含B文件的指令前。也可以嵌套包含，即B文件包含C文件，A文件包含B文件</li>
 <li>A文件包含B文件后，B文件中的内容会在预处理阶段被复制到A文件中，因此B文件中的全局静态变量在A文件中有效，不需要extern声明语句</li>
 <li>#include通常用于包含.h头文件，也可以包含其他文本文件，如：源代码文件(.c)、c++的头文件(.hpp或.hxx)、库文件(.lib、.dll、.a等)，甚至可以为.txt文本文件</li>
@@ -269,7 +269,7 @@ int main(void){
 }</div>
 
 <h4 id="条件编译"><a href="#条件编译" class="headerlink" title="条件编译"></a>条件编译</h4><p><span class="strong">条件编译</span>指预处理器根据条件编译指令，选择性将源代码中的部分代码送到编译器进行编译</p>
-<h6 id="ifdef宏定义判断"><a href="#ifdef宏定义判断" class="headerlink" title="#ifdef宏定义判断"></a>#ifdef宏定义判断</h6><p><span class="strong">#ifdef 标识符<br>         程序1<br>  #else<br>         程序2<br>  #endif<br></span><br>如果指定的标识符已经被#define定义过，则编译程序1，否则编译程序2，程序1和程序2既可以是C语句，也可以是预处理命令，类似于if…else…语句，#else可以不使用</p>
+<h6 id="ifdef宏定义判断"><a href="#ifdef宏定义判断" class="headerlink" title="#ifdef宏定义判断"></a>#ifdef宏定义判断</h6><p><span class="strong">#ifdef 标识符<br>         程序1<br>  #else<br>         程序2<br>  #endif<br></span><br>如果指定的标识符已经被#define定义过，则编译程序1，否则编译程序2，程序1和程序2既可以是C语句，也可以是预处理命令，类似于if...else...语句，#else可以不使用</p>
 <div class="show">#include &lt;stdio.h&gt;
 #define TEST //TEST定义甚至可以为空，也视为被定义过
 #ifdef TEST
@@ -348,7 +348,7 @@ auto int num=10;
 <code>#include <stdio.h>
 long Func(int n);
 
-</stdio.h></code><p><code>int main(void){<br>    int i,n;<br>    scanf(“%d”,&amp;n);<br>    for(i=1;i&lt;=n;i++){<br>        printf(“%ld\n”,Func(i));<br>    }<br>    return 0;<br>}<br>long Func(int n){<br>    static long p=1;<br>    p  *= n;<br>    return p ;<br>}</code></p></div><p></p>
+</stdio.h></code><p><code>int main(void){<br>    int i,n;<br>    scanf("%d",&amp;n);<br>    for(i=1;i&lt;=n;i++){<br>        printf("%ld\n",Func(i));<br>    }<br>    return 0;<br>}<br>long Func(int n){<br>    static long p=1;<br>    p  *= n;<br>    return p ;<br>}</code></p></div><p></p>
 <p>静态局部变量，有以下特点：</p>
 <ul>
 <li>如果定义静态局部变量时不赋初值，编译器会自动赋为0(对数值型变量)或空字符(对字符变量)</li>
@@ -574,7 +574,7 @@ C语言中没有string类型，处理字符串一般使用字符数组或指针�
 <tr>
 <td>无类型</td>
 <td>void</td>
-<td>void f1(){…}</td>
+<td>void f1(){...}</td>
 </tr>
 </tbody></table>
 </div>
@@ -628,10 +628,10 @@ C语言中没有string类型，处理字符串一般使用字符数组或指针�
 <h4 id="浮点型"><a href="#浮点型" class="headerlink" title="浮点型"></a>浮点型</h4><p>浮点数有两种表示方式：</p>
 <ul>
 <li>十进制小数形式，如：0.5,1.3,.95(省略0)</li>
-<li>指数形式，以e或E为底数(其中e代表10)，e的左边为数值部分，e的右边为指数部分(必须为整数)，如：12.3可以表示为1.23e1、0.123e2、123e-1等形式，如果e左边的数值部分，小数点左边有且只有一位非零的数字，则该表示方法称为<span class="tips">“规范化的指数形式”</span>，如：1.23e1为规范化的指数形式，而0.123e2、123e-1不是</li>
+<li>指数形式，以e或E为底数(其中e代表10)，e的左边为数值部分，e的右边为指数部分(必须为整数)，如：12.3可以表示为1.23e1、0.123e2、123e-1等形式，如果e左边的数值部分，小数点左边有且只有一位非零的数字，则该表示方法称为<span class="tips">"规范化的指数形式"</span>，如：1.23e1为规范化的指数形式，而0.123e2、123e-1不是</li>
 </ul>
 <p>C语言默认将浮点型常量作为<span class="tips">双精度(double)</span>类型进行处理，如果在常量后加上<span class="tips">f或F</span>将作为float型处理，加上<span class="tips">l或L</span>则作为long double型处理，eg:1.25e-2f，1.25L</p>
-<h4 id="字符"><a href="#字符" class="headerlink" title="字符"></a>字符</h4><p>字符常量使用<span class="tips">单引号’’</span>包裹，一个字符占用一个字节(中文字符需要两个字节)。字符在内存中以ASCII码形式存储，因此字符型数据和整型数据是通用且可以用于计算的(仅限于0-255之间的整数)，常见的应用为<span class="tips">大写字符+32转换为小写字符</span></p>
+<h4 id="字符"><a href="#字符" class="headerlink" title="字符"></a>字符</h4><p>字符常量使用<span class="tips">单引号''</span>包裹，一个字符占用一个字节(中文字符需要两个字节)。字符在内存中以ASCII码形式存储，因此字符型数据和整型数据是通用且可以用于计算的(仅限于0-255之间的整数)，常见的应用为<span class="tips">大写字符+32转换为小写字符</span></p>
 <div class="show">char a=97;
 int  asciiA=a-32;
 printf("%c\n",asciiA)//输出A
@@ -659,13 +659,13 @@ printf("%d",asciiA)//输出65
 <tr>
 <td>\r</td>
 <td>回车(不换行)，将光标位置移到当前行开头</td>
-<td>\“</td>
+<td>\"</td>
 <td>双引号</td>
 </tr>
 <tr>
 <td>\0</td>
 <td>空操作字符，常用作字符串结束标志</td>
-<td>\‘</td>
+<td>\'</td>
 <td>单引号</td>
 </tr>
 <tr>
@@ -703,8 +703,8 @@ printf("abcdefg\b\b\b\b\b\b\b123");//输出123 efg
 printf("abcdefg\b\b\b\b\b\b\b123\n");//输出123defg
 </div>
 
-<h3 id="字符串"><a href="#字符串" class="headerlink" title="字符串"></a>字符串</h3><p>字符串常量使用<span class="tips">双引号””</span>包裹，字符串末尾会被加上<span class="tips">‘\0’</span>作为字符串结束的标志。C语言中没有专门的关键字用来声明字符串变量，因此需要使用字符数组或者指针来存储和处理字符串</p>
-<h4 id="字符数组"><a href="#字符数组" class="headerlink" title="字符数组"></a>字符数组</h4><p>字符串可以存储于字符数组中，但字符数组中存储的并不一定是字符串，这取决于字符数组最后一个元素是否是字符串结束标志’\0’，’\0’也占用一个字节内存，但它不计入字符串的实际长度，只计入数组长度。注意，如果字符数组最后没有’\0’，系统将无法将该数组当作字符串来处理(如：无法正确被printf(“%s”,xx)输出)</p>
+<h3 id="字符串"><a href="#字符串" class="headerlink" title="字符串"></a>字符串</h3><p>字符串常量使用<span class="tips">双引号""</span>包裹，字符串末尾会被加上<span class="tips">'\0'</span>作为字符串结束的标志。C语言中没有专门的关键字用来声明字符串变量，因此需要使用字符数组或者指针来存储和处理字符串</p>
+<h4 id="字符数组"><a href="#字符数组" class="headerlink" title="字符数组"></a>字符数组</h4><p>字符串可以存储于字符数组中，但字符数组中存储的并不一定是字符串，这取决于字符数组最后一个元素是否是字符串结束标志'\0'，'\0'也占用一个字节内存，但它不计入字符串的实际长度，只计入数组长度。注意，如果字符数组最后没有'\0'，系统将无法将该数组当作字符串来处理(如：无法正确被printf("%s",xx)输出)</p>
 <div class="show">对于字符数组，可以像其他数组一样用同样的方式初始化，如：
 <code>char str[6]={'H','e','l','l','o','\0'};</code>
 如果省略对数组长度的声明，则必须人为在初始化列表中添加'\0'，否则系统将无法将str当作字符串来处理
@@ -712,7 +712,7 @@ printf("abcdefg\b\b\b\b\b\b\b123\n");//输出123defg
 char str[]={'H','e','l','l','o','\0'};//长度为6的字符串</code>
 用printf("%s",str)语句输出上述变量时，第一个变量由于缺少'\0'，输出语句会在输出完Hello后继续输出乱码，直到遇见'\0'，而第二个变量会被正常输出
 
-<p>也可以用字符串常量初始化字符数组，这样可以不指定数组大小，且由于字符串常量”Hello”末尾自带’\0’，可以不必人为添加’\0’<br><code>char str[6]={"Hello"};<br>char str[]={"Hello"};//数组长度可省略<br>char str[]="Hello";//大括号可省略</code><br><span class="text-red">但只允许在定义时整体赋值，不允许在赋值语句中整体赋值</span><br><code>char str[6];<br>str[]={"Hello"};//不允许先定义，定义完在赋值语句中整体赋值,Visual Studio报错：不允许使用不完整的类型</code><br>无论用哪种方式初始化字符数组，如果指定数组长度，都要保证预留足够空间以便存储字符串结束标志，即：字符数组大小一定要比字符串的实际字符数大1<br>可以使用数组下标访问字符串的单个字符，如：<br>str[1]代表字符’e’</p></div><p></p>
+<p>也可以用字符串常量初始化字符数组，这样可以不指定数组大小，且由于字符串常量"Hello"末尾自带'\0'，可以不必人为添加'\0'<br><code>char str[6]={"Hello"};<br>char str[]={"Hello"};//数组长度可省略<br>char str[]="Hello";//大括号可省略</code><br><span class="text-red">但只允许在定义时整体赋值，不允许在赋值语句中整体赋值</span><br><code>char str[6];<br>str[]={"Hello"};//不允许先定义，定义完在赋值语句中整体赋值,Visual Studio报错：不允许使用不完整的类型</code><br>无论用哪种方式初始化字符数组，如果指定数组长度，都要保证预留足够空间以便存储字符串结束标志，即：字符数组大小一定要比字符串的实际字符数大1<br>可以使用数组下标访问字符串的单个字符，如：<br>str[1]代表字符'e'</p></div><p></p>
 <div class="show">一个字符串可以用一维字符数组存储，多个字符串可以用二维字符数组存储。数组的第一维长度代表要存储的字符串个数，可以省略；第二维长度不能省略，应当设定为最长那个字符串长度+1，eg:
 <code>char weekday[][10]={"Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"};</code>
 其中最长的字符串"Wendesday"长度为9，因此第二维长度应当为10，对于长度小于10的字符串，其剩余的内存单元会被'\0'填充
@@ -794,7 +794,7 @@ scanf("%s",str);</code>
 <p>数组名的命名规则遵守标识符命名规范，数组长度需要使用常量表达式，<span class="tips">不能包含变量</span>，一维数组的初始化可以使用以下方法：</p>
 <ul>
 <li>在定义时赋予全部初值，如：int nums[5]={0,1,2,3,4};</li>
-<li>也可以只给一部分元素赋值，其余元素会被赋0(char类型赋’\0’)，如：int nums[5]={0,1};</li>
+<li>也可以只给一部分元素赋值，其余元素会被赋0(char类型赋'\0')，如：int nums[5]={0,1};</li>
 <li>如果全部元素相同，可以只写一个值，如:int nums[5]={0};</li>
 <li>如果对全部元素赋予初值，由数据个数已经确定，可以不指定数组长度，如：int nums[]={0,1,2,3,4};</li>
 </ul>
@@ -825,7 +825,7 @@ printf("%d", sizeof(nums)/sizeof(nums[0]));</code>
 <ul>
 <li>分行赋值，如：<code>int nums[3][2]={{1,2},{3,4},{5,6}}</code></li>
 <li>也可以一次性统一赋值，但不如第一种赋值方法清晰，如：<code>int nums[3][2]={1,2,3,4,5,6}</code></li>
-<li>可以只给部分元素赋值，同样其余元素会被赋0(char类型赋’\0’)，如：<code>int nums[3][2]={{1},{},{0,6}}</code></li>
+<li>可以只给部分元素赋值，同样其余元素会被赋0(char类型赋'\0')，如：<code>int nums[3][2]={{1},{},{0,6}}</code></li>
 <li>如果对所有元素赋初值，可以不指定第一维的长度，但<span class="tips">第二维的长度声明永远不能省略</span></li>
 </ul>
 <h3 id="结构体"><a href="#结构体" class="headerlink" title="结构体"></a>结构体</h3><h4 id="结构体定义"><a href="#结构体定义" class="headerlink" title="结构体定义"></a>结构体定义</h4><p>对于复杂数据对象，仅仅使用几种基本数据类型无法准确反映它们之间的内在联系，也无法做统一处理，于是衍生出了允许用户自定义的数据类型，C语言中称之为构造数据类型(复合数据类型)，结构体就是构造数据类型的典型代表</p>
@@ -906,8 +906,8 @@ struct student stu1,stu2;</code>
 
 <p>访问结构体变量的成员必须使用<span class="tipe">成员选择运算符</span>(圆点运算符)，访问格式为：<br><span class="api-block">结构体变量名.成员名</span></p>
 <ul>
-<li>C语言规定，不能将结构体变量作为一个整体输入、输出，如：printf(“%d%s..”,stu1)为非法语句</li>
-<li>只能通过用圆点运算符访问结构体成员的方式来输入输出，如：printf(“%s”,stu1.studentName)</li>
+<li>C语言规定，不能将结构体变量作为一个整体输入、输出，如：printf("%d%s..",stu1)为非法语句</li>
+<li>只能通过用圆点运算符访问结构体成员的方式来输入输出，如：printf("%s",stu1.studentName)</li>
 <li>成员运算符<span class="tips">.</span>在所有运算符中优先级最高，因此通常可以将stu1.studentName当成一个整体看待</li>
 <li>结构体嵌套时，必须以级联方式访问结构体成员，如：stu1.birthday.year</li>
 <li>结构体成员可以像普通变量一样进行各种运算，如：stu1.birthday.year++</li>
@@ -1104,7 +1104,7 @@ NUMBER array[20];//既可以存储int数据，也可以存储float数据</code><
 }枚举变量名;</div>
 
 <ul>
-<li><span class="strong">枚举常量都是整型常量</span>，除非特别指定，否则其值按顺序为0，1，2….</li>
+<li><span class="strong">枚举常量都是整型常量</span>，除非特别指定，否则其值按顺序为0，1，2....</li>
 <li>允许在定义时明确指定枚举常量的值，如：enum response {no=1,yes=1,none=0}，也可以只指定前几个值，其后的值会自动递增，如：enum month{Jan=1,Feb,Mar,Apr,May,Jun,Jul,Aug,Sep,Oct,Nov,Dec};</li>
 <li>程序员在花括号内定义的枚举常量只作为标识符使用，并不代表什么含义，其值本质仍是整型常量，不是字符串</li>
 <li>枚举常量可以作为整型值进行比较、输出操作</li>
@@ -1170,7 +1170,7 @@ res1=(enum response)2;
 </div>
 
 <ul>
-<li><span class="strong">指针</span>：一个变量的地址称为该变量的”指针”，反之亦然，变量的指针即变量的地址</li>
+<li><span class="strong">指针</span>：一个变量的地址称为该变量的"指针"，反之亦然，变量的指针即变量的地址</li>
 <li><span class="strong">指针变量</span>：专门用于存放地址的变量</li>
 <li><span class="strong">&amp;</span>：取地址运算符</li>
 <li><span class="strong">*</span>：指针运算符，取出指针变量指向的内容，又称为间接寻址运算符<br>指针的定义：<div class="api-block">数据类型 * 变量名</div></li>
@@ -1233,7 +1233,7 @@ for(int *p=nums;p&lt;(nums+5);p++){
 }</span>
 注意：p++和p+1本质是两个不同的操作，特别对于指针变量而言，p++有赋值操作，会修改p的值从而使p指向下一个元素，而p+1并不改变当前指针的指向
 
-<p><span class="text-red">数组名nums代表数组元素首地址，是一个指针常量，它的值是固定不变的，因此只能像*(nums+i)一样基于此地址进行计算,不能使用nums++改变该地址值</span><br>for(int *p=nums;nums&lt;(p+5);nums++){//错误代码<br>    printf(“%d”,*a)<br>}</p></div><p></p>
+<p><span class="text-red">数组名nums代表数组元素首地址，是一个指针常量，它的值是固定不变的，因此只能像*(nums+i)一样基于此地址进行计算,不能使用nums++改变该地址值</span><br>for(int *p=nums;nums&lt;(p+5);nums++){//错误代码<br>    printf("%d",*a)<br>}</p></div><p></p>
 <h4 id="指针与函数传参"><a href="#指针与函数传参" class="headerlink" title="指针与函数传参"></a>指针与函数传参</h4><p>使用指针作为函数参数时，不再是简单的<span class="tips">值传递</span>，而是<span class="tips">地址传递</span>，可以直接修改原参数的值</p>
 <div class="show">eg:将一个数组中的值反序存放并输出
 <code>#include&lt;stdio.h&gt;
@@ -1283,7 +1283,7 @@ a是数组首元素a[0]的地址(即&amp;a[0])，a+1是a[1]的地址(&amp;a[1])�
 <span class="strong">a=&amp;a[0]，a+1=&amp;a[1]，a+2=&amp;a[2]</span>;
 <span class="text-red">*(a+0)=a[0]，*(a+1)=a[1]，*(a+2)=a[2]</span>;
 
-<p>此时将a[0]、a[1]、a[2]展开，这三个元素每个都是一维数组，在这三个数组内部，a[0]、a[1]、a[2]分别是它们内部一维数组的数组名，又因为C语言中数组名代表数组首元素地址，因此：<br>a[0]即为a[0][0]的地址，即&amp;a[0][0]，a[0]+1则为a[0][1]的地址 &amp;a[0][1]……<br>即：<br><span class="strong">a[0]+0=&amp;a[0][0]，a[0]+1=&amp;a[0][1]，a[0]+2=&amp;a[0][2]，a[0]+3=&amp;a[0][3]</span><br><span class="text-red">*(a[0]+0)=a[0][0]，*(a[0]+1)=a[0][1]，*(a[0]+2)=a[0][2]，*(a[0]+3)=a[0][3]</span>;</p>
+<p>此时将a[0]、a[1]、a[2]展开，这三个元素每个都是一维数组，在这三个数组内部，a[0]、a[1]、a[2]分别是它们内部一维数组的数组名，又因为C语言中数组名代表数组首元素地址，因此：<br>a[0]即为a[0][0]的地址，即&amp;a[0][0]，a[0]+1则为a[0][1]的地址 &amp;a[0][1]......<br>即：<br><span class="strong">a[0]+0=&amp;a[0][0]，a[0]+1=&amp;a[0][1]，a[0]+2=&amp;a[0][2]，a[0]+3=&amp;a[0][3]</span><br><span class="text-red">*(a[0]+0)=a[0][0]，*(a[0]+1)=a[0][1]，*(a[0]+2)=a[0][2]，*(a[0]+3)=a[0][3]</span>;</p>
 <p>由于<span class="text-red">a[0]和*a</span>等价，因此<br>a[0]+0与*(a+0)均是a[0][0]的地址，a[0]+1与*(a+0)+1均是a[0][1]的地址，其他同理，由此可得：<br><span class="text-blue">*(a[0])=*(*(a+0)+0)=**a=a[0][0]，*(a[0]+1)=*(*(a+0)+1)=*(*a+1)=a[0][1]</span><br><span class="text-blue">*(a[1]+2)=*(*(a+1)+2)=a[1][2]，*(a[2]+3)=*(*(a+2)+3)=a[2][3]</span><br><span class="text-blue">其他以此类推</span></p>
 <p><span class="text-red">注意！<br>对于一维数组，a[i]代表一个数组元素，占据内存单元，拥有物理地址，但在二维数组中，a[i]代表一维数组名，只是一个地址(如同一维数组中的数组名只是一个指针常量一样)，务必记住，a[i]和*(a+i)是等价的</span></p>
 </div>
@@ -1556,7 +1556,7 @@ p=(void *)str;</code>
 动态分配内存函数返回值根据指向数据类型需要转换为其他类型
 <code>int * p=(int *)malloc(10*sizeof(int));</code></div>
 
-<h4 id="指针数组与main函数的形参"><a href="#指针数组与main函数的形参" class="headerlink" title="指针数组与main函数的形参"></a>指针数组与main函数的形参</h4><p>一般情况下，main函数一般会写为空参数形式：int main(void)，实际上main函数可以带有参数，如：<br><span class="strong">int main(int argc,char * argv[])</span><br>Java语言中的main默认就为上述形式，argc和argv就是main函数的形参。main函数由操作系统调用，在main所在的.c文件被编译后，会生成可执行文件(windows下后缀为.exe)，在系统命令终端下(如：Linux的shell、windows的cmd)，输入<span class="strong">文件路径/可执行文件名 参数1 参数2…</span>即可调用该可执行文件并将参数传递给main函数</p>
+<h4 id="指针数组与main函数的形参"><a href="#指针数组与main函数的形参" class="headerlink" title="指针数组与main函数的形参"></a>指针数组与main函数的形参</h4><p>一般情况下，main函数一般会写为空参数形式：int main(void)，实际上main函数可以带有参数，如：<br><span class="strong">int main(int argc,char * argv[])</span><br>Java语言中的main默认就为上述形式，argc和argv就是main函数的形参。main函数由操作系统调用，在main所在的.c文件被编译后，会生成可执行文件(windows下后缀为.exe)，在系统命令终端下(如：Linux的shell、windows的cmd)，输入<span class="strong">文件路径/可执行文件名 参数1 参数2...</span>即可调用该可执行文件并将参数传递给main函数</p>
 <div class="show">假设main函数写于文件file.c文件中，编译后生成file.out文件
 在该文件所属路径下执行命令：<span class="strong">file.out data1 data2</span>
 对于main函数原型<span class="strong">int main(int argc,char * argv[])</span>
@@ -1653,7 +1653,7 @@ a+=a-=a*=a;//执行完a=0
 i+++j;//应当解析为(i++)+j，C编译系统会从左至右尽可能多地将若干个字符组成一个运算符
 </div>
 
-<h4 id="逗号表达式"><a href="#逗号表达式" class="headerlink" title="逗号表达式"></a>逗号表达式</h4><p><span class="strong">表达式1,表达式2,…表达式n</span><br>用于串联多个表达式，表达式从左至右顺序运算，<span class="tips">整个逗号表达式的值是最后一个表达式的值</span><span class="tips"></span>。多数情况下，逗号表达式仅用来顺序求值，并不一定用到整个逗号表达式的最终值。常见的情况是用于for语句进行多个变量的顺序运算，<span class="tips">逗号表达式的运算优先级是所有运算种最低的</span>。</p>
+<h4 id="逗号表达式"><a href="#逗号表达式" class="headerlink" title="逗号表达式"></a>逗号表达式</h4><p><span class="strong">表达式1,表达式2,...表达式n</span><br>用于串联多个表达式，表达式从左至右顺序运算，<span class="tips">整个逗号表达式的值是最后一个表达式的值</span><span class="tips"></span>。多数情况下，逗号表达式仅用来顺序求值，并不一定用到整个逗号表达式的最终值。常见的情况是用于for语句进行多个变量的顺序运算，<span class="tips">逗号表达式的运算优先级是所有运算种最低的</span>。</p>
 <div class="show">a=2*5,a*4;//逗号表达式运算优先级最低，所以a=10，整个逗号表达式值等于40
 b=(a=2*5,a*4);//正确获得逗号表达式值的方法，运算结果：a=10,b=40
 (a=3*5,a*4),a+5;//逗号表达式也可以嵌套到其他的逗号表达式中，运算结果：a=15，逗号表达式=20
@@ -1707,7 +1707,7 @@ a=a^b;
 <h6 id="左移运算符-lt-lt"><a href="#左移运算符-lt-lt" class="headerlink" title="左移运算符<<"></a>左移运算符&lt;&lt;</h6><p>将一个数的二进制位左移若干位，高位溢出部分舍弃，低位补0。一个数左移n位，如果左边被舍弃的部分全为0，则该数相当于乘以2<sup>n</sup></p>
 <div class="show">int result = 30&lt;&lt;2;//result=120</div>
 
-<h6 id="右移运算符-gt-gt"><a href="#右移运算符-gt-gt" class="headerlink" title="右移运算符>>"></a>右移运算符&gt;&gt;</h6><p>将一个数的二进制位右移若干位，低位溢出部分舍弃，高位补的值取决于该数值本身。如果是无符号数，或者该数符号位为0(该数为正)，则高位补0，如果该数为负数，高位补0还是补1取决于编译器，补0称为”逻辑右移”，补1称为”算术右移”。</p>
+<h6 id="右移运算符-gt-gt"><a href="#右移运算符-gt-gt" class="headerlink" title="右移运算符>>"></a>右移运算符&gt;&gt;</h6><p>将一个数的二进制位右移若干位，低位溢出部分舍弃，高位补的值取决于该数值本身。如果是无符号数，或者该数符号位为0(该数为正)，则高位补0，如果该数为负数，高位补0还是补1取决于编译器，补0称为"逻辑右移"，补1称为"算术右移"。</p>
 <p>同理，如果右边移除部分均为0，则右移n位相当于该数除以2<sup>n</sup></p>
 <h6 id="位运算赋值运算符"><a href="#位运算赋值运算符" class="headerlink" title="位运算赋值运算符"></a>位运算赋值运算符</h6><p>位运算和赋值运算可以组成复合赋值运算符，如：&amp;=、|=、&lt;&lt;=、&gt;&gt;=、^=等</p>
 <div class="show">a&lt;&lt;=2等价于a=a&lt;&lt;2</div>
@@ -1731,7 +1731,7 @@ max=a&gt;b?a:b;等价于max=(a&gt;b?a:b);
 a&gt;b?c:d&gt;e?f:g;等价于a&gt;b?c:(d&gt;e?f:g)
 </div>
 
-<h3 id="选择与循环控制"><a href="#选择与循环控制" class="headerlink" title="选择与循环控制"></a>选择与循环控制</h3><h4 id="选择语句"><a href="#选择语句" class="headerlink" title="选择语句"></a>选择语句</h4><p><span class="tips">if()..else</span>、<span class="tips">while()</span>、<span class="tips">do…while()</span>、<span class="tips">for</span></p>
+<h3 id="选择与循环控制"><a href="#选择与循环控制" class="headerlink" title="选择与循环控制"></a>选择与循环控制</h3><h4 id="选择语句"><a href="#选择语句" class="headerlink" title="选择语句"></a>选择语句</h4><p><span class="tips">if()..else</span>、<span class="tips">while()</span>、<span class="tips">do...while()</span>、<span class="tips">for</span></p>
 <h5 id="switch多分支选择"><a href="#switch多分支选择" class="headerlink" title="switch多分支选择"></a>switch多分支选择</h5><div class="api-block">switch(表达式)
   {
     case 常量表达式:语句1
@@ -1803,7 +1803,7 @@ int main()表示主函数可以传入任意个数的参数，而int main(void)�
 </div>
 
 <h4 id="标准输入输出函数"><a href="#标准输入输出函数" class="headerlink" title="标准输入输出函数"></a>标准输入输出函数</h4><p>C语言本身不提供输入输出语句，输入输出操作由C函数库中的函数提供支持。这是因为输入输出涉及到硬件操作，没有输入输出语句可以让C语言编译器避免在编译阶段处理硬件有关的问题，可以极大地简化编译系统，并提高其通用性和可移植性。</p>
-<p>C函数库由各软件公司编写，并已经编译成目标文件(.obj文件)，源程序中的printf()等语句在编译阶段并不会被编译为目标指令，而是等待链接阶段源程序和库函数链接后，在执行阶段直接调用库函数目标文件(.obj文件)中的printf()函数。不同函数库提供的函数名、功能完全不同，但有一些通用的”标准输入输出函数”，调用这些函数需要引入头文件<span class="tips">#inculde&lt;stdio.h&gt;</span></p>
+<p>C函数库由各软件公司编写，并已经编译成目标文件(.obj文件)，源程序中的printf()等语句在编译阶段并不会被编译为目标指令，而是等待链接阶段源程序和库函数链接后，在执行阶段直接调用库函数目标文件(.obj文件)中的printf()函数。不同函数库提供的函数名、功能完全不同，但有一些通用的"标准输入输出函数"，调用这些函数需要引入头文件<span class="tips">#inculde&lt;stdio.h&gt;</span></p>
 <h5 id="printf输出函数"><a href="#printf输出函数" class="headerlink" title="printf输出函数"></a>printf输出函数</h5><p>标准输出语句格式为：</p>
 <div class="api-block">printf("格式控制",输出表列)</div>
 
@@ -2067,7 +2067,7 @@ file2.c
 由此可见，声明函数原型的作用除了在调用时作准确性检查，还可以拓展函数作用域到定义本函数的文件之外，只要在所有调用该函数的文件中作一个函数原型声明即可。如：各种库提供的头文件中，就包含了大量函数及其函数原型声明，我们只需要使用#include命令将其包含到我们的c文件中，就可以不需要了解其函数和函数原型，就直接使用该函数。原型声明时extern可以省略，但我们自己编写头文件中的原型声明时应当保留extern关键字来保证代码清晰性。</div>
 
 <h3 id="类型限定符"><a href="#类型限定符" class="headerlink" title="类型限定符"></a>类型限定符</h3><p>C语言中，类型限定符用于指定数据的访问属性。常见的类型限定符包括<span class="tips">const</span>(常量)、<span class="tips">volatile</span>(易变的)、<span class="tips">restrict</span>(限定)和<span class="tips">_Atomic</span>(原子)</p>
-<h4 id="const"><a href="#const" class="headerlink" title="const"></a>const</h4><h5 id="const修饰变量"><a href="#const修饰变量" class="headerlink" title="const修饰变量"></a>const修饰变量</h5><p>const用于限定变量的值不能被修改，表明变量中存储的值是一个常量，这类变量本质是变量，但又有常量属性，因此又称为”常变量”，const修饰的常变量必须在定义的同时赋值，而后其值就不能再改变，任何赋值行为都将引发错误。定义常变量时，const和变量类型位置可以互换，因此以下两个语句等价：</p>
+<h4 id="const"><a href="#const" class="headerlink" title="const"></a>const</h4><h5 id="const修饰变量"><a href="#const修饰变量" class="headerlink" title="const修饰变量"></a>const修饰变量</h5><p>const用于限定变量的值不能被修改，表明变量中存储的值是一个常量，这类变量本质是变量，但又有常量属性，因此又称为"常变量"，const修饰的常变量必须在定义的同时赋值，而后其值就不能再改变，任何赋值行为都将引发错误。定义常变量时，const和变量类型位置可以互换，因此以下两个语句等价：</p>
 <div class="show"><code>const int num=100;
 int const num=100;</code></div>
 
@@ -2330,7 +2330,7 @@ eg:从当前路径文件夹下读取名为"myTest.txt"的文件，并将内容�
 }</code></div>
 
 <h5 id="按字符串读写"><a href="#按字符串读写" class="headerlink" title="按字符串读写"></a>按字符串读写</h5><ul>
-<li><span class="strong">char * fgets(char *s,int n,FILE *fp)</span> 从fp所指向文件中读取最多含n-1个字符的字符串，并在字符串末尾添加’\0’，然后存入s。当读取到回车换行符、到达文件末尾或者读满n-1个字符时，函数返回该字符串的首地址，即指针s的值；读取失败时返回空指针NULL</li>
+<li><span class="strong">char * fgets(char *s,int n,FILE *fp)</span> 从fp所指向文件中读取最多含n-1个字符的字符串，并在字符串末尾添加'\0'，然后存入s。当读取到回车换行符、到达文件末尾或者读满n-1个字符时，函数返回该字符串的首地址，即指针s的值；读取失败时返回空指针NULL</li>
 <li><span class="strong">int fputs(const char *s,FILE * fp)</span> 将字符串s写入文件fp，若写入错误，则返回EOF(-1)，否则返回一个非负数</li>
 </ul>
 <div class="show">eg:从键盘输入一个字符串，追加到文件末尾
@@ -2593,7 +2593,7 @@ gets(str);
 fgets(str,sizeof(str),stdin);
 </code></div>
 
-<p>虽然系统隐含的标准I/O文件是指终端文件，但标准输入和标准输出是可以重定向的，操作系统可以把它们重定向到其他文件或具有文件属性的设备，只有标准错误输出不能进行一般的输出重定向，如：把标准输出重定向到打印机，把标准输入重定向到U盘文件等。使用<span class="strong">“&lt;”</span>表示输入重定向，用<span class="strong">“&gt;”</span>表示输出重定向。如：file.exe是可执行文件，执行该程序时需要从键盘输入数据，如果现在要求从文件file.in读取所需要输入的数据，那么只需在DOS命令提示符下，输入以下命令即可：</p>
+<p>虽然系统隐含的标准I/O文件是指终端文件，但标准输入和标准输出是可以重定向的，操作系统可以把它们重定向到其他文件或具有文件属性的设备，只有标准错误输出不能进行一般的输出重定向，如：把标准输出重定向到打印机，把标准输入重定向到U盘文件等。使用<span class="strong">"&lt;"</span>表示输入重定向，用<span class="strong">"&gt;"</span>表示输出重定向。如：file.exe是可执行文件，执行该程序时需要从键盘输入数据，如果现在要求从文件file.in读取所需要输入的数据，那么只需在DOS命令提示符下，输入以下命令即可：</p>
 <div class="shell">c:\file.exe &lt; file.in</div>
 这样file.exe的标准输入就被"&lt;"重定向到了file.in文件，此时程序只会从文件file.in读取数据，而不再理会任何键盘输入。同样，以下命令可以将标准输出重定向到文件file.out：
 <div class="shell">c:\file.exe &gt; file.out</div>
@@ -2606,7 +2606,7 @@ fgets(str,sizeof(str),stdin);
     printf("%d\n", rand());//19169
     ......</code></div>
 
-<p>这是由于，各编程语言获取随机数实际上都是基于递推公式计算出一组数值，当序列足够长，这组数值可以近似满足均匀分布。在计算随机数时，这些随机函数都是基于一种名为”种子”的基准值进行运算，当种子值不变，生成的随机数也将固定。C语言中,rand()函数的种子值默认为1，可以通过<span class="text-red">srand()</span>函数来修改该种子值，其函数原型为:<br><span class="strong">void srand(unsigned int seed);</span></p>
+<p>这是由于，各编程语言获取随机数实际上都是基于递推公式计算出一组数值，当序列足够长，这组数值可以近似满足均匀分布。在计算随机数时，这些随机函数都是基于一种名为"种子"的基准值进行运算，当种子值不变，生成的随机数也将固定。C语言中,rand()函数的种子值默认为1，可以通过<span class="text-red">srand()</span>函数来修改该种子值，其函数原型为:<br><span class="strong">void srand(unsigned int seed);</span></p>
 <div class="show"><code>    srand(6);
     printf("%d\n", rand());//58
     printf("%d\n", rand());//6673
@@ -2656,7 +2656,7 @@ int randomNum = rand()%(101-1)+1;//生成1-101(不包括101)之间的整数</cod
 </thead>
 <tbody><tr>
 <td>标点符号字符</td>
-<td>!@”#$%^&amp;’(),*+-./:&lt;=&gt;;[]\_{</td>
+<td>!@"#$%^&amp;'(),*+-./:&lt;=&gt;;[]\_{</td>
 </tr>
 <tr>
 <td>图形字符</td>
@@ -2770,27 +2770,27 @@ int randomNum = rand()%(101-1)+1;//生成1-101(不包括101)之间的整数</cod
 <tbody><tr>
 <td>strlen</td>
 <td>unsigned int strlen( const char *str);</td>
-<td>返回字符串str中实际字符的个数(不包括终止符’\0’)</td>
+<td>返回字符串str中实际字符的个数(不包括终止符'\0')</td>
 </tr>
 <tr>
 <td>strcat</td>
 <td>char *strcat(char *str1,const char *str2)</td>
-<td>把字符串str2拼接到str1后面,并在拼接好的str1串末尾添加一个’\0’,原str1末尾的’\0’将被覆盖。因无边界检查,调用时应保证str1的空间足够大,能存放原始str1和str2两个串的内容。函数返回指向str1的指针</td>
+<td>把字符串str2拼接到str1后面,并在拼接好的str1串末尾添加一个'\0',原str1末尾的'\0'将被覆盖。因无边界检查,调用时应保证str1的空间足够大,能存放原始str1和str2两个串的内容。函数返回指向str1的指针</td>
 </tr>
 <tr>
 <td>strncat</td>
 <td>char * strncat( char * strl, constchar * str2, unsigned int count);</td>
-<td>把字符串str2中不多于count个字符拼接到str1后面,并添加\0’,原str1末尾的’\0’将覆盖，函数指向返回str1的指针</td>
+<td>把字符串str2中不多于count个字符拼接到str1后面,并添加\0',原str1末尾的'\0'将覆盖，函数指向返回str1的指针</td>
 </tr>
 <tr>
 <td>strcpy</td>
 <td>char * strcpy( char * strl, constchar *str2);</td>
-<td>把str2指向的字符串复制到str1中，str2必须是终止符为’\0’的字符串指针，函数返回指向str1的指针</td>
+<td>把str2指向的字符串复制到str1中，str2必须是终止符为'\0'的字符串指针，函数返回指向str1的指针</td>
 </tr>
 <tr>
 <td>strncpy</td>
 <td>char *strncpy(char * strl, constchar *str2,unsigned int count);</td>
-<td>把str2指向的字符串中的count个字符复制到st1中，str2必须是终止符为’\0’的字符串指针。如果str2指向的字符串少于 count个字符，则将’\0’加到str1的尾部,直到满足coun个字符为止。如果str2指向的字符串长度大于count个字符，则结果串str1不用’\0’结尾，函数返回指向strl的指针</td>
+<td>把str2指向的字符串中的count个字符复制到st1中，str2必须是终止符为'\0'的字符串指针。如果str2指向的字符串少于 count个字符，则将'\0'加到str1的尾部,直到满足coun个字符为止。如果str2指向的字符串长度大于count个字符，则结果串str1不用'\0'结尾，函数返回指向strl的指针</td>
 </tr>
 <tr>
 <td>strcmp</td>
@@ -3009,7 +3009,7 @@ int randomNum = rand()%(101-1)+1;//生成1-101(不包括101)之间的整数</cod
 <td>system</td>
 <td>stdlib.h</td>
 <td>int system(char * command);</td>
-<td>发出一个DOS命令。例如,system(“CLS”)可以实现清屏操作</td>
+<td>发出一个DOS命令。例如,system("CLS”)可以实现清屏操作</td>
 </tr>
 <tr>
 <td>kbhit</td>

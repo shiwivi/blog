@@ -46,7 +46,7 @@
             <li><a href="/blog/tags/408">#408</a></li>
             <li>#Security</li>
             <li><a href="/blog/tags/Linux">#Linux</a></li>
-            <li>#Python</li>
+            <li><a href="/blog/tags/Python">#Python</a></li>
             <li><a href="/blog/tags/Servr">#Server</a></li>
             <li><a href="/blog/tags/Web">#Web</a></li>
         </ul>
@@ -136,7 +136,7 @@
         <div class="article">
         <h1 class="title">Linux文件系统与文件类型</h1>
         <div class="art-info">
-            <div><span><span class="iconfont icon-zishu-jzl"></span>字数：18057</span>
+            <div><span><span class="iconfont icon-zishu-jzl"></span>字数：18061</span>
             <span><span class="iconfont icon-riqi"></span>写于：2021-12-29</span></div>
             <div><span><span class="iconfont icon-zuixinnew3"></span>最新更新：2021-12-29</span>
             <span><span class="iconfont icon-shijian"></span>阅读本文预计花费您52分钟</span></div>
@@ -208,7 +208,7 @@
 <li>默认会创建硬链接，如果指定路径下已有与目标文件同名的文件，则返回错误，如果源文件不存在，则返回错误</li>
 <li>-s 创建软链接，对于软链接，如果源文件不存在，依旧会创建软链接文件(悬空链接)，指向一个不存在的文件。因此软链接支持先创建链接，后补源文件</li>
 <li>-b 创建链接时如果已有同名文件，则备份该文件，参考通用的备份方案</li>
-<li>-S “字符串”：指定备份文件的后缀名</li>
+<li>-S "字符串"：指定备份文件的后缀名</li>
 <li>-f 强制创建链接文件，有同名文件直接覆盖</li>
 <li>-i 有同名文件时，询问用户是否覆盖</li>
 <li>-v 打印每个创建链接的文件名</li>
@@ -233,9 +233,9 @@
 <li>-s或-q 静默模式，禁止显示大多数错误消息(默认)</li>
 <li>-v 输出错误消息</li>
 </ul>
-<h3 id="管道文件"><a href="#管道文件" class="headerlink" title="管道文件"></a>管道文件</h3><p>管道(pipe)是一种在不同进程之间进行数据传输的通信机制，它允许一个进程写入数据，另一个进程按顺序读取数据，从而实现进程间的通信。管道中的数据是以”流”的形式进行传输，管道的使用能够有效地实现数据流的连接，使得用户能够将多个命令串联起来，形成一个复杂的命令执行流程。管道通信有以下特点：</p>
+<h3 id="管道文件"><a href="#管道文件" class="headerlink" title="管道文件"></a>管道文件</h3><p>管道(pipe)是一种在不同进程之间进行数据传输的通信机制，它允许一个进程写入数据，另一个进程按顺序读取数据，从而实现进程间的通信。管道中的数据是以"流"的形式进行传输，管道的使用能够有效地实现数据流的连接，使得用户能够将多个命令串联起来，形成一个复杂的命令执行流程。管道通信有以下特点：</p>
 <ul>
-<li>先进先出：先写入的数据会被先读取，遵循”First In, First Out”原则。</li>
+<li>先进先出：先写入的数据会被先读取，遵循"First In, First Out"原则。</li>
 <li>双进程通信：管道允许两个进程之间进行数据传输，一个进程写入数据，另一个(或多个)进程读取数据，读与写可以同步进行</li>
 <li>流式数据：管道中的数据被存储于内存的内核缓冲区，数据是一次性传输的，被读取一次后就会消失，是一种流式数据</li>
 <li>阻塞行为：为了保证进程间数据传输的有序性和同步性，管道通过阻塞读写操作来协调数据的传输。进程在写入数据时，如果缓冲区已满，进程的写入操作会被阻塞，直到另一个进程从管道中读取数据，腾出缓冲区空间，写操作才会继续。类似的，读操作也会被阻塞，当进程从管道中读取数据时，如果缓冲区为空，进程的读操作会被阻塞，直到有数据写入。如果写入进程已经终止(写端关闭)，且管道内的数据已被读完，则读操作会立即返回<span class="tips">EOF</span>(End Of File)，表示管道结束。</li>
@@ -264,12 +264,12 @@ mknod /dev/myblockdevice b 8 1  #8是主设备号，1是次设备号
 
 <ul>
 <li>使用该命令时，通常会指定一个文件名模板，文件名模板末尾必须包含<span class="tips">至少3个</span>(通常6个)<span class="tips">X</span>(必须为大写X)，mktemp命令在创建该文件时会使用随机字符替换X，以保证临时文件的唯一性。默认情况下，如果文件名模板前未指定路径，命令会在当前目录中创建临时文件或目录，如果指定了路径，则前往指定路径下创建</li>
-<li>如果不指定文件名模板，命令将使用默认模板’tmp.XXXXXXXXXX’(10个随机字符)，且默认会在/tmp目录下创建临时文件，而不管当前路径如何</li>
+<li>如果不指定文件名模板，命令将使用默认模板'tmp.XXXXXXXXXX'(10个随机字符)，且默认会在/tmp目录下创建临时文件，而不管当前路径如何</li>
 <li>-p 路径：在指定路径下创建临时文件或目录</li>
 <li>-t 在 $TMPDIR 环境变量指定的目录中创建文件或目录。如果未设置 $TMPDIR，则在/tmp路径下生成临时文件或目录，返回完整路径名</li>
 <li>-d 创建临时目录</li>
 <li>-q 在无法创建临时文件或目录时不产生错误信息</li>
-<li>-‌-suffix=”字符串”：为生成的文件添加指定后缀</li>
+<li>-‌-suffix="字符串"：为生成的文件添加指定后缀</li>
 </ul>
 <div class="show">1.在当前目录下创建临时文件
 $ mktemp testing.XXXXXX
@@ -306,9 +306,9 @@ tempfile=$(mktemp myfile.XXXXXX)
 trap "rm -rf $tempdir" EXIT
 </div>
 
-<h3 id="设备文件"><a href="#设备文件" class="headerlink" title="设备文件"></a>设备文件</h3><p>设备挂载参考下文”文件系统挂载与卸载”，这里只介绍Linux内置有特殊用途的设备文件</p>
+<h3 id="设备文件"><a href="#设备文件" class="headerlink" title="设备文件"></a>设备文件</h3><p>设备挂载参考下文"文件系统挂载与卸载"，这里只介绍Linux内置有特殊用途的设备文件</p>
 <h4 id="数据"><a href="#数据" class="headerlink" title="数据"></a>数据</h4><ul>
-<li><span class="strong">/dev/null</span> 数据”黑洞”，所有写入该文件的数据都会被丢弃；读取该文件会立即返回EOF(文件结束)，导致读取为空</li>
+<li><span class="strong">/dev/null</span> 数据"黑洞"，所有写入该文件的数据都会被丢弃；读取该文件会立即返回EOF(文件结束)，导致读取为空</li>
 <li><span class="strong">/dev/zero</span> 提供无限的空字符(\0)，可用于初始化文件或内存</li>
 <li><span class="strong">/dev/full</span> 始终写满，写入返回 ENOSPC 错误，可用于测试磁盘写满场景</li>
 </ul>
@@ -697,7 +697,7 @@ tmpfs              49228       0     49228   0% /run/user/0
 df命令会统计包括一些磁盘碎片在内的空间，而该类空间是被程序占用后释放的碎片空间，需要Linux整理后才能使用，因此df命令统计结果也往往比du命令统计结果大，但更能正确反映系统可用的空间大小</div>
 
 <h4 id="du显示目录或文件大小"><a href="#du显示目录或文件大小" class="headerlink" title="du显示目录或文件大小"></a>du显示目录或文件大小</h4><p>通过df命令发现磁盘空间快满时，可以通过du命令查看是哪些文件占用了较大的存储空间</p>
-<p><span class="strong">du [参数] [目录或文件名]…</span></p>
+<p><span class="strong">du [参数] [目录或文件名]...</span></p>
 <ul>
 <li>默认情况下，命令会显示当前目录中每个子目录的磁盘块占用数量，并在最后一行输出当前目录总占用数量，该行为会递归进行，即会打印子目录的后代子目录信息，它会以磁盘块为单位来表明每个文件或目录占用了多大存储空间</li>
 <li>-a 打印每个子目录以及子文件的大小</li>
@@ -713,7 +713,7 @@ df命令会统计包括一些磁盘碎片在内的空间，而该类空间是被
 <li>-‌-time：打印文件或目录的上一次内容修改时间mtime</li>
 <li>-‌-time=ctime：打印文件或目录上一次属性修改时间ctime</li>
 <li>-‌-time=atime：打印文件或目录上一次访问时间atime</li>
-<li>-‌-exclude=正则pattern：递归统计时，跳过与pattern匹配的子目录或文件，如du -‌-exclude=’*.o’ 排除以.o结尾的文件</li>
+<li>-‌-exclude=正则pattern：递归统计时，跳过与pattern匹配的子目录或文件，如du -‌-exclude='*.o' 排除以.o结尾的文件</li>
 <li>-X 文件名：从该文件中获取需要排除的文件或目录，每一行表示一个或一类文件，可以使用正则表达式，如果文件名为-，表示从标准输入获取</li>
 </ul>
 <div class="broadcast color-green">
@@ -729,9 +729,9 @@ ls命令只统计目录下一级子文件和子目录文件信息大小，而不
 <h4 id="etc-fstab文件"><a href="#etc-fstab文件" class="headerlink" title="/etc/fstab文件"></a>/etc/fstab文件</h4><p><span class="tips">/etc/fstab</span>(File System Table)文件用来存储文件系统的静态信息，包括可以挂载的文件系统、挂载点路径、文件系统类型以及它们的挂载选项(如读写权限、是否需要自动挂载等)，fsck、mount、umount、swapon、swapoff等命令都会读取该文件作为配置来源</p>
 <p>/etc/fstab 文件每行定义一个挂载项，字段直接使用空格或制表符分隔，可以使用#注释行，每行挂载项的语法格式为：<br><span class="strong">挂载源 挂载点路径 文件系统类型 挂载选项 dump备份 fsck检查顺序</span></p>
 <ul>
-<li>挂载源是指要挂载的设备、远程文件系统、要启用的虚拟内存交换空间等，该参数可以上述挂载源的文件名，或者远程地址(url:路径形式)，也可以UUID(如UUID=3a9f…形式)，标签名(如LABEL=DATA)，这些标签或uuid可以在mkswap(创建虚拟内存交换文件)、fatlabel时指定</li>
+<li>挂载源是指要挂载的设备、远程文件系统、要启用的虚拟内存交换空间等，该参数可以上述挂载源的文件名，或者远程地址(url:路径形式)，也可以UUID(如UUID=3a9f...形式)，标签名(如LABEL=DATA)，这些标签或uuid可以在mkswap(创建虚拟内存交换文件)、fatlabel时指定</li>
 <li>挂载点为在文件系统中的挂载路径和文件名，如果文件名包含空格，可以使用\040(空格)和\011(制表符)转义。对于交换空间swap，挂载点应该指定为none</li>
-<li>文件系统类型参考”Linux可用的文件系统”，swap表示用于交换空间的文件系统</li>
+<li>文件系统类型参考"Linux可用的文件系统"，swap表示用于交换空间的文件系统</li>
 <li>挂载选项用来控制挂载后文件系统的行为，可以是以下值：<blockquote>
 <blockquote>
 <ul>

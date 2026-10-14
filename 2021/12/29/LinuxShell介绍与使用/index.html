@@ -46,7 +46,7 @@
             <li><a href="/blog/tags/408">#408</a></li>
             <li>#Security</li>
             <li><a href="/blog/tags/Linux">#Linux</a></li>
-            <li>#Python</li>
+            <li><a href="/blog/tags/Python">#Python</a></li>
             <li><a href="/blog/tags/Servr">#Server</a></li>
             <li><a href="/blog/tags/Web">#Web</a></li>
         </ul>
@@ -136,7 +136,7 @@
         <div class="article">
         <h1 class="title">Shell与Bash</h1>
         <div class="art-info">
-            <div><span><span class="iconfont icon-zishu-jzl"></span>字数：30603</span>
+            <div><span><span class="iconfont icon-zishu-jzl"></span>字数：30608</span>
             <span><span class="iconfont icon-riqi"></span>写于：2021-12-29</span></div>
             <div><span><span class="iconfont icon-zuixinnew3"></span>最新更新：2024-06-02</span>
             <span><span class="iconfont icon-shijian"></span>阅读本文预计花费您88分钟</span></div>
@@ -379,9 +379,9 @@ echo "父进程执行完毕"</div>
 
 <h3 id="Bash的内建命令"><a href="#Bash的内建命令" class="headerlink" title="Bash的内建命令"></a>Bash的内建命令</h3><h4 id="Bash的启动方式"><a href="#Bash的启动方式" class="headerlink" title="Bash的启动方式"></a>Bash的启动方式</h4><p><span class="strong">bash [选项] [脚本文件] [参数]</span></p>
 <ul>
-<li>-c “字符串”:执行字符串中的命令</li>
+<li>-c "字符串":执行字符串中的命令</li>
 <li>-i 启动交互式bash</li>
-<li>-l 或–login:模拟登录Shell，加载用户环境配置(如/etc/profile、~/.bash_profile等文件)</li>
+<li>-l 或--login:模拟登录Shell，加载用户环境配置(如/etc/profile、~/.bash_profile等文件)</li>
 <li>-s 从标准输入读取命令，通常结合管道和重定向符传递脚本内容</li>
 <li>-r 以受限模式(Restricted Shell)启动bash，限制用户操作，用户将无法执行以下操作：<blockquote>
 <blockquote>
@@ -421,7 +421,7 @@ echo "父进程执行完毕"</div>
 <li><span class="strong">!字符串</span>再次执行最后一次以该字符串开头的命令</li>
 </ul>
 <h4 id="alias自定义命令名"><a href="#alias自定义命令名" class="headerlink" title="alias自定义命令名"></a>alias自定义命令名</h4><p><span class="strong">alias</span>查看所有自定义的命令</p>
-<p><span class="strong">alias 别名=’原命令’</span>自定义命令名，原命令依旧可用</p>
+<p><span class="strong">alias 别名='原命令'</span>自定义命令名，原命令依旧可用</p>
 <p>使用命令定义的命令名只能临时生效，且只在当前shell中生效，系统重启后将丢失，要永久生效需将自定义的命令添加到文件<span class="tips">/用户名/.bashrc</span>中</p>
 <p>删除自定义的命令:</p>
 <p><span class="strong">unalias 别名</span></p>
@@ -530,7 +530,7 @@ fi
 <p><span class="strong">mapfile [选项] [数组名]</span></p>
 <ul>
 <li>从标准输入或文件中读取行数组中，如果未指定数组，则使用默认的数组名MAPFILE</li>
-<li>-d “行终止符”：指定每个行的终止符，而不是默认的换行符，-d “”指定空字符串，将使用NUL作为行终止符</li>
+<li>-d "行终止符"：指定每个行的终止符，而不是默认的换行符，-d ""指定空字符串，将使用NUL作为行终止符</li>
 <li>-n 值N：只输入N行，如果值为0将输入所有行到数组</li>
 <li>-u 文件描述符：从该文件描述符指向的文件读取数据</li>
 <li>-O 索引值：指定索引值，从该值开始存储，默认从0存储</li>
@@ -624,11 +624,11 @@ tail -f server.log &gt; &gt;(grep "ERROR" &gt; errors.txt)
 </tr>
 <tr>
 <td>[abc]</td>
-<td>匹配a或b或c中的任意一个字符，相当于”或”</td>
+<td>匹配a或b或c中的任意一个字符，相当于"或"</td>
 </tr>
 <tr>
 <td>[!abc]或[^abc]</td>
-<td>匹配不包括a、b、c在内的任意一个字符，相当于”非”</td>
+<td>匹配不包括a、b、c在内的任意一个字符，相当于"非"</td>
 </tr>
 </tbody></table>
 </div>
@@ -985,7 +985,7 @@ echo $MY_PORT  #无法访问该变量</div>
 </tr>
 <tr>
 <td>BASH_XTRACEFD</td>
-<td>若设置成了有效的文件描述符（0、1、2），则’set -x’调试选项生成的跟踪输出，可被重定向。通常用来将跟踪输出到一个文件中</td>
+<td>若设置成了有效的文件描述符（0、1、2），则'set -x'调试选项生成的跟踪输出，可被重定向。通常用来将跟踪输出到一个文件中</td>
 </tr>
 <tr>
 <td>BASHOPTS</td>
@@ -1041,11 +1041,11 @@ echo $MY_PORT  #无法访问该变量</div>
 </tr>
 <tr>
 <td>EMACS</td>
-<td>设置为’t’时，表明emacs shell缓冲区正在工作，而行编辑功能被禁止</td>
+<td>设置为't'时，表明emacs shell缓冲区正在工作，而行编辑功能被禁止</td>
 </tr>
 <tr>
 <td>ENV</td>
-<td>如果设置了该环境变量，在bash shell运行之前会读取该变量指定路径中的文件，如果未设置，Bash 会默认读取用户的”HOME/.bashrc”文件以设置环境变量，该变量方便用户自定义bash启动时的环境变量(仅用于当bash shell以POSIX模式被调用时)</td>
+<td>如果设置了该环境变量，在bash shell运行之前会读取该变量指定路径中的文件，如果未设置，Bash 会默认读取用户的"HOME/.bashrc"文件以设置环境变量，该变量方便用户自定义bash启动时的环境变量(仅用于当bash shell以POSIX模式被调用时)</td>
 </tr>
 <tr>
 <td>FCEDIT</td>
@@ -1330,7 +1330,7 @@ echo $MY_PORT  #无法访问该变量</div>
 <h3 id="终端控制"><a href="#终端控制" class="headerlink" title="终端控制"></a>终端控制</h3><h4 id="ANSI转义字符序列"><a href="#ANSI转义字符序列" class="headerlink" title="ANSI转义字符序列"></a>ANSI转义字符序列</h4><!-- 为了控制终端的显示和行为，ANSI 标准定义了一系列用于控制终端输出选项的字符序列，称为 ANSI 转义序列（Escape Sequences），其中包括了常见的控制字符（Control Characters）。这些控制字符通常分为 C0 控制字符和 C1 控制字符。ASCII 码表中 0 到 31 之间的字符称为 C0 控制字符，用于基本的终端控制。但原有的控制字符功能并不全面，因此，为了实现更多的终端控制功能，ASCII 码表扩展出了以 ESC 字符（\x1b）开头的控制序列，包括 C1 控制字符（ASCII 码表 128-159）。C1 控制字符被广泛应用于控制光标、屏幕和字符渲染。这部分控制序列中的常见类型称为 CSI（Control Sequence Introducer），而 Bash 也使用这些控制序列来控制终端行为 -->
 
 <p>为了控制终端的显示和行为，ANSI标准定义了一系列用于控制终端输出选项的字符序列，称为ANSI转义字符序列(Escape Sequence)。这些转义字符序列中ASCII码表0到31(0x00–0x1F)之间的字符称为C0控制字符，C0字符通常用于基本的文本控制和终端操作，如：回车(CR)、换行(LF)、制表符(TAB)等。由于原有的控制字符功能不够全面，为了实现更多的终端控制功能，ASCII码表扩展出了值在128-159(0x80–0x9F)之间的C1控制字符，C1控制字符提供了更多扩展的高级控制功能，包括光标控制、颜色设置、字符集切换、设备控制等</p>
-<h4 id="CSI序列"><a href="#CSI序列" class="headerlink" title="CSI序列"></a>CSI序列</h4><p>C1控制字符中用于控制光标、设置文本样式和颜色以及实现屏幕的清除、局部刷新等操作的控制字符称为<span class="tips">CSI</span>(Control Sequence Introducer)字符，CSI字符序列以<span class="tips">ESC</span>(\x1b)开头，并紧接一个<span class="tips">[</span>(代表CSI)，将ESC转换为ASCII码后，控制字符在代码中常写为<span class="tips">\e[</span>或<span class="tips">\x1b[</span>或<span class="tips">\033[</span>，完整的CSI控制语句为：<br><span class="text-red" style="margin:0">\e[</span><span class="text-green" style="margin:0">参数1;参数2;参数3…</span><span class="text-blue" style="margin:0">函数名</span></p>
+<h4 id="CSI序列"><a href="#CSI序列" class="headerlink" title="CSI序列"></a>CSI序列</h4><p>C1控制字符中用于控制光标、设置文本样式和颜色以及实现屏幕的清除、局部刷新等操作的控制字符称为<span class="tips">CSI</span>(Control Sequence Introducer)字符，CSI字符序列以<span class="tips">ESC</span>(\x1b)开头，并紧接一个<span class="tips">[</span>(代表CSI)，将ESC转换为ASCII码后，控制字符在代码中常写为<span class="tips">\e[</span>或<span class="tips">\x1b[</span>或<span class="tips">\033[</span>，完整的CSI控制语句为：<br><span class="text-red" style="margin:0">\e[</span><span class="text-green" style="margin:0">参数1;参数2;参数3...</span><span class="text-blue" style="margin:0">函数名</span></p>
 <ul>
 <li>\e[ 为转义字符引导头</li>
 <li>中间参数部分可以由0个或多个数字组成，多个数字间用分号分隔</li>
@@ -1675,7 +1675,7 @@ echo -e "\e[1;31;103maaaa\e[0m"
 
 <h5 id="修改文件目录颜色"><a href="#修改文件目录颜色" class="headerlink" title="修改文件目录颜色"></a>修改文件目录颜色</h5><p>想在使用ls命令后使各种不同类型文件显示不同颜色，参考dircolors命令</p>
 <h4 id="OSC序列"><a href="#OSC序列" class="headerlink" title="OSC序列"></a>OSC序列</h4><p>OSC(Operating System Command)是一类用于执行操作系统级别命令的控制序列，通常用来设置终端标题，或与系统剪贴板进行交互等。OSC和CSI都是ANSI转义序列的一部分，其中CSI是C1控制字符集的一部分，而OSC是独立的多字符集合，不属于C1控制字符集</p>
-<p>与CSI字符序列语法类似，OSC序列也是以<span class="tips">ESC</span>开头，随后，OSC序列后紧接一个<span class="tips">]</span>，后接一个数字标识符，然后是一个命令或参数，最后以<span class="tips">\a</span>(BEL)或<span class="tips">\e\</span>(ESC+\)结尾，完整的OSC语法为：<br><span class="text-red" style="margin:0">\e]</span><span class="text-blue" style="margin:0">函数标识值;</span><span class="text-green" style="margin:0">参数1;参数2;参数3…</span><span class="text-red" style="margin:0">\a</span></p>
+<p>与CSI字符序列语法类似，OSC序列也是以<span class="tips">ESC</span>开头，随后，OSC序列后紧接一个<span class="tips">]</span>，后接一个数字标识符，然后是一个命令或参数，最后以<span class="tips">\a</span>(BEL)或<span class="tips">\e\</span>(ESC+\)结尾，完整的OSC语法为：<br><span class="text-red" style="margin:0">\e]</span><span class="text-blue" style="margin:0">函数标识值;</span><span class="text-green" style="margin:0">参数1;参数2;参数3...</span><span class="text-red" style="margin:0">\a</span></p>
 <ul>
 <li>\e]是OSC控制序列的引导头</li>
 <li>函数值功能参考下表</li>
@@ -1744,7 +1744,7 @@ echo -e "\e]12;#ff00ff\a"
 </div>
 
 <p>通过修改PS1变量自定义的命令提示符，只在本次登录有效，系统重启后将失效，需要永久修改命令提示符，可以将上述语句写入配置文件<span class="tips">/etc/bashrc</span>中，若只想修改某个用户的终端，可以修改该用户家目录下的<span class="tips">.bashrc</span>配置文件中的PS1变量，修改完后可以使用<span class="tips">source 文件名</span>命令重新加载配置文件，使配置立即生效</p>
-<h6 id="修改命令提示符文本颜色"><a href="#修改命令提示符文本颜色" class="headerlink" title="修改命令提示符文本颜色"></a>修改命令提示符文本颜色</h6><p>修改命令提示符文本颜色时，PS1变量值中的CSI语法需要使用<span class="tips">[ ]</span>进行包裹，并且”[ ]”需要使用转义字符进行转义，避免bash解析其中的语法，即语法为：</p>
+<h6 id="修改命令提示符文本颜色"><a href="#修改命令提示符文本颜色" class="headerlink" title="修改命令提示符文本颜色"></a>修改命令提示符文本颜色</h6><p>修改命令提示符文本颜色时，PS1变量值中的CSI语法需要使用<span class="tips">[ ]</span>进行包裹，并且"[ ]"需要使用转义字符进行转义，避免bash解析其中的语法，即语法为：</p>
 <p><span class="strong">\[\e[颜色码m\]</span></p>
 <div class="shell">如在/etc/bashrc文件最后一行添加语句：
 PS1='\[\e[0m\][\[\e[36m\]\u\[\e[34m\]@\h \[\e[36m\]\W\[\e[0m\]]\[\e[95m\]#\[\e[0m\]'
@@ -1788,23 +1788,23 @@ PS1='\[\e[0m\][\[\e[36m\]\u\[\e[34m\]@\h \[\e[36m\]\W\[\e[0m\]]\[\e[95m\]#\[\e[0
 </tr>
 <tr>
 <td>\$</td>
-<td>显示命令主提示符，root用户提示符为”#”，普通用户为”$”</td>
+<td>显示命令主提示符，root用户提示符为"#"，普通用户为"$"</td>
 </tr>
 <tr>
 <td>\d</td>
-<td>显示当前系统日期，格式为”星期 月 日”</td>
+<td>显示当前系统日期，格式为"星期 月 日"</td>
 </tr>
 <tr>
 <td>\t</td>
-<td>显示24小时制时间，格式为”HH:MM:SS”</td>
+<td>显示24小时制时间，格式为"HH:MM:SS"</td>
 </tr>
 <tr>
 <td>\T</td>
-<td>显示12小时制时间，格式为”HH:MM:SS”</td>
+<td>显示12小时制时间，格式为"HH:MM:SS"</td>
 </tr>
 <tr>
 <td>\A</td>
-<td>显示24小时制时间，格式为”HH:MM”</td>
+<td>显示24小时制时间，格式为"HH:MM"</td>
 </tr>
 <tr>
 <td>\n</td>
@@ -1817,7 +1817,7 @@ PS1='\[\e[0m\][\[\e[36m\]\u\[\e[34m\]@\h \[\e[36m\]\W\[\e[0m\]]\[\e[95m\]#\[\e[0
 </tbody></table>
 </div>
 
-<h4 id="终端标题"><a href="#终端标题" class="headerlink" title="终端标题"></a>终端标题</h4><p>虽然<span class="tips">PS1</span>主要用于控制终端的命令提示符，但我们可以在PS1中嵌入OSC转义序列来控制终端的标题。与CSI类似，PS1变量值中的OSC序列也需要使用<span class="tips">[ ]</span>进行包裹，并且”[ ]”需要使用转义字符进行转义，避免bash解析其中的语法</p>
+<h4 id="终端标题"><a href="#终端标题" class="headerlink" title="终端标题"></a>终端标题</h4><p>虽然<span class="tips">PS1</span>主要用于控制终端的命令提示符，但我们可以在PS1中嵌入OSC转义序列来控制终端的标题。与CSI类似，PS1变量值中的OSC序列也需要使用<span class="tips">[ ]</span>进行包裹，并且"[ ]"需要使用转义字符进行转义，避免bash解析其中的语法</p>
 <div class="show">1.某个debian发行版的默认PS1值
 PS1="\[\e]0;\u@\h: \w\a\]${debian_chroot:+($debian_chroot)}\u@\h:\w\$"
 其中：
@@ -2066,9 +2066,9 @@ AT&amp;T 5620 terminal 88 columns
 </tr>
 <tr>
 <td>smso</td>
-<td>开启”突出模式”</td>
+<td>开启"突出模式"</td>
 <td>rmso</td>
-<td>关闭”突出模式”</td>
+<td>关闭"突出模式"</td>
 </tr>
 <tr>
 <td>invis</td>

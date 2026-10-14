@@ -46,7 +46,7 @@
             <li><a href="/blog/tags/408">#408</a></li>
             <li>#Security</li>
             <li><a href="/blog/tags/Linux">#Linux</a></li>
-            <li>#Python</li>
+            <li><a href="/blog/tags/Python">#Python</a></li>
             <li><a href="/blog/tags/Servr">#Server</a></li>
             <li><a href="/blog/tags/Web">#Web</a></li>
         </ul>
@@ -562,7 +562,7 @@ server {
 <li>serverNames：服务端配置，一般与target保持一致即可，可以配置多个，客户端配置的SNI是该配置列表中的其中一个即可，值可以参考target目标网站域名所返回证书的SAN</li>
 <li>shortIds：客户端&amp;服务端配置，服务端可配置多个用于识别不同Xray REALITY客户端，客户端使用其中之一。shortIds的值需要是8个字节(16个字符)的十六进制数(0-f)组成的字符串，长度可以小于16字符，程序会后补0，但长度必须是偶数 (因为一个字节有2位16进制数)，如：aa1234会被自动补全为 aa12340000000000, 但是aaa1234则会导致错误。</li>
 <li>privateKey：服务器私钥，通过执行命令<span class="tips">xray x25519</span>生成</li>
-<li>password：客户端公钥，其实就是publicKey，但在Reality 的设计中需要客户端持有，不能公开，通过命令<span class="tips">xray x25519 -i “服务器私钥”</span>生成</li>
+<li>password：客户端公钥，其实就是publicKey，但在Reality 的设计中需要客户端持有，不能公开，通过命令<span class="tips">xray x25519 -i "服务器私钥"</span>生成</li>
 </ul>
 <h4 id="REALITY的工作流程"><a href="#REALITY的工作流程" class="headerlink" title="REALITY的工作流程"></a>REALITY的工作流程</h4><ul>
 <li>客户端发起TLS握手，在ClientHello中写入shortId、publicKey等信息，并使用客户端配置的SNI填入TLS的SNI字段，使连接在网络层看起来像是访问该域名对应的HTTPS服务。</li>

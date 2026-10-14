@@ -26,6 +26,7 @@
     --setMenu-color: #fff;
     --setBtn-border: #01ccfffa;
     --setBtn-bg-color: #1db2f299;
+    --snip-color:#0082ff;
 }
 
 :root.dark-theme {
@@ -55,6 +56,7 @@
     --postnav-color: #3a94f4;
     --setBtn-border: #c8c4c48f;
     --setBtn-bg-color: transparent;
+    --snip-color:#00e0ff;
 }
 
 
@@ -143,7 +145,7 @@
     overflow: hidden;
 }
 
-.toc-level-2>.toc-link{
+.toc-level-2>.toc-link {
     color: #01ffff;
     font-weight: 900;
 }
@@ -650,6 +652,18 @@
     color: #f48266;
 }
 
+.snip {
+    padding: 2px 4px;
+    margin: 0 2px;
+    border-radius: 1px;
+    background: #7f7f7f24;
+    color:var(--snip-color);
+    font-family: "SFMono-Regular", Consolas, "Liberation Mono", monospace;
+    font-size: 1em;
+    line-height: 1.4;
+    white-space: nowrap;
+}
+
 .art-content .text-red,
 .art-content .text-red-num {
     font-weight: 800;
@@ -678,7 +692,7 @@
 .text-blue,
 .text-green,
 .text-yellow {
-margin: 0 8px;
+    margin: 0 8px;
 }
 
 .art-content .formula {
@@ -766,7 +780,7 @@ margin: 0 8px;
     background-color: var(--article-bg-color);
     padding: 8px;
     overflow-x: auto;
-   
+
 }
 
 .table-show table {

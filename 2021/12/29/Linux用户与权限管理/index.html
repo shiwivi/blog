@@ -46,7 +46,7 @@
             <li><a href="/blog/tags/408">#408</a></li>
             <li>#Security</li>
             <li><a href="/blog/tags/Linux">#Linux</a></li>
-            <li>#Python</li>
+            <li><a href="/blog/tags/Python">#Python</a></li>
             <li><a href="/blog/tags/Servr">#Server</a></li>
             <li><a href="/blog/tags/Web">#Web</a></li>
         </ul>
@@ -136,10 +136,10 @@
         <div class="article">
         <h1 class="title">Linux用户与权限管理</h1>
         <div class="art-info">
-            <div><span><span class="iconfont icon-zishu-jzl"></span>字数：19248</span>
+            <div><span><span class="iconfont icon-zishu-jzl"></span>字数：19258</span>
             <span><span class="iconfont icon-riqi"></span>写于：2021-12-29</span></div>
             <div><span><span class="iconfont icon-zuixinnew3"></span>最新更新：2021-12-29</span>
-            <span><span class="iconfont icon-shijian"></span>阅读本文预计花费您55分钟</span></div>
+            <span><span class="iconfont icon-shijian"></span>阅读本文预计花费您56分钟</span></div>
         </div>
         <div class="art-content">
         <html><head></head><body><h3 id="用户"><a href="#用户" class="headerlink" title="用户"></a>用户</h3><p>Linux系统是一个多用户多任务的分时操作系统，用户可以属于一个或多个组方便系统管理员控制用户权限，默认有一个root管理员组并且root账户属于该组。可以使用<span class="tips">logout</span>登出当前用户账户。</p>
@@ -262,18 +262,18 @@ pinky输出的用户真实姓名来自<span class="tips">/etc/passwd</span>文�
 </ul>
 <h5 id="3-usermod修改用户信息"><a href="#3-usermod修改用户信息" class="headerlink" title="3.usermod修改用户信息"></a>3.usermod修改用户信息</h5><p><span class="strong">usermod [选项] 用户名</span></p>
 <ul>
-<li>-l “用户名”：修改用户名</li>
+<li>-l "用户名"：修改用户名</li>
 <li>-u UID：修改用户UID(需要确保唯一性)</li>
-<li>-g “组名或组ID”：修改用户的主组(该组必须已存在)</li>
-<li>-G “组1,组2..”：修改用户附加组(覆盖原有附加组)，参数可以是组名，或组ID</li>
+<li>-g "组名或组ID"：修改用户的主组(该组必须已存在)</li>
+<li>-G "组1,组2.."：修改用户附加组(覆盖原有附加组)，参数可以是组名，或组ID</li>
 <li>-a 将用户添加到附加组，需要与-G搭配使用指定组名或ID(此时为追加附加组)</li>
-<li>-c “用户说明”：修改用户说明信息</li>
-<li>-d “路径”：修改用户的家目录，需要搭配-m选项使用</li>
+<li>-c "用户说明"：修改用户说明信息</li>
+<li>-d "路径"：修改用户的家目录，需要搭配-m选项使用</li>
 <li>-m 将旧家目录的内容移到新路径下，需要搭配-d选项使用</li>
-<li>-e “YYYY-mm-dd”：设置账户的过期日期(为空表示永不过期)</li>
+<li>-e "YYYY-mm-dd"：设置账户的过期日期(为空表示永不过期)</li>
 <li>-L 临时锁定用户，禁止密码登录</li>
 <li>-U 解锁用户</li>
-<li>-s “shell路径”：修改用户默认shell</li>
+<li>-s "shell路径"：修改用户默认shell</li>
 </ul>
 <h4 id="用户密码管理"><a href="#用户密码管理" class="headerlink" title="用户密码管理"></a>用户密码管理</h4><h5 id="1-passwd添加-修改密码"><a href="#1-passwd添加-修改密码" class="headerlink" title="1.passwd添加/修改密码"></a>1.passwd添加/修改密码</h5><p><span class="strong">passwd [选项] [用户名]</span><br>不写用户名则会修改当前账户密码，输入密码时不会显示在终端上,选项：</p>
 <ul>
@@ -324,9 +324,9 @@ sudo chpasswd &lt; passwords.txt
 <li>-c 命令：仅使用指定用户身份执行一次-c后的命令，执行完毕后切换回原用户身份</li>
 <li>-s shell路径：切换用户后使用指定的shell，而不使用passwd文件指定的用户默认shell</li>
 <li>-m或-p： 保留当前用户的环境变量，而不是使用目标用户的环境变量</li>
-<li>-w 变量1 变量2…：切换用户时，保留这些变量</li>
+<li>-w 变量1 变量2...：切换用户时，保留这些变量</li>
 <li>-g 用户组ID：切换用户并加入到指定的用户组</li>
-<li>-G 用户组ID1,用户组ID2…：切换用户并加入到多个指定的用户组</li>
+<li>-G 用户组ID1,用户组ID2...：切换用户并加入到多个指定的用户组</li>
 </ul>
 <div class="broadcast color-red">
 <div class="iconfont icon-gantanhao"></div>
@@ -348,7 +348,7 @@ su命令由util-linux 软件包提供，使用时仅执行<span class="text-gree
 
 <ul>
 <li>字段一：用户名</li>
-<li>字段二：加密后的密码，如果为”!”表示该用户的密码被禁用，无法使用密码登录(但仍可能可以通过密钥等方式登录)，如果为”*”表示没有密码，常用于系统用户</li>
+<li>字段二：加密后的密码，如果为"!"表示该用户的密码被禁用，无法使用密码登录(但仍可能可以通过密钥等方式登录)，如果为"*"表示没有密码，常用于系统用户</li>
 <li>字段三：密码最后一次修改日期，以1970年1月1日作为标准时间，每天+1</li>
 <li>字段四：允许的两次密码修改间隔，如：10为只允许每10天修改一次密码</li>
 <li>字段五：密码有效期，多少天后必须修改密码</li>
@@ -450,7 +450,7 @@ chown -R -H user1 dir1/link1 dir1
 该命令将遍历link1所指向的目录，并修改dirA目录下所有文件的所有者
 </div>
 
-<h4 id="chown更改文件所有者-change-file-ownership"><a href="#chown更改文件所有者-change-file-ownership" class="headerlink" title="chown更改文件所有者(change file ownership)"></a>chown更改文件所有者(change file ownership)</h4><p><span class="strong">chown[选项] [用户] 文件或目录1 文件或目录2…</span></p>
+<h4 id="chown更改文件所有者-change-file-ownership"><a href="#chown更改文件所有者-change-file-ownership" class="headerlink" title="chown更改文件所有者(change file ownership)"></a>chown更改文件所有者(change file ownership)</h4><p><span class="strong">chown[选项] [用户] 文件或目录1 文件或目录2...</span></p>
 <ul>
 <li>用户值可以写为<span class="tips">用户:组</span>形式，其中用户、冒号、组都可以只指定其中某一部分：<blockquote>
 <blockquote>
@@ -477,7 +477,7 @@ chown -R -H user1 dir1/link1 dir1
 <p><span class="tips">只有文件所有者用户和root用户才能更改文件的所有者属性</span></p>
 
 <h4 id="chgrp更改文件所属组-change-file-group-ownership"><a href="#chgrp更改文件所属组-change-file-group-ownership" class="headerlink" title="chgrp更改文件所属组(change file group ownership)"></a>chgrp更改文件所属组(change file group ownership)</h4><p>默认情况下，文件的所属组是文件所在目录，该目录的所属组，文件创建时，所属组将设置为和父目录相同的组</p>
-<p><span class="strong">chgrp [选项] [用户组] 文件或目录1 文件或目录2…</span></p>
+<p><span class="strong">chgrp [选项] [用户组] 文件或目录1 文件或目录2...</span></p>
 <ul>
 <li>-R 以递归方式修改目录和目录下所有文件的所属组</li>
 <li>-c 仅打印修改的部分，在指定了多个文件时，部分文件修改前后所属组一样，则不会打印这部分消息</li>
@@ -770,7 +770,7 @@ sudo -k
 
 
 <h4 id="visudo命令与sudoers文件"><a href="#visudo命令与sudoers文件" class="headerlink" title="visudo命令与sudoers文件"></a>visudo命令与sudoers文件</h4><p><span class="strong">visudo</span>命令用来指定用户可以使用sudo提权执行哪些命令，visudo命令会打开<span class="tips"> /etc/sudoers </span>文件让管理员进行编辑，文件配置格式为：</p>
-<p><span class="tips">用户名  主机地址=(赋予的身份) 授权命令1的绝对路径, 命令2的绝对路径…..</span> </p>
+<p><span class="tips">用户名  主机地址=(赋予的身份) 授权命令1的绝对路径, 命令2的绝对路径.....</span> </p>
 <p>给组添加相关权限格式类似，组名前加上%号即可。通过vi /etc/sudoers命令虽然也可以编辑该文件，但通过该修改方法容易出现语法错误从而导致配置出错，使用visudo命令虽然也会打开编辑软件，但该命令会阻止多个用户并发编辑等操作，可以在安全环境下编辑文件，并且该命令在退出时会对文件进行语法检查，避免配置出错</p>
 <div class="show">e.g.文件自带了root用户的配置，即root用户在所有主机上，允许执行所有命令。类似地，wheel组也可以在所有主机上执行所有命令
 root    ALL=(ALL)       ALL  
@@ -820,7 +820,7 @@ user1 ALL=(ALL) ALL, !/usr/bin/passwd
 Subject : 邮件标题  //输入邮件
 邮件内容           //输入邮件内容，输入完毕<span class="tips">Ctrl+D</span>发送
 
-<p>邮件接收：<br>~ mail          //查看邮件箱<br>收到的邮件将以New标识(是否已读)、序号、发送用户、发送时间、邮件标题的格式列出<br>-&gt; N 1 root                  Sun Feb 20 12:38  18/532   “test”<br>~ 1             //直接输入序号查看对应邮件<br>~ h             //列出所有邮件<br>~ d1            //d+序号删除对应邮件<br>~ q             //退出邮件查看系统</p></div><p></p>
+<p>邮件接收：<br>~ mail          //查看邮件箱<br>收到的邮件将以New标识(是否已读)、序号、发送用户、发送时间、邮件标题的格式列出<br>-&gt; N 1 root                  Sun Feb 20 12:38  18/532   "test"<br>~ 1             //直接输入序号查看对应邮件<br>~ h             //列出所有邮件<br>~ d1            //d+序号删除对应邮件<br>~ q             //退出邮件查看系统</p></div><p></p>
 <div class="broadcast color-red">
 <div class="iconfont icon-gantanhao"></div>
 Linux会通过mail给root用户发送一些邮件反映服务器错误信息等</div>
@@ -831,7 +831,7 @@ Linux会通过mail给root用户发送一些邮件反映服务器错误信息等<
 <li>禁用root用户的SSH远程登录</li>
 <li>禁用所有用户的密码登录，尽量使用密钥登录</li>
 </ul>
-<p>首次部署时，应当按照以下顺序避免”锁死风险”。</p>
+<p>首次部署时，应当按照以下顺序避免"锁死风险"。</p>
 <ol>
 <li>创建普通用户</li>
 <li>配置sudo权限</li>

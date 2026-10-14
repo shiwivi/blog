@@ -46,7 +46,7 @@
             <li><a href="/blog/tags/408">#408</a></li>
             <li>#Security</li>
             <li><a href="/blog/tags/Linux">#Linux</a></li>
-            <li>#Python</li>
+            <li><a href="/blog/tags/Python">#Python</a></li>
             <li><a href="/blog/tags/Servr">#Server</a></li>
             <li><a href="/blog/tags/Web">#Web</a></li>
         </ul>
@@ -248,7 +248,7 @@
 <li>UDP没有<span class="strong">拥塞控制</span></li>
 <li>UDP支持<span class="strong">一对一、一对多、多对一、多对多</span>的通信</li>
 <li>UDP的首部开销很小，只有<span class="strong">8</span>个字节</li>
-<li>当接收方UDP发现报文中的目的端口号不正确，会丢弃报文，并通过ICMP协议发送”端口不可达”差错报文给发送方</li>
+<li>当接收方UDP发现报文中的目的端口号不正确，会丢弃报文，并通过ICMP协议发送"端口不可达"差错报文给发送方</li>
 </ul>
 <h4 id="UDP的套接字描述"><a href="#UDP的套接字描述" class="headerlink" title="UDP的套接字描述"></a>UDP的套接字描述</h4><p>UDP是一种无连接协议，UDP套接字由<span class="strong">目的IP地址与目的端口号这一二元组唯一标识</span>，即：</p>
 <div class="strong">UDP接收套接字 = {(目的IP:目的端口)}</div>
@@ -302,7 +302,7 @@
 <li>发送方A发送分组M1，并保留分组M1的副本(方便重传)，然后启动一个超时计时器</li>
 <li>接收方B收到分组M1后，如果无差错则发送确认M1，A收到确认M1后取消计时器</li>
 <li>如果M1错误，则B丢弃分组后什么都不做，A在超时后仍未收到确认M1，则重新发送分组M1</li>
-<li>另一种设计是B收到错误的分组M1后，发送”否认报文”，让发送方A提早重发M1，但该设计会让协议实现复杂化，因此大部分可靠传输协议不使用该设计</li>
+<li>另一种设计是B收到错误的分组M1后，发送"否认报文"，让发送方A提早重发M1，但该设计会让协议实现复杂化，因此大部分可靠传输协议不使用该设计</li>
 </ul>
 <div class="img-wrapper"><div class="load-wrapper"><div class="load-line"></div><div class="load-text">loading</div></div><img src="/blog/images/ComputerNetwork/tcp-sw1.png" alt="tcp-sw" loading="lazy" decoding="async"></div>
 
@@ -507,9 +507,9 @@
 <p>发送方的发送窗口不能超过接收方接收窗口值rwnd，也不能大于拥塞窗口cwnd，因此发送窗口最终取两者的较小值：</p>
 <div class="strong">发送窗口上限值=min(rwnd,cwnd)</div>
 
-<h4 id="网络层主动队列管理AQM"><a href="#网络层主动队列管理AQM" class="headerlink" title="网络层主动队列管理AQM"></a>网络层主动队列管理AQM</h4><p>TCP拥塞控制还深受网络层策略的影响，通常情况下，路由器的队列都是按照”先进先出”FIFO(First In First Out)规则进行处理，当队列己满时，后续到达的所有分组都将被丢弃，称为尾部丢弃策略(tail-droppolicy)。</p>
+<h4 id="网络层主动队列管理AQM"><a href="#网络层主动队列管理AQM" class="headerlink" title="网络层主动队列管理AQM"></a>网络层主动队列管理AQM</h4><p>TCP拥塞控制还深受网络层策略的影响，通常情况下，路由器的队列都是按照"先进先出"FIFO(First In First Out)规则进行处理，当队列己满时，后续到达的所有分组都将被丢弃，称为尾部丢弃策略(tail-droppolicy)。</p>
 <p>路由器的尾部丢弃会导致一连串分组丢失，触发发送方超时重传，使TCP连接进入慢启动状态，发送速率骤降。更为严重的是，网络中通常存在大量TCP连接，一旦发生尾部丢弃，往往会同时影响多条连接，使它们在同一时间同步进入慢启动状态，这种现象称为<span class="strong">全局同步</span>。其结果表现为：全网通信量先急剧下降，待网络恢复后又骤然激增，造成流量剧烈震荡，严重降低链路利用率和传输效率。</p>
-<p><span class="strong">主动队列管理AQM</span>(Activeueue Management)是为了避免全局同步现象而提出的一种拥塞控制机制，其核心思想是”主动”预防，即不要等到路由器的队列长度已经达到最大值时才丢弃后面到达的分组，而是应当在队列长度达到某个值得警惕的数值时，就主动丢弃到达的分组，以提醒发送方放慢发送的速率。AQM有多种不同实现方法：</p>
+<p><span class="strong">主动队列管理AQM</span>(Activeueue Management)是为了避免全局同步现象而提出的一种拥塞控制机制，其核心思想是"主动"预防，即不要等到路由器的队列长度已经达到最大值时才丢弃后面到达的分组，而是应当在队列长度达到某个值得警惕的数值时，就主动丢弃到达的分组，以提醒发送方放慢发送的速率。AQM有多种不同实现方法：</p>
 <h5 id="RED随机早期检测"><a href="#RED随机早期检测" class="headerlink" title="RED随机早期检测"></a>RED随机早期检测</h5><p>随机早期检测 RED(Random Early Detection)是一种经典的AQM算法，但目前不再使用。实现RED时需要使路由器维持两个参数：队列长度最小门限和最大门限。当每一个分组到达时，RED就按照规定的算法先计算当前的平均队列长度。</p>
 <ul>
 <li>若平均队列长度小于最小门限，则把新到达的分组放入队列进行排队</li>
